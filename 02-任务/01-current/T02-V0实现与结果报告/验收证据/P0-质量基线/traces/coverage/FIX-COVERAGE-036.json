@@ -1,0 +1,608 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_32c94b9fe4e54777a6a0394358c915c5",
+  "case_id": "FIX-COVERAGE-036",
+  "recorded_at": "2026-08-21T18:44:22.488193+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:44:11.938053+00:00",
+  "completed_at": "2026-08-21T18:44:22.488193+00:00",
+  "duration_ms": 10547.0,
+  "input": {
+    "selected_direction_id": "topic_identity",
+    "research_direction": "identity",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "identity",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "PSYCHOLOGY",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_PSYCHOLOGY",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "identity",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:44:18.487049+00:00",
+      "duration_ms": 1609.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1609.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0963-7214",
+      "query": "identity",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 4,
+      "accepted_before_dedupe": 4,
+      "queried_at": "2026-08-21T18:44:20.095696+00:00",
+      "duration_ms": 2391.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2391.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "identity",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 13,
+      "accepted_before_dedupe": 13,
+      "queried_at": "2026-08-21T18:44:11.941634+00:00",
+      "duration_ms": 6547.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 6547.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 18,
+    "accepted_before_dedupe": 18,
+    "deduped_corpus": 18,
+    "final_selected": 15,
+    "final_by_language": {
+      "zh": 10,
+      "en": 5
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 0,
+    "en": 15
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The impact of awe on common ingroup identity: The moderating role of perceived resource scarcity",
+      "authors": [
+        "Yang YANG",
+        "Jun CAO",
+        "Xiaolin LI",
+        "Yiran E",
+        "Yixin JIA"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0667",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0667",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Effects of social norm types on pro-environmental behavior: The moderating role of moral identity and fNIRS evidence",
+      "authors": [
+        "Mengmeng REN",
+        "Jin LI",
+        "Yiping ZHONG",
+        "Lijun YANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1197",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1197",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reciprocal associations between identity confusion and adolescent NSSI: The longitudinal mediation effect of alienation",
+      "authors": [
+        "Honglei GU",
+        "Weiming YU",
+        "Yufang CHENG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0247",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0247",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Threshold effects of distinctiveness: Psychological mechanisms underlying group identity",
+      "authors": [
+        "Wenlin KE",
+        "Fangfang WEN",
+        "Bin ZUO"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0820",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0820",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The container metaphor and differential mode of association of ethnic identity among Yugur middle school students",
+      "authors": [
+        "Bilin DENG",
+        "Ting WANG",
+        "Jijia ZHANG",
+        "Xiancui LIU",
+        "Sha LIU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0428",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0428",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The effect of smoker identity on interpretive bias among smokers: The role of cognitive load",
+      "authors": [
+        "Haide CHEN",
+        "Heng ZHANG",
+        "Jia WANG",
+        "Lingfeng GAO"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.2165",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.2165",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The multiple image advantage in face identity recognition relies on the formation of facial representation",
+      "authors": [
+        "Jun Ye FENG",
+        "Zhe WANG",
+        "Yu-Hao P SUN"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1689",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1689",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Making up for merit! A study of the identity work of family-work conflict",
+      "authors": [
+        "Hailing LU",
+        "Guoqing DONG",
+        "Yang YANG",
+        "Yongli WANG",
+        "Ling TAN",
+        "Shaodong LAI"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01384",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01384",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Influence and mechanisms of common ingroup identity on competitive victimhood in doctor-patient relationships",
+      "authors": [
+        "Xun DENG",
+        "Siyi LONG",
+        "Yilin SHEN",
+        "Huanhuan ZHAO",
+        "Wen HE"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.00752",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.00752",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Identity embarrassment and identity defense: The development of organizational identity of dispatched employees",
+      "authors": [
+        "Luyun LI",
+        "Liangding JIA",
+        "Yijie ZHANG",
+        "Liangyu WEI"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.02035",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.02035",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Uncovering Personal Histories: A Technology-Mediated Approach to Eliciting Reflection on Identity Transitions",
+      "authors": [
+        "Oliver L. Haimson",
+        "Megh Marathe"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3504004",
+      "url": "https://doi.org/10.1145/3504004",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Artificial Intelligence and the Future of Work: A Functional-Identity Perspective",
+      "authors": [
+        "Eva Selenko",
+        "Sarah Bankins",
+        "Mindy Shoss",
+        "Joel Warburton",
+        "Simon Lloyd D. Restubog"
+      ],
+      "year": 2022,
+      "published_date": "2022-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221091823",
+      "url": "https://doi.org/10.1177/09637214221091823",
+      "citation_count": 141,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Models of Identity Signaling",
+      "authors": [
+        "Paul E. Smaldino"
+      ],
+      "year": 2022,
+      "published_date": "2022-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221075609",
+      "url": "https://doi.org/10.1177/09637214221075609",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Work Identity and Future Research on Work as a Calling",
+      "authors": [
+        "Americus Reed",
+        "Samuel Jones",
+        "Bryan J. Dik"
+      ],
+      "year": 2022,
+      "published_date": "2022-10-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221112118",
+      "url": "https://doi.org/10.1177/09637214221112118",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Performance, Well-Being, Motivation, and Identity in an Age of Abundant Data: Introduction to the “Well-Measured Life” Special Issue of\n                    <i>Current Directions in Psychological Science</i>",
+      "authors": [
+        "Robert L. Goldstone"
+      ],
+      "year": 2022,
+      "published_date": "2022-02-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214211053834",
+      "url": "https://doi.org/10.1177/09637214211053834",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "c47222fafd03f7711ac2705a16ba37e543049cce31b9f18b2a6f6195e1f933dc",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

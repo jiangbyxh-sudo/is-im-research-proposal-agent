@@ -1,0 +1,676 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_3ec568f340154477a1d574d42ebfbcc7",
+  "case_id": "FIX-COVERAGE-055",
+  "recorded_at": "2026-08-21T18:47:41.178008+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:47:31.711361+00:00",
+  "completed_at": "2026-08-21T18:47:41.175829+00:00",
+  "duration_ms": 9469.0,
+  "input": {
+    "selected_direction_id": "topic_decision_support",
+    "research_direction": "Decision Support",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "Decision Support",
+    "journal_pool_ids": [
+      "IM_CORE",
+      "SCIENTOMETRICS",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_SCIENCE_POLICY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0022-0418",
+      "query": "Decision Support",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 9,
+      "accepted_before_dedupe": 9,
+      "queried_at": "2026-08-21T18:47:35.362083+00:00",
+      "duration_ms": 3219.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3219.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0165-5515",
+      "query": "Decision Support",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 7,
+      "accepted_before_dedupe": 7,
+      "queried_at": "2026-08-21T18:47:38.585166+00:00",
+      "duration_ms": 2594.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2594.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "Decision Support",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 2,
+      "accepted_before_dedupe": 2,
+      "queried_at": "2026-08-21T18:47:31.714537+00:00",
+      "duration_ms": 1641.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1641.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "Decision Support",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:47:33.363744+00:00",
+      "duration_ms": 2000.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2000.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 18,
+    "accepted_before_dedupe": 18,
+    "deduped_corpus": 18,
+    "final_selected": 18,
+    "final_by_language": {
+      "zh": 2,
+      "en": 16
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 8,
+    "en": 4
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Synergy of fiscal and financial support in scientific and technological innovation",
+      "authors": [
+        "Mingxi ZHANG",
+        "Junfang ZHANG",
+        "Daishu ZHOU",
+        "Mu SU"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260516",
+      "url": "https://doi.org/10.3724/1005-0566.20260516",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can place-based policy support promote high-quality development of the regional digital economy",
+      "authors": [
+        "Menggen CHEN",
+        "Yiran ZHAO",
+        "Yiyuan SUN"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260509",
+      "url": "https://doi.org/10.3724/1005-0566.20260509",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Technology Watch/Competitive Intelligence–based Decision-Support System optimised with Genetic Algorithms",
+      "authors": [
+        "Cristina Lopez-Pujalte",
+        "María J Tena-Mateos",
+        "Antonio Muñoz-Cañavate"
+      ],
+      "year": 2025,
+      "published_date": "2025-02-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515221133531",
+      "url": "https://doi.org/10.1177/01655515221133531",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Distributed decision-making in multi-session academic information seeking: a process model of interruption, deferral, and reconstruction",
+      "authors": [
+        "Shih-Chuan Chen"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-26",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-04-2026-0183",
+      "url": "https://doi.org/10.1108/jd-04-2026-0183",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Classificatory decision-making as a situated ethical practice: an analytical framework grounded in UDC-based educational contexts",
+      "authors": [
+        "Benildes Coura Moreira dos Santos Maculan"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-18",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-04-2026-0205",
+      "url": "https://doi.org/10.1108/jd-04-2026-0205",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Enterprise resource planning adoption model for well-informed decision in higher learning institutions",
+      "authors": [
+        "Muaadh Mukred",
+        "Fahad M Alotaibi",
+        "Zawiyah M Yusof",
+        "Umi Asma’ Mokhtar",
+        "Burkan Hawash",
+        "Waleed Abdulkafi Ahmed"
+      ],
+      "year": 2023,
+      "published_date": "2023-06-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515211019703",
+      "url": "https://doi.org/10.1177/01655515211019703",
+      "citation_count": 14,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A linguistically asymmetric similarity decision model integrating item tendency for rating predictions",
+      "authors": [
+        "Deng Jiangzhou",
+        "Wang Songli",
+        "Wu Qi",
+        "Ye Jianmei",
+        "Wang Yong"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231220172",
+      "url": "https://doi.org/10.1177/01655515231220172",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Governing delegated curation in research data repositories: a qualitative study of data deposit support",
+      "authors": [
+        "Guillaume Garcia",
+        "Paul Colin",
+        "Alina Danciu"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-20",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-02-2026-0107",
+      "url": "https://doi.org/10.1108/jd-02-2026-0107",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "An ontological data model to support urban flood disaster response",
+      "authors": [
+        "Biswanath Dutta",
+        "Prashant Kumar Sinha"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231167297",
+      "url": "https://doi.org/10.1177/01655515231167297",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Knowledge visualisation and strategic decision-making outcomes in small and medium-sized enterprises",
+      "authors": [
+        "Reda Shaker Abdelkareem",
+        "Marcjanna M Augustyn"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231160117",
+      "url": "https://doi.org/10.1177/01655515231160117",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Choice or inevitability: social context and the role of cultural capital in information behaviour of young people in career decision-making",
+      "authors": [
+        "Indira Kasapović"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-01-2025-0027",
+      "url": "https://doi.org/10.1108/jd-01-2025-0027",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "<i>Our Heritage, Our Stories</i>\n                    : developing AI tools to link and support community-generated digital cultural heritage",
+      "authors": [
+        "Ewan D. Hannaford",
+        "Viktor Schlegel",
+        "Rhiannon Lewis",
+        "Stefan Ramsden",
+        "Jenny Bunn",
+        "John Moore",
+        "Marc Alexander",
+        "Hannah Barker",
+        "Riza Batista-Navarro",
+        "Lorna Hughes",
+        "Goran Nenadic"
+      ],
+      "year": 2024,
+      "published_date": "2024-09-03",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-03-2024-0057",
+      "url": "https://doi.org/10.1108/jd-03-2024-0057",
+      "citation_count": 15,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Understanding ways to support teens and parents affected by Russia–Ukraine war",
+      "authors": [
+        "Irene Lopatovska",
+        "Celia Coan"
+      ],
+      "year": 2024,
+      "published_date": "2024-06-26",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-08-2023-0159",
+      "url": "https://doi.org/10.1108/jd-08-2023-0159",
+      "citation_count": 6,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Parsing through paradigms: uncertainty and decision-making in human information behavior",
+      "authors": [
+        "Juliana Mestre"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-02",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-02-2023-0027",
+      "url": "https://doi.org/10.1108/jd-02-2023-0027",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Information behaviour in high risk decision making: Study of international postgraduates",
+      "authors": [
+        "Carolyn McNicholas",
+        "Rita Marcella"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515221124080",
+      "url": "https://doi.org/10.1177/01655515221124080",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Information literacy and research support services in academic libraries: A bibliometric analysis from 2001 to 2020",
+      "authors": [
+        "Nusrat Ali",
+        "Muhammad Shoaib",
+        "Farooq Abdullah"
+      ],
+      "year": 2023,
+      "published_date": "2023-12-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515211068169",
+      "url": "https://doi.org/10.1177/01655515211068169",
+      "citation_count": 23,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "“I think sometimes the whole process is just a little bit intimidating”: modeling the health insurance decision-making process",
+      "authors": [
+        "Emily Vardell"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-24",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-06-2022-0140",
+      "url": "https://doi.org/10.1108/jd-06-2022-0140",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Health literacy, health literacy interventions and decision-making: a systematic literature review",
+      "authors": [
+        "Maedeh Ghorbanian Zolbin",
+        "Isto Huvila",
+        "Shahrokh Nikou"
+      ],
+      "year": 2022,
+      "published_date": "2022-12-19",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-01-2022-0004",
+      "url": "https://doi.org/10.1108/jd-01-2022-0004",
+      "citation_count": 32,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "28ec275dd74b887ae6ce681f56e0bd3550226d6584bf4fb97fc09fb6f2192cf4",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

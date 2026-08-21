@@ -1,0 +1,44 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_2d720ef850f34ed99c129815bed14bf1",
+  "case_id": "CHALLENGE-NO-ABSTRACT",
+  "recorded_at": "2026-08-21T19:18:22.751212+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "fixture": "verified metadata challenge"
+  },
+  "candidate_counts": {
+    "final_corpus": 2
+  },
+  "status": "RETRIEVAL_PARTIAL",
+  "checkpoint": {
+    "passed": false
+  },
+  "actual_output": {
+    "paper": {
+      "title": "AI systems without abstract",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "English Test Journal",
+      "language": "en",
+      "doi": "10.1000/no-abstract",
+      "url": "https://doi.org/10.1000/no-abstract",
+      "citation_count": 0,
+      "journal_ranking": [
+        "P0_TEST_ELIGIBLE"
+      ],
+      "journal_pool_ids": [
+        "P0_TEST"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    "expected": "evidence_level=title_only and formal proposal blocked",
+    "observed_gap": "current PaperRecord does not expose evidence_level"
+  }
+}

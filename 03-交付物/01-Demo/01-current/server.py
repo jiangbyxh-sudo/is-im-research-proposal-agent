@@ -49,6 +49,7 @@ from proposal_generation_provider import (  # noqa: E402
     ProposalRequest,
     build_proposal_generation_provider,
 )
+from evaluation.p0_model_baseline import run_model_baseline  # noqa: E402
 
 
 GROUP_POOL_ROUTES = {
@@ -410,7 +411,7 @@ class AppHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:  # noqa: N802
         route = urlparse(self.path).path
-        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear"}:
+        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear", "/api/evaluation/p0-model-baseline"}:
             self.send_error(HTTPStatus.NOT_FOUND)
             return
         try:
@@ -429,6 +430,13 @@ class AppHandler(BaseHTTPRequestHandler):
                 raise RequestError("请求必须是JSON对象")
             if route == "/api/configure/synthesis":
                 self.send_json(configure_synthesis(payload))
+            elif route == "/api/evaluation/p0-model-baseline":
+                if synthesis_provider_name() == "unconfigured":
+                    raise RequestError("请先在检索设置中配置DeepSeek，再运行P0模型基线")
+                self.send_json(run_model_baseline(
+                    build_research_synthesis_provider(),
+                    build_proposal_generation_provider(KB_ROOT),
+                ))
             elif route == "/api/synthesize":
                 self.send_json(run_synthesis_job(payload.get("job_id")))
             elif route == "/api/proposal":

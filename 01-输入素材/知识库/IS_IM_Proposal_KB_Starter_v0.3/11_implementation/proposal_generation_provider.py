@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 import re
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Protocol
@@ -313,8 +315,16 @@ JSON格式：
             "papers": list(paper_map.values()),
         }
         try:
+            started = time.monotonic()
             raw, model_audit = self.client.complete(self._system_prompt(), json.dumps(payload, ensure_ascii=False))
-            return self._validate(raw, request, paradigm, paper_map, model_audit)
+            result = self._validate(raw, request, paradigm, paper_map, model_audit)
+            result.audit["prompt_version"] = "proposal-current-baseline-0.5"
+            result.audit["input_hash"] = hashlib.sha256(
+                json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+            ).hexdigest()
+            result.audit["duration_ms"] = round((time.monotonic() - started) * 1000, 2)
+            result.audit["raw_model_output"] = raw
+            return result
         except Exception as exc:
             return ProposalResult(
                 status="PROPOSAL_GENERATION_FAILED",

@@ -1,0 +1,15 @@
+{
+  "version": "p0-fixed-cases-1.0.0",
+  "cases": [
+    {"case_id": "FIX-STABILITY-001", "kind": "stability", "runs": 5, "direction_id": "topic_ai_enabled_information_systems", "snapshot_required": true},
+    {"case_id": "FIX-PROPOSAL-001", "kind": "proposal_human_rubric", "direction_id": "topic_ai_enabled_information_systems"},
+    {"case_id": "FIX-GUIDANCE-001", "kind": "guidance_specificity", "direction_id": "topic_ai_enabled_information_systems"},
+    {"case_id": "CHALLENGE-CROSSREF-429", "kind": "provider_failure", "expected": "retry_after_header_honored_and_error_visible"},
+    {"case_id": "CHALLENGE-PROVIDER-TIMEOUT", "kind": "provider_failure", "expected": "timeout_visible_no_fabricated_results"},
+    {"case_id": "CHALLENGE-CHINESE-GAP", "kind": "coverage_gap", "expected": "language_gap_visible_no_cross_language_padding"},
+    {"case_id": "CHALLENGE-RETRACTION", "kind": "checkpoint", "expected": "retraction_excluded"},
+    {"case_id": "CHALLENGE-DUPLICATE", "kind": "normalization", "expected": "duplicate_doi_collapsed"},
+    {"case_id": "CHALLENGE-NO-ABSTRACT", "kind": "evidence", "expected": "title_only_evidence_visible_and_not_formal_proposal"},
+    {"case_id": "CHALLENGE-INSUFFICIENT-EVIDENCE", "kind": "checkpoint", "expected": "synthesis_blocked_below_five_papers"}
+  ]
+}

@@ -1,13 +1,16 @@
 import sys
 import json
+import io
 import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
 from pathlib import Path
 
 
 KB_PROVIDER_DIR = Path(__file__).resolve().parents[4] / "01-输入素材/知识库/IS_IM_Proposal_KB_Starter_v0.3/11_implementation"
 sys.path.insert(0, str(KB_PROVIDER_DIR))
 
-from paper_discovery_provider import CrossrefPaperDiscoveryProvider  # noqa: E402
+from paper_discovery_provider import CrossrefPaperDiscoveryProvider, CrossrefTransport  # noqa: E402
 
 
 class StaticTransport:
@@ -24,6 +27,43 @@ class StaticTransport:
 
 
 class ProviderTests(unittest.TestCase):
+    def test_crossref_concurrency_obeys_public_and_polite_pool_caps(self):
+        public_provider = CrossrefPaperDiscoveryProvider(Path("unused"), transport=CrossrefTransport())
+        polite_provider = CrossrefPaperDiscoveryProvider(
+            Path("unused"), transport=CrossrefTransport(mailto="researcher@example.edu"), max_workers=99
+        )
+        self.assertEqual(public_provider.max_workers, 1)
+        self.assertEqual(public_provider.concurrency_policy, "crossref_public_pool")
+        self.assertEqual(polite_provider.max_workers, 3)
+        self.assertEqual(polite_provider.concurrency_policy, "crossref_polite_pool")
+
+    def test_crossref_429_honors_retry_after_and_records_rate_headers(self):
+        class FakeResponse:
+            headers = {"X-Rate-Limit-Limit": "50", "X-Rate-Limit-Interval": "1s"}
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self, *args):
+                return json.dumps({"message": {"items": []}}).encode("utf-8")
+
+        rate_error = HTTPError(
+            "https://api.crossref.org/works", 429, "rate limited",
+            {"Retry-After": "2", "X-Rate-Limit-Limit": "1", "X-Rate-Limit-Interval": "1s"},
+            io.BytesIO(b""),
+        )
+        transport = CrossrefTransport(retries=1)
+        with patch("paper_discovery_provider.urlopen", side_effect=[rate_error, FakeResponse()]), patch(
+            "paper_discovery_provider.time.sleep"
+        ) as sleeper:
+            payload = transport.get("https://api.crossref.org/works", {"rows": 1})
+        self.assertEqual(payload["_transport_meta"]["attempts"], 2)
+        self.assertEqual(payload["_transport_meta"]["rate_limit"], 50.0)
+        self.assertTrue(any(call.args and call.args[0] == 2.0 for call in sleeper.call_args_list))
+
     def test_fetch_excludes_irrelevant_and_retracted_records(self):
         provider = CrossrefPaperDiscoveryProvider(Path("unused"), transport=StaticTransport())
         journal = {

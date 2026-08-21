@@ -1,0 +1,976 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_1d3893b00fce43129009b611fe60fef3",
+  "case_id": "FIX-COVERAGE-048",
+  "recorded_at": "2026-08-21T18:46:13.741550+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:46:06.109912+00:00",
+  "completed_at": "2026-08-21T18:46:13.738061+00:00",
+  "duration_ms": 7625.0,
+  "input": {
+    "selected_direction_id": "topic_information_science",
+    "research_direction": "Information Science",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "Information Science",
+    "journal_pool_ids": [
+      "IM_CORE",
+      "SCIENTOMETRICS",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_SCIENCE_POLICY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0022-0418",
+      "query": "Information Science",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:46:08.849157+00:00",
+      "duration_ms": 2032.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2032.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0165-5515",
+      "query": "Information Science",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 13,
+      "queried_at": "2026-08-21T18:46:10.881920+00:00",
+      "duration_ms": 2859.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2859.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "Information Science",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 9,
+      "queried_at": "2026-08-21T18:46:06.113439+00:00",
+      "duration_ms": 1266.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1266.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "Information Science",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 12,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:46:07.379220+00:00",
+      "duration_ms": 1468.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1468.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 72,
+    "accepted_before_dedupe": 42,
+    "deduped_corpus": 42,
+    "final_selected": 29,
+    "final_by_language": {
+      "zh": 9,
+      "en": 20
+    }
+  },
+  "filters": {
+    "relevance_below_threshold": 28,
+    "retraction_or_correction": 2
+  },
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 1,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Structural shift in U.S. science and technology governance",
+      "authors": [
+        "Chunliang FAN"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260301",
+      "url": "https://doi.org/10.3724/1005-0566.20260301",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Sociological analysis of science popularization research in contemporary China",
+      "authors": [
+        "Han ZHANG",
+        "Lijie ZHANG",
+        "Yan YAN"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260418",
+      "url": "https://doi.org/10.3724/1005-0566.20260418",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Transformation of the national innovation system under the artificial intelligence for science paradigm",
+      "authors": [
+        "Binbin ZHAO",
+        "Kaihua CHEN"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260517",
+      "url": "https://doi.org/10.3724/1005-0566.20260517",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Systemic science and technology strategic management for future industries",
+      "authors": [
+        "Wei WU",
+        "Jiahao FENG",
+        "Xiangli ZHU",
+        "Bo YANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260604",
+      "url": "https://doi.org/10.3724/1005-0566.20260604",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Science and technology innovation bonds: Underlying logic and development pathway",
+      "authors": [
+        "Ziruo LI",
+        "Xiaofen TAN"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20251204",
+      "url": "https://doi.org/10.3724/1005-0566.20251204",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Revival of corporate scientific research and the transformation of science and technology policy",
+      "authors": [
+        "Yifan WANG",
+        "Xiaohua LI"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250814",
+      "url": "https://doi.org/10.3724/1005-0566.20250814",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Study on the driving mecaDouble helix co-evolution model of science and innovation platform empowering the growth of science and innovation talents and the transformation of scientific and technological achievements: taking Shenzhen Academy of Science and Technology as an examplehanism and promotion pathways of the China&amp;rsquo;s debut economy from the perspective of innovation ecosystem theory",
+      "authors": [
+        "ZHOU Wenhui",
+        "BAI Yu",
+        "ZHOU Yifang"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250610",
+      "url": "https://doi.org/10.3724/1005-0566.20250610",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How does technology empower new paradigms in humanities and social science:a case study of archaeological science",
+      "authors": [
+        "WU Wei",
+        "LI Jiani",
+        "CHEN Aihua"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250606",
+      "url": "https://doi.org/10.3724/1005-0566.20250606",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on the spatiotemporal characteristics, interactive relationships and influencing factors of the coupling coordination degree of education, science and technology, and talent",
+      "authors": [
+        "Haigang HUANG",
+        "Yihua ZHANG"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20251117",
+      "url": "https://doi.org/10.3724/1005-0566.20251117",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can LLMs help redefine core journals in\n                    <i>Lib</i>\n                    <i>rary and Information Science</i>\n                    ? A content-based classification approach using large language models",
+      "authors": [
+        "Eungi Kim"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-07-2025-0189",
+      "url": "https://doi.org/10.1108/jd-07-2025-0189",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Toward intentionism: a fourth metatheoretical perspective on information science and documentation",
+      "authors": [
+        "Laurie Bonnici"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-13",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-03-2026-0115",
+      "url": "https://doi.org/10.1108/jd-03-2026-0115",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Infrastructural-epistemometrics: mapping fragmentation, selective coupling, and bias in library and information science (2000–2024)",
+      "authors": [
+        "Arwendria Arwendria"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-15",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-12-2025-0413",
+      "url": "https://doi.org/10.1108/jd-12-2025-0413",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A systematic review of grounded theory studies in library and information science research",
+      "authors": [
+        "H.K.I. Sewwandi",
+        "Anne Goulding",
+        "Spencer Lilley"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-22",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-06-2025-0169",
+      "url": "https://doi.org/10.1108/jd-06-2025-0169",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital publishing and open access in Library and Information Science (2020–2025): A bibliometric and science-mapping analysis",
+      "authors": [
+        "Qian Xu",
+        "Ziang Wang"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-21",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515261442148",
+      "url": "https://doi.org/10.1177/01655515261442148",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Mapping emerging research methodologies in Library and Information Science (2015–2023): A systematic review",
+      "authors": [
+        "Khalid B Mirza",
+        "Amjid Khan",
+        "Pervaiz Ahmad"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-18",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515251388623",
+      "url": "https://doi.org/10.1177/01655515251388623",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Gender differences in library and information science research output: A comparative analysis of Asia-Pacific, North America and Europe",
+      "authors": [
+        "Song Yanhui",
+        "Zeng Xiya"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-24",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515251409319",
+      "url": "https://doi.org/10.1177/01655515251409319",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can ChatGPT replace citations for quality evaluation of academic articles and journals? Empirical evidence from library and information science",
+      "authors": [
+        "Michael Thelwall"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-03-2025-0075",
+      "url": "https://doi.org/10.1108/jd-03-2025-0075",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The use of one-on-one interviews in library and information science: A scoping review",
+      "authors": [
+        "Anna Matysek"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231171088",
+      "url": "https://doi.org/10.1177/01655515231171088",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Bibliographical foundations of information science: a review essay",
+      "authors": [
+        "Birger Hjørland"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-02",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-06-2024-0126",
+      "url": "https://doi.org/10.1108/jd-06-2024-0126",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cognition, horizon and practice: formation of the nonsynchronism in theoretical research of information science",
+      "authors": [
+        "Fang Wang",
+        "Hongzhi Zhu"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-02",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-02-2024-0032",
+      "url": "https://doi.org/10.1108/jd-02-2024-0032",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Generative AI and information access: A sustainability model and a research agenda",
+      "authors": [
+        "Gobinda Chowdhury",
+        "Sudatta Chowdhury"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-23",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515251377016",
+      "url": "https://doi.org/10.1177/01655515251377016",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Knowledge translation as an interdisciplinary method for information science",
+      "authors": [
+        "John Kausch"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-28",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-07-2024-0167",
+      "url": "https://doi.org/10.1108/jd-07-2024-0167",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Landscapes of information science and library science research: comparing funded and non-funded research from 2008 to 2023",
+      "authors": [
+        "JungWon Yoon",
+        "James E. Andrews",
+        "Subin Seo",
+        "EunKyung Chung"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-04",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-07-2025-0190",
+      "url": "https://doi.org/10.1108/jd-07-2025-0190",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can review articles help identify influential topics in library and information science?",
+      "authors": [
+        "Yu-Wei Chang",
+        "Chun-Yu Liu"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-04",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-04-2025-0085",
+      "url": "https://doi.org/10.1108/jd-04-2025-0085",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring the contemplative landscape of Library and Information Science through the lens of Chinese philosophies",
+      "authors": [
+        "Lin Wang",
+        "Jenna Hartel"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-04",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-06-2025-0160",
+      "url": "https://doi.org/10.1108/jd-06-2025-0160",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Curiosity and information-seeking behaviour: a review of psychological research and a comparison with the information science literature",
+      "authors": [
+        "Thomas D. Wilson"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-16",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-09-2023-0173",
+      "url": "https://doi.org/10.1108/jd-09-2023-0173",
+      "citation_count": 14,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The identity of information science",
+      "authors": [
+        "Vivien Petras"
+      ],
+      "year": 2024,
+      "published_date": "2024-04-24",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-04-2023-0074",
+      "url": "https://doi.org/10.1108/jd-04-2023-0074",
+      "citation_count": 14,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Interdisciplinarity of information science: an evolutionary perspective of theory application",
+      "authors": [
+        "Chao Zhang",
+        "Fang Wang",
+        "Yi Huang",
+        "Le Chang"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-22",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-07-2023-0135",
+      "url": "https://doi.org/10.1108/jd-07-2023-0135",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards an agenda for information education and research for sustainable development",
+      "authors": [
+        "Gobinda Chowdhury",
+        "Sudatta Chowdhury"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-25",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515241260711",
+      "url": "https://doi.org/10.1177/01655515241260711",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "e3474bdf96ca7a1c5d10dfb746701702e55028c7831e752f4fc04eddbba29a6e",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

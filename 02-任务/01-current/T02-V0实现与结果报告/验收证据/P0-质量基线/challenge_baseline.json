@@ -1,0 +1,43 @@
+{
+  "baseline_version": "p0-challenges-1.0.0",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "passed": 6,
+  "failed": 1,
+  "outcomes": [
+    {
+      "case_id": "CHALLENGE-CROSSREF-429",
+      "passed": true,
+      "trace_id": "trace_55b7289756704999a4ce66500c4628be"
+    },
+    {
+      "case_id": "CHALLENGE-PROVIDER-TIMEOUT",
+      "passed": true,
+      "trace_id": "trace_5e856c2c7cee407f96b63bc1265b466a"
+    },
+    {
+      "case_id": "CHALLENGE-CHINESE-GAP",
+      "passed": true,
+      "trace_id": "trace_3c84e1bebfe24a2baae49c9857ee0e6a"
+    },
+    {
+      "case_id": "CHALLENGE-DUPLICATE",
+      "passed": true,
+      "trace_id": "trace_c43b8e24bcfc46638f5e63c21a5fb138"
+    },
+    {
+      "case_id": "CHALLENGE-RETRACTION",
+      "passed": true,
+      "trace_id": "trace_a8ced30296a74c15bcefbf59f7af3ad3"
+    },
+    {
+      "case_id": "CHALLENGE-NO-ABSTRACT",
+      "passed": false,
+      "trace_id": "trace_2d720ef850f34ed99c129815bed14bf1"
+    },
+    {
+      "case_id": "CHALLENGE-INSUFFICIENT-EVIDENCE",
+      "passed": true,
+      "trace_id": "trace_f58d4b40e2e04987aca1255ae401ff32"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
+from threading import Lock
 from typing import Protocol
 from urllib.parse import quote, urlencode
 from urllib.error import HTTPError
@@ -59,6 +60,51 @@ class CrossrefTransport:
         self.mailto = mailto
         self.timeout = timeout
         self.retries = retries
+        self._rate_lock = Lock()
+        self._next_request_at = 0.0
+        self._minimum_interval = 0.0
+
+    @staticmethod
+    def _seconds(value: str | None) -> float | None:
+        if not value:
+            return None
+        text = value.strip().lower()
+        try:
+            return max(0.0, float(text))
+        except ValueError:
+            pass
+        match = re.fullmatch(r"([0-9.]+)\s*(ms|s|m|h)", text)
+        if not match:
+            return None
+        amount = float(match.group(1))
+        return amount * {"ms": 0.001, "s": 1.0, "m": 60.0, "h": 3600.0}[match.group(2)]
+
+    def _reserve_request_slot(self) -> None:
+        with self._rate_lock:
+            now = time.monotonic()
+            wait_seconds = max(0.0, self._next_request_at - now)
+            if wait_seconds:
+                time.sleep(wait_seconds)
+            self._next_request_at = time.monotonic() + self._minimum_interval
+
+    def _apply_rate_headers(self, headers) -> dict:
+        limit_raw = headers.get("X-Rate-Limit-Limit")
+        interval_raw = headers.get("X-Rate-Limit-Interval")
+        retry_after_raw = headers.get("Retry-After")
+        try:
+            limit = float(limit_raw) if limit_raw else None
+        except ValueError:
+            limit = None
+        interval_seconds = self._seconds(interval_raw)
+        retry_after_seconds = self._seconds(retry_after_raw)
+        if limit and interval_seconds:
+            with self._rate_lock:
+                self._minimum_interval = max(self._minimum_interval, interval_seconds / limit)
+        return {
+            "rate_limit": limit,
+            "rate_interval_seconds": interval_seconds,
+            "retry_after_seconds": retry_after_seconds,
+        }
 
     def get(self, url: str, params: dict) -> dict:
         params = dict(params)
@@ -69,16 +115,30 @@ class CrossrefTransport:
         if self.mailto:
             agent += f" (mailto:{self.mailto})"
         last_error: Exception | None = None
+        started = time.monotonic()
         for attempt in range(self.retries + 1):
             try:
+                self._reserve_request_slot()
                 request = Request(target, headers={"User-Agent": agent, "Accept": "application/json"})
                 with urlopen(request, timeout=self.timeout) as response:
-                    return json.load(response)
+                    payload = json.load(response)
+                    rate_meta = self._apply_rate_headers(response.headers)
+                payload["_transport_meta"] = {
+                    "attempts": attempt + 1,
+                    "duration_ms": round((time.monotonic() - started) * 1000, 2),
+                    "polite_pool": bool(self.mailto),
+                    **rate_meta,
+                }
+                return payload
             except HTTPError as exc:
                 last_error = exc
+                rate_meta = self._apply_rate_headers(exc.headers)
                 if exc.code != 429 or attempt >= self.retries:
                     break
-                time.sleep(0.5 * (2 ** attempt))
+                delay = rate_meta.get("retry_after_seconds")
+                if delay is None:
+                    delay = 0.5 * (2 ** attempt)
+                time.sleep(min(max(delay, 0.1), 60.0))
             except Exception as exc:
                 last_error = exc
                 if attempt < self.retries:
@@ -94,7 +154,7 @@ class CrossrefPaperDiscoveryProvider:
         self,
         registry_path: Path,
         transport: JsonTransport | None = None,
-        max_workers: int = 4,
+        max_workers: int | None = None,
         max_journals_per_language: int = 10,
         rows_per_journal: int = 20,
         enable_chinese: bool = True,
@@ -104,7 +164,10 @@ class CrossrefPaperDiscoveryProvider:
             mailto=os.getenv("PROPOSAL_CROSSREF_MAILTO") or None,
             timeout=int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "18")),
         )
-        self.max_workers = max(1, min(max_workers, 4))
+        policy_cap = 3 if getattr(self.transport, "mailto", None) else 1
+        requested_workers = policy_cap if max_workers is None else max_workers
+        self.max_workers = max(1, min(requested_workers, policy_cap))
+        self.concurrency_policy = "crossref_polite_pool" if policy_cap == 3 else "crossref_public_pool"
         self.max_journals_per_language = max(1, max_journals_per_language)
         self.rows_per_journal = max(1, min(rows_per_journal, 100))
         self.enable_chinese = enable_chinese
@@ -183,7 +246,9 @@ class CrossrefPaperDiscoveryProvider:
             "select": "DOI,title,container-title,published,published-print,published-online,issued,created,author,ISSN,URL,type,is-referenced-by-count,abstract,relation,update-to",
         }
         started = datetime.now(timezone.utc).isoformat()
+        started_monotonic = time.monotonic()
         payload = self.transport.get(endpoint, params)
+        transport_meta = payload.pop("_transport_meta", {})
         items = payload.get("message", {}).get("items", [])
         papers = []
         exclusions = []
@@ -231,6 +296,9 @@ class CrossrefPaperDiscoveryProvider:
             "returned_rows": len(items),
             "accepted_before_dedupe": len(papers),
             "queried_at": started,
+            "duration_ms": round((time.monotonic() - started_monotonic) * 1000, 2),
+            "concurrency_policy": self.concurrency_policy,
+            "transport": transport_meta,
         }, exclusions
 
     def discover(self, request: DiscoveryRequest) -> DiscoveryResult:
@@ -286,6 +354,7 @@ class CrossrefPaperDiscoveryProvider:
                         "reason": "provider_request_failed",
                         "journal": journal["canonical_title"],
                         "error_type": type(exc).__name__,
+                        "http_status": getattr(exc, "code", None),
                     })
 
         best: dict[str, dict] = {}

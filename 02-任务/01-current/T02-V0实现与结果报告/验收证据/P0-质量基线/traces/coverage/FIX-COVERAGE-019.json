@@ -1,0 +1,717 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_a5d7dac97511402d8c5df7f70dd061b2",
+  "case_id": "FIX-COVERAGE-019",
+  "recorded_at": "2026-08-21T18:41:54.656209+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:41:48.541404+00:00",
+  "completed_at": "2026-08-21T18:41:54.654693+00:00",
+  "duration_ms": 6109.0,
+  "input": {
+    "selected_direction_id": "topic_hci",
+    "research_direction": "HCI",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "HCI",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "CS_AI",
+      "HCI",
+      "CS_IR",
+      "CS_DATA",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "HCI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:41:50.395654+00:00",
+      "duration_ms": 2672.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2672.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "HCI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:53.062417+00:00",
+      "duration_ms": 1594.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1594.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "HCI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:48.546282+00:00",
+      "duration_ms": 1843.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1843.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 20,
+    "accepted_before_dedupe": 20,
+    "deduped_corpus": 20,
+    "final_selected": 20,
+    "final_by_language": {
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 10,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Wildfire and Forest Management: Opportunities for HCI Research",
+      "authors": [
+        "Nino Migineishvili",
+        "Madeleine Grunde-McLaughlin",
+        "Emmanuel Azuh",
+        "Spencer Wood",
+        "René Just",
+        "Katharina Reinecke"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3765288",
+      "url": "https://doi.org/10.1145/3765288",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Performing Rigor: Reflexivity in HCI/CSCW",
+      "authors": [
+        "Nora McDonald",
+        "John S. Seberger"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-18",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3831595",
+      "url": "https://doi.org/10.1145/3831595",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Climate Data Practices: A Research Approach for HCI and Climate Justice",
+      "authors": [
+        "Robert Soden",
+        "Taneea S. Agrawaal",
+        "Austin Lord",
+        "Cassandra Chanen",
+        "Lillian Flawn",
+        "Zeina Seaifan",
+        "Michael Classens",
+        "Steve Easterbrook"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3719346",
+      "url": "https://doi.org/10.1145/3719346",
+      "citation_count": 21,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Co-creating Conditions for Social Justice in Digital Societies: Modes of Resistance in HCI Collaborative Endeavors",
+      "authors": [
+        "Clara Crivellaro",
+        "Lizzie Coles-Kemp",
+        "Alan Dix",
+        "Ann Light"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3711840",
+      "url": "https://doi.org/10.1145/3711840",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "HCI, Disability and Sport: A Literature Review",
+      "authors": [
+        "Lukas Strobel",
+        "Kathrin Gerling"
+      ],
+      "year": 2025,
+      "published_date": "2025-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3716136",
+      "url": "https://doi.org/10.1145/3716136",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Self-Determination Theory and HCI Games Research: Unfulfilled Promises and Unquestioned Paradigms",
+      "authors": [
+        "April Tyack",
+        "Elisa D. Mekler"
+      ],
+      "year": 2024,
+      "published_date": "2024-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3673230",
+      "url": "https://doi.org/10.1145/3673230",
+      "citation_count": 47,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Unmaking and HCI: Techniques, Technologies, Materials, and Philosophies beyond Making",
+      "authors": [
+        "Katherine W. Song",
+        "Samar Sabie",
+        "Steven J. Jackson",
+        "Kristina Lindström",
+        "Eric Paulos",
+        "Åsa Ståhl",
+        "Ron Wakkary"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689047",
+      "url": "https://doi.org/10.1145/3689047",
+      "citation_count": 17,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing for Emotion Regulation Interventions: An Agenda for HCI Theory and Research",
+      "authors": [
+        "Petr Slovak",
+        "Alissa Antle",
+        "Nikki Theofanopoulou",
+        "Claudia Daudén Roquet",
+        "James Gross",
+        "Katherine Isbister"
+      ],
+      "year": 2023,
+      "published_date": "2023-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3569898",
+      "url": "https://doi.org/10.1145/3569898",
+      "citation_count": 132,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Method to the Madness: Applying an Intersectional Analysis of Structural Oppression and Power in HCI and Design",
+      "authors": [
+        "Sheena Erete",
+        "Yolanda Rankin",
+        "Jakita Thomas"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3507695",
+      "url": "https://doi.org/10.1145/3507695",
+      "citation_count": 80,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "On the Grounds of Solutionism: Ontologies of Blackness and HCI",
+      "authors": [
+        "Jay Cunningham",
+        "Gabrielle Benabdallah",
+        "Daniela Rosner",
+        "Alex Taylor"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3557890",
+      "url": "https://doi.org/10.1145/3557890",
+      "citation_count": 75,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Evolution of HCI and Human Factors: Integrating Human and Artificial Intelligence",
+      "authors": [
+        "Mark Chignell",
+        "Lu Wang",
+        "Atefeh Zare",
+        "Jamy Li"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3557891",
+      "url": "https://doi.org/10.1145/3557891",
+      "citation_count": 69,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Clinician-Facing AI in the Wild: Taking Stock of the Sociotechnical Challenges and Opportunities for HCI",
+      "authors": [
+        "Hubert D. Zając",
+        "Dana Li",
+        "Xiang Dai",
+        "Jonathan F. Carlsen",
+        "Finn Kensing",
+        "Tariq O. Andersen"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3582430",
+      "url": "https://doi.org/10.1145/3582430",
+      "citation_count": 66,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring the Lived Experience of Behavior Change Technologies: Towards an Existential Model of Behavior Change for HCI",
+      "authors": [
+        "Amon Rapp",
+        "Arianna Boldi"
+      ],
+      "year": 2023,
+      "published_date": "2023-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3603497",
+      "url": "https://doi.org/10.1145/3603497",
+      "citation_count": 52,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "No More “Solutionism” or “Saviourism” in Futuring African HCI: A Manyfesto",
+      "authors": [
+        "Muhammad Sadi Adamu"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3571811",
+      "url": "https://doi.org/10.1145/3571811",
+      "citation_count": 50,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "(Re)Connecting History to the Theory and Praxis of HCI",
+      "authors": [
+        "Susanne Bødker",
+        "Sarah Fox",
+        "Nicolas Lalone",
+        "Megh Marathe",
+        "Robert Soden"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3589804",
+      "url": "https://doi.org/10.1145/3589804",
+      "citation_count": 17,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Iteratively Designing Gesture Vocabularies: A Survey and Analysis of Best Practices in the HCI Literature",
+      "authors": [
+        "Haijun Xia",
+        "Michael Glueck",
+        "Michelle Annett",
+        "Michael Wang",
+        "Daniel Wigdor"
+      ],
+      "year": 2022,
+      "published_date": "2022-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3503537",
+      "url": "https://doi.org/10.1145/3503537",
+      "citation_count": 74,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions",
+      "authors": [
+        "Dina Sabie",
+        "Cansu Ekmekcioglu",
+        "Syed Ishtiaque Ahmed"
+      ],
+      "year": 2022,
+      "published_date": "2022-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3490555",
+      "url": "https://doi.org/10.1145/3490555",
+      "citation_count": 49,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Understanding HCI Practices and Challenges of Experiment Reporting with Brain Signals: Towards Reproducibility and Reuse",
+      "authors": [
+        "Felix Putze",
+        "Susanne Putze",
+        "Merle Sagehorn",
+        "Christopher Micek",
+        "Erin T. Solovey"
+      ],
+      "year": 2022,
+      "published_date": "2022-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3490554",
+      "url": "https://doi.org/10.1145/3490554",
+      "citation_count": 27,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Biocentric Perspective on HCI Design Research Involving Plants",
+      "authors": [
+        "Jan Fell",
+        "Pei-Yi Kuo",
+        "Travis Greene",
+        "Jyun-Cheng Wang"
+      ],
+      "year": 2022,
+      "published_date": "2022-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3512887",
+      "url": "https://doi.org/10.1145/3512887",
+      "citation_count": 13,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Historically Informed HCI: Reflecting on Contemporary Technology through Anachronistic Fiction",
+      "authors": [
+        "Kien Mensonge"
+      ],
+      "year": 2022,
+      "published_date": "2022-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3517144",
+      "url": "https://doi.org/10.1145/3517144",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "371cd2dba043e6df964153c51184a8b9a4ccf93d1a61cf34029c73f60ecb231c",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

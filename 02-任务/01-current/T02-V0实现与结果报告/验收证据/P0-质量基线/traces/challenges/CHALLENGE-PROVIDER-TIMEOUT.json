@@ -1,0 +1,39 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_5e856c2c7cee407f96b63bc1265b466a",
+  "case_id": "CHALLENGE-PROVIDER-TIMEOUT",
+  "recorded_at": "2026-08-21T19:18:22.725869+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "provider": "Crossref",
+    "failure": "controlled_timeout"
+  },
+  "provider_runs": [],
+  "candidate_counts": {
+    "final": 0
+  },
+  "filters": [
+    {
+      "reason": "provider_request_failed",
+      "journal": "Test Journal",
+      "error_type": "TimeoutError",
+      "http_status": null
+    }
+  ],
+  "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "errors": [
+    {
+      "reason": "provider_request_failed",
+      "journal": "Test Journal",
+      "error_type": "TimeoutError",
+      "http_status": null
+    }
+  ],
+  "checkpoint": {
+    "passed": true,
+    "fabricated_results": 0
+  },
+  "missing_trace_fields": [
+    "retry_count_not_exposed_for_terminal_exception"
+  ]
+}

@@ -1,0 +1,1062 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_ae95b83764714c1295dccd1bf4f990bb",
+  "case_id": "FIX-COVERAGE-010",
+  "recorded_at": "2026-08-21T18:40:32.297941+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:40:21.164161+00:00",
+  "completed_at": "2026-08-21T18:40:32.294388+00:00",
+  "duration_ms": 11141.0,
+  "input": {
+    "selected_direction_id": "topic_digital_innovation",
+    "research_direction": "digital innovation",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "digital innovation",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "DIGITAL_PLATFORM",
+      "ORG_STRATEGY",
+      "ECON_STRATEGY",
+      "SECURITY",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+      "PKU_CORE_2023_ORG_INNOVATION",
+      "PKU_CORE_2023_MANAGEMENT_DIRECT",
+      "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "digital innovation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:40:25.934523+00:00",
+      "duration_ms": 3125.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3125.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "issn": "0960-085X",
+      "query": "digital innovation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:40:29.064736+00:00",
+      "duration_ms": 3235.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3235.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "digital innovation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:40:21.168254+00:00",
+      "duration_ms": 2015.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2015.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "digital innovation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 6,
+      "accepted_before_dedupe": 6,
+      "queried_at": "2026-08-21T18:40:23.194975+00:00",
+      "duration_ms": 2750.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2750.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 66,
+    "accepted_before_dedupe": 66,
+    "deduped_corpus": 66,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Can digital innovation network embedding expand the boundaries of regional technological innovation? Empirical evidence from 294 cities in China",
+      "authors": [
+        "Zhenkang FU",
+        "Qining PENG",
+        "Qinghua ZHU"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260312",
+      "url": "https://doi.org/10.3724/1005-0566.20260312",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Internal logic of digital innovation ecosystem development",
+      "authors": [
+        "Lei MA",
+        "Jinbo WAN",
+        "Jiang YU",
+        "Jin CHEN"
+      ],
+      "year": 2025,
+      "published_date": "2025-09-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250917",
+      "url": "https://doi.org/10.3724/1005-0566.20250917",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Transnational operations of digital firms and innovation in Chinese enterprises",
+      "authors": [
+        "Xuesong LI",
+        "Ruimin LI"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260510",
+      "url": "https://doi.org/10.3724/1005-0566.20260510",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital technology innovation empowering the network status of city industrial chains",
+      "authors": [
+        "Tianshuo ZHANG",
+        "Yudong QI"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260104",
+      "url": "https://doi.org/10.3724/1005-0566.20260104",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Institutional logic of promoting technological innovation in emerging industries through the digital economy",
+      "authors": [
+        "Zhen YANG",
+        "Wenna WANG",
+        "Jun HE"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260304",
+      "url": "https://doi.org/10.3724/1005-0566.20260304",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on the impact of digital intelligence application on the key core technology innovation of manufacturing enterprises",
+      "authors": [
+        "Junlong CHEN",
+        "Xiaomin SUN",
+        "Keying LIN"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260213",
+      "url": "https://doi.org/10.3724/1005-0566.20260213",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How does digital infrastructure promote regional innovation",
+      "authors": [
+        "Dan CUI",
+        "Jia ZHENG"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20251011",
+      "url": "https://doi.org/10.3724/1005-0566.20251011",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Policy enabling, digital ecology and digital industry innovation",
+      "authors": [
+        "Shushan ZHANG",
+        "Kaixuan CHEN",
+        "Zhaoning LIU"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250806",
+      "url": "https://doi.org/10.3724/1005-0566.20250806",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+      "authors": [
+        "Monronna Adilemi Azolabi"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-13",
+      "journal": "科学学研究",
+      "language": "zh",
+      "doi": "10.65967/siss.v44i1.129",
+      "url": "https://doi.org/10.65967/siss.v44i1.129",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+      "authors": [
+        "Zidi Xu",
+        "Ban Fang",
+        "Qunni Hung",
+        "Feigo Nan"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-13",
+      "journal": "科学学研究",
+      "language": "zh",
+      "doi": "10.65967/siss.v44i1.126",
+      "url": "https://doi.org/10.65967/siss.v44i1.126",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Unpacking digital options thinking for innovation renewal: a clinical inquiry into car connectivity",
+      "authors": [
+        "Fredrik Svahn",
+        "Martin Kristensson"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2022.2088415",
+      "url": "https://doi.org/10.1080/0960085x.2022.2088415",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Effects of artificial intelligence usage and knowledge-based dynamic capabilities on organizational innovation: A configurational approach",
+      "authors": [
+        "Meng An",
+        "Jiabao Lin",
+        "Jose Benitez"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114573",
+      "url": "https://doi.org/10.1016/j.dss.2025.114573",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How to leverage digital platforms in enhancing organizational resilience: The roles of supply chain integration and market orientation",
+      "authors": [
+        "Qinyao Zheng",
+        "Jiabao Lin",
+        "Jose Benitez"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114612",
+      "url": "https://doi.org/10.1016/j.dss.2026.114612",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A framework for value sensitive design in socio-technical digital ecosystems",
+      "authors": [
+        "Bernd Carsten Stahl"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2595915",
+      "url": "https://doi.org/10.1080/0960085x.2025.2595915",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Published content vs. live-streamed: Empirical from digital content activities in online healthcare communities",
+      "authors": [
+        "Liuan Wang",
+        "Yuke Luo",
+        "Linan Zhang"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114577",
+      "url": "https://doi.org/10.1016/j.dss.2025.114577",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing a fair and inclusive digital asset-based name-image-likeness marketplace",
+      "authors": [
+        "Arthur Carvalho",
+        "Liudmila Zavolokina",
+        "Suman Bhunia",
+        "Gerhard Schwabe"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114580",
+      "url": "https://doi.org/10.1016/j.dss.2025.114580",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From prompts to parameters: A prompt-free GLLM framework to measure digital activities through corporate disclosures",
+      "authors": [
+        "Sihang Chen",
+        "Lijian Wei",
+        "Lei Shi"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114666",
+      "url": "https://doi.org/10.1016/j.dss.2026.114666",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From text boxes to talking faces: Comparing chatbots and digital humans for online review collection",
+      "authors": [
+        "Warren Rosengren",
+        "Agrim Sachdeva",
+        "Antino Kim",
+        "Alan R. Dennis"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114626",
+      "url": "https://doi.org/10.1016/j.dss.2026.114626",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social acceptance of central bank digital currency: insights from the digital euro",
+      "authors": [
+        "Maximilian Ambros",
+        "Michael Frenkel",
+        "Christian Schlereth"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-22",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2630833",
+      "url": "https://doi.org/10.1080/0960085x.2026.2630833",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social exclusion in a digital society: how does digital delivery of services exclude marginalised groups?",
+      "authors": [
+        "Becky Faith",
+        "Kevin Hernandez",
+        "Cathy Urquhart"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2607447",
+      "url": "https://doi.org/10.1080/0960085x.2025.2607447",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Fostering access to justice: a human values-centred investigation of bankruptcy filing innovation through its design and use",
+      "authors": [
+        "Narges Safari",
+        "Angsana A. Techatassanasoontorn"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2599226",
+      "url": "https://doi.org/10.1080/0960085x.2025.2599226",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards better recommendations: Integrating counterfactual learning and trust regions in digital platforms",
+      "authors": [
+        "David Bergman",
+        "Sule Nur Kutlu",
+        "Raymond A. Patterson",
+        "Keliang Wang"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114630",
+      "url": "https://doi.org/10.1016/j.dss.2026.114630",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Caring networks for digital inclusion: how network weaving transforms responses to digital inequalities",
+      "authors": [
+        "Sara Vannini",
+        "Sharon Wagg",
+        "Efpraxia D. Zamani"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2709635",
+      "url": "https://doi.org/10.1080/0960085x.2026.2709635",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social comparison and coping under pressure: technostress in gamified digital learning environments",
+      "authors": [
+        "Haytham Siala",
+        "Roberta Bernardi",
+        "Minhao Zhang",
+        "Monideepa Tarafdar"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-10",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2693695",
+      "url": "https://doi.org/10.1080/0960085x.2026.2693695",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Sociotechnical micro-foundations for digital transformation",
+      "authors": [
+        "Jon Iden",
+        "Bendik Bygstad"
+      ],
+      "year": 2025,
+      "published_date": "2025-03-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2024.2347950",
+      "url": "https://doi.org/10.1080/0960085x.2024.2347950",
+      "citation_count": 23,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring the complementary effects of business analytics capabilities and π-shaped skills on innovation outcomes",
+      "authors": [
+        "A.Mohammed Abubakar",
+        "Ahmet Türkmen",
+        "Volkan Işik",
+        "Patrick Mikalef",
+        "Ofir Turel"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2024.2304030",
+      "url": "https://doi.org/10.1080/0960085x.2024.2304030",
+      "citation_count": 20,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Dynamic capabilities for transitioning from product platform ecosystem to innovation platform ecosystem",
+      "authors": [
+        "Kazem Haki",
+        "Michael Blaschke",
+        "Stephan Aier",
+        "Robert Winter",
+        "David Tilson"
+      ],
+      "year": 2024,
+      "published_date": "2024-03-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2022.2136542",
+      "url": "https://doi.org/10.1080/0960085x.2022.2136542",
+      "citation_count": 48,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital service flexibility: a conceptual framework and roadmap for digital business transformation",
+      "authors": [
+        "Jiban Khuntia",
+        "Terence Saldanha",
+        "Abhishek Kathuria",
+        "Mohan Rao Tanniru"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2022.2115410",
+      "url": "https://doi.org/10.1080/0960085x.2022.2115410",
+      "citation_count": 39,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Real-time decision support for human–machine interaction in digital railway control rooms",
+      "authors": [
+        "Léon Sobrie",
+        "Marijn Verschelde"
+      ],
+      "year": 2024,
+      "published_date": "2024-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114216",
+      "url": "https://doi.org/10.1016/j.dss.2024.114216",
+      "citation_count": 18,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Shaping innovation pathways: Metaverse application configurations in high-technology small- and medium-sized enterprises",
+      "authors": [
+        "Jianwen Zheng",
+        "Justin Zuopeng Zhang",
+        "Kai Ming Au",
+        "Veda C. Storey",
+        "Huan Wang",
+        "Yifan Yang"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114336",
+      "url": "https://doi.org/10.1016/j.dss.2024.114336",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "eca9de22db028e396c6b807c7d505e58fa95e432e845eb767cf5160f6fb935a8",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

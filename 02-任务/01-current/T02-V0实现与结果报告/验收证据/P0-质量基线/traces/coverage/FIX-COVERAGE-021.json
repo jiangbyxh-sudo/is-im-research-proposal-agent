@@ -1,0 +1,1040 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_973666abed03439fb51d89ae64418ec3",
+  "case_id": "FIX-COVERAGE-021",
+  "recorded_at": "2026-08-21T18:42:11.484850+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:42:01.616779+00:00",
+  "completed_at": "2026-08-21T18:42:11.478537+00:00",
+  "duration_ms": 9875.0,
+  "input": {
+    "selected_direction_id": "topic_machine_learning",
+    "research_direction": "machine learning",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "machine learning",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "CS_AI",
+      "HCI",
+      "CS_IR",
+      "CS_DATA",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "machine learning",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 12,
+      "accepted_before_dedupe": 12,
+      "queried_at": "2026-08-21T18:42:06.671132+00:00",
+      "duration_ms": 1921.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1921.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "machine learning",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:42:08.594316+00:00",
+      "duration_ms": 2891.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2891.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "machine learning",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:42:01.623893+00:00",
+      "duration_ms": 5047.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 5047.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 52,
+    "accepted_before_dedupe": 52,
+    "deduped_corpus": 52,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The factors affecting subthreshold depression for people with occupational stress in the era of digital intelligence: Machine learning-based evidence",
+      "authors": [
+        "Lifang DENG",
+        "Bei PEI",
+        "Tian-Ai GAO"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.2001",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.2001",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cross-modal transfer of statistical learning under unimodal and multimodal learning conditions",
+      "authors": [
+        "Yi TANG",
+        "Yajun ZHAO",
+        "Qingzhang ZENG",
+        "Zhijun ZHANG",
+        "Shengnan WU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0590",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0590",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Zero-shot language learning: Can large language models (LLMs) acquire contextual emotion in a human-like manner?",
+      "authors": [
+        "Shiyu WU",
+        "Yiyun WANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0308",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0308",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cognitive diagnosis method via neural networks with transfer learning and Q-matrix constraints",
+      "authors": [
+        "Jinhong TAO",
+        "Wei ZHAO",
+        "Nuo CHENG",
+        "Lifang QIAO",
+        "Qiang JIANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0755",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0755",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Effect of example variability on the implicit learning of multiple non-adjacent rule",
+      "authors": [
+        "Xiaoli LING",
+        "Qingyun ZHANG",
+        "Li ZHENG",
+        "Xiuyan GUO",
+        "Peng SUN"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1843",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1843",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Processing strategies in focus: How highly-efficient and less-efficient learners navigate novel word learning in Chinese reading",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1512",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1512",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Analysis of learning effect in interactive problem-solving test: Extension and application of process data measurement model",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1677",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1677",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The cognitive characteristics and neural mechanisms of multisensory category learning: EEG and drift-diffusion model evidence",
+      "authors": [
+        "Jie WU",
+        "Zixuan CHE"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1715",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1715",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How semantic prosody is acquired in novel word learning: Evidence from the “Double-Jujube Tree” effect",
+      "authors": [
+        "Shiyu WU",
+        "Zan LI"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.00531",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.00531",
+      "citation_count": 6,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Chunking feedback in instructor-learner interaction facilities long-term learning transfer: Behavioral and fNIRS hyperscanning studies",
+      "authors": [
+        "Yi ZHU",
+        "Yi HU"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.00555",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.00555",
+      "citation_count": 5,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring Perceptions of Federated Learning in Self-Tracking Apps: A Qualitative Study with Mostly Female Students",
+      "authors": [
+        "Gavryel Martis",
+        "Roberta Bernardi",
+        "Ryan McConville"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3809162",
+      "url": "https://doi.org/10.1145/3809162",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Informing the Design of Individualized Self-Management Regimens from the Human, Data, and Machine Learning Perspectives",
+      "authors": [
+        "Adrienne Pichon",
+        "Iñigo Urteaga",
+        "Lena Mamykina",
+        "Noémie Elhadad"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3717063",
+      "url": "https://doi.org/10.1145/3717063",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Should Fairness be a Metric or a Model? A Model-based Framework for Assessing Bias in Machine Learning Pipelines",
+      "authors": [
+        "John P. Lalor",
+        "Ahmed Abbasi",
+        "Kezia Oketch",
+        "Yi Yang",
+        "Nicole Forsgren"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3641276",
+      "url": "https://doi.org/10.1145/3641276",
+      "citation_count": 31,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Building Knowledge through Action: Considerations for Machine Learning in the Workplace",
+      "authors": [
+        "Siân E. Lindley",
+        "Denise J. Wilkins"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3584947",
+      "url": "https://doi.org/10.1145/3584947",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Framing Machine Learning Opportunities for Hypotension Prediction in Perioperative Care: A Socio-technical Perspective",
+      "authors": [
+        "Pratik Ghosh",
+        "Karen L. Posner",
+        "Stephanie L. Hyland",
+        "Wil van Cleve",
+        "Melissa Bristow",
+        "Dustin R. Long",
+        "Konstantina Palla",
+        "Bala Nair",
+        "Christine Fong",
+        "Ronald Pauldine",
+        "Monica S. Vavilala",
+        "Kenton O'Hara"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3589953",
+      "url": "https://doi.org/10.1145/3589953",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Learning to Ask: Conversational Product Search via Representation Learning",
+      "authors": [
+        "Jie Zou",
+        "Jimmy Huang",
+        "Zhaochun Ren",
+        "Evangelos Kanoulas"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3555371",
+      "url": "https://doi.org/10.1145/3555371",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reversing the Retrieval Engine: Query Performance Prediction as an Inverse Learning Task",
+      "authors": [
+        "Rabeb Mbarek",
+        "Hawete Hattab"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3790102",
+      "url": "https://doi.org/10.1145/3790102",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Offline Reinforcement Learning for Adaptive Support in AI-Assisted Decision-Making",
+      "authors": [
+        "Zana Buçinca",
+        "Siddharth Swaroop",
+        "Amanda E. Paluch",
+        "Susan A. Murphy",
+        "Krzysztof Z. Gajos"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3815418",
+      "url": "https://doi.org/10.1145/3815418",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "UniRec: Unified Space Learning for Generalizable Sequential Recommendation",
+      "authors": [
+        "jiarui yang",
+        "Junmei Feng",
+        "Yihan Zhang",
+        "Zhaoqiang Xia"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-08",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3838801",
+      "url": "https://doi.org/10.1145/3838801",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Learning Disentangled Multimodal Intent Representations for Interpretable Recommendation",
+      "authors": [
+        "Jian Wang",
+        "Jianrong Wang",
+        "Di Jin"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3818620",
+      "url": "https://doi.org/10.1145/3818620",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Smoothed Intent Learning for Sequential Recommendation",
+      "authors": [
+        "Yifeng Su",
+        "Yizhou Dang",
+        "Xiaodong Cai",
+        "Guibing Guo"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3820247",
+      "url": "https://doi.org/10.1145/3820247",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Prompt Learning for Textual Heterogeneous Information Networks",
+      "authors": [
+        "Yang Fang",
+        "Xiang Zhao",
+        "Daojian Zeng",
+        "Weidong Xiao",
+        "Maarten de Rijke",
+        "Minnan Luo",
+        "Xinwang Liu"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-01",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3831697",
+      "url": "https://doi.org/10.1145/3831697",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Causality-Inspired Fair Representation Learning for Multimodal Recommendation",
+      "authors": [
+        "Weixin Chen",
+        "Li Chen",
+        "Yongxin Ni",
+        "Yuhan Zhao"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3744240",
+      "url": "https://doi.org/10.1145/3744240",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Novel Benford’s Law-Driven Approach for Detecting Machine-Generated Text",
+      "authors": [
+        "Zhenhua Wang",
+        "Chen Zhang",
+        "Ming Ren"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3748305",
+      "url": "https://doi.org/10.1145/3748305",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Enabling Harmonious Human-Machine Interaction with Visual-Context Augmented Dialogue System: A Review",
+      "authors": [
+        "Hao Wang",
+        "Bin Guo",
+        "Yating Zeng",
+        "Mengqi Chen",
+        "Yasan Ding",
+        "Ying Zhang",
+        "Lina Yao",
+        "Zhiwen Yu"
+      ],
+      "year": 2025,
+      "published_date": "2025-05-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3715098",
+      "url": "https://doi.org/10.1145/3715098",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Contrastive Self-supervised Learning in Recommender Systems: A Survey",
+      "authors": [
+        "Mengyuan Jing",
+        "Yanmin Zhu",
+        "Tianzi Zang",
+        "Ke Wang"
+      ],
+      "year": 2024,
+      "published_date": "2024-03-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3627158",
+      "url": "https://doi.org/10.1145/3627158",
+      "citation_count": 102,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Lessons Learnt from a Multimodal Learning Analytics Deployment In-the-Wild",
+      "authors": [
+        "Roberto Martinez-Maldonado",
+        "Vanessa Echeverria",
+        "Gloria Fernandez-Nieto",
+        "Lixiang Yan",
+        "Linxuan Zhao",
+        "Riordan Alfredo",
+        "Xinyu Li",
+        "Samantha Dix",
+        "Hollie Jaggard",
+        "Rosie Wotherspoon",
+        "Abra Osborne",
+        "Simon Buckingham Shum",
+        "Dragan Gašević"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3622784",
+      "url": "https://doi.org/10.1145/3622784",
+      "citation_count": 45,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Few-shot Learning for Heterogeneous Information Networks",
+      "authors": [
+        "Yang Fang",
+        "Xiang Zhao",
+        "Weidong Xiao",
+        "Maarten de Rijke"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3649311",
+      "url": "https://doi.org/10.1145/3649311",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Personalized Prompt Learning for Explainable Recommendation",
+      "authors": [
+        "Lei Li",
+        "Yongfeng Zhang",
+        "Li Chen"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3580488",
+      "url": "https://doi.org/10.1145/3580488",
+      "citation_count": 131,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence",
+      "authors": [
+        "Nikhil Singh",
+        "Guillermo Bernal",
+        "Daria Savchenko",
+        "Elena L. Glassman"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3511599",
+      "url": "https://doi.org/10.1145/3511599",
+      "citation_count": 94,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "34bc4e24923b12ace7d59ad8d148e0d9a79b803f2f14a6191748d83b4a9f4f43",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

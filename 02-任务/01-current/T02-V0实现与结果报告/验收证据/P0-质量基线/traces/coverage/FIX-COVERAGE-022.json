@@ -1,0 +1,1047 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_4f99a336a9be4f8ca2ed3147518dbe8d",
+  "case_id": "FIX-COVERAGE-022",
+  "recorded_at": "2026-08-21T18:42:17.836032+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:42:11.489759+00:00",
+  "completed_at": "2026-08-21T18:42:17.832470+00:00",
+  "duration_ms": 6344.0,
+  "input": {
+    "selected_direction_id": "topic_data_mining",
+    "research_direction": "data mining",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "data mining",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "CS_AI",
+      "HCI",
+      "CS_IR",
+      "CS_DATA",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "data mining",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:42:13.443899+00:00",
+      "duration_ms": 1688.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1688.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "data mining",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:42:15.133423+00:00",
+      "duration_ms": 2703.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2703.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "data mining",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 14,
+      "accepted_before_dedupe": 14,
+      "queried_at": "2026-08-21T18:42:11.494029+00:00",
+      "duration_ms": 1937.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1937.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 54,
+    "accepted_before_dedupe": 54,
+    "deduped_corpus": 54,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The association between semantic network structure and creativity: Evidence from behavioral and resting-state fMRI data",
+      "authors": [
+        "Tengbin HUO",
+        "Kaixiang ZHUANG",
+        "Jiang QIU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1795",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1795",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Data analysis and sample size planning for intensive longitudinal intervention studies using dynamic structural equation modeling",
+      "authors": [
+        "Yue LIU",
+        "Yueling HE",
+        "Hongyun LIU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0773",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0773",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The effect of antiphonal singing experience on executive function in middle-aged and older Zhuang adults: Evidence from behavioral and fNIRS data",
+      "authors": [
+        "Shuyue ZHANG",
+        "Jingyuan YI",
+        "Yue SU",
+        "Yuhan LI",
+        "Jijia ZHANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1567",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1567",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Moderated mediation analyses of intensive longitudinal data",
+      "authors": [
+        "Jie FANG",
+        "Zhonglin WEN",
+        "Huihui WANG",
+        "Honglei GU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0915",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0915",
+      "citation_count": 3,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Suicidal ideation data augmentation and recognition technology based on large language models",
+      "authors": [
+        "Yanbo ZHANG",
+        "Feng HUANG",
+        "Liuling MO",
+        "Xiaoqian LIU",
+        "Tingshao ZHU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0987",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0987",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Analysis of learning effect in interactive problem-solving test: Extension and application of process data measurement model",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1677",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1677",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Different effects of linguistic and perceptual symbolic representations on foreign language vocabulary learning: Evidence from behavioral and EEG data",
+      "authors": [
+        "Weicong REN",
+        "Ting YANG",
+        "Hanlin WANG"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.00542",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.00542",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Does engaging in creative activities increase consumers’ preference for horror entertainment consumption? Evidence from secondary data study and experiments",
+      "authors": [
+        "Qiaoying YANG",
+        "Wumei LIU"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01585",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01585",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Joint modeling of psychological experimental data: Mixed effects of reaction and reaction time",
+      "authors": [
+        "Xiaojun GUO",
+        "Yuyue JIAO",
+        "Xiaoyun BAI",
+        "Zhaosheng LUO",
+        "Hong LI"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01619",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01619",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Sleep deprivation and post-purchase regret: Evidence from a large-scale individual-level data",
+      "authors": [
+        "Shiyang GONG",
+        "Yibo ZHANG",
+        "Yuetao GAO"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.00286",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.00286",
+      "citation_count": 3,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "<scp>FairFare</scp>\n                    : A Tool for Crowdsourcing Rideshare Data to Empower Labor Organizers",
+      "authors": [
+        "Dana Calacci",
+        "Varun Nagaraj Rao",
+        "Samantha Dalal",
+        "Catherine Di",
+        "Kok-Wei Pua",
+        "Andrew Schwartz",
+        "Danny Spitzberg",
+        "Andrés Monroy-Hernández"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3769680",
+      "url": "https://doi.org/10.1145/3769680",
+      "citation_count": 6,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Batch-Adaptive Doubly Robust Learning for Debiasing Post-Click Conversion Rate Prediction Under Sparse Data",
+      "authors": [
+        "Hang Pan",
+        "Chunyuan Zheng",
+        "Wenjie Wang",
+        "Jingang Jiang",
+        "Xueying Li",
+        "Haoxuan Li",
+        "Fuli Feng"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3785146",
+      "url": "https://doi.org/10.1145/3785146",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Precarity of Trust: Understanding Tensions in Information Systems for Humanitarian De-Mining in Rural Colombia",
+      "authors": [
+        "Carlos Augusto Bautista Isaza",
+        "Deborah Tatar",
+        "Aakash Gautam",
+        "Pedro Reynolds-Cuéllar",
+        "Sang Won Lee"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-10",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3829350",
+      "url": "https://doi.org/10.1145/3829350",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring Heterogeneous Data Lake Based on Canonical Graphs",
+      "authors": [
+        "Qin Yuan",
+        "Ye Yuan",
+        "Zhenyu Wen",
+        "Guoren Wang"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3772001",
+      "url": "https://doi.org/10.1145/3772001",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "ERA: Meta Representation Alignment for Data Bias Mitigation in Recommendations",
+      "authors": [
+        "Sibo Lu",
+        "Yafan Yuan",
+        "Zhen Liu",
+        "Xinxin Yang"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3806832",
+      "url": "https://doi.org/10.1145/3806832",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Privacy Matters: Data Attack to Make User Preferences Unlearnable in Recommendation",
+      "authors": [
+        "Pengyang Shao",
+        "Le Wu",
+        "Kun Zhang",
+        "Lei Chen",
+        "Meng Wang"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3803545",
+      "url": "https://doi.org/10.1145/3803545",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Climate Data Practices: A Research Approach for HCI and Climate Justice",
+      "authors": [
+        "Robert Soden",
+        "Taneea S. Agrawaal",
+        "Austin Lord",
+        "Cassandra Chanen",
+        "Lillian Flawn",
+        "Zeina Seaifan",
+        "Michael Classens",
+        "Steve Easterbrook"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3719346",
+      "url": "https://doi.org/10.1145/3719346",
+      "citation_count": 21,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Self Data Augmentation for Open Domain Question Answering",
+      "authors": [
+        "Qin Zhang",
+        "Mengqi Zheng",
+        "Shangsi Chen",
+        "Han Liu",
+        "Meng Fang"
+      ],
+      "year": 2025,
+      "published_date": "2025-03-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3707449",
+      "url": "https://doi.org/10.1145/3707449",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "SECON: Maintaining Semantic Consistency in Data Augmentation for Code Search",
+      "authors": [
+        "Xu Zhang",
+        "Zexu Lin",
+        "Xiaoyu Hu",
+        "Jianlei Wang",
+        "Wenpeng Lu",
+        "De-Yu Zhou"
+      ],
+      "year": 2025,
+      "published_date": "2025-03-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3686151",
+      "url": "https://doi.org/10.1145/3686151",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Comprehend Then Predict: Prompting Large Language Models for Recommendation with Semantic and Collaborative Data",
+      "authors": [
+        "Zhiang Dong",
+        "Liya Hu",
+        "Jingyuan Chen",
+        "Zhihua Wang",
+        "Fei Wu"
+      ],
+      "year": 2025,
+      "published_date": "2025-09-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3716499",
+      "url": "https://doi.org/10.1145/3716499",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Informing the Design of Individualized Self-Management Regimens from the Human, Data, and Machine Learning Perspectives",
+      "authors": [
+        "Adrienne Pichon",
+        "Iñigo Urteaga",
+        "Lena Mamykina",
+        "Noémie Elhadad"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3717063",
+      "url": "https://doi.org/10.1145/3717063",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Domain Counterfactual Data Augmentation for Explainable Recommendation",
+      "authors": [
+        "Yi Yu",
+        "Kazunari Sugiyama",
+        "Adam Jatowt"
+      ],
+      "year": 2025,
+      "published_date": "2025-05-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3711856",
+      "url": "https://doi.org/10.1145/3711856",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "CPWS: Confident Programmatic Weak Supervision for High-Quality Data Labeling",
+      "authors": [
+        "Shulan Ruan",
+        "Huijie Liu",
+        "Zhao Chen",
+        "Bin Feng",
+        "Kun Zhang",
+        "Caleb Chen Cao",
+        "Enhong Chen",
+        "Lei Chen"
+      ],
+      "year": 2025,
+      "published_date": "2025-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3725730",
+      "url": "https://doi.org/10.1145/3725730",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Uncovering Recommendation Serendipity with Objective Data-driven Factor Investigation",
+      "authors": [
+        "Wenjun Jiang",
+        "Song Li",
+        "Xueqi Li",
+        "Kenli Li",
+        "Jie Wu"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3758092",
+      "url": "https://doi.org/10.1145/3758092",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Design Vocabulary for Data Physicalization",
+      "authors": [
+        "Eva Hornecker",
+        "Trevor Hogan",
+        "Uta Hinrichs",
+        "Rosa Van Koningsbruggen"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3617366",
+      "url": "https://doi.org/10.1145/3617366",
+      "citation_count": 66,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+      "authors": [
+        "Anne Arzberger",
+        "Maria Luce Lupetti",
+        "Elisa Giaccardi"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689042",
+      "url": "https://doi.org/10.1145/3689042",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Shifting Ambiguity, Collapsing Indeterminacy: Designing with Data as Baradian Apparatus",
+      "authors": [
+        "Courtney N. Reed",
+        "Adan L. Benito",
+        "Franco Caspe",
+        "Andrew P. McPherson"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689043",
+      "url": "https://doi.org/10.1145/3689043",
+      "citation_count": 16,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing with Data: An Annotated Portfolio",
+      "authors": [
+        "William Gaver",
+        "Andy Boucher"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3685272",
+      "url": "https://doi.org/10.1145/3685272",
+      "citation_count": 15,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Prototyping with Uncertainties: Data, Algorithms, and Research through Design",
+      "authors": [
+        "Elisa Giaccardi",
+        "Dave Murray-Rust",
+        "Johan Redström",
+        "Baptiste Caramiaux"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3702322",
+      "url": "https://doi.org/10.1145/3702322",
+      "citation_count": 14,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Un/Making Data Imaginaries: The Data Epics",
+      "authors": [
+        "Audrey Desjardins",
+        "Gabrielle Benabdallah",
+        "Maya A. Kaneko"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3685269",
+      "url": "https://doi.org/10.1145/3685269",
+      "citation_count": 13,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "13fb9906fbad74e5aa482804111678fa4d124ad872cefc57f0120b22a50b7724",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

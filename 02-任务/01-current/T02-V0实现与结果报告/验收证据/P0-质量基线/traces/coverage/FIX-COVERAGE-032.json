@@ -1,0 +1,1007 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_b053e84324264536bb0e177b9dfe6e53",
+  "case_id": "FIX-COVERAGE-032",
+  "recorded_at": "2026-08-21T18:43:48.834207+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:43:43.000049+00:00",
+  "completed_at": "2026-08-21T18:43:48.831212+00:00",
+  "duration_ms": 5828.0,
+  "input": {
+    "selected_direction_id": "topic_social_influence",
+    "research_direction": "social influence",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "social influence",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "PSYCHOLOGY",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_PSYCHOLOGY",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "social influence",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 18,
+      "accepted_before_dedupe": 18,
+      "queried_at": "2026-08-21T18:43:44.774593+00:00",
+      "duration_ms": 2360.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2360.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0963-7214",
+      "query": "social influence",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 19,
+      "queried_at": "2026-08-21T18:43:47.129597+00:00",
+      "duration_ms": 1703.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1703.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "social influence",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:43:43.001273+00:00",
+      "duration_ms": 1765.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1765.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 58,
+    "accepted_before_dedupe": 57,
+    "deduped_corpus": 57,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {
+    "retraction_or_correction": 1
+  },
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The influence of social reward and punishment on deception",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1622",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1622",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The influence of social context on emotional contagion: An EMG-based hyperscanning study",
+      "authors": [
+        "Dan WANG",
+        "Yujia FU",
+        "Wenfeng CHEN"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01047",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01047",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The influence of synchronized movement on social bonding: The intermediary role of collective effervescence and the moderating role of group size",
+      "authors": [
+        "Qiu XUE",
+        "Keli YIN"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01821",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01821",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Influence of social distance and promise levels on trust decisions: An ERPs study",
+      "authors": [
+        "LI Mei",
+        "LI Jin",
+        "ZHANG Guanfei",
+        "ZHONG Yiping",
+        "LI Hong"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.01859",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.01859",
+      "citation_count": 7,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The influence of voluntary action and social distance on sense of agency: Evidence from behavioral and ERPs study",
+      "authors": [
+        "Yiping ZHONG",
+        "Nana NIU",
+        "Wei FAN",
+        "Mengmeng REN",
+        "Mei LI"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.01932",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.01932",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Influence of reputational concern and social distance on moral decision-making under the harmful dilemma: Evidence from behavioral and ERPs study",
+      "authors": [
+        "Youlong ZHAN",
+        "Xiao XIAO",
+        "Qianbao TAN",
+        "Jin LI",
+        "Yiping ZHONG"
+      ],
+      "year": 2022,
+      "published_date": "2022-06-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2022.00613",
+      "url": "https://doi.org/10.3724/sp.j.1041.2022.00613",
+      "citation_count": 21,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Rules can maintain harmony? The influence of team pro-social rule breaking climate on team performance from the perspective of harmony management",
+      "authors": [
+        "Yahua CAI",
+        "Jialin CHENG",
+        "Jinsong LI"
+      ],
+      "year": 2022,
+      "published_date": "2022-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2022.00066",
+      "url": "https://doi.org/10.3724/sp.j.1041.2022.00066",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "LLMs amplify gendered empathy stereotypes and influence major and career recommendations",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0399",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0399",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Distinguishing between causality, influence, correlation, and prediction",
+      "authors": [
+        "Zhonglin WEN",
+        "Peng MA",
+        "Jin MENG",
+        "Yifan WANG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1108",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1108",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The influence of emotional motivation on interpersonal emotion regulation strategy choice: Evidence from behavioral and hyperscanning",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1589",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1589",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Secret Agents of Influence: Leveraging Social Norms for Good",
+      "authors": [
+        "P. Wesley Schultz"
+      ],
+      "year": 2022,
+      "published_date": "2022-10-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221109572",
+      "url": "https://doi.org/10.1177/09637214221109572",
+      "citation_count": 45,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "What Autism Taught Us About Our Social Nature",
+      "authors": [
+        "Uta Frith",
+        "Chris D. Frith"
+      ],
+      "year": 2025,
+      "published_date": "2025-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214241311922",
+      "url": "https://doi.org/10.1177/09637214241311922",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emerging Insights on the Role of Social Networks in Intergroup Friendship",
+      "authors": [
+        "Kate M. Turetsky",
+        "J. Nicole Shelton"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214241283190",
+      "url": "https://doi.org/10.1177/09637214241283190",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Modeling User Characteristics Associated with Interdependent Privacy Perceptions on Social Media",
+      "authors": [
+        "Mary Jean Amon",
+        "Aaron Necaise",
+        "Nika Kartvelishvili",
+        "Aneka Williams",
+        "Yan Solihin",
+        "Apu Kapadia"
+      ],
+      "year": 2023,
+      "published_date": "2023-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3577014",
+      "url": "https://doi.org/10.1145/3577014",
+      "citation_count": 18,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Chatbots Language Design: The Influence of Language Variation on User Experience with Tourist Assistant Chatbots",
+      "authors": [
+        "Ana Paula Chaves",
+        "Jesse Egbert",
+        "Toby Hocking",
+        "Eck Doerry",
+        "Marco Aurelio Gerosa"
+      ],
+      "year": 2022,
+      "published_date": "2022-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3487193",
+      "url": "https://doi.org/10.1145/3487193",
+      "citation_count": 70,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Evaluating Engagement in Technology-Supported Social Interaction by People Living with Dementia in Residential Care",
+      "authors": [
+        "Diego Muñoz",
+        "Sonja Pedell",
+        "Leon Sterling"
+      ],
+      "year": 2022,
+      "published_date": "2022-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3514497",
+      "url": "https://doi.org/10.1145/3514497",
+      "citation_count": 18,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emotional Acculturation: Emotions as a Pathway to Social Integration",
+      "authors": [
+        "Heejung S. Kim",
+        "Batja Mesquita"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251349821",
+      "url": "https://doi.org/10.1177/09637214251349821",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Influence of Single Parameter Changes on Subjective Experience and Ordering Performance of Electrotactile Cues",
+      "authors": [
+        "Patrizia Di Campli San Vito",
+        "Yosuef Alotaibi",
+        "Stephen Brewster"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3797949",
+      "url": "https://doi.org/10.1145/3797949",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Disconnected Platforms, Networked Lives: Social Bridging across Fragmented Payment Systems in China",
+      "authors": [
+        "Mark Perry",
+        "Christian Greiffenhagen",
+        "Rongyu Li"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3777906",
+      "url": "https://doi.org/10.1145/3777906",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring Design Considerations for Group Recommendation Systems as a Social Catalyst",
+      "authors": [
+        "Daehyun Kwak",
+        "Yongjae Sohn",
+        "Youn-kyung Lim"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3793676",
+      "url": "https://doi.org/10.1145/3793676",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Virtual Counselor Extenders: Social Cue Taxonomy, Soft Rooms, and Brief Motivational Interviewing",
+      "authors": [
+        "Christine Lisetti",
+        "Stephanie Lunn",
+        "James Hodgins",
+        "Diana Marin",
+        "Jaynish Hazari",
+        "Ubbo Visser",
+        "Maya Boustani"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-16",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3815541",
+      "url": "https://doi.org/10.1145/3815541",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Tangible Topics: Designing Technology to Enrich the Social Interactions of Older Adults in Community-Based Programs",
+      "authors": [
+        "Yushan Xing",
+        "Ryan M. Kelly",
+        "Melissa J. Rogerson",
+        "Wei Zhao",
+        "Ariel Valent",
+        "Jenny Waycott"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-03",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3828654",
+      "url": "https://doi.org/10.1145/3828654",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social Judgments of Generative AI Users",
+      "authors": [
+        "Samuel Meyers",
+        "Roman Briker",
+        "Yochanan E. Bigman"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-29",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261466635",
+      "url": "https://doi.org/10.1177/09637214261466635",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Intellectual Humility in the Eyes of Others: Implications for Social Perception and Trust",
+      "authors": [
+        "Jonah Koetke",
+        "Karina Schumann"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-10",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261419421",
+      "url": "https://doi.org/10.1177/09637214261419421",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Revisiting Social Anhedonia: Beyond Monolithic Assessments and Interventions",
+      "authors": [
+        "Raymond C. K. Chan",
+        "Ling-ling Wang",
+        "Yi Wang",
+        "Simon S. Y. Lui"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-15",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261436743",
+      "url": "https://doi.org/10.1177/09637214261436743",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Link Between Companion Dogs, Human Fertility Rates, and Social Networks",
+      "authors": [
+        "Eniko Kubinyi"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251318284",
+      "url": "https://doi.org/10.1177/09637214251318284",
+      "citation_count": 18,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Co-creating Conditions for Social Justice in Digital Societies: Modes of Resistance in HCI Collaborative Endeavors",
+      "authors": [
+        "Clara Crivellaro",
+        "Lizzie Coles-Kemp",
+        "Alan Dix",
+        "Ann Light"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3711840",
+      "url": "https://doi.org/10.1145/3711840",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social Drinking and Addiction: A Social-Cognitive Model for Understanding Alcohol Use Disorder Risk",
+      "authors": [
+        "Catharine E. Fairbairn",
+        "Dahyeon Kang"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251318272",
+      "url": "https://doi.org/10.1177/09637214251318272",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Purpose Mode: Reducing Distraction Through Toggling Attention Capture Damaging Patterns on Social Media Websites",
+      "authors": [
+        "Hao-Ping Lee",
+        "Yi-Shyuan Chiang",
+        "Lan Gao",
+        "Stephanie Yang",
+        "Philipp Winter",
+        "Sauvik Das"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-10",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3711841",
+      "url": "https://doi.org/10.1145/3711841",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Perceived Social Norms and Vaccine Hesitancy",
+      "authors": [
+        "Robert C. Dempsey",
+        "Alex M. Wood"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251340023",
+      "url": "https://doi.org/10.1177/09637214251340023",
+      "citation_count": 6,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "6dd349e2b572860c5b01d4ddcc9a924e2546663ceff9db3874ac310718f69fcd",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

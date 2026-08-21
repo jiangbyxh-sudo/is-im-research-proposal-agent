@@ -1,0 +1,747 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_02280576bc0246c0b653316fce025ae6",
+  "case_id": "FIX-COVERAGE-057",
+  "recorded_at": "2026-08-21T18:47:59.898014+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:47:50.711511+00:00",
+  "completed_at": "2026-08-21T18:47:59.895352+00:00",
+  "duration_ms": 9187.0,
+  "input": {
+    "selected_direction_id": "topic_scholarly_communication",
+    "research_direction": "scholarly communication",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "scholarly communication",
+    "journal_pool_ids": [
+      "IM_CORE",
+      "SCIENTOMETRICS",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_SCIENCE_POLICY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0022-0418",
+      "query": "scholarly communication",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 17,
+      "accepted_before_dedupe": 17,
+      "queried_at": "2026-08-21T18:47:54.983648+00:00",
+      "duration_ms": 2422.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2422.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0165-5515",
+      "query": "scholarly communication",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 9,
+      "accepted_before_dedupe": 9,
+      "queried_at": "2026-08-21T18:47:57.408297+00:00",
+      "duration_ms": 2484.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2484.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "scholarly communication",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:47:50.715166+00:00",
+      "duration_ms": 3094.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3094.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "scholarly communication",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:47:53.819465+00:00",
+      "duration_ms": 1172.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1172.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 27,
+    "accepted_before_dedupe": 27,
+    "deduped_corpus": 27,
+    "final_selected": 21,
+    "final_by_language": {
+      "zh": 1,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 9,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "National soft power in the era of intelligent communication",
+      "authors": [
+        "Zongze WU",
+        "Jingyu WANG",
+        "Shengnan CAO",
+        "Zheng LIANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260615",
+      "url": "https://doi.org/10.3724/1005-0566.20260615",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Organisational accounts engaged in scholarly communication on Twitter: Patterns of presence, activity and engagement",
+      "authors": [
+        "Zohreh Zahedi",
+        "Yanqing Zhang",
+        "Zekun Han",
+        "Er-Te Zheng",
+        "Zhichao Fang"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515261421164",
+      "url": "https://doi.org/10.1177/01655515261421164",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The impact of intelligent recommender systems in digital libraries on the structure of scholarly reading and users' information trajectories",
+      "authors": [
+        "Evgeniy Samokhodkin",
+        "Alisa Samokhodkina"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-02-2026-0083",
+      "url": "https://doi.org/10.1108/jd-02-2026-0083",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Who shares scholarly output on Facebook? A systematic investigation into their location, productivity and identities",
+      "authors": [
+        "Houqiang Yu",
+        "Yue Wang",
+        "Wei Zhang",
+        "Tingting Xiao",
+        "Jianhua Hou"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231165632",
+      "url": "https://doi.org/10.1177/01655515231165632",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Traditional, dialogical and complex scholarly communication: towards a renewed trust in science",
+      "authors": [
+        "Antonella Foderaro",
+        "David Gunnarsson Lorentzen"
+      ],
+      "year": 2024,
+      "published_date": "2024-09-25",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-12-2023-0252",
+      "url": "https://doi.org/10.1108/jd-12-2023-0252",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Critical open access literacy as a strategy to confront the challenges in scholarly communication",
+      "authors": [
+        "Dijana Šobota"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-16",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-08-2023-0155",
+      "url": "https://doi.org/10.1108/jd-08-2023-0155",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Scholarly communication: a concept analysis",
+      "authors": [
+        "Rachel Fleming-May"
+      ],
+      "year": 2023,
+      "published_date": "2023-08-25",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-09-2022-0197",
+      "url": "https://doi.org/10.1108/jd-09-2022-0197",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Innovating peer review, reconfiguring scholarly communication: an analytical overview of ongoing peer review innovation activities",
+      "authors": [
+        "Wolfgang Kaltenbrunner",
+        "Stephen Pinfield",
+        "Ludo Waltman",
+        "Helen Buckley Woods",
+        "Johanna Brumberg"
+      ],
+      "year": 2022,
+      "published_date": "2022-12-19",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-01-2022-0022",
+      "url": "https://doi.org/10.1108/jd-01-2022-0022",
+      "citation_count": 29,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Scholarly article retrieval from Web of Science, Scopus and Dimensions: A comparative analysis of retrieval quality",
+      "authors": [
+        "Prashasti Singh",
+        "Vivek Kumar Singh",
+        "Rajesh Piryani"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231191351",
+      "url": "https://doi.org/10.1177/01655515231191351",
+      "citation_count": 33,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Open access movement in the scholarly world: Pathways for libraries in developing countries",
+      "authors": [
+        "Arslan Sheikh",
+        "Joanna Richardson"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515231202758",
+      "url": "https://doi.org/10.1177/01655515231202758",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Knowledge graphs generation from cultural heritage texts: combining LLMs and ontological engineering for scholarly debates",
+      "authors": [
+        "Andrea Schimmenti",
+        "Valentina Pasqual",
+        "Fabio Vitali",
+        "Marieke van Erp"
+      ],
+      "year": 2026,
+      "published_date": "2026-12-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-07-2025-0203",
+      "url": "https://doi.org/10.1108/jd-07-2025-0203",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The meaning of prompts: a semiotic approach to human–machine communication",
+      "authors": [
+        "Martin Muderspach Thellefsen",
+        "Amalia Nurma Dewi",
+        "Bent Sørensen"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-26",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-03-2026-0140",
+      "url": "https://doi.org/10.1108/jd-03-2026-0140",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A framework for characterising the\n                    <i>hows</i>\n                    and\n                    <i>whens</i>\n                    of social media communication during crises",
+      "authors": [
+        "Antonela Tommasel"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515251353184",
+      "url": "https://doi.org/10.1177/01655515251353184",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Automated citation workflows and the reliability of scholarly records",
+      "authors": [
+        "Faith Jeremiah",
+        "Jeff Heyl"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-05-2026-0311",
+      "url": "https://doi.org/10.1108/jd-05-2026-0311",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Modelling the scholarly search process in online environments: the Find-Use Model",
+      "authors": [
+        "Enrique Orduña-Malea",
+        "Núria Bautista-Puig"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-08",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-03-2026-0149",
+      "url": "https://doi.org/10.1108/jd-03-2026-0149",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The role of health information behaviour research for informing health communication: exploring and mapping connections and impact pathways",
+      "authors": [
+        "Steven Buchanan"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-07",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-08-2025-0237",
+      "url": "https://doi.org/10.1108/jd-08-2025-0237",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The effects of research data identifiers in data availability statements on scholarly output diffusion",
+      "authors": [
+        "Byoung-Goon An"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-03",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515251397638",
+      "url": "https://doi.org/10.1177/01655515251397638",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Assessing discrepancies across SEO tools in the collection of scholarly web metrics",
+      "authors": [
+        "Cristina I. Font-Julian",
+        "Carlos Lopezosa",
+        "Enrique Orduña-Malea",
+        "Isidro F. Aguillo"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-01",
+      "journal": "Journal of Information Science",
+      "language": "en",
+      "doi": "10.1177/01655515261445903",
+      "url": "https://doi.org/10.1177/01655515261445903",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Scholarly blogs: an analysis of infrastructural aspects based on German scholarly blogs",
+      "authors": [
+        "Catharina Ochsner",
+        "Heinz Pampel",
+        "Jonas Höfting",
+        "Laura Rothfritz"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-15",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-02-2025-0053",
+      "url": "https://doi.org/10.1108/jd-02-2025-0053",
+      "citation_count": 30,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Why engage with transformative agreements in scholarly publishing? Analysis of customer and publisher press release statements",
+      "authors": [
+        "Mikael Laakso",
+        "Philips Ayeni"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-15",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-06-2025-0156",
+      "url": "https://doi.org/10.1108/jd-06-2025-0156",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Health information communication and advocacy in the haemophilia community: an X-based analysis",
+      "authors": [
+        "Wasim Ahmed",
+        "Mariann (Maz) Hardey",
+        "Gal Yavetz"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-14",
+      "journal": "Journal of Documentation",
+      "language": "en",
+      "doi": "10.1108/jd-09-2024-0224",
+      "url": "https://doi.org/10.1108/jd-09-2024-0224",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IM_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "95662895639a1e60eb52ff023ea632a389688acee1d71e1bbb7a720b352f234e",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}
