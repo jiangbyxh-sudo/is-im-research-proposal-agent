@@ -1,0 +1,6065 @@
+{
+  "version": "1.0.0-p1",
+  "generated_on": "2026-08-22",
+  "generated_from": "01_taxonomy/generated/research_direction_catalog.json",
+  "direction_count": 61,
+  "policy": {
+    "local_profile_first": true,
+    "provider_queries_are_versioned": true,
+    "topic_ids_calibrated": false,
+    "score_thresholds_calibrated": false
+  },
+  "profiles": [
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "technology_adoption",
+      "labels": {
+        "zh": "技术与AI采纳",
+        "en": "technology and AI adoption"
+      },
+      "group_ids": [
+        "is",
+        "is_psychology"
+      ],
+      "synonyms": [
+        "技术与AI采纳",
+        "technology and AI adoption",
+        "AI adoption",
+        "technology adoption",
+        "technology and AI adoption in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "technology and AI adoption",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "technology and AI adoption",
+          "\"technology and AI adoption\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "technology and AI adoption",
+          "technology and AI adoption information systems"
+        ],
+        "crossref": [
+          "technology and AI adoption",
+          "技术与AI采纳"
+        ],
+        "dblp": [
+          "technology and AI adoption digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "technology and AI adoption",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "technology and AI adoption information systems",
+        "(technology and AI adoption) OR (technology and AI adoption in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:51",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:166"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "human_ai_interaction",
+      "labels": {
+        "zh": "人机交互",
+        "en": "human-AI interaction"
+      },
+      "group_ids": [
+        "is",
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "人机交互",
+        "human-AI interaction",
+        "human-AI interaction in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "human-AI interaction",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "human-AI interaction",
+          "\"human-AI interaction\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "human-AI interaction",
+          "human-AI interaction information systems"
+        ],
+        "crossref": [
+          "human-AI interaction",
+          "人机交互"
+        ],
+        "dblp": [
+          "human-AI interaction digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "human-AI interaction",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "human-AI interaction information systems",
+        "(human-AI interaction) OR (human-AI interaction in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:52",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:113"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "platform_governance",
+      "labels": {
+        "zh": "平台治理",
+        "en": "platform governance"
+      },
+      "group_ids": [
+        "is",
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "平台治理",
+        "platform governance",
+        "platform governance in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "platform governance",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "platform governance",
+          "\"platform governance\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "platform governance",
+          "platform governance information systems"
+        ],
+        "crossref": [
+          "platform governance",
+          "平台治理"
+        ],
+        "dblp": [
+          "platform governance digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "platform governance",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "COMMUNICATION",
+        "HCI",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "platform governance information systems",
+        "(platform governance) OR (platform governance in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:53",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:221"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_transformation",
+      "labels": {
+        "zh": "数字化转型",
+        "en": "digital transformation"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "数字化转型",
+        "digital transformation",
+        "digital transformation in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital transformation",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital transformation",
+          "\"digital transformation\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "digital transformation",
+          "digital transformation information systems"
+        ],
+        "crossref": [
+          "digital transformation",
+          "数字化转型"
+        ],
+        "dblp": [
+          "digital transformation digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital transformation",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "digital transformation information systems",
+        "(digital transformation) OR (digital transformation in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:54"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_algorithmic_management",
+      "labels": {
+        "zh": "算法管理",
+        "en": "algorithmic management"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "算法管理",
+        "algorithmic management",
+        "algorithmic management in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "algorithmic management",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "algorithmic management",
+          "\"algorithmic management\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "algorithmic management",
+          "algorithmic management information systems"
+        ],
+        "crossref": [
+          "algorithmic management",
+          "算法管理"
+        ],
+        "dblp": [
+          "algorithmic management digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "algorithmic management",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "algorithmic management information systems",
+        "(algorithmic management) OR (algorithmic management in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:55"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "social_media",
+      "labels": {
+        "zh": "社交媒体",
+        "en": "social media"
+      },
+      "group_ids": [
+        "is",
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "社交媒体",
+        "social media",
+        "social media in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "social media",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "social media",
+          "\"social media\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "social media",
+          "social media information systems"
+        ],
+        "crossref": [
+          "social media",
+          "社交媒体"
+        ],
+        "dblp": [
+          "social media digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "social media",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "COMMUNICATION",
+        "HCI",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "social media information systems",
+        "(social media) OR (social media in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:56",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:215"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_markets",
+      "labels": {
+        "zh": "数字市场",
+        "en": "digital markets"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "数字市场",
+        "digital markets",
+        "digital markets in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital markets",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital markets",
+          "\"digital markets\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "digital markets",
+          "digital markets information systems"
+        ],
+        "crossref": [
+          "digital markets",
+          "数字市场"
+        ],
+        "dblp": [
+          "digital markets digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital markets",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "digital markets information systems",
+        "(digital markets) OR (digital markets in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:57"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_privacy_security",
+      "labels": {
+        "zh": "隐私与安全",
+        "en": "privacy and security"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "隐私与安全",
+        "privacy and security",
+        "privacy / security",
+        "privacy and security in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "privacy and security",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "privacy and security",
+          "\"privacy and security\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "privacy and security",
+          "privacy and security information systems"
+        ],
+        "crossref": [
+          "privacy and security",
+          "隐私与安全"
+        ],
+        "dblp": [
+          "privacy and security digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "privacy and security",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "privacy and security information systems",
+        "(privacy and security) OR (privacy and security in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:58"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_it_governance",
+      "labels": {
+        "zh": "IT治理",
+        "en": "IT governance"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "IT治理",
+        "IT governance",
+        "IT governance in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "IT governance",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "IT governance",
+          "\"IT governance\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "IT governance",
+          "IT governance information systems"
+        ],
+        "crossref": [
+          "IT governance",
+          "IT治理"
+        ],
+        "dblp": [
+          "IT governance digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "IT governance",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "IT governance information systems",
+        "(IT governance) OR (IT governance in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:59"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_innovation",
+      "labels": {
+        "zh": "数字创新",
+        "en": "digital innovation"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "数字创新",
+        "digital innovation",
+        "digital innovation in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital innovation",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital innovation",
+          "\"digital innovation\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "digital innovation",
+          "digital innovation information systems"
+        ],
+        "crossref": [
+          "digital innovation",
+          "数字创新"
+        ],
+        "dblp": [
+          "digital innovation digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital innovation",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "digital innovation information systems",
+        "(digital innovation) OR (digital innovation in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:60"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_technology_use",
+      "labels": {
+        "zh": "技术使用",
+        "en": "technology use"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "技术使用",
+        "technology use",
+        "technology use in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "technology use",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "technology use",
+          "\"technology use\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "technology use",
+          "technology use information systems"
+        ],
+        "crossref": [
+          "technology use",
+          "技术使用"
+        ],
+        "dblp": [
+          "technology use digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "technology use",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "technology use information systems",
+        "(technology use) OR (technology use in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:61"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_strategy",
+      "labels": {
+        "zh": "数字战略",
+        "en": "digital strategy"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "数字战略",
+        "digital strategy",
+        "digital strategy in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital strategy",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital strategy",
+          "\"digital strategy\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "digital strategy",
+          "digital strategy information systems"
+        ],
+        "crossref": [
+          "digital strategy",
+          "数字战略"
+        ],
+        "dblp": [
+          "digital strategy digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital strategy",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "digital strategy information systems",
+        "(digital strategy) OR (digital strategy in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:62"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_平台经济",
+      "labels": {
+        "zh": "平台经济",
+        "en": "platform economy"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "平台经济",
+        "platform economy",
+        "platform economy in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "platform economy",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "platform economy",
+          "\"platform economy\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "platform economy",
+          "platform economy information systems"
+        ],
+        "crossref": [
+          "platform economy",
+          "平台经济"
+        ],
+        "dblp": [
+          "platform economy digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "platform economy",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "platform economy information systems",
+        "(platform economy) OR (platform economy in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "recommender_systems",
+      "labels": {
+        "zh": "推荐系统与推荐算法",
+        "en": "recommender systems and algorithms"
+      },
+      "group_ids": [
+        "is",
+        "is_cs_hci",
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "推荐系统与推荐算法",
+        "recommender systems and algorithms",
+        "推荐系统",
+        "recommender systems",
+        "recommender algorithms",
+        "recommender systems and algorithms in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "recommender systems and algorithms",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "recommender systems and algorithms",
+          "\"recommender systems and algorithms\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "recommender systems and algorithms",
+          "recommender systems and algorithms information systems"
+        ],
+        "crossref": [
+          "recommender systems and algorithms",
+          "推荐系统与推荐算法"
+        ],
+        "dblp": [
+          "recommender systems and algorithms digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "recommender systems and algorithms",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "COMMUNICATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "recommender systems and algorithms information systems",
+        "(recommender systems and algorithms) OR (recommender systems and algorithms in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:115",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:217"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_电商",
+      "labels": {
+        "zh": "电子商务",
+        "en": "electronic commerce"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "电子商务",
+        "electronic commerce",
+        "电商",
+        "electronic commerce in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "electronic commerce",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "electronic commerce",
+          "\"electronic commerce\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "electronic commerce",
+          "electronic commerce information systems"
+        ],
+        "crossref": [
+          "electronic commerce",
+          "电子商务"
+        ],
+        "dblp": [
+          "electronic commerce digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "electronic commerce",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "electronic commerce information systems",
+        "(electronic commerce) OR (electronic commerce in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_数字广告",
+      "labels": {
+        "zh": "数字广告",
+        "en": "digital advertising"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "数字广告",
+        "digital advertising",
+        "digital advertising in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital advertising",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital advertising",
+          "\"digital advertising\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "digital advertising",
+          "digital advertising information systems"
+        ],
+        "crossref": [
+          "digital advertising",
+          "数字广告"
+        ],
+        "dblp": [
+          "digital advertising digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital advertising",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "digital advertising information systems",
+        "(digital advertising) OR (digital advertising in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_在线行为",
+      "labels": {
+        "zh": "在线行为",
+        "en": "online behavior"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "在线行为",
+        "online behavior",
+        "online behavior in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "online behavior",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "online behavior",
+          "\"online behavior\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "online behavior",
+          "online behavior information systems"
+        ],
+        "crossref": [
+          "online behavior",
+          "在线行为"
+        ],
+        "dblp": [
+          "online behavior digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "online behavior",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "online behavior information systems",
+        "(online behavior) OR (online behavior in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_算法机制",
+      "labels": {
+        "zh": "算法机制",
+        "en": "algorithmic mechanisms"
+      },
+      "group_ids": [
+        "is"
+      ],
+      "synonyms": [
+        "算法机制",
+        "algorithmic mechanisms",
+        "algorithmic mechanisms in information systems"
+      ],
+      "boundaries": {
+        "include": [
+          "algorithmic mechanisms",
+          "information systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "algorithmic mechanisms",
+          "\"algorithmic mechanisms\" AND \"information systems\""
+        ],
+        "semantic_scholar": [
+          "algorithmic mechanisms",
+          "algorithmic mechanisms information systems"
+        ],
+        "crossref": [
+          "algorithmic mechanisms",
+          "算法机制"
+        ],
+        "dblp": [
+          "algorithmic mechanisms digital organizations"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "algorithmic mechanisms",
+          "information systems",
+          "digital organizations"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "algorithmic mechanisms information systems",
+        "(algorithmic mechanisms) OR (algorithmic mechanisms in information systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_hci",
+      "labels": {
+        "zh": "人机交互研究",
+        "en": "human-computer interaction"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "人机交互研究",
+        "human-computer interaction",
+        "HCI",
+        "human-computer interaction in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "human-computer interaction",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "human-computer interaction",
+          "\"human-computer interaction\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "human-computer interaction",
+          "human-computer interaction human-computer interaction"
+        ],
+        "crossref": [
+          "human-computer interaction",
+          "人机交互研究"
+        ],
+        "dblp": [
+          "human-computer interaction computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "human-computer interaction",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "human-computer interaction human-computer interaction",
+        "(human-computer interaction) OR (human-computer interaction in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:114"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "information_retrieval",
+      "labels": {
+        "zh": "信息检索",
+        "en": "information retrieval"
+      },
+      "group_ids": [
+        "is_cs_hci",
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "信息检索",
+        "information retrieval",
+        "information retrieval in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "information retrieval",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "information retrieval",
+          "\"information retrieval\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "information retrieval",
+          "information retrieval human-computer interaction"
+        ],
+        "crossref": [
+          "information retrieval",
+          "信息检索"
+        ],
+        "dblp": [
+          "information retrieval computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "information retrieval",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "information retrieval human-computer interaction",
+        "(information retrieval) OR (information retrieval in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:116",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:254",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:290"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_machine_learning",
+      "labels": {
+        "zh": "机器学习",
+        "en": "machine learning"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "机器学习",
+        "machine learning",
+        "machine learning in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "machine learning",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "machine learning",
+          "\"machine learning\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "machine learning",
+          "machine learning human-computer interaction"
+        ],
+        "crossref": [
+          "machine learning",
+          "机器学习"
+        ],
+        "dblp": [
+          "machine learning computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "machine learning",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "machine learning human-computer interaction",
+        "(machine learning) OR (machine learning in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:117"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_data_mining",
+      "labels": {
+        "zh": "数据挖掘",
+        "en": "data mining"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "数据挖掘",
+        "data mining",
+        "data mining in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "data mining",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "data mining",
+          "\"data mining\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "data mining",
+          "data mining human-computer interaction"
+        ],
+        "crossref": [
+          "data mining",
+          "数据挖掘"
+        ],
+        "dblp": [
+          "data mining computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "data mining",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "data mining human-computer interaction",
+        "(data mining) OR (data mining in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:118"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_software_system_design",
+      "labels": {
+        "zh": "软件与系统设计",
+        "en": "software and system design"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "软件与系统设计",
+        "software and system design",
+        "software / system design",
+        "software and system design in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "software and system design",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "software and system design",
+          "\"software and system design\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "software and system design",
+          "software and system design human-computer interaction"
+        ],
+        "crossref": [
+          "software and system design",
+          "软件与系统设计"
+        ],
+        "dblp": [
+          "software and system design computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "software and system design",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "software and system design human-computer interaction",
+        "(software and system design) OR (software and system design in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:119"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_knowledge_discovery",
+      "labels": {
+        "zh": "知识发现",
+        "en": "knowledge discovery"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "知识发现",
+        "knowledge discovery",
+        "knowledge discovery in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "knowledge discovery",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "knowledge discovery",
+          "\"knowledge discovery\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "knowledge discovery",
+          "knowledge discovery human-computer interaction"
+        ],
+        "crossref": [
+          "knowledge discovery",
+          "知识发现"
+        ],
+        "dblp": [
+          "knowledge discovery computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "knowledge discovery",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "knowledge discovery human-computer interaction",
+        "(knowledge discovery) OR (knowledge discovery in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:120"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_ai_enabled_information_systems",
+      "labels": {
+        "zh": "AI赋能信息系统",
+        "en": "AI-enabled information systems"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "AI赋能信息系统",
+        "AI-enabled information systems",
+        "AI-enabled information systems in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "AI-enabled information systems",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "AI-enabled information systems",
+          "\"AI-enabled information systems\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "AI-enabled information systems",
+          "AI-enabled information systems human-computer interaction"
+        ],
+        "crossref": [
+          "AI-enabled information systems",
+          "AI赋能信息系统"
+        ],
+        "dblp": [
+          "AI-enabled information systems computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "AI-enabled information systems",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "AI-enabled information systems human-computer interaction",
+        "(AI-enabled information systems) OR (AI-enabled information systems in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:121"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_artifact_design",
+      "labels": {
+        "zh": "数字人工物设计",
+        "en": "digital artifact design"
+      },
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "synonyms": [
+        "数字人工物设计",
+        "digital artifact design",
+        "digital artifact design in human-computer interaction"
+      ],
+      "boundaries": {
+        "include": [
+          "digital artifact design",
+          "human-computer interaction",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital artifact design",
+          "\"digital artifact design\" AND \"human-computer interaction\""
+        ],
+        "semantic_scholar": [
+          "digital artifact design",
+          "digital artifact design human-computer interaction"
+        ],
+        "crossref": [
+          "digital artifact design",
+          "数字人工物设计"
+        ],
+        "dblp": [
+          "digital artifact design computing"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital artifact design",
+          "human-computer interaction",
+          "computing"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "digital artifact design human-computer interaction",
+        "(digital artifact design) OR (digital artifact design in human-computer interaction)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:122"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_ai_trust",
+      "labels": {
+        "zh": "AI信任",
+        "en": "trust in AI"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "AI信任",
+        "trust in AI",
+        "AI trust",
+        "trust in AI in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "trust in AI",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "trust in AI",
+          "\"trust in AI\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "trust in AI",
+          "trust in AI user behavior"
+        ],
+        "crossref": [
+          "trust in AI",
+          "AI信任"
+        ],
+        "dblp": [
+          "trust in AI behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "trust in AI",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "trust in AI user behavior",
+        "(trust in AI) OR (trust in AI in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:163"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "labels": {
+        "zh": "算法厌恶与算法欣赏",
+        "en": "algorithm aversion and appreciation"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "算法厌恶与算法欣赏",
+        "algorithm aversion and appreciation",
+        "algorithm aversion / appreciation",
+        "algorithm aversion and appreciation in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "algorithm aversion and appreciation",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "algorithm aversion and appreciation",
+          "\"algorithm aversion and appreciation\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "algorithm aversion and appreciation",
+          "algorithm aversion and appreciation user behavior"
+        ],
+        "crossref": [
+          "algorithm aversion and appreciation",
+          "算法厌恶与算法欣赏"
+        ],
+        "dblp": [
+          "algorithm aversion and appreciation behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "algorithm aversion and appreciation",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "algorithm aversion and appreciation user behavior",
+        "(algorithm aversion and appreciation) OR (algorithm aversion and appreciation in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:164"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_anthropomorphism",
+      "labels": {
+        "zh": "拟人化",
+        "en": "anthropomorphism"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "拟人化",
+        "anthropomorphism",
+        "anthropomorphism in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "anthropomorphism",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "anthropomorphism",
+          "\"anthropomorphism\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "anthropomorphism",
+          "anthropomorphism user behavior"
+        ],
+        "crossref": [
+          "anthropomorphism",
+          "拟人化"
+        ],
+        "dblp": [
+          "anthropomorphism behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "anthropomorphism",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "anthropomorphism user behavior",
+        "(anthropomorphism) OR (anthropomorphism in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:165"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_cognitive_load",
+      "labels": {
+        "zh": "认知负荷",
+        "en": "cognitive load"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "认知负荷",
+        "cognitive load",
+        "cognitive load in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "cognitive load",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "cognitive load",
+          "\"cognitive load\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "cognitive load",
+          "cognitive load user behavior"
+        ],
+        "crossref": [
+          "cognitive load",
+          "认知负荷"
+        ],
+        "dblp": [
+          "cognitive load behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "cognitive load",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "cognitive load user behavior",
+        "(cognitive load) OR (cognitive load in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:167"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_information_overload",
+      "labels": {
+        "zh": "信息过载",
+        "en": "information overload"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "信息过载",
+        "information overload",
+        "information overload in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "information overload",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "information overload",
+          "\"information overload\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "information overload",
+          "information overload user behavior"
+        ],
+        "crossref": [
+          "information overload",
+          "信息过载"
+        ],
+        "dblp": [
+          "information overload behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "information overload",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "information overload user behavior",
+        "(information overload) OR (information overload in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:168"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_social_influence",
+      "labels": {
+        "zh": "社会影响",
+        "en": "social influence"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "社会影响",
+        "social influence",
+        "social influence in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "social influence",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "social influence",
+          "\"social influence\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "social influence",
+          "social influence user behavior"
+        ],
+        "crossref": [
+          "social influence",
+          "社会影响"
+        ],
+        "dblp": [
+          "social influence behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "social influence",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "social influence user behavior",
+        "(social influence) OR (social influence in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:169"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_privacy_concern",
+      "labels": {
+        "zh": "隐私关注",
+        "en": "privacy concern"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "隐私关注",
+        "privacy concern",
+        "privacy concern in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "privacy concern",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "privacy concern",
+          "\"privacy concern\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "privacy concern",
+          "privacy concern user behavior"
+        ],
+        "crossref": [
+          "privacy concern",
+          "隐私关注"
+        ],
+        "dblp": [
+          "privacy concern behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "privacy concern",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "privacy concern user behavior",
+        "(privacy concern) OR (privacy concern in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:170"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_technostress",
+      "labels": {
+        "zh": "技术压力",
+        "en": "technostress"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "技术压力",
+        "technostress",
+        "technostress in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "technostress",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "technostress",
+          "\"technostress\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "technostress",
+          "technostress user behavior"
+        ],
+        "crossref": [
+          "technostress",
+          "技术压力"
+        ],
+        "dblp": [
+          "technostress behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "technostress",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "technostress user behavior",
+        "(technostress) OR (technostress in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:171"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_human_ai_teams",
+      "labels": {
+        "zh": "人机团队",
+        "en": "human-AI teams"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "人机团队",
+        "human-AI teams",
+        "human-AI teams in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "human-AI teams",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "human-AI teams",
+          "\"human-AI teams\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "human-AI teams",
+          "human-AI teams user behavior"
+        ],
+        "crossref": [
+          "human-AI teams",
+          "人机团队"
+        ],
+        "dblp": [
+          "human-AI teams behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "human-AI teams",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "human-AI teams user behavior",
+        "(human-AI teams) OR (human-AI teams in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:172"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_identity",
+      "labels": {
+        "zh": "身份认同",
+        "en": "identity"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "身份认同",
+        "identity",
+        "identity in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "identity",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "identity",
+          "\"identity\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "identity",
+          "identity user behavior"
+        ],
+        "crossref": [
+          "identity",
+          "身份认同"
+        ],
+        "dblp": [
+          "identity behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "identity",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "identity user behavior",
+        "(identity) OR (identity in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:173"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_emotion",
+      "labels": {
+        "zh": "情绪",
+        "en": "emotion"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "情绪",
+        "emotion",
+        "emotion in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "emotion",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "emotion",
+          "\"emotion\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "emotion",
+          "emotion user behavior"
+        ],
+        "crossref": [
+          "emotion",
+          "情绪"
+        ],
+        "dblp": [
+          "emotion behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "emotion",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "emotion user behavior",
+        "(emotion) OR (emotion in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:174"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_attention",
+      "labels": {
+        "zh": "注意力",
+        "en": "attention"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "注意力",
+        "attention",
+        "attention in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "attention",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "attention",
+          "\"attention\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "attention",
+          "attention user behavior"
+        ],
+        "crossref": [
+          "attention",
+          "注意力"
+        ],
+        "dblp": [
+          "attention behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "attention",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "attention user behavior",
+        "(attention) OR (attention in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:175"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_judgment_decision_making",
+      "labels": {
+        "zh": "判断与决策",
+        "en": "judgment and decision making"
+      },
+      "group_ids": [
+        "is_psychology"
+      ],
+      "synonyms": [
+        "判断与决策",
+        "judgment and decision making",
+        "judgment / decision making",
+        "judgment and decision making in user behavior"
+      ],
+      "boundaries": {
+        "include": [
+          "judgment and decision making",
+          "user behavior",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "judgment and decision making",
+          "\"judgment and decision making\" AND \"user behavior\""
+        ],
+        "semantic_scholar": [
+          "judgment and decision making",
+          "judgment and decision making user behavior"
+        ],
+        "crossref": [
+          "judgment and decision making",
+          "判断与决策"
+        ],
+        "dblp": [
+          "judgment and decision making behavioral research"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "judgment and decision making",
+          "user behavior",
+          "behavioral research"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "judgment and decision making user behavior",
+        "(judgment and decision making) OR (judgment and decision making in user behavior)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:176"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_misinformation",
+      "labels": {
+        "zh": "错误信息",
+        "en": "misinformation"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "错误信息",
+        "misinformation",
+        "misinformation in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "misinformation",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "misinformation",
+          "\"misinformation\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "misinformation",
+          "misinformation digital media"
+        ],
+        "crossref": [
+          "misinformation",
+          "错误信息"
+        ],
+        "dblp": [
+          "misinformation online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "misinformation",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "misinformation digital media",
+        "(misinformation) OR (misinformation in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:216"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_news_consumption",
+      "labels": {
+        "zh": "新闻消费",
+        "en": "news consumption"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "新闻消费",
+        "news consumption",
+        "news consumption in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "news consumption",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "news consumption",
+          "\"news consumption\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "news consumption",
+          "news consumption digital media"
+        ],
+        "crossref": [
+          "news consumption",
+          "新闻消费"
+        ],
+        "dblp": [
+          "news consumption online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "news consumption",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "news consumption digital media",
+        "(news consumption) OR (news consumption in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:218"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_content_moderation",
+      "labels": {
+        "zh": "内容审核",
+        "en": "content moderation"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "内容审核",
+        "content moderation",
+        "content moderation in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "content moderation",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "content moderation",
+          "\"content moderation\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "content moderation",
+          "content moderation digital media"
+        ],
+        "crossref": [
+          "content moderation",
+          "内容审核"
+        ],
+        "dblp": [
+          "content moderation online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "content moderation",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "content moderation digital media",
+        "(content moderation) OR (content moderation in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:219"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_influencers",
+      "labels": {
+        "zh": "社交媒体影响者",
+        "en": "social media influencers"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "社交媒体影响者",
+        "social media influencers",
+        "influencers",
+        "social media influencers in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "social media influencers",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "social media influencers",
+          "\"social media influencers\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "social media influencers",
+          "social media influencers digital media"
+        ],
+        "crossref": [
+          "social media influencers",
+          "社交媒体影响者"
+        ],
+        "dblp": [
+          "social media influencers online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "social media influencers",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "social media influencers digital media",
+        "(social media influencers) OR (social media influencers in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:220"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_generative_ai",
+      "labels": {
+        "zh": "生成式AI",
+        "en": "generative AI"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "生成式AI",
+        "generative AI",
+        "generative AI in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "generative AI",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "generative AI",
+          "\"generative AI\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "generative AI",
+          "generative AI digital media"
+        ],
+        "crossref": [
+          "generative AI",
+          "生成式AI"
+        ],
+        "dblp": [
+          "generative AI online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "generative AI",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "generative AI digital media",
+        "(generative AI) OR (generative AI in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:222"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_human_ai_communication",
+      "labels": {
+        "zh": "人机传播",
+        "en": "human-AI communication"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "人机传播",
+        "human-AI communication",
+        "human-AI communication in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "human-AI communication",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "human-AI communication",
+          "\"human-AI communication\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "human-AI communication",
+          "human-AI communication digital media"
+        ],
+        "crossref": [
+          "human-AI communication",
+          "人机传播"
+        ],
+        "dblp": [
+          "human-AI communication online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "human-AI communication",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "human-AI communication digital media",
+        "(human-AI communication) OR (human-AI communication in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:223"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_political_communication",
+      "labels": {
+        "zh": "政治传播",
+        "en": "political communication"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "政治传播",
+        "political communication",
+        "political communication in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "political communication",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "political communication",
+          "\"political communication\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "political communication",
+          "political communication digital media"
+        ],
+        "crossref": [
+          "political communication",
+          "政治传播"
+        ],
+        "dblp": [
+          "political communication online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "political communication",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "political communication digital media",
+        "(political communication) OR (political communication in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:224"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_algorithmic_news",
+      "labels": {
+        "zh": "算法新闻",
+        "en": "algorithmic news"
+      },
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "synonyms": [
+        "算法新闻",
+        "algorithmic news",
+        "algorithmic news in digital media"
+      ],
+      "boundaries": {
+        "include": [
+          "algorithmic news",
+          "digital media",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "algorithmic news",
+          "\"algorithmic news\" AND \"digital media\""
+        ],
+        "semantic_scholar": [
+          "algorithmic news",
+          "algorithmic news digital media"
+        ],
+        "crossref": [
+          "algorithmic news",
+          "算法新闻"
+        ],
+        "dblp": [
+          "algorithmic news online communication"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "algorithmic news",
+          "digital media",
+          "online communication"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "algorithmic news digital media",
+        "(algorithmic news) OR (algorithmic news in digital media)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:225"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_information_science",
+      "labels": {
+        "zh": "信息科学",
+        "en": "information science"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "信息科学",
+        "information science",
+        "information science in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "information science",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "information science",
+          "\"information science\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "information science",
+          "information science information management"
+        ],
+        "crossref": [
+          "information science",
+          "信息科学"
+        ],
+        "dblp": [
+          "information science information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "information science",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "information science information management",
+        "(information science) OR (information science in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:253"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "information_behavior",
+      "labels": {
+        "zh": "信息行为",
+        "en": "information behavior"
+      },
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "信息行为",
+        "information behavior",
+        "information behavior in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "information behavior",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "information behavior",
+          "\"information behavior\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "information behavior",
+          "information behavior information management"
+        ],
+        "crossref": [
+          "information behavior",
+          "信息行为"
+        ],
+        "dblp": [
+          "information behavior information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "information behavior",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "information behavior information management",
+        "(information behavior) OR (information behavior in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:255",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:294"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "knowledge_management",
+      "labels": {
+        "zh": "知识管理",
+        "en": "knowledge management"
+      },
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "知识管理",
+        "knowledge management",
+        "knowledge management in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "knowledge management",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "knowledge management",
+          "\"knowledge management\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "knowledge management",
+          "knowledge management information management"
+        ],
+        "crossref": [
+          "knowledge management",
+          "知识管理"
+        ],
+        "dblp": [
+          "knowledge management information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "knowledge management",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "knowledge management information management",
+        "(knowledge management) OR (knowledge management in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:256",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:292"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_data_management",
+      "labels": {
+        "zh": "数据管理",
+        "en": "data management"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "数据管理",
+        "data management",
+        "data management in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "data management",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "data management",
+          "\"data management\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "data management",
+          "data management information management"
+        ],
+        "crossref": [
+          "data management",
+          "数据管理"
+        ],
+        "dblp": [
+          "data management information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "data management",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "data management information management",
+        "(data management) OR (data management in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:257"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_data_governance",
+      "labels": {
+        "zh": "数据治理",
+        "en": "data governance"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "数据治理",
+        "data governance",
+        "data governance in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "data governance",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "data governance",
+          "\"data governance\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "data governance",
+          "data governance information management"
+        ],
+        "crossref": [
+          "data governance",
+          "数据治理"
+        ],
+        "dblp": [
+          "data governance information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "data governance",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "data governance information management",
+        "(data governance) OR (data governance in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:258"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "scientometrics",
+      "labels": {
+        "zh": "科学计量与文献计量",
+        "en": "scientometrics and bibliometrics"
+      },
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "科学计量与文献计量",
+        "scientometrics and bibliometrics",
+        "Bibliometrics / Scientometrics",
+        "Scientometrics",
+        "scientometrics and bibliometrics in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "scientometrics and bibliometrics",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "scientometrics and bibliometrics",
+          "\"scientometrics and bibliometrics\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "scientometrics and bibliometrics",
+          "scientometrics and bibliometrics information management"
+        ],
+        "crossref": [
+          "scientometrics and bibliometrics",
+          "科学计量与文献计量"
+        ],
+        "dblp": [
+          "scientometrics and bibliometrics information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "scientometrics and bibliometrics",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "scientometrics and bibliometrics information management",
+        "(scientometrics and bibliometrics) OR (scientometrics and bibliometrics in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:259",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:295"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_knowledge_graph",
+      "labels": {
+        "zh": "知识图谱",
+        "en": "knowledge graphs"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "知识图谱",
+        "knowledge graphs",
+        "Knowledge Graph",
+        "knowledge graphs in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "knowledge graphs",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "knowledge graphs",
+          "\"knowledge graphs\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "knowledge graphs",
+          "knowledge graphs information management"
+        ],
+        "crossref": [
+          "knowledge graphs",
+          "知识图谱"
+        ],
+        "dblp": [
+          "knowledge graphs information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "knowledge graphs",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "knowledge graphs information management",
+        "(knowledge graphs) OR (knowledge graphs in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:260"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_decision_support",
+      "labels": {
+        "zh": "决策支持",
+        "en": "decision support systems"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "决策支持",
+        "decision support systems",
+        "Decision Support",
+        "decision support systems in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "decision support systems",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "decision support systems",
+          "\"decision support systems\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "decision support systems",
+          "decision support systems information management"
+        ],
+        "crossref": [
+          "decision support systems",
+          "决策支持"
+        ],
+        "dblp": [
+          "decision support systems information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "decision support systems",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "decision support systems information management",
+        "(decision support systems) OR (decision support systems in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:261"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "ai_nlp_information_processing",
+      "labels": {
+        "zh": "AI与NLP信息处理",
+        "en": "AI and NLP for information processing"
+      },
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "AI与NLP信息处理",
+        "AI and NLP for information processing",
+        "AI / NLP for information processing",
+        "AI / NLP",
+        "AI and NLP for information processing in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "AI and NLP for information processing",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "AI and NLP for information processing",
+          "\"AI and NLP for information processing\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "AI and NLP for information processing",
+          "AI and NLP for information processing information management"
+        ],
+        "crossref": [
+          "AI and NLP for information processing",
+          "AI与NLP信息处理"
+        ],
+        "dblp": [
+          "AI and NLP for information processing information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "AI and NLP for information processing",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "AI and NLP for information processing information management",
+        "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:262",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:296"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_scholarly_communication",
+      "labels": {
+        "zh": "学术传播",
+        "en": "scholarly communication"
+      },
+      "group_ids": [
+        "im"
+      ],
+      "synonyms": [
+        "学术传播",
+        "scholarly communication",
+        "scholarly communication in information management"
+      ],
+      "boundaries": {
+        "include": [
+          "scholarly communication",
+          "information management",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "scholarly communication",
+          "\"scholarly communication\" AND \"information management\""
+        ],
+        "semantic_scholar": [
+          "scholarly communication",
+          "scholarly communication information management"
+        ],
+        "crossref": [
+          "scholarly communication",
+          "学术传播"
+        ],
+        "dblp": [
+          "scholarly communication information science"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "scholarly communication",
+          "information management",
+          "information science"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "document_types": [
+        "journal-article"
+      ],
+      "fallback_queries": [
+        "scholarly communication information management",
+        "(scholarly communication) OR (scholarly communication in information management)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:263"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_data_knowledge",
+      "labels": {
+        "zh": "数据与知识",
+        "en": "data and knowledge"
+      },
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "数据与知识",
+        "data and knowledge",
+        "Data / Knowledge",
+        "data and knowledge in knowledge and data systems"
+      ],
+      "boundaries": {
+        "include": [
+          "data and knowledge",
+          "knowledge and data systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "data and knowledge",
+          "\"data and knowledge\" AND \"knowledge and data systems\""
+        ],
+        "semantic_scholar": [
+          "data and knowledge",
+          "data and knowledge knowledge and data systems"
+        ],
+        "crossref": [
+          "data and knowledge",
+          "数据与知识"
+        ],
+        "dblp": [
+          "data and knowledge organizational information"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "data and knowledge",
+          "knowledge and data systems",
+          "organizational information"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "data and knowledge knowledge and data systems",
+        "(data and knowledge) OR (data and knowledge in knowledge and data systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:291"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_decision_intelligence",
+      "labels": {
+        "zh": "决策智能",
+        "en": "decision intelligence"
+      },
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "决策智能",
+        "decision intelligence",
+        "decision intelligence in knowledge and data systems"
+      ],
+      "boundaries": {
+        "include": [
+          "decision intelligence",
+          "knowledge and data systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "decision intelligence",
+          "\"decision intelligence\" AND \"knowledge and data systems\""
+        ],
+        "semantic_scholar": [
+          "decision intelligence",
+          "decision intelligence knowledge and data systems"
+        ],
+        "crossref": [
+          "decision intelligence",
+          "决策智能"
+        ],
+        "dblp": [
+          "decision intelligence organizational information"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "decision intelligence",
+          "knowledge and data systems",
+          "organizational information"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "decision intelligence knowledge and data systems",
+        "(decision intelligence) OR (decision intelligence in knowledge and data systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:293"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_organizational_information",
+      "labels": {
+        "zh": "组织信息",
+        "en": "organizational information"
+      },
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "组织信息",
+        "organizational information",
+        "organizational information in knowledge and data systems"
+      ],
+      "boundaries": {
+        "include": [
+          "organizational information",
+          "knowledge and data systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "organizational information",
+          "\"organizational information\" AND \"knowledge and data systems\""
+        ],
+        "semantic_scholar": [
+          "organizational information",
+          "organizational information knowledge and data systems"
+        ],
+        "crossref": [
+          "organizational information",
+          "组织信息"
+        ],
+        "dblp": [
+          "organizational information organizational information"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "organizational information",
+          "knowledge and data systems",
+          "organizational information"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "organizational information knowledge and data systems",
+        "(organizational information) OR (organizational information in knowledge and data systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:297"
+      ]
+    },
+    {
+      "profile_version": "1.0.0-p1",
+      "direction_id": "topic_digital_information_environment",
+      "labels": {
+        "zh": "数字信息环境",
+        "en": "digital information environment"
+      },
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "synonyms": [
+        "数字信息环境",
+        "digital information environment",
+        "digital information environment in knowledge and data systems"
+      ],
+      "boundaries": {
+        "include": [
+          "digital information environment",
+          "knowledge and data systems",
+          "empirical or theoretical research within IS/IM scope"
+        ],
+        "exclude": [
+          "clinical or biomedical-only research",
+          "pure hardware engineering without IS/IM phenomena"
+        ]
+      },
+      "provider_queries": {
+        "openalex": [
+          "digital information environment",
+          "\"digital information environment\" AND \"knowledge and data systems\""
+        ],
+        "semantic_scholar": [
+          "digital information environment",
+          "digital information environment knowledge and data systems"
+        ],
+        "crossref": [
+          "digital information environment",
+          "数字信息环境"
+        ],
+        "dblp": [
+          "digital information environment organizational information"
+        ]
+      },
+      "topic_routes": {
+        "strategy": "search_then_topic_evidence",
+        "topic_search_terms": [
+          "digital information environment",
+          "knowledge and data systems",
+          "organizational information"
+        ],
+        "openalex_topic_ids": [],
+        "status": "text_route_active; topic_ids_require_calibration"
+      },
+      "source_routes": {
+        "required": [
+          "openalex",
+          "crossref"
+        ],
+        "optional": [
+          "semantic_scholar",
+          "dblp",
+          "core",
+          "unpaywall"
+        ],
+        "licensed_optional": [
+          "scopus",
+          "web_of_science",
+          "cnki",
+          "wanfang"
+        ]
+      },
+      "journal_pool_ids": [
+        "IM_CORE",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "document_types": [
+        "journal-article",
+        "proceedings-article"
+      ],
+      "fallback_queries": [
+        "digital information environment knowledge and data systems",
+        "(digital information environment) OR (digital information environment in knowledge and data systems)"
+      ],
+      "coverage_targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      },
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:298"
+      ]
+    }
+  ]
+}

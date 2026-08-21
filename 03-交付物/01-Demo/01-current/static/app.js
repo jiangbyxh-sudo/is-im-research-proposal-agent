@@ -14,6 +14,9 @@ const configureApiButton = $('#configure-api');
 const clearApiButton = $('#clear-api');
 const apiState = $('#api-state');
 const apiMessage = $('#api-message');
+const retrievalApiKeyInput = $('#openalex-api-key');
+const configureRetrievalButton = $('#configure-retrieval-api');
+const clearRetrievalButton = $('#clear-retrieval-api');
 const DEFAULT_DIRECTION = 'topic_ai_enabled_information_systems';
 const PAGE_SIZE = 8;
 
@@ -101,8 +104,58 @@ async function refreshApiState() {
   if (!response.ok) throw new Error('无法读取服务状态');
   const health = await response.json();
   setApiState(health.synthesis_provider === 'deepseek');
+  setRetrievalApiState(health.openalex_authenticated);
   $('#service-status span').textContent = '本地服务已就绪';
   $('#service-status').classList.add('ready');
+}
+
+function setRetrievalApiState(configured, message) {
+  $('#retrieval-api-state').textContent = configured ? '已认证' : '匿名额度';
+  $('#retrieval-api-state').classList.toggle('ready', configured);
+  retrievalApiKeyInput.hidden = configured;
+  configureRetrievalButton.hidden = configured;
+  clearRetrievalButton.hidden = !configured;
+  $('#retrieval-api-message').textContent = message || (configured
+    ? '当前服务进程使用认证额度；服务重启后自动失效。'
+    : '可进行少量匿名检索；61方向批量评测需要OpenAlex免费API key。');
+}
+
+async function configureRetrievalApi() {
+  const apiKey = retrievalApiKeyInput.value.trim();
+  retrievalApiKeyInput.value = '';
+  if (!apiKey) {
+    $('#retrieval-api-message').textContent = '请输入 OpenAlex API Key。';
+    retrievalApiKeyInput.focus();
+    return;
+  }
+  configureRetrievalButton.disabled = true;
+  try {
+    const response = await fetch('/api/configure/retrieval', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ openalex_api_key: apiKey }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.message_to_user || '配置失败');
+    setRetrievalApiState(true, data.message_to_user);
+  } catch (error) {
+    setRetrievalApiState(false, error.message);
+  } finally {
+    configureRetrievalButton.disabled = false;
+  }
+}
+
+async function clearRetrievalApi() {
+  clearRetrievalButton.disabled = true;
+  try {
+    const response = await fetch('/api/configure/retrieval/clear', { method: 'POST' });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.message_to_user || '清除失败');
+    setRetrievalApiState(false, data.message_to_user);
+  } catch (error) {
+    $('#retrieval-api-message').textContent = error.message;
+  } finally {
+    clearRetrievalButton.disabled = false;
+  }
 }
 
 async function configureApi() {
@@ -184,6 +237,15 @@ function paperMeta(paper) {
   return `${authors} · ${paper.journal || '期刊信息缺失'} · ${paper.year || '日期缺失'}`;
 }
 
+const diagnosisLabels = {
+  route_missing: '方向路由缺失',
+  provider_empty: '来源返回为空',
+  rate_limited: '外部来源限流',
+  quality_gate_too_strict: '质量闸门或候选阈值过严',
+  language_coverage_gap: '语言覆盖不足',
+  query_too_narrow: '查询表达过窄',
+};
+
 function visiblePaperSet() {
   const papers = state.data?.papers || [];
   return state.paperFilter === 'all'
@@ -214,7 +276,15 @@ function renderPaperList() {
     meta.textContent = paperMeta(paper);
     const tags = document.createElement('div');
     tags.className = 'paper-tags';
-    [paper.language === 'zh' ? '中文' : '英文', ...(paper.journal_ranking || []), 'Crossref'].forEach((value) => {
+    const score = paper.score?.total;
+    const evidence = { fulltext: '全文证据', abstract: '摘要证据', title_only: '仅题名' }[paper.evidence_level] || paper.evidence_level;
+    [
+      paper.language === 'zh' ? '中文' : '英文',
+      ...(paper.journal_ranking || []),
+      ...(paper.providers || [paper.metadata_source || '来源未标注']),
+      evidence,
+      Number.isFinite(score) ? `匹配分 ${score}` : null,
+    ].filter(Boolean).forEach((value) => {
       const tag = document.createElement('span');
       tag.textContent = value;
       tags.appendChild(tag);
@@ -230,6 +300,36 @@ function renderPaperList() {
     empty.textContent = '当前筛选下没有论文，换一个语言范围看看。';
     paperList.appendChild(empty);
   }
+}
+
+function renderQualityAudit(data) {
+  const audit = data.coverage_audit || {};
+  $('#quality-counts').textContent = [
+    `原始 ${audit.raw_count ?? 0}`,
+    `去重 ${audit.deduplicated_count ?? 0}`,
+    `硬闸门通过 ${audit.hard_gate_pass_count ?? 0}`,
+    `≥70分候选 ${audit.eligible_count ?? 0}`,
+    `边界候选 ${audit.boundary_count ?? 0}`,
+  ].join(' · ');
+  const providerList = $('#provider-status-list');
+  providerList.innerHTML = '';
+  (data.provider_statuses || []).forEach((item) => {
+    const row = document.createElement('li');
+    row.textContent = `${item.provider} · ${item.status} · ${item.returned_rows ?? 0} 条${item.reason ? ` · ${item.reason}` : ''}`;
+    providerList.appendChild(row);
+  });
+  const expansionList = $('#expansion-list');
+  expansionList.innerHTML = '';
+  (data.expansion_log || []).forEach((item) => {
+    const row = document.createElement('li');
+    row.textContent = `第 ${item.attempt} 次 · ${item.query} · 原始 ${item.raw_count} / 闸门通过 ${item.hard_gate_pass_count}`;
+    expansionList.appendChild(row);
+  });
+  const causes = (data.zero_result_diagnosis?.causes || []).map((value) => diagnosisLabels[value] || value);
+  $('#zero-diagnosis').textContent = causes.length ? `诊断：${causes.join('；')}` : '本次没有零结果诊断项。';
+  $('#score-version').textContent = data.score_config_version
+    ? `评分 ${data.score_config_version} · 阈值尚未人工校准`
+    : '旧版检索结果未提供 P1 评分拆解';
 }
 
 function renderJournalAudit(data) {
@@ -285,11 +385,12 @@ function renderDiscovery(data) {
   renderPipeline(data.stages);
 
   $('#paper-results').hidden = !papers.length;
-  $('#retrieval-audit').textContent = `中文 ${zhFound} 篇 · 英文 ${enFound} 篇 · 实际查询 ${data.search_log?.length || 0} 本期刊`;
+  $('#retrieval-audit').textContent = `中文 ${zhFound} 篇 · 英文 ${enFound} 篇 · 外部请求 ${data.search_log?.length || 0} 次`;
   $('#result-footnote').textContent = papers.length
     ? '论文元数据已通过本地期刊白名单校验；研究空白仍需在选择后获取全文复核。'
     : '没有获得可核验论文时，系统不会生成模拟论文、研究方向或空白。';
   renderJournalAudit(data);
+  renderQualityAudit(data);
   renderPaperList();
 
   const badge = $('#paper-nav-count');
@@ -777,6 +878,8 @@ $('#reset-button').addEventListener('click', () => resetForm(false));
 $('#cancel-request').addEventListener('click', () => state.retrievalController?.abort());
 configureApiButton.addEventListener('click', configureApi);
 clearApiButton.addEventListener('click', clearApi);
+configureRetrievalButton.addEventListener('click', configureRetrievalApi);
+clearRetrievalButton.addEventListener('click', clearRetrievalApi);
 $('#load-more').addEventListener('click', () => {
   state.visiblePapers += PAGE_SIZE;
   renderPaperList();

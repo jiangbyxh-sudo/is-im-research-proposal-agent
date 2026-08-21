@@ -1,0 +1,75 @@
+{
+  "direction_id": "topic_数字广告",
+  "labels": {
+    "zh": "数字广告",
+    "en": "digital advertising"
+  },
+  "query": "digital advertising",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 98,
+  "hard_gate_pass_count": 4,
+  "eligible_count": 1,
+  "boundary_count": 3,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "digital advertising",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 189324,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:46:21.104941+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 5734.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "source_not_qualified": 94,
+    "missing_source_title": 5,
+    "wrong_document_type": 14
+  },
+  "dedupe_event_count": 3,
+  "top_candidates": [
+    {
+      "paper_id": "paper_7ca9460f68e0bf97903d",
+      "title": "The Consumption of Advertising in the Digital Age: Attention and Ad Content",
+      "year": 2023,
+      "journal": "Management Science",
+      "doi": "10.1287/mnsc.2023.4793",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 74.86,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 82.75,
+          "lexical_coverage": 75.0,
+          "source_quality": 100.0,
+          "field_year_normalized_impact": 66.98,
+          "recency": 40.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    }
+  ]
+}

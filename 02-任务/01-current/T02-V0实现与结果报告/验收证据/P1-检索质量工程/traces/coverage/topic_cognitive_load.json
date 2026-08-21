@@ -1,0 +1,40 @@
+{
+  "direction_id": "topic_cognitive_load",
+  "labels": {
+    "zh": "认知负荷",
+    "en": "cognitive load"
+  },
+  "query": "cognitive load",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 100,
+  "hard_gate_pass_count": 0,
+  "eligible_count": 0,
+  "boundary_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "cognitive load",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 439653,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:47:17.108953+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 3813.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "source_not_qualified": 100,
+    "wrong_document_type": 2
+  },
+  "dedupe_event_count": 0,
+  "top_candidates": []
+}

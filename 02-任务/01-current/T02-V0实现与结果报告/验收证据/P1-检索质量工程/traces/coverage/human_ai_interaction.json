@@ -1,0 +1,141 @@
+{
+  "direction_id": "human_ai_interaction",
+  "labels": {
+    "zh": "人机交互",
+    "en": "human-AI interaction"
+  },
+  "query": "human-AI interaction",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 100,
+  "hard_gate_pass_count": 7,
+  "eligible_count": 3,
+  "boundary_count": 4,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "human-AI interaction",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 855485,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:45:39.577823+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 6297.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "wrong_document_type": 25,
+    "source_not_qualified": 93,
+    "missing_source_title": 11
+  },
+  "dedupe_event_count": 6,
+  "top_candidates": [
+    {
+      "paper_id": "paper_4e3f7f5303bda0f4194a",
+      "title": "AI sensation and engagement: Unpacking the sensory experience in human-AI interaction",
+      "year": 2025,
+      "journal": "International Journal of Information Management",
+      "doi": "10.1016/j.ijinfomgt.2025.102918",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 72.77,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 81.0,
+          "lexical_coverage": 60.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 57.18,
+          "recency": 80.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_deaf913c1b76594bdc3d",
+      "title": "Developing human/AI interactions for chat-based customer services: lessons learned from the Norwegian government",
+      "year": 2022,
+      "journal": "European Journal of Information Systems",
+      "doi": "10.1080/0960085x.2022.2096490",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 71.05,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 81.0,
+          "lexical_coverage": 60.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 100.0,
+          "recency": 20.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_93c6e558e9d9c466e3ac",
+      "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+      "year": 2022,
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "doi": "10.1145/3519026",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 71.05,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 81.0,
+          "lexical_coverage": 60.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 100.0,
+          "recency": 20.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    }
+  ]
+}

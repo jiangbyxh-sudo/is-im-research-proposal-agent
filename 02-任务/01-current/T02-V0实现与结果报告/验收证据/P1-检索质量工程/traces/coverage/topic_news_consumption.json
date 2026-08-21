@@ -1,0 +1,15 @@
+{
+  "direction_id": "topic_news_consumption",
+  "labels": {
+    "zh": "新闻消费",
+    "en": "news consumption"
+  },
+  "query": "news consumption",
+  "status": "provider_failed",
+  "error_type": "HTTPError",
+  "http_status": 429,
+  "raw_count": 0,
+  "hard_gate_pass_count": 0,
+  "eligible_count": 0,
+  "boundary_count": 0
+}

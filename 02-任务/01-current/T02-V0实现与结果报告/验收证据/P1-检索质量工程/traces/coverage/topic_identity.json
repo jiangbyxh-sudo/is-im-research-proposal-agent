@@ -1,0 +1,15 @@
+{
+  "direction_id": "topic_identity",
+  "labels": {
+    "zh": "身份认同",
+    "en": "identity"
+  },
+  "query": "identity",
+  "status": "provider_failed",
+  "error_type": "HTTPError",
+  "http_status": 429,
+  "raw_count": 0,
+  "hard_gate_pass_count": 0,
+  "eligible_count": 0,
+  "boundary_count": 0
+}

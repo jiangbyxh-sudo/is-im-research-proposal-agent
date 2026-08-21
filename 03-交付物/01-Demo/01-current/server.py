@@ -20,6 +20,7 @@ APP_DIR = Path(__file__).resolve().parent
 WORKSPACE = APP_DIR.parents[2]
 KB_ROOT = WORKSPACE / "01-输入素材/知识库/IS_IM_Proposal_KB_Starter_v0.3"
 CATALOG_PATH = KB_ROOT / "01_taxonomy/generated/research_direction_catalog.json"
+DIRECTION_PROFILE_PATH = KB_ROOT / "01_taxonomy/generated/direction_profiles.json"
 JOURNAL_REGISTRY_PATH = KB_ROOT / "02_journals/generated/journal_registry.json"
 PROVIDER_DIR = KB_ROOT / "11_implementation"
 STATIC_DIR = APP_DIR / "static"
@@ -32,15 +33,20 @@ PROPOSAL_CONTEXT_TTL_SECONDS = 60 * 60
 PROPOSAL_CONTEXT_LIMIT = 20
 PROPOSAL_CONTEXTS: dict[str, tuple[float, SynthesisRequest, object]] = {}
 PROPOSAL_CONTEXTS_LOCK = Lock()
+_DYNAMIC_PROVIDER_INSTANCE = None
+_DYNAMIC_PROVIDER_LOCK = Lock()
 
 if str(PROVIDER_DIR) not in sys.path:
     sys.path.insert(0, str(PROVIDER_DIR))
 
 from paper_discovery_provider import (  # noqa: E402
+    CrossrefTransport,
     CrossrefPaperDiscoveryProvider,
     DiscoveryRequest,
     UnconfiguredPaperDiscoveryProvider,
 )
+from multi_source_discovery_provider import MultiSourcePaperDiscoveryProvider  # noqa: E402
+from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport  # noqa: E402
 from research_synthesis_provider import (  # noqa: E402
     SynthesisRequest,
     build_research_synthesis_provider,
@@ -104,14 +110,46 @@ def positive_count(payload: dict, key: str, default: int) -> int:
 
 
 def provider_name() -> str:
-    return os.getenv("PROPOSAL_DYNAMIC_PROVIDER", "crossref").strip().lower()
+    return os.getenv("PROPOSAL_DYNAMIC_PROVIDER", "multi_source").strip().lower()
 
 
 def build_dynamic_provider():
+    global _DYNAMIC_PROVIDER_INSTANCE
     if provider_name() in {"disabled", "off", "unconfigured"}:
         return UnconfiguredPaperDiscoveryProvider()
+    with _DYNAMIC_PROVIDER_LOCK:
+        if _DYNAMIC_PROVIDER_INSTANCE is not None:
+            return _DYNAMIC_PROVIDER_INSTANCE
     enable_chinese = os.getenv("PROPOSAL_ENABLE_CHINESE_RETRIEVAL", "1").strip().lower() in {"1", "true", "yes", "on"}
-    return CrossrefPaperDiscoveryProvider(JOURNAL_REGISTRY_PATH, enable_chinese=enable_chinese)
+    if provider_name() in {"multi_source", "p1", "openalex"}:
+        crossref = CrossrefPaperDiscoveryProvider(
+            JOURNAL_REGISTRY_PATH,
+            transport=CrossrefTransport(
+                mailto=os.getenv("PROPOSAL_CROSSREF_MAILTO") or None,
+                timeout=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_TIMEOUT", "6")),
+                retries=0,
+            ),
+            enable_chinese=enable_chinese,
+            max_journals_per_language=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_JOURNALS", "3")),
+            rows_per_journal=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_ROWS", "10")),
+        )
+        openalex = OpenAlexPaperProvider(OpenAlexTransport(
+            timeout=int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "12")), retries=1,
+        ))
+        instance = MultiSourcePaperDiscoveryProvider(DIRECTION_PROFILE_PATH, JOURNAL_REGISTRY_PATH, openalex=openalex, crossref=crossref)
+    else:
+        instance = CrossrefPaperDiscoveryProvider(JOURNAL_REGISTRY_PATH, enable_chinese=enable_chinese)
+    with _DYNAMIC_PROVIDER_LOCK:
+        if _DYNAMIC_PROVIDER_INSTANCE is None:
+            _DYNAMIC_PROVIDER_INSTANCE = instance
+        return _DYNAMIC_PROVIDER_INSTANCE
+
+
+def load_direction_profiles() -> dict[str, dict]:
+    if not DIRECTION_PROFILE_PATH.is_file():
+        return {}
+    payload = json.loads(DIRECTION_PROFILE_PATH.read_text(encoding="utf-8"))
+    return {item["direction_id"]: item for item in payload.get("profiles", [])}
 
 
 def synthesis_provider_name() -> str:
@@ -138,6 +176,19 @@ def configure_synthesis(payload: dict) -> dict:
         "model": model,
         "persistence": "process_memory_only",
         "message_to_user": "DeepSeek已在当前服务进程中启用；密钥未写入文件且不会回显。",
+    }
+
+
+def configure_retrieval(payload: dict) -> dict:
+    api_key = str(payload.get("openalex_api_key") or "").strip()
+    if len(api_key) < 8:
+        raise RequestError("请输入有效的OpenAlex API密钥")
+    os.environ["OPENALEX_API_KEY"] = api_key
+    return {
+        "configured": True,
+        "provider": "openalex",
+        "persistence": "process_memory_only",
+        "message_to_user": "OpenAlex已在当前服务进程中启用认证额度；密钥未写入文件且不会回显。",
     }
 
 
@@ -272,12 +323,13 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
     if selected_id not in directions:
         raise RequestError("请选择知识库中的有效研究方向")
     direction = directions[selected_id]
+    direction_profile = load_direction_profiles().get(selected_id)
     fine_question = str(payload.get("fine_grained_question") or "").strip() or None
     zh_count = positive_count(payload, "chinese_count", 10)
     en_count = positive_count(payload, "english_count", 20)
     derived_path = "focused_question" if fine_question else "top_five_subdirections"
 
-    routed_pools = journal_pools_for(direction)
+    routed_pools = tuple(direction_profile["journal_pool_ids"]) if direction_profile else journal_pools_for(direction)
     discovery = (provider or build_dynamic_provider()).discover(
         DiscoveryRequest(
             selected_direction_id=selected_id,
@@ -329,6 +381,7 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
             "groups": [groups[group_id] for group_id in direction["group_ids"]],
             "source_refs": direction["source_refs"],
             "knowledge_policy": "本地规则与写作范式优先精确匹配",
+            "direction_profile": direction_profile,
         },
         "stages": [
             {"id": "catalog", "label": "方向目录匹配", "status": "complete"},
@@ -342,6 +395,12 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
         "search_log": discovery.search_log,
         "exclusion_log": discovery.exclusion_log,
         "shortages": discovery.shortages,
+        "coverage_audit": getattr(discovery, "coverage_audit", {}),
+        "provider_statuses": getattr(discovery, "provider_statuses", []),
+        "expansion_log": getattr(discovery, "expansion_log", []),
+        "dedupe_log": getattr(discovery, "dedupe_log", []),
+        "zero_result_diagnosis": getattr(discovery, "zero_result_diagnosis", {}),
+        "score_config_version": getattr(discovery, "score_config_version", ""),
         "synthesis_job_id": synthesis_job_id,
         "synthesis_status": synthesis.status if synthesis else "SYNTHESIS_QUEUED" if synthesis_job_id else "SYNTHESIS_NOT_RUN",
         "synthesis_message": synthesis.message_to_user if synthesis else "论文已返回，五方向与研究空白将在下一阶段单独综合。" if synthesis_job_id else "论文发现未完成，未运行综合。",
@@ -391,6 +450,8 @@ class AppHandler(BaseHTTPRequestHandler):
                 "chinese_retrieval": "enabled" if os.getenv("PROPOSAL_ENABLE_CHINESE_RETRIEVAL", "1").strip().lower() in {"1", "true", "yes", "on"} else "disabled",
                 "synthesis_provider": synthesis_provider_name(),
                 "journal_registry_ready": JOURNAL_REGISTRY_PATH.is_file(),
+                "direction_profiles_ready": DIRECTION_PROFILE_PATH.is_file(),
+                "openalex_authenticated": bool(os.getenv("OPENALEX_API_KEY")),
             })
             return
         if route == "/api/directions":
@@ -411,7 +472,7 @@ class AppHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:  # noqa: N802
         route = urlparse(self.path).path
-        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear", "/api/evaluation/p0-model-baseline"}:
+        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear", "/api/configure/retrieval", "/api/configure/retrieval/clear", "/api/evaluation/p0-model-baseline"}:
             self.send_error(HTTPStatus.NOT_FOUND)
             return
         try:
@@ -420,16 +481,22 @@ class AppHandler(BaseHTTPRequestHandler):
                     os.environ.pop(key, None)
                 self.send_json({"configured": False, "provider": "unconfigured", "message_to_user": "当前进程中的DeepSeek配置已清除。"})
                 return
+            if route == "/api/configure/retrieval/clear":
+                os.environ.pop("OPENALEX_API_KEY", None)
+                self.send_json({"configured": False, "provider": "openalex_anonymous", "message_to_user": "当前进程中的OpenAlex密钥已清除；可继续使用受限匿名额度。"})
+                return
             length = int(self.headers.get("Content-Length", "0"))
             if length < 1 or length > 1_000_000:
                 raise RequestError("请求内容为空或过大")
-            if route == "/api/configure/synthesis" and not self.headers.get("Content-Type", "").lower().startswith("application/json"):
+            if route in {"/api/configure/synthesis", "/api/configure/retrieval"} and not self.headers.get("Content-Type", "").lower().startswith("application/json"):
                 raise RequestError("配置请求必须使用JSON")
             payload = json.loads(self.rfile.read(length).decode("utf-8"))
             if not isinstance(payload, dict):
                 raise RequestError("请求必须是JSON对象")
             if route == "/api/configure/synthesis":
                 self.send_json(configure_synthesis(payload))
+            elif route == "/api/configure/retrieval":
+                self.send_json(configure_retrieval(payload))
             elif route == "/api/evaluation/p0-model-baseline":
                 if synthesis_provider_name() == "unconfigured":
                     raise RequestError("请先在检索设置中配置DeepSeek，再运行P0模型基线")

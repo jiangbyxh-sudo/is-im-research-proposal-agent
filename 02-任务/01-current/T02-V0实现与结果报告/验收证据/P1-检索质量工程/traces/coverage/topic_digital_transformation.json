@@ -1,0 +1,40 @@
+{
+  "direction_id": "topic_digital_transformation",
+  "labels": {
+    "zh": "数字化转型",
+    "en": "digital transformation"
+  },
+  "query": "digital transformation",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 100,
+  "hard_gate_pass_count": 1,
+  "eligible_count": 0,
+  "boundary_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "digital transformation",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 1251251,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:45:45.939633+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 4860.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "source_not_qualified": 98,
+    "wrong_document_type": 4
+  },
+  "dedupe_event_count": 0,
+  "top_candidates": []
+}

@@ -1,0 +1,41 @@
+{
+  "direction_id": "topic_data_mining",
+  "labels": {
+    "zh": "数据挖掘",
+    "en": "data mining"
+  },
+  "query": "data mining",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 100,
+  "hard_gate_pass_count": 1,
+  "eligible_count": 0,
+  "boundary_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "data mining",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 1009901,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:46:44.654631+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 4906.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "source_not_qualified": 99,
+    "missing_source_title": 11,
+    "wrong_document_type": 26
+  },
+  "dedupe_event_count": 2,
+  "top_candidates": []
+}

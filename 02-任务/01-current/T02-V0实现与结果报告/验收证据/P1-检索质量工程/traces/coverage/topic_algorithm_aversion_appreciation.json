@@ -1,0 +1,142 @@
+{
+  "direction_id": "topic_algorithm_aversion_appreciation",
+  "labels": {
+    "zh": "算法厌恶与算法欣赏",
+    "en": "algorithm aversion and appreciation"
+  },
+  "query": "algorithm aversion and appreciation",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 99,
+  "hard_gate_pass_count": 7,
+  "eligible_count": 3,
+  "boundary_count": 4,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "algorithm aversion and appreciation",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 3214,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:47:08.107303+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 5172.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "retraction_or_correction": 2,
+    "source_not_qualified": 92,
+    "missing_source_title": 9,
+    "wrong_document_type": 22
+  },
+  "dedupe_event_count": 2,
+  "top_candidates": [
+    {
+      "paper_id": "paper_dbae685c8edee48a842f",
+      "title": "AI aversion or appreciation? A capability–personalization framework and a meta-analytic review.",
+      "year": 2025,
+      "journal": "Psychological Bulletin",
+      "doi": "10.1037/bul0000477",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 82.2,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 88.17,
+          "lexical_coverage": 83.33,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 91.43,
+          "recency": 80.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_1f88f3a4b5417d148c0b",
+      "title": "Prejudiced against the Machine? Implicit Associations and the Transience of Algorithm Aversion",
+      "year": 2023,
+      "journal": "MIS Quarterly",
+      "doi": "10.25300/misq/2022/17961",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 75.02,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 77.33,
+          "lexical_coverage": 66.67,
+          "source_quality": 100.0,
+          "field_year_normalized_impact": 100.0,
+          "recency": 40.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_412e4cedbc91cc1d576c",
+      "title": "An Integrative Perspective on Algorithm Aversion and Appreciation in Decision-Making",
+      "year": 2024,
+      "journal": "MIS Quarterly",
+      "doi": "10.25300/misq/2024/18512",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 73.35,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 74.5,
+          "lexical_coverage": 50.0,
+          "source_quality": 100.0,
+          "field_year_normalized_impact": 98.21,
+          "recency": 60.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    }
+  ]
+}

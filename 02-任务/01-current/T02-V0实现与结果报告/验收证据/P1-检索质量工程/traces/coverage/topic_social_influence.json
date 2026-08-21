@@ -1,0 +1,41 @@
+{
+  "direction_id": "topic_social_influence",
+  "labels": {
+    "zh": "社会影响",
+    "en": "social influence"
+  },
+  "query": "social influence",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 100,
+  "hard_gate_pass_count": 0,
+  "eligible_count": 0,
+  "boundary_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "social influence",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 3866250,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:47:20.992630+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 5766.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "wrong_document_type": 2,
+    "source_not_qualified": 100,
+    "missing_source_title": 1
+  },
+  "dedupe_event_count": 0,
+  "top_candidates": []
+}

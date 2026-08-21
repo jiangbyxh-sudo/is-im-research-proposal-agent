@@ -196,6 +196,20 @@ class ServerTests(unittest.TestCase):
                 else:
                     os.environ[key] = value
 
+    def test_openalex_key_is_process_only_and_never_echoed(self):
+        previous = os.environ.get("OPENALEX_API_KEY")
+        try:
+            result = server.configure_retrieval({"openalex_api_key": "oa-test-key-123456"})
+            self.assertTrue(result["configured"])
+            self.assertNotIn("api_key", result)
+            self.assertNotIn("openalex_api_key", result)
+            self.assertEqual("process_memory_only", result["persistence"])
+        finally:
+            if previous is None:
+                os.environ.pop("OPENALEX_API_KEY", None)
+            else:
+                os.environ["OPENALEX_API_KEY"] = previous
+
 
 if __name__ == "__main__":
     unittest.main()

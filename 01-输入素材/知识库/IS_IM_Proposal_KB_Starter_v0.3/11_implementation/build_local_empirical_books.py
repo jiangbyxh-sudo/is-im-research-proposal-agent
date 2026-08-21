@@ -937,7 +937,13 @@ if __name__ == "__main__":
 
 def build_checksums(root: Path) -> None:
     files = {}
-    for path in sorted(p for p in root.rglob("*") if p.is_file() and p.name != "checksums.json"):
+    for path in sorted(
+        p for p in root.rglob("*")
+        if p.is_file()
+        and p.name != "checksums.json"
+        and p.suffix != ".pyc"
+        and "__pycache__" not in p.parts
+    ):
         rel = path.relative_to(root).as_posix()
         data = path.read_bytes()
         files[rel] = sha256_bytes(data)

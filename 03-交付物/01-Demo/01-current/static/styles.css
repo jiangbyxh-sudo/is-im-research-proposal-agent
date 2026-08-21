@@ -20,6 +20,21 @@
   --shadow: 0 6px 24px rgba(68, 45, 30, .045);
 }
 
+.quality-audit-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px;
+  padding: 16px 18px 18px;
+}
+
+.quality-audit-grid p { margin: 8px 0; color: var(--secondary); line-height: 1.6; }
+.quality-audit-grid small { color: var(--brand); }
+.quality-audit-grid ul { margin: 8px 0 0; padding-left: 18px; color: var(--secondary); line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .quality-audit-grid { grid-template-columns: 1fr; }
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {

@@ -26,6 +26,7 @@ class DiscoveryRequest:
     english_count: int = 20
     popularity_window_years: int = 5
     journal_pool_ids: tuple[str, ...] = ()
+    query_by_language: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -37,6 +38,12 @@ class DiscoveryResult:
     exclusion_log: list[dict] = field(default_factory=list)
     shortages: dict[str, int] = field(default_factory=dict)
     message_to_user: str = ""
+    coverage_audit: dict = field(default_factory=dict)
+    provider_statuses: list[dict] = field(default_factory=list)
+    expansion_log: list[dict] = field(default_factory=list)
+    dedupe_log: list[dict] = field(default_factory=list)
+    zero_result_diagnosis: dict = field(default_factory=dict)
+    score_config_version: str = ""
 
 
 class PaperDiscoveryProvider(Protocol):
@@ -269,10 +276,13 @@ class CrossrefPaperDiscoveryProvider:
                 continue
             papers.append({
                 "title": title,
+                "abstract": abstract or None,
                 "authors": self._authors(item),
                 "year": year,
                 "published_date": published_date,
                 "journal": journal["canonical_title"],
+                "source_title": journal["canonical_title"],
+                "source_issns": item.get("ISSN") or journal["issns"],
                 "language": journal["language"],
                 "doi": doi,
                 "url": f"https://doi.org/{doi}" if doi else item.get("URL"),
@@ -282,6 +292,10 @@ class CrossrefPaperDiscoveryProvider:
                 "verified_by": ["local_journal_whitelist", "crossref_journal_endpoint"],
                 "relevance_score": relevance,
                 "metadata_source": "Crossref",
+                "provider": "crossref",
+                "document_type": "journal-article",
+                "integrity_status": "clear",
+                "evidence_level": "abstract" if abstract else "title_only",
             })
         return papers, {
             "provider": "Crossref",
@@ -327,7 +341,6 @@ class CrossrefPaperDiscoveryProvider:
         current_year = date.today().year
         from_date = f"{current_year - request.popularity_window_years + 1}-01-01"
         until_date = date.today().isoformat()
-        query = request.fine_grained_question or request.research_direction
         selected = []
         enabled_languages = ("zh", "en") if self.enable_chinese else ("en",)
         for language in enabled_languages:
@@ -339,7 +352,13 @@ class CrossrefPaperDiscoveryProvider:
         exclusions: list[dict] = []
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             futures = {
-                executor.submit(self._fetch_journal, journal, query, from_date, until_date): journal
+                executor.submit(
+                    self._fetch_journal,
+                    journal,
+                    request.query_by_language.get(journal["language"]) or request.fine_grained_question or request.research_direction,
+                    from_date,
+                    until_date,
+                ): journal
                 for journal in selected
             }
             for future in as_completed(futures):

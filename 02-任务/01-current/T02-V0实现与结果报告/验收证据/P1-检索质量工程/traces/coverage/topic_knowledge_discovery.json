@@ -1,0 +1,42 @@
+{
+  "direction_id": "topic_knowledge_discovery",
+  "labels": {
+    "zh": "知识发现",
+    "en": "knowledge discovery"
+  },
+  "query": "knowledge discovery",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 98,
+  "hard_gate_pass_count": 3,
+  "eligible_count": 0,
+  "boundary_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "knowledge discovery",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 1019341,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:46:49.623653+00:00",
+    "transport": {
+      "attempts": 2,
+      "duration_ms": 29750.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "missing_source_title": 10,
+    "wrong_document_type": 32,
+    "source_not_qualified": 95,
+    "retraction_or_correction": 2
+  },
+  "dedupe_event_count": 2,
+  "top_candidates": []
+}

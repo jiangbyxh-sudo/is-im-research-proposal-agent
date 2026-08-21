@@ -1,0 +1,15 @@
+{
+  "direction_id": "topic_scholarly_communication",
+  "labels": {
+    "zh": "学术传播",
+    "en": "scholarly communication"
+  },
+  "query": "scholarly communication",
+  "status": "provider_failed",
+  "error_type": "HTTPError",
+  "http_status": 429,
+  "raw_count": 0,
+  "hard_gate_pass_count": 0,
+  "eligible_count": 0,
+  "boundary_count": 0
+}

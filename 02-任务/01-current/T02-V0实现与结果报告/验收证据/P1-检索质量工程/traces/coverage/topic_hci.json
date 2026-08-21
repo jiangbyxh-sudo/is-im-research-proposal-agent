@@ -1,0 +1,175 @@
+{
+  "direction_id": "topic_hci",
+  "labels": {
+    "zh": "人机交互研究",
+    "en": "human-computer interaction"
+  },
+  "query": "human-computer interaction",
+  "status": "ok",
+  "raw_count": 100,
+  "deduplicated_count": 99,
+  "hard_gate_pass_count": 5,
+  "eligible_count": 4,
+  "boundary_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "provider_meta": {
+    "provider": "openalex",
+    "status": "ok",
+    "query": "human-computer interaction",
+    "from_date": "2022-01-01",
+    "to_date": "2026-08-22",
+    "requested_rows": 100,
+    "provider_match_count": 1045489,
+    "returned_rows": 100,
+    "queried_at": "2026-08-21T19:46:37.958358+00:00",
+    "transport": {
+      "attempts": 1,
+      "duration_ms": 5281.0,
+      "authenticated": false,
+      "http_status": 200
+    },
+    "cost_usd": 0.001
+  },
+  "exclusion_counts": {
+    "source_not_qualified": 94,
+    "wrong_document_type": 24,
+    "missing_source_title": 11,
+    "retraction_or_correction": 1
+  },
+  "dedupe_event_count": 28,
+  "top_candidates": [
+    {
+      "paper_id": "paper_a0f3f86c85ff56182877",
+      "title": "Post-growth Human–Computer Interaction",
+      "year": 2023,
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "doi": "10.1145/3624981",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 80.42,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 94.0,
+          "lexical_coverage": 80.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 98.21,
+          "recency": 40.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_0f084d9271215c28f864",
+      "title": "Optimal Feedback Control for Modeling Human–Computer Interaction",
+      "year": 2022,
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "doi": "10.1145/3524122",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 75.58,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 94.0,
+          "lexical_coverage": 80.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 69.75,
+          "recency": 20.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_96dbea60eec2dfc97b02",
+      "title": "On the Design of and Interaction with Conversational Agents: An Organizing and Assessing Review of Human-Computer Interaction Research",
+      "year": 2022,
+      "journal": "Journal of the Association for Information Systems",
+      "doi": "10.17705/1jais.00724",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 73.3,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 81.0,
+          "lexical_coverage": 60.0,
+          "source_quality": 100.0,
+          "field_year_normalized_impact": 100.0,
+          "recency": 20.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    },
+    {
+      "paper_id": "paper_6e4bfb1e049f05c28cf1",
+      "title": "The Placebo Effect of Artificial Intelligence in Human–Computer Interaction",
+      "year": 2022,
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "doi": "10.1145/3529225",
+      "score": {
+        "config_version": "p1-metadata-score-1.0.0",
+        "total": 71.05,
+        "band": "eligible",
+        "components": {
+          "semantic_relevance": 81.0,
+          "lexical_coverage": 60.0,
+          "source_quality": 85.0,
+          "field_year_normalized_impact": 100.0,
+          "recency": 20.0,
+          "evidence_completeness": 72.0,
+          "cross_source_agreement": 35.0
+        },
+        "weights": {
+          "semantic_relevance": 0.35,
+          "lexical_coverage": 0.15,
+          "source_quality": 0.15,
+          "field_year_normalized_impact": 0.1,
+          "recency": 0.1,
+          "evidence_completeness": 0.1,
+          "cross_source_agreement": 0.05
+        },
+        "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+        "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+        "threshold_calibration_status": "uncalibrated"
+      }
+    }
+  ]
+}
