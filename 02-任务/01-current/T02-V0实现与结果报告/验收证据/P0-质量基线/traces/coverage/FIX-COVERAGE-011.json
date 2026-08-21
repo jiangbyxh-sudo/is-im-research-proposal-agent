@@ -1,0 +1,1059 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_c684200d17ca4a0f9ce113b910e5fce8",
+  "case_id": "FIX-COVERAGE-011",
+  "recorded_at": "2026-08-21T18:40:41.561873+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:40:32.303708+00:00",
+  "completed_at": "2026-08-21T18:40:41.560875+00:00",
+  "duration_ms": 9265.0,
+  "input": {
+    "selected_direction_id": "topic_technology_use",
+    "research_direction": "technology use",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "technology use",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "DIGITAL_PLATFORM",
+      "ORG_STRATEGY",
+      "ECON_STRATEGY",
+      "SECURITY",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+      "PKU_CORE_2023_ORG_INNOVATION",
+      "PKU_CORE_2023_MANAGEMENT_DIRECT",
+      "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "technology use",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 16,
+      "accepted_before_dedupe": 16,
+      "queried_at": "2026-08-21T18:40:37.007091+00:00",
+      "duration_ms": 1812.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1812.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "issn": "0960-085X",
+      "query": "technology use",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:40:38.817873+00:00",
+      "duration_ms": 2750.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2750.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "technology use",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:40:32.307043+00:00",
+      "duration_ms": 2344.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2344.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "technology use",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:40:34.664175+00:00",
+      "duration_ms": 2344.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2344.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 56,
+    "accepted_before_dedupe": 56,
+    "deduped_corpus": 56,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Exploration of legal governance for three-dimensional layered use of marine space under a multi-center governance framework",
+      "authors": [
+        "Zhiren LIU",
+        "Yixue PENG"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260206",
+      "url": "https://doi.org/10.3724/1005-0566.20260206",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Structural shift in U.S. science and technology governance",
+      "authors": [
+        "Chunliang FAN"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260301",
+      "url": "https://doi.org/10.3724/1005-0566.20260301",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Capital logic of digital technology and its nature of power",
+      "authors": [
+        "Chengzhi QIAO",
+        "Wanhuan CAI"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260319",
+      "url": "https://doi.org/10.3724/1005-0566.20260319",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital technology innovation empowering the network status of city industrial chains",
+      "authors": [
+        "Tianshuo ZHANG",
+        "Yudong QI"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260104",
+      "url": "https://doi.org/10.3724/1005-0566.20260104",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Asset structure mismatch and key core technology innovation: Effects and mechanisms",
+      "authors": [
+        "Qingwei YANG",
+        "Kai WANG",
+        "Zhiyong XU"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260613",
+      "url": "https://doi.org/10.3724/1005-0566.20260613",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Systemic science and technology strategic management for future industries",
+      "authors": [
+        "Wei WU",
+        "Jiahao FENG",
+        "Xiangli ZHU",
+        "Bo YANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260604",
+      "url": "https://doi.org/10.3724/1005-0566.20260604",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Speed of digital transformation, government investment in technology, and government efficiency",
+      "authors": [
+        "Peng LIU",
+        "Taofeng YE",
+        "Jiajun SUN",
+        "Cuiling BAI",
+        "Liping YU"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260208",
+      "url": "https://doi.org/10.3724/1005-0566.20260208",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on the impact of digital intelligence application on the key core technology innovation of manufacturing enterprises",
+      "authors": [
+        "Junlong CHEN",
+        "Xiaomin SUN",
+        "Keying LIN"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260213",
+      "url": "https://doi.org/10.3724/1005-0566.20260213",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Process mechanism of niche leapfrogging in new technology enterprises from a regional symbiosis perspective",
+      "authors": [
+        "Lu ZHANG",
+        "Hong KANG",
+        "Jin CHEN",
+        "Ning WANG",
+        "Yunhao BAI"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260411",
+      "url": "https://doi.org/10.3724/1005-0566.20260411",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "New technology as a resource",
+      "authors": [
+        "Jiahao ZHENG",
+        "Yandong ZHAO"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20251108",
+      "url": "https://doi.org/10.3724/1005-0566.20251108",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How do technology use patterns influence phishing susceptibility? A two-wave study of the role of reformulated locus of control",
+      "authors": [
+        "Emmanuel W. Ayaburi",
+        "Francis Kofi Andoh-Baidoo"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2023.2186275",
+      "url": "https://doi.org/10.1080/0960085x.2023.2186275",
+      "citation_count": 8,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Revisiting the effects of social networks on enterprise collaboration technology use: A fuzzy-set qualitative comparative analysis approach",
+      "authors": [
+        "Mengxiao Zhu",
+        "Lin Liu",
+        "Ruoxiao Su",
+        "Noshir Contractor"
+      ],
+      "year": 2023,
+      "published_date": "2023-11-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114017",
+      "url": "https://doi.org/10.1016/j.dss.2023.114017",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Paradigm changing metaverse: Future research directions in design, technology adoption and use, and impacts",
+      "authors": [
+        "Viswanath Venkatesh"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114307",
+      "url": "https://doi.org/10.1016/j.dss.2024.114307",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Formation and evolution of technology acceptance and resistance patterns: a latent transition analysis",
+      "authors": [
+        "Marjan Shamsi"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2603343",
+      "url": "https://doi.org/10.1080/0960085x.2025.2603343",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Effective use of open data portals for social good: Design principles for explainable LLM-based open data assistants",
+      "authors": [
+        "Till Carlo Schelhorn",
+        "Ulrich Gnewuch",
+        "Alexander Maedche"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114698",
+      "url": "https://doi.org/10.1016/j.dss.2026.114698",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Central information technology transparency: A managerial perspective of a multi-faceted construct",
+      "authors": [
+        "Michael Milovich",
+        "Cynthia Riemenschneider",
+        "Nina Krey"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114647",
+      "url": "https://doi.org/10.1016/j.dss.2026.114647",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Sustainable energy technologies use: understanding social drivers and humanistic outcomes in four EU countries",
+      "authors": [
+        "Catarina Neves",
+        "Tiago Oliveira"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-17",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2684708",
+      "url": "https://doi.org/10.1080/0960085x.2026.2684708",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Fostering access to justice: a human values-centred investigation of bankruptcy filing innovation through its design and use",
+      "authors": [
+        "Narges Safari",
+        "Angsana A. Techatassanasoontorn"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2599226",
+      "url": "https://doi.org/10.1080/0960085x.2025.2599226",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing for emergent use recombinations: a conceptual framework for value capture from connectable products",
+      "authors": [
+        "Gongtai Wang",
+        "Susanne Beck",
+        "Joe Nandhakumar"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-30",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2620415",
+      "url": "https://doi.org/10.1080/0960085x.2026.2620415",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Explaining heterogeneity in innovative IT use among older workers: the roles of IS slack, job crafting, and age-related gains and losses",
+      "authors": [
+        "Saeed Amirabdolahian",
+        "Stefan Tams",
+        "Guy Paré"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-01",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2692955",
+      "url": "https://doi.org/10.1080/0960085x.2026.2692955",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Leadership reconfiguration and the role of technology in global virtual teams with changing membership",
+      "authors": [
+        "Petros Chamakiotis",
+        "Niki Panteli",
+        "Eeli Saarinen"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2670353",
+      "url": "https://doi.org/10.1080/0960085x.2026.2670353",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Metaverse technology in sustainable supply chain management: Experimental findings",
+      "authors": [
+        "Kiarash Sadeghi R.",
+        "Divesh Ojha",
+        "Puneet Kaur",
+        "Raj V. Mahto",
+        "Amandeep Dhir"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114423",
+      "url": "https://doi.org/10.1016/j.dss.2025.114423",
+      "citation_count": 28,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From game to beyond game: Exploring the role of 3D rendering technology in user immersion and virtual consumption in the Metaverse",
+      "authors": [
+        "Guihua Zhang",
+        "Sarbottam Bhagat",
+        "Sung Ho Lee",
+        "Dae Wan Kim",
+        "Dan J. Kim"
+      ],
+      "year": 2025,
+      "published_date": "2025-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114383",
+      "url": "https://doi.org/10.1016/j.dss.2024.114383",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring users' post-adoption use of generative AI: An attitudinal ambivalence perspective",
+      "authors": [
+        "Jing Zhang",
+        "Zhen Shao",
+        "Lin Zhang",
+        "Jose Benitez"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114521",
+      "url": "https://doi.org/10.1016/j.dss.2025.114521",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Achieving strategic alignment between business and information technology with information technology governance: the role of commitment to principles and Top Leadership Support",
+      "authors": [
+        "Michelle René Lowry",
+        "Paul Benjamin Lowry",
+        "Sutirtha (“Suti”) Chatterjee",
+        "Gregory D. Moody",
+        "Vernon J. Richardson"
+      ],
+      "year": 2025,
+      "published_date": "2025-07-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2024.2390998",
+      "url": "https://doi.org/10.1080/0960085x.2024.2390998",
+      "citation_count": 9,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Responsible social media use: how user characteristics shape the actualisation of ambiguous affordances",
+      "authors": [
+        "Raffaele Ciriello",
+        "Uri Gal",
+        "Oliver Hannon",
+        "Jason Thatcher"
+      ],
+      "year": 2025,
+      "published_date": "2025-09-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2024.2444249",
+      "url": "https://doi.org/10.1080/0960085x.2024.2444249",
+      "citation_count": 9,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Understanding physicians' noncompliance use of AI-aided diagnosis—A mixed-methods approach",
+      "authors": [
+        "Jiaoyang Li",
+        "Xixi Li",
+        "Cheng Zhang"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114420",
+      "url": "https://doi.org/10.1016/j.dss.2025.114420",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Excessive use in the metaverse: The role of multisensory interaction",
+      "authors": [
+        "Chongyang Chen",
+        "Yao-Yu Wang",
+        "Kem Z.K. Zhang",
+        "Fenghua Xie"
+      ],
+      "year": 2025,
+      "published_date": "2025-03-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114390",
+      "url": "https://doi.org/10.1016/j.dss.2024.114390",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Technology discontinuance: a systematic literature review and research agenda",
+      "authors": [
+        "Birgit Altrichter",
+        "Sabine Benoit"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2516427",
+      "url": "https://doi.org/10.1080/0960085x.2025.2516427",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "High efficiency or easy troubleshooting? Human use of autonomous Mobile healthcare robots",
+      "authors": [
+        "Tzu-Ling Huang",
+        "Gen-Yih Liao",
+        "Alan R. Dennis",
+        "Ching-I Teng"
+      ],
+      "year": 2025,
+      "published_date": "2025-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114453",
+      "url": "https://doi.org/10.1016/j.dss.2025.114453",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "e048f4ac8c6fff512cfa4f62524d77248a014ef902c909f96b0f864c05cf12fc",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

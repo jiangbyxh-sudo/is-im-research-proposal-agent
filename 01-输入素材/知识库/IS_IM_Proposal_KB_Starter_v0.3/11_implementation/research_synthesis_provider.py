@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 import re
 import time
@@ -68,6 +69,7 @@ class DeepSeekJsonClient:
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         target = f"{self.base_url}/chat/completions"
         last_error: Exception | None = None
+        started = time.monotonic()
         for attempt in range(self.retries + 1):
             try:
                 request = Request(
@@ -90,6 +92,8 @@ class DeepSeekJsonClient:
                     "model": envelope.get("model", self.model),
                     "usage": envelope.get("usage", {}),
                     "finish_reason": envelope.get("choices", [{}])[0].get("finish_reason"),
+                    "attempts": attempt + 1,
+                    "duration_ms": round((time.monotonic() - started) * 1000, 2),
                 }
             except HTTPError as exc:
                 last_error = RuntimeError(f"deepseek_http_{exc.code}")
@@ -271,6 +275,11 @@ JSON格式示例：
             raw, model_audit = self.client.complete(self._system_prompt(), json.dumps(user_payload, ensure_ascii=False))
             result = self._validate(raw, paper_map, request.derived_path)
             result.audit["model"] = model_audit
+            result.audit["prompt_version"] = "synthesis-current-baseline-0.3"
+            result.audit["input_hash"] = hashlib.sha256(
+                json.dumps(user_payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+            ).hexdigest()
+            result.audit["raw_model_output"] = raw
             return result
         except Exception as exc:
             return SynthesisResult(

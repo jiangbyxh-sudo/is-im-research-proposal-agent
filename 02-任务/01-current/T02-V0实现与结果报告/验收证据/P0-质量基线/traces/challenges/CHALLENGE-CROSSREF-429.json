@@ -1,0 +1,35 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_55b7289756704999a4ce66500c4628be",
+  "case_id": "CHALLENGE-CROSSREF-429",
+  "recorded_at": "2026-08-21T19:18:22.717468+00:00",
+  "stage": "P0_RATE_LIMIT_SAFETY_FIX_NOT_QUALITY_FIX",
+  "input": {
+    "http_status": 429,
+    "retry_after_seconds": 2
+  },
+  "versions": {
+    "transport": "crossref-rate-policy-1.0.0"
+  },
+  "provider_runs": [
+    {
+      "attempts": 2,
+      "duration_ms": 0.0,
+      "polite_pool": false,
+      "rate_limit": 50.0,
+      "rate_interval_seconds": 1.0,
+      "retry_after_seconds": null
+    }
+  ],
+  "errors": [
+    {
+      "http_status": 429,
+      "recovered": true
+    }
+  ],
+  "cost": 0,
+  "status": "RATE_LIMIT_RECOVERED",
+  "checkpoint": {
+    "passed": true
+  }
+}

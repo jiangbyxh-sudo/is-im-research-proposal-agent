@@ -1,0 +1,906 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_21eae7cf1032430a9b56acc04b5f88c7",
+  "case_id": "FIX-COVERAGE-026",
+  "recorded_at": "2026-08-21T18:43:02.095159+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:42:55.921893+00:00",
+  "completed_at": "2026-08-21T18:43:02.092549+00:00",
+  "duration_ms": 6171.0,
+  "input": {
+    "selected_direction_id": "topic_digital_artifact_design",
+    "research_direction": "digital artifact design",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "digital artifact design",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "CS_AI",
+      "HCI",
+      "CS_IR",
+      "CS_DATA",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "digital artifact design",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:42:57.860098+00:00",
+      "duration_ms": 1781.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1766.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "digital artifact design",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 3,
+      "accepted_before_dedupe": 3,
+      "queried_at": "2026-08-21T18:42:59.635491+00:00",
+      "duration_ms": 2453.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2453.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "digital artifact design",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 6,
+      "accepted_before_dedupe": 6,
+      "queried_at": "2026-08-21T18:42:55.923907+00:00",
+      "duration_ms": 1937.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1937.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 29,
+    "accepted_before_dedupe": 29,
+    "deduped_corpus": 29,
+    "final_selected": 26,
+    "final_by_language": {
+      "zh": 6,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 4,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The factors affecting subthreshold depression for people with occupational stress in the era of digital intelligence: Machine learning-based evidence",
+      "authors": [
+        "Lifang DENG",
+        "Bei PEI",
+        "Tian-Ai GAO"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.2001",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.2001",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "When design meets AI: The impact of AI design products on consumers’ response patterns",
+      "authors": [
+        "Bin LI",
+        "Jianxi RUI",
+        "Weinan YU",
+        "Aimei LI",
+        "Maolin YE"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1914",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1914",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A unified design method of the simplest complete Q matrix for cognitive diagnostic tests",
+      "authors": [
+        "Xiaojuan TANG",
+        "Mengmeng MAO",
+        "Yu LI",
+        "Shuliang DING",
+        "Zhixia PENG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1849",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1849",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The interactive effect of processing fluency and information credibility on donation in the digital philanthropy context",
+      "authors": [
+        "ZHENG Xiaoying",
+        "HAN Runlei",
+        "LIU Ruhan",
+        "XU Jing"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.00226",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.00226",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Design of the polytomous simplest complete Q matrix based on the reachability matrix",
+      "authors": [
+        "Xiaojuan TANG",
+        "Zhixia PENG",
+        "Shanshan QIN",
+        "Shuliang DING",
+        "Mengmeng MAO",
+        "Yu LI"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2024.01634",
+      "url": "https://doi.org/10.3724/sp.j.1041.2024.01634",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The epistemic trust of 3- to 6-year-olds in digital voice assistants in various domains",
+      "authors": [
+        "Zhe LI",
+        "Zheyu LIU",
+        "Keyu MAO",
+        "Wanting LI",
+        "Tingyu LI",
+        "Jing LI"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.01411",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.01411",
+      "citation_count": 3,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Digital Attention Heuristics: Supporting the User’s Attention by Design",
+      "authors": [
+        "Alberto Monge Roffarello",
+        "Luigi De Russis",
+        "Kai Lukoff"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3725215",
+      "url": "https://doi.org/10.1145/3725215",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Speculative Design as a Collaborative Practice: Ameliorating the Consequences of Illiteracy through Digital Touch",
+      "authors": [
+        "Sarah Rüller",
+        "Konstantin Aal",
+        "Peter Tolmie",
+        "Andrea Hartmann",
+        "Markus Rohde",
+        "Volker Wulf"
+      ],
+      "year": 2022,
+      "published_date": "2022-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3487917",
+      "url": "https://doi.org/10.1145/3487917",
+      "citation_count": 21,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Unite and Engage: Positive Experiences and Work Engagement through Digital Tools",
+      "authors": [
+        "Pinar Simsek Caglar",
+        "Hertta Vuorenmaa",
+        "Virpi Roto"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3773036",
+      "url": "https://doi.org/10.1145/3773036",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Three Steps to Trans Death: Introducing Trans Cyber-Necropolitics in Digital Media",
+      "authors": [
+        "Shano Liang",
+        "Michelle V. Cormier",
+        "Phoebe O. Toups Dugas",
+        "Rose Bohrer"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3745767",
+      "url": "https://doi.org/10.1145/3745767",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Telerobotic Theater of the Oppressed in Israel and Palestine: Becoming Digital Jokers",
+      "authors": [
+        "Avner Peled",
+        "Teemu Leinonen",
+        "Béatrice S. Hasler"
+      ],
+      "year": 2025,
+      "published_date": "2025-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3717064",
+      "url": "https://doi.org/10.1145/3717064",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Nothing Like Compilation: How Professional Digital Fabrication Workflows Go Beyond Extruding, Milling, and Machines",
+      "authors": [
+        "Mare Hirsch",
+        "Gabrielle Benabdallah",
+        "Jennifer Jacobs",
+        "Nadya Peek"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3609328",
+      "url": "https://doi.org/10.1145/3609328",
+      "citation_count": 46,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Configurations of Digital Participatory Budgeting",
+      "authors": [
+        "Victoria Palacin",
+        "Samantha McDonald",
+        "Pablo Aragón",
+        "Matti Nelimarkka"
+      ],
+      "year": 2024,
+      "published_date": "2024-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3635144",
+      "url": "https://doi.org/10.1145/3635144",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Naturalistic Digital Behavior Predicts Cognitive Abilities",
+      "authors": [
+        "Tung Vuong",
+        "Giulio Jacucci",
+        "Tuukka Ruotsalo"
+      ],
+      "year": 2024,
+      "published_date": "2024-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3660341",
+      "url": "https://doi.org/10.1145/3660341",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Addressing Uncertainty in Biodesign through Digital Twins: A Case of Biofabrication with Mycelium",
+      "authors": [
+        "Đan Vy Vu",
+        "Mathias Funk",
+        "Yi-Ching (Janet) Huang",
+        "Bahareh Barati"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3685271",
+      "url": "https://doi.org/10.1145/3685271",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Development and (Mis)appropriation of a Digital Kit for Jewellers",
+      "authors": [
+        "Nantia Koulidou",
+        "Luis Carvalho",
+        "Tanya Gleadow",
+        "Daniela Petrelli"
+      ],
+      "year": 2024,
+      "published_date": "2024-11-04",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3702316",
+      "url": "https://doi.org/10.1145/3702316",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Achieving Digital Wellbeing Through Digital Self-control Tools: A Systematic Review and Meta-analysis",
+      "authors": [
+        "Alberto Monge Roffarello",
+        "Luigi De Russis"
+      ],
+      "year": 2023,
+      "published_date": "2023-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3571810",
+      "url": "https://doi.org/10.1145/3571810",
+      "citation_count": 112,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Examining User Heterogeneity in Digital Experiments",
+      "authors": [
+        "Sriram Somanchi",
+        "Ahmed Abbasi",
+        "Ken Kelley",
+        "David Dobolyi",
+        "Ted Tao Yuan"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-12",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3578931",
+      "url": "https://doi.org/10.1145/3578931",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "An Underdeveloped Metaphor: The Mismatched Designs and Motivations of Digital Picture Interactions",
+      "authors": [
+        "Benett Axtell",
+        "Eleen Gong",
+        "Cosmin Munteanu"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3569887",
+      "url": "https://doi.org/10.1145/3569887",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reproducibility and Artifact Consistency of the SIGIR 2022 Recommender Systems Papers Based on Message Passing",
+      "authors": [
+        "Maurizio Ferrari Dacrema",
+        "Michael Benigni",
+        "Nicola Ferro"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3772275",
+      "url": "https://doi.org/10.1145/3772275",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Scaffolding Online Safety in Older Communities: Exploring the Relationship between Digital Literacy and Cybersecurity",
+      "authors": [
+        "Jack Holt",
+        "James Nicholson"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3796705",
+      "url": "https://doi.org/10.1145/3796705",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Co-creating Conditions for Social Justice in Digital Societies: Modes of Resistance in HCI Collaborative Endeavors",
+      "authors": [
+        "Clara Crivellaro",
+        "Lizzie Coles-Kemp",
+        "Alan Dix",
+        "Ann Light"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3711840",
+      "url": "https://doi.org/10.1145/3711840",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Feeling Stressed and Unproductive? A Field Evaluation of a Therapy-Inspired Digital Intervention for Knowledge Workers",
+      "authors": [
+        "Kevin Chow",
+        "Thomas Fritz",
+        "Liisa Holsti",
+        "Skye Barbic",
+        "Joanna McGrenere"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3609330",
+      "url": "https://doi.org/10.1145/3609330",
+      "citation_count": 28,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Uncertainties as Generative Resources in Research through Design: Three Dynamics for Moving in a Design Space",
+      "authors": [
+        "Felix Anand Epp",
+        "Anton Poikolainen Rosén",
+        "Antti Salovaara",
+        "Camilo Sanchez"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689041",
+      "url": "https://doi.org/10.1145/3689041",
+      "citation_count": 17,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "User Experience of Digital Voice Assistant: Conceptualization and Measurement",
+      "authors": [
+        "Qian Chen",
+        "Yeming Gong",
+        "Yaobin Lu"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3622782",
+      "url": "https://doi.org/10.1145/3622782",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How Design Researchers Make Sense of Data Visualizations in Data-Driven Design: An Uncertainty-Aware Sensemaking Model",
+      "authors": [
+        "Dimitra Dritsa",
+        "Steven Houben"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3685268",
+      "url": "https://doi.org/10.1145/3685268",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "b64f67e89431a001318318b235dcfd160134341cbf096b9085fa5680c58fdb04",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

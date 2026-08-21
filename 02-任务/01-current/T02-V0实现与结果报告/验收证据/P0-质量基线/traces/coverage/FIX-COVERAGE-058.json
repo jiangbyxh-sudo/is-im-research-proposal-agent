@@ -1,0 +1,715 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_482b82150f6f4c02bced3b0337c46478",
+  "case_id": "FIX-COVERAGE-058",
+  "recorded_at": "2026-08-21T18:48:05.873558+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:47:59.900059+00:00",
+  "completed_at": "2026-08-21T18:48:05.871558+00:00",
+  "duration_ms": 5969.0,
+  "input": {
+    "selected_direction_id": "topic_data_knowledge",
+    "research_direction": "Data / Knowledge",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "Data / Knowledge",
+    "journal_pool_ids": [
+      "IM_CORE",
+      "CS_AI",
+      "CS_IR",
+      "CS_DATA",
+      "IS_CORE",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_STATISTICS_METHODS"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "Data / Knowledge",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:47:59.902749+00:00",
+      "duration_ms": 2266.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2266.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1556-4681",
+      "query": "Data / Knowledge",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:48:02.180732+00:00",
+      "duration_ms": 3703.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3703.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 40,
+    "accepted_before_dedupe": 40,
+    "deduped_corpus": 40,
+    "final_selected": 20,
+    "final_by_language": {
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 10,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Personalized Data-Free Knowledge Distillation for Federated Learning under Heterogeneous Models and Data",
+      "authors": [
+        "Jingke Tu",
+        "Lei Yang",
+        "Chao Ma",
+        "Weigang Wu"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-31",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3831243",
+      "url": "https://doi.org/10.1145/3831243",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Enhancing Knowledge Tracing with Multi-hierarchy Hypergraph Adaptive Knowledge Transfer",
+      "authors": [
+        "Sannyuya Liu",
+        "Xin Yuan",
+        "Tianyu Wei",
+        "Jieyu Yue",
+        "Zhejing Zhao",
+        "Qing Li",
+        "Sijing Chen"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3803860",
+      "url": "https://doi.org/10.1145/3803860",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Hyperbolic-based Feature Learning for Temporal Knowledge Graph Relation Prediction",
+      "authors": [
+        "Jianrui Chen",
+        "Peijie Wang",
+        "Maoguo Gong",
+        "Xuehui Zhao"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3786587",
+      "url": "https://doi.org/10.1145/3786587",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Synergizing Large Language Model and Knowledge Graph for Cold-Start Recommendation",
+      "authors": [
+        "Haobo Zhang",
+        "Qiannan Zhu",
+        "Zhicheng Dou"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-15",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3830081",
+      "url": "https://doi.org/10.1145/3830081",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Integrating Heterogeneous Knowledge for Enhanced Recommendation with Large Language Models",
+      "authors": [
+        "Alessandro Petruzzelli",
+        "Cataldo Musto",
+        "Marco De Gemmis",
+        "Pasquale Lops",
+        "Giovanni Semeraro"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-18",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3831695",
+      "url": "https://doi.org/10.1145/3831695",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "DRAR: Diffusion-Based Relation Augmentation for Knowledge-aware Recommendation",
+      "authors": [
+        "Yingtao Peng",
+        "Chen Gao",
+        "Tangpeng Dan",
+        "Yong Li",
+        "Xiaofeng Meng"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3787454",
+      "url": "https://doi.org/10.1145/3787454",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Knowledge-Variational Contrastive Learning for Recommendation",
+      "authors": [
+        "Zhiqiang Huang",
+        "Tao Qin",
+        "Xin Wang",
+        "Pinghui Wang",
+        "Kuiyu Zhu"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3805046",
+      "url": "https://doi.org/10.1145/3805046",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Digital Twins in Engineering: A Bibliometric Survey on Knowledge-Driven Intelligent Systems",
+      "authors": [
+        "Munish Bhatia",
+        "Rohit Kumar",
+        "Ritika Kumari"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3815111",
+      "url": "https://doi.org/10.1145/3815111",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Multi-level Contrastive Learning for Knowledge Tracing",
+      "authors": [
+        "Xiaoxuan Shen",
+        "Fenghua Yu",
+        "Qian Wan",
+        "Ruxia Liang",
+        "Jianwen Sun"
+      ],
+      "year": 2025,
+      "published_date": "2025-09-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3759920",
+      "url": "https://doi.org/10.1145/3759920",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Unsupervised Video Moment Retrieval with Knowledge-Based Pseudo-Supervision Construction",
+      "authors": [
+        "Guolong Wang",
+        "Xun Wu",
+        "Xun Tu",
+        "Zhaoyuan Liu",
+        "Junchi Yan"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3701229",
+      "url": "https://doi.org/10.1145/3701229",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Compact Vulnerability Knowledge Graph for Risk Assessment",
+      "authors": [
+        "Jiao Yin",
+        "Wei Hong",
+        "Hua Wang",
+        "Jinli Cao",
+        "Yuan Miao",
+        "Yanchun Zhang"
+      ],
+      "year": 2024,
+      "published_date": "2024-09-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3671005",
+      "url": "https://doi.org/10.1145/3671005",
+      "citation_count": 34,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Survey on Knowledge Graph Related Research in Smart City Domain",
+      "authors": [
+        "Zhu Wang",
+        "Fengxia Han",
+        "Shengjie Zhao"
+      ],
+      "year": 2024,
+      "published_date": "2024-11-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3672615",
+      "url": "https://doi.org/10.1145/3672615",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Hierarchical Convolutional Neural Network with Knowledge Complementation for Long-Tailed Classification",
+      "authors": [
+        "Hong Zhao",
+        "Zhengyu Li",
+        "Wenwei He",
+        "Yan Zhao"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-31",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3653717",
+      "url": "https://doi.org/10.1145/3653717",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Urban Knowledge Graph Aided Mobile User Profiling",
+      "authors": [
+        "Yu Liu",
+        "Zhilun Zhou",
+        "Yong Li",
+        "Depeng Jin"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-31",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3596604",
+      "url": "https://doi.org/10.1145/3596604",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Adapting Knowledge Inference Algorithms to Measure Geometry Competencies through a Puzzle Game",
+      "authors": [
+        "Sofia Strukova",
+        "José A. Ruipérez-Valiente",
+        "Félix Gómez Mármol"
+      ],
+      "year": 2024,
+      "published_date": "2024-01-31",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3614436",
+      "url": "https://doi.org/10.1145/3614436",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Mobility Prediction via Rule-enhanced Knowledge Graph",
+      "authors": [
+        "Qiaohong Yu",
+        "Huandong Wang",
+        "Yu Liu",
+        "Depeng Jin",
+        "Yong Li",
+        "Lin Zhu",
+        "Junlan Feng"
+      ],
+      "year": 2024,
+      "published_date": "2024-11-30",
+      "journal": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "doi": "10.1145/3677019",
+      "url": "https://doi.org/10.1145/3677019",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "XLORE 3: A Large-Scale Multilingual Knowledge Graph from Heterogeneous Wiki Knowledge Resources",
+      "authors": [
+        "Kaisheng Zeng",
+        "Hailong Jin",
+        "Xin Lv",
+        "Fangwei Zhu",
+        "Lei Hou",
+        "Yi Zhang",
+        "Fan Pang",
+        "Yu Qi",
+        "Dingxiao Liu",
+        "Juanzi Li",
+        "Ling Feng"
+      ],
+      "year": 2024,
+      "published_date": "2024-11-30",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3660521",
+      "url": "https://doi.org/10.1145/3660521",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Knowledge-Enhanced Attributed Multi-Task Learning for Medicine Recommendation",
+      "authors": [
+        "Yingying Zhang",
+        "Xian Wu",
+        "Quan Fang",
+        "Shengsheng Qian",
+        "Changsheng Xu"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3527662",
+      "url": "https://doi.org/10.1145/3527662",
+      "citation_count": 43,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Preference-aware Graph Attention Networks for Cross-Domain Recommendations with Collaborative Knowledge Graph",
+      "authors": [
+        "Yakun Li",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "year": 2023,
+      "published_date": "2023-07-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3576921",
+      "url": "https://doi.org/10.1145/3576921",
+      "citation_count": 16,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Higher-Order Spiking and Graph Neural Network for Knowledge Tracing",
+      "authors": [
+        "Jinru Hu",
+        "Jianrui Chen",
+        "Yuxuan Wang",
+        "Hao Liao"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-31",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "doi": "10.1145/3798162",
+      "url": "https://doi.org/10.1145/3798162",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CS_IR"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "1516b4c766282938e589a2b7b015f38619aec48bcfbb3a8c26b0d074d95b5860",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

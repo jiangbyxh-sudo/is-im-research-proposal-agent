@@ -1,0 +1,718 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_e8cef6151d48490c93cd68d6c81c468a",
+  "case_id": "FIX-COVERAGE-037",
+  "recorded_at": "2026-08-21T18:44:28.611238+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:44:22.493316+00:00",
+  "completed_at": "2026-08-21T18:44:28.609620+00:00",
+  "duration_ms": 6125.0,
+  "input": {
+    "selected_direction_id": "topic_emotion",
+    "research_direction": "emotion",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "emotion",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "PSYCHOLOGY",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_PSYCHOLOGY",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "emotion",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 4,
+      "accepted_before_dedupe": 4,
+      "queried_at": "2026-08-21T18:44:24.766114+00:00",
+      "duration_ms": 1578.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1578.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0963-7214",
+      "query": "emotion",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 5,
+      "accepted_before_dedupe": 5,
+      "queried_at": "2026-08-21T18:44:26.349898+00:00",
+      "duration_ms": 2266.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2266.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "emotion",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:44:22.493316+00:00",
+      "duration_ms": 2281.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2281.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 29,
+    "accepted_before_dedupe": 29,
+    "deduped_corpus": 29,
+    "final_selected": 19,
+    "final_by_language": {
+      "zh": 10,
+      "en": 9
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 0,
+    "en": 11
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Buildup of a self-compassion sentence collection in the construct of implementation intention and its application in emotion regulation",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0480",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0480",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Make your emotions heard: How emotion sharing boosts interpersonal emotion regulation across various interpersonal distances",
+      "authors": [
+        "Sijin LI",
+        "Yuyao TANG",
+        "Qi LI",
+        "Tingdong WANG",
+        "Dandan ZHANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0840",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0840",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The facilitating effect of frontal P3 amplitude regulation on emotion regulation",
+      "authors": [
+        "Yiwei LI",
+        "Yuyao TANG",
+        "Tingdong WANG",
+        "Dandan ZhANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1493",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1493",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Zero-shot language learning: Can large language models (LLMs) acquire contextual emotion in a human-like manner?",
+      "authors": [
+        "Shiyu WU",
+        "Yiyun WANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0308",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0308",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emotion polyregulation and psychological adjustment in early adolescence: A multilevel latent profile analysis",
+      "authors": [
+        "Xianguo HAN",
+        "Xinyue MA",
+        "Yilin YANG",
+        "Qin WU",
+        "Dan LI"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1532",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1532",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emotion regulation via conditioning placebo effects: The role of the dorsolateral prefrontal cortex in conditioning formation",
+      "authors": [
+        "Yuyao TANG",
+        "Yiwei LI",
+        "Xinyu GUO",
+        "Dandan ZHANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.2008",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.2008",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emotion-specific or general? An ALE meta-analysis of inhibitory control impairments in patients with depression",
+      "authors": [
+        "Rong LIU",
+        "Shuangxi ZHANG",
+        "Xiao SUN",
+        "Guimin ZHANG",
+        "Yaowu SONG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.2022",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.2022",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Characteristics and interventions of negative emotion regulation in children with autism: Mindfulness and cognitive strategy training based on multimodal assessment",
+      "authors": [
+        "Xueke WANG",
+        "Fang DENG",
+        "Li CHEN",
+        "Tingyong FENG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0039",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0039",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Influence of interpersonal distance and the creativity of strategies on interpersonal emotion regulation",
+      "authors": [
+        "Yujia YAO",
+        "Zhiyue YAN",
+        "Huihui LIN",
+        "Jingquan CHEN",
+        "Yuyang XUAN"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0125",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0125",
+      "citation_count": 4,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The influence of emotional motivation on interpersonal emotion regulation strategy choice: Evidence from behavioral and hyperscanning",
+      "authors": [],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1589",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1589",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "TouchEmotion: An Augmented Reality Interface Leveraging Metaphorical Emotional Trajectories for Emotion Regulation",
+      "authors": [
+        "Chen Ji",
+        "Corina Sas",
+        "Katherine Isbister"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3777896",
+      "url": "https://doi.org/10.1145/3777896",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A New Frame on Emotion Regulation in Aging: The Adaptive Positive Tactic Shift",
+      "authors": [
+        "Derek M. Isaacowitz",
+        "Blake D. Ebright-Jones",
+        "Rebecca J. Polk"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251349777",
+      "url": "https://doi.org/10.1177/09637214251349777",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Critical (and Neglected) Role of Effort in Emotion Regulation",
+      "authors": [
+        "Danfei Hu",
+        "Tony Gutentag",
+        "Iris B. Mauss",
+        "Maya Tamir"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251318294",
+      "url": "https://doi.org/10.1177/09637214251318294",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Conversational Breakdown in a Customer Service Chatbot: Impact of Task Order and Criticality on User Trust and Emotion",
+      "authors": [
+        "Asbjørn Følstad",
+        "Effie L.-C. Law",
+        "Nena van As"
+      ],
+      "year": 2024,
+      "published_date": "2024-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3690383",
+      "url": "https://doi.org/10.1145/3690383",
+      "citation_count": 17,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing for Emotion Regulation Interventions: An Agenda for HCI Theory and Research",
+      "authors": [
+        "Petr Slovak",
+        "Alissa Antle",
+        "Nikki Theofanopoulou",
+        "Claudia Daudén Roquet",
+        "James Gross",
+        "Katherine Isbister"
+      ],
+      "year": 2023,
+      "published_date": "2023-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3569898",
+      "url": "https://doi.org/10.1145/3569898",
+      "citation_count": 132,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Ancestral Diversity: A Socioecological Account of Emotion Culture",
+      "authors": [
+        "Paula M. Niedenthal",
+        "Ryan S. Hampton",
+        "Michelle Marji"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221151154",
+      "url": "https://doi.org/10.1177/09637214221151154",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Design (Not) Lost in Translation: A Case Study of an Intimate-Space Socially Assistive “Robot” for Emotion Regulation",
+      "authors": [
+        "Katherine Isbister",
+        "Peter Cottrell",
+        "Alessia Cecchet",
+        "Ella Dagan",
+        "Nikki Theofanopoulou",
+        "Ferran Altarriba Bertran",
+        "Aaron J. Horowitz",
+        "Nick Mead",
+        "Joel B. Schwartz",
+        "Petr Slovak"
+      ],
+      "year": 2022,
+      "published_date": "2022-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3491083",
+      "url": "https://doi.org/10.1145/3491083",
+      "citation_count": 36,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Interdependence of Emotion: Conceptualization, Evidence, and Social Implications From Cultural Psychology",
+      "authors": [
+        "Yukiko Uchida",
+        "Masataka Nakayama",
+        "Kimberly S. Bowen"
+      ],
+      "year": 2022,
+      "published_date": "2022-10-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221109584",
+      "url": "https://doi.org/10.1177/09637214221109584",
+      "citation_count": 23,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Constructing Craving: Applying the Theory of Constructed Emotion to Urge States",
+      "authors": [
+        "Stephen J. Wilson"
+      ],
+      "year": 2022,
+      "published_date": "2022-08-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221098055",
+      "url": "https://doi.org/10.1177/09637214221098055",
+      "citation_count": 14,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "1cdb70938e9376a63812715a85bdf089ba3cbbf72ab0fd8e558b80b20653e735",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_f17ce99db8bd4b3190a1f6be507dd0c3",
+  "case_id": "FIX-COVERAGE-040",
+  "recorded_at": "2026-08-21T18:45:03.316873+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:44:50.724228+00:00",
+  "completed_at": "2026-08-21T18:45:03.312868+00:00",
+  "duration_ms": 12594.0,
+  "input": {
+    "selected_direction_id": "topic_misinformation",
+    "research_direction": "misinformation",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "misinformation",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "COMMUNICATION",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+      "PKU_CORE_2023_COMMUNICATION"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "misinformation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:44:54.382557+00:00",
+      "duration_ms": 2687.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2687.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "misinformation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:44:57.067140+00:00",
+      "duration_ms": 6250.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 6250.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "misinformation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:44:50.726240+00:00",
+      "duration_ms": 1329.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1329.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "misinformation",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:44:52.051198+00:00",
+      "duration_ms": 2328.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2328.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 2,
+    "accepted_before_dedupe": 2,
+    "deduped_corpus": 2,
+    "final_selected": 2,
+    "final_by_language": {
+      "en": 2
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Iffy-or-Not: Critically Evaluating Potential Misinformation Using Fallacy Detection and Socratic Questioning with LLMs",
+      "authors": [
+        "Gionnieve Lim",
+        "Juho Kim",
+        "Simon Perrault"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3771935",
+      "url": "https://doi.org/10.1145/3771935",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Search &amp; Verify: Misinformation and source evaluations in Internet search results",
+      "authors": [
+        "Alan R. Dennis",
+        "Patricia L. Moravec",
+        "Antino Kim"
+      ],
+      "year": 2023,
+      "published_date": "2023-08-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.113976",
+      "url": "https://doi.org/10.1016/j.dss.2023.113976",
+      "citation_count": 15,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "0e7537ec7646ef527dba2dd84c042dc70bdd1d596d717d649f24b6169168fdac",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

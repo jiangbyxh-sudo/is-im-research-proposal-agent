@@ -1,0 +1,686 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_b51a05c5dac541a79f8680c4f2dd8fef",
+  "case_id": "FIX-COVERAGE-038",
+  "recorded_at": "2026-08-21T18:44:38.479072+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:44:28.615676+00:00",
+  "completed_at": "2026-08-21T18:44:38.477296+00:00",
+  "duration_ms": 9859.0,
+  "input": {
+    "selected_direction_id": "topic_attention",
+    "research_direction": "attention",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "attention",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "PSYCHOLOGY",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_PSYCHOLOGY",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "attention",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 3,
+      "accepted_before_dedupe": 3,
+      "queried_at": "2026-08-21T18:44:31.273835+00:00",
+      "duration_ms": 3282.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3282.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0963-7214",
+      "query": "attention",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 5,
+      "accepted_before_dedupe": 5,
+      "queried_at": "2026-08-21T18:44:34.548336+00:00",
+      "duration_ms": 3921.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3921.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "attention",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 12,
+      "accepted_before_dedupe": 12,
+      "queried_at": "2026-08-21T18:44:28.618079+00:00",
+      "duration_ms": 2656.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2656.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 20,
+    "accepted_before_dedupe": 20,
+    "deduped_corpus": 20,
+    "final_selected": 18,
+    "final_by_language": {
+      "zh": 10,
+      "en": 8
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 0,
+    "en": 12
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Modulation of rhythmic temporal attention by conscious awareness: Evidence from behavior, hierarchical drift-diffusion modeling, and EEG measures",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0450",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0450",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Serial dependence for same-category and cross-category stimuli in social attention",
+      "authors": [
+        "Da WANG",
+        "Zhihao YANG",
+        "Gaoxing MEI"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1312",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1312",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The impact of time pressure on selective attention: The role of attentional scope",
+      "authors": [
+        "Zeyu WU",
+        "Jingjing ZHAO",
+        "Luyao WANG",
+        "Yi ZHANG",
+        "Yang ZHANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1919",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1919",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The potential mechanisms of self-conscious emotions influencing time perception: The mediating roles of arousal and attention networks",
+      "authors": [
+        "Huazhan YIN",
+        "Dehua WU",
+        "Ronghua HE"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1459",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1459",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The effects of attention and memory representations on change blindness during global motion direction transients in traffic-scene images",
+      "authors": [
+        "Ruyue REN",
+        "Yu LIU",
+        "Jijun LAN",
+        "Yuan LI",
+        "Xuqun YOU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0809",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0809",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Influence of sustained visual attention on the prioritization of visual working memory",
+      "authors": [
+        "Haomin LIAN",
+        "Qian ZHANG",
+        "Xuemin GU",
+        "Shouxin LI"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0191",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0191",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How the dimension of negative emotional motivation influences time perception: The mediating role of attention control and attention bias",
+      "authors": [
+        "Huazhan YIN",
+        "Li ZHANG",
+        "Pengyu LIU",
+        "Dan LI"
+      ],
+      "year": 2023,
+      "published_date": "2023-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2023.01917",
+      "url": "https://doi.org/10.3724/sp.j.1041.2023.01917",
+      "citation_count": 6,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Relationship between depression and cognitive reappraisal in 8-12 years old children: The mediating role of attention bias toward sad expression",
+      "authors": [
+        "Ni ZHANG",
+        "Wen LIU",
+        "Fang LIU",
+        "Xin GUO"
+      ],
+      "year": 2022,
+      "published_date": "2022-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2022.00025",
+      "url": "https://doi.org/10.3724/sp.j.1041.2022.00025",
+      "citation_count": 7,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Flavors bias attention toward associated colors in visual search",
+      "authors": [
+        "Yubin PENG",
+        "Xiaoang WAN"
+      ],
+      "year": 2022,
+      "published_date": "2022-07-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2022.00736",
+      "url": "https://doi.org/10.3724/sp.j.1041.2022.00736",
+      "citation_count": 5,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The impact and mechanism of gaze cues on object-based attention",
+      "authors": [
+        "Chi YAN",
+        "Yunfei GAO",
+        "Saisai HU",
+        "Fangxing SONG",
+        "Yonghui WANG",
+        "Jingjing ZHAO"
+      ],
+      "year": 2022,
+      "published_date": "2022-07-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2022.00748",
+      "url": "https://doi.org/10.3724/sp.j.1041.2022.00748",
+      "citation_count": 5,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Temporal Hierarchy of Sustained Attention Dynamics",
+      "authors": [
+        "Monica D. Rosenberg"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251342976",
+      "url": "https://doi.org/10.1177/09637214251342976",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards Understanding the Effect of Serious Games on Attention, Adherence, and Behavior for Children with ADHD",
+      "authors": [
+        "Jonathan Wang Liu",
+        "Mahmood Jasim",
+        "Jeong-Heon Song",
+        "So-Hwi Ha",
+        "Jun-Su Kim",
+        "Dayoung Kim",
+        "Hyunsuk Lee",
+        "Byeong Il Kim",
+        "Hee-Tae Jung"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3772068",
+      "url": "https://doi.org/10.1145/3772068",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Digital Attention Heuristics: Supporting the User’s Attention by Design",
+      "authors": [
+        "Alberto Monge Roffarello",
+        "Luigi De Russis",
+        "Kai Lukoff"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3725215",
+      "url": "https://doi.org/10.1145/3725215",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Purpose Mode: Reducing Distraction Through Toggling Attention Capture Damaging Patterns on Social Media Websites",
+      "authors": [
+        "Hao-Ping Lee",
+        "Yi-Shyuan Chiang",
+        "Lan Gao",
+        "Stephanie Yang",
+        "Philipp Winter",
+        "Sauvik Das"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-10",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3711841",
+      "url": "https://doi.org/10.1145/3711841",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Abnormalities in Attention and Working Memory in Schizophrenia: The Hyperfocusing Hypothesis",
+      "authors": [
+        "James M. Gold",
+        "Steven J. Luck"
+      ],
+      "year": 2025,
+      "published_date": "2025-02-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214241286861",
+      "url": "https://doi.org/10.1177/09637214241286861",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cognitive Inertia: Cyclical Interactions Between Attention and Memory Shape Learning",
+      "authors": [
+        "Brandon M. Turner",
+        "Vladimir M. Sloutsky"
+      ],
+      "year": 2024,
+      "published_date": "2024-04-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214231217989",
+      "url": "https://doi.org/10.1177/09637214231217989",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The Cascading Development of Visual Attention in Infancy: Learning to Look and Looking to Learn",
+      "authors": [
+        "Lisa M. Oakes"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214231178744",
+      "url": "https://doi.org/10.1177/09637214231178744",
+      "citation_count": 24,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emerging Principles of Attention and Information Demand",
+      "authors": [
+        "Jacqueline Gottlieb"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214221142778",
+      "url": "https://doi.org/10.1177/09637214221142778",
+      "citation_count": 13,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "d7b460ec46a89800681728ef0efeefdfa82a25efeb376648f325da83b60be8d9",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_f58d4b40e2e04987aca1255ae401ff32",
+  "case_id": "CHALLENGE-INSUFFICIENT-EVIDENCE",
+  "recorded_at": "2026-08-21T19:18:22.755273+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "paper_count": 4
+  },
+  "model": {
+    "called": false,
+    "cost": 0
+  },
+  "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+  "actual_output": {
+    "directions": [],
+    "gaps": []
+  },
+  "checkpoint": {
+    "passed": true
+  }
+}

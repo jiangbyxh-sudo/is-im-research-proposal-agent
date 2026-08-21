@@ -1,0 +1,1044 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_390f1008e21243799d9296d87a209254",
+  "case_id": "FIX-COVERAGE-035",
+  "recorded_at": "2026-08-21T18:44:11.935167+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:44:04.671319+00:00",
+  "completed_at": "2026-08-21T18:44:11.932657+00:00",
+  "duration_ms": 7265.0,
+  "input": {
+    "selected_direction_id": "topic_human_ai_teams",
+    "research_direction": "human-AI teams",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "human-AI teams",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "PSYCHOLOGY",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_PSYCHOLOGY",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_PSYCHOLOGY"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "human-AI teams",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:44:06.855275+00:00",
+      "duration_ms": 3266.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3266.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0963-7214",
+      "query": "human-AI teams",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 16,
+      "accepted_before_dedupe": 16,
+      "queried_at": "2026-08-21T18:44:10.125066+00:00",
+      "duration_ms": 1812.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1797.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "human-AI teams",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:44:04.672838+00:00",
+      "duration_ms": 2187.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2187.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 56,
+    "accepted_before_dedupe": 56,
+    "deduped_corpus": 56,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+      "authors": [
+        "Xunxuan CUI",
+        "Ziteng QIAO",
+        "Ning LIU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.1254",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+      "authors": [
+        "Xiaowei GENG",
+        "Chao LIU",
+        "Li SU",
+        "Bingxue HAN",
+        "Qiaoming ZHANG",
+        "Mingzheng WU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1885",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1885",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A comparative study on human or AI delivering negative performance feedback influencing employees’ motivation to improve performance",
+      "authors": [
+        "Guoxuan WANG",
+        "Lirong LONG",
+        "Shaolong LI",
+        "Fang SUN",
+        "Jiaqing WANG",
+        "Shiyingzi HUANG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0298",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0298",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Safety trust in intelligent domestic robots: Human and AI perspectives on trust and relevant influencing factors",
+      "authors": [
+        "Shanshan YOU",
+        "Yue QI",
+        "JunTing CHEN",
+        "Lei LUO",
+        "Kan ZHANG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1951",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1951",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+      "authors": [
+        "Xiaoyong HU",
+        "Mufeng LI",
+        "Yue LI",
+        "Kai LI",
+        "Feng YU"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0074",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0381",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0381",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Zero-shot language learning: Can large language models (LLMs) acquire contextual emotion in a human-like manner?",
+      "authors": [
+        "Shiyu WU",
+        "Yiyun WANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2026.0308",
+      "url": "https://doi.org/10.3724/sp.j.1041.2026.0308",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Self-help AI psychological counseling system based on large language models and its effectiveness evaluation",
+      "authors": [
+        "Feng HUANG",
+        "Huimin DING",
+        "Sijia LI",
+        "Nuo HAN",
+        "Yazheng DI",
+        "Xiaoqian LIU",
+        "Nan ZHAO",
+        "Linyan LI",
+        "Tingshao ZHU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.2022",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.2022",
+      "citation_count": 5,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+      "authors": [
+        "Liying JIAO",
+        "Chang-Jin LI",
+        "Zhen CHEN",
+        "Hengbin XU",
+        "Yan XU"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.0929",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.0929",
+      "citation_count": 3,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Human advantages and psychological transformations in the era of artificial intelligence",
+      "authors": [
+        "Michael Shengtao WU",
+        "Kaiping PENG"
+      ],
+      "year": 2025,
+      "published_date": "2025-01-01",
+      "journal": "心理学报",
+      "language": "zh",
+      "doi": "10.3724/sp.j.1041.2025.1879",
+      "url": "https://doi.org/10.3724/sp.j.1041.2025.1879",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Advancing Human-AI Complementarity: The Impact of User Expertise and Algorithmic Tuning on Joint Decision Making",
+      "authors": [
+        "Kori Inkpen",
+        "Shreya Chappidi",
+        "Keri Mallari",
+        "Besmira Nushi",
+        "Divya Ramesh",
+        "Pietro Michelucci",
+        "Vani Mandava",
+        "Libuše Hannah Vepřek",
+        "Gabrielle Quinn"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3534561",
+      "url": "https://doi.org/10.1145/3534561",
+      "citation_count": 102,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cognitive Spillover in Human–AI Teams",
+      "authors": [
+        "Christoph Riedl",
+        "Saiph Savage",
+        "Josie Zvelebilova"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3805039",
+      "url": "https://doi.org/10.1145/3805039",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 7.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards Human–AI Synergy in UI Design: Supporting Iterative Generation with LLMs",
+      "authors": [
+        "Mingyue Yuan",
+        "Jieshan Chen",
+        "Yongquan Hu",
+        "Sidong Feng",
+        "Mulong Xie",
+        "Gelareh Mohammadi",
+        "Zhenchang Xing",
+        "Aaron Quigley"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3773035",
+      "url": "https://doi.org/10.1145/3773035",
+      "citation_count": 6,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Preemptive, Buffered, or Guided? Empirical Studies on Human–AI Interaction Strategies for Software Test Case Development",
+      "authors": [
+        "Billy Shi",
+        "Per Ola Kristensson"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3817601",
+      "url": "https://doi.org/10.1145/3817601",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Balancing the Unknown: Exploring Human Reliance on AI Advice under Aleatoric and Epistemic Uncertainty",
+      "authors": [
+        "Joshua Holstein",
+        "Lars Böcking",
+        "Philipp Spitzer",
+        "Niklas Kühl",
+        "Michael Vössing",
+        "Gerhard Satzger"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3762813",
+      "url": "https://doi.org/10.1145/3762813",
+      "citation_count": 7,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "CoAIcoder: Examining the Effectiveness of AI-assisted Human-to-Human Collaboration in Qualitative Analysis",
+      "authors": [
+        "Jie Gao",
+        "Kenny Tsu Wei Choo",
+        "Junming Cao",
+        "Roy Ka-Wei Lee",
+        "Simon Perrault"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3617362",
+      "url": "https://doi.org/10.1145/3617362",
+      "citation_count": 64,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+      "authors": [
+        "Anne Arzberger",
+        "Maria Luce Lupetti",
+        "Elisa Giaccardi"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689042",
+      "url": "https://doi.org/10.1145/3689042",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+      "authors": [
+        "Jeba Rezwana",
+        "Mary Lou Maher"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3519026",
+      "url": "https://doi.org/10.1145/3519026",
+      "citation_count": 269,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing Human-centered AI for Mental Health: Developing Clinically Relevant Applications for Online CBT Treatment",
+      "authors": [
+        "Anja Thieme",
+        "Maryann Hanratty",
+        "Maria Lyons",
+        "Jorge Palacios",
+        "Rita Faia Marques",
+        "Cecily Morrison",
+        "Gavin Doherty"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3564752",
+      "url": "https://doi.org/10.1145/3564752",
+      "citation_count": 163,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Batman and Robin in Healthcare Knowledge Work: Human-AI Collaboration by Clinical Documentation Integrity Specialists",
+      "authors": [
+        "Claus Bossen",
+        "Kathleen H. Pine"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3569892",
+      "url": "https://doi.org/10.1145/3569892",
+      "citation_count": 54,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Assessing Human-AI Interaction Early through Factorial Surveys: A Study on the Guidelines for Human-AI Interaction",
+      "authors": [
+        "Tianyi Li",
+        "Mihaela Vorvoreanu",
+        "Derek Debellis",
+        "Saleema Amershi"
+      ],
+      "year": 2023,
+      "published_date": "2023-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3511605",
+      "url": "https://doi.org/10.1145/3511605",
+      "citation_count": 46,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Introduction to the Special Issue on Human-Centred AI in Healthcare: Challenges Appearing in the Wild",
+      "authors": [
+        "Tariq Osman Andersen",
+        "Francisco Nunes",
+        "Lauren Wilcox",
+        "Enrico Coiera",
+        "Yvonne Rogers"
+      ],
+      "year": 2023,
+      "published_date": "2023-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3589961",
+      "url": "https://doi.org/10.1145/3589961",
+      "citation_count": 43,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Marvista: Exploring the Design of a Human-AI Collaborative News Reading Tool",
+      "authors": [
+        "Xiang “Anthony” Chen",
+        "Chien-Sheng Wu",
+        "Lidiya Murakhovs’ka",
+        "Philippe Laban",
+        "Tong Niu",
+        "Wenhao Liu",
+        "Caiming Xiong"
+      ],
+      "year": 2023,
+      "published_date": "2023-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3609331",
+      "url": "https://doi.org/10.1145/3609331",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Documentation Matters: Human-Centered AI System to Assist Data Science Code Documentation in Computational Notebooks",
+      "authors": [
+        "April Yi Wang",
+        "Dakuo Wang",
+        "Jaimie Drozdal",
+        "Michael Muller",
+        "Soya Park",
+        "Justin D. Weisz",
+        "Xuye Liu",
+        "Lingfei Wu",
+        "Casey Dugan"
+      ],
+      "year": 2022,
+      "published_date": "2022-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3489465",
+      "url": "https://doi.org/10.1145/3489465",
+      "citation_count": 74,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Toward Complementary Intelligence: Integrating Cognitive and Machine AI",
+      "authors": [
+        "Cleotilde Gonzalez",
+        "Tailia Malloy"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214251407571",
+      "url": "https://doi.org/10.1177/09637214251407571",
+      "citation_count": 2,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI-Generated Empathy: Opportunities, Limits, and Future Directions",
+      "authors": [
+        "Desmond C. Ong",
+        "Amit Goldenberg",
+        "Michael Inzlicht",
+        "Anat Perry"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-11",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261444274",
+      "url": "https://doi.org/10.1177/09637214261444274",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Using Artificial Intelligence to Better Understand Human Intelligence",
+      "authors": [
+        "Gordon Pennycook",
+        "Thomas H. Costello",
+        "David G. Rand"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261417960",
+      "url": "https://doi.org/10.1177/09637214261417960",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social Judgments of Generative AI Users",
+      "authors": [
+        "Samuel Meyers",
+        "Roman Briker",
+        "Yochanan E. Bigman"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-29",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261466635",
+      "url": "https://doi.org/10.1177/09637214261466635",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Introduction to the Special Issue on Human and Machine Intelligence",
+      "authors": [
+        "Robert L. Goldstone"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Current Directions in Psychological Science",
+      "language": "en",
+      "doi": "10.1177/09637214261450881",
+      "url": "https://doi.org/10.1177/09637214261450881",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+      "authors": [
+        "Karina Cortiñas-Lorenzo",
+        "Wanling Cai",
+        "Gavin Doherty"
+      ],
+      "year": 2025,
+      "published_date": "2025-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3769678",
+      "url": "https://doi.org/10.1145/3769678",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "8984c7e0d744189fe78983ad11f2570e80d676888e9a29773f95bab9164e8399",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

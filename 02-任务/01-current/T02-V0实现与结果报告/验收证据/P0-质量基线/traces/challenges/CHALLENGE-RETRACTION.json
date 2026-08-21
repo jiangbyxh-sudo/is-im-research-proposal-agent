@@ -1,0 +1,26 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_a8ced30296a74c15bcefbf59f7af3ad3",
+  "case_id": "CHALLENGE-RETRACTION",
+  "recorded_at": "2026-08-21T19:18:22.749708+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "fixture": "verified metadata challenge"
+  },
+  "candidate_counts": {
+    "final_corpus": 2
+  },
+  "status": "RETRIEVAL_PARTIAL",
+  "checkpoint": {
+    "passed": true
+  },
+  "actual_output": {
+    "exclusions": [
+      {
+        "reason": "retraction_or_correction",
+        "title": "RETRACTED: AI decision systems",
+        "journal": "English Test Journal"
+      }
+    ]
+  }
+}

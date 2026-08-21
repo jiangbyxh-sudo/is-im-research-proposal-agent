@@ -1,0 +1,186 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_53909c5272da40ba978caa21195c249c",
+  "case_id": "FIX-COVERAGE-020",
+  "recorded_at": "2026-08-21T18:42:01.608506+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:41:54.659796+00:00",
+  "completed_at": "2026-08-21T18:42:01.605364+00:00",
+  "duration_ms": 6953.0,
+  "input": {
+    "selected_direction_id": "information_retrieval",
+    "research_direction": "信息检索",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "信息检索",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "CS_AI",
+      "HCI",
+      "CS_IR",
+      "CS_DATA",
+      "ZH_IS_IM_CORE",
+      "ZH_METHODS_ANALYTICS",
+      "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+      "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+      "PKU_CORE_2023_INFORMATION_RESOURCE",
+      "PKU_CORE_2023_PSYCHOLOGY",
+      "IM_CORE",
+      "SCIENTOMETRICS",
+      "PKU_CORE_2023_SCIENCE_POLICY",
+      "PKU_CORE_2023_STATISTICS_METHODS"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "信息检索",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:58.163672+00:00",
+      "duration_ms": 1484.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1484.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1046-8188",
+      "query": "信息检索",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:59.638450+00:00",
+      "duration_ms": 1969.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1969.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "信息检索",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:54.661383+00:00",
+      "duration_ms": 1219.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1219.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "心理学报",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "0439-755X",
+      "query": "信息检索",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:41:55.881473+00:00",
+      "duration_ms": 2281.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2281.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 0,
+    "accepted_before_dedupe": 0,
+    "deduped_corpus": 0,
+    "final_selected": 0,
+    "final_by_language": {}
+  },
+  "filters": {},
+  "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "zero_reason": "provider_empty",
+  "errors": [],
+  "final_papers": [],
+  "corpus_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

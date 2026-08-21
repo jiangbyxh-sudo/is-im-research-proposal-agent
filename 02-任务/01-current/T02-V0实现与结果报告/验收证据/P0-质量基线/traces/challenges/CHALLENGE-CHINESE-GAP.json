@@ -1,0 +1,90 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_3c84e1bebfe24a2baae49c9857ee0e6a",
+  "case_id": "CHALLENGE-CHINESE-GAP",
+  "recorded_at": "2026-08-21T19:18:22.741607+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "requested": {
+      "zh": 1,
+      "en": 1
+    }
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Chinese Test Journal",
+      "language": "zh",
+      "ranking_levels": [
+        "P0_TEST_ELIGIBLE"
+      ],
+      "issn": "ZH-0001",
+      "query": "AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 5,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T19:18:22.740598+00:00",
+      "duration_ms": 0.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {}
+    },
+    {
+      "provider": "Crossref",
+      "journal": "English Test Journal",
+      "language": "en",
+      "ranking_levels": [
+        "P0_TEST_ELIGIBLE"
+      ],
+      "issn": "EN-0001",
+      "query": "AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 5,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T19:18:22.740598+00:00",
+      "duration_ms": 0.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {}
+    }
+  ],
+  "candidate_counts": {
+    "final": 1
+  },
+  "shortages": {
+    "zh": 1,
+    "en": 0
+  },
+  "final_papers": [
+    {
+      "title": "AI organizational decision support",
+      "authors": [],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "English Test Journal",
+      "language": "en",
+      "doi": "10.1000/language-gap",
+      "url": "https://doi.org/10.1000/language-gap",
+      "citation_count": 0,
+      "journal_ranking": [
+        "P0_TEST_ELIGIBLE"
+      ],
+      "journal_pool_ids": [
+        "P0_TEST"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "status": "RETRIEVAL_PARTIAL",
+  "checkpoint": {
+    "passed": true,
+    "cross_language_padding": 0
+  }
+}

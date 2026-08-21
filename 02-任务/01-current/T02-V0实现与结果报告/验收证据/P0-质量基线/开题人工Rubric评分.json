@@ -1,0 +1,132 @@
+{
+  "evaluator": "Coding Agent single-reviewer baseline (not calibrated against domain experts)",
+  "scoring_scale": "每项按0–100评分，再按weight加权；题名级证据占主导时总分上限69",
+  "dimensions": [
+    {
+      "dimension_id": "evidence_and_citations",
+      "label": "证据忠实与引用完整",
+      "weight": 20,
+      "score_0_100": 25,
+      "evidence": [
+        "各节保留paper_id且未发现虚构DOI",
+        "固定语料仅含题名级元数据，正文却据此推断样本地域、研究数量与文献结论",
+        "文献现状一次性挂载P001–P027，未建立句级论断—证据对应",
+        "Mayer 1995与Hofstede 1980未进入证据论文清单"
+      ],
+      "notes": "元数据引用可追溯，但内容性论断没有摘要或全文支撑，命中题名级证据红线。"
+    },
+    {
+      "dimension_id": "problem_gap_rq",
+      "label": "问题、空白与RQ质量",
+      "weight": 15,
+      "score_0_100": 45,
+      "evidence": [
+        "RQ1–RQ3形式清楚且可检验",
+        "空白仅由P001、P002题名推断，verification_status为title_metadata_only_pending_fulltext",
+        "题目与空白包含长期影响，但RQ和设计没有纵向部分"
+      ],
+      "notes": "问题表达清楚，但空白尚未达到可进入正式开题的证据等级。"
+    },
+    {
+      "dimension_id": "theory_and_mechanism",
+      "label": "理论框架与机制一致性",
+      "weight": 15,
+      "score_0_100": 35,
+      "evidence": [
+        "提出信任理论与文化维度理论",
+        "声称善意与正直的中介机制，但H1–H3及方法未测量或检验该中介",
+        "理论来源未作为可核验文献条目纳入"
+      ],
+      "notes": "存在理论名称和初步机制，但未形成完整可检验链条。"
+    },
+    {
+      "dimension_id": "method_alignment",
+      "label": "方法与RQ对齐及严谨性",
+      "weight": 20,
+      "score_0_100": 30,
+      "evidence": [
+        "问卷、CFA和SEM可覆盖部分相关性与调节问题",
+        "横截面设计不能回答题目中的长期影响，也不支持因果措辞",
+        "预计不少于300没有给出功效分析参数",
+        "跨文化比较仅提及翻译回译和测量等值性，未给出多组SEM层级与判据"
+      ],
+      "notes": "方法框架存在，但核心研究承诺与设计能力不一致。"
+    },
+    {
+      "dimension_id": "feasibility_ethics",
+      "label": "可行性、伦理和风险",
+      "weight": 10,
+      "score_0_100": 50,
+      "evidence": [
+        "提及伦理审批、知情同意、匿名、共同方法偏差及替代方案",
+        "未确认跨国样本渠道、预算、数据权限和文化代表性",
+        "单文化替代方案会改变原研究问题但未说明重设计边界"
+      ],
+      "notes": "识别了风险，但可访问数据与资源仍未确认。"
+    },
+    {
+      "dimension_id": "innovation_contribution",
+      "label": "创新与贡献清晰度",
+      "weight": 10,
+      "score_0_100": 45,
+      "evidence": [
+        "列出理论、方法和实践贡献",
+        "跨文化创新性尚无全文证据矩阵支持",
+        "对其他AI场景的推广属于未验证假设"
+      ],
+      "notes": "贡献表达清楚，但新颖性和可推广性证据不足。"
+    },
+    {
+      "dimension_id": "cross_section_consistency",
+      "label": "跨节结构一致性",
+      "weight": 5,
+      "score_0_100": 20,
+      "evidence": [
+        "题目/空白的长期影响与横截面设计冲突",
+        "理论机制中的善意、正直中介没有对应假设、测量和分析",
+        "主RQ、三个子RQ和贡献之间仅部分对齐"
+      ],
+      "notes": "未提供RQ–理论–变量–数据–方法–贡献一致性矩阵，存在两处实质性断裂。"
+    },
+    {
+      "dimension_id": "academic_expression",
+      "label": "学术表达与格式",
+      "weight": 5,
+      "score_0_100": 55,
+      "evidence": [
+        "11节结构清晰、中文表达通顺",
+        "正文以P001等内部编号代替规范引文",
+        "没有参考文献表、学校模板或目标期刊格式"
+      ],
+      "notes": "可读但尚不是可提交或可供正式开题审核的学术格式。"
+    }
+  ],
+  "weighted_total_before_evidence_cap_0_100": 36.25,
+  "evidence_cap_0_100": 69,
+  "weighted_total_0_100": 36.25,
+  "checkpoint": {
+    "passed": false,
+    "failed_items": [
+      "文献论断均有摘要或全文证据",
+      "研究空白至少达到L1",
+      "RQ、理论、变量、方法和贡献一致",
+      "学校章节与引用格式可验证"
+    ],
+    "passed_items": [
+      "未发现虚构论文或DOI",
+      "未声称已经取得数据权限",
+      "包含初步伦理与隐私风险说明"
+    ]
+  },
+  "checkpoint_passed": false,
+  "release_status": "BLOCKED",
+  "required_evidence_status": "RESEARCH_SKETCH_ONLY",
+  "rubric_version": "proposal-human-rubric-1.0.0",
+  "case_id": "FIX-PROPOSAL-001",
+  "trace_id": "trace_05c9e0e7611f442b96216986759be3cf",
+  "evaluated_at": "2026-08-22T03:12:06+08:00",
+  "limitations": [
+    "仅一名Coding Agent评审者，未与导师/研究方法教师做尺度校准",
+    "本分数用于建立修复前基线，不能替代学术专家评审"
+  ]
+}

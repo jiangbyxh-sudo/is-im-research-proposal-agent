@@ -1,0 +1,209 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_45084e9cd06c43aaa018efb7a3bef499",
+  "case_id": "FIX-COVERAGE-043",
+  "recorded_at": "2026-08-21T18:45:27.612011+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:45:17.912027+00:00",
+  "completed_at": "2026-08-21T18:45:27.609756+00:00",
+  "duration_ms": 9703.0,
+  "input": {
+    "selected_direction_id": "topic_influencers",
+    "research_direction": "influencers",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "influencers",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "COMMUNICATION",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+      "PKU_CORE_2023_COMMUNICATION"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "influencers",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:45:22.200565+00:00",
+      "duration_ms": 1937.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1937.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "influencers",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:45:24.144781+00:00",
+      "duration_ms": 3469.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3469.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "influencers",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:45:17.914525+00:00",
+      "duration_ms": 2250.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2250.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "influencers",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:45:20.157067+00:00",
+      "duration_ms": 2047.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2047.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 1,
+    "accepted_before_dedupe": 1,
+    "deduped_corpus": 1,
+    "final_selected": 1,
+    "final_by_language": {
+      "en": 1
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Play it safe or leave the comfort zone? Optimal content strategies for social media influencers on streaming video platforms",
+      "authors": [
+        "Ling Jiang",
+        "Xingyu Chen",
+        "Sentao Miao",
+        "Cong Shi"
+      ],
+      "year": 2024,
+      "published_date": "2024-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114148",
+      "url": "https://doi.org/10.1016/j.dss.2023.114148",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "c2e411ba54d8f4edfde26c5a18418843bbc17d4673be02272de57234e25f7788",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

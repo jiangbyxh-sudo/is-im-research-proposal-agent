@@ -1,0 +1,1051 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_a3deffcbcaf846fb8ac1dd7575ec557e",
+  "case_id": "FIX-COVERAGE-044",
+  "recorded_at": "2026-08-21T18:45:37.501221+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:45:27.615781+00:00",
+  "completed_at": "2026-08-21T18:45:37.501221+00:00",
+  "duration_ms": 9891.0,
+  "input": {
+    "selected_direction_id": "topic_generative_ai",
+    "research_direction": "generative AI",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "generative AI",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "COMMUNICATION",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+      "PKU_CORE_2023_COMMUNICATION"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "generative AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 20,
+      "queried_at": "2026-08-21T18:45:31.391706+00:00",
+      "duration_ms": 2735.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2735.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "generative AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 20,
+      "accepted_before_dedupe": 19,
+      "queried_at": "2026-08-21T18:45:34.121266+00:00",
+      "duration_ms": 3375.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3375.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "generative AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 12,
+      "accepted_before_dedupe": 10,
+      "queried_at": "2026-08-21T18:45:27.618288+00:00",
+      "duration_ms": 2234.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 2234.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "generative AI",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:45:29.849671+00:00",
+      "duration_ms": 1547.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1547.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 53,
+    "accepted_before_dedupe": 50,
+    "deduped_corpus": 50,
+    "final_selected": 30,
+    "final_by_language": {
+      "zh": 10,
+      "en": 20
+    }
+  },
+  "filters": {
+    "relevance_below_threshold": 3
+  },
+  "status": "RETRIEVAL_COMPLETE",
+  "shortages": {
+    "zh": 0,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Public policy consistency evaluation based on generative AI",
+      "authors": [
+        "Yuanqing CAI",
+        "Zhijun LI",
+        "Shaobin HE"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260606",
+      "url": "https://doi.org/10.3724/1005-0566.20260606",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can Generative AI Improve Corporate Values, Employee Perceptions, and Organizational Practices? A Human-Centric Case Study of Project Management SMEs in Indonesia",
+      "authors": [
+        "Alfato Yusnar Kharismasyah",
+        "Ali Akbar Anggara",
+        "Meydy Fauziridwan",
+        "Akhmad Darmawan"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-14",
+      "journal": "科学学研究",
+      "language": "zh",
+      "doi": "10.65967/siss.v44i2.138",
+      "url": "https://doi.org/10.65967/siss.v44i2.138",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI empowerment and new quality productivity",
+      "authors": [
+        "Dongsheng YU",
+        "Juanjuan YU",
+        "Mengyuan CHEN"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260212",
+      "url": "https://doi.org/10.3724/1005-0566.20260212",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "China’s regulatory strategy in the global open-source AI landscape",
+      "authors": [
+        "Huijiao LIAO",
+        "Taolue ZHANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260102",
+      "url": "https://doi.org/10.3724/1005-0566.20260102",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "On the copyright differential protection mechanism of AI-generated content",
+      "authors": [
+        "Yingjun XU",
+        "Genzhuang LI"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260107",
+      "url": "https://doi.org/10.3724/1005-0566.20260107",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI computing power sovereignty: System composition, strategic requirements, and construction path",
+      "authors": [
+        "Yuru SONG",
+        "Xiaohua LI"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260402",
+      "url": "https://doi.org/10.3724/1005-0566.20260402",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on the formation mechanism and governance strategies of ethical risks in generative artificial intelligence applications",
+      "authors": [
+        "Xinyi LIU",
+        "Feng XU",
+        "Weipan SI"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20251018",
+      "url": "https://doi.org/10.3724/1005-0566.20251018",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Impact of AI stress perception on practitioners&amp;rsquo; ambidextrous innovation behavior",
+      "authors": [
+        "YE Suyang",
+        "ZHANG Yawei",
+        "XIAO Yuchun",
+        "GAO Mengli"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250619",
+      "url": "https://doi.org/10.3724/1005-0566.20250619",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on the growth mechanism of startups enabled by AI",
+      "authors": [
+        "XIAO Xionghui",
+        "FU Hui",
+        "ZHU Hongming"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250617",
+      "url": "https://doi.org/10.3724/1005-0566.20250617",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From second-order prevention to fourth-order avoidance: the bottom-line design of safety for AI technology",
+      "authors": [
+        "WENG Chunlu"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250603",
+      "url": "https://doi.org/10.3724/1005-0566.20250603",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring the Role of Generative AI in Dementia Resilience Building Activities: Uncovering Opportunities and Challenges",
+      "authors": [
+        "Sushant Kot",
+        "Margi Engineer",
+        "Elizabeth Gilman",
+        "Christopher Flathmann",
+        "Alisha Pradhan",
+        "Emma Dixon"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-28",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3773029",
+      "url": "https://doi.org/10.1145/3773029",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The responsible worker in the age of generative AI: How human-AI co-creation shapes experienced responsibility for work outcomes",
+      "authors": [
+        "Richard Henkenjohann",
+        "Manuel Trenz"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114699",
+      "url": "https://doi.org/10.1016/j.dss.2026.114699",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Modeling the role of generative AI in organizational privacy and security",
+      "authors": [
+        "Shweta Kumari Choudhary",
+        "Arpan Kumar Kar"
+      ],
+      "year": 2025,
+      "published_date": "2025-09-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114500",
+      "url": "https://doi.org/10.1016/j.dss.2025.114500",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring users' post-adoption use of generative AI: An attitudinal ambivalence perspective",
+      "authors": [
+        "Jing Zhang",
+        "Zhen Shao",
+        "Lin Zhang",
+        "Jose Benitez"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114521",
+      "url": "https://doi.org/10.1016/j.dss.2025.114521",
+      "citation_count": 11,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Blockchain as a trust machine: From disillusionment to enlightenment in the era of generative AI",
+      "authors": [
+        "Shaokun Fan",
+        "Noyan Ilk",
+        "Akhil Kumar",
+        "Ruiyun Xu",
+        "J. Leon Zhao"
+      ],
+      "year": 2024,
+      "published_date": "2024-07-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114251",
+      "url": "https://doi.org/10.1016/j.dss.2024.114251",
+      "citation_count": 25,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A Hybrid Prototype Method Combining Physical Models and Generative Artificial Intelligence to Support Creativity in Conceptual Design",
+      "authors": [
+        "Hongbo Zhang",
+        "Pei Chen",
+        "Xuelong Xie",
+        "Zhaoqu Jiang",
+        "Zihong Zhou",
+        "Lingyun Sun"
+      ],
+      "year": 2024,
+      "published_date": "2024-10-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689433",
+      "url": "https://doi.org/10.1145/3689433",
+      "citation_count": 23,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+      "authors": [
+        "Anne Arzberger",
+        "Maria Luce Lupetti",
+        "Elisa Giaccardi"
+      ],
+      "year": 2024,
+      "published_date": "2024-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3689042",
+      "url": "https://doi.org/10.1145/3689042",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "“AI is Soulless”: Hollywood Film Workers’ Strike and Emerging Perceptions of Generative Cinema",
+      "authors": [
+        "Brett A. Halperin",
+        "Daniela K. Rosner"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3716135",
+      "url": "https://doi.org/10.1145/3716135",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 5.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+      "authors": [
+        "Helena Vasconcelos",
+        "Gagan Bansal",
+        "Adam Fourney",
+        "Q. Vera Liao",
+        "Jennifer Wortman Vaughan"
+      ],
+      "year": 2024,
+      "published_date": "2024-10-29",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3702320",
+      "url": "https://doi.org/10.1145/3702320",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 3.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI nudging and decision quality: Evidence from randomized experiments in online recommendation setting",
+      "authors": [
+        "Yuxiao Luo",
+        "Nanda Kumar",
+        "Adel Yazdanmehr"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114565",
+      "url": "https://doi.org/10.1016/j.dss.2025.114565",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI-driven mental health therapy: A comparative study of emotional clarity and stigma reduction across journaling, human-guided therapy, and AI-guided therapy",
+      "authors": [
+        "Runyu Wang",
+        "Keng Leng Siau",
+        "Zili Zhang"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114696",
+      "url": "https://doi.org/10.1016/j.dss.2026.114696",
+      "citation_count": 5,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI-generated fake review detection",
+      "authors": [
+        "Jiwei Luo",
+        "Guofang Nan",
+        "Dahui Li"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114628",
+      "url": "https://doi.org/10.1016/j.dss.2026.114628",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Passing the Buck to AI: How Individuals’ Decision-Making Patterns Affect Reliance on AI",
+      "authors": [
+        "Katelyn Xiaoying Mei",
+        "Rock Yuren Pang",
+        "Alex Lyford",
+        "Lucy Lu Wang",
+        "Katharina Reinecke"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3786326",
+      "url": "https://doi.org/10.1145/3786326",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cognitive Spillover in Human–AI Teams",
+      "authors": [
+        "Christoph Riedl",
+        "Saiph Savage",
+        "Josie Zvelebilova"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3805039",
+      "url": "https://doi.org/10.1145/3805039",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+      "authors": [
+        "Tobias Rieger",
+        "Hanna Schindler",
+        "Katharina Koch",
+        "Linda Onnasch"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3817603",
+      "url": "https://doi.org/10.1145/3817603",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Preemptive, Buffered, or Guided? Empirical Studies on Human–AI Interaction Strategies for Software Test Case Development",
+      "authors": [
+        "Billy Shi",
+        "Per Ola Kristensson"
+      ],
+      "year": 2026,
+      "published_date": "2026-08-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3817601",
+      "url": "https://doi.org/10.1145/3817601",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Modeling evolving user interests and engagement on short video sharing platforms: An attention-based deep generative approach",
+      "authors": [
+        "Jinnan Huang",
+        "Jiapeng Liu",
+        "Zice Ru",
+        "Xiuwu Liao"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114629",
+      "url": "https://doi.org/10.1016/j.dss.2026.114629",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Editorial for the special issue: Empowering bright internet and bright AI",
+      "authors": [
+        "Daegon Cho",
+        "Shan Liu",
+        "Dan J. Kim"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114663",
+      "url": "https://doi.org/10.1016/j.dss.2026.114663",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From fake to AI-generated: Leveraging information manipulation theory and explainable AI for robust detection of manipulated reviews",
+      "authors": [
+        "Olga Chernyaeva",
+        "One-Ki Daniel Lee",
+        "Taeho Hong"
+      ],
+      "year": 2025,
+      "published_date": "2025-10-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114522",
+      "url": "https://doi.org/10.1016/j.dss.2025.114522",
+      "citation_count": 10,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards Clinically Useful AI: From Radiology Practices in Global South and North to Visions of AI Support",
+      "authors": [
+        "Hubert D. Zając",
+        "Tariq O. Andersen",
+        "Elijah Kwasa",
+        "Ruth Wanjohi",
+        "Mary K. Onyinkwa",
+        "Edward K. Mwaniki",
+        "Samuel N. Gitau",
+        "Shawnim S. Yaseen",
+        "Jonathan F. Carlsen",
+        "Marco Fraccaro",
+        "Michael B. Nielsen",
+        "Yunan Chen"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3715115",
+      "url": "https://doi.org/10.1145/3715115",
+      "citation_count": 9,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "8dcba4964084ea14bb497c2dc49a51236d7293d7ec296eeaf9edf5302bde7ad4",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

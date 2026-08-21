@@ -1,0 +1,89 @@
+{
+  "evaluator": "Coding Agent single-reviewer baseline (not calibrated against domain experts)",
+  "scoring_scale": "每项按0–100评分，再按weight加权",
+  "dimensions": [
+    {
+      "dimension_id": "deliverable",
+      "label": "本阶段交付物明确",
+      "weight": 10,
+      "score_0_100": 25,
+      "evidence": ["7阶段均有purpose，但没有明确文件、表格或段落级交付物"],
+      "notes": "目的不等于可验收交付物。"
+    },
+    {
+      "dimension_id": "confirmed_project_content",
+      "label": "引用当前项目已确认内容",
+      "weight": 15,
+      "score_0_100": 5,
+      "evidence": ["指导卡未引用AI道德缺陷、跨文化、用户信任、P001/P002或问卷SEM蓝图"],
+      "notes": "几乎可以原样用于任意问卷论文。"
+    },
+    {
+      "dimension_id": "blockers",
+      "label": "阻塞项具体可见",
+      "weight": 10,
+      "score_0_100": 5,
+      "evidence": ["未把全文证据缺失、跨国样本渠道、测量等值性、目标期刊未选列为阶段阻塞项"],
+      "notes": "真实阻塞仅在proposal limitations出现，没有进入指导执行卡。"
+    },
+    {
+      "dimension_id": "concrete_steps",
+      "label": "步骤可执行且项目专属",
+      "weight": 15,
+      "score_0_100": 25,
+      "evidence": ["包含CFA、SEM、效应量等动作", "没有给出本项目的多组SEM、测量不变性或长期设计修正步骤"],
+      "notes": "部分动作可执行，但高度通用。"
+    },
+    {
+      "dimension_id": "evidence",
+      "label": "指定应使用的证据",
+      "weight": 15,
+      "score_0_100": 20,
+      "evidence": ["列出关键文献、量表来源等证据类型", "没有指定paper_id、核心论断或需补全文的论文清单"],
+      "notes": "只给证据类别，没有项目证据映射。"
+    },
+    {
+      "dimension_id": "skeleton",
+      "label": "给出段落或表格骨架",
+      "weight": 10,
+      "score_0_100": 0,
+      "evidence": ["7个阶段均无段落骨架、证据矩阵或RQ–方法表格模板"],
+      "notes": "必需字段完全缺失。"
+    },
+    {
+      "dimension_id": "common_failures",
+      "label": "列出当前项目的常见失败",
+      "weight": 10,
+      "score_0_100": 25,
+      "evidence": ["每阶段都有common_failures", "失败项均为通用写作风险，未覆盖本项目已发生的一致性断裂"],
+      "notes": "有形式但缺项目针对性。"
+    },
+    {
+      "dimension_id": "self_check",
+      "label": "自检可操作",
+      "weight": 10,
+      "score_0_100": 35,
+      "evidence": ["每阶段提供三个自检问题", "没有证据等级、长期/横截面冲突或中介变量遗漏检查"],
+      "notes": "可操作但不能发现当前项目最关键的问题。"
+    },
+    {
+      "dimension_id": "next_gate",
+      "label": "下一阶段门槛明确",
+      "weight": 5,
+      "score_0_100": 0,
+      "evidence": ["没有任一阶段提供可判定的下一门槛"],
+      "notes": "必需字段完全缺失。"
+    }
+  ],
+  "weighted_total_0_100": 16.5,
+  "checkpoint_passed": false,
+  "release_status": "BLOCKED_GENERIC_GUIDANCE",
+  "rubric_version": "guidance-project-specificity-rubric-1.0.0",
+  "case_id": "FIX-GUIDANCE-001",
+  "trace_id": "trace_05c9e0e7611f442b96216986759be3cf",
+  "evaluated_at": "2026-08-22T03:12:06+08:00",
+  "limitations": [
+    "仅一名Coding Agent评审者，未与导师/研究方法教师做尺度校准",
+    "本分数用于建立修复前基线，不是修复后质量结论"
+  ]
+}

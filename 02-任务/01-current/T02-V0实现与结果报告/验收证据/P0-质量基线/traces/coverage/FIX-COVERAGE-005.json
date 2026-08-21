@@ -1,0 +1,923 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_2d60d3a9cafa4ae5b245e0423815ec49",
+  "case_id": "FIX-COVERAGE-005",
+  "recorded_at": "2026-08-21T18:39:47.972860+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:39:40.005002+00:00",
+  "completed_at": "2026-08-21T18:39:47.969899+00:00",
+  "duration_ms": 7968.0,
+  "input": {
+    "selected_direction_id": "topic_algorithmic_management",
+    "research_direction": "algorithmic management",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "algorithmic management",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "DIGITAL_PLATFORM",
+      "ORG_STRATEGY",
+      "ECON_STRATEGY",
+      "SECURITY",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+      "PKU_CORE_2023_ORG_INNOVATION",
+      "PKU_CORE_2023_MANAGEMENT_DIRECT",
+      "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "algorithmic management",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 16,
+      "accepted_before_dedupe": 16,
+      "queried_at": "2026-08-21T18:39:42.993574+00:00",
+      "duration_ms": 1734.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1734.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "issn": "0960-085X",
+      "query": "algorithmic management",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 14,
+      "accepted_before_dedupe": 14,
+      "queried_at": "2026-08-21T18:39:44.729212+00:00",
+      "duration_ms": 3234.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 3234.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "algorithmic management",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 4,
+      "accepted_before_dedupe": 4,
+      "queried_at": "2026-08-21T18:39:40.008015+00:00",
+      "duration_ms": 1203.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1203.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "algorithmic management",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 1,
+      "accepted_before_dedupe": 1,
+      "queried_at": "2026-08-21T18:39:41.208286+00:00",
+      "duration_ms": 1797.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1781.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 35,
+    "accepted_before_dedupe": 35,
+    "deduped_corpus": 35,
+    "final_selected": 25,
+    "final_by_language": {
+      "zh": 5,
+      "en": 20
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 5,
+    "en": 0
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "Systemic science and technology strategic management for future industries",
+      "authors": [
+        "Wei WU",
+        "Jiahao FENG",
+        "Xiangli ZHU",
+        "Bo YANG"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260604",
+      "url": "https://doi.org/10.3724/1005-0566.20260604",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Can Generative AI Improve Corporate Values, Employee Perceptions, and Organizational Practices? A Human-Centric Case Study of Project Management SMEs in Indonesia",
+      "authors": [
+        "Alfato Yusnar Kharismasyah",
+        "Ali Akbar Anggara",
+        "Meydy Fauziridwan",
+        "Akhmad Darmawan"
+      ],
+      "year": 2026,
+      "published_date": "2026-02-14",
+      "journal": "科学学研究",
+      "language": "zh",
+      "doi": "10.65967/siss.v44i2.138",
+      "url": "https://doi.org/10.65967/siss.v44i2.138",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Cybersecurity risk management and enterprise digital transformation",
+      "authors": [
+        "Zhengwen WANG",
+        "Qingwei ZHANG",
+        "Fei FAN"
+      ],
+      "year": 2025,
+      "published_date": "2025-07-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250713",
+      "url": "https://doi.org/10.3724/1005-0566.20250713",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Analysis of the impact of comprehensive budget performance management reform on public service output efficiency",
+      "authors": [
+        "Zhixiong HUANG",
+        "Jialun ZHANG",
+        "Xuming ZHU"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250804",
+      "url": "https://doi.org/10.3724/1005-0566.20250804",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Platform ecosystem construction and value creation in the context of enterprise project management: a case study based on Huawei",
+      "authors": [
+        "GAO Shang",
+        "LAI Yuanyuan",
+        "ZHOU Jing",
+        "NING Yan",
+        "LEI Licai"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250511",
+      "url": "https://doi.org/10.3724/1005-0566.20250511",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Between Proactive and Reactive Coping: How Food Delivery Workers Cope With Algorithmic Management Threats",
+      "authors": [
+        "Matthias Weber",
+        "Ulrich Remus",
+        "Manfred Geiger",
+        "W. Alec Cram"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2558598",
+      "url": "https://doi.org/10.1080/0960085x.2025.2558598",
+      "citation_count": 9,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 10.0,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A multi-layered perspective on algorithmic control systems: managerial design choices and worker legitimacy judgments",
+      "authors": [
+        "Armin Alizadeh",
+        "Martin Wiener",
+        "Alexander Benlian"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2576230",
+      "url": "https://doi.org/10.1080/0960085x.2025.2576230",
+      "citation_count": 5,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Modularisation and the management of IT architecture complexity",
+      "authors": [
+        "Bart van den Hooff",
+        "Erik Jochemsen",
+        "Mohammad Rezazade Mehrizi",
+        "Marijn Plomp",
+        "Koen Mol"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2546388",
+      "url": "https://doi.org/10.1080/0960085x.2025.2546388",
+      "citation_count": 2,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Intimate support or expansive insight? How social media community openness and size shape patient self-management",
+      "authors": [
+        "Edin Smailhodzic",
+        "Albert Boonstra",
+        "David J. Langley",
+        "Nicolai Fabian"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2616039",
+      "url": "https://doi.org/10.1080/0960085x.2026.2616039",
+      "citation_count": 1,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Mitigating algorithmic bias in credit scoring support systems through adversarial learning",
+      "authors": [
+        "Junye Lin",
+        "Liping Yang"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114653",
+      "url": "https://doi.org/10.1016/j.dss.2026.114653",
+      "citation_count": 0,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Rethinking consumer data management under end-user privacy-enhancing technologies",
+      "authors": [
+        "Dawei Chen",
+        "Jungpil Hahn"
+      ],
+      "year": 2026,
+      "published_date": "2026-06-25",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2026.2689145",
+      "url": "https://doi.org/10.1080/0960085x.2026.2689145",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The personal relevance of digital health technologies for self-management of chronic conditions: instrument development and validation",
+      "authors": [
+        "Polina Durneva",
+        "Cynthia LeRouge"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2025.2605343",
+      "url": "https://doi.org/10.1080/0960085x.2025.2605343",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Metaverse technology in sustainable supply chain management: Experimental findings",
+      "authors": [
+        "Kiarash Sadeghi R.",
+        "Divesh Ojha",
+        "Puneet Kaur",
+        "Raj V. Mahto",
+        "Amandeep Dhir"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114423",
+      "url": "https://doi.org/10.1016/j.dss.2025.114423",
+      "citation_count": 28,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reducing the incidence of biased algorithmic decisions through feature importance transparency: an empirical study",
+      "authors": [
+        "Sepideh Ebrahimi",
+        "Esraa Abdelhalim",
+        "Khaled Hassanein",
+        "Milena Head"
+      ],
+      "year": 2025,
+      "published_date": "2025-07-04",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2024.2395531",
+      "url": "https://doi.org/10.1080/0960085x.2024.2395531",
+      "citation_count": 16,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A deep learning–based method to predict the length of stay for patients with traumatic fall injuries in support of physicians' clinical decisions and patient management",
+      "authors": [
+        "Jiaxuan Peng",
+        "Da Xu",
+        "Paul Jen-Hwa Hu",
+        "Jessica Qiuhua Sheng",
+        "Ting-Shuo Huang"
+      ],
+      "year": 2025,
+      "published_date": "2025-04-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114411",
+      "url": "https://doi.org/10.1016/j.dss.2025.114411",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A hybrid framework using explainable AI (XAI) in cyber-risk management for defence and recovery against phishing attacks",
+      "authors": [
+        "Baidyanath Biswas",
+        "Arunabha Mukhopadhyay",
+        "Ajay Kumar",
+        "Dursun Delen"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114102",
+      "url": "https://doi.org/10.1016/j.dss.2023.114102",
+      "citation_count": 78,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Social trust and algorithmic equity: The societal perspectives of users' intention to interact with algorithm recommendation systems",
+      "authors": [
+        "Wei Wu",
+        "Youlin Huang",
+        "Lixian Qian"
+      ],
+      "year": 2024,
+      "published_date": "2024-03-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114115",
+      "url": "https://doi.org/10.1016/j.dss.2023.114115",
+      "citation_count": 54,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Blockchain enabled dynamic trust management method for the internet of medical things",
+      "authors": [
+        "Xinyin Xiang",
+        "Jin Cao",
+        "Weiguo Fan",
+        "Shousheng Xiang",
+        "Gang Wang"
+      ],
+      "year": 2024,
+      "published_date": "2024-05-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114184",
+      "url": "https://doi.org/10.1016/j.dss.2024.114184",
+      "citation_count": 40,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The differential impacts of top management support and transformational supervisory leadership on employees’ digital performance",
+      "authors": [
+        "Zhen Shao",
+        "Xixi Li",
+        "Yumei Luo",
+        "Jose Benitez"
+      ],
+      "year": 2024,
+      "published_date": "2024-05-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2022.2147456",
+      "url": "https://doi.org/10.1080/0960085x.2022.2147456",
+      "citation_count": 37,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "How transparency affects algorithmic advice utilization: The mediating roles of trusting beliefs",
+      "authors": [
+        "Xianzhang Ning",
+        "Yaobin Lu",
+        "Weimo Li",
+        "Sumeet Gupta"
+      ],
+      "year": 2024,
+      "published_date": "2024-08-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114273",
+      "url": "https://doi.org/10.1016/j.dss.2024.114273",
+      "citation_count": 36,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Unraveling the effect of organisational resources and top management support on e-commerce capabilities: evidence from ADANCO-SEM and fsQCA",
+      "authors": [
+        "Jiabao Lin",
+        "Xin (Robert) Luo",
+        "Lei Li",
+        "Carol Hsu"
+      ],
+      "year": 2024,
+      "published_date": "2024-05-03",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2023.2169202",
+      "url": "https://doi.org/10.1080/0960085x.2023.2169202",
+      "citation_count": 22,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Exploring online consumer review-management response dynamics: A heuristic-systematic perspective",
+      "authors": [
+        "Hsiu-Yu Hung",
+        "Yansong Hu",
+        "Nick Lee",
+        "Hsien-Tung Tsai"
+      ],
+      "year": 2024,
+      "published_date": "2024-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114087",
+      "url": "https://doi.org/10.1016/j.dss.2023.114087",
+      "citation_count": 17,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A meta-path, attention-based deep learning method to support hepatitis carcinoma predictions for improved cirrhosis patient management",
+      "authors": [
+        "Zejian (Eric) Wu",
+        "Da Xu",
+        "Paul Jen-Hwa Hu",
+        "Liang Li",
+        "Ting-Shuo Huang"
+      ],
+      "year": 2024,
+      "published_date": "2024-06-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114226",
+      "url": "https://doi.org/10.1016/j.dss.2024.114226",
+      "citation_count": 4,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The impact of enterprise architecture management on information systems architecture complexity",
+      "authors": [
+        "Jannis Beese",
+        "Stephan Aier",
+        "Kazem Haki",
+        "Robert Winter"
+      ],
+      "year": 2023,
+      "published_date": "2023-11-02",
+      "journal": "European Journal of Information Systems",
+      "language": "en",
+      "doi": "10.1080/0960085x.2022.2103045",
+      "url": "https://doi.org/10.1080/0960085x.2022.2103045",
+      "citation_count": 24,
+      "journal_ranking": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Blockchain innovation for consent self-management in health information exchanges",
+      "authors": [
+        "Chad Anderson",
+        "Arthur Carvalho",
+        "Mala Kaul",
+        "Jeffrey W. Merhout"
+      ],
+      "year": 2023,
+      "published_date": "2023-11-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114021",
+      "url": "https://doi.org/10.1016/j.dss.2023.114021",
+      "citation_count": 22,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "0a2f0920c89ea881ba87efd9494cf8630b4a4a84a40122b443c1ff5bd6da10fb",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}

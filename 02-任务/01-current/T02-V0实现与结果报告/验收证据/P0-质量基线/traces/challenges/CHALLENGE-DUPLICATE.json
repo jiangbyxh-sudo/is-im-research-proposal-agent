@@ -1,0 +1,23 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_c43b8e24bcfc46638f5e63c21a5fb138",
+  "case_id": "CHALLENGE-DUPLICATE",
+  "recorded_at": "2026-08-21T19:18:22.747632+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "input": {
+    "fixture": "verified metadata challenge"
+  },
+  "candidate_counts": {
+    "final_corpus": 2
+  },
+  "status": "RETRIEVAL_PARTIAL",
+  "checkpoint": {
+    "passed": true
+  },
+  "actual_output": {
+    "deduped_dois": [
+      "10.1000/duplicate",
+      "10.1000/no-abstract"
+    ]
+  }
+}

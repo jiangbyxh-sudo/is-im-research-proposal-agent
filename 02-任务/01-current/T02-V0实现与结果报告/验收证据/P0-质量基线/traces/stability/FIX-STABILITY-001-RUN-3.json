@@ -1,0 +1,1785 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_0bbbbbe2276343838bdd9653752f282d",
+  "case_id": "FIX-STABILITY-001-RUN-3",
+  "recorded_at": "2026-08-21T19:05:07.361676+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T19:04:29.750234+00:00",
+  "completed_at": "2026-08-21T19:05:07.360156+00:00",
+  "duration_ms": 37609.0,
+  "input": {
+    "direction_id": "topic_ai_enabled_information_systems",
+    "research_direction": "AI-enabled information systems",
+    "corpus_hash": "b591cf693b9b0555db8256613bbeb123f680151fbc8221f15e9c3ec7fc14813e",
+    "paper_count": 27
+  },
+  "versions": {
+    "synthesis_prompt": "synthesis-current-baseline-0.3",
+    "model": "deepseek-v4-pro",
+    "rubric": null,
+    "clustering": "not_implemented_model_free_grouping"
+  },
+  "query_plan": null,
+  "candidate_counts": {
+    "fixed_corpus": 27
+  },
+  "corpus_hash": "b591cf693b9b0555db8256613bbeb123f680151fbc8221f15e9c3ec7fc14813e",
+  "clustering": {
+    "algorithm": "single_llm_free_grouping",
+    "random_seed": null,
+    "output_assignments": {
+      "P009": "subdirection_4",
+      "P010": "subdirection_4",
+      "P011": "subdirection_4",
+      "P013": "subdirection_4",
+      "P017": "subdirection_4",
+      "P019": "subdirection_4",
+      "P023": "subdirection_4",
+      "P024": "subdirection_4",
+      "P004": "subdirection_2",
+      "P012": "subdirection_2",
+      "P021": "subdirection_2",
+      "P026": "subdirection_2",
+      "P027": "subdirection_2",
+      "P001": "subdirection_1",
+      "P002": "subdirection_1",
+      "P003": "subdirection_1",
+      "P014": "subdirection_1",
+      "P015": "subdirection_1",
+      "P005": "subdirection_3",
+      "P006": "subdirection_3",
+      "P020": "subdirection_3",
+      "P022": "subdirection_3",
+      "P007": "subdirection_5",
+      "P008": "subdirection_5",
+      "P018": "subdirection_5",
+      "P025": "subdirection_5"
+    }
+  },
+  "model": {
+    "single_provider_degraded": true,
+    "athlete_a": {
+      "status": "SYNTHESIS_COMPLETE",
+      "top_subdirections": [
+        {
+          "subdirection_id": "subdirection_4",
+          "name_zh": "AI在特定领域的应用与影响",
+          "name_en": "AI Applications and Impact in Specific Domains",
+          "description": "研究AI在医疗、心理咨询、设计、内容创作、儿童教育等领域的应用，包括临床文档、放射学实践、生成式电影、AI设计产品等。",
+          "paper_count": 8,
+          "paper_ids": [
+            "P009",
+            "P010",
+            "P011",
+            "P013",
+            "P017",
+            "P019",
+            "P023",
+            "P024"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P009",
+              "title": "“AI is Soulless”: Hollywood Film Workers’ Strike and Emerging Perceptions of Generative Cinema",
+              "authors": [
+                "Brett A. Halperin",
+                "Daniela K. Rosner"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3716135",
+              "citation_count": 19,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P010",
+              "title": "Towards Clinically Useful AI: From Radiology Practices in Global South and North to Visions of AI Support",
+              "authors": [
+                "Hubert D. Zając",
+                "Tariq O. Andersen",
+                "Elijah Kwasa",
+                "Ruth Wanjohi",
+                "Mary K. Onyinkwa",
+                "Edward K. Mwaniki"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3715115",
+              "citation_count": 9,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P011",
+              "title": "Self-help AI psychological counseling system based on large language models and its effectiveness evaluation",
+              "authors": [
+                "Feng HUANG",
+                "Huimin DING",
+                "Sijia LI",
+                "Nuo HAN",
+                "Yazheng DI",
+                "Xiaoqian LIU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.2022",
+              "citation_count": 5,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P013",
+              "title": "Reading AI and Reading the World: Using an Interactive AI System to Promote Children’s Understanding of AI Bias",
+              "authors": [
+                "Aayushi Dangol",
+                "Robert Wolfe",
+                "Akeiylah Dewitt",
+                "Ben Chickadel",
+                "Julie Kientz",
+                "Sayamindu Dasgupta"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3762807",
+              "citation_count": 4,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P017",
+              "title": "When design meets AI: The impact of AI design products on consumers’ response patterns",
+              "authors": [
+                "Bin LI",
+                "Jianxi RUI",
+                "Weinan YU",
+                "Aimei LI",
+                "Maolin YE"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1914",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P019",
+              "title": "The AI Ghostwriter Effect: When Users do not Perceive Ownership of AI-Generated Text but Self-Declare as Authors",
+              "authors": [
+                "Fiona Draxler",
+                "Anna Werner",
+                "Florian Lehmann",
+                "Matthias Hoppe",
+                "Albrecht Schmidt",
+                "Daniel Buschek"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3637875",
+              "citation_count": 161,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ]
+        },
+        {
+          "subdirection_id": "subdirection_2",
+          "name_zh": "AI解释性与决策支持",
+          "name_en": "AI Explainability and Decision Support",
+          "description": "研究AI解释性框架、解释对信任和依赖的影响、错误难度对解释有效性的调节作用，以及不确定性突出显示在AI代码补全中的应用。",
+          "paper_count": 5,
+          "paper_ids": [
+            "P004",
+            "P012",
+            "P021",
+            "P026",
+            "P027"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P004",
+              "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+              "authors": [
+                "Tobias Rieger",
+                "Hanna Schindler",
+                "Katharina Koch",
+                "Linda Onnasch"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3817603",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P012",
+              "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+              "authors": [
+                "Karina Cortiñas-Lorenzo",
+                "Wanling Cai",
+                "Gavin Doherty"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3769678",
+              "citation_count": 5,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P021",
+              "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+              "authors": [
+                "Helena Vasconcelos",
+                "Gagan Bansal",
+                "Adam Fourney",
+                "Q. Vera Liao",
+                "Jennifer Wortman Vaughan"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3702320",
+              "citation_count": 12,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P026",
+              "title": "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support",
+              "authors": [
+                "Niels van Berkel",
+                "Maura Bellio",
+                "Mikael B. Skov",
+                "Ann Blandford"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3571815",
+              "citation_count": 36,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P027",
+              "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+              "authors": [
+                "Andrea Papenmeier",
+                "Dagmar Kern",
+                "Gwenn Englebienne",
+                "Christin Seifert"
+              ],
+              "year": 2022,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3495013",
+              "citation_count": 135,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ]
+        },
+        {
+          "subdirection_id": "subdirection_1",
+          "name_zh": "AI决策中的道德与信任",
+          "name_en": "Moral and Trust in AI Decision-Making",
+          "description": "研究AI决策中的道德缺陷、拟人化对信任与合作的影响、AI监管的道德效应、AI人格对道德判断的影响，以及人机合作中的风险寻求与责任感知。",
+          "paper_count": 5,
+          "paper_ids": [
+            "P001",
+            "P002",
+            "P003",
+            "P014",
+            "P015"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "citation_count": 1,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P003",
+              "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+              "authors": [],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0381",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P014",
+              "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+              "authors": [
+                "Liying JIAO",
+                "Chang-Jin LI",
+                "Zhen CHEN",
+                "Hengbin XU",
+                "Yan XU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.0929",
+              "citation_count": 3,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P015",
+              "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+              "authors": [
+                "Xiaowei GENG",
+                "Chao LIU",
+                "Li SU",
+                "Bingxue HAN",
+                "Qiaoming ZHANG",
+                "Mingzheng WU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1885",
+              "citation_count": 2,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ]
+        },
+        {
+          "subdirection_id": "subdirection_3",
+          "name_zh": "人机协作与团队动态",
+          "name_en": "Human-AI Collaboration and Team Dynamics",
+          "description": "研究人机团队中的认知溢出、决策模式对AI依赖的影响、协作中的责任感知与风险行为，以及创意协作框架。",
+          "paper_count": 4,
+          "paper_ids": [
+            "P005",
+            "P006",
+            "P020",
+            "P022"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P005",
+              "title": "Passing the Buck to AI: How Individuals’ Decision-Making Patterns Affect Reliance on AI",
+              "authors": [
+                "Katelyn Xiaoying Mei",
+                "Rock Yuren Pang",
+                "Alex Lyford",
+                "Lucy Lu Wang",
+                "Katharina Reinecke"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3786326",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P006",
+              "title": "Cognitive Spillover in Human–AI Teams",
+              "authors": [
+                "Christoph Riedl",
+                "Saiph Savage",
+                "Josie Zvelebilova"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3805039",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P020",
+              "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+              "authors": [
+                "Anne Arzberger",
+                "Maria Luce Lupetti",
+                "Elisa Giaccardi"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3689042",
+              "citation_count": 19,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P022",
+              "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+              "authors": [
+                "Jeba Rezwana",
+                "Mary Lou Maher"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3519026",
+              "citation_count": 269,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ]
+        },
+        {
+          "subdirection_id": "subdirection_5",
+          "name_zh": "AI交互设计与用户体验",
+          "name_en": "AI Interaction Design and User Experience",
+          "description": "研究AI交互设计指南、主动对话式AI、推荐系统、安全信任、AI解释的设计与评估等。",
+          "paper_count": 4,
+          "paper_ids": [
+            "P007",
+            "P008",
+            "P018",
+            "P025"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P007",
+              "title": "Recommender AI Agent: Integrating Large Language Models for Interactive Recommendations",
+              "authors": [
+                "Xu Huang",
+                "Jianxun Lian",
+                "Yuxuan Lei",
+                "Jing Yao",
+                "Defu Lian",
+                "Xing Xie"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3731446",
+              "citation_count": 66,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P008",
+              "title": "Proactive Conversational AI: A Comprehensive Survey of Advancements and Opportunities",
+              "authors": [
+                "Yang Deng",
+                "Lizi Liao",
+                "Wenqiang Lei",
+                "Grace Hui Yang",
+                "Wai Lam",
+                "Tat-Seng Chua"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3715097",
+              "citation_count": 40,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P018",
+              "title": "Safety trust in intelligent domestic robots: Human and AI perspectives on trust and relevant influencing factors",
+              "authors": [
+                "Shanshan YOU",
+                "Yue QI",
+                "JunTing CHEN",
+                "Lei LUO",
+                "Kan ZHANG"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1951",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P025",
+              "title": "Assessing Human-AI Interaction Early through Factorial Surveys: A Study on the Guidelines for Human-AI Interaction",
+              "authors": [
+                "Tianyi Li",
+                "Mihaela Vorvoreanu",
+                "Derek Debellis",
+                "Saleema Amershi"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3511605",
+              "citation_count": 46,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ]
+        }
+      ],
+      "gap_candidates": [
+        {
+          "gap_id": "subdirection_1_gap_1",
+          "subdirection_id": "subdirection_1",
+          "gap_type": "empirical",
+          "gap_statement": "现有研究多基于西方文化背景，缺乏对中国文化情境下AI道德决策与信任机制的实证检验。",
+          "why_it_matters": "文化价值观可能影响人们对AI道德行为的期望和信任形成，跨文化研究有助于设计更具文化适应性的AI系统。",
+          "evidence_basis": [
+            "P001",
+            "P002",
+            "P003",
+            "P014",
+            "P015"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "citation_count": 1,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P003",
+              "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+              "authors": [],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0381",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P014",
+              "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+              "authors": [
+                "Liying JIAO",
+                "Chang-Jin LI",
+                "Zhen CHEN",
+                "Hengbin XU",
+                "Yan XU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.0929",
+              "citation_count": 3,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P015",
+              "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+              "authors": [
+                "Xiaowei GENG",
+                "Chao LIU",
+                "Li SU",
+                "Bingxue HAN",
+                "Qiaoming ZHANG",
+                "Mingzheng WU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1885",
+              "citation_count": 2,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "文化差异可能不是主要因素，个体差异或情境因素可能更重要。"
+          ],
+          "innovation_candidates": [
+            "在中国文化背景下复制和扩展AI道德与信任研究，比较中西差异。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_1_gap_2",
+          "subdirection_id": "subdirection_1",
+          "gap_type": "methodological",
+          "gap_statement": "缺乏纵向研究设计来考察AI道德与信任的动态变化过程。",
+          "why_it_matters": "信任和道德判断可能随时间变化，纵向研究能揭示其发展轨迹和影响因素。",
+          "evidence_basis": [
+            "P001",
+            "P002",
+            "P003",
+            "P014",
+            "P015"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "citation_count": 1,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P003",
+              "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+              "authors": [],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0381",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P014",
+              "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+              "authors": [
+                "Liying JIAO",
+                "Chang-Jin LI",
+                "Zhen CHEN",
+                "Hengbin XU",
+                "Yan XU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.0929",
+              "citation_count": 3,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P015",
+              "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+              "authors": [
+                "Xiaowei GENG",
+                "Chao LIU",
+                "Li SU",
+                "Bingxue HAN",
+                "Qiaoming ZHANG",
+                "Mingzheng WU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1885",
+              "citation_count": 2,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "横断面研究可能已足够捕捉关键关系，纵向研究成本高且可能面临流失。"
+          ],
+          "innovation_candidates": [
+            "采用日记法或经验取样法追踪人机互动中的信任变化。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_2_gap_1",
+          "subdirection_id": "subdirection_2",
+          "gap_type": "empirical",
+          "gap_statement": "AI解释性研究多在实验室环境中进行，缺乏在真实工作场景中的长期效果验证。",
+          "why_it_matters": "真实场景中的复杂性和动态性可能影响解释的有效性，现场研究能提供更生态有效的证据。",
+          "evidence_basis": [
+            "P004",
+            "P012",
+            "P021",
+            "P026",
+            "P027"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P004",
+              "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+              "authors": [
+                "Tobias Rieger",
+                "Hanna Schindler",
+                "Katharina Koch",
+                "Linda Onnasch"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3817603",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P012",
+              "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+              "authors": [
+                "Karina Cortiñas-Lorenzo",
+                "Wanling Cai",
+                "Gavin Doherty"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3769678",
+              "citation_count": 5,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P021",
+              "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+              "authors": [
+                "Helena Vasconcelos",
+                "Gagan Bansal",
+                "Adam Fourney",
+                "Q. Vera Liao",
+                "Jennifer Wortman Vaughan"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3702320",
+              "citation_count": 12,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P026",
+              "title": "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support",
+              "authors": [
+                "Niels van Berkel",
+                "Maura Bellio",
+                "Mikael B. Skov",
+                "Ann Blandford"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3571815",
+              "citation_count": 36,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P027",
+              "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+              "authors": [
+                "Andrea Papenmeier",
+                "Dagmar Kern",
+                "Gwenn Englebienne",
+                "Christin Seifert"
+              ],
+              "year": 2022,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3495013",
+              "citation_count": 135,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "实验室结果可能具有外部效度，现场研究可能面临实施困难。"
+          ],
+          "innovation_candidates": [
+            "在医疗、金融等领域开展AI解释性的纵向现场研究。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_2_gap_2",
+          "subdirection_id": "subdirection_2",
+          "gap_type": "theoretical",
+          "gap_statement": "缺乏统一的理论框架来解释不同解释类型如何影响用户认知和信任。",
+          "why_it_matters": "理论整合有助于指导解释设计，避免碎片化研究。",
+          "evidence_basis": [
+            "P004",
+            "P012",
+            "P021",
+            "P026",
+            "P027"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P004",
+              "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+              "authors": [
+                "Tobias Rieger",
+                "Hanna Schindler",
+                "Katharina Koch",
+                "Linda Onnasch"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3817603",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P012",
+              "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+              "authors": [
+                "Karina Cortiñas-Lorenzo",
+                "Wanling Cai",
+                "Gavin Doherty"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3769678",
+              "citation_count": 5,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P021",
+              "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+              "authors": [
+                "Helena Vasconcelos",
+                "Gagan Bansal",
+                "Adam Fourney",
+                "Q. Vera Liao",
+                "Jennifer Wortman Vaughan"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3702320",
+              "citation_count": 12,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P026",
+              "title": "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support",
+              "authors": [
+                "Niels van Berkel",
+                "Maura Bellio",
+                "Mikael B. Skov",
+                "Ann Blandford"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3571815",
+              "citation_count": 36,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P027",
+              "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+              "authors": [
+                "Andrea Papenmeier",
+                "Dagmar Kern",
+                "Gwenn Englebienne",
+                "Christin Seifert"
+              ],
+              "year": 2022,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3495013",
+              "citation_count": 135,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "不同情境可能需要不同理论，统一框架可能过于简化。"
+          ],
+          "innovation_candidates": [
+            "开发基于认知负荷理论和信任理论的综合模型。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_3_gap_1",
+          "subdirection_id": "subdirection_3",
+          "gap_type": "empirical",
+          "gap_statement": "人机团队中的认知溢出效应缺乏实证研究，尤其是长期协作中的影响。",
+          "why_it_matters": "认知溢出可能影响团队绩效和成员福祉，理解其机制有助于优化团队设计。",
+          "evidence_basis": [
+            "P006",
+            "P020",
+            "P022"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P006",
+              "title": "Cognitive Spillover in Human–AI Teams",
+              "authors": [
+                "Christoph Riedl",
+                "Saiph Savage",
+                "Josie Zvelebilova"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3805039",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P020",
+              "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+              "authors": [
+                "Anne Arzberger",
+                "Maria Luce Lupetti",
+                "Elisa Giaccardi"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3689042",
+              "citation_count": 19,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P022",
+              "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+              "authors": [
+                "Jeba Rezwana",
+                "Mary Lou Maher"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3519026",
+              "citation_count": 269,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "认知溢出可能只是短期现象，长期协作中可能适应。"
+          ],
+          "innovation_candidates": [
+            "开展纵向研究，测量人机团队中的认知负荷和绩效变化。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_3_gap_2",
+          "subdirection_id": "subdirection_3",
+          "gap_type": "contextual",
+          "gap_statement": "现有研究多关注通用场景，缺乏对特定行业（如医疗、创意产业）中人机协作模式的深入分析。",
+          "why_it_matters": "不同行业的工作流程和约束条件不同，情境化研究能提供更针对性的设计建议。",
+          "evidence_basis": [
+            "P005",
+            "P006",
+            "P020",
+            "P022"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P005",
+              "title": "Passing the Buck to AI: How Individuals’ Decision-Making Patterns Affect Reliance on AI",
+              "authors": [
+                "Katelyn Xiaoying Mei",
+                "Rock Yuren Pang",
+                "Alex Lyford",
+                "Lucy Lu Wang",
+                "Katharina Reinecke"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3786326",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P006",
+              "title": "Cognitive Spillover in Human–AI Teams",
+              "authors": [
+                "Christoph Riedl",
+                "Saiph Savage",
+                "Josie Zvelebilova"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3805039",
+              "citation_count": 0,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P020",
+              "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+              "authors": [
+                "Anne Arzberger",
+                "Maria Luce Lupetti",
+                "Elisa Giaccardi"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3689042",
+              "citation_count": 19,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P022",
+              "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+              "authors": [
+                "Jeba Rezwana",
+                "Mary Lou Maher"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3519026",
+              "citation_count": 269,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "通用原则可能适用于多个行业，情境化研究可能缺乏普适性。"
+          ],
+          "innovation_candidates": [
+            "在医疗诊断、广告创意等领域开展案例研究。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_4_gap_1",
+          "subdirection_id": "subdirection_4",
+          "gap_type": "empirical",
+          "gap_statement": "AI在医疗领域的应用研究多集中于技术可行性，缺乏对患者结果和临床工作流程影响的长期评估。",
+          "why_it_matters": "医疗AI的最终价值在于改善患者结果和效率，长期评估能提供关键证据。",
+          "evidence_basis": [
+            "P010",
+            "P023",
+            "P024"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P010",
+              "title": "Towards Clinically Useful AI: From Radiology Practices in Global South and North to Visions of AI Support",
+              "authors": [
+                "Hubert D. Zając",
+                "Tariq O. Andersen",
+                "Elijah Kwasa",
+                "Ruth Wanjohi",
+                "Mary K. Onyinkwa",
+                "Edward K. Mwaniki"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3715115",
+              "citation_count": 9,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P023",
+              "title": "Holding AI to Account: Challenges for the Delivery of Trustworthy AI in Healthcare",
+              "authors": [
+                "Rob Procter",
+                "Peter Tolmie",
+                "Mark Rouncefield"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3577009",
+              "citation_count": 61,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P024",
+              "title": "Batman and Robin in Healthcare Knowledge Work: Human-AI Collaboration by Clinical Documentation Integrity Specialists",
+              "authors": [
+                "Claus Bossen",
+                "Kathleen H. Pine"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3569892",
+              "citation_count": 54,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "短期研究可能已足够证明效果，长期评估可能面临伦理和成本问题。"
+          ],
+          "innovation_candidates": [
+            "设计多中心纵向研究，跟踪AI辅助诊断对患者预后的影响。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_4_gap_2",
+          "subdirection_id": "subdirection_4",
+          "gap_type": "contextual",
+          "gap_statement": "AI在创意产业（如电影、设计）中的应用研究缺乏对创作者身份和劳动影响的深入探讨。",
+          "why_it_matters": "AI可能改变创意工作的本质和创作者的经济地位，理解这些影响有助于制定公平的政策。",
+          "evidence_basis": [
+            "P009",
+            "P017",
+            "P019"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P009",
+              "title": "“AI is Soulless”: Hollywood Film Workers’ Strike and Emerging Perceptions of Generative Cinema",
+              "authors": [
+                "Brett A. Halperin",
+                "Daniela K. Rosner"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3716135",
+              "citation_count": 19,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P017",
+              "title": "When design meets AI: The impact of AI design products on consumers’ response patterns",
+              "authors": [
+                "Bin LI",
+                "Jianxi RUI",
+                "Weinan YU",
+                "Aimei LI",
+                "Maolin YE"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1914",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P019",
+              "title": "The AI Ghostwriter Effect: When Users do not Perceive Ownership of AI-Generated Text but Self-Declare as Authors",
+              "authors": [
+                "Fiona Draxler",
+                "Anna Werner",
+                "Florian Lehmann",
+                "Matthias Hoppe",
+                "Albrecht Schmidt",
+                "Daniel Buschek"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3637875",
+              "citation_count": 161,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "AI可能只是工具，不会根本改变创意劳动。"
+          ],
+          "innovation_candidates": [
+            "对创意工作者进行访谈，了解他们对AI的态度和应对策略。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_5_gap_1",
+          "subdirection_id": "subdirection_5",
+          "gap_type": "methodological",
+          "gap_statement": "AI交互设计指南的评估多采用实验室方法，缺乏在真实使用环境中的验证。",
+          "why_it_matters": "真实环境中的用户行为可能不同，现场评估能提高指南的实用性。",
+          "evidence_basis": [
+            "P025",
+            "P018"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P025",
+              "title": "Assessing Human-AI Interaction Early through Factorial Surveys: A Study on the Guidelines for Human-AI Interaction",
+              "authors": [
+                "Tianyi Li",
+                "Mihaela Vorvoreanu",
+                "Derek Debellis",
+                "Saleema Amershi"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3511605",
+              "citation_count": 46,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P018",
+              "title": "Safety trust in intelligent domestic robots: Human and AI perspectives on trust and relevant influencing factors",
+              "authors": [
+                "Shanshan YOU",
+                "Yue QI",
+                "JunTing CHEN",
+                "Lei LUO",
+                "Kan ZHANG"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1951",
+              "citation_count": 0,
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "实验室评估可能已足够，现场评估成本高且难以控制变量。"
+          ],
+          "innovation_candidates": [
+            "在真实应用中部署指南并进行A/B测试。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        },
+        {
+          "gap_id": "subdirection_5_gap_2",
+          "subdirection_id": "subdirection_5",
+          "gap_type": "empirical",
+          "gap_statement": "主动对话式AI的用户接受度和长期使用效果缺乏实证研究。",
+          "why_it_matters": "主动交互可能打扰用户，理解用户偏好有助于设计更合适的主动策略。",
+          "evidence_basis": [
+            "P008",
+            "P007"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P008",
+              "title": "Proactive Conversational AI: A Comprehensive Survey of Advancements and Opportunities",
+              "authors": [
+                "Yang Deng",
+                "Lizi Liao",
+                "Wenqiang Lei",
+                "Grace Hui Yang",
+                "Wai Lam",
+                "Tat-Seng Chua"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3715097",
+              "citation_count": 40,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P007",
+              "title": "Recommender AI Agent: Integrating Large Language Models for Interactive Recommendations",
+              "authors": [
+                "Xu Huang",
+                "Jianxun Lian",
+                "Yuxuan Lei",
+                "Jing Yao",
+                "Defu Lian",
+                "Xing Xie"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3731446",
+              "citation_count": 66,
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "alternative_explanations": [
+            "用户可能适应主动交互，短期研究可能低估其价值。"
+          ],
+          "innovation_candidates": [
+            "进行日记研究，记录用户对主动AI的反应和感受。"
+          ],
+          "confidence": "emerging",
+          "verification_status": "title_metadata_only_pending_fulltext"
+        }
+      ],
+      "limitations": [
+        "仅基于论文题名和摘要进行归类，未深入全文，可能遗漏重要细节。",
+        "部分论文作者信息缺失，可能影响对研究背景的判断。",
+        "研究空白基于现有论文的推断，需进一步文献验证。",
+        "期刊等级不能完全代表研究质量，可能存在发表偏倚。",
+        "当前综合主要依据题名级元数据；所有空白均需在全文获取后复核。"
+      ],
+      "audit": {
+        "input_paper_count": 27,
+        "assigned_paper_count": 26,
+        "unclassified_paper_count": 1,
+        "invalid_reference_count": 0,
+        "counts_recomputed_by_code": true,
+        "model": {
+          "model": "deepseek-v4-pro",
+          "usage": {
+            "prompt_tokens": 3674,
+            "completion_tokens": 2153,
+            "total_tokens": 5827,
+            "prompt_tokens_details": {
+              "cached_tokens": 3584
+            },
+            "prompt_cache_hit_tokens": 3584,
+            "prompt_cache_miss_tokens": 90
+          },
+          "finish_reason": "stop",
+          "attempts": 1,
+          "duration_ms": 37609.0
+        },
+        "prompt_version": "synthesis-current-baseline-0.3",
+        "input_hash": "0b7a81c67af45a55b2ef57c0d131f45f56ec176a80c4da0638bcf47eab2269d8",
+        "raw_model_output": {
+          "subdirections": [
+            {
+              "name_zh": "AI决策中的道德与信任",
+              "name_en": "Moral and Trust in AI Decision-Making",
+              "description": "研究AI决策中的道德缺陷、拟人化对信任与合作的影响、AI监管的道德效应、AI人格对道德判断的影响，以及人机合作中的风险寻求与责任感知。",
+              "paper_ids": [
+                "P001",
+                "P002",
+                "P003",
+                "P014",
+                "P015"
+              ],
+              "gaps": [
+                {
+                  "gap_type": "empirical",
+                  "gap_statement": "现有研究多基于西方文化背景，缺乏对中国文化情境下AI道德决策与信任机制的实证检验。",
+                  "why_it_matters": "文化价值观可能影响人们对AI道德行为的期望和信任形成，跨文化研究有助于设计更具文化适应性的AI系统。",
+                  "evidence_basis": [
+                    "P001",
+                    "P002",
+                    "P003",
+                    "P014",
+                    "P015"
+                  ],
+                  "alternative_explanations": [
+                    "文化差异可能不是主要因素，个体差异或情境因素可能更重要。"
+                  ],
+                  "innovation_candidates": [
+                    "在中国文化背景下复制和扩展AI道德与信任研究，比较中西差异。"
+                  ],
+                  "confidence": "emerging"
+                },
+                {
+                  "gap_type": "methodological",
+                  "gap_statement": "缺乏纵向研究设计来考察AI道德与信任的动态变化过程。",
+                  "why_it_matters": "信任和道德判断可能随时间变化，纵向研究能揭示其发展轨迹和影响因素。",
+                  "evidence_basis": [
+                    "P001",
+                    "P002",
+                    "P003",
+                    "P014",
+                    "P015"
+                  ],
+                  "alternative_explanations": [
+                    "横断面研究可能已足够捕捉关键关系，纵向研究成本高且可能面临流失。"
+                  ],
+                  "innovation_candidates": [
+                    "采用日记法或经验取样法追踪人机互动中的信任变化。"
+                  ],
+                  "confidence": "emerging"
+                }
+              ]
+            },
+            {
+              "name_zh": "AI解释性与决策支持",
+              "name_en": "AI Explainability and Decision Support",
+              "description": "研究AI解释性框架、解释对信任和依赖的影响、错误难度对解释有效性的调节作用，以及不确定性突出显示在AI代码补全中的应用。",
+              "paper_ids": [
+                "P004",
+                "P012",
+                "P021",
+                "P026",
+                "P027"
+              ],
+              "gaps": [
+                {
+                  "gap_type": "empirical",
+                  "gap_statement": "AI解释性研究多在实验室环境中进行，缺乏在真实工作场景中的长期效果验证。",
+                  "why_it_matters": "真实场景中的复杂性和动态性可能影响解释的有效性，现场研究能提供更生态有效的证据。",
+                  "evidence_basis": [
+                    "P004",
+                    "P012",
+                    "P021",
+                    "P026",
+                    "P027"
+                  ],
+                  "alternative_explanations": [
+                    "实验室结果可能具有外部效度，现场研究可能面临实施困难。"
+                  ],
+                  "innovation_candidates": [
+                    "在医疗、金融等领域开展AI解释性的纵向现场研究。"
+                  ],
+                  "confidence": "emerging"
+                },
+                {
+                  "gap_type": "theoretical",
+                  "gap_statement": "缺乏统一的理论框架来解释不同解释类型如何影响用户认知和信任。",
+                  "why_it_matters": "理论整合有助于指导解释设计，避免碎片化研究。",
+                  "evidence_basis": [
+                    "P004",
+                    "P012",
+                    "P021",
+                    "P026",
+                    "P027"
+                  ],
+                  "alternative_explanations": [
+                    "不同情境可能需要不同理论，统一框架可能过于简化。"
+                  ],
+                  "innovation_candidates": [
+                    "开发基于认知负荷理论和信任理论的综合模型。"
+                  ],
+                  "confidence": "emerging"
+                }
+              ]
+            },
+            {
+              "name_zh": "人机协作与团队动态",
+              "name_en": "Human-AI Collaboration and Team Dynamics",
+              "description": "研究人机团队中的认知溢出、决策模式对AI依赖的影响、协作中的责任感知与风险行为，以及创意协作框架。",
+              "paper_ids": [
+                "P005",
+                "P006",
+                "P015",
+                "P020",
+                "P022"
+              ],
+              "gaps": [
+                {
+                  "gap_type": "empirical",
+                  "gap_statement": "人机团队中的认知溢出效应缺乏实证研究，尤其是长期协作中的影响。",
+                  "why_it_matters": "认知溢出可能影响团队绩效和成员福祉，理解其机制有助于优化团队设计。",
+                  "evidence_basis": [
+                    "P006",
+                    "P020",
+                    "P022"
+                  ],
+                  "alternative_explanations": [
+                    "认知溢出可能只是短期现象，长期协作中可能适应。"
+                  ],
+                  "innovation_candidates": [
+                    "开展纵向研究，测量人机团队中的认知负荷和绩效变化。"
+                  ],
+                  "confidence": "emerging"
+                },
+                {
+                  "gap_type": "contextual",
+                  "gap_statement": "现有研究多关注通用场景，缺乏对特定行业（如医疗、创意产业）中人机协作模式的深入分析。",
+                  "why_it_matters": "不同行业的工作流程和约束条件不同，情境化研究能提供更针对性的设计建议。",
+                  "evidence_basis": [
+                    "P005",
+                    "P006",
+                    "P020",
+                    "P022"
+                  ],
+                  "alternative_explanations": [
+                    "通用原则可能适用于多个行业，情境化研究可能缺乏普适性。"
+                  ],
+                  "innovation_candidates": [
+                    "在医疗诊断、广告创意等领域开展案例研究。"
+                  ],
+                  "confidence": "emerging"
+                }
+              ]
+            },
+            {
+              "name_zh": "AI在特定领域的应用与影响",
+              "name_en": "AI Applications and Impact in Specific Domains",
+              "description": "研究AI在医疗、心理咨询、设计、内容创作、儿童教育等领域的应用，包括临床文档、放射学实践、生成式电影、AI设计产品等。",
+              "paper_ids": [
+                "P009",
+                "P010",
+                "P011",
+                "P013",
+                "P017",
+                "P019",
+                "P023",
+                "P024"
+              ],
+              "gaps": [
+                {
+                  "gap_type": "empirical",
+                  "gap_statement": "AI在医疗领域的应用研究多集中于技术可行性，缺乏对患者结果和临床工作流程影响的长期评估。",
+                  "why_it_matters": "医疗AI的最终价值在于改善患者结果和效率，长期评估能提供关键证据。",
+                  "evidence_basis": [
+                    "P010",
+                    "P023",
+                    "P024"
+                  ],
+                  "alternative_explanations": [
+                    "短期研究可能已足够证明效果，长期评估可能面临伦理和成本问题。"
+                  ],
+                  "innovation_candidates": [
+                    "设计多中心纵向研究，跟踪AI辅助诊断对患者预后的影响。"
+                  ],
+                  "confidence": "emerging"
+                },
+                {
+                  "gap_type": "contextual",
+                  "gap_statement": "AI在创意产业（如电影、设计）中的应用研究缺乏对创作者身份和劳动影响的深入探讨。",
+                  "why_it_matters": "AI可能改变创意工作的本质和创作者的经济地位，理解这些影响有助于制定公平的政策。",
+                  "evidence_basis": [
+                    "P009",
+                    "P017",
+                    "P019"
+                  ],
+                  "alternative_explanations": [
+                    "AI可能只是工具，不会根本改变创意劳动。"
+                  ],
+                  "innovation_candidates": [
+                    "对创意工作者进行访谈，了解他们对AI的态度和应对策略。"
+                  ],
+                  "confidence": "emerging"
+                }
+              ]
+            },
+            {
+              "name_zh": "AI交互设计与用户体验",
+              "name_en": "AI Interaction Design and User Experience",
+              "description": "研究AI交互设计指南、主动对话式AI、推荐系统、安全信任、AI解释的设计与评估等。",
+              "paper_ids": [
+                "P007",
+                "P008",
+                "P018",
+                "P025"
+              ],
+              "gaps": [
+                {
+                  "gap_type": "methodological",
+                  "gap_statement": "AI交互设计指南的评估多采用实验室方法，缺乏在真实使用环境中的验证。",
+                  "why_it_matters": "真实环境中的用户行为可能不同，现场评估能提高指南的实用性。",
+                  "evidence_basis": [
+                    "P025",
+                    "P018"
+                  ],
+                  "alternative_explanations": [
+                    "实验室评估可能已足够，现场评估成本高且难以控制变量。"
+                  ],
+                  "innovation_candidates": [
+                    "在真实应用中部署指南并进行A/B测试。"
+                  ],
+                  "confidence": "emerging"
+                },
+                {
+                  "gap_type": "empirical",
+                  "gap_statement": "主动对话式AI的用户接受度和长期使用效果缺乏实证研究。",
+                  "why_it_matters": "主动交互可能打扰用户，理解用户偏好有助于设计更合适的主动策略。",
+                  "evidence_basis": [
+                    "P008",
+                    "P007"
+                  ],
+                  "alternative_explanations": [
+                    "用户可能适应主动交互，短期研究可能低估其价值。"
+                  ],
+                  "innovation_candidates": [
+                    "进行日记研究，记录用户对主动AI的反应和感受。"
+                  ],
+                  "confidence": "emerging"
+                }
+              ]
+            }
+          ],
+          "unclassified_paper_ids": [],
+          "contradictions": [
+            {
+              "paper_ids": [
+                "P002",
+                "P014"
+              ],
+              "statement": "P002发现拟人化提升温暖感知和合作意愿，而P014发现AI人格可能影响道德判断，但未直接比较拟人化程度对道德判断的影响，存在潜在矛盾。"
+            },
+            {
+              "paper_ids": [
+                "P004",
+                "P027"
+              ],
+              "statement": "P004发现错误难度调节解释有效性，而P027发现解释与信任关系复杂，可能因情境不同而产生矛盾结果。"
+            }
+          ],
+          "limitations": [
+            "仅基于论文题名和摘要进行归类，未深入全文，可能遗漏重要细节。",
+            "部分论文作者信息缺失，可能影响对研究背景的判断。",
+            "研究空白基于现有论文的推断，需进一步文献验证。",
+            "期刊等级不能完全代表研究质量，可能存在发表偏倚。"
+          ]
+        }
+      },
+      "message_to_user": "已生成5个研究小方向和10个可追溯研究空白候选；空白依据题名级元数据，选择前仍需全文复核。"
+    },
+    "athlete_b": null,
+    "judge": null,
+    "usage": {
+      "prompt_tokens": 3674,
+      "completion_tokens": 2153,
+      "total_tokens": 5827,
+      "prompt_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "prompt_cache_hit_tokens": 3584,
+      "prompt_cache_miss_tokens": 90
+    },
+    "cost": null
+  },
+  "status": "SYNTHESIS_COMPLETE",
+  "errors": [],
+  "missing_trace_fields": [
+    "second_independent_athlete_not_implemented",
+    "judge_not_implemented",
+    "deterministic_clustering_not_implemented",
+    "provider_cost_not_configured"
+  ]
+}

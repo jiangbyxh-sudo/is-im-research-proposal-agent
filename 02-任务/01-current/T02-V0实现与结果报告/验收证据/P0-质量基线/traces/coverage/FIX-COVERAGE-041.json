@@ -1,0 +1,641 @@
+{
+  "trace_schema_version": "1.0.0",
+  "trace_id": "trace_661068f07d1f48febce8dcf5c5c06b00",
+  "case_id": "FIX-COVERAGE-041",
+  "recorded_at": "2026-08-21T18:45:09.708113+00:00",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "started_at": "2026-08-21T18:45:03.320833+00:00",
+  "completed_at": "2026-08-21T18:45:09.706591+00:00",
+  "duration_ms": 6391.0,
+  "input": {
+    "selected_direction_id": "topic_news_consumption",
+    "research_direction": "news consumption",
+    "fine_grained_question": null,
+    "chinese_count": 10,
+    "english_count": 20
+  },
+  "versions": {
+    "catalog": "0.4.1",
+    "journal_registry": "0.4.0",
+    "retrieval_provider": "crossref-current-baseline",
+    "trace_schema": "1.0.0"
+  },
+  "query_plan": {
+    "query": "news consumption",
+    "journal_pool_ids": [
+      "IS_CORE",
+      "COMMUNICATION",
+      "HCI",
+      "ZH_IS_IM_CORE",
+      "ZH_ORG_INNOVATION",
+      "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+      "PKU_CORE_2023_COMMUNICATION"
+    ],
+    "max_journals_per_language": 2,
+    "rows_per_journal": 20,
+    "popularity_window_years": 5,
+    "concurrency": 1,
+    "concurrency_policy": "crossref_public_pool"
+  },
+  "provider_runs": [
+    {
+      "provider": "Crossref",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "1073-0516",
+      "query": "news consumption",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 2,
+      "accepted_before_dedupe": 2,
+      "queried_at": "2026-08-21T18:45:06.558669+00:00",
+      "duration_ms": 1469.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1469.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "issn": "0167-9236",
+      "query": "news consumption",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 8,
+      "accepted_before_dedupe": 8,
+      "queried_at": "2026-08-21T18:45:08.035069+00:00",
+      "duration_ms": 1672.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1672.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "中国软科学",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1005-0566",
+      "query": "news consumption",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 6,
+      "accepted_before_dedupe": 6,
+      "queried_at": "2026-08-21T18:45:03.323402+00:00",
+      "duration_ms": 1656.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1656.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    },
+    {
+      "provider": "Crossref",
+      "journal": "科学学研究",
+      "language": "zh",
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "issn": "1003-2053",
+      "query": "news consumption",
+      "from_date": "2022-01-01",
+      "until_date": "2026-08-22",
+      "requested_rows": 20,
+      "returned_rows": 0,
+      "accepted_before_dedupe": 0,
+      "queried_at": "2026-08-21T18:45:04.981525+00:00",
+      "duration_ms": 1578.0,
+      "concurrency_policy": "crossref_public_pool",
+      "transport": {
+        "attempts": 1,
+        "duration_ms": 1578.0,
+        "polite_pool": false,
+        "rate_limit": 5.0,
+        "rate_interval_seconds": 1.0,
+        "retry_after_seconds": null
+      }
+    }
+  ],
+  "candidate_counts": {
+    "raw_returned": 16,
+    "accepted_before_dedupe": 16,
+    "deduped_corpus": 16,
+    "final_selected": 16,
+    "final_by_language": {
+      "zh": 6,
+      "en": 10
+    }
+  },
+  "filters": {},
+  "status": "RETRIEVAL_PARTIAL",
+  "shortages": {
+    "zh": 4,
+    "en": 10
+  },
+  "zero_reason": null,
+  "errors": [],
+  "final_papers": [
+    {
+      "title": "How does digital literacy promote rural residents’ consumption?",
+      "authors": [
+        "Yuanhe YU",
+        "Zhaoxin HUO"
+      ],
+      "year": 2026,
+      "published_date": "2026-01-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260108",
+      "url": "https://doi.org/10.3724/1005-0566.20260108",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Impact of information consumption on regional coordinated development",
+      "authors": [
+        "Tanglin YE",
+        "Yunfeng BAI",
+        "Huazhen LIU"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260409",
+      "url": "https://doi.org/10.3724/1005-0566.20260409",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Impact of circulation system construction on household consumption",
+      "authors": [
+        "Xiaoyu ZHANG",
+        "Min ZHANG",
+        "Jinquan LIU"
+      ],
+      "year": 2026,
+      "published_date": "2026-05-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260505",
+      "url": "https://doi.org/10.3724/1005-0566.20260505",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Research on influencing factors and countermeasures of China&amp;rsquo;s resident consumption rate",
+      "authors": [
+        "Junan GONG"
+      ],
+      "year": 2026,
+      "published_date": "2026-03-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260318",
+      "url": "https://doi.org/10.3724/1005-0566.20260318",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Spillover effect of public charging stations on residents’ consumption vitality",
+      "authors": [
+        "Xiaomin LI",
+        "Shizhe LIU",
+        "Dongkun LI",
+        "Zhicheng XU"
+      ],
+      "year": 2026,
+      "published_date": "2026-04-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20260407",
+      "url": "https://doi.org/10.3724/1005-0566.20260407",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Impact of national urban agglomeration policies on the household consumption rate in China",
+      "authors": [
+        "NIE Yunqiu",
+        "MA Xiaojun",
+        "LI Haiming"
+      ],
+      "year": 2025,
+      "published_date": "2025-08-01",
+      "journal": "中国软科学",
+      "language": "zh",
+      "doi": "10.3724/1005-0566.20250516",
+      "url": "https://doi.org/10.3724/1005-0566.20250516",
+      "citation_count": 0,
+      "journal_ranking": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "journal_pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "MegaFake: A theory-driven dataset of fake news generated by large language models",
+      "authors": [
+        "Lionel Z. Wang",
+        "Ka Chung Ng",
+        "Yiming Ma",
+        "Wenqi Fan"
+      ],
+      "year": 2026,
+      "published_date": "2026-07-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2026.114676",
+      "url": "https://doi.org/10.1016/j.dss.2026.114676",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Towards sustainable consumption decision-making: Examining the interplay of blockchain transparency and information-seeking in reducing product uncertainty",
+      "authors": [
+        "Maryam Hina",
+        "Najmul Islam",
+        "Xin (Robert) Luo"
+      ],
+      "year": 2025,
+      "published_date": "2025-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114370",
+      "url": "https://doi.org/10.1016/j.dss.2024.114370",
+      "citation_count": 22,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "From game to beyond game: Exploring the role of 3D rendering technology in user immersion and virtual consumption in the Metaverse",
+      "authors": [
+        "Guihua Zhang",
+        "Sarbottam Bhagat",
+        "Sung Ho Lee",
+        "Dae Wan Kim",
+        "Dan J. Kim"
+      ],
+      "year": 2025,
+      "published_date": "2025-02-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114383",
+      "url": "https://doi.org/10.1016/j.dss.2024.114383",
+      "citation_count": 12,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Emotion aware session based news recommender systems",
+      "authors": [
+        "Benjamin Gundersen",
+        "Saikishore Kalloori",
+        "Abhishek Srivastava"
+      ],
+      "year": 2025,
+      "published_date": "2025-11-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2025.114540",
+      "url": "https://doi.org/10.1016/j.dss.2025.114540",
+      "citation_count": 3,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "A decision support system using signals from social media and news to predict cryptocurrency prices",
+      "authors": [
+        "Hemang Subramanian",
+        "Patricia Angle",
+        "Florent Rouxelin",
+        "Ziyang Zhang"
+      ],
+      "year": 2024,
+      "published_date": "2024-03-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2023.114129",
+      "url": "https://doi.org/10.1016/j.dss.2023.114129",
+      "citation_count": 22,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Reliability Criteria for News Websites",
+      "authors": [
+        "Hendrik Heuer",
+        "Elena L. Glassman"
+      ],
+      "year": 2024,
+      "published_date": "2024-04-30",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3635147",
+      "url": "https://doi.org/10.1145/3635147",
+      "citation_count": 13,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "The strength of weak ties and fake news believability",
+      "authors": [
+        "Babajide Osatuyi",
+        "Alan R. Dennis"
+      ],
+      "year": 2024,
+      "published_date": "2024-09-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114275",
+      "url": "https://doi.org/10.1016/j.dss.2024.114275",
+      "citation_count": 8,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Multi-criteria evaluation of health news stories",
+      "authors": [
+        "Ermira Zifla",
+        "Burcu Eke Rubini"
+      ],
+      "year": 2024,
+      "published_date": "2024-05-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2024.114187",
+      "url": "https://doi.org/10.1016/j.dss.2024.114187",
+      "citation_count": 1,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Marvista: Exploring the Design of a Human-AI Collaborative News Reading Tool",
+      "authors": [
+        "Xiang “Anthony” Chen",
+        "Chien-Sheng Wu",
+        "Lidiya Murakhovs’ka",
+        "Philippe Laban",
+        "Tong Niu",
+        "Wenhao Liu",
+        "Caiming Xiong"
+      ],
+      "year": 2023,
+      "published_date": "2023-12-31",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "doi": "10.1145/3609331",
+      "url": "https://doi.org/10.1145/3609331",
+      "citation_count": 19,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "HCI"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    },
+    {
+      "title": "Understanding the impacts of user- and marketer- generated content on free digital content consumption",
+      "authors": [
+        "Kexin Zhao",
+        "Peiqin Zhang",
+        "Hsun-Ming Lee"
+      ],
+      "year": 2022,
+      "published_date": "2022-03-01",
+      "journal": "Decision Support Systems",
+      "language": "en",
+      "doi": "10.1016/j.dss.2021.113684",
+      "url": "https://doi.org/10.1016/j.dss.2021.113684",
+      "citation_count": 51,
+      "journal_ranking": [
+        "FMS_INT_B"
+      ],
+      "journal_pool_ids": [
+        "IS_CORE"
+      ],
+      "verified_by": [
+        "local_journal_whitelist",
+        "crossref_journal_endpoint"
+      ],
+      "relevance_score": 2.5,
+      "metadata_source": "Crossref"
+    }
+  ],
+  "corpus_hash": "f79a4caafd1a5abd6a68fb68214713b9a01dc20b3f0b7e2dd3c57aa1e0c29591",
+  "model": {
+    "called": false,
+    "outputs": [],
+    "token_usage": 0,
+    "cost": 0
+  },
+  "missing_trace_fields": [
+    "provider_raw_response_not_persisted",
+    "paper_score_breakdown_not_implemented",
+    "abstract_not_exposed_in_final_paper_record"
+  ]
+}
