@@ -1,0 +1,364 @@
+version: 0.4.0
+as_of: '2026-08-21'
+ranking_system: CAS Journal Partition Table
+edition: 2025
+edition_status: terminal_official_edition
+coverage_filter: SSCI only
+selection_scope: IS/IM直接相关 + HCI/心理/传播/数字政府强交叉；仅大类1区/2区
+zone_1:
+- title: International Journal of Information Management
+  domain: IM/IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 1
+  tags:
+  - information_management
+  - AI
+  - digital_transformation
+  - knowledge_management
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Information Processing & Management
+  domain: IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 计算机科学
+  cas_big_zone: 1
+  tags:
+  - information_retrieval
+  - NLP
+  - recommender
+  - information_behavior
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Government Information Quarterly
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 1
+  tags:
+  - e_government
+  - digital_government
+  - public_information
+  - platform_governance
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Computers in Human Behavior
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 心理学
+  cas_big_zone: 1
+  tags:
+  - human_ai
+  - technology_use
+  - online_behavior
+  - social_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Journal of Computer-Mediated Communication
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - CMC
+  - social_media
+  - human_ai_communication
+  - digital_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: New Media & Society
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - platforms
+  - algorithms
+  - digital_society
+  - social_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Information, Communication & Society
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - ICT
+  - platform_governance
+  - digital_society
+  - social_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Journal of Communication
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - communication_theory
+  - media_effects
+  - digital_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Social Media + Society
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - social_media
+  - platforms
+  - online_communities
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Political Communication
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - misinformation
+  - platform_politics
+  - algorithmic_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Communication Research
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - media_effects
+  - online_behavior
+  - digital_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Digital Journalism
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - AI_journalism
+  - algorithms
+  - news_platforms
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: The International Journal of Press/Politics
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 1
+  tags:
+  - news_platforms
+  - political_communication
+  - misinformation
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Psychological Science
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 心理学
+  cas_big_zone: 1
+  tags:
+  - psychological_mechanism
+  - experiment
+  - decision_making
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Journal of Applied Psychology
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 心理学
+  cas_big_zone: 1
+  tags:
+  - algorithmic_management
+  - AI_work
+  - teams
+  - workplace_technology
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Perspectives on Psychological Science
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 心理学
+  cas_big_zone: 1
+  tags:
+  - theory_review
+  - psychological_mechanism
+  - meta_science
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+zone_2:
+- title: MIS Quarterly
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - IS_core
+  - AI
+  - platforms
+  - digital_organization
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Journal of Management Information Systems
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - IS_core
+  - AI
+  - platforms
+  - behavioral_IS
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Information & Management
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - technology_adoption
+  - online_behavior
+  - AI
+  - digital_organization
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Information Systems Journal
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - IS_core
+  - sociotechnical
+  - organizational_IS
+  - qualitative
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: European Journal of Information Systems
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - IS_core
+  - sociotechnical
+  - digital_transformation
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Organizational Behavior and Human Decision Processes
+  domain: IS
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 管理学
+  cas_big_zone: 2
+  tags:
+  - decision_making
+  - human_AI
+  - algorithm_aversion
+  - experiment
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Mass Communication and Society
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 2
+  tags:
+  - media_effects
+  - social_media
+  - digital_communication
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Chinese Journal of Communication
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 2
+  tags:
+  - digital_media
+  - China_context
+  - social_media
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: European Journal of Communication
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 2
+  tags:
+  - digital_media
+  - communication
+  - platforms
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Public Understanding of Science
+  domain: IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 2
+  tags:
+  - science_communication
+  - information_behavior
+  - misinformation
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+- title: Journal of Information Technology & Politics
+  domain: IS/IM
+  coverage: SSCI
+  cas_year: 2025
+  cas_big_category: 文学
+  cas_big_zone: 2
+  tags:
+  - e_government
+  - digital_politics
+  - platform_governance
+  verification_status: secondary_crosschecked_against_2025_cas_snapshot_sources
+  runtime_rule: 若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。
+important_exclusions:
+- title: Information Systems Research
+  cas_2025_big_zone: 3
+  reason: 虽为UTD24/FMS核心IS刊，但不属于中科院2025大类1/2区；不得由其他评级推断CAS分区。
+- title: Journal of the Association for Information Science and Technology
+  cas_2025_big_zone: 3
+  reason: 不属于中科院2025大类1/2区。
+- title: Journal of Information Technology
+  cas_2025_big_zone: 3
+  reason: 不属于中科院2025大类1/2区。
+- title: MIS Quarterly Executive
+  cas_2025_big_zone: 4
+  reason: 不属于中科院2025大类1/2区。
+sources:
+- https://las.cas.cn/news/tzgg/202603/t20260327_8178738.html
+- https://www.fenqubiao.com/
+- https://webapi.fenqubiao.com/Help/ResourceModel?modelName=Journal
+- https://webapi.fenqubiao.com/Help/ResourceModel?modelName=JCRCategory

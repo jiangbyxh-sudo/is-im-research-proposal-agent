@@ -1,0 +1,490 @@
+version: 0.2.0
+generated_on: '2026-08-21'
+startup_external_fetch: false
+counts:
+  structured_snapshot_indexed: 3
+  official_api_operational_card_indexed: 4
+  database_workflow_card_indexed: 5
+  public_toc_and_knowledge_map_indexed: 8
+  official_guideline_knowledge_card_indexed: 1
+  journal_guideline_knowledge_card_indexed: 2
+  bibliographic_abstract_and_concept_card_indexed: 6
+  open_resource_learning_map_indexed: 5
+  official_tutorial_knowledge_card_indexed: 1
+  abstract_and_method_card_indexed: 1
+  author_resource_knowledge_card_indexed: 1
+  official_standard_knowledge_card_indexed: 1
+  open_author_resource_learning_map_indexed: 2
+  open_course_learning_map_indexed: 1
+  public_description_and_knowledge_map_indexed: 1
+  official_framework_knowledge_card_indexed: 1
+  official_project_knowledge_card_indexed: 1
+  fulltext_chaptered_chunked_indexed: 2
+resources:
+- resource_id: RANK-FMS-2025
+  title: FMS管理科学高质量期刊推荐列表2025
+  type: official_ranking
+  local_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/RANK-FMS-2025.md
+  - 03_sources/local_knowledge/external/structured/fms_2025_scope.yaml
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: RANK-UTD24
+  title: UTD Top 100 Journal List
+  type: official_ranking
+  local_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/RANK-UTD24.md
+  - 03_sources/local_knowledge/external/structured/utd24_current.yaml
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: RANK-AIS-2025
+  title: AIS Senior Scholars List of Premier Journals
+  type: official_field_list
+  local_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/RANK-AIS-2025.md
+  - 03_sources/local_knowledge/external/structured/ais_premier_2025.yaml
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: META-CROSSREF
+  title: Crossref REST API
+  type: official_api
+  local_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/META-CROSSREF.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: META-OPENALEX
+  title: OpenAlex API
+  type: official_api
+  local_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/META-OPENALEX.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: META-SEMANTIC
+  title: Semantic Scholar Academic Graph API
+  type: official_api
+  local_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/META-SEMANTIC.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: OA-UNPAYWALL
+  title: Unpaywall API
+  type: official_api
+  local_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/OA-UNPAYWALL.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: DB-AISEL
+  title: AIS eLibrary
+  type: discipline_repository
+  local_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/DB-AISEL.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: DB-CNKI
+  title: 中国知网
+  type: bibliographic_database
+  local_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/DB-CNKI.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: DB-WANFANG
+  title: 万方数据知识服务平台
+  type: bibliographic_database
+  local_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/DB-WANFANG.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: DB-VIP
+  title: 维普中文期刊服务平台
+  type: bibliographic_database
+  local_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/DB-VIP.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: DB-NCPSSD
+  title: 国家哲学社会科学文献中心
+  type: official_repository
+  local_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/DB-NCPSSD.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-CRAFT-5E
+  title: The Craft of Research, 5th Edition
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-CRAFT-5E.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-CRESWELL-6E
+  title: Research Design, 6th Edition
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-CRESWELL-6E.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-SWALES-FEAK
+  title: Academic Writing for Graduate Students, 3rd Edition
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-SWALES-FEAK.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-APA-JARS
+  title: APA Journal Article Reporting Standards
+  type: official_standard
+  local_status: official_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-APA-JARS.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-MISQ-GUIDE
+  title: MIS Quarterly Instructions for Authors
+  type: journal_guideline
+  local_status: journal_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-MISQ-GUIDE.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-ISR-GUIDE
+  title: Information Systems Research Submission Guidelines
+  type: journal_guideline
+  local_status: journal_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-ISR-GUIDE.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: WRITE-WEBSTER-WATSON
+  title: 'Analyzing the Past to Prepare for the Future: Writing a Literature Review'
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/WRITE-WEBSTER-WATSON.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: THEORY-GREGOR-2006
+  title: The Nature of Theory in Information Systems
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/THEORY-GREGOR-2006.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: THEORY-HEVNER-2004
+  title: Design Science in Information Systems Research
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/THEORY-HEVNER-2004.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: THEORY-TAM-1989
+  title: Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/THEORY-TAM-1989.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: THEORY-UTAUT-2003
+  title: 'User Acceptance of Information Technology: Toward a Unified View'
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/THEORY-UTAUT-2003.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: THEORY-TTF-1995
+  title: Task-Technology Fit and Individual Performance
+  type: classic_article
+  local_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/THEORY-TTF-1995.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-OPENINTRO
+  title: Introduction to Modern Statistics
+  type: open_textbook
+  local_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-OPENINTRO.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-R4DS
+  title: R for Data Science, 2nd Edition
+  type: open_textbook
+  local_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-R4DS.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-ISLR
+  title: An Introduction to Statistical Learning
+  type: open_textbook
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-ISLR.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-MIXTAPE
+  title: 'Causal Inference: The Mixtape'
+  type: open_textbook
+  local_status: open_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-MIXTAPE.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-LAVAAN
+  title: lavaan Tutorial
+  type: official_tutorial
+  local_status: official_tutorial_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-LAVAAN.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-GIOIA
+  title: 'Seeking Qualitative Rigor in Inductive Research: Notes on the Gioia Methodology'
+  type: method_article
+  local_status: abstract_and_method_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-GIOIA.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-THEMATIC
+  title: Braun and Clarke Thematic Analysis Resources
+  type: author_resource
+  local_status: author_resource_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-THEMATIC.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-PRISMA
+  title: PRISMA 2020
+  type: reporting_standard
+  local_status: official_standard_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-PRISMA.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-BDA
+  title: Bayesian Data Analysis
+  type: book_and_author_resources
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-BDA.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-PROBML
+  title: Probabilistic Machine Learning
+  type: open_author_book
+  local_status: open_author_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-PROBML.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-YALE-GAME
+  title: 'Yale ECON 159: Game Theory'
+  type: open_course
+  local_status: open_course_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-YALE-GAME.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-ONLINE-EXPERIMENTS
+  title: Trustworthy Online Controlled Experiments
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/METHOD-ONLINE-EXPERIMENTS.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-INTRO
+  title: Introduction to Information Science, 2nd Edition
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-INTRO.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-LOOKING
+  title: Looking for Information, 5th Edition
+  type: book
+  local_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-LOOKING.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-IR-BOOK
+  title: Introduction to Information Retrieval
+  type: open_textbook
+  local_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-IR-BOOK.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-KM-DALKIR
+  title: Knowledge Management in Theory and Practice, 4th Edition
+  type: book
+  local_status: public_description_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-KM-DALKIR.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-DMBOK
+  title: DAMA-DMBOK
+  type: body_of_knowledge
+  local_status: official_framework_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-DMBOK.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-SLP3
+  title: Speech and Language Processing, 3rd Edition Draft
+  type: open_author_book
+  local_status: open_author_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-SLP3.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-NETWORK
+  title: Network Science
+  type: open_textbook
+  local_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-NETWORK.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: IM-BIBLIOMETRIX
+  title: bibliometrix / Biblioshiny
+  type: official_project
+  local_status: official_project_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  local_paths:
+  - 03_sources/local_knowledge/external/cards/IM-BIBLIOMETRIX.md
+  - 03_sources/local_knowledge/external/catalog.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  next_action: localize_or_keep_explicit_gap
+- resource_id: METHOD-IACMR-EMPIRICAL-2008
+  title: 组织与管理研究的实证方法（2008版）
+  type: book_user_supplied_local
+  local_status: fulltext_chaptered_chunked_indexed
+  runtime_fetch: not_required
+  local_paths:
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/source.md
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/metadata.yaml
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapter_index.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  - 03_sources/local_knowledge/index/method_topic_router.yaml
+  next_action: none_runtime_ready
+- resource_id: METHOD-IACMR-EMPIRICAL-2018
+  title: 组织与管理研究的实证方法（第三版，2018）
+  type: book_user_supplied_local
+  local_status: fulltext_chaptered_chunked_indexed
+  runtime_fetch: not_required
+  local_paths:
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/source.md
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/metadata.yaml
+  - 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapter_index.yaml
+  - 03_sources/local_knowledge/index/local_fts.sqlite
+  - 03_sources/local_knowledge/index/method_topic_router.yaml
+  next_action: none_runtime_ready

@@ -1,0 +1,75 @@
+version: 0.2.0
+generated_on: '2026-08-21'
+paradigms:
+  quantitative_archival_causal:
+    coverage: substantial_local
+    refs:
+    - 2018:ch04
+    - 2018:ch06
+    - 2018:ch08
+    - 2018:ch18
+    - 2018:ch19
+    - 2018:ch20
+    limits:
+    - 现代DiD、RDD、IV和合成控制需要其他本地来源
+  survey_sem:
+    coverage: substantial_local
+    refs:
+    - 2018:ch07
+    - 2018:ch13
+    - 2018:ch14
+    - 2018:ch15
+    - 2018:ch16
+    - 2018:ch17
+    - 2018:ch22
+    limits:
+    - 最新软件语法和新估计方法仍需版本化补充
+  experiment:
+    coverage: substantial_local
+    refs:
+    - 2018:ch05
+    - 2018:ch06
+    - 2018:ch21
+    limits:
+    - 平台级A/B测试工程、序贯检验和现代在线实验治理需其他来源
+  qualitative_case_process:
+    coverage: substantial_local
+    refs:
+    - 2018:ch09
+    - 2018:ch10
+    - 2018:ch12
+    limits:
+    - 过程理论和特定质化流派需另建专题卡
+  systematic_review_bibliometric:
+    coverage: partial_local
+    refs:
+    - 2018:ch11
+    limits:
+    - 覆盖元分析；PRISMA、科学计量和知识图谱流程未由这两本书完整覆盖
+  mixed_methods:
+    coverage: partial_local
+    refs:
+    - 2018:ch04
+    - 2018:ch09
+    - 2018:ch10
+    - 2018:ch12
+    limits:
+    - 未提供完整混合方法设计类型和整合标准
+  computational_text_network:
+    coverage: partial_local
+    refs:
+    - 2018:ch08
+    - 2018:ch10
+    - 2008:ch16
+    limits:
+    - NLP、机器学习、现代网络建模和可复现计算流程需其他来源
+  analytical_modeling:
+    coverage: not_covered_by_books
+    refs: []
+    limits:
+    - 博弈论、优化、信息经济学和机制设计需独立本地知识源
+  design_science:
+    coverage: not_covered_by_books
+    refs: []
+    limits:
+    - 设计科学研究循环、制品评价和设计理论需独立本地知识源

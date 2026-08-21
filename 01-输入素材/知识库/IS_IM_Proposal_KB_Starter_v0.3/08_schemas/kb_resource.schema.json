@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KBResource",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "resource_id",
+    "title",
+    "resource_type",
+    "status",
+    "verified_on"
+  ],
+  "properties": {
+    "resource_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "source_mapped",
+        "reviewed",
+        "approved",
+        "fulltext_indexed",
+        "deprecated"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "access": {
+      "enum": [
+        "open",
+        "institutional",
+        "library_or_purchase",
+        "mixed",
+        "private_user_supplied_copy"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "copyright_notes": {
+      "type": "string"
+    },
+    "verified_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "bibliographic": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "local": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "runtime_fetch": {
+          "type": "string"
+        },
+        "rights": {
+          "type": "string"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fulltext_path": {
+          "type": "string"
+        },
+        "metadata_path": {
+          "type": "string"
+        },
+        "chapter_index_path": {
+          "type": "string"
+        },
+        "fts_index": {
+          "type": "string"
+        },
+        "topic_router": {
+          "type": "string"
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

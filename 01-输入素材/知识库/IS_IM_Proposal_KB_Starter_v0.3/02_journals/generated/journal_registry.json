@@ -1,0 +1,5149 @@
+{
+  "version": "0.4.0",
+  "generated_at": "2026-08-21T12:49:07.452922+00:00",
+  "eligibility_policy": "English default UTD24/FMS 2025 A/B; Chinese default FMS T1/T2, CSSCI 2025-2026 source, or PKU Core 2023; CAS 2025 Z1/Z2 stored as opt-in English extension",
+  "supplement_version": "0.4.0",
+  "journal_count": 179,
+  "issn_ready_count": 91,
+  "journals": [
+    {
+      "journal_id": "journal_001",
+      "canonical_title": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "issns": [
+        "1073-0516",
+        "1557-7325"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_002",
+      "canonical_title": "ACM Transactions on Information Systems",
+      "language": "en",
+      "issns": [
+        "1046-8188",
+        "1558-2868"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_IR"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_003",
+      "canonical_title": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "issns": [
+        "1556-4681",
+        "1556-472X"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_004",
+      "canonical_title": "Chinese Journal of Communication",
+      "language": "en",
+      "issns": [
+        "1754-4750",
+        "1754-4769"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_005",
+      "canonical_title": "Communication Research",
+      "language": "en",
+      "issns": [
+        "0093-6502",
+        "1552-3810"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_006",
+      "canonical_title": "Communications of the ACM",
+      "language": "en",
+      "issns": [
+        "0001-0782",
+        "1557-7317"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_AI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_007",
+      "canonical_title": "Computers in Human Behavior",
+      "language": "en",
+      "issns": [
+        "0747-5632"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "HCI"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_008",
+      "canonical_title": "Current Directions in Psychological Science",
+      "language": "en",
+      "issns": [
+        "0963-7214",
+        "1467-8721"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_009",
+      "canonical_title": "DATA BASE for Advances in Information Systems",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_010",
+      "canonical_title": "Data & Knowledge Engineering",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_011",
+      "canonical_title": "Decision Support Systems",
+      "language": "en",
+      "issns": [
+        "0167-9236"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_012",
+      "canonical_title": "Digital Journalism",
+      "language": "en",
+      "issns": [
+        "2167-0811",
+        "2167-082X"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_013",
+      "canonical_title": "European Journal of Communication",
+      "language": "en",
+      "issns": [
+        "0267-3231",
+        "1460-3705"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_014",
+      "canonical_title": "European Journal of Information Systems",
+      "language": "en",
+      "issns": [
+        "0960-085X",
+        "1476-9344"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_015",
+      "canonical_title": "Government Information Quarterly",
+      "language": "en",
+      "issns": [
+        "0740-624X"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PUBLIC_ADMIN"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_016",
+      "canonical_title": "IEEE Transactions on Knowledge and Data Engineering",
+      "language": "en",
+      "issns": [
+        "1041-4347",
+        "1558-2191",
+        "2326-3865"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA",
+        "CS_IR"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_017",
+      "canonical_title": "INFORMS Journal on Computing",
+      "language": "en",
+      "issns": [
+        "0899-1499",
+        "1091-9856",
+        "1526-5528",
+        "2326-3245"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_018",
+      "canonical_title": "Information & Management",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "DIGITAL_PLATFORM",
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_019",
+      "canonical_title": "Information Processing & Management",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1",
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "CS_IR",
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_020",
+      "canonical_title": "Information Sciences",
+      "language": "en",
+      "issns": [
+        "0020-0255"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_021",
+      "canonical_title": "Information Systems Frontiers",
+      "language": "en",
+      "issns": [
+        "1387-3326",
+        "1572-9419"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "PUBLIC_ADMIN"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_022",
+      "canonical_title": "Information Systems Journal",
+      "language": "en",
+      "issns": [
+        "1350-1917",
+        "1365-2575"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_023",
+      "canonical_title": "Information Systems Research",
+      "language": "en",
+      "issns": [
+        "1047-7047",
+        "1526-5536"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A",
+        "UTD24"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "IS_CORE",
+        "ORG_STRATEGY",
+        "SECURITY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_024",
+      "canonical_title": "Information Technology & People",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_025",
+      "canonical_title": "Information and Organization",
+      "language": "en",
+      "issns": [
+        "1471-7727"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_026",
+      "canonical_title": "Information, Communication & Society",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_027",
+      "canonical_title": "International Journal of Electronic Commerce",
+      "language": "en",
+      "issns": [
+        "1086-4415",
+        "1557-9301"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_028",
+      "canonical_title": "International Journal of Information Management",
+      "language": "en",
+      "issns": [
+        "0268-4012"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1",
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "DIGITAL_PLATFORM",
+        "PUBLIC_ADMIN"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_029",
+      "canonical_title": "Internet Research",
+      "language": "en",
+      "issns": [
+        "1066-2243",
+        "2054-5657"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_030",
+      "canonical_title": "Journal of Applied Psychology",
+      "language": "en",
+      "issns": [
+        "0021-9010",
+        "1939-1854"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1",
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_031",
+      "canonical_title": "Journal of Business and Psychology",
+      "language": "en",
+      "issns": [
+        "0889-3268",
+        "1573-353X"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_032",
+      "canonical_title": "Journal of Communication",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_033",
+      "canonical_title": "Journal of Computer-Mediated Communication",
+      "language": "en",
+      "issns": [
+        "1083-6101"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_034",
+      "canonical_title": "Journal of Consumer Psychology",
+      "language": "en",
+      "issns": [
+        "1057-7408",
+        "1532-7663"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_035",
+      "canonical_title": "Journal of Documentation",
+      "language": "en",
+      "issns": [
+        "0022-0418",
+        "1758-7379"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_036",
+      "canonical_title": "Journal of Experimental Psychology: Applied",
+      "language": "en",
+      "issns": [
+        "1076-898X",
+        "1939-2192"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_037",
+      "canonical_title": "Journal of Experimental Social Psychology",
+      "language": "en",
+      "issns": [
+        "0022-1031",
+        "1096-0465"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_038",
+      "canonical_title": "Journal of Information Science",
+      "language": "en",
+      "issns": [
+        "0165-5515",
+        "1741-6485"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_039",
+      "canonical_title": "Journal of Information Technology",
+      "language": "en",
+      "issns": [
+        "0268-3962",
+        "1466-4437"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_040",
+      "canonical_title": "Journal of Information Technology & Politics",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_041",
+      "canonical_title": "Journal of Informetrics",
+      "language": "en",
+      "issns": [
+        "1751-1577"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_042",
+      "canonical_title": "Journal of Management Information Systems",
+      "language": "en",
+      "issns": [
+        "0742-1222",
+        "1557-928X"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_043",
+      "canonical_title": "Journal of Occupational Health Psychology",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_044",
+      "canonical_title": "Journal of Occupational and Organizational Psychology",
+      "language": "en",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_045",
+      "canonical_title": "Journal of Personality and Social Psychology",
+      "language": "en",
+      "issns": [
+        "0022-3514",
+        "1939-1315"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_046",
+      "canonical_title": "Journal of Strategic Information Systems",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_047",
+      "canonical_title": "Journal of the Association for Information Science and Technology",
+      "language": "en",
+      "issns": [
+        "2330-1635",
+        "2330-1643"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CS_IR",
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_048",
+      "canonical_title": "Journal of the Association for Information Systems",
+      "language": "en",
+      "issns": [
+        "1536-9323"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_049",
+      "canonical_title": "Learned Publishing",
+      "language": "en",
+      "issns": [
+        "0953-1513",
+        "1741-4857"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_050",
+      "canonical_title": "Library & Information Science Research",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_051",
+      "canonical_title": "MIS Quarterly",
+      "language": "en",
+      "issns": [
+        "0276-7783",
+        "2162-9730"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_A",
+        "UTD24"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "IS_CORE",
+        "ORG_STRATEGY",
+        "SECURITY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_052",
+      "canonical_title": "MIS Quarterly Executive",
+      "language": "en",
+      "issns": [
+        "1540-1960"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_053",
+      "canonical_title": "Management Science",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_A",
+        "UTD24"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_054",
+      "canonical_title": "Marketing Science",
+      "language": "en",
+      "issns": [
+        "0732-2399",
+        "1526-548X"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A",
+        "UTD24"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_055",
+      "canonical_title": "Mass Communication and Society",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_056",
+      "canonical_title": "New Media & Society",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_057",
+      "canonical_title": "Organization Science",
+      "language": "en",
+      "issns": [
+        "1047-7039",
+        "1526-5455"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A",
+        "UTD24"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "ORG_STRATEGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_058",
+      "canonical_title": "Organizational Behavior and Human Decision Processes",
+      "language": "en",
+      "issns": [
+        "0749-5978",
+        "1095-9920"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2",
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_059",
+      "canonical_title": "Personnel Psychology",
+      "language": "en",
+      "issns": [
+        "0031-5826",
+        "1744-6570"
+      ],
+      "ranking_levels": [
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_060",
+      "canonical_title": "Perspectives on Psychological Science",
+      "language": "en",
+      "issns": [
+        "1745-6916",
+        "1745-6924"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_061",
+      "canonical_title": "Political Communication",
+      "language": "en",
+      "issns": [
+        "1058-4609",
+        "1091-7675"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_062",
+      "canonical_title": "Psychological Bulletin",
+      "language": "en",
+      "issns": [
+        "0033-2909",
+        "1939-1455"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_063",
+      "canonical_title": "Psychological Science",
+      "language": "en",
+      "issns": [
+        "0956-7976",
+        "1467-9280"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1",
+        "FMS_INT_A"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_064",
+      "canonical_title": "Public Understanding of Science",
+      "language": "en",
+      "issns": [
+        "0963-6625",
+        "1361-6609"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE2",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_065",
+      "canonical_title": "Scientometrics",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_066",
+      "canonical_title": "Social Media + Society",
+      "language": "en",
+      "issns": [],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_067",
+      "canonical_title": "The Information Society",
+      "language": "en",
+      "issns": [
+        "0197-2243",
+        "1087-6537"
+      ],
+      "ranking_levels": [
+        "FMS_INT_B"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_068",
+      "canonical_title": "The International Journal of Press/Politics",
+      "language": "en",
+      "issns": [
+        "1040-1620",
+        "1940-1612",
+        "1940-1620"
+      ],
+      "ranking_levels": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CAS_SSCI_2025_Z1_Z2_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CAS_SSCI_2025_ZONE1",
+          "verification_status": "secondary_crosschecked_against_2025_cas_snapshot_sources",
+          "runtime_rule": "若等级是硬门禁条件，使用有权限的中科院2025官方分区表账户复核；2026新锐分区不得替代。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_069",
+      "canonical_title": "中国临床心理学杂志",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_070",
+      "canonical_title": "中国出版",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_071",
+      "canonical_title": "中国图书馆学报",
+      "language": "zh",
+      "issns": [
+        "1001-8867"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_072",
+      "canonical_title": "中国电化教育",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_073",
+      "canonical_title": "中国电视",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_074",
+      "canonical_title": "中国科技期刊研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_075",
+      "canonical_title": "中国科技论坛",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_076",
+      "canonical_title": "中国管理科学",
+      "language": "zh",
+      "issns": [
+        "1003-207X"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_077",
+      "canonical_title": "中国编辑",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_078",
+      "canonical_title": "中国行政管理",
+      "language": "zh",
+      "issns": [
+        "1006-0863"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_079",
+      "canonical_title": "中国软科学",
+      "language": "zh",
+      "issns": [
+        "1005-0566"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_080",
+      "canonical_title": "中国远程教育",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_081",
+      "canonical_title": "交通运输系统工程与信息",
+      "language": "zh",
+      "issns": [
+        "1009-6744"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_082",
+      "canonical_title": "传媒观察",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_083",
+      "canonical_title": "信息系统学报",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "missing_local_issn",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_084",
+      "canonical_title": "信息资源管理学报",
+      "language": "zh",
+      "issns": [
+        "2095-2171"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_085",
+      "canonical_title": "全球传媒学刊",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_086",
+      "canonical_title": "公共管理与政策评论",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_087",
+      "canonical_title": "公共管理学报",
+      "language": "zh",
+      "issns": [
+        "1672-6162"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_088",
+      "canonical_title": "公共行政评论",
+      "language": "zh",
+      "issns": [
+        "1674-2486"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_089",
+      "canonical_title": "出版发行研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_090",
+      "canonical_title": "出版广角",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_091",
+      "canonical_title": "出版科学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_092",
+      "canonical_title": "华东经济管理",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_093",
+      "canonical_title": "南开管理评论",
+      "language": "zh",
+      "issns": [
+        "1008-3448"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_094",
+      "canonical_title": "国家图书馆学刊",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_095",
+      "canonical_title": "国际新闻界",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_096",
+      "canonical_title": "图书与情报",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_097",
+      "canonical_title": "图书情报工作",
+      "language": "zh",
+      "issns": [
+        "0252-3116"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_098",
+      "canonical_title": "图书情报知识",
+      "language": "zh",
+      "issns": [
+        "1003-2797"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_099",
+      "canonical_title": "图书资讯学刊",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_100",
+      "canonical_title": "图书馆",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_101",
+      "canonical_title": "图书馆学研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_102",
+      "canonical_title": "图书馆工作与研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_EXTENDED",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_EXTENDED",
+          "verification_status": "extended",
+          "runtime_rule": "CSSCI扩展版不得与来源期刊等价"
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_103",
+      "canonical_title": "图书馆建设",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_104",
+      "canonical_title": "图书馆杂志",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_105",
+      "canonical_title": "图书馆理论与实践",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_EXTENDED"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_EXTENDED",
+          "verification_status": "extended",
+          "runtime_rule": "CSSCI扩展版不得与来源期刊等价"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_106",
+      "canonical_title": "图书馆论坛",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_107",
+      "canonical_title": "外国经济与管理",
+      "language": "zh",
+      "issns": [
+        "1001-4950"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_108",
+      "canonical_title": "大学图书馆学报",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_109",
+      "canonical_title": "工业工程与管理",
+      "language": "zh",
+      "issns": [
+        "1007-5429"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_110",
+      "canonical_title": "工程管理科技前沿",
+      "language": "zh",
+      "issns": [
+        "2097-0145"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_111",
+      "canonical_title": "应用心理学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_112",
+      "canonical_title": "开放教育研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_113",
+      "canonical_title": "当代传播",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_114",
+      "canonical_title": "心理与行为研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_115",
+      "canonical_title": "心理发展与教育",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_116",
+      "canonical_title": "心理学报",
+      "language": "zh",
+      "issns": [
+        "0439-755X"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_117",
+      "canonical_title": "心理学探新",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_118",
+      "canonical_title": "心理科学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_119",
+      "canonical_title": "心理科学进展",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_120",
+      "canonical_title": "情报学报",
+      "language": "zh",
+      "issns": [
+        "1000-0135"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_121",
+      "canonical_title": "情报杂志",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_122",
+      "canonical_title": "情报理论与实践",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_123",
+      "canonical_title": "情报科学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_124",
+      "canonical_title": "情报资料工作",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_125",
+      "canonical_title": "数字图书馆论坛",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_EXTENDED"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_EXTENDED",
+          "verification_status": "extended",
+          "runtime_rule": "CSSCI扩展版不得与来源期刊等价"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_126",
+      "canonical_title": "数据分析与知识发现",
+      "language": "zh",
+      "issns": [
+        "2096-3467"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_127",
+      "canonical_title": "数理统计与管理",
+      "language": "zh",
+      "issns": [
+        "1002-1566"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_128",
+      "canonical_title": "数量经济技术经济研究",
+      "language": "zh",
+      "issns": [
+        "1000-3894"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_129",
+      "canonical_title": "新世纪图书馆",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_EXTENDED"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_EXTENDED",
+          "verification_status": "extended",
+          "runtime_rule": "CSSCI扩展版不得与来源期刊等价"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_130",
+      "canonical_title": "新闻与传播研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_131",
+      "canonical_title": "新闻与传播评论",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_132",
+      "canonical_title": "新闻与写作",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_133",
+      "canonical_title": "新闻大学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_134",
+      "canonical_title": "新闻界",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_135",
+      "canonical_title": "新闻记者",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_136",
+      "canonical_title": "智库理论与实践",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_MANAGEMENT_DIRECT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_137",
+      "canonical_title": "档案学研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_138",
+      "canonical_title": "档案学通讯",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_139",
+      "canonical_title": "治理研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_140",
+      "canonical_title": "现代传播（中国传媒大学学报）",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_141",
+      "canonical_title": "现代出版",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_142",
+      "canonical_title": "现代情报",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_143",
+      "canonical_title": "现代管理科学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_MANAGEMENT_DIRECT"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_144",
+      "canonical_title": "现代远程教育研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_145",
+      "canonical_title": "电化教育研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_146",
+      "canonical_title": "电子政务",
+      "language": "zh",
+      "issns": [
+        "1672-7223"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "ZH_IS_IM_CORE"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_147",
+      "canonical_title": "研究与发展管理",
+      "language": "zh",
+      "issns": [
+        "1004-8308"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_148",
+      "canonical_title": "科学学与科学技术管理",
+      "language": "zh",
+      "issns": [
+        "1002-0241"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_149",
+      "canonical_title": "科学学研究",
+      "language": "zh",
+      "issns": [
+        "1003-2053"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "resolved",
+      "crossref_available": true
+    },
+    {
+      "journal_id": "journal_150",
+      "canonical_title": "科学管理研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_151",
+      "canonical_title": "科技与出版",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_152",
+      "canonical_title": "科技情报研究",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_EXTENDED"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": false,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_EXTENDED",
+          "verification_status": "extended",
+          "runtime_rule": "CSSCI扩展版不得与来源期刊等价"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_153",
+      "canonical_title": "科技进步与对策",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_154",
+      "canonical_title": "科研管理",
+      "language": "zh",
+      "issns": [
+        "1000-2995"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_155",
+      "canonical_title": "管理世界",
+      "language": "zh",
+      "issns": [
+        "1002-5502"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_156",
+      "canonical_title": "管理学报",
+      "language": "zh",
+      "issns": [
+        "1672-884X"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_157",
+      "canonical_title": "管理工程学报",
+      "language": "zh",
+      "issns": [
+        "1004-6062"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_158",
+      "canonical_title": "管理案例研究与评论",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_159",
+      "canonical_title": "管理现代化",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_160",
+      "canonical_title": "管理科学",
+      "language": "zh",
+      "issns": [
+        "1672-0334"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_161",
+      "canonical_title": "管理科学学报",
+      "language": "zh",
+      "issns": [
+        "1007-9807"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_162",
+      "canonical_title": "管理评论",
+      "language": "zh",
+      "issns": [
+        "1003-1952"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_163",
+      "canonical_title": "系统工程学报",
+      "language": "zh",
+      "issns": [
+        "1000-5781"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_164",
+      "canonical_title": "系统工程理论与实践",
+      "language": "zh",
+      "issns": [
+        "1000-6788"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_165",
+      "canonical_title": "系统科学与数学",
+      "language": "zh",
+      "issns": [
+        "1000-0577"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_166",
+      "canonical_title": "系统管理学报",
+      "language": "zh",
+      "issns": [
+        "1005-2542"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_167",
+      "canonical_title": "经济与管理研究",
+      "language": "zh",
+      "issns": [
+        "1000-7636"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_168",
+      "canonical_title": "经济管理",
+      "language": "zh",
+      "issns": [
+        "1002-5766"
+      ],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "FMS_CN_T2",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source_subset",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_169",
+      "canonical_title": "统计与信息论坛",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_170",
+      "canonical_title": "统计与决策",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_171",
+      "canonical_title": "统计研究",
+      "language": "zh",
+      "issns": [
+        "1002-4565"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/FMS_Chinese_2025_T1_T2.md",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_172",
+      "canonical_title": "编辑之友",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "request_failed",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_173",
+      "canonical_title": "编辑学报",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "CSSCI_2025_2026_SOURCE",
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/CSSCI_2025_2026_IS_IM.yaml",
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "CSSCI_2025_2026_SOURCE",
+          "verification_status": "source",
+          "runtime_rule": null
+        },
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_174",
+      "canonical_title": "行政管理改革",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_175",
+      "canonical_title": "行政论坛",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_176",
+      "canonical_title": "计量经济学报",
+      "language": "zh",
+      "issns": [
+        "2096-9732"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T1"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_177",
+      "canonical_title": "软科学",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_178",
+      "canonical_title": "运筹与管理",
+      "language": "zh",
+      "issns": [
+        "1007-3221"
+      ],
+      "ranking_levels": [
+        "FMS_CN_T2"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "source_refs": [
+        "02_journals/FMS_Chinese_2025_T1_T2.md"
+      ],
+      "default_eligible": true,
+      "verification_notes": [],
+      "metadata_resolution": "issn_not_in_crossref",
+      "crossref_available": false
+    },
+    {
+      "journal_id": "journal_179",
+      "canonical_title": "远程教育杂志",
+      "language": "zh",
+      "issns": [],
+      "ranking_levels": [
+        "PKU_CORE_2023"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_EDTECH"
+      ],
+      "source_refs": [
+        "01-输入素材/supplement_cn_cas/PKU_CORE_2023_IS_IM.yaml",
+        "02_journals/supplements/supplement_cn_cas_merged.json"
+      ],
+      "default_eligible": true,
+      "verification_notes": [
+        {
+          "system": "PKU_CORE_2023",
+          "verification_status": "current_formal_edition_as_of_2026_08_21",
+          "runtime_rule": "北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。"
+        }
+      ],
+      "metadata_resolution": "title_not_exact",
+      "crossref_available": false
+    }
+  ]
+}

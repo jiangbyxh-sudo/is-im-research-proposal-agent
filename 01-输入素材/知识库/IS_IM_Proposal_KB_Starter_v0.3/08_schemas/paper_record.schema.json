@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PaperRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "paper_id",
+    "language",
+    "title",
+    "authors",
+    "year",
+    "journal_id",
+    "journal_rank",
+    "source_verification",
+    "evidence_level",
+    "verified_at"
+  ],
+  "properties": {
+    "paper_id": {
+      "type": "string"
+    },
+    "language": {
+      "enum": [
+        "zh",
+        "en"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100
+    },
+    "journal_id": {
+      "type": "string"
+    },
+    "journal_title": {
+      "type": "string"
+    },
+    "doi": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "official_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "journal_rank": {
+      "type": "object",
+      "required": [
+        "system",
+        "version",
+        "level",
+        "verified"
+      ],
+      "properties": {
+        "system": {
+          "enum": [
+            "UTD24",
+            "FMS_INT",
+            "FMS_CN"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "level": {
+          "type": "string"
+        },
+        "verified": {
+          "const": true
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "source_verification": {
+      "type": "object",
+      "required": [
+        "primary_source",
+        "metadata_crosschecked"
+      ],
+      "properties": {
+        "primary_source": {
+          "type": "string"
+        },
+        "metadata_crosschecked": {
+          "type": "boolean"
+        },
+        "crosscheck_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "publication_status": {
+      "enum": [
+        "version_of_record",
+        "online_first",
+        "accepted",
+        "working_paper",
+        "unknown"
+      ]
+    },
+    "integrity_status": {
+      "enum": [
+        "clear",
+        "corrected",
+        "retracted",
+        "expression_of_concern",
+        "unknown"
+      ]
+    },
+    "evidence_level": {
+      "enum": [
+        "E0",
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ]
+    },
+    "paper_role": {
+      "enum": [
+        "recent",
+        "classic",
+        "both",
+        "supplementary"
+      ]
+    },
+    "topic_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "theory_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "method_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "research_question": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "theory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data_context": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "main_findings": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "contribution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "citation_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "citation_count_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InnovationCandidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "innovation_id",
+    "gap_id",
+    "innovation_type",
+    "statement",
+    "requirements",
+    "status"
+  ],
+  "properties": {
+    "innovation_id": {
+      "type": "string"
+    },
+    "gap_id": {
+      "type": "string"
+    },
+    "innovation_type": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_contribution": {
+      "type": "string"
+    },
+    "method_or_artifact": {
+      "type": "string"
+    },
+    "feasibility": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ]
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "selected",
+        "rejected",
+        "needs_evidence"
+      ]
+    }
+  }
+}

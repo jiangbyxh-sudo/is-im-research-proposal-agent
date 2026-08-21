@@ -1,0 +1,424 @@
+version: 0.3.0
+captured_on: '2026-08-21'
+routing_rule: Search local cards and FTS first. Use live external access only for current records, stale rules, or explicit
+  coverage gaps.
+groups:
+- id: ranking_and_eligibility
+  resource_ids:
+  - RANK-FMS-2025
+  - RANK-UTD24
+  - RANK-AIS-2025
+  keywords:
+  - A
+  - AIS Premier
+  - B
+  - FMS
+  - IS
+  - IS core
+  - ISR
+  - MIS Quarterly
+  - SIG journals
+  - Senior Scholars
+  - T1
+  - T2
+  - UTD24
+  - business journals
+  - governance
+  - interdisciplinary
+  - journal ranking
+  - journals
+  - membership
+  - whitelist
+- id: metadata_integrity_and_access
+  resource_ids:
+  - META-CROSSREF
+  - META-OPENALEX
+  - META-SEMANTIC
+  - OA-UNPAYWALL
+  keywords:
+  - Academic Graph
+  - Crossref
+  - DOI
+  - OpenAlex
+  - Semantic Scholar
+  - Unpaywall
+  - accepted manuscript
+  - authors
+  - best_oa_location
+  - bibliometrics
+  - citation graph
+  - citations
+  - correction
+  - cursor
+  - discovery
+  - institutions
+  - integrity
+  - license
+  - metadata
+  - open access
+  - open_access
+  - paperId
+  - recommendations
+  - references
+  - retraction
+  - sources
+  - topics
+  - update-to
+  - version
+  - works
+- id: literature_databases
+  resource_ids:
+  - DB-AISEL
+  - DB-CNKI
+  - DB-WANFANG
+  - DB-VIP
+  - DB-NCPSSD
+  keywords:
+  - AIS eLibrary
+  - AMCIS
+  - CNKI
+  - CQVIP
+  - Chinese journal
+  - Chinese literature
+  - Chinese periodicals
+  - Chinese social science
+  - DOI verification
+  - ECIS
+  - ICIS
+  - IS
+  - IS repository
+  - JAIS
+  - NCPSSD
+  - PACIS
+  - VIP
+  - Wanfang
+  - cross-check
+  - database
+  - deduplication
+  - journal verification
+  - lawful full text
+  - metadata
+  - official repository
+  - social_science
+  - topic search
+  - zh_database
+- id: writing_and_reporting
+  resource_ids:
+  - WRITE-CRAFT-5E
+  - WRITE-CRESWELL-6E
+  - WRITE-SWALES-FEAK
+  - WRITE-APA-JARS
+  - WRITE-MISQ-GUIDE
+  - WRITE-ISR-GUIDE
+  - WRITE-WEBSTER-WATSON
+  keywords:
+  - CARS
+  - IS
+  - IS contribution
+  - ISR
+  - Information Systems Research
+  - JARS
+  - MISQ
+  - academic genre
+  - argument
+  - author guidance
+  - claim
+  - concept matrix
+  - concept-centric
+  - contribution
+  - discussion
+  - evidence
+  - future research
+  - literature review
+  - literature_review
+  - method rigor
+  - method validity
+  - methods
+  - mixed methods
+  - moves
+  - phenomenon
+  - qualitative
+  - quantitative
+  - reporting
+  - reporting standards
+  - research design
+  - research problem
+  - research question
+  - research_design
+  - stance
+  - submission
+  - synthesis
+  - theory
+  - transparency
+  - validity
+  - warrant
+  - worldview
+  - writing
+- id: is_theory
+  resource_ids:
+  - THEORY-GREGOR-2006
+  - THEORY-HEVNER-2004
+  - THEORY-TAM-1989
+  - THEORY-UTAUT-2003
+  - THEORY-TTF-1995
+  keywords:
+  - Gregor
+  - IS
+  - IS theory
+  - TAM
+  - TTF
+  - UTAUT
+  - analysis
+  - artifact
+  - behavioral intention
+  - build evaluate
+  - design and action
+  - design cycle
+  - design science
+  - design_science
+  - effort expectancy
+  - explanation
+  - facilitating conditions
+  - perceived ease of use
+  - perceived usefulness
+  - performance
+  - performance expectancy
+  - prediction
+  - relevance cycle
+  - rigor cycle
+  - social influence
+  - task characteristics
+  - task-technology fit
+  - technology characteristics
+  - technology use
+  - technology_adoption
+  - technology_fit
+  - theory
+  - utilization
+- id: statistics_data_and_ml
+  resource_ids:
+  - METHOD-OPENINTRO
+  - METHOD-R4DS
+  - METHOD-ISLR
+  keywords:
+  - EDA
+  - Quarto
+  - R
+  - SVM
+  - bootstrap
+  - classification
+  - cross-validation
+  - data import
+  - data transformation
+  - data_workflow
+  - deep learning
+  - inference
+  - linear regression
+  - logistic regression
+  - machine_learning
+  - prediction
+  - randomization
+  - regularization
+  - reproducible research
+  - statistical learning
+  - statistics
+  - study design
+  - tidyverse
+  - trees
+  - visualization
+  - web scraping
+- id: causal_and_experimental
+  resource_ids:
+  - METHOD-MIXTAPE
+  - METHOD-ONLINE-EXPERIMENTS
+  keywords:
+  - A/B testing
+  - A/B_testing
+  - DAG
+  - DiD
+  - IV
+  - RDD
+  - causal inference
+  - causal_inference
+  - event study
+  - experiments
+  - guardrail metrics
+  - interference
+  - online controlled experiments
+  - potential outcomes
+  - power
+  - randomization
+  - sample ratio mismatch
+  - synthetic control
+- id: survey_sem_and_measurement
+  resource_ids:
+  - METHOD-LAVAAN
+  keywords:
+  - CFA
+  - SEM
+  - categorical data
+  - growth curve
+  - lavaan
+  - measurement invariance
+  - mediation
+  - multilevel SEM
+- id: qualitative_methods
+  resource_ids:
+  - METHOD-GIOIA
+  - METHOD-THEMATIC
+  keywords:
+  - Braun Clarke
+  - Gioia methodology
+  - aggregate dimensions
+  - data structure
+  - first-order concepts
+  - inductive research
+  - qualitative
+  - qualitative coding
+  - reflexive thematic analysis
+  - reflexivity
+  - second-order themes
+  - six phases
+  - themes
+- id: systematic_review
+  resource_ids:
+  - METHOD-PRISMA
+  - IM-BIBLIOMETRIX
+  keywords:
+  - Biblioshiny
+  - PRISMA 2020
+  - bibliographic coupling
+  - bibliometrics
+  - bibliometrix
+  - checklist
+  - co-citation
+  - co-word
+  - flow diagram
+  - protocol
+  - risk of bias
+  - science mapping
+  - search strategy
+  - systematic review
+  - systematic_review
+  - thematic map
+- id: bayesian_and_probabilistic
+  resource_ids:
+  - METHOD-BDA
+  - METHOD-PROBML
+  keywords:
+  - Bayesian
+  - MCMC
+  - Stan
+  - bayesian
+  - calibration
+  - deep learning
+  - generative models
+  - graphical models
+  - hierarchical model
+  - likelihood
+  - machine_learning
+  - posterior
+  - posterior predictive check
+  - prior
+  - probabilistic machine learning
+  - uncertainty
+- id: analytical_modeling
+  resource_ids:
+  - METHOD-YALE-GAME
+  keywords:
+  - Nash equilibrium
+  - SPNE
+  - asymmetric information
+  - backward induction
+  - game theory
+  - game_theory
+  - mixed strategy
+  - signaling
+- id: information_science_and_behavior
+  resource_ids:
+  - IM-INTRO
+  - IM-LOOKING
+  keywords:
+  - IM
+  - browsing
+  - documents
+  - information
+  - information avoidance
+  - information behavior
+  - information management
+  - information need
+  - information organization
+  - information science
+  - information seeking
+  - information use
+  - information_behavior
+  - information_science
+  - informetrics
+  - search
+- id: retrieval_nlp_and_llm
+  resource_ids:
+  - IM-IR-BOOK
+  - IM-SLP3
+  keywords:
+  - IM
+  - LLM
+  - NLP
+  - RAG
+  - TF-IDF
+  - evaluation
+  - information extraction
+  - information retrieval
+  - information_retrieval
+  - inverted index
+  - post-training
+  - pretraining
+  - probabilistic retrieval
+  - speech
+  - transformer
+  - vector space
+  - web search
+- id: knowledge_and_data_management
+  resource_ids:
+  - IM-KM-DALKIR
+  - IM-DMBOK
+  keywords:
+  - DAMA
+  - DMBOK
+  - IM
+  - KM governance
+  - communities of practice
+  - data architecture
+  - data ethics
+  - data governance
+  - data quality
+  - data_management
+  - explicit knowledge
+  - knowledge management
+  - knowledge sharing
+  - knowledge_management
+  - master data
+  - metadata
+  - organizational memory
+  - tacit knowledge
+- id: network_and_science_mapping
+  resource_ids:
+  - IM-NETWORK
+  - IM-BIBLIOMETRIX
+  keywords:
+  - Biblioshiny
+  - bibliographic coupling
+  - bibliometrics
+  - bibliometrix
+  - centrality
+  - co-citation
+  - co-word
+  - community detection
+  - contagion
+  - diffusion
+  - edges
+  - network science
+  - network_analysis
+  - nodes
+  - science mapping
+  - temporal networks
+  - thematic map

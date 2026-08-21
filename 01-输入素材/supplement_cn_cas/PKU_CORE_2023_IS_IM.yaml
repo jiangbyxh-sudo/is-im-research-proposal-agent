@@ -1,0 +1,161 @@
+version: 0.4.0
+edition: 2023
+formal_publication_year: 2024
+status: current_formal_edition_as_of_2026_08_21
+warning: 北京大学官方明确说明正式成果以《中文核心期刊要目总览》出版物为准；网络转录仅供机器检索快照。2026版尚在研制，未用其替换2023版。
+pools:
+- pool_id: PKU_CORE_2023_INFORMATION_RESOURCE
+  label: 图书馆事业、信息事业类
+  journals:
+  - 中国图书馆学报
+  - 图书情报工作
+  - 大学图书馆学报
+  - 情报学报
+  - 图书情报知识
+  - 图书与情报
+  - 情报理论与实践
+  - 图书馆论坛
+  - 图书馆学研究
+  - 国家图书馆学刊
+  - 图书馆杂志
+  - 图书馆建设
+  - 情报资料工作
+  - 现代情报
+  - 情报杂志
+  - 情报科学
+  - 数据分析与知识发现
+  - 图书馆工作与研究
+  tags:
+  - IM_core
+  - information_science
+  - IR
+  - information_behavior
+- pool_id: PKU_CORE_2023_COMMUNICATION
+  label: 新闻事业/出版事业（IS/IM相关）
+  journals:
+  - 国际新闻界
+  - 新闻与传播研究
+  - 新闻记者
+  - 现代传播
+  - 新闻大学
+  - 当代传播
+  - 新闻与写作
+  - 新闻界
+  - 新闻与传播评论
+  - 中国科技期刊研究
+  - 编辑学报
+  - 科技与出版
+  - 编辑之友
+  - 出版发行研究
+  - 中国出版
+  - 出版科学
+  - 中国编辑
+  - 现代出版
+  - 出版广角
+  tags:
+  - social_media
+  - misinformation
+  - digital_media
+  - AI_journalism
+- pool_id: PKU_CORE_2023_PSYCHOLOGY
+  label: 心理学类
+  journals:
+  - 心理学报
+  - 心理科学进展
+  - 心理发展与教育
+  - 心理与行为研究
+  - 心理学探新
+  - 心理科学
+  tags:
+  - behavioral_IS
+  - human_AI
+  - trust
+  - decision_making
+- pool_id: PKU_CORE_2023_MANAGEMENT_DIRECT
+  label: 管理学类（直接相关）
+  journals:
+  - 管理学报
+  - 管理科学学报
+  - 中国管理科学
+  - 管理工程学报
+  - 智库理论与实践
+  - 现代管理科学
+  tags:
+  - management_science
+  - analytics
+  - IS_management
+- pool_id: PKU_CORE_2023_ORG_INNOVATION
+  label: 组织/创新/企业管理扩展
+  journals:
+  - 管理世界
+  - 经济管理
+  - 南开管理评论
+  - 管理科学
+  - 管理评论
+  - 软科学
+  - 工程管理科技前沿
+  - 经济与管理研究
+  - 工业工程与管理
+  - 管理案例研究与评论
+  - 管理现代化
+  tags:
+  - digital_transformation
+  - innovation
+  - platforms
+  - organization
+- pool_id: PKU_CORE_2023_SCIENCE_POLICY
+  label: 科学与科研管理扩展
+  journals:
+  - 科学学研究
+  - 科研管理
+  - 中国软科学
+  - 科学学与科学技术管理
+  - 中国科技论坛
+  - 科学管理研究
+  - 科技进步与对策
+  tags:
+  - scientometrics
+  - innovation_policy
+  - research_management
+- pool_id: PKU_CORE_2023_PUBLIC_DIGITAL_GOV
+  label: 公共管理/电子政务扩展
+  journals:
+  - 公共管理学报
+  - 中国行政管理
+  - 行政论坛
+  - 电子政务
+  - 公共行政评论
+  - 公共管理与政策评论
+  - 治理研究
+  - 行政管理改革
+  tags:
+  - e_government
+  - digital_government
+  - public_information
+- pool_id: PKU_CORE_2023_EDTECH
+  label: 教育技术交叉扩展
+  journals:
+  - 开放教育研究
+  - 现代远程教育研究
+  - 远程教育杂志
+  - 中国电化教育
+  - 电化教育研究
+  - 中国远程教育
+  tags:
+  - digital_learning
+  - technology_adoption
+  - HCI
+- pool_id: PKU_CORE_2023_STATISTICS_METHODS
+  label: 统计方法扩展
+  journals:
+  - 统计研究
+  - 统计与信息论坛
+  - 统计与决策
+  - 数理统计与管理
+  tags:
+  - statistics
+  - methods
+  - analytics
+sources:
+- https://hxqk.lib.pku.edu.cn/
+- https://lib.hitwh.edu.cn/2024/0920/c3898a187751/page.htm

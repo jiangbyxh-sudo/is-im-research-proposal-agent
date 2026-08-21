@@ -1,0 +1,470 @@
+resource_id: METHOD-IACMR-EMPIRICAL-2008
+entries:
+- id: intro
+  chapter_num: null
+  title: 引言：如何在一流期刊上发表管理学研究论文？
+  anchor_page: 15
+  printed_page: 15
+  toc_line: 10
+  indent: 0
+  pdf_page_end: 26
+  source_line_start: 182
+  source_line_end: 339
+  slug: publication_rigor_legacy
+  tags:
+  - research_rigor
+  - publication
+  - research_question
+  - validity
+  summary: 以一流期刊发表为线索讨论研究问题、理论、方法、效度、贡献与研究伦理，是第三版引言的早期版本。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/intro_publication_rigor_legacy.md
+  chunk_count: 13
+- id: ch01
+  chapter_num: 1
+  title: 第一章 科学过程与研究设计
+  anchor_page: 27
+  printed_page: 27
+  toc_line: 12
+  indent: 2
+  pdf_page_end: 48
+  source_line_start: 340
+  source_line_end: 767
+  slug: scientific_process_and_research_design
+  tags:
+  - scientific_process
+  - epistemology
+  - research_design
+  - contextualization
+  - ethics
+  summary: 介绍科学求知、理论与数据循环、研究设计目标、情境化以及科学伦理，为后续方法选择提供认识论基础。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch01_scientific_process_and_research_design.md
+  chunk_count: 28
+- id: ch02
+  chapter_num: 2
+  title: 第二章 研究的起点：提问
+  anchor_page: 49
+  printed_page: 49
+  toc_line: 13
+  indent: 2
+  pdf_page_end: 73
+  source_line_start: 768
+  source_line_end: 1199
+  slug: research_question_legacy
+  tags:
+  - research_question
+  - proposal
+  - literature_review
+  summary: 讨论问题来源、一般问题向研究课题的转化及开题报告形成，可与第三版第2章对照使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch02_research_question_legacy.md
+  chunk_count: 40
+- id: ch03
+  chapter_num: 3
+  title: 第三章 管理研究中的理论建构
+  anchor_page: 74
+  printed_page: 74
+  toc_line: 14
+  indent: 2
+  pdf_page_end: 98
+  source_line_start: 1200
+  source_line_end: 1599
+  slug: theory_building
+  tags:
+  - theory
+  - construct
+  - mechanism
+  - theoretical_contribution
+  - induction
+  - deduction
+  summary: 讨论理论的构成与层级、理论建构过程、理论贡献途径，以及如何用逻辑和故事组织理论论证。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch03_theory_building.md
+  chunk_count: 32
+- id: ch04
+  chapter_num: 4
+  title: 第四章 建构中国管理学理论的机会与挑战
+  anchor_page: 99
+  printed_page: 99
+  toc_line: 15
+  indent: 2
+  pdf_page_end: 120
+  source_line_start: 1600
+  source_line_end: 1991
+  slug: china_management_theory
+  tags:
+  - china_theory
+  - indigenous_theory
+  - emic_etic
+  - contextualization
+  summary: 讨论中国管理学理论建构的哲学基础、主位/客位取向及本土现象形成理论的机会与挑战。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch04_china_management_theory.md
+  chunk_count: 24
+- id: ch05
+  chapter_num: 5
+  title: 第五章 实证研究的设计与评价
+  anchor_page: 121
+  printed_page: 121
+  toc_line: 17
+  indent: 2
+  pdf_page_end: 141
+  source_line_start: 1992
+  source_line_end: 2361
+  slug: empirical_design_and_validity
+  tags:
+  - empirical_design
+  - causality
+  - validity
+  - variance_control
+  - data_method_fit
+  summary: 以因果关系、研究问题与数据匹配、变异量控制及构念/统计/内部/外部效度评价实证研究。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch05_empirical_design_and_validity.md
+  chunk_count: 24
+- id: ch06
+  chapter_num: 6
+  title: 第六章 实验室研究
+  anchor_page: 142
+  printed_page: 142
+  toc_line: 18
+  indent: 2
+  pdf_page_end: 166
+  source_line_start: 2362
+  source_line_end: 2823
+  slug: experimental_research
+  tags:
+  - experiment
+  - manipulation
+  - randomization
+  - lab_experiment
+  - field_experiment
+  - online_experiment
+  - validity
+  summary: 覆盖实验假设、实验室/实地/网上实验、效度威胁、操纵与组间/组内/因素设计及可复制性。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch06_experimental_research.md
+  chunk_count: 28
+- id: ch07
+  chapter_num: 7
+  title: 第七章 准实验研究
+  anchor_page: 167
+  printed_page: 167
+  toc_line: 19
+  indent: 2
+  pdf_page_end: 174
+  source_line_start: 2824
+  source_line_end: 3011
+  slug: quasi_experimental_research
+  tags:
+  - quasi_experiment
+  - natural_experiment
+  - control_group
+  - pretest_posttest
+  - causal_inference
+  summary: 介绍准实验的优势、常见设计、控制组与自然干预，并以组织管理案例分析识别与效度问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch07_quasi_experimental_research.md
+  chunk_count: 9
+- id: ch08
+  chapter_num: 8
+  title: 第八章 实地研究中的问卷调查法
+  anchor_page: 175
+  printed_page: 175
+  toc_line: 20
+  indent: 2
+  pdf_page_end: 191
+  source_line_start: 3012
+  source_line_end: 3357
+  slug: field_survey_legacy
+  tags:
+  - survey
+  - scale_adaptation
+  - sampling
+  - data_collection
+  summary: 重点讨论实地问卷中的既有量表沿用、自编量表、问卷发放与回收。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch08_field_survey_legacy.md
+  chunk_count: 22
+- id: ch09
+  chapter_num: 9
+  title: 第九章 二手数据在组织管理学研究中的使用
+  anchor_page: 192
+  printed_page: 192
+  toc_line: 21
+  indent: 2
+  pdf_page_end: 212
+  source_line_start: 3358
+  source_line_end: 3763
+  slug: secondary_and_archival_data
+  tags:
+  - secondary_data
+  - archival_data
+  - panel_data
+  - text_data
+  - data_quality
+  - provenance
+  summary: 说明二手数据的类型、研究贡献、文本与结构化数据、面板优势、数据能力要求和使用风险。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch09_secondary_and_archival_data.md
+  chunk_count: 32
+- id: ch10
+  chapter_num: 10
+  title: 第十章 实地研究中的案例研究
+  anchor_page: 213
+  printed_page: 213
+  toc_line: 22
+  indent: 2
+  pdf_page_end: 242
+  source_line_start: 3764
+  source_line_end: 4261
+  slug: case_study
+  tags:
+  - case_study
+  - field_research
+  - case_selection
+  - validity
+  - reliability
+  - qualitative
+  summary: 界定案例研究，说明质量标准、准备与执行、现场关系、对话分析和常见问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch10_case_study.md
+  chunk_count: 35
+- id: ch11
+  chapter_num: 11
+  title: 第十一章 理论构念的测量
+  anchor_page: 243
+  printed_page: 243
+  toc_line: 24
+  indent: 2
+  pdf_page_end: 268
+  source_line_start: 4262
+  source_line_end: 4693
+  slug: construct_measurement
+  tags:
+  - construct_measurement
+  - scale_development
+  - content_validity
+  - reliability
+  - convergent_validity
+  - discriminant_validity
+  summary: 介绍构念测量、题项生成、内容效度、内部结构、信度、聚合/区分效度和逻辑关系网络。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch11_construct_measurement.md
+  chunk_count: 35
+- id: ch12
+  chapter_num: 12
+  title: 第十二章 单维构念与多维构念的测量
+  anchor_page: 269
+  printed_page: 269
+  toc_line: 25
+  indent: 2
+  pdf_page_end: 303
+  source_line_start: 4694
+  source_line_end: 5269
+  slug: unidimensional_and_multidimensional_constructs
+  tags:
+  - construct_dimensionality
+  - reflective_indicator
+  - formative_indicator
+  - measurement_model
+  summary: 区分单维与多维构念、效果与构成指标，并讨论不同构念结构的测量和估计。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch12_unidimensional_and_multidimensional_constructs.md
+  chunk_count: 40
+- id: ch13
+  chapter_num: 13
+  title: 第十三章 因果关系理论的建立——结构方程模型
+  anchor_page: 304
+  printed_page: 304
+  toc_line: 26
+  indent: 2
+  pdf_page_end: 325
+  source_line_start: 5270
+  source_line_end: 5661
+  slug: structural_equation_modeling
+  tags:
+  - SEM
+  - CFA
+  - measurement_model
+  - path_model
+  - fit_index
+  - Mplus
+  summary: 介绍结构方程模型的逻辑、测量误差、测量/路径/全模型、均值结构、软件实现与模型评价。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch13_structural_equation_modeling.md
+  chunk_count: 22
+- id: ch14
+  chapter_num: 14
+  title: 第十四章 调节变量和中介变量
+  anchor_page: 326
+  printed_page: 326
+  toc_line: 27
+  indent: 2
+  pdf_page_end: 345
+  source_line_start: 5662
+  source_line_end: 5979
+  slug: moderation_and_mediation
+  tags:
+  - moderation
+  - mediation
+  - interaction
+  - indirect_effect
+  - statistical_power
+  summary: 从理论意义到统计检验系统讨论调节、中介、交互作用、间接效应、功效和常见分析问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch14_moderation_and_mediation.md
+  chunk_count: 25
+- id: ch15
+  chapter_num: 15
+  title: 第十五章 多层次理论模型的建立及研究方法
+  anchor_page: 346
+  printed_page: 346
+  toc_line: 28
+  indent: 2
+  pdf_page_end: 371
+  source_line_start: 5980
+  source_line_end: 6557
+  slug: multilevel_theory_and_hlm
+  tags:
+  - multilevel
+  - HLM
+  - aggregation
+  - centering
+  - cross_level
+  - sample_size
+  summary: 讨论多层次理论、构念与聚合、HLM分析流程、中心化、统计假设、样本量及延伸模型。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch15_multilevel_theory_and_hlm.md
+  chunk_count: 35
+- id: ch16
+  chapter_num: 16
+  title: 第十六章 组织社会资本的分类与测量
+  anchor_page: 372
+  printed_page: 372
+  toc_line: 29
+  indent: 2
+  pdf_page_end: 398
+  source_line_start: 6558
+  source_line_end: 7203
+  slug: organizational_social_capital_measurement
+  tags:
+  - social_capital
+  - network_ties
+  - trust
+  - network_structure
+  - measurement
+  summary: 从个体/集体和组织内/外层次区分关系面与结构面社会资本，并讨论相应测量。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch16_organizational_social_capital_measurement.md
+  chunk_count: 39
+- id: ch17
+  chapter_num: 17
+  title: 第十七章 跨文化研究的方法
+  anchor_page: 399
+  printed_page: 399
+  toc_line: 30
+  indent: 2
+  pdf_page_end: 424
+  source_line_start: 7204
+  source_line_end: 7643
+  slug: cross_cultural_research
+  tags:
+  - cross_cultural
+  - emic_etic
+  - measurement_equivalence
+  - sampling
+  - multilevel
+  summary: 介绍跨文化研究类型、主位/客位取向、概念与测量对等性、抽样实施和数据分析。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch17_cross_cultural_research.md
+  chunk_count: 34
+- id: ch18
+  chapter_num: 18
+  title: 第十八章 管理研究论文写作和审阅的过程
+  anchor_page: 425
+  printed_page: 425
+  toc_line: 32
+  indent: 2
+  pdf_page_end: 439
+  source_line_start: 7644
+  source_line_end: 7941
+  slug: writing_and_peer_review_legacy
+  tags:
+  - academic_writing
+  - deductive
+  - inductive
+  - peer_review
+  - revision
+  summary: 分别讨论演绎式和归纳式研究报告、通用写作准则、审稿过程及修改再投。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch18_writing_and_peer_review_legacy.md
+  chunk_count: 17
+- id: ch19
+  chapter_num: 19
+  title: 第十九章 一篇论文的经历：从问题的提出到文章的发表
+  anchor_page: 440
+  printed_page: 440
+  toc_line: 33
+  indent: 2
+  pdf_page_end: 454
+  source_line_start: 7942
+  source_line_end: 8205
+  slug: paper_publication_journey
+  tags:
+  - research_process
+  - publication_journey
+  - revision
+  - case_example
+  summary: 以一篇论文为案例呈现从问题提出到文章发表的完整研究与修改过程。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch19_paper_publication_journey.md
+  chunk_count: 20
+- id: ch20
+  chapter_num: 20
+  title: 第二十章 发表中国管理研究论文的挑战
+  anchor_page: 455
+  printed_page: 455
+  toc_line: 34
+  indent: 2
+  pdf_page_end: 470
+  source_line_start: 8206
+  source_line_end: 8435
+  slug: publishing_china_management_research
+  tags:
+  - china_research
+  - theory_context_fit
+  - generalizability
+  - publication
+  summary: 讨论中国情境研究与西方理论的结合、整合性理论框架和实证结果的普适化。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch20_publishing_china_management_research.md
+  chunk_count: 19
+- id: appendix_01
+  chapter_num: 1
+  title: 附录一 IACMR追求卓越宣言（伦理准则）
+  anchor_page: 471
+  printed_page: 471
+  toc_line: 35
+  indent: 0
+  pdf_page_end: 483
+  source_line_start: 8436
+  source_line_end: 8705
+  slug: appendix_01
+  tags:
+  - appendix
+  summary: 附录一 IACMR追求卓越宣言（伦理准则）。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/appendix_01_appendix_01.md
+  chunk_count: 31
+- id: appendix_02
+  chapter_num: 2
+  title: 附录二 术语英汉词汇对照
+  anchor_page: 484
+  printed_page: 484
+  toc_line: 36
+  indent: 0
+  pdf_page_end: 499
+  source_line_start: 8706
+  source_line_end: 8815
+  slug: appendix_02
+  tags:
+  - appendix
+  summary: 附录二 术语英汉词汇对照。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/appendix_02_appendix_02.md
+  chunk_count: 18
+- id: appendix_03
+  chapter_num: 3
+  title: 附录三 经典方法论文
+  anchor_page: 500
+  printed_page: 500
+  toc_line: 37
+  indent: 0
+  pdf_page_end: 500
+  source_line_start: 8816
+  source_line_end: 8855
+  slug: appendix_03
+  tags:
+  - appendix
+  summary: 附录三 经典方法论文。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/appendix_03_appendix_03.md
+  chunk_count: 3

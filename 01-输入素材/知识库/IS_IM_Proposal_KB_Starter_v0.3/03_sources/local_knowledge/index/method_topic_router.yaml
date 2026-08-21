@@ -1,0 +1,636 @@
+version: 0.2.0
+generated_on: '2026-08-21'
+match_policy: 先做别名/标签精确匹配，再做本地FTS；禁止启动时外部搜索
+topics:
+- topic_id: LOCAL-METHOD-RESEARCH-QUESTION
+  title: 研究问题、研究空白与开题转化
+  aliases:
+  - 研究问题
+  - 选题
+  - 开题
+  - 研究空白
+  - 创新点
+  - 现象驱动
+  - literature gap
+  - research question
+  card_path: 03_sources/local_knowledge/cards/research-question.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch02
+    chapter_title: 第2章 研究的起点：提出研究问题
+    pdf_pages: 60-86
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch02_research_question_and_proposal.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: intro
+    chapter_title: 引言：如何增加在一流期刊上发表研究论文的成功率？
+    pdf_pages: 20-35
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/intro_publication_rigor_and_relevance.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch02
+    chapter_title: 第二章 研究的起点：提问
+    pdf_pages: 49-73
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch02_research_question_legacy.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-THEORY-BUILDING
+  title: 理论建构与理论贡献
+  aliases:
+  - 理论建构
+  - 理论贡献
+  - 构念
+  - 机制
+  - 边界条件
+  - theory building
+  - theoretical contribution
+  card_path: 03_sources/local_knowledge/cards/theory-building.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch03
+    chapter_title: 第3章 管理研究中的理论建构
+    pdf_pages: 87-123
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch03_theory_building.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch03
+    chapter_title: 第三章 管理研究中的理论建构
+    pdf_pages: 74-98
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch03_theory_building.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch04
+    chapter_title: 第四章 建构中国管理学理论的机会与挑战
+    pdf_pages: 99-120
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch04_china_management_theory.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-DESIGN-VALIDITY
+  title: 实证研究设计、因果关系与效度
+  aliases:
+  - 研究设计
+  - 因果关系
+  - 效度
+  - 内部效度
+  - 外部效度
+  - 构念效度
+  - 统计结论效度
+  - research design
+  - validity
+  card_path: 03_sources/local_knowledge/cards/design-validity.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch04
+    chapter_title: 第4章 实证研究的设计与评价
+    pdf_pages: 124-154
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch04_empirical_design_and_validity.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch01
+    chapter_title: 第1章 科学过程与研究设计
+    pdf_pages: 36-59
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch01_scientific_process_and_research_design.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch05
+    chapter_title: 第五章 实证研究的设计与评价
+    pdf_pages: 121-141
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch05_empirical_design_and_validity.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-EXPERIMENT
+  title: 实验、在线实验与因素设计
+  aliases:
+  - 实验
+  - 实验室实验
+  - 实地实验
+  - 网上实验
+  - A/B测试
+  - 操纵检验
+  - experiment
+  - field experiment
+  - online experiment
+  card_path: 03_sources/local_knowledge/cards/experiment.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch05
+    chapter_title: 第5章 实验研究方法
+    pdf_pages: 155-193
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch05_experimental_research.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch06
+    chapter_title: 第六章 实验室研究
+    pdf_pages: 142-166
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch06_experimental_research.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-QUASI-EXPERIMENT
+  title: 准实验与自然干预
+  aliases:
+  - 准实验
+  - 自然实验
+  - 前后测
+  - 对照组
+  - 政策冲击
+  - quasi experiment
+  - natural experiment
+  card_path: 03_sources/local_knowledge/cards/quasi-experiment.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch06
+    chapter_title: 第6章 准实验研究
+    pdf_pages: 194-215
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch06_quasi_experimental_research.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch07
+    chapter_title: 第七章 准实验研究
+    pdf_pages: 167-174
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch07_quasi_experimental_research.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-SURVEY
+  title: 问卷、抽样与多来源设计
+  aliases:
+  - 问卷
+  - 调查研究
+  - 量表
+  - 抽样
+  - 共同方法偏差
+  - survey
+  - questionnaire
+  - sampling
+  card_path: 03_sources/local_knowledge/cards/survey.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch07
+    chapter_title: 第7章 实证研究中的问卷调查法
+    pdf_pages: 216-249
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch07_survey_research.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch13
+    chapter_title: 第13章 理论构念的测量
+    pdf_pages: 404-442
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch13_construct_measurement.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch08
+    chapter_title: 第八章 实地研究中的问卷调查法
+    pdf_pages: 175-191
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch08_field_survey_legacy.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-ARCHIVAL-PANEL
+  title: 二手数据、档案数据与面板研究
+  aliases:
+  - 二手数据
+  - 档案数据
+  - 面板数据
+  - 数据库
+  - 文本数据
+  - archival data
+  - secondary data
+  - panel data
+  card_path: 03_sources/local_knowledge/cards/archival-panel.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch08
+    chapter_title: 第8章 二手数据在管理研究中的使用
+    pdf_pages: 250-281
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch08_secondary_and_archival_data.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch18
+    chapter_title: 第18章 纵向研究设计和分析
+    pdf_pages: 576-593
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch18_longitudinal_panel_analysis.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch09
+    chapter_title: 第九章 二手数据在组织管理学研究中的使用
+    pdf_pages: 192-212
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch09_secondary_and_archival_data.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-CASE-QUALITATIVE
+  title: 案例研究、质化分析与归纳建构
+  aliases:
+  - 案例研究
+  - 质化研究
+  - 扎根理论
+  - 编码
+  - 访谈
+  - case study
+  - qualitative
+  - grounded theory
+  card_path: 03_sources/local_knowledge/cards/case-qualitative.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch09
+    chapter_title: 第9章 实地研究中的案例研究
+    pdf_pages: 282-328
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch09_case_study.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch10
+    chapter_title: 第10章 质化研究及其数据分析
+    pdf_pages: 329-355
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch10_qualitative_research_and_analysis.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch10
+    chapter_title: 第十章 实地研究中的案例研究
+    pdf_pages: 213-242
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch10_case_study.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-META-ANALYSIS
+  title: 元分析与证据综合
+  aliases:
+  - 元分析
+  - 效应量
+  - 发表偏差
+  - 异质性
+  - Meta-SEM
+  - meta analysis
+  - effect size
+  card_path: 03_sources/local_knowledge/cards/meta-analysis.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch11
+    chapter_title: 第11章 元分析研究法
+    pdf_pages: 356-380
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch11_meta_analysis.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-CONTEXTUALIZATION
+  title: 中国情境、情境化与跨文化研究
+  aliases:
+  - 情境化
+  - 中国情境
+  - 本土理论
+  - 跨文化
+  - 测量等价性
+  - contextualization
+  - cross cultural
+  - emic
+  - etic
+  card_path: 03_sources/local_knowledge/cards/contextualization.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch12
+    chapter_title: 第12章 管理与组织的情境化研究
+    pdf_pages: 381-403
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch12_contextualized_research.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch04
+    chapter_title: 第四章 建构中国管理学理论的机会与挑战
+    pdf_pages: 99-120
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch04_china_management_theory.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch17
+    chapter_title: 第十七章 跨文化研究的方法
+    pdf_pages: 399-424
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch17_cross_cultural_research.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch20
+    chapter_title: 第二十章 发表中国管理研究论文的挑战
+    pdf_pages: 455-470
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch20_publishing_china_management_research.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-MEASUREMENT
+  title: 构念测量、量表开发与效度
+  aliases:
+  - 构念测量
+  - 量表开发
+  - 内容效度
+  - 聚合效度
+  - 区分效度
+  - 信度
+  - measurement
+  - scale development
+  card_path: 03_sources/local_knowledge/cards/measurement.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch13
+    chapter_title: 第13章 理论构念的测量
+    pdf_pages: 404-442
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch13_construct_measurement.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch14
+    chapter_title: 第14章 单维构念与多维构念的测量
+    pdf_pages: 443-482
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch14_unidimensional_and_multidimensional_constructs.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch11
+    chapter_title: 第十一章 理论构念的测量
+    pdf_pages: 243-268
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch11_construct_measurement.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch12
+    chapter_title: 第十二章 单维构念与多维构念的测量
+    pdf_pages: 269-303
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch12_unidimensional_and_multidimensional_constructs.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-SEM
+  title: CFA与结构方程模型
+  aliases:
+  - 结构方程模型
+  - CFA
+  - SEM
+  - 测量模型
+  - 路径模型
+  - 拟合指数
+  - Mplus
+  card_path: 03_sources/local_knowledge/cards/sem.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch15
+    chapter_title: 第15章 结构方程模型
+    pdf_pages: 483-508
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch15_structural_equation_modeling.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch13
+    chapter_title: 第13章 理论构念的测量
+    pdf_pages: 404-442
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch13_construct_measurement.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch13
+    chapter_title: 第十三章 因果关系理论的建立——结构方程模型
+    pdf_pages: 304-325
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch13_structural_equation_modeling.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-MODERATION-MEDIATION
+  title: 调节、中介与条件过程
+  aliases:
+  - 调节变量
+  - 中介变量
+  - 被调节的中介
+  - 被中介的调节
+  - 交互作用
+  - moderation
+  - mediation
+  - conditional process
+  card_path: 03_sources/local_knowledge/cards/moderation-mediation.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch16
+    chapter_title: 第16章 调节变量和中介变量
+    pdf_pages: 509-536
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch16_moderation_and_mediation.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch22
+    chapter_title: 第22章 单层与多层被调节的中介和被中介的调节：理论构建与模型检验
+    pdf_pages: 682-719
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch22_moderated_mediation_and_mediated_moderation.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch14
+    chapter_title: 第十四章 调节变量和中介变量
+    pdf_pages: 326-345
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch14_moderation_and_mediation.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-MULTILEVEL
+  title: 多层次理论、聚合与HLM
+  aliases:
+  - 多层次
+  - HLM
+  - 聚合
+  - 跨层
+  - 中心化
+  - multilevel
+  - hierarchical linear model
+  card_path: 03_sources/local_knowledge/cards/multilevel.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch17
+    chapter_title: 第17章 多层次理论模型的建立及研究方法
+    pdf_pages: 537-575
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch17_multilevel_theory_and_hlm.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch21
+    chapter_title: 第21章 高频率跟踪问卷调查方法：日记与体验抽样方法的设计和分析
+    pdf_pages: 644-681
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch21_diary_and_experience_sampling.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch22
+    chapter_title: 第22章 单层与多层被调节的中介和被中介的调节：理论构建与模型检验
+    pdf_pages: 682-719
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch22_moderated_mediation_and_mediated_moderation.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch15
+    chapter_title: 第十五章 多层次理论模型的建立及研究方法
+    pdf_pages: 346-371
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch15_multilevel_theory_and_hlm.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-LONGITUDINAL
+  title: 纵向、面板与动态研究
+  aliases:
+  - 纵向研究
+  - 固定效应
+  - 随机效应
+  - 动态
+  - longitudinal
+  - fixed effects
+  - random effects
+  card_path: 03_sources/local_knowledge/cards/longitudinal.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch18
+    chapter_title: 第18章 纵向研究设计和分析
+    pdf_pages: 576-593
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch18_longitudinal_panel_analysis.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch21
+    chapter_title: 第21章 高频率跟踪问卷调查方法：日记与体验抽样方法的设计和分析
+    pdf_pages: 644-681
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch21_diary_and_experience_sampling.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-EVENT-HISTORY
+  title: 事件历史与生存分析
+  aliases:
+  - 事件历史
+  - 生存分析
+  - 风险率
+  - 删失
+  - Cox
+  - event history
+  - survival analysis
+  - hazard
+  card_path: 03_sources/local_knowledge/cards/event-history.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch19
+    chapter_title: 第19章 事件历史分析法
+    pdf_pages: 594-614
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch19_event_history_analysis.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-EVENT-STUDY
+  title: 资本市场事件研究
+  aliases:
+  - 事件研究法
+  - 异常收益
+  - 事件窗
+  - 公告效应
+  - event study
+  - abnormal return
+  card_path: 03_sources/local_knowledge/cards/event-study.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch20
+    chapter_title: 第20章 事件研究法
+    pdf_pages: 615-643
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch20_event_study.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-ESM
+  title: 日记法与体验抽样
+  aliases:
+  - 日记法
+  - 体验抽样
+  - ESM
+  - 高频跟踪
+  - 密集纵向
+  - diary study
+  - experience sampling
+  card_path: 03_sources/local_knowledge/cards/esm.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch21
+    chapter_title: 第21章 高频率跟踪问卷调查方法：日记与体验抽样方法的设计和分析
+    pdf_pages: 644-681
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch21_diary_and_experience_sampling.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch17
+    chapter_title: 第17章 多层次理论模型的建立及研究方法
+    pdf_pages: 537-575
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch17_multilevel_theory_and_hlm.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-WRITING-PUBLICATION
+  title: 论文写作、投稿、审稿与修改
+  aliases:
+  - 论文写作
+  - 摘要
+  - 导言
+  - 讨论
+  - 投稿
+  - 审稿意见
+  - 修改说明
+  - academic writing
+  - peer review
+  - revision
+  card_path: 03_sources/local_knowledge/cards/writing-publication.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: ch23
+    chapter_title: 第23章 论文的写作和发表
+    pdf_pages: 720-765
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch23_academic_writing_review_and_revision.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2018
+    chapter_id: intro
+    chapter_title: 引言：如何增加在一流期刊上发表研究论文的成功率？
+    pdf_pages: 20-35
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/intro_publication_rigor_and_relevance.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch18
+    chapter_title: 第十八章 管理研究论文写作和审阅的过程
+    pdf_pages: 425-439
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch18_writing_and_peer_review_legacy.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch19
+    chapter_title: 第十九章 一篇论文的经历：从问题的提出到文章的发表
+    pdf_pages: 440-454
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch19_paper_publication_journey.md
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch20
+    chapter_title: 第二十章 发表中国管理研究论文的挑战
+    pdf_pages: 455-470
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch20_publishing_china_management_research.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+- topic_id: LOCAL-METHOD-SOCIAL-CAPITAL
+  title: 组织社会资本的分类与测量
+  aliases:
+  - 社会资本
+  - 关系网络
+  - 信任
+  - 网络位置
+  - social capital
+  - network ties
+  card_path: 03_sources/local_knowledge/cards/social-capital.md
+  source_refs:
+  - resource_id: METHOD-IACMR-EMPIRICAL-2008
+    chapter_id: ch16
+    chapter_title: 第十六章 组织社会资本的分类与测量
+    pdf_pages: 372-398
+    local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/ch16_organizational_social_capital_measurement.md
+  external_search_required: false
+  fallback_condition: 本地章节无法支持所需细节、内容涉及2026年后的方法更新、或缺失图表资产
+paradigm_coverage:
+  quantitative_archival_causal:
+    coverage: substantial_local
+    refs:
+    - 2018:ch04
+    - 2018:ch06
+    - 2018:ch08
+    - 2018:ch18
+    - 2018:ch19
+    - 2018:ch20
+    limits:
+    - 现代DiD、RDD、IV和合成控制需要其他本地来源
+  survey_sem:
+    coverage: substantial_local
+    refs:
+    - 2018:ch07
+    - 2018:ch13
+    - 2018:ch14
+    - 2018:ch15
+    - 2018:ch16
+    - 2018:ch17
+    - 2018:ch22
+    limits:
+    - 最新软件语法和新估计方法仍需版本化补充
+  experiment:
+    coverage: substantial_local
+    refs:
+    - 2018:ch05
+    - 2018:ch06
+    - 2018:ch21
+    limits:
+    - 平台级A/B测试工程、序贯检验和现代在线实验治理需其他来源
+  qualitative_case_process:
+    coverage: substantial_local
+    refs:
+    - 2018:ch09
+    - 2018:ch10
+    - 2018:ch12
+    limits:
+    - 过程理论和特定质化流派需另建专题卡
+  systematic_review_bibliometric:
+    coverage: partial_local
+    refs:
+    - 2018:ch11
+    limits:
+    - 覆盖元分析；PRISMA、科学计量和知识图谱流程未由这两本书完整覆盖
+  mixed_methods:
+    coverage: partial_local
+    refs:
+    - 2018:ch04
+    - 2018:ch09
+    - 2018:ch10
+    - 2018:ch12
+    limits:
+    - 未提供完整混合方法设计类型和整合标准
+  computational_text_network:
+    coverage: partial_local
+    refs:
+    - 2018:ch08
+    - 2018:ch10
+    - 2008:ch16
+    limits:
+    - NLP、机器学习、现代网络建模和可复现计算流程需其他来源
+  analytical_modeling:
+    coverage: not_covered_by_books
+    refs: []
+    limits:
+    - 博弈论、优化、信息经济学和机制设计需独立本地知识源
+  design_science:
+    coverage: not_covered_by_books
+    refs: []
+    limits:
+    - 设计科学研究循环、制品评价和设计理论需独立本地知识源

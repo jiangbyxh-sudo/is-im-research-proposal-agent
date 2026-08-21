@@ -1,0 +1,544 @@
+resource_id: METHOD-IACMR-EMPIRICAL-2018
+entries:
+- id: intro
+  chapter_num: null
+  title: 引言：如何增加在一流期刊上发表研究论文的成功率？
+  anchor_page: 20
+  printed_page: 20
+  toc_line: 10
+  indent: 0
+  pdf_page_end: 35
+  source_line_start: 261
+  source_line_end: 434
+  slug: publication_rigor_and_relevance
+  tags:
+  - research_rigor
+  - relevance
+  - publication
+  - research_question
+  - ethics
+  summary: 从严谨性、现实关联、研究问题与常见投稿错误切入，说明高质量管理研究和论文发表的基本判断标准。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/intro_publication_rigor_and_relevance.md
+  chunk_count: 15
+- id: ch01
+  chapter_num: 1
+  title: 第1章 科学过程与研究设计
+  anchor_page: 36
+  printed_page: 36
+  toc_line: 12
+  indent: 2
+  pdf_page_end: 59
+  source_line_start: 435
+  source_line_end: 790
+  slug: scientific_process_and_research_design
+  tags:
+  - scientific_process
+  - epistemology
+  - research_design
+  - contextualization
+  - ethics
+  summary: 介绍科学求知、理论与数据循环、研究设计目标、情境化以及科学伦理，为后续方法选择提供认识论基础。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch01_scientific_process_and_research_design.md
+  chunk_count: 26
+- id: ch02
+  chapter_num: 2
+  title: 第2章 研究的起点：提出研究问题
+  anchor_page: 60
+  printed_page: 60
+  toc_line: 13
+  indent: 2
+  pdf_page_end: 86
+  source_line_start: 791
+  source_line_end: 1468
+  slug: research_question_and_proposal
+  tags:
+  - research_question
+  - phenomenon_driven
+  - literature_review
+  - hypothesis
+  - proposal
+  summary: 说明好的研究问题的标准、问题来源及其向变量、假设、设计和开题报告的转化过程。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch02_research_question_and_proposal.md
+  chunk_count: 43
+- id: ch03
+  chapter_num: 3
+  title: 第3章 管理研究中的理论建构
+  anchor_page: 87
+  printed_page: 87
+  toc_line: 14
+  indent: 2
+  pdf_page_end: 123
+  source_line_start: 1469
+  source_line_end: 2140
+  slug: theory_building
+  tags:
+  - theory
+  - construct
+  - mechanism
+  - theoretical_contribution
+  - induction
+  - deduction
+  summary: 讨论理论的构成与层级、理论建构过程、理论贡献途径，以及如何用逻辑和故事组织理论论证。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch03_theory_building.md
+  chunk_count: 48
+- id: ch04
+  chapter_num: 4
+  title: 第4章 实证研究的设计与评价
+  anchor_page: 124
+  printed_page: 124
+  toc_line: 16
+  indent: 2
+  pdf_page_end: 154
+  source_line_start: 2141
+  source_line_end: 2712
+  slug: empirical_design_and_validity
+  tags:
+  - empirical_design
+  - causality
+  - validity
+  - variance_control
+  - data_method_fit
+  summary: 以因果关系、研究问题与数据匹配、变异量控制及构念/统计/内部/外部效度评价实证研究。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch04_empirical_design_and_validity.md
+  chunk_count: 40
+- id: ch05
+  chapter_num: 5
+  title: 第5章 实验研究方法
+  anchor_page: 155
+  printed_page: 155
+  toc_line: 17
+  indent: 2
+  pdf_page_end: 193
+  source_line_start: 2713
+  source_line_end: 3408
+  slug: experimental_research
+  tags:
+  - experiment
+  - manipulation
+  - randomization
+  - lab_experiment
+  - field_experiment
+  - online_experiment
+  - validity
+  summary: 覆盖实验假设、实验室/实地/网上实验、效度威胁、操纵与组间/组内/因素设计及可复制性。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch05_experimental_research.md
+  chunk_count: 39
+- id: ch06
+  chapter_num: 6
+  title: 第6章 准实验研究
+  anchor_page: 194
+  printed_page: 194
+  toc_line: 18
+  indent: 2
+  pdf_page_end: 215
+  source_line_start: 3409
+  source_line_end: 3824
+  slug: quasi_experimental_research
+  tags:
+  - quasi_experiment
+  - natural_experiment
+  - control_group
+  - pretest_posttest
+  - causal_inference
+  summary: 介绍准实验的优势、常见设计、控制组与自然干预，并以组织管理案例分析识别与效度问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch06_quasi_experimental_research.md
+  chunk_count: 24
+- id: ch07
+  chapter_num: 7
+  title: 第7章 实证研究中的问卷调查法
+  anchor_page: 216
+  printed_page: 216
+  toc_line: 19
+  indent: 2
+  pdf_page_end: 249
+  source_line_start: 3825
+  source_line_end: 4552
+  slug: survey_research
+  tags:
+  - survey
+  - questionnaire
+  - sampling
+  - measurement
+  - multi_source
+  - common_method_bias
+  summary: 覆盖问卷目的与类型、题项和量尺设计、抽样与数据收集、多来源设计，以及中国情境下的应用问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch07_survey_research.md
+  chunk_count: 43
+- id: ch08
+  chapter_num: 8
+  title: 第8章 二手数据在管理研究中的使用
+  anchor_page: 250
+  printed_page: 250
+  toc_line: 20
+  indent: 2
+  pdf_page_end: 281
+  source_line_start: 4553
+  source_line_end: 5128
+  slug: secondary_and_archival_data
+  tags:
+  - secondary_data
+  - archival_data
+  - panel_data
+  - text_data
+  - data_quality
+  - provenance
+  summary: 说明二手数据的类型、研究贡献、文本与结构化数据、面板优势、数据能力要求和使用风险。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch08_secondary_and_archival_data.md
+  chunk_count: 35
+- id: ch09
+  chapter_num: 9
+  title: 第9章 实地研究中的案例研究
+  anchor_page: 282
+  printed_page: 282
+  toc_line: 21
+  indent: 2
+  pdf_page_end: 328
+  source_line_start: 5129
+  source_line_end: 6098
+  slug: case_study
+  tags:
+  - case_study
+  - field_research
+  - case_selection
+  - validity
+  - reliability
+  - qualitative
+  summary: 界定案例研究，说明质量标准、准备与执行、现场关系、对话分析和常见问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch09_case_study.md
+  chunk_count: 52
+- id: ch10
+  chapter_num: 10
+  title: 第10章 质化研究及其数据分析
+  anchor_page: 329
+  printed_page: 329
+  toc_line: 22
+  indent: 2
+  pdf_page_end: 355
+  source_line_start: 6099
+  source_line_end: 6632
+  slug: qualitative_research_and_analysis
+  tags:
+  - qualitative
+  - grounded_theory
+  - open_coding
+  - axial_coding
+  - selective_coding
+  - theory_building
+  summary: 说明质化研究与扎根理论，并以开放式、轴心和选择性编码展示数据分析和写作。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch10_qualitative_research_and_analysis.md
+  chunk_count: 32
+- id: ch11
+  chapter_num: 11
+  title: 第11章 元分析研究法
+  anchor_page: 356
+  printed_page: 356
+  toc_line: 23
+  indent: 2
+  pdf_page_end: 380
+  source_line_start: 6633
+  source_line_end: 7280
+  slug: meta_analysis
+  tags:
+  - meta_analysis
+  - effect_size
+  - systematic_search
+  - moderator
+  - publication_bias
+  - meta_sem
+  summary: 覆盖元分析的问题设定、检索与编码、固定/随机模型、调节检验、Meta-SEM、发表偏差及工具。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch11_meta_analysis.md
+  chunk_count: 35
+- id: ch12
+  chapter_num: 12
+  title: 第12章 管理与组织的情境化研究
+  anchor_page: 381
+  printed_page: 381
+  toc_line: 24
+  indent: 2
+  pdf_page_end: 403
+  source_line_start: 7281
+  source_line_end: 7830
+  slug: contextualized_research
+  tags:
+  - contextualization
+  - context
+  - china_research
+  - boundary_condition
+  - method_adaptation
+  summary: 区分不同类型的情境依赖，提出四种情境化路径，并强调理论、现象和方法与研究情境的匹配。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch12_contextualized_research.md
+  chunk_count: 31
+- id: ch13
+  chapter_num: 13
+  title: 第13章 理论构念的测量
+  anchor_page: 404
+  printed_page: 404
+  toc_line: 26
+  indent: 2
+  pdf_page_end: 442
+  source_line_start: 7831
+  source_line_end: 8548
+  slug: construct_measurement
+  tags:
+  - construct_measurement
+  - scale_development
+  - content_validity
+  - reliability
+  - convergent_validity
+  - discriminant_validity
+  summary: 介绍构念测量、题项生成、内容效度、内部结构、信度、聚合/区分效度和逻辑关系网络。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch13_construct_measurement.md
+  chunk_count: 50
+- id: ch14
+  chapter_num: 14
+  title: 第14章 单维构念与多维构念的测量
+  anchor_page: 443
+  printed_page: 443
+  toc_line: 27
+  indent: 2
+  pdf_page_end: 482
+  source_line_start: 8549
+  source_line_end: 9414
+  slug: unidimensional_and_multidimensional_constructs
+  tags:
+  - construct_dimensionality
+  - reflective_indicator
+  - formative_indicator
+  - measurement_model
+  summary: 区分单维与多维构念、效果与构成指标，并讨论不同构念结构的测量和估计。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch14_unidimensional_and_multidimensional_constructs.md
+  chunk_count: 41
+- id: ch15
+  chapter_num: 15
+  title: 第15章 结构方程模型
+  anchor_page: 483
+  printed_page: 483
+  toc_line: 28
+  indent: 2
+  pdf_page_end: 508
+  source_line_start: 9415
+  source_line_end: 10112
+  slug: structural_equation_modeling
+  tags:
+  - SEM
+  - CFA
+  - measurement_model
+  - path_model
+  - fit_index
+  - Mplus
+  summary: 介绍结构方程模型的逻辑、测量误差、测量/路径/全模型、均值结构、软件实现与模型评价。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch15_structural_equation_modeling.md
+  chunk_count: 30
+- id: ch16
+  chapter_num: 16
+  title: 第16章 调节变量和中介变量
+  anchor_page: 509
+  printed_page: 509
+  toc_line: 29
+  indent: 2
+  pdf_page_end: 536
+  source_line_start: 10113
+  source_line_end: 10748
+  slug: moderation_and_mediation
+  tags:
+  - moderation
+  - mediation
+  - interaction
+  - indirect_effect
+  - statistical_power
+  summary: 从理论意义到统计检验系统讨论调节、中介、交互作用、间接效应、功效和常见分析问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch16_moderation_and_mediation.md
+  chunk_count: 32
+- id: ch17
+  chapter_num: 17
+  title: 第17章 多层次理论模型的建立及研究方法
+  anchor_page: 537
+  printed_page: 537
+  toc_line: 30
+  indent: 2
+  pdf_page_end: 575
+  source_line_start: 10749
+  source_line_end: 11766
+  slug: multilevel_theory_and_hlm
+  tags:
+  - multilevel
+  - HLM
+  - aggregation
+  - centering
+  - cross_level
+  - sample_size
+  summary: 讨论多层次理论、构念与聚合、HLM分析流程、中心化、统计假设、样本量及延伸模型。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch17_multilevel_theory_and_hlm.md
+  chunk_count: 55
+- id: ch18
+  chapter_num: 18
+  title: 第18章 纵向研究设计和分析
+  anchor_page: 576
+  printed_page: 576
+  toc_line: 31
+  indent: 2
+  pdf_page_end: 593
+  source_line_start: 11767
+  source_line_end: 12212
+  slug: longitudinal_panel_analysis
+  tags:
+  - longitudinal
+  - panel_data
+  - fixed_effects
+  - random_effects
+  - GLS
+  - Stata
+  summary: 说明面板数据优势、OLS假设、固定效应、随机效应、广义最小二乘及软件操作。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch18_longitudinal_panel_analysis.md
+  chunk_count: 20
+- id: ch19
+  chapter_num: 19
+  title: 第19章 事件历史分析法
+  anchor_page: 594
+  printed_page: 594
+  toc_line: 32
+  indent: 2
+  pdf_page_end: 614
+  source_line_start: 12213
+  source_line_end: 12580
+  slug: event_history_analysis
+  tags:
+  - event_history
+  - survival_analysis
+  - hazard
+  - censoring
+  - proportional_hazards
+  - accelerated_failure_time
+  summary: 介绍事件、时间与数据结构，讨论风险模型、比例风险与加速时间模型及研究设计。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch19_event_history_analysis.md
+  chunk_count: 31
+- id: ch20
+  chapter_num: 20
+  title: 第20章 事件研究法
+  anchor_page: 615
+  printed_page: 615
+  toc_line: 33
+  indent: 2
+  pdf_page_end: 643
+  source_line_start: 12581
+  source_line_end: 13242
+  slug: event_study
+  tags:
+  - event_study
+  - abnormal_return
+  - event_window
+  - capital_market
+  - event_system_theory
+  summary: 介绍资本市场事件研究的原理、假定、事件窗与实施步骤，并讨论中国市场应用及事件系统理论。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch20_event_study.md
+  chunk_count: 34
+- id: ch21
+  chapter_num: 21
+  title: 第21章 高频率跟踪问卷调查方法：日记与体验抽样方法的设计和分析
+  anchor_page: 644
+  printed_page: 644
+  toc_line: 34
+  indent: 2
+  pdf_page_end: 681
+  source_line_start: 13243
+  source_line_end: 14318
+  slug: diary_and_experience_sampling
+  tags:
+  - diary_study
+  - experience_sampling
+  - ESM
+  - intensive_longitudinal
+  - multilevel
+  summary: 覆盖日记与体验抽样的类型、计划、测量、技术、招募执行、数据分析和组织研究应用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch21_diary_and_experience_sampling.md
+  chunk_count: 60
+- id: ch22
+  chapter_num: 22
+  title: 第22章 单层与多层被调节的中介和被中介的调节：理论构建与模型检验
+  anchor_page: 682
+  printed_page: 682
+  toc_line: 35
+  indent: 2
+  pdf_page_end: 719
+  source_line_start: 14319
+  source_line_end: 15072
+  slug: moderated_mediation_and_mediated_moderation
+  tags:
+  - moderated_mediation
+  - mediated_moderation
+  - conditional_process
+  - multilevel
+  summary: 区分被中介的调节和被调节的中介，说明单层与多层模型的理论构建、检验和统计问题。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch22_moderated_mediation_and_mediated_moderation.md
+  chunk_count: 50
+- id: ch23
+  chapter_num: 23
+  title: 第23章 论文的写作和发表
+  anchor_page: 720
+  printed_page: 720
+  toc_line: 37
+  indent: 2
+  pdf_page_end: 765
+  source_line_start: 15073
+  source_line_end: 16178
+  slug: academic_writing_review_and_revision
+  tags:
+  - academic_writing
+  - title
+  - abstract
+  - introduction
+  - method
+  - discussion
+  - peer_review
+  - revision
+  summary: 覆盖论文题目、摘要、导言、方法、结果讨论、结论，以及投稿、审阅、修改、回复和发表。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/ch23_academic_writing_review_and_revision.md
+  chunk_count: 86
+- id: appendix_01
+  chapter_num: 1
+  title: 附录1 IACMR追求卓越宣言（伦理准则）
+  anchor_page: 766
+  printed_page: 766
+  toc_line: 38
+  indent: 0
+  pdf_page_end: 768
+  source_line_start: 16179
+  source_line_end: 16248
+  slug: appendix_01
+  tags:
+  - appendix
+  summary: 附录1 IACMR追求卓越宣言（伦理准则）。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/appendix_01_appendix_01.md
+  chunk_count: 3
+- id: appendix_02
+  chapter_num: 2
+  title: 附录2 术语英汉词汇对照
+  anchor_page: 769
+  printed_page: 769
+  toc_line: 39
+  indent: 0
+  pdf_page_end: 788
+  source_line_start: 16249
+  source_line_end: 17626
+  slug: appendix_02
+  tags:
+  - appendix
+  summary: 附录2 术语英汉词汇对照。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/appendix_02_appendix_02.md
+  chunk_count: 17
+- id: appendix_03
+  chapter_num: 3
+  title: 附录3 经典方法论文
+  anchor_page: 789
+  printed_page: 789
+  toc_line: 40
+  indent: 0
+  pdf_page_end: 789
+  source_line_start: 17627
+  source_line_end: 17648
+  slug: appendix_03
+  tags:
+  - appendix
+  summary: 附录3 经典方法论文。作为术语、伦理或经典文献补充材料使用。
+  local_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/appendix_03_appendix_03.md
+  chunk_count: 3

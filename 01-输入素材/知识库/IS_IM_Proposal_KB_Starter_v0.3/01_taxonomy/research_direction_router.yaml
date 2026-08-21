@@ -1,0 +1,411 @@
+version: '1.0'
+catalog_policy:
+  source: 02_journals/IS_IM_Journal_Knowledge_Base.md
+  generated_catalog: 01_taxonomy/generated/research_direction_catalog.json
+  extractor: 11_implementation/build_direction_catalog.py
+  user_selectable_markers:
+  - 典型主题
+  - 适用研究
+  - 适用主题
+  - 研究模块
+  group_by_source_section: true
+  merge_aliases: true
+  preserve_all_source_groups: true
+  quick_topic_mapping_role: routing_shortcuts_only
+  quick_topic_mapping_is_complete_catalog: false
+catalog_alias_groups:
+- direction_id: technology_adoption
+  label_zh: 技术与AI采纳
+  aliases: [AI adoption, technology adoption, AI采纳, 技术采纳]
+- direction_id: human_ai_interaction
+  label_zh: 人机交互
+  aliases: [human-AI interaction, Human-AI Interaction, 人机交互]
+- direction_id: platform_governance
+  label_zh: 平台治理
+  aliases: [platform governance, 平台治理]
+- direction_id: social_media
+  label_zh: 社交媒体
+  aliases: [social media, 社交媒体]
+- direction_id: recommender_systems
+  label_zh: 推荐系统与推荐算法
+  aliases: [recommender systems, recommender algorithms, 推荐系统, 推荐算法]
+- direction_id: information_retrieval
+  label_zh: 信息检索
+  aliases: [information retrieval, Information Retrieval, 信息检索]
+- direction_id: information_behavior
+  label_zh: 信息行为
+  aliases: [Information Behavior, 信息行为]
+- direction_id: knowledge_management
+  label_zh: 知识管理
+  aliases: [Knowledge Management, 知识管理]
+- direction_id: scientometrics
+  label_zh: 科学计量与文献计量
+  aliases: [Scientometrics, Bibliometrics / Scientometrics, 科学计量, 文献计量]
+- direction_id: ai_nlp_information_processing
+  label_zh: AI与NLP信息处理
+  aliases: [AI / NLP, AI / NLP for information processing, AI与NLP信息处理]
+output_labels:
+- IS
+- IM
+- IS_IM
+- OUT_OF_SCOPE
+- UNCERTAIN
+decision_rule:
+  IS: 核心贡献解释或设计数字技术/信息系统及其对个体、组织、市场或社会的影响。
+  IM: 核心贡献解释信息、数据、知识的生产、组织、检索、治理、传播与使用。
+  IS_IM: 技术/系统与信息/知识过程均为核心贡献对象。
+  OUT_OF_SCOPE: 不存在可实质化的技术、系统、信息、数据或知识贡献。
+  UNCERTAIN: 只有行业/现象名，无法识别核心对象、关系或贡献。
+routes:
+- id: is_behavioral
+  label: 行为IS与技术采用
+  scope: IS
+  keywords_zh:
+  - 技术采用
+  - 用户接受
+  - 信任
+  - 隐私顾虑
+  - 技术压力
+  - 持续使用
+  - 算法厌恶
+  - 算法欣赏
+  keywords_en:
+  - technology adoption
+  - user acceptance
+  - trust in AI
+  - privacy concern
+  - technostress
+  - continuance
+  - algorithm aversion
+  - algorithm appreciation
+  journal_pools:
+  - IS_CORE
+  - PSYCHOLOGY
+  - HCI
+  paradigms:
+  - survey_sem
+  - experiment
+  - quantitative_archival_causal
+- id: is_human_ai
+  label: 人机交互与Human-AI Interaction
+  scope: IS_IM
+  keywords_zh:
+  - 人机交互
+  - 人智协作
+  - 生成式人工智能
+  - AI信任
+  - 拟人化
+  - 自动化偏差
+  keywords_en:
+  - human-AI interaction
+  - human-AI collaboration
+  - generative AI
+  - trust in automation
+  - anthropomorphism
+  - automation bias
+  journal_pools:
+  - IS_CORE
+  - HCI
+  - PSYCHOLOGY
+  - CS_AI
+  paradigms:
+  - experiment
+  - survey_sem
+  - design_science
+  - computational_text_network
+- id: is_platform
+  label: 数字平台与平台治理
+  scope: IS
+  keywords_zh:
+  - 数字平台
+  - 平台治理
+  - 平台生态
+  - 双边市场
+  - 内容审核
+  - 平台规则
+  keywords_en:
+  - digital platform
+  - platform governance
+  - platform ecosystem
+  - two-sided market
+  - content moderation
+  - platform policy
+  journal_pools:
+  - IS_CORE
+  - DIGITAL_PLATFORM
+  - ECON_STRATEGY
+  - COMMUNICATION
+  paradigms:
+  - quantitative_archival_causal
+  - analytical_modeling
+  - qualitative_case_process
+- id: is_digital_transformation
+  label: 数字化转型与组织变革
+  scope: IS
+  keywords_zh:
+  - 数字化转型
+  - 数字创新
+  - IT治理
+  - 算法管理
+  - 数字能力
+  keywords_en:
+  - digital transformation
+  - digital innovation
+  - IT governance
+  - algorithmic management
+  - digital capability
+  journal_pools:
+  - IS_CORE
+  - ORG_STRATEGY
+  - PSYCHOLOGY
+  paradigms:
+  - qualitative_case_process
+  - quantitative_archival_causal
+  - survey_sem
+- id: is_social_media
+  label: 社交媒体、错误信息与数字传播
+  scope: IS_IM
+  keywords_zh:
+  - 社交媒体
+  - 错误信息
+  - 虚假新闻
+  - 推荐算法
+  - 信息茧房
+  - 内容传播
+  keywords_en:
+  - social media
+  - misinformation
+  - fake news
+  - recommender algorithm
+  - filter bubble
+  - content diffusion
+  journal_pools:
+  - IS_CORE
+  - COMMUNICATION
+  - PSYCHOLOGY
+  - HCI
+  paradigms:
+  - computational_text_network
+  - experiment
+  - quantitative_archival_causal
+- id: is_security_privacy
+  label: 信息安全与隐私
+  scope: IS
+  keywords_zh:
+  - 信息安全
+  - 隐私
+  - 数据泄露
+  - 安全行为
+  - 隐私计算
+  keywords_en:
+  - information security
+  - privacy
+  - data breach
+  - security behavior
+  - privacy-enhancing technology
+  journal_pools:
+  - IS_CORE
+  - SECURITY
+  - PSYCHOLOGY
+  paradigms:
+  - experiment
+  - survey_sem
+  - quantitative_archival_causal
+  - design_science
+- id: is_design_science
+  label: 设计科学与数字制品
+  scope: IS
+  keywords_zh:
+  - 设计科学
+  - 数字制品
+  - 原型
+  - 系统设计
+  - 设计原则
+  keywords_en:
+  - design science
+  - IT artifact
+  - prototype
+  - system design
+  - design principles
+  journal_pools:
+  - IS_CORE
+  - HCI
+  - CS_AI
+  paradigms:
+  - design_science
+  - experiment
+- id: im_information_behavior
+  label: 信息行为与信息素养
+  scope: IM
+  keywords_zh:
+  - 信息需求
+  - 信息搜寻
+  - 信息偶遇
+  - 信息回避
+  - 信息过载
+  - 信息素养
+  keywords_en:
+  - information need
+  - information seeking
+  - information encountering
+  - information avoidance
+  - information overload
+  - information literacy
+  journal_pools:
+  - IM_CORE
+  - PSYCHOLOGY
+  - COMMUNICATION
+  - HCI
+  paradigms:
+  - survey_sem
+  - experiment
+  - qualitative_case_process
+- id: im_information_retrieval
+  label: 信息检索、搜索与推荐
+  scope: IM
+  keywords_zh:
+  - 信息检索
+  - 搜索引擎
+  - 推荐系统
+  - 语义检索
+  - 稠密检索
+  - 相关性
+  keywords_en:
+  - information retrieval
+  - search engine
+  - recommender systems
+  - semantic search
+  - dense retrieval
+  - relevance
+  journal_pools:
+  - IM_CORE
+  - CS_IR
+  - HCI
+  paradigms:
+  - computational_text_network
+  - experiment
+  - design_science
+- id: im_knowledge_management
+  label: 知识管理与组织知识
+  scope: IM
+  keywords_zh:
+  - 知识管理
+  - 知识共享
+  - 知识转移
+  - 组织记忆
+  - 知识治理
+  - 企业搜索
+  keywords_en:
+  - knowledge management
+  - knowledge sharing
+  - knowledge transfer
+  - organizational memory
+  - knowledge governance
+  - enterprise search
+  journal_pools:
+  - IM_CORE
+  - IS_CORE
+  - ORG_STRATEGY
+  paradigms:
+  - survey_sem
+  - qualitative_case_process
+  - quantitative_archival_causal
+  - design_science
+- id: im_data_governance
+  label: 数据管理与数据治理
+  scope: IM
+  keywords_zh:
+  - 数据治理
+  - 数据质量
+  - 元数据
+  - 主数据
+  - 数据资产
+  - 数据生命周期
+  keywords_en:
+  - data governance
+  - data quality
+  - metadata
+  - master data
+  - data asset
+  - data lifecycle
+  journal_pools:
+  - IM_CORE
+  - CS_DATA
+  - IS_CORE
+  paradigms:
+  - qualitative_case_process
+  - design_science
+  - quantitative_archival_causal
+- id: im_bibliometrics
+  label: 科学计量与知识图谱
+  scope: IM
+  keywords_zh:
+  - 科学计量
+  - 文献计量
+  - 引文分析
+  - 共引
+  - 知识图谱
+  - 科学地图
+  keywords_en:
+  - scientometrics
+  - bibliometrics
+  - citation analysis
+  - co-citation
+  - knowledge graph
+  - science mapping
+  journal_pools:
+  - IM_CORE
+  - SCIENTOMETRICS
+  - CS_DATA
+  paradigms:
+  - systematic_review_bibliometric
+  - computational_text_network
+- id: im_nlp_rag
+  label: NLP、LLM与RAG信息系统
+  scope: IS_IM
+  keywords_zh:
+  - 自然语言处理
+  - 大语言模型
+  - 检索增强生成
+  - 向量数据库
+  - 问答系统
+  keywords_en:
+  - natural language processing
+  - large language model
+  - retrieval-augmented generation
+  - vector database
+  - question answering
+  journal_pools:
+  - IM_CORE
+  - CS_AI
+  - CS_IR
+  - HCI
+  - IS_CORE
+  paradigms:
+  - computational_text_network
+  - design_science
+  - experiment
+- id: im_digital_government
+  label: 电子政务与政府信息管理
+  scope: IS_IM
+  keywords_zh:
+  - 电子政务
+  - 数字政府
+  - 开放数据
+  - 政府信息
+  - 公共服务平台
+  keywords_en:
+  - e-government
+  - digital government
+  - open government data
+  - government information
+  - public service platform
+  journal_pools:
+  - IS_CORE
+  - IM_CORE
+  - PUBLIC_ADMIN
+  - COMMUNICATION
+  paradigms:
+  - quantitative_archival_causal
+  - qualitative_case_process
+  - survey_sem

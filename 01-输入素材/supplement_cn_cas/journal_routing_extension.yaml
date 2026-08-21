@@ -1,0 +1,130 @@
+version: 0.4.0
+policy:
+  do_not_merge_rankings: CAS/CSSCI/PKU/FMS/UTD均保留独立字段；不得将“同时入选”自动折算为自定义A/B等级。
+  default_chinese_profile: EXPANDED_CN_CORE
+  default_english_profile: ORIGINAL_UTD_FMS
+  cas_note: CAS 2025只作为国际英文扩展资格；2026起已停更。
+  verification_gate: 若某论文是否满足用户指定评级无法从本地版本化名单确认，则触发JOURNAL_RANK_UNVERIFIED，而不是猜测。
+eligibility_profiles:
+  ORIGINAL_STRICT:
+    zh:
+    - FMS_CN_2025_T1
+    - FMS_CN_2025_T2
+    en:
+    - UTD24_CURRENT
+    - FMS_INT_2025_A
+    - FMS_INT_2025_B
+  EXPANDED_CN_CORE:
+    zh:
+    - FMS_CN_2025_T1
+    - FMS_CN_2025_T2
+    - CSSCI_2025_2026_SOURCE
+    - PKU_CORE_2023
+    en:
+    - UTD24_CURRENT
+    - FMS_INT_2025_A
+    - FMS_INT_2025_B
+    note: 中文检索允许FMS T1/T2、CSSCI来源刊、北大核心；返回结果必须逐篇标注命中的评价体系。
+  EXPANDED_EN_CAS:
+    zh:
+    - FMS_CN_2025_T1
+    - FMS_CN_2025_T2
+    - CSSCI_2025_2026_SOURCE
+    - PKU_CORE_2023
+    en:
+    - UTD24_CURRENT
+    - FMS_INT_2025_A
+    - FMS_INT_2025_B
+    - CAS_SSCI_2025_ZONE1
+    - CAS_SSCI_2025_ZONE2
+    note: CAS仅使用终版2025，并要求SSCI覆盖。
+direction_routes:
+- direction:
+  - Information Science
+  - Information Behavior
+  - Information Retrieval
+  - Knowledge Management
+  - Bibliometrics
+  zh_pools:
+  - CSSCI_2025_2026_INFORMATION_RESOURCE_FULL
+  - PKU_CORE_2023_INFORMATION_RESOURCE
+  en_pools:
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+  - IM_CORE
+  - CS_IR
+- direction:
+  - Behavioral IS
+  - Human-AI Interaction
+  - AI trust
+  - Algorithm aversion
+  - Technology adoption
+  zh_pools:
+  - CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT
+  - PKU_CORE_2023_PSYCHOLOGY
+  en_pools:
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+  - PSYCHOLOGY
+  - HCI
+  - IS_CORE
+- direction:
+  - Social Media
+  - Misinformation
+  - Digital Journalism
+  - Algorithmic Media
+  - Platform Communication
+  zh_pools:
+  - CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT
+  - PKU_CORE_2023_COMMUNICATION
+  en_pools:
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+  - COMMUNICATION
+  - IS_CORE
+- direction:
+  - Digital Transformation
+  - Platform Governance
+  - Digital Innovation
+  - Algorithmic Management
+  zh_pools:
+  - CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT
+  - PKU_CORE_2023_ORG_INNOVATION
+  - PKU_CORE_2023_MANAGEMENT_DIRECT
+  en_pools:
+  - IS_CORE
+  - DIGITAL_PLATFORM
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+- direction:
+  - E-government
+  - Digital Government
+  - Government Information
+  zh_pools:
+  - PKU_CORE_2023_PUBLIC_DIGITAL_GOV
+  - CSSCI_2025_2026_INFORMATION_RESOURCE_FULL
+  en_pools:
+  - PUBLIC_ADMIN
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+- direction:
+  - Scientometrics
+  - Research Evaluation
+  - Science Policy
+  zh_pools:
+  - CSSCI_2025_2026_INFORMATION_RESOURCE_FULL
+  - PKU_CORE_2023_SCIENCE_POLICY
+  en_pools:
+  - SCIENTOMETRICS
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+- direction:
+  - Quantitative Methods
+  - Analytics
+  - Empirical Methods
+  zh_pools:
+  - PKU_CORE_2023_STATISTICS_METHODS
+  - PKU_CORE_2023_MANAGEMENT_DIRECT
+  en_pools:
+  - IS_CORE
+  - ECON_STRATEGY

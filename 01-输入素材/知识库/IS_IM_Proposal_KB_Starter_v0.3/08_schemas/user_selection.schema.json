@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UserSelection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "research_direction",
+    "selected_gap_ids",
+    "selected_innovation_ids",
+    "selected_at"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "research_direction": {
+      "type": "string"
+    },
+    "selected_gap_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_innovation_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_notes": {
+      "type": "string"
+    },
+    "selected_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

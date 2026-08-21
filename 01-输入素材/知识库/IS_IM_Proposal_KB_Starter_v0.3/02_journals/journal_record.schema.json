@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JournalRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "journal_id",
+    "canonical_title",
+    "language",
+    "ranking_records",
+    "verified_on"
+  ],
+  "properties": {
+    "journal_id": {
+      "type": "string"
+    },
+    "canonical_title": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "language": {
+      "enum": [
+        "zh",
+        "en",
+        "multilingual"
+      ]
+    },
+    "issn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eissn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publisher_or_sponsor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "official_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topic_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ranking_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "system",
+          "version",
+          "level",
+          "source_url"
+        ],
+        "properties": {
+          "system": {
+            "enum": [
+              "UTD24",
+              "FMS_INT",
+              "FMS_CN",
+              "AIS_PREMIER",
+              "AIS_SIG"
+            ]
+          },
+          "version": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "verified_on": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "active_status": {
+      "enum": [
+        "active",
+        "renamed",
+        "merged",
+        "ceased",
+        "unknown"
+      ]
+    },
+    "verified_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

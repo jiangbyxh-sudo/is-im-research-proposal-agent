@@ -1,0 +1,53 @@
+as_of: '2026-08-21'
+status_scale:
+  complete: 可用于生产规则
+  seeded: 已有首批内容，需持续扩展
+  template_only: 仅有模板
+  missing: 尚未建设
+modules:
+- module: scope_and_stop_rules
+  status: complete
+  notes: 覆盖用户明确要求及附加审计停止条件
+- module: user_direction_catalog
+  status: complete
+  notes: 从期刊知识库提取75个原始主题，按来源分组并合并为61个可选方向；快速映射不作为完整目录。
+- module: research_request_branching
+  status: complete
+  notes: 支持“仅大方向→最近五年热门五方向”和“大方向＋细分问题→定向检索”自动分支。
+- module: international_journal_routing
+  status: seeded
+  notes: 已有IS/IM及跨学科池；上线前建议逐条补ISSN与官方期刊URL
+- module: fms_chinese_2025
+  status: complete
+  notes: 录入94种T1/T2，并给出IS/IM相关子集
+- module: source_registry
+  status: complete
+  notes: All 44 external source records now have local structured knowledge cards and audit metadata.
+- module: research_paradigms
+  status: seeded
+  notes: 9种范式的开题结构与停止条件
+- module: theory_cards
+  status: template_only
+  notes: 仅提供核心理论种子与模板，需按高频方向扩展
+- module: paper_corpus
+  status: missing
+  notes: 应在用户检索时动态构建，不建议预抓取所有全文
+- module: publisher_fulltext_connectors
+  status: missing
+  notes: 取决于学校数据库权限与合法授权
+- module: dynamic_paper_discovery_provider
+  status: seeded
+  notes: 已定义可替换Provider契约和未配置停止状态；真实中英文检索连接器尚未接入。
+- module: external_source_localization
+  status: complete
+  notes: All external source records are locally indexed; protected full text remains excluded by rights policy.
+- module: local_empirical_books
+  status: complete
+  notes: 2008版与2018第三版已保留全文、章节拆分、主题卡和页码/行号溯源；2018优先、2008补充。
+- module: local_fulltext_retrieval
+  status: complete
+  notes: 已建立JSONL与SQLite FTS5 trigram索引，共1600个本地原文块。
+next_priority:
+- Expand high-frequency IS and IM theory cards with licensed or open primary texts.
+- Add creator-authorized full-text snapshots only where redistribution rights are documented.
+- Use live APIs for current paper discovery and integrity verification, then cache permitted metadata.

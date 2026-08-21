@@ -1,0 +1,53 @@
+version: '1.0'
+evaluated_in_order: true
+rules:
+- code: OUT_OF_SCOPE
+  severity: hard_stop
+  trigger: 研究问题的核心对象、机制与预期贡献均不能映射到IS、IM或其明确跨学科交叉域。
+  required_action: 停止论文检索与开题生成；说明判定理由，并建议用户重述技术/信息/数据/知识相关的研究问题。
+  resume_condition: 用户提供可被路由器判定为IS、IM或IS_IM的研究方向。
+- code: SCOPE_UNCERTAIN
+  severity: pause
+  trigger: 路由置信度低于0.70，或研究方向只有宽泛行业名而无研究对象/关系。
+  required_action: 不进入正式检索；返回1个最小澄清问题或给出2至3种可选IS/IM解释。
+  resume_condition: 范围置信度达到0.70。
+- code: JOURNAL_RANK_UNVERIFIED
+  severity: hard_stop_for_record
+  trigger: 无法用UTD官方或FMS 2025官方目录确认期刊及等级。
+  required_action: 排除该论文，不得用其补足数量；报告被排除记录与验证失败原因。
+  resume_condition: 获得可审计的官方名单版本、期刊名称/ISSN匹配证据。
+- code: PAPER_SOURCE_UNVERIFIED
+  severity: hard_stop_for_record
+  trigger: 论文题名、作者、年份、期刊、DOI或官方落地页无法交叉核验。
+  required_action: 排除论文，不得引用其结论。
+  resume_condition: 至少获得出版商/数据库官方记录，英文优先DOI元数据，中文优先期刊官网或权威数据库记录。
+- code: RETRACTED_OR_INVALIDATED
+  severity: hard_stop_for_record
+  trigger: 论文已撤稿，或更正内容使拟引用结论失效。
+  required_action: 排除或仅作为研究诚信案例；记录撤稿/更正来源。
+  resume_condition: 不适用。
+- code: INSUFFICIENT_ELIGIBLE_PAPERS
+  severity: pause
+  trigger: 按指定方向、语言和白名单检索后，合格论文少于用户数量或默认数量。
+  required_action: 报告精确缺口、已检索数据库与查询式；不得降低期刊等级补数。可建议扩展年份、相邻方向或AIS SIG池。
+  resume_condition: 用户接受扩展策略，或后续检索获得足够合格论文。
+- code: KB_PARADIGM_MISSING
+  severity: pause
+  trigger: 知识库没有与候选研究设计匹配且状态为seeded/complete的范式卡。
+  required_action: 明确列出缺失模块；现场检索官方指南、出版社资源或方法原始文献；新来源必须进入source_registry并标记verified_on。不得自行编造范式。
+  resume_condition: 补充并验证所需范式卡。
+- code: EVIDENCE_INSUFFICIENT_FOR_CLAIM
+  severity: pause_for_claim
+  trigger: 研究空白、因果机制、方法细节或结果判断仅由元数据/摘要支持，或证据来源过少。
+  required_action: 降低表述强度、获取全文或删除该判断。
+  resume_condition: 获得满足证据等级要求的来源。
+- code: LOCAL_SOURCE_ASSET_MISSING
+  severity: pause_for_claim
+  trigger: 本地OCR来源所需的图、表、公式或版式资产未随Markdown上传，且当前判断依赖该资产。
+  required_action: 报告resource_id、章节和PDF页；不得依据文字占位符重建图表或公式。改用不依赖该资产的文字证据，或由创建者补充合法图像资产。
+  resume_condition: 获得对应合法资产，或将判断限定为现有文字能够支持的范围。
+- code: USER_SELECTION_REQUIRED
+  severity: hard_stop_before_proposal
+  trigger: 用户尚未提交至少一个selected_gap_id和一个selected_innovation_id。
+  required_action: 只展示候选空白与创新点及其证据、风险和可行性；不得生成完整开题报告。
+  resume_condition: 存在通过user_selection.schema.json校验的选择记录。

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProposalContext",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "scope_label",
+    "paper_ids",
+    "claim_ids",
+    "selected_gap_ids",
+    "selected_innovation_ids",
+    "paradigm_ids",
+    "gate_passed"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "scope_label": {
+      "enum": [
+        "IS",
+        "IM",
+        "IS_IM"
+      ]
+    },
+    "paper_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "claim_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_gap_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_innovation_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "paradigm_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_journal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gate_passed": {
+      "const": true
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

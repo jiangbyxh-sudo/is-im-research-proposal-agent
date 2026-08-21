@@ -1,0 +1,20 @@
+snapshot_id: AIS_PREMIER_2025
+source_resource_id: RANK-AIS-2025
+captured_on: '2026-08-21'
+official_update: 2025-07
+journal_count: 11
+journals:
+- Decision Support Systems
+- European Journal of Information Systems
+- Information & Management
+- Information and Organization
+- Information Systems Journal
+- Information Systems Research
+- Journal of the Association for Information Systems
+- Journal of Information Technology
+- Journal of Management Information Systems
+- Journal of Strategic Information Systems
+- MIS Quarterly
+eligibility_rule: Discovery and routing aid only. Formal platform count still requires UTD24 or FMS verification.
+interdisciplinary_note: Technical and interdisciplinary IS research may require computer science, economics, psychology, biometrics,
+  or HCI venues.

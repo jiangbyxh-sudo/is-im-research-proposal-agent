@@ -1,0 +1,1320 @@
+version: 0.3.0
+verified_on: '2026-08-21'
+rule: 运行时优先读取本地知识卡和本地全文索引；外部链接仅用于维护、版本核验或本地覆盖缺失时的显式兜底，不得在每次任务启动时自动抓取。
+resources:
+- id: RANK-FMS-2025
+  title: FMS管理科学高质量期刊推荐列表2025
+  domain:
+  - governance
+  - journals
+  type: official_ranking
+  level: authoritative
+  access: open
+  url: https://www.fms-journal.net/
+  use:
+  - 验证国际A/B与中文T1/T2
+  - 期刊名单版本控制
+  extract:
+  - 期刊名
+  - 等级
+  - 版本
+  - 发布日期
+  local:
+    status: structured_snapshot_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_list_snapshot
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/RANK-FMS-2025.md
+    - 03_sources/local_knowledge/external/structured/fms_2025_scope.yaml
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: RANK-UTD24
+  title: UTD Top 100 Journal List
+  domain:
+  - governance
+  - journals
+  type: official_ranking
+  level: authoritative
+  access: open
+  url: https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/list-of-journals
+  use:
+  - 验证UTD24成员
+  extract:
+  - 期刊名
+  - 名单版本
+  local:
+    status: structured_snapshot_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_list_snapshot
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/RANK-UTD24.md
+    - 03_sources/local_knowledge/external/structured/utd24_current.yaml
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: RANK-AIS-2025
+  title: AIS Senior Scholars List of Premier Journals
+  domain:
+  - IS
+  - journals
+  type: official_field_list
+  level: authoritative_supplement
+  access: open
+  url: https://aisnet.org/research/seniorscholarsbasket/
+  use:
+  - IS核心刊与跨学科路由
+  - AIS SIG补充期刊发现
+  extract:
+  - Premier期刊
+  - SIG推荐
+  - 更新时间
+  local:
+    status: structured_snapshot_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_field_list_snapshot
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/RANK-AIS-2025.md
+    - 03_sources/local_knowledge/external/structured/ais_premier_2025.yaml
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: META-CROSSREF
+  title: Crossref REST API
+  domain:
+  - metadata
+  - integrity
+  type: official_api
+  level: authoritative
+  access: open_api
+  url: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+  use:
+  - DOI元数据验证
+  - 版本/更正/撤稿检查
+  extract:
+  - DOI
+  - 题名
+  - 作者
+  - 期刊
+  - 日期
+  - update-to
+  local:
+    status: official_api_operational_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: official_docs_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/META-CROSSREF.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: META-OPENALEX
+  title: OpenAlex API
+  domain:
+  - metadata
+  - bibliometrics
+  type: official_api
+  level: discovery_and_crosscheck
+  access: open_api
+  url: https://help.openalex.org/
+  use:
+  - 论文发现
+  - 引用网络
+  - 作者/机构/主题元数据
+  extract:
+  - work_id
+  - DOI
+  - cited_by_count
+  - topics
+  - source
+  local:
+    status: official_api_operational_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: cc0_metadata_and_docs_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/META-OPENALEX.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: META-SEMANTIC
+  title: Semantic Scholar Academic Graph API
+  domain:
+  - metadata
+  - discovery
+  type: official_api
+  level: discovery_and_crosscheck
+  access: open_api
+  url: https://api.semanticscholar.org/api-docs/
+  use:
+  - 论文发现
+  - 引用关系
+  - 推荐
+  extract:
+  - paperId
+  - title
+  - abstract
+  - citations
+  - references
+  local:
+    status: official_api_operational_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: official_docs_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/META-SEMANTIC.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: OA-UNPAYWALL
+  title: Unpaywall API
+  domain:
+  - open_access
+  type: official_api
+  level: access_locator
+  access: open_api
+  url: https://unpaywall.org/products/api
+  use:
+  - 查找合法开放获取版本
+  extract:
+  - best_oa_location
+  - license
+  - version
+  local:
+    status: official_api_operational_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: official_docs_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/OA-UNPAYWALL.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: DB-AISEL
+  title: AIS eLibrary
+  domain:
+  - IS
+  - database
+  type: discipline_repository
+  level: authoritative
+  access: mixed
+  url: https://aisel.aisnet.org/
+  use:
+  - 检索AIS期刊与会议论文
+  - 获取IS经典文献
+  extract:
+  - 元数据
+  - 摘要
+  - 全文链接
+  local:
+    status: database_workflow_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: repository_interface_summary_no_corpus
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/DB-AISEL.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: DB-CNKI
+  title: 中国知网
+  domain:
+  - zh_database
+  type: bibliographic_database
+  level: authoritative_database
+  access: institutional
+  url: https://www.cnki.net/
+  use:
+  - 中文论文检索与元数据核验
+  extract:
+  - 题名
+  - 作者
+  - 来源
+  - 年份
+  - 摘要
+  - 基金
+  local:
+    status: database_workflow_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: database_usage_knowledge_no_corpus
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/DB-CNKI.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: DB-WANFANG
+  title: 万方数据知识服务平台
+  domain:
+  - zh_database
+  type: bibliographic_database
+  level: authoritative_database
+  access: institutional
+  url: https://www.wanfangdata.com.cn/
+  use:
+  - 中文论文检索与交叉核验
+  extract:
+  - 题名
+  - 作者
+  - 期刊
+  - 年份
+  - DOI
+  local:
+    status: database_workflow_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: database_usage_knowledge_no_corpus
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/DB-WANFANG.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: DB-VIP
+  title: 维普中文期刊服务平台
+  domain:
+  - zh_database
+  type: bibliographic_database
+  level: authoritative_database
+  access: institutional
+  url: https://www.cqvip.com/
+  use:
+  - 中文期刊论文检索与交叉核验
+  extract:
+  - 题名
+  - 作者
+  - 期刊
+  - 年份
+  local:
+    status: database_workflow_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: database_usage_knowledge_no_corpus
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/DB-VIP.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: DB-NCPSSD
+  title: 国家哲学社会科学文献中心
+  domain:
+  - zh_database
+  - social_science
+  type: official_repository
+  level: authoritative
+  access: open_or_registered
+  url: https://www.ncpssd.cn/
+  use:
+  - 社科中文论文发现与合法全文获取
+  extract:
+  - 题名
+  - 作者
+  - 期刊
+  - 全文状态
+  local:
+    status: database_workflow_card_indexed
+    runtime_fetch: live_query_for_current_records_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_repository_usage_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/DB-NCPSSD.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-CRAFT-5E
+  title: The Craft of Research, 5th Edition
+  domain:
+  - writing
+  - research_design
+  type: book
+  level: foundational
+  access: library_or_purchase
+  url: https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html
+  use:
+  - 研究问题、论证、证据与反驳
+  extract:
+  - problem-question-claim-evidence结构
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: commercial_book_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-CRAFT-5E.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-CRESWELL-6E
+  title: Research Design, 6th Edition
+  domain:
+  - research_design
+  type: book
+  level: foundational
+  access: library_or_purchase
+  url: https://us2.sagepub.com/en-us/nam/research-design/book270550
+  use:
+  - 定量、定性、混合方法总体设计
+  extract:
+  - 哲学假设
+  - RQ
+  - 方法匹配
+  - 写作结构
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: commercial_book_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-CRESWELL-6E.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-SWALES-FEAK
+  title: Academic Writing for Graduate Students, 3rd Edition
+  domain:
+  - writing
+  type: book
+  level: foundational
+  access: library_or_purchase
+  url: https://press.umich.edu/Books/A/Academic-Writing-for-Graduate-Students-3rd-Edition2
+  use:
+  - 学术语篇、引言、综述、讨论写作
+  extract:
+  - genre moves
+  - positioning
+  - reporting verbs
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: commercial_book_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-SWALES-FEAK.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-APA-JARS
+  title: APA Journal Article Reporting Standards
+  domain:
+  - reporting
+  - methods
+  type: official_standard
+  level: authoritative
+  access: open
+  url: https://apastyle.apa.org/jars
+  use:
+  - 定量、定性、混合研究报告规范
+  extract:
+  - 研究报告清单
+  local:
+    status: official_guideline_knowledge_card_indexed
+    runtime_fetch: refresh_if_stale_or_submission_specific
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_standard_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-APA-JARS.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-MISQ-GUIDE
+  title: MIS Quarterly Instructions for Authors
+  domain:
+  - IS
+  - writing
+  type: journal_guideline
+  level: authoritative
+  access: open
+  url: https://misq.umn.edu/instructions-for-authors
+  use:
+  - IS论文投稿与写作要求
+  extract:
+  - 稿件类型
+  - 格式
+  - 审稿与伦理
+  local:
+    status: journal_guideline_knowledge_card_indexed
+    runtime_fetch: refresh_if_stale_or_submission_specific
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: official_guideline_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-MISQ-GUIDE.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-ISR-GUIDE
+  title: Information Systems Research Submission Guidelines
+  domain:
+  - IS
+  - writing
+  type: journal_guideline
+  level: authoritative
+  access: open
+  url: https://pubsonline.informs.org/page/isre/submission-guidelines
+  use:
+  - ISR对现象、理论、方法与贡献的要求
+  extract:
+  - submission criteria
+  - contribution statement
+  local:
+    status: journal_guideline_knowledge_card_indexed
+    runtime_fetch: refresh_if_stale_or_submission_specific
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: official_guideline_summary
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-ISR-GUIDE.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: WRITE-WEBSTER-WATSON
+  title: 'Analyzing the Past to Prepare for the Future: Writing a Literature Review'
+  domain:
+  - literature_review
+  - IS
+  type: classic_article
+  level: foundational
+  access: library_or_open_copy
+  url: https://www.jstor.org/stable/4132319
+  use:
+  - 概念中心型综述、文献搜索与组织
+  extract:
+  - concept-centric matrix
+  - review structure
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/WRITE-WEBSTER-WATSON.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: THEORY-GREGOR-2006
+  title: The Nature of Theory in Information Systems
+  domain:
+  - IS
+  - theory
+  type: classic_article
+  level: foundational
+  access: open_landing
+  url: https://aisel.aisnet.org/misq/vol30/iss3/5/
+  use:
+  - IS理论类型判断
+  extract:
+  - analysis
+  - explanation
+  - prediction
+  - design/action
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/THEORY-GREGOR-2006.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: THEORY-HEVNER-2004
+  title: Design Science in Information Systems Research
+  domain:
+  - IS
+  - design_science
+  type: classic_article
+  level: foundational
+  access: open_landing
+  url: https://aisel.aisnet.org/misq/vol28/iss1/6/
+  use:
+  - 设计科学框架与评价
+  extract:
+  - artifact
+  - relevance
+  - rigor
+  - evaluation
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/THEORY-HEVNER-2004.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: THEORY-TAM-1989
+  title: Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology
+  domain:
+  - IS
+  - technology_adoption
+  type: classic_article
+  level: foundational
+  access: library
+  url: https://doi.org/10.2307/249008
+  use:
+  - TAM理论与量表来源
+  extract:
+  - PU
+  - PEOU
+  - use intention
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/THEORY-TAM-1989.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: THEORY-UTAUT-2003
+  title: 'User Acceptance of Information Technology: Toward a Unified View'
+  domain:
+  - IS
+  - technology_adoption
+  type: classic_article
+  level: foundational
+  access: library
+  url: https://doi.org/10.2307/30036540
+  use:
+  - UTAUT构念与调节变量
+  extract:
+  - performance expectancy
+  - effort expectancy
+  - social influence
+  - facilitating conditions
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/THEORY-UTAUT-2003.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: THEORY-TTF-1995
+  title: Task-Technology Fit and Individual Performance
+  domain:
+  - IS
+  - technology_fit
+  type: classic_article
+  level: foundational
+  access: library
+  url: https://doi.org/10.2307/249689
+  use:
+  - 任务-技术匹配理论
+  extract:
+  - task characteristics
+  - technology characteristics
+  - fit
+  - performance
+  local:
+    status: bibliographic_abstract_and_concept_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/THEORY-TTF-1995.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-OPENINTRO
+  title: Introduction to Modern Statistics
+  domain:
+  - statistics
+  type: open_textbook
+  level: introductory
+  access: open
+  url: https://openintro-ims.netlify.app/
+  use:
+  - 概率、抽样、推断、回归基础
+  extract:
+  - chapters
+  - labs
+  - datasets
+  local:
+    status: open_resource_learning_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: cc_by_sa_source_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-OPENINTRO.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-R4DS
+  title: R for Data Science, 2nd Edition
+  domain:
+  - R
+  - data_workflow
+  type: open_textbook
+  level: introductory
+  access: open
+  url: https://r4ds.hadley.nz/
+  use:
+  - 数据整理、可视化、编程与可重复研究
+  extract:
+  - tidyverse
+  - Quarto
+  - workflow
+  local:
+    status: open_resource_learning_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: cc_by_nc_nd_source_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-R4DS.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-ISLR
+  title: An Introduction to Statistical Learning
+  domain:
+  - machine_learning
+  type: open_textbook
+  level: introductory_to_intermediate
+  access: open
+  url: https://www.statlearning.com/
+  use:
+  - 统计学习、模型评估与R/Python实验
+  extract:
+  - regression
+  - classification
+  - resampling
+  - trees
+  - unsupervised
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: author_public_resource_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-ISLR.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-MIXTAPE
+  title: 'Causal Inference: The Mixtape'
+  domain:
+  - causal_inference
+  type: open_textbook
+  level: intermediate
+  access: open
+  url: https://mixtape.scunning.com/
+  use:
+  - 潜在结果、DAG、RDD、IV、DiD、合成控制
+  extract:
+  - assumptions
+  - estimators
+  - code
+  local:
+    status: open_resource_learning_map_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: public_online_resource_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-MIXTAPE.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-LAVAAN
+  title: lavaan Tutorial
+  domain:
+  - SEM
+  - CFA
+  type: official_tutorial
+  level: introductory_to_intermediate
+  access: open
+  url: https://lavaan.ugent.be/tutorial/
+  use:
+  - CFA、SEM、中介、多组与分类变量模型
+  extract:
+  - syntax
+  - fit indices
+  - examples
+  local:
+    status: official_tutorial_knowledge_card_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: cc_by_official_tutorial_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-LAVAAN.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-GIOIA
+  title: 'Seeking Qualitative Rigor in Inductive Research: Notes on the Gioia Methodology'
+  domain:
+  - qualitative
+  type: method_article
+  level: intermediate
+  access: publisher
+  url: https://doi.org/10.1177/1094428112452151
+  use:
+  - 归纳定性研究与数据结构
+  extract:
+  - 1st-order concepts
+  - 2nd-order themes
+  - aggregate dimensions
+  local:
+    status: abstract_and_method_card_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 0
+    rights_policy: article_abstract_and_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-GIOIA.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-THEMATIC
+  title: Braun and Clarke Thematic Analysis Resources
+  domain:
+  - qualitative
+  type: author_resource
+  level: foundational
+  access: open
+  url: https://www.thematicanalysis.net/
+  use:
+  - 反思性主题分析
+  extract:
+  - six phases
+  - quality guidance
+  - common misconceptions
+  local:
+    status: author_resource_knowledge_card_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: author_public_resource_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-THEMATIC.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-PRISMA
+  title: PRISMA 2020
+  domain:
+  - systematic_review
+  type: reporting_standard
+  level: authoritative
+  access: open
+  url: https://www.prisma-statement.org/
+  use:
+  - 系统综述流程与报告清单
+  extract:
+  - checklist
+  - flow diagram
+  - extensions
+  local:
+    status: official_standard_knowledge_card_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_reporting_standard_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-PRISMA.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-BDA
+  title: Bayesian Data Analysis
+  domain:
+  - bayesian
+  type: book_and_author_resources
+  level: advanced
+  access: author_resources
+  url: https://sites.stat.columbia.edu/gelman/book/
+  use:
+  - 贝叶斯建模、层级模型、后验预测检验
+  extract:
+  - chapters
+  - datasets
+  - errata
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: author_noncommercial_resource_derived_map_no_redistribution
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-BDA.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-PROBML
+  title: Probabilistic Machine Learning
+  domain:
+  - bayesian
+  - machine_learning
+  type: open_author_book
+  level: advanced
+  access: open
+  url: https://probml.github.io/pml-book/
+  use:
+  - 概率机器学习与现代模型
+  extract:
+  - book1
+  - book2
+  - code
+  local:
+    status: open_author_resource_learning_map_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: author_public_resource_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-PROBML.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-YALE-GAME
+  title: 'Yale ECON 159: Game Theory'
+  domain:
+  - game_theory
+  type: open_course
+  level: introductory
+  access: open
+  url: https://oyc.yale.edu/economics/econ-159
+  use:
+  - Nash、序贯博弈、信息不对称与信号
+  extract:
+  - lectures
+  - assignments
+  local:
+    status: open_course_learning_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: open_course_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-YALE-GAME.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-ONLINE-EXPERIMENTS
+  title: Trustworthy Online Controlled Experiments
+  domain:
+  - experiments
+  - A/B_testing
+  type: book
+  level: intermediate
+  access: library_or_purchase
+  url: https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59
+  use:
+  - 在线实验、指标、陷阱与实验文化
+  extract:
+  - randomization
+  - metrics
+  - guardrails
+  - network effects
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: commercial_book_public_page_derived_map_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/METHOD-ONLINE-EXPERIMENTS.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-INTRO
+  title: Introduction to Information Science, 2nd Edition
+  domain:
+  - IM
+  - information_science
+  type: book
+  level: introductory
+  access: library_or_purchase
+  url: https://alastore.ala.org/introIS2
+  use:
+  - 信息科学总体框架
+  extract:
+  - information
+  - documents
+  - organization
+  - retrieval
+  - behavior
+  - informetrics
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: commercial_book_public_page_derived_map_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-INTRO.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-LOOKING
+  title: Looking for Information, 5th Edition
+  domain:
+  - IM
+  - information_behavior
+  type: book
+  level: foundational
+  access: library_or_purchase
+  url: https://www.emerald.com/books/monograph/15349/Looking-for-InformationExamining-Research-on-How
+  use:
+  - 信息需求、搜寻、使用与创造
+  extract:
+  - models
+  - contexts
+  - research traditions
+  local:
+    status: public_toc_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: commercial_book_public_page_derived_map_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-LOOKING.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-IR-BOOK
+  title: Introduction to Information Retrieval
+  domain:
+  - IM
+  - information_retrieval
+  type: open_textbook
+  level: foundational
+  access: open
+  url: https://nlp.stanford.edu/IR-book/
+  use:
+  - 倒排索引、TF-IDF、检索评价、分类、聚类与Web搜索
+  extract:
+  - chapters
+  - slides
+  - exercises
+  local:
+    status: open_resource_learning_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: author_online_book_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-IR-BOOK.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-KM-DALKIR
+  title: Knowledge Management in Theory and Practice, 4th Edition
+  domain:
+  - IM
+  - knowledge_management
+  type: book
+  level: foundational
+  access: library_or_purchase
+  url: https://mitpress.mit.edu/9780262048125/knowledge-management-in-theory-and-practice/
+  use:
+  - 知识创造、共享、治理与评价
+  extract:
+  - KM cycle
+  - tools
+  - governance
+  - measurement
+  local:
+    status: public_description_and_knowledge_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: commercial_book_public_page_derived_map_no_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-KM-DALKIR.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-DMBOK
+  title: DAMA-DMBOK
+  domain:
+  - IM
+  - data_management
+  type: body_of_knowledge
+  level: professional_foundational
+  access: official_overview_and_purchase
+  url: https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/
+  use:
+  - 数据治理、质量、元数据、架构与生命周期
+  extract:
+  - knowledge areas
+  - framework
+  local:
+    status: official_framework_knowledge_card_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_public_overview_derived_map_no_book_fulltext
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-DMBOK.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-SLP3
+  title: Speech and Language Processing, 3rd Edition Draft
+  domain:
+  - NLP
+  - LLM
+  type: open_author_book
+  level: intermediate_to_advanced
+  access: open
+  url: https://web.stanford.edu/~jurafsky/slp3/
+  use:
+  - NLP、Transformer、LLM、RAG相关基础
+  extract:
+  - chapters
+  - draft date
+  local:
+    status: open_author_resource_learning_map_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 90
+    rights_policy: author_public_draft_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-SLP3.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-NETWORK
+  title: Network Science
+  domain:
+  - network_analysis
+  type: open_textbook
+  level: foundational_to_intermediate
+  access: open
+  url: https://networksciencebook.com/
+  use:
+  - 网络结构、中心性、社群与扩散
+  extract:
+  - chapters
+  - datasets
+  local:
+    status: open_resource_learning_map_indexed
+    runtime_fetch: not_required_for_stable_knowledge
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 365
+    rights_policy: public_online_resource_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-NETWORK.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: IM-BIBLIOMETRIX
+  title: bibliometrix / Biblioshiny
+  domain:
+  - bibliometrics
+  type: official_project
+  level: tool_and_method
+  access: open
+  url: https://www.bibliometrix.org/home/
+  use:
+  - 文献计量、科学地图与可视化
+  extract:
+  - documentation
+  - data import
+  - analysis functions
+  local:
+    status: official_project_knowledge_card_indexed
+    runtime_fetch: periodic_refresh_only
+    fulltext_cached: false
+    captured_on: '2026-08-21'
+    refresh_days: 180
+    rights_policy: official_public_project_derived_map
+    source_basis: official_public_page
+    paths:
+    - 03_sources/local_knowledge/external/cards/IM-BIBLIOMETRIX.md
+    - 03_sources/local_knowledge/external/catalog.yaml
+    - 03_sources/local_knowledge/index/local_fts.sqlite
+- id: METHOD-IACMR-EMPIRICAL-2008
+  title: 组织与管理研究的实证方法（2008版）
+  domain:
+  - research_design
+  - empirical_methods
+  - management
+  - IS
+  - IM
+  type: book_user_supplied_local
+  level: foundational_local
+  access: private_user_supplied_copy
+  url: null
+  bibliographic:
+    editors:
+    - 陈晓萍
+    - 徐淑英
+    - 樊景立
+    publisher: 北京大学出版社
+    year: 2008
+    isbn: 978-7-301-13909-7
+  use:
+  - 研究问题与开题
+  - 实证研究设计
+  - 问卷/实验/案例/二手数据
+  - 测量与统计方法
+  - 论文写作与发表
+  extract:
+  - 章节级知识
+  - 方法路由
+  - 设计检查项
+  - 常见误用
+  - 页码证据
+  local:
+    status: fulltext_chaptered_chunked_indexed
+    runtime_fetch: not_required
+    rights: user_supplied_private_research_copy
+    fulltext_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/source.md
+    metadata_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/metadata.yaml
+    chapter_index_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapter_index.yaml
+    chapters_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapters/
+    portable_chunks: 03_sources/local_knowledge/index/chunks.jsonl
+    fts_index: 03_sources/local_knowledge/index/local_fts.sqlite
+    topic_router: 03_sources/local_knowledge/index/method_topic_router.yaml
+    text_quality: ocr_corrected_markdown_with_residual_noise
+    image_assets:
+      status: complete_private_local
+      path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/images/
+      count: 67
+    edition_priority: supplementary
+- id: METHOD-IACMR-EMPIRICAL-2018
+  title: 组织与管理研究的实证方法（第三版，2018）
+  domain:
+  - research_design
+  - empirical_methods
+  - management
+  - IS
+  - IM
+  type: book_user_supplied_local
+  level: foundational_local
+  access: private_user_supplied_copy
+  url: null
+  bibliographic:
+    editors:
+    - 陈晓萍
+    - 沈伟
+    publisher: 北京大学出版社
+    year: 2018
+    isbn: 978-7-301-29643-1
+  use:
+  - 研究问题与开题
+  - 实证研究设计
+  - 问卷/实验/案例/二手数据
+  - 测量与统计方法
+  - 论文写作与发表
+  extract:
+  - 章节级知识
+  - 方法路由
+  - 设计检查项
+  - 常见误用
+  - 页码证据
+  local:
+    status: fulltext_chaptered_chunked_indexed
+    runtime_fetch: not_required
+    rights: user_supplied_private_research_copy
+    fulltext_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/source.md
+    metadata_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/metadata.yaml
+    chapter_index_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapter_index.yaml
+    chapters_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapters/
+    portable_chunks: 03_sources/local_knowledge/index/chunks.jsonl
+    fts_index: 03_sources/local_knowledge/index/local_fts.sqlite
+    topic_router: 03_sources/local_knowledge/index/method_topic_router.yaml
+    text_quality: ocr_corrected_markdown_with_residual_noise
+    image_assets:
+      status: complete_private_local
+      path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/images/
+      count: 113
+    edition_priority: primary
+runtime_policy:
+  fetch_external_links_on_startup: false
+  retrieval_order:
+  - local_topic_router
+  - local_cards
+  - local_fts
+  - structured_registry
+  - external_fallback
+  external_fallback_triggers:
+  - local_coverage_missing
+  - time_sensitive_rule_stale
+  - source_version_verification_required
+  - missing_image_or_formula_asset
+  local_catalog: 03_sources/local_knowledge/index/local_source_catalog.yaml
+  local_fts: 03_sources/local_knowledge/index/local_fts.sqlite
+localization_audit:
+  external_resource_count: 44
+  external_catalog: 03_sources/local_knowledge/external/catalog.yaml
+  capture_manifest: 03_sources/local_knowledge/external/source_capture_manifest.yaml
+  localization_report: 03_sources/external_localization_report.md

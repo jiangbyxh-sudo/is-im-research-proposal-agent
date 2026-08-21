@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceClaim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "claim_text",
+    "claim_type",
+    "source_paper_ids",
+    "evidence_level",
+    "confidence"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "claim_text": {
+      "type": "string"
+    },
+    "claim_type": {
+      "enum": [
+        "status",
+        "trend",
+        "theory",
+        "method",
+        "finding",
+        "gap",
+        "limitation"
+      ]
+    },
+    "source_paper_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "counterevidence_paper_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_level": {
+      "enum": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ]
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "qualified_language_required": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

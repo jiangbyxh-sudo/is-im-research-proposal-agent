@@ -1,0 +1,78 @@
+kb_id: is-im-proposal-kb
+name: IS/IM论文开题辅助平台知识库
+version: 0.4.1
+released_on: '2026-08-21'
+language:
+- zh-CN
+- en
+scope:
+- Information Systems
+- Information Management
+retrieval_defaults:
+  chinese_papers_min: 10
+  english_papers_min: 20
+  recent_window_years: 5
+  priority_recent_window_years: 3
+  target_recent_share: 0.7
+  target_classic_share: 0.3
+  do_not_pad_with_lower_ranked_sources: true
+ranking_sources:
+  international:
+  - UTD24_CURRENT
+  - FMS_INT_2025_A
+  - FMS_INT_2025_B
+  chinese:
+  - FMS_CN_2025_T1
+  - FMS_CN_2025_T2
+  - CSSCI_2025_2026_SOURCE
+  - PKU_CORE_2023
+  international_supplementary:
+  - CAS_SSCI_2025_ZONE1
+  - CAS_SSCI_2025_ZONE2
+  supplementary_not_equivalent:
+  - AIS_PREMIER_2025
+  - AIS_SIG_RECOMMENDED
+required_gates:
+- scope_verified
+- journal_rank_verified
+- paper_source_verified
+- paradigm_coverage_verified
+- gap_and_innovation_selected
+entrypoints:
+  governance: 00_governance/scope_and_stop_rules.yaml
+  router: 01_taxonomy/research_direction_router.yaml
+  direction_catalog: 01_taxonomy/generated/research_direction_catalog.json
+  journals: 02_journals/IS_IM_Journal_Knowledge_Base.md
+  source_registry: 03_sources/source_registry.yaml
+  workflow: 07_workflows/end_to_end_state_machine.md
+  agent_contract: 09_agent_contract/system_contract.md
+  journal_pools: 02_journals/journal_pools.yaml
+  journal_registry: 02_journals/generated/journal_registry.json
+  journal_supplement: 02_journals/supplements/supplement_cn_cas_merged.json
+  implementation: 11_implementation/low_compute_architecture.md
+  dynamic_retrieval: 11_implementation/dynamic_retrieval_configuration.md
+  research_synthesis: 11_implementation/research_synthesis_provider.py
+  research_request_schema: 08_schemas/research_request.schema.json
+  local_sources: 03_sources/local_knowledge/index/local_source_catalog.yaml
+  local_method_router: 03_sources/local_knowledge/index/method_topic_router.yaml
+  source_localization_status: 03_sources/localization_status.yaml
+  external_source_catalog: 03_sources/local_knowledge/external/catalog.yaml
+  external_source_router: 03_sources/local_knowledge/external/external_topic_router.yaml
+  external_capture_manifest: 03_sources/local_knowledge/external/source_capture_manifest.yaml
+  external_localization_policy: 00_governance/external_content_localization_policy.md
+local_first:
+  enabled: true
+  startup_external_fetch: false
+  local_source_catalog: 03_sources/local_knowledge/index/local_source_catalog.yaml
+  external_source_catalog: 03_sources/local_knowledge/external/catalog.yaml
+  topic_router: 03_sources/local_knowledge/index/method_topic_router.yaml
+  external_topic_router: 03_sources/local_knowledge/external/external_topic_router.yaml
+  portable_chunks: 03_sources/local_knowledge/index/all_chunks.jsonl
+  book_chunks: 03_sources/local_knowledge/index/chunks.jsonl
+  external_chunks: 03_sources/local_knowledge/index/external_chunks.jsonl
+  fts_index: 03_sources/local_knowledge/index/local_fts.sqlite
+  search_cli: 11_implementation/local_retrieval.py
+  chunk_count: 1869
+  book_chunk_count: 1600
+  external_chunk_count: 269
+  external_resource_count: 44

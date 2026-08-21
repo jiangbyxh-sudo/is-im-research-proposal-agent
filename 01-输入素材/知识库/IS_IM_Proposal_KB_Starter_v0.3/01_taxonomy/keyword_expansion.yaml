@@ -1,0 +1,207 @@
+version: '1.0'
+normalization_rules:
+- 统一简繁体与全半角
+- 英文词形还原
+- 保留领域缩写并扩展全称
+- 查询时使用主题词+机制词+情境词组合
+entries:
+- topic: AI adoption
+  zh_terms:
+  - 人工智能采用
+  - 生成式AI采用
+  - AI接受
+  - 人工智能使用意愿
+  en_terms:
+  - AI adoption
+  - generative AI adoption
+  - AI acceptance
+  - intention to use AI
+  related_concepts:
+  - TAM
+  - UTAUT
+  - trust
+  - perceived usefulness
+- topic: Human-AI interaction
+  zh_terms:
+  - 人机交互
+  - 人智协作
+  - AI辅助决策
+  en_terms:
+  - human-AI interaction
+  - human-AI collaboration
+  - AI-assisted decision making
+  related_concepts:
+  - trust in automation
+  - algorithm aversion
+  - anthropomorphism
+- topic: Platform governance
+  zh_terms:
+  - 平台治理
+  - 平台规则
+  - 内容审核
+  - 平台生态
+  en_terms:
+  - platform governance
+  - platform policy
+  - content moderation
+  - platform ecosystem
+  related_concepts:
+  - two-sided market
+  - network effects
+  - governance mechanisms
+- topic: Digital transformation
+  zh_terms:
+  - 数字化转型
+  - 数字创新
+  - 数字能力
+  en_terms:
+  - digital transformation
+  - digital innovation
+  - digital capability
+  related_concepts:
+  - dynamic capabilities
+  - organizational change
+  - IT capability
+- topic: Algorithmic management
+  zh_terms:
+  - 算法管理
+  - 平台劳动
+  - 算法控制
+  en_terms:
+  - algorithmic management
+  - platform labor
+  - algorithmic control
+  related_concepts:
+  - autonomy
+  - surveillance
+  - worker resistance
+- topic: Social media misinformation
+  zh_terms:
+  - 社交媒体错误信息
+  - 虚假新闻
+  - 信息茧房
+  en_terms:
+  - social media misinformation
+  - fake news
+  - filter bubble
+  related_concepts:
+  - credibility
+  - selective exposure
+  - diffusion
+- topic: Privacy and security
+  zh_terms:
+  - 隐私顾虑
+  - 信息安全行为
+  - 数据泄露
+  en_terms:
+  - privacy concern
+  - information security behavior
+  - data breach
+  related_concepts:
+  - privacy calculus
+  - protection motivation
+  - deterrence
+- topic: Information behavior
+  zh_terms:
+  - 信息需求
+  - 信息搜寻
+  - 信息回避
+  - 信息过载
+  en_terms:
+  - information need
+  - information seeking
+  - information avoidance
+  - information overload
+  related_concepts:
+  - sensemaking
+  - uncertainty
+  - information use
+- topic: Information retrieval
+  zh_terms:
+  - 信息检索
+  - 搜索引擎
+  - 相关性
+  - 语义检索
+  en_terms:
+  - information retrieval
+  - search engine
+  - relevance
+  - semantic search
+  related_concepts:
+  - BM25
+  - dense retrieval
+  - retrieval evaluation
+- topic: Knowledge management
+  zh_terms:
+  - 知识共享
+  - 知识转移
+  - 组织记忆
+  - 知识治理
+  en_terms:
+  - knowledge sharing
+  - knowledge transfer
+  - organizational memory
+  - knowledge governance
+  related_concepts:
+  - tacit knowledge
+  - absorptive capacity
+  - communities of practice
+- topic: Data governance
+  zh_terms:
+  - 数据治理
+  - 数据质量
+  - 元数据
+  - 数据资产
+  en_terms:
+  - data governance
+  - data quality
+  - metadata
+  - data assets
+  related_concepts:
+  - data stewardship
+  - master data
+  - data lifecycle
+- topic: Bibliometrics
+  zh_terms:
+  - 文献计量
+  - 科学计量
+  - 共引分析
+  - 科学地图
+  en_terms:
+  - bibliometrics
+  - scientometrics
+  - co-citation analysis
+  - science mapping
+  related_concepts:
+  - bibliographic coupling
+  - co-word
+  - citation network
+- topic: RAG and LLM
+  zh_terms:
+  - 检索增强生成
+  - 大语言模型
+  - 向量检索
+  - 企业知识库
+  en_terms:
+  - retrieval-augmented generation
+  - large language model
+  - vector retrieval
+  - enterprise knowledge base
+  related_concepts:
+  - hallucination
+  - grounding
+  - evaluation
+  - knowledge graph
+- topic: Digital journalism
+  zh_terms:
+  - 数字新闻
+  - 算法新闻
+  - AI新闻生产
+  en_terms:
+  - digital journalism
+  - algorithmic journalism
+  - AI news production
+  related_concepts:
+  - news recommender
+  - journalistic autonomy
+  - media trust

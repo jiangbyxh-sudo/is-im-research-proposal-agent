@@ -1,0 +1,26 @@
+version: 0.4.0
+as_of: '2026-08-21'
+systems:
+  CAS_2025:
+    label: 中国科学院期刊分区表（2025年3月升级版，最终官方年度版）
+    scope: 国际期刊；SCIE/SSCI/A&HCI。这里仅保留SSCI且大类分区为1区或2区、并与IS/IM直接或强交叉相关的期刊。
+    status: frozen_terminal_official_edition
+    important_note: 中国科学院文献情报中心于2026-03-27声明，自2026年起不再更新与发布期刊分区表。第三方2026“新锐期刊分区表”不得标记为中科院分区。
+    official_notice: https://las.cas.cn/news/tzgg/202603/t20260327_8178738.html
+    official_platform: https://www.fenqubiao.com/
+    official_api_doc: https://webapi.fenqubiao.com/Help/Api/GET-api-user-get_year_keyword_user_password
+    verification_rule: 本地快照用于检索路由；若平台要对外声称某一本期刊为中科院2025具体分区，建议用有权限的官方分区表账户再次核验。禁止用2026“新锐分区”替代。
+  CSSCI_2025_2026:
+    label: 中文社会科学引文索引（CSSCI）2025-2026来源期刊
+    scope: 中文/中文社科核心来源。主池仅使用“来源期刊”，扩展版单独存放，默认不与来源期刊等价。
+    status: current
+    official_center: https://cssrac.nju.edu.cn/
+    info_resource_reference: https://blog.sciencenet.cn/home.php?do=blog&id=1507338&mod=space&uid=213646
+    verification_rule: 以南京大学CSSCI来源期刊资格为准；本库对信息资源管理给出完整22种来源刊，对管理/心理/传播给出IS/IM高相关子集。
+  PKU_CORE_2023:
+    label: 北京大学《中文核心期刊要目总览》2023年版（第10版）
+    scope: 中文核心期刊。2026版截至2026-08-21仍处于研制阶段，因此现行正式版为2023版。
+    status: current_formal_edition
+    official_page: https://hxqk.lib.pku.edu.cn/
+    reference_transcription: https://lib.hitwh.edu.cn/2024/0920/c3898a187751/page.htm
+    verification_rule: 北京大学官方说明正式成果以出版物为准，并提示网络目录非官方发布；本库使用高校图书馆转录版作机器检索快照，遇到资格争议时应回到正式2023版纸质/授权数据核验。

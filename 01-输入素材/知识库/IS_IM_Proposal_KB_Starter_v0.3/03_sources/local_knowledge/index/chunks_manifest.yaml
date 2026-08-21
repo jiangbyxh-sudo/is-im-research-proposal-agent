@@ -1,0 +1,18 @@
+generated_on: '2026-08-21'
+chunk_count: 1600
+resources:
+  METHOD-IACMR-EMPIRICAL-2008: 625
+  METHOD-IACMR-EMPIRICAL-2018: 975
+chunk_policy:
+  target_chars: 1150
+  sentence_split_max_chars: 680
+  overlap: 0
+  tokenizer: SQLite FTS5 trigram
+provenance_fields:
+- resource_id
+- chapter_id
+- pdf_page_start
+- pdf_page_end
+- source_line_start
+- source_line_end
+- content_sha256

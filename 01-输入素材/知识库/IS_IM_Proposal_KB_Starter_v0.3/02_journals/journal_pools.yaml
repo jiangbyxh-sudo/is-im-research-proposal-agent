@@ -1,0 +1,212 @@
+version: 0.1.0
+policy:
+  main_result_eligibility: 论文仅在期刊等级通过UTD24或FMS 2025硬白名单验证后，才计入用户要求数量。
+  supplementary_pool: AIS Premier/SIG、会议与跨学科期刊可用于发现、理论和方法补充；除非同时通过硬白名单验证，否则不得计入主数量。
+  runtime_join: 期刊池只负责主题路由；等级必须与JournalRecord精确连接，不得从池名推断。
+pools:
+- pool_id: IS_CORE
+  label: IS核心综合
+  journals:
+  - MIS Quarterly
+  - Information Systems Research
+  - Journal of Management Information Systems
+  - Journal of the Association for Information Systems
+  - European Journal of Information Systems
+  - Information Systems Journal
+  - Journal of Information Technology
+  - Journal of Strategic Information Systems
+  - Information and Organization
+  - Information & Management
+  - Information Technology & People
+  - Information Systems Frontiers
+  - Decision Support Systems
+  - DATA BASE for Advances in Information Systems
+  - MIS Quarterly Executive
+  - The Information Society
+- pool_id: DIGITAL_PLATFORM
+  label: 数字平台/电商/互联网
+  journals:
+  - International Journal of Electronic Commerce
+  - Internet Research
+  - International Journal of Information Management
+  - Information & Management
+  - Information Systems Research
+  - MIS Quarterly
+  - Management Science
+  - Marketing Science
+  - Organization Science
+- pool_id: CS_AI
+  label: 计算机/AI/数据
+  journals:
+  - ACM Transactions on Knowledge Discovery from Data
+  - Communications of the ACM
+  - IEEE Transactions on Knowledge and Data Engineering
+  - Information Sciences
+  - Data & Knowledge Engineering
+  - INFORMS Journal on Computing
+- pool_id: HCI
+  label: HCI与Human-AI
+  journals:
+  - ACM Transactions on Computer-Human Interaction
+  - Computers in Human Behavior
+  - International Journal of Human-Computer Studies
+  - Human-Computer Interaction
+  - AIS Transactions on Human-Computer Interaction
+- pool_id: CS_IR
+  label: 信息检索/搜索/推荐
+  journals:
+  - ACM Transactions on Information Systems
+  - Information Processing & Management
+  - Journal of the Association for Information Science and Technology
+  - IEEE Transactions on Knowledge and Data Engineering
+- pool_id: CS_DATA
+  label: 数据与知识工程
+  journals:
+  - IEEE Transactions on Knowledge and Data Engineering
+  - Data & Knowledge Engineering
+  - Information Sciences
+  - ACM Transactions on Knowledge Discovery from Data
+  - INFORMS Journal on Computing
+- pool_id: PSYCHOLOGY
+  label: 心理学理论与实验
+  journals:
+  - Psychological Science
+  - Organizational Behavior and Human Decision Processes
+  - Journal of Applied Psychology
+  - Personnel Psychology
+  - Journal of Personality and Social Psychology
+  - Journal of Experimental Social Psychology
+  - 'Journal of Experimental Psychology: Applied'
+  - Psychological Bulletin
+  - Current Directions in Psychological Science
+  - Journal of Business and Psychology
+  - Journal of Occupational and Organizational Psychology
+  - Journal of Occupational Health Psychology
+  - Journal of Consumer Psychology
+- pool_id: COMMUNICATION
+  label: 传播/新闻/数字媒体
+  journals:
+  - Journal of Computer-Mediated Communication
+  - New Media & Society
+  - Information, Communication & Society
+  - Journal of Communication
+  - Human Communication Research
+  - Communication Research
+  - Digital Journalism
+  - Media Psychology
+  - Political Communication
+- pool_id: IM_CORE
+  label: Information Science与IM核心
+  journals:
+  - Journal of the Association for Information Science and Technology
+  - Information Processing & Management
+  - Journal of Documentation
+  - Journal of Information Science
+  - Journal of Informetrics
+  - Scientometrics
+  - Library & Information Science Research
+  - Learned Publishing
+- pool_id: SCIENTOMETRICS
+  label: 科学计量/文献计量
+  journals:
+  - Journal of Informetrics
+  - Scientometrics
+  - Journal of the Association for Information Science and Technology
+  - Information Processing & Management
+- pool_id: ORG_STRATEGY
+  label: 组织/战略/数字化
+  journals:
+  - Organization Science
+  - Journal of Information Technology
+  - Journal of Strategic Information Systems
+  - Information and Organization
+  - Information Systems Journal
+  - Information Technology & People
+  - MIS Quarterly
+  - Information Systems Research
+- pool_id: ECON_STRATEGY
+  label: 数字经济/平台经济/竞争
+  journals:
+  - Management Science
+  - Information Systems Research
+  - Marketing Science
+  - MIS Quarterly
+  - Organization Science
+  - International Journal of Electronic Commerce
+- pool_id: SECURITY
+  label: 信息安全与隐私
+  journals:
+  - MIS Quarterly
+  - Information Systems Research
+  - Computers & Security
+  - ACM Transactions on Privacy and Security
+  - IEEE Transactions on Dependable and Secure Computing
+  - IEEE Transactions on Information Forensics and Security
+  - Journal of Cybersecurity
+- pool_id: PUBLIC_ADMIN
+  label: 电子政务与公共管理
+  journals:
+  - Government Information Quarterly
+  - International Journal of Information Management
+  - Information Systems Frontiers
+  - Public Administration Review
+  - Journal of Public Administration Research and Theory
+- pool_id: ZH_IS_IM_CORE
+  label: FMS中文IS/IM核心
+  journals:
+  - 情报学报
+  - 中国图书馆学报
+  - 电子政务
+  - 数据分析与知识发现
+  - 图书情报工作
+  - 图书情报知识
+  - 信息系统学报
+  - 信息资源管理学报
+- pool_id: ZH_METHODS_ANALYTICS
+  label: FMS中文方法与分析扩展
+  journals:
+  - 管理科学学报
+  - 系统工程理论与实践
+  - 中国管理科学
+  - 数理统计与管理
+  - 工业工程与管理
+  - 系统工程学报
+  - 系统管理学报
+  - 系统科学与数学
+  - 运筹与管理
+  - 交通运输系统工程与信息
+  - 统计研究
+  - 数量经济技术经济研究
+  - 计量经济学报
+- pool_id: ZH_ORG_INNOVATION
+  label: FMS中文组织/创新/数字化扩展
+  journals:
+  - 管理工程学报
+  - 管理科学
+  - 管理评论
+  - 管理世界
+  - 管理学报
+  - 南开管理评论
+  - 科学学研究
+  - 科研管理
+  - 中国软科学
+  - 科学学与科学技术管理
+  - 研究与发展管理
+  - 外国经济与管理
+  - 经济管理
+- pool_id: ZH_PSYCHOLOGY
+  label: FMS中文心理机制扩展
+  journals:
+  - 心理学报
+conference_discovery_pools:
+- pool_id: CS_HCI_CONFERENCES
+  venues:
+  - CHI
+  - CSCW
+  - ICWSM
+  - The Web Conference
+  - KDD
+  - WSDM
+  - SIGIR
+  - RecSys
+  count_policy: supplementary_only_unless_user_explicitly_requests_conferences

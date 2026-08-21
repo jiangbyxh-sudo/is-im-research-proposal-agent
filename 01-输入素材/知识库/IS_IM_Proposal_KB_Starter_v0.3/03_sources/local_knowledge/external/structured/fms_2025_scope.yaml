@@ -1,0 +1,22 @@
+snapshot_id: FMS_2025_SCOPE
+source_resource_id: RANK-FMS-2025
+captured_on: '2026-08-21'
+edition: 2025
+international:
+  total: 1183
+  A: 102
+  B: 374
+  C: 494
+  D: 213
+chinese:
+  total: 94
+  T1: 28
+  T2: 66
+local_evidence:
+- 02_journals/IS_IM_Journal_Knowledge_Base.md
+- 02_journals/journal_pools.yaml
+- 02_journals/FMS_Chinese_2025_T1_T2.md
+rules:
+- International A/B and Chinese T1/T2 are distinct classification systems.
+- Do not pad requested counts with lower-ranked or unverified venues.
+- Record edition, tier, and verification date for each eligible paper.

@@ -1,0 +1,132 @@
+version: 0.4.0
+edition: 2025-2026
+status: current
+policy:
+  source_journal: 可作为CSSCI南核来源刊资格标签。
+  extended_journal: 必须单独标为CSSCI扩展版；默认不得与CSSCI来源期刊等价。
+  scope_note: 信息资源管理为完整学科来源刊清单；心理/新闻传播/管理为面向IS/IM研究的高相关池，其中管理池明确是相关子集而非管理学全目录。
+pools:
+- pool_id: CSSCI_2025_2026_INFORMATION_RESOURCE_FULL
+  label: 信息资源管理（完整22种来源期刊）
+  status: source
+  journals:
+  - 大学图书馆学报
+  - 档案学研究
+  - 档案学通讯
+  - 国家图书馆学刊
+  - 情报科学
+  - 情报理论与实践
+  - 情报学报
+  - 情报杂志
+  - 情报资料工作
+  - 数据分析与知识发现
+  - 图书馆
+  - 图书馆建设
+  - 图书馆论坛
+  - 图书馆学研究
+  - 图书馆杂志
+  - 图书情报工作
+  - 图书情报知识
+  - 图书与情报
+  - 图书资讯学刊
+  - 现代情报
+  - 信息资源管理学报
+  - 中国图书馆学报
+  tags:
+  - IM_core
+  - information_science
+  - information_behavior
+  - IR
+  - knowledge_management
+  - bibliometrics
+- pool_id: CSSCI_2025_2026_INFORMATION_RESOURCE_EXTENDED
+  label: 信息资源管理扩展版（5种）
+  status: extended
+  journals:
+  - 科技情报研究
+  - 数字图书馆论坛
+  - 图书馆工作与研究
+  - 图书馆理论与实践
+  - 新世纪图书馆
+  tags:
+  - IM_supplement
+- pool_id: CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT
+  label: 心理学来源刊（IS行为机制高相关）
+  status: source
+  journals:
+  - 心理发展与教育
+  - 心理科学
+  - 心理科学进展
+  - 心理学报
+  - 心理与行为研究
+  - 应用心理学
+  - 中国临床心理学杂志
+  tags:
+  - behavioral_IS
+  - human_AI
+  - trust
+  - decision_making
+  - experiment
+- pool_id: CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT
+  label: 新闻传播来源刊（IS/IM数字媒体高相关）
+  status: source
+  journals:
+  - 编辑学报
+  - 编辑之友
+  - 出版发行研究
+  - 出版科学
+  - 传媒观察
+  - 当代传播
+  - 国际新闻界
+  - 科技与出版
+  - 全球传媒学刊
+  - 现代出版
+  - 现代传播（中国传媒大学学报）
+  - 新闻大学
+  - 新闻记者
+  - 新闻界
+  - 新闻与传播评论
+  - 新闻与传播研究
+  - 新闻与写作
+  - 中国出版
+  - 中国电视
+  - 中国科技期刊研究
+  tags:
+  - social_media
+  - misinformation
+  - algorithmic_media
+  - AI_journalism
+  - platform_governance
+- pool_id: CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT
+  label: 管理学/公共管理来源刊（IS/IM高相关子集）
+  status: source_subset
+  journals:
+  - 管理世界
+  - 管理科学学报
+  - 管理学报
+  - 管理科学
+  - 管理工程学报
+  - 管理评论
+  - 南开管理评论
+  - 系统管理学报
+  - 科研管理
+  - 科学学研究
+  - 科学学与科学技术管理
+  - 中国软科学
+  - 科技进步与对策
+  - 研究与发展管理
+  - 外国经济与管理
+  - 经济管理
+  - 华东经济管理
+  - 公共管理学报
+  tags:
+  - digital_transformation
+  - platforms
+  - innovation
+  - analytics
+  - public_management
+sources:
+- https://cssrac.nju.edu.cn/
+- https://blog.sciencenet.cn/home.php?do=blog&id=1507338&mod=space&uid=213646
+- https://lib.mnnu.edu.cn/fw/kyzc/tgzn.htm
+- https://xtglxb.sjtu.edu.cn/CN/column/item328.shtml

@@ -1,0 +1,39 @@
+version: 0.3.1
+generated_on: '2026-08-21'
+runtime_policy:
+  external_fetch_on_startup: false
+  primary_edition: METHOD-IACMR-EMPIRICAL-2018
+  supplementary_edition: METHOD-IACMR-EMPIRICAL-2008
+  retrieval_order:
+  - method_topic_router
+  - local_cards
+  - local_fts
+  - external_fallback
+resources:
+- resource_id: METHOD-IACMR-EMPIRICAL-2008
+  title: 组织与管理研究的实证方法（2008版）
+  edition_year: 2008
+  priority: supplementary
+  coverage: fulltext_chaptered_chunked_indexed
+  rights: user_supplied_private_research_copy
+  metadata_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/metadata.yaml
+  chapter_index_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/chapter_index.yaml
+  fulltext_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2008/source.md
+  image_asset_count: 67
+  missing_image_asset_count: 0
+- resource_id: METHOD-IACMR-EMPIRICAL-2018
+  title: 组织与管理研究的实证方法（第三版，2018）
+  edition_year: 2018
+  priority: primary
+  coverage: fulltext_chaptered_chunked_indexed
+  rights: user_supplied_private_research_copy
+  metadata_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/metadata.yaml
+  chapter_index_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapter_index.yaml
+  fulltext_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/source.md
+  image_asset_count: 113
+  missing_image_asset_count: 0
+index:
+  portable_chunks: 03_sources/local_knowledge/index/chunks.jsonl
+  sqlite_fts: 03_sources/local_knowledge/index/local_fts.sqlite
+  search_cli: 11_implementation/local_retrieval.py
+  missing_assets: 03_sources/local_knowledge/index/missing_assets.jsonl

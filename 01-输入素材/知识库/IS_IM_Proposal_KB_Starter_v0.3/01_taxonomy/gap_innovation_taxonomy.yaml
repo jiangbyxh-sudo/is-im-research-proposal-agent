@@ -1,0 +1,89 @@
+gap_types:
+- id: phenomenon
+  label: 现象空白
+  definition: 重要的新技术、信息实践或现象尚未被充分描述或解释。
+  warning: 新现象不自动等于理论贡献。
+- id: theoretical
+  label: 理论空白
+  definition: 现有理论无法解释关键关系、相互矛盾或缺少整合。
+  warning: 不能仅写“尚未使用某理论”。
+- id: mechanism
+  label: 机制空白
+  definition: 已知X与Y相关，但中间过程或因果路径不清楚。
+  warning: 机制必须可被理论化与检验。
+- id: boundary
+  label: 边界条件空白
+  definition: 效应在何人、何地、何时、何种技术条件下变化尚不清楚。
+  warning: 换国家/行业需要有边界理论。
+- id: inconsistency
+  label: 结果矛盾与复制空白
+  definition: 既有结论不一致，或关键发现缺少独立复制。
+  warning: 先排除测量、样本与模型差异。
+- id: methodological
+  label: 方法空白
+  definition: 现有设计不能识别因果、捕捉动态、多层或复杂行为。
+  warning: 换方法不是目的，必须改变可回答的问题。
+- id: measurement
+  label: 测量空白
+  definition: 构念定义、量表或计算代理存在效度问题。
+  warning: 需要说明新测量改善了什么推断。
+- id: data_context
+  label: 数据/情境空白
+  definition: 缺少特定人群、平台、组织、制度或长期数据。
+  warning: 情境扩展需要理论边界，而非地理搬运。
+- id: temporal
+  label: 时间与过程空白
+  definition: 现有研究为静态横截面，缺少演化、反馈或阶段过程。
+  warning: 需匹配纵向/过程方法。
+- id: level
+  label: 分析层级空白
+  definition: 个体、团队、组织、平台或社会层级之间缺少连接。
+  warning: 避免跨层推断错误。
+- id: design
+  label: 设计/制品空白
+  definition: 已有解释但缺少可行的数字制品、设计原则或系统评价。
+  warning: 必须进行严谨评价。
+innovation_types:
+- id: theory_extension
+  label: 理论扩展
+  requires:
+  - 明确新增构念/关系/边界
+  - 解释为何原理论不足
+- id: theory_integration
+  label: 理论整合
+  requires:
+  - 识别理论之间互补或冲突
+  - 给出统一机制
+- id: mechanism_test
+  label: 机制识别
+  requires:
+  - 可观测或可操纵的中介过程
+  - 替代机制检验
+- id: causal_design
+  label: 因果识别创新
+  requires:
+  - 明确处理、对照与识别假设
+  - 稳健性与安慰剂检验
+- id: measurement
+  label: 测量创新
+  requires:
+  - 内容/结构/效标效度
+  - 与既有测量比较
+- id: data
+  label: 数据创新
+  requires:
+  - 新数据改变可回答问题
+  - 数据质量与伦理说明
+- id: artifact
+  label: 制品/设计创新
+  requires:
+  - 设计需求、原则、实现与评价
+- id: computational
+  label: 计算方法创新
+  requires:
+  - 构念效度、基线、外部验证、错误分析
+- id: policy_practice
+  label: 政策/实践创新
+  requires:
+  - 理论到干预的机制链
+  - 适用边界与风险

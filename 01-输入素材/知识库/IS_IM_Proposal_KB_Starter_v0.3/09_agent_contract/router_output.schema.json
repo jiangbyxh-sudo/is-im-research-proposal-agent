@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RouterOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_label",
+    "confidence",
+    "reason",
+    "subdomains",
+    "journal_pools",
+    "paradigm_ids",
+    "next_state"
+  ],
+  "properties": {
+    "scope_label": {
+      "enum": [
+        "IS",
+        "IM",
+        "IS_IM",
+        "OUT_OF_SCOPE",
+        "UNCERTAIN"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reason": {
+      "type": "string"
+    },
+    "subdomains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "journal_pools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "paradigm_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "zh_keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "en_keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_kb_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_state": {
+      "enum": [
+        "KB_COVERAGE_CHECK",
+        "PAUSE_SCOPE",
+        "STOP_OUT_OF_SCOPE"
+      ]
+    }
+  }
+}

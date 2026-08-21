@@ -1,0 +1,24 @@
+resource_id: METHOD-IACMR-EMPIRICAL-2018
+title: 组织与管理研究的实证方法（第三版，2018）
+editors:
+- 陈晓萍
+- 沈伟
+publisher: 北京大学出版社
+year: 2018
+isbn: 978-7-301-29643-1
+source_file: 组织与管理研究的实证方法（第三版，2018）(1).md
+source_sha256: 277d2ebbc5db2cf9d40e3aa4beeee5f94a7da351f0cd61d7ea810989c59bd809
+source_bytes: 1943287
+source_lines: 17648
+text_format: OCR-corrected Markdown supplied by creator
+rights: user_supplied_private_research_copy
+edition_priority: primary
+edition_role: 管理与组织实证研究方法的首选本地来源
+fulltext_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/source.md
+chapter_index_path: 03_sources/local_knowledge/books/METHOD-IACMR-EMPIRICAL-2018/chapter_index.yaml
+image_assets_status: complete_local
+image_asset_count: 113
+missing_image_asset_count: 0
+limitations:
+- 文本可能仍含OCR噪声
+ingested_on: '2026-08-21'

@@ -1,0 +1,868 @@
+version: 0.3.0
+captured_on: '2026-08-21'
+resource_count: 44
+resources:
+- resource_id: RANK-FMS-2025
+  title: FMS管理科学高质量期刊推荐列表2025
+  source_url: https://www.fms-journal.net/
+  type: official_ranking
+  domain:
+  - governance
+  - journals
+  access: open
+  authority_level: authoritative
+  localization_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_list_snapshot
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/RANK-FMS-2025.md
+  local_card_sha256: 748078b7710602a5975393a92a2bac43e28a041acce5d4de04216fe855a61344
+  local_card_bytes: 2544
+  chunk_count: 6
+  structured_snapshot: 03_sources/local_knowledge/external/structured/fms_2025_scope.yaml
+- resource_id: RANK-UTD24
+  title: UTD Top 100 Journal List
+  source_url: https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/list-of-journals
+  type: official_ranking
+  domain:
+  - governance
+  - journals
+  access: open
+  authority_level: authoritative
+  localization_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_list_snapshot
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/RANK-UTD24.md
+  local_card_sha256: 5016eb6e91b37060ae4de299c1cc14712bbe7091a8e05dd818344ccb58868695
+  local_card_bytes: 2286
+  chunk_count: 6
+  structured_snapshot: 03_sources/local_knowledge/external/structured/utd24_current.yaml
+- resource_id: RANK-AIS-2025
+  title: AIS Senior Scholars List of Premier Journals
+  source_url: https://aisnet.org/research/seniorscholarsbasket/
+  type: official_field_list
+  domain:
+  - IS
+  - journals
+  access: open
+  authority_level: authoritative_supplement
+  localization_status: structured_snapshot_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_field_list_snapshot
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/RANK-AIS-2025.md
+  local_card_sha256: 39569f594e51ea9df9febface9484b854166687e5824398f66a1cb71428bb4c9
+  local_card_bytes: 2400
+  chunk_count: 6
+  structured_snapshot: 03_sources/local_knowledge/external/structured/ais_premier_2025.yaml
+- resource_id: META-CROSSREF
+  title: Crossref REST API
+  source_url: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+  type: official_api
+  domain:
+  - metadata
+  - integrity
+  access: open_api
+  authority_level: authoritative
+  localization_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 90
+  rights_policy: official_docs_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/META-CROSSREF.md
+  local_card_sha256: a07e57c5010c93ecc2bfbb44e03ef0bb3631ec7652f821c33bd4fb6371bc3c05
+  local_card_bytes: 2908
+  chunk_count: 7
+  structured_snapshot: null
+- resource_id: META-OPENALEX
+  title: OpenAlex API
+  source_url: https://help.openalex.org/
+  type: official_api
+  domain:
+  - metadata
+  - bibliometrics
+  access: open_api
+  authority_level: discovery_and_crosscheck
+  localization_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 90
+  rights_policy: cc0_metadata_and_docs_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/META-OPENALEX.md
+  local_card_sha256: adb83863225389124bf3fa0e30836c93a0ce462907bd5f02aa85b97688782626
+  local_card_bytes: 2891
+  chunk_count: 7
+  structured_snapshot: null
+- resource_id: META-SEMANTIC
+  title: Semantic Scholar Academic Graph API
+  source_url: https://api.semanticscholar.org/api-docs/
+  type: official_api
+  domain:
+  - metadata
+  - discovery
+  access: open_api
+  authority_level: discovery_and_crosscheck
+  localization_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 90
+  rights_policy: official_docs_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/META-SEMANTIC.md
+  local_card_sha256: 6502aa9794c319826bf72fdca528bec0d4ebe26dc301ec851236a079ff9642e8
+  local_card_bytes: 2644
+  chunk_count: 7
+  structured_snapshot: null
+- resource_id: OA-UNPAYWALL
+  title: Unpaywall API
+  source_url: https://unpaywall.org/products/api
+  type: official_api
+  domain:
+  - open_access
+  access: open_api
+  authority_level: access_locator
+  localization_status: official_api_operational_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 90
+  rights_policy: official_docs_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/OA-UNPAYWALL.md
+  local_card_sha256: be6ddbc42c178b5264b21ca4eeb47338e04aa055fc7603028d2c2e63f8b4095c
+  local_card_bytes: 2348
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: DB-AISEL
+  title: AIS eLibrary
+  source_url: https://aisel.aisnet.org/
+  type: discipline_repository
+  domain:
+  - IS
+  - database
+  access: mixed
+  authority_level: authoritative
+  localization_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 180
+  rights_policy: repository_interface_summary_no_corpus
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/DB-AISEL.md
+  local_card_sha256: c4220f3222a59b787cbdc262710424531355819e668250acccc856992f68fe5e
+  local_card_bytes: 2467
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: DB-CNKI
+  title: 中国知网
+  source_url: https://www.cnki.net/
+  type: bibliographic_database
+  domain:
+  - zh_database
+  access: institutional
+  authority_level: authoritative_database
+  localization_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 180
+  rights_policy: database_usage_knowledge_no_corpus
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/DB-CNKI.md
+  local_card_sha256: 16911c472acdd671347a8f8bf4ea906663dd92e600c2284b42e98ec15e7559d4
+  local_card_bytes: 2640
+  chunk_count: 7
+  structured_snapshot: null
+- resource_id: DB-WANFANG
+  title: 万方数据知识服务平台
+  source_url: https://www.wanfangdata.com.cn/
+  type: bibliographic_database
+  domain:
+  - zh_database
+  access: institutional
+  authority_level: authoritative_database
+  localization_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 180
+  rights_policy: database_usage_knowledge_no_corpus
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/DB-WANFANG.md
+  local_card_sha256: 276c8b31ff08c2ccc32fb971bd7819af081bcb3c2bd01d5e0ab6cdb55f613881
+  local_card_bytes: 2287
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: DB-VIP
+  title: 维普中文期刊服务平台
+  source_url: https://www.cqvip.com/
+  type: bibliographic_database
+  domain:
+  - zh_database
+  access: institutional
+  authority_level: authoritative_database
+  localization_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 180
+  rights_policy: database_usage_knowledge_no_corpus
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/DB-VIP.md
+  local_card_sha256: 35317d074e2f37380368d0bb84d064cc2b8694d45e2eafc095ad0b19007c4e61
+  local_card_bytes: 2135
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: DB-NCPSSD
+  title: 国家哲学社会科学文献中心
+  source_url: https://www.ncpssd.cn/
+  type: official_repository
+  domain:
+  - zh_database
+  - social_science
+  access: open_or_registered
+  authority_level: authoritative
+  localization_status: database_workflow_card_indexed
+  runtime_fetch: live_query_for_current_records_only
+  refresh_days: 180
+  rights_policy: official_repository_usage_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/DB-NCPSSD.md
+  local_card_sha256: 7dd4b6c97f5b300e1bed9e7cb7f8d9910e37e47f569ebadea30d6a208f0ee9a4
+  local_card_bytes: 2349
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-CRAFT-5E
+  title: The Craft of Research, 5th Edition
+  source_url: https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html
+  type: book
+  domain:
+  - writing
+  - research_design
+  access: library_or_purchase
+  authority_level: foundational
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: commercial_book_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-CRAFT-5E.md
+  local_card_sha256: c781b4f881bf7a07e4dc35d99d0e17638062b2026b5f7bce5efbc38bc7bc6cae
+  local_card_bytes: 2739
+  chunk_count: 7
+  structured_snapshot: null
+- resource_id: WRITE-CRESWELL-6E
+  title: Research Design, 6th Edition
+  source_url: https://us2.sagepub.com/en-us/nam/research-design/book270550
+  type: book
+  domain:
+  - research_design
+  access: library_or_purchase
+  authority_level: foundational
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: commercial_book_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-CRESWELL-6E.md
+  local_card_sha256: b388abd02f7ed71c61c1ccc8886554447dc2346c6d10f52e1db342873d6f3530
+  local_card_bytes: 2661
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-SWALES-FEAK
+  title: Academic Writing for Graduate Students, 3rd Edition
+  source_url: https://press.umich.edu/Books/A/Academic-Writing-for-Graduate-Students-3rd-Edition2
+  type: book
+  domain:
+  - writing
+  access: library_or_purchase
+  authority_level: foundational
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: commercial_book_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-SWALES-FEAK.md
+  local_card_sha256: bbfab5665677a7cb344534021bf40cc4e16d93eb1d11180160c91156d630aa40
+  local_card_bytes: 2606
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-APA-JARS
+  title: APA Journal Article Reporting Standards
+  source_url: https://apastyle.apa.org/jars
+  type: official_standard
+  domain:
+  - reporting
+  - methods
+  access: open
+  authority_level: authoritative
+  localization_status: official_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  refresh_days: 180
+  rights_policy: official_standard_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-APA-JARS.md
+  local_card_sha256: be5a2362e853b97dd4a5960071398528b2ac014b3049ca269f88f22b33718bd6
+  local_card_bytes: 2581
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-MISQ-GUIDE
+  title: MIS Quarterly Instructions for Authors
+  source_url: https://misq.umn.edu/instructions-for-authors
+  type: journal_guideline
+  domain:
+  - IS
+  - writing
+  access: open
+  authority_level: authoritative
+  localization_status: journal_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  refresh_days: 90
+  rights_policy: official_guideline_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-MISQ-GUIDE.md
+  local_card_sha256: 65064f184796c7cf50f10b7ebca613fc358abc01dafa7ce16330cb21be664ec6
+  local_card_bytes: 2775
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-ISR-GUIDE
+  title: Information Systems Research Submission Guidelines
+  source_url: https://pubsonline.informs.org/page/isre/submission-guidelines
+  type: journal_guideline
+  domain:
+  - IS
+  - writing
+  access: open
+  authority_level: authoritative
+  localization_status: journal_guideline_knowledge_card_indexed
+  runtime_fetch: refresh_if_stale_or_submission_specific
+  refresh_days: 90
+  rights_policy: official_guideline_summary
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-ISR-GUIDE.md
+  local_card_sha256: ba613e23877522ba41bff9a8526822bdc3aef3ad2dd6c31988baa3511f3000ef
+  local_card_bytes: 2582
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: WRITE-WEBSTER-WATSON
+  title: 'Analyzing the Past to Prepare for the Future: Writing a Literature Review'
+  source_url: https://www.jstor.org/stable/4132319
+  type: classic_article
+  domain:
+  - literature_review
+  - IS
+  access: library_or_open_copy
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/WRITE-WEBSTER-WATSON.md
+  local_card_sha256: aa2c0aeb62818e69f652945400d8aa46697294c96938b8f30d1be05ce449eebc
+  local_card_bytes: 2680
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: THEORY-GREGOR-2006
+  title: The Nature of Theory in Information Systems
+  source_url: https://aisel.aisnet.org/misq/vol30/iss3/5/
+  type: classic_article
+  domain:
+  - IS
+  - theory
+  access: open_landing
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/THEORY-GREGOR-2006.md
+  local_card_sha256: 86e8bc5be3002dd2c906524f360502eccb5f23c57af62731d3dd9e90282fcbb6
+  local_card_bytes: 2523
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: THEORY-HEVNER-2004
+  title: Design Science in Information Systems Research
+  source_url: https://aisel.aisnet.org/misq/vol28/iss1/6/
+  type: classic_article
+  domain:
+  - IS
+  - design_science
+  access: open_landing
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/THEORY-HEVNER-2004.md
+  local_card_sha256: e2659b82bf04160f7b4b2f04753c5e687cfa2012d301ed73577a75be3c6e6110
+  local_card_bytes: 2611
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: THEORY-TAM-1989
+  title: Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology
+  source_url: https://doi.org/10.2307/249008
+  type: classic_article
+  domain:
+  - IS
+  - technology_adoption
+  access: library
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/THEORY-TAM-1989.md
+  local_card_sha256: c98869f0fef0f9361baaf3ef3fa39944e994515f7e206b4c35db1186d033500d
+  local_card_bytes: 2569
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: THEORY-UTAUT-2003
+  title: 'User Acceptance of Information Technology: Toward a Unified View'
+  source_url: https://doi.org/10.2307/30036540
+  type: classic_article
+  domain:
+  - IS
+  - technology_adoption
+  access: library
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/THEORY-UTAUT-2003.md
+  local_card_sha256: a1a7c99e13162946a52f953555eac4be1328850b8fee91c494cea77b0b2bb3c5
+  local_card_bytes: 2706
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: THEORY-TTF-1995
+  title: Task-Technology Fit and Individual Performance
+  source_url: https://doi.org/10.2307/249689
+  type: classic_article
+  domain:
+  - IS
+  - technology_fit
+  access: library
+  authority_level: foundational
+  localization_status: bibliographic_abstract_and_concept_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/THEORY-TTF-1995.md
+  local_card_sha256: a23014bca13030fe2438df277e9d206f8dff187749b54a20d9b2f78d1dd95d73
+  local_card_bytes: 2511
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-OPENINTRO
+  title: Introduction to Modern Statistics
+  source_url: https://openintro-ims.netlify.app/
+  type: open_textbook
+  domain:
+  - statistics
+  access: open
+  authority_level: introductory
+  localization_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: cc_by_sa_source_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-OPENINTRO.md
+  local_card_sha256: d6392e8720a4077fb04e17f9efda22865fd11014a33529d14924de8754c445dc
+  local_card_bytes: 2888
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-R4DS
+  title: R for Data Science, 2nd Edition
+  source_url: https://r4ds.hadley.nz/
+  type: open_textbook
+  domain:
+  - R
+  - data_workflow
+  access: open
+  authority_level: introductory
+  localization_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: cc_by_nc_nd_source_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-R4DS.md
+  local_card_sha256: aab97595e3e690a2ca7b9ef9b0293c477100b479fc0963b003545f8043fefac7
+  local_card_bytes: 2779
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-ISLR
+  title: An Introduction to Statistical Learning
+  source_url: https://www.statlearning.com/
+  type: open_textbook
+  domain:
+  - machine_learning
+  access: open
+  authority_level: introductory_to_intermediate
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: author_public_resource_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-ISLR.md
+  local_card_sha256: 381dd5cd235e9c060a1266c0e17105177fc691371d6836102e7b356a116317d5
+  local_card_bytes: 2917
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-MIXTAPE
+  title: 'Causal Inference: The Mixtape'
+  source_url: https://mixtape.scunning.com/
+  type: open_textbook
+  domain:
+  - causal_inference
+  access: open
+  authority_level: intermediate
+  localization_status: open_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: public_online_resource_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-MIXTAPE.md
+  local_card_sha256: 8684e6f8bcf244e820c9676999b40c00102b856d52c369720ddd0b7c971e3781
+  local_card_bytes: 2996
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-LAVAAN
+  title: lavaan Tutorial
+  source_url: https://lavaan.ugent.be/tutorial/
+  type: official_tutorial
+  domain:
+  - SEM
+  - CFA
+  access: open
+  authority_level: introductory_to_intermediate
+  localization_status: official_tutorial_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: cc_by_official_tutorial_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-LAVAAN.md
+  local_card_sha256: a1ea9c18eb94235c32f05d5b2eb9f41b6714ef2845bd5264704ccb56262b2dec
+  local_card_bytes: 2969
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-GIOIA
+  title: 'Seeking Qualitative Rigor in Inductive Research: Notes on the Gioia Methodology'
+  source_url: https://doi.org/10.1177/1094428112452151
+  type: method_article
+  domain:
+  - qualitative
+  access: publisher
+  authority_level: intermediate
+  localization_status: abstract_and_method_card_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 0
+  rights_policy: article_abstract_and_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-GIOIA.md
+  local_card_sha256: 182df8c7e36c930c812fa04321b54b32171581e865df673175437f4b4002c8b2
+  local_card_bytes: 2941
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-THEMATIC
+  title: Braun and Clarke Thematic Analysis Resources
+  source_url: https://www.thematicanalysis.net/
+  type: author_resource
+  domain:
+  - qualitative
+  access: open
+  authority_level: foundational
+  localization_status: author_resource_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: author_public_resource_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-THEMATIC.md
+  local_card_sha256: 92cef0a935a02e6c13128bcb318f4dbfe76169e7f2efef9dd66a75eaa253ddf0
+  local_card_bytes: 2931
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-PRISMA
+  title: PRISMA 2020
+  source_url: https://www.prisma-statement.org/
+  type: reporting_standard
+  domain:
+  - systematic_review
+  access: open
+  authority_level: authoritative
+  localization_status: official_standard_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_reporting_standard_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-PRISMA.md
+  local_card_sha256: afbb7fd13579dedc5d96f07020f134d8a1a6017902611cb34e9c77c107306b69
+  local_card_bytes: 2840
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-BDA
+  title: Bayesian Data Analysis
+  source_url: https://sites.stat.columbia.edu/gelman/book/
+  type: book_and_author_resources
+  domain:
+  - bayesian
+  access: author_resources
+  authority_level: advanced
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: author_noncommercial_resource_derived_map_no_redistribution
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-BDA.md
+  local_card_sha256: 270380c2ac7bbed244b6fb0104411deed79e399bfa2b559624ebb4273f18fbd9
+  local_card_bytes: 2994
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-PROBML
+  title: Probabilistic Machine Learning
+  source_url: https://probml.github.io/pml-book/
+  type: open_author_book
+  domain:
+  - bayesian
+  - machine_learning
+  access: open
+  authority_level: advanced
+  localization_status: open_author_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: author_public_resource_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-PROBML.md
+  local_card_sha256: c8f5c7ee3627b63b3e372c48067abfb4cea72b329ad941c3391467fe0390a537
+  local_card_bytes: 2919
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-YALE-GAME
+  title: 'Yale ECON 159: Game Theory'
+  source_url: https://oyc.yale.edu/economics/econ-159
+  type: open_course
+  domain:
+  - game_theory
+  access: open
+  authority_level: introductory
+  localization_status: open_course_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: open_course_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-YALE-GAME.md
+  local_card_sha256: 2fd560de09d46cfa727b375d6110b9413adf15f16e79cd5f7b2beb15e05e55b1
+  local_card_bytes: 2821
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: METHOD-ONLINE-EXPERIMENTS
+  title: Trustworthy Online Controlled Experiments
+  source_url: https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59
+  type: book
+  domain:
+  - experiments
+  - A/B_testing
+  access: library_or_purchase
+  authority_level: intermediate
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: commercial_book_public_page_derived_map_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/METHOD-ONLINE-EXPERIMENTS.md
+  local_card_sha256: 347814375b08a9f17814686e766f5b81e2b7817161fd6362f97b80a0376df417
+  local_card_bytes: 3213
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-INTRO
+  title: Introduction to Information Science, 2nd Edition
+  source_url: https://alastore.ala.org/introIS2
+  type: book
+  domain:
+  - IM
+  - information_science
+  access: library_or_purchase
+  authority_level: introductory
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: commercial_book_public_page_derived_map_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-INTRO.md
+  local_card_sha256: fb4e2c8cdf10e3c1e436f9004fe08ee27de115c0d91a6d54a5e13b7689384a95
+  local_card_bytes: 3102
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-LOOKING
+  title: Looking for Information, 5th Edition
+  source_url: https://www.emerald.com/books/monograph/15349/Looking-for-InformationExamining-Research-on-How
+  type: book
+  domain:
+  - IM
+  - information_behavior
+  access: library_or_purchase
+  authority_level: foundational
+  localization_status: public_toc_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: commercial_book_public_page_derived_map_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-LOOKING.md
+  local_card_sha256: 014e1359b91e7e701435ac649c06280d83eb90bc782b7a49c86e372dc5b76cca
+  local_card_bytes: 3211
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-IR-BOOK
+  title: Introduction to Information Retrieval
+  source_url: https://nlp.stanford.edu/IR-book/
+  type: open_textbook
+  domain:
+  - IM
+  - information_retrieval
+  access: open
+  authority_level: foundational
+  localization_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: author_online_book_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-IR-BOOK.md
+  local_card_sha256: c7fa6d159f601f8928f1a3258cf146d7e2acadb8d16abf7d8c23f41677dfe073
+  local_card_bytes: 3084
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-KM-DALKIR
+  title: Knowledge Management in Theory and Practice, 4th Edition
+  source_url: https://mitpress.mit.edu/9780262048125/knowledge-management-in-theory-and-practice/
+  type: book
+  domain:
+  - IM
+  - knowledge_management
+  access: library_or_purchase
+  authority_level: foundational
+  localization_status: public_description_and_knowledge_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: commercial_book_public_page_derived_map_no_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-KM-DALKIR.md
+  local_card_sha256: 46affce624dfa0f158abd00728be820d100cea5aa65cc5c31e3a0fcdb9c8c7d3
+  local_card_bytes: 3147
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-DMBOK
+  title: DAMA-DMBOK
+  source_url: https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/
+  type: body_of_knowledge
+  domain:
+  - IM
+  - data_management
+  access: official_overview_and_purchase
+  authority_level: professional_foundational
+  localization_status: official_framework_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_public_overview_derived_map_no_book_fulltext
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-DMBOK.md
+  local_card_sha256: 4d1aca82e77b3f6037a696afdbb60cb954af8aead986476ac587f8b2c580ee64
+  local_card_bytes: 3152
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-SLP3
+  title: Speech and Language Processing, 3rd Edition Draft
+  source_url: https://web.stanford.edu/~jurafsky/slp3/
+  type: open_author_book
+  domain:
+  - NLP
+  - LLM
+  access: open
+  authority_level: intermediate_to_advanced
+  localization_status: open_author_resource_learning_map_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 90
+  rights_policy: author_public_draft_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-SLP3.md
+  local_card_sha256: 7c25602a87c8ee8279f63ef1e4ccff2874f9eb22fc1f7b9afcc9586241779239
+  local_card_bytes: 3096
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-NETWORK
+  title: Network Science
+  source_url: https://networksciencebook.com/
+  type: open_textbook
+  domain:
+  - network_analysis
+  access: open
+  authority_level: foundational_to_intermediate
+  localization_status: open_resource_learning_map_indexed
+  runtime_fetch: not_required_for_stable_knowledge
+  refresh_days: 365
+  rights_policy: public_online_resource_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-NETWORK.md
+  local_card_sha256: 1fbc139161a95e75084e1c23d7c3322b0719957ba064fc08186f279c5658a2b7
+  local_card_bytes: 2789
+  chunk_count: 6
+  structured_snapshot: null
+- resource_id: IM-BIBLIOMETRIX
+  title: bibliometrix / Biblioshiny
+  source_url: https://www.bibliometrix.org/home/
+  type: official_project
+  domain:
+  - bibliometrics
+  access: open
+  authority_level: tool_and_method
+  localization_status: official_project_knowledge_card_indexed
+  runtime_fetch: periodic_refresh_only
+  refresh_days: 180
+  rights_policy: official_public_project_derived_map
+  source_basis: official_public_page
+  fulltext_cached: false
+  local_card: 03_sources/local_knowledge/external/cards/IM-BIBLIOMETRIX.md
+  local_card_sha256: 80da1f585d023d640b40b44bead8cf5e5a3277e0240d61fbbae73575b9425dba
+  local_card_bytes: 3041
+  chunk_count: 6
+  structured_snapshot: null

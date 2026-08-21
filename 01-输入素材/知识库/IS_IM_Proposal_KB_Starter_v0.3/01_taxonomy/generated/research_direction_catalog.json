@@ -1,0 +1,953 @@
+{
+  "version": "0.4.1",
+  "generated_on": "2026-08-21",
+  "generated_from": "02_journals/IS_IM_Journal_Knowledge_Base.md",
+  "policy": {
+    "group_by_source_section": true,
+    "merge_aliases": true,
+    "quick_topic_mapping_is_complete_catalog": false
+  },
+  "raw_topic_count": 75,
+  "direction_count": 61,
+  "groups": [
+    {
+      "group_id": "is",
+      "label": "IS",
+      "direction_ids": [
+        "technology_adoption",
+        "human_ai_interaction",
+        "platform_governance",
+        "topic_digital_transformation",
+        "topic_algorithmic_management",
+        "social_media",
+        "topic_digital_markets",
+        "topic_privacy_security",
+        "topic_it_governance",
+        "topic_digital_innovation",
+        "topic_technology_use",
+        "topic_digital_strategy",
+        "topic_平台经济",
+        "recommender_systems",
+        "topic_电商",
+        "topic_数字广告",
+        "topic_在线行为",
+        "topic_算法机制"
+      ]
+    },
+    {
+      "group_id": "is_cs_hci",
+      "label": "IS × Computer Science / HCI",
+      "direction_ids": [
+        "human_ai_interaction",
+        "topic_hci",
+        "recommender_systems",
+        "information_retrieval",
+        "topic_machine_learning",
+        "topic_data_mining",
+        "topic_software_system_design",
+        "topic_knowledge_discovery",
+        "topic_ai_enabled_information_systems",
+        "topic_digital_artifact_design"
+      ]
+    },
+    {
+      "group_id": "is_psychology",
+      "label": "IS × Psychology",
+      "direction_ids": [
+        "topic_ai_trust",
+        "topic_algorithm_aversion_appreciation",
+        "topic_anthropomorphism",
+        "technology_adoption",
+        "topic_cognitive_load",
+        "topic_information_overload",
+        "topic_social_influence",
+        "topic_privacy_concern",
+        "topic_technostress",
+        "topic_human_ai_teams",
+        "topic_identity",
+        "topic_emotion",
+        "topic_attention",
+        "topic_judgment_decision_making"
+      ]
+    },
+    {
+      "group_id": "is_communication_media",
+      "label": "IS × Journalism / Communication / Media",
+      "direction_ids": [
+        "social_media",
+        "topic_misinformation",
+        "recommender_systems",
+        "topic_news_consumption",
+        "topic_content_moderation",
+        "topic_influencers",
+        "platform_governance",
+        "topic_generative_ai",
+        "topic_human_ai_communication",
+        "topic_political_communication",
+        "topic_algorithmic_news"
+      ]
+    },
+    {
+      "group_id": "im",
+      "label": "IM",
+      "direction_ids": [
+        "topic_information_science",
+        "information_retrieval",
+        "information_behavior",
+        "knowledge_management",
+        "topic_data_management",
+        "topic_data_governance",
+        "scientometrics",
+        "topic_knowledge_graph",
+        "topic_decision_support",
+        "ai_nlp_information_processing",
+        "topic_scholarly_communication"
+      ]
+    },
+    {
+      "group_id": "im_data_ai_knowledge",
+      "label": "IM × 数据 / AI / 知识管理",
+      "direction_ids": [
+        "information_retrieval",
+        "topic_data_knowledge",
+        "knowledge_management",
+        "topic_decision_intelligence",
+        "information_behavior",
+        "scientometrics",
+        "ai_nlp_information_processing",
+        "topic_organizational_information",
+        "topic_digital_information_environment"
+      ]
+    }
+  ],
+  "directions": [
+    {
+      "direction_id": "technology_adoption",
+      "label": "技术与AI采纳",
+      "aliases": [
+        "AI adoption",
+        "technology adoption"
+      ],
+      "group_ids": [
+        "is",
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:51",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:166"
+      ]
+    },
+    {
+      "direction_id": "human_ai_interaction",
+      "label": "人机交互",
+      "aliases": [
+        "human-AI interaction",
+        "Human-AI Interaction"
+      ],
+      "group_ids": [
+        "is",
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:52",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:113"
+      ]
+    },
+    {
+      "direction_id": "platform_governance",
+      "label": "平台治理",
+      "aliases": [
+        "platform governance",
+        "平台治理"
+      ],
+      "group_ids": [
+        "is",
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:53",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:221"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_transformation",
+      "label": "digital transformation",
+      "aliases": [
+        "digital transformation"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:54"
+      ]
+    },
+    {
+      "direction_id": "topic_algorithmic_management",
+      "label": "algorithmic management",
+      "aliases": [
+        "algorithmic management"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:55"
+      ]
+    },
+    {
+      "direction_id": "social_media",
+      "label": "社交媒体",
+      "aliases": [
+        "social media",
+        "社交媒体"
+      ],
+      "group_ids": [
+        "is",
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:56",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:215"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_markets",
+      "label": "digital markets",
+      "aliases": [
+        "digital markets"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:57"
+      ]
+    },
+    {
+      "direction_id": "topic_privacy_security",
+      "label": "privacy / security",
+      "aliases": [
+        "privacy / security"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:58"
+      ]
+    },
+    {
+      "direction_id": "topic_it_governance",
+      "label": "IT governance",
+      "aliases": [
+        "IT governance"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:59"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_innovation",
+      "label": "digital innovation",
+      "aliases": [
+        "digital innovation"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:60"
+      ]
+    },
+    {
+      "direction_id": "topic_technology_use",
+      "label": "technology use",
+      "aliases": [
+        "technology use"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:61"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_strategy",
+      "label": "digital strategy",
+      "aliases": [
+        "digital strategy"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:62"
+      ]
+    },
+    {
+      "direction_id": "topic_平台经济",
+      "label": "平台经济",
+      "aliases": [
+        "平台经济"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "direction_id": "recommender_systems",
+      "label": "推荐系统与推荐算法",
+      "aliases": [
+        "推荐系统",
+        "recommender systems",
+        "recommender algorithms"
+      ],
+      "group_ids": [
+        "is",
+        "is_cs_hci",
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:115",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:217"
+      ]
+    },
+    {
+      "direction_id": "topic_电商",
+      "label": "电商",
+      "aliases": [
+        "电商"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "direction_id": "topic_数字广告",
+      "label": "数字广告",
+      "aliases": [
+        "数字广告"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "direction_id": "topic_在线行为",
+      "label": "在线行为",
+      "aliases": [
+        "在线行为"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "direction_id": "topic_算法机制",
+      "label": "算法机制",
+      "aliases": [
+        "算法机制"
+      ],
+      "group_ids": [
+        "is"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ]
+    },
+    {
+      "direction_id": "topic_hci",
+      "label": "HCI",
+      "aliases": [
+        "HCI"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:114"
+      ]
+    },
+    {
+      "direction_id": "information_retrieval",
+      "label": "信息检索",
+      "aliases": [
+        "information retrieval",
+        "Information Retrieval"
+      ],
+      "group_ids": [
+        "is_cs_hci",
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:116",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:254",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:290"
+      ]
+    },
+    {
+      "direction_id": "topic_machine_learning",
+      "label": "machine learning",
+      "aliases": [
+        "machine learning"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:117"
+      ]
+    },
+    {
+      "direction_id": "topic_data_mining",
+      "label": "data mining",
+      "aliases": [
+        "data mining"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:118"
+      ]
+    },
+    {
+      "direction_id": "topic_software_system_design",
+      "label": "software / system design",
+      "aliases": [
+        "software / system design"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:119"
+      ]
+    },
+    {
+      "direction_id": "topic_knowledge_discovery",
+      "label": "knowledge discovery",
+      "aliases": [
+        "knowledge discovery"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:120"
+      ]
+    },
+    {
+      "direction_id": "topic_ai_enabled_information_systems",
+      "label": "AI-enabled information systems",
+      "aliases": [
+        "AI-enabled information systems"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:121"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_artifact_design",
+      "label": "digital artifact design",
+      "aliases": [
+        "digital artifact design"
+      ],
+      "group_ids": [
+        "is_cs_hci"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:122"
+      ]
+    },
+    {
+      "direction_id": "topic_ai_trust",
+      "label": "AI trust",
+      "aliases": [
+        "AI trust"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:163"
+      ]
+    },
+    {
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "label": "algorithm aversion / appreciation",
+      "aliases": [
+        "algorithm aversion / appreciation"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:164"
+      ]
+    },
+    {
+      "direction_id": "topic_anthropomorphism",
+      "label": "anthropomorphism",
+      "aliases": [
+        "anthropomorphism"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:165"
+      ]
+    },
+    {
+      "direction_id": "topic_cognitive_load",
+      "label": "cognitive load",
+      "aliases": [
+        "cognitive load"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:167"
+      ]
+    },
+    {
+      "direction_id": "topic_information_overload",
+      "label": "information overload",
+      "aliases": [
+        "information overload"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:168"
+      ]
+    },
+    {
+      "direction_id": "topic_social_influence",
+      "label": "social influence",
+      "aliases": [
+        "social influence"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:169"
+      ]
+    },
+    {
+      "direction_id": "topic_privacy_concern",
+      "label": "privacy concern",
+      "aliases": [
+        "privacy concern"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:170"
+      ]
+    },
+    {
+      "direction_id": "topic_technostress",
+      "label": "technostress",
+      "aliases": [
+        "technostress"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:171"
+      ]
+    },
+    {
+      "direction_id": "topic_human_ai_teams",
+      "label": "human-AI teams",
+      "aliases": [
+        "human-AI teams"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:172"
+      ]
+    },
+    {
+      "direction_id": "topic_identity",
+      "label": "identity",
+      "aliases": [
+        "identity"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:173"
+      ]
+    },
+    {
+      "direction_id": "topic_emotion",
+      "label": "emotion",
+      "aliases": [
+        "emotion"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:174"
+      ]
+    },
+    {
+      "direction_id": "topic_attention",
+      "label": "attention",
+      "aliases": [
+        "attention"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:175"
+      ]
+    },
+    {
+      "direction_id": "topic_judgment_decision_making",
+      "label": "judgment / decision making",
+      "aliases": [
+        "judgment / decision making"
+      ],
+      "group_ids": [
+        "is_psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:176"
+      ]
+    },
+    {
+      "direction_id": "topic_misinformation",
+      "label": "misinformation",
+      "aliases": [
+        "misinformation"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:216"
+      ]
+    },
+    {
+      "direction_id": "topic_news_consumption",
+      "label": "news consumption",
+      "aliases": [
+        "news consumption"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:218"
+      ]
+    },
+    {
+      "direction_id": "topic_content_moderation",
+      "label": "content moderation",
+      "aliases": [
+        "content moderation"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:219"
+      ]
+    },
+    {
+      "direction_id": "topic_influencers",
+      "label": "influencers",
+      "aliases": [
+        "influencers"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:220"
+      ]
+    },
+    {
+      "direction_id": "topic_generative_ai",
+      "label": "generative AI",
+      "aliases": [
+        "generative AI"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:222"
+      ]
+    },
+    {
+      "direction_id": "topic_human_ai_communication",
+      "label": "human-AI communication",
+      "aliases": [
+        "human-AI communication"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:223"
+      ]
+    },
+    {
+      "direction_id": "topic_political_communication",
+      "label": "political communication",
+      "aliases": [
+        "political communication"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:224"
+      ]
+    },
+    {
+      "direction_id": "topic_algorithmic_news",
+      "label": "algorithmic news",
+      "aliases": [
+        "algorithmic news"
+      ],
+      "group_ids": [
+        "is_communication_media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:225"
+      ]
+    },
+    {
+      "direction_id": "topic_information_science",
+      "label": "Information Science",
+      "aliases": [
+        "Information Science"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:253"
+      ]
+    },
+    {
+      "direction_id": "information_behavior",
+      "label": "信息行为",
+      "aliases": [
+        "Information Behavior"
+      ],
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:255",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:294"
+      ]
+    },
+    {
+      "direction_id": "knowledge_management",
+      "label": "知识管理",
+      "aliases": [
+        "Knowledge Management"
+      ],
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:256",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:292"
+      ]
+    },
+    {
+      "direction_id": "topic_data_management",
+      "label": "Data Management",
+      "aliases": [
+        "Data Management"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:257"
+      ]
+    },
+    {
+      "direction_id": "topic_data_governance",
+      "label": "Data Governance",
+      "aliases": [
+        "Data Governance"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:258"
+      ]
+    },
+    {
+      "direction_id": "scientometrics",
+      "label": "科学计量与文献计量",
+      "aliases": [
+        "Bibliometrics / Scientometrics",
+        "Scientometrics"
+      ],
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:259",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:295"
+      ]
+    },
+    {
+      "direction_id": "topic_knowledge_graph",
+      "label": "Knowledge Graph",
+      "aliases": [
+        "Knowledge Graph"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:260"
+      ]
+    },
+    {
+      "direction_id": "topic_decision_support",
+      "label": "Decision Support",
+      "aliases": [
+        "Decision Support"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:261"
+      ]
+    },
+    {
+      "direction_id": "ai_nlp_information_processing",
+      "label": "AI与NLP信息处理",
+      "aliases": [
+        "AI / NLP for information processing",
+        "AI / NLP"
+      ],
+      "group_ids": [
+        "im",
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:262",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:296"
+      ]
+    },
+    {
+      "direction_id": "topic_scholarly_communication",
+      "label": "scholarly communication",
+      "aliases": [
+        "scholarly communication"
+      ],
+      "group_ids": [
+        "im"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:263"
+      ]
+    },
+    {
+      "direction_id": "topic_data_knowledge",
+      "label": "Data / Knowledge",
+      "aliases": [
+        "Data / Knowledge"
+      ],
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:291"
+      ]
+    },
+    {
+      "direction_id": "topic_decision_intelligence",
+      "label": "Decision Intelligence",
+      "aliases": [
+        "Decision Intelligence"
+      ],
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:293"
+      ]
+    },
+    {
+      "direction_id": "topic_organizational_information",
+      "label": "Organizational Information",
+      "aliases": [
+        "Organizational Information"
+      ],
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:297"
+      ]
+    },
+    {
+      "direction_id": "topic_digital_information_environment",
+      "label": "Digital Information Environment",
+      "aliases": [
+        "Digital Information Environment"
+      ],
+      "group_ids": [
+        "im_data_ai_knowledge"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:298"
+      ]
+    }
+  ]
+}
