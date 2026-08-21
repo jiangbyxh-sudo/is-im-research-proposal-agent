@@ -1,0 +1,2657 @@
+{
+  "direction_id": "topic_machine_learning",
+  "labels": {
+    "zh": "机器学习",
+    "en": "machine learning"
+  },
+  "input": {
+    "selected_direction_id": "topic_machine_learning",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17953.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 31,
+  "eligible_count": 1,
+  "boundary_count": 15,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "machine learning"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "machine learning human-computer interaction"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(machine learning) OR (machine learning in human-computer interaction)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_machine_learning",
+      "research_direction": "machine learning",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "machine learning",
+      "aliases": [
+        "machine learning"
+      ],
+      "groups": [
+        "IS × Computer Science / HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:117"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_machine_learning",
+        "labels": {
+          "zh": "机器学习",
+          "en": "machine learning"
+        },
+        "group_ids": [
+          "is_cs_hci"
+        ],
+        "synonyms": [
+          "机器学习",
+          "machine learning",
+          "machine learning in human-computer interaction"
+        ],
+        "boundaries": {
+          "include": [
+            "machine learning",
+            "human-computer interaction",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "machine learning",
+            "\"machine learning\" AND \"human-computer interaction\""
+          ],
+          "semantic_scholar": [
+            "machine learning",
+            "machine learning human-computer interaction"
+          ],
+          "crossref": [
+            "machine learning",
+            "机器学习"
+          ],
+          "dblp": [
+            "machine learning computing"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "machine learning",
+            "human-computer interaction",
+            "computing"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "CS_AI",
+          "HCI",
+          "CS_IR",
+          "CS_DATA",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "machine learning human-computer interaction",
+          "(machine learning) OR (machine learning in human-computer interaction)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:117"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_6cd4335b8e07cc3c5c3f",
+        "title": "Enabling Harmonious Human-Machine Interaction with Visual-Context Augmented Dialogue System: A Review",
+        "abstract": "The intelligent dialogue system, aiming at communicating with humans harmoniously with natural language, is brilliant for promoting the advancement of human-machine interaction in the era of artificial intelligence. With the gradually complex human-computer interaction requirements, it is difficult for traditional text-based dialogue system to meet the demands for more vivid and convenient interaction. Consequently, Visual-Context Augmented Dialogue (VAD) System, which has the potential to communicate with humans by perceiving and understanding multimodal information (i.e., visual context in images or videos, textual dialogue history), has become a predominant research paradigm. Benefiting from the consistency and complementarity between visual and textual context, VAD possesses the potential to generate engaging and context-aware responses. To depict the development of VAD, we first characterize the concept model of VAD and then present its generic system architecture to illustrate the system workflow, followed by a summary of multimodal fusion techniques. Subsequently, several research challenges and representative works are investigated, followed by the summary of authoritative benchmarks and real-world application of VAD. We conclude this article by putting forward some open issues and promising research trends for VAD, e.g., the cognitive mechanisms of human-machine dialogue under cross-modal dialogue context, mobile and lightweight deployment of VAD.",
+        "authors": [
+          "Hao Wang",
+          "Bin Guo",
+          "Yating Zeng",
+          "Mengqi Chen",
+          "Yasan Ding",
+          "Ying Zhang",
+          "Lina Yao",
+          "Zhiwen Yu"
+        ],
+        "year": 2025,
+        "publication_date": "2025-05-31",
+        "published_date": "2025-05-31",
+        "language": "en",
+        "doi": "10.1145/3715098",
+        "url": "https://doi.org/10.1145/3715098",
+        "official_url": "https://doi.org/10.1145/3715098",
+        "source_title": "ACM Transactions on Information Systems",
+        "journal": "ACM Transactions on Information Systems",
+        "source_issns": [
+          "1046-8188",
+          "1558-2868"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 4,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_002",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CS_IR"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 73.05,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 85.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 34.87,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 73.05
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "machine learning",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2857554,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:49.403570+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3844.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "machine learning human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 479398,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:53.276790+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4422.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(machine learning) OR (machine learning in human-computer interaction)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2851553,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:57.736933+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3453.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "machine learning",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:02.984594+00:00",
+        "duration_ms": 1469.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1469.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "machine learning",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:04.459403+00:00",
+        "duration_ms": 1375.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1375.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "machine learning",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:05.828253+00:00",
+        "duration_ms": 1500.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1500.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "机器学习",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:01.362748+00:00",
+        "duration_ms": 1625.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1625.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_c766160ac7b259a78f13",
+        "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b8b787ef4ca4d2f0e52",
+        "title": "CARD 2023: expanded curation, support for machine learning, and resistome prediction at the Comprehensive Antibiotic Resistance Database",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43621d6e694896f09350",
+        "title": "Scientific Machine Learning Through Physics–Informed Neural Networks: Where we are and What’s Next",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f79730e4b5f4d4ca4ac",
+        "title": "Evaluation metrics and statistical tests for machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c296c758474237ac975",
+        "title": "Tackling Climate Change with Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1dbea14311dff30bee7",
+        "title": "Human-in-the-loop machine learning: a state of the art",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_197a3766494f276c59be",
+        "title": "Machine learning-aided engineering of hydrolases for PET depolymerization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d885b803cf41bdfe5ef7",
+        "title": "Artificial intelligence, machine learning and deep learning in advanced robotics, a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a486a923614cf6278f60",
+        "title": "CheckM2: a rapid, scalable and accurate tool for assessing microbial genome quality using machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d396c3226e1b8908bf8e",
+        "title": "Small data machine learning in materials science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3f95ecbf437a8127915",
+        "title": "Artificial Intelligence and Machine Learning in Clinical Medicine, 2023",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_636c14ff1395fbbf86eb",
+        "title": "Challenges and opportunities in quantum machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f7fc4d760b17184ec6e",
+        "title": "Interpretable machine learning: Fundamental principles and 10 grand challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc132d807864c7cb49dd",
+        "title": "Understanding of Machine Learning with Deep Learning: Architectures, Workflow, Applications and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_892a00bb45e31f96963f",
+        "title": "Perspectives in machine learning for wildlife conservation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c961c84b571a23ccf28",
+        "title": "A survey of human-in-the-loop for machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c032b1c58e744330c739",
+        "title": "Journal of Machine Learning Technologies",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8dd715dd984f7e49be6c",
+        "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25d9ba583449bbdb864c",
+        "title": "A review of the application of machine learning in water quality evaluation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a13d453bc8fbb2990b58",
+        "title": "Using Machine Learning to Identify Diseases and Perform Sorting in Apple Fruit",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3737775e2a3dc3f8afab",
+        "title": "A Review of Feature Selection Methods for Machine Learning-Based Disease Risk Prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a58e2e12370ad0a1088",
+        "title": "A Review on Fairness in Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03579412bdbde334c93f",
+        "title": "Fairness in Machine Learning: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4009916fd29df2c21f67",
+        "title": "Machine Learning Operations (MLOps): Overview, Definition, and Architecture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_119d2e1aaa9a560fb8ab",
+        "title": "Extracting spatial effects from machine learning model using local interpretation method: An example of SHAP and XGBoost",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58bc0f19dee530871da8",
+        "title": "Machine learning algorithms review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c445c32b417085b14aa",
+        "title": "",
+        "reasons": [
+          "missing_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e472cd2a53ef1de61b5",
+        "title": "Challenges in Deploying Machine Learning: A Survey of Case Studies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d3d878403603d0eca5a2",
+        "title": "Machine learning–enabled high-entropy alloy discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08ef79d1abd32876888c",
+        "title": "Enhancing computational fluid dynamics with machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15e9f007f89333d587cd",
+        "title": "Integrating Scientific Knowledge with Machine Learning for Engineering and Environmental Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01ac66771084d4cc8fb7",
+        "title": "Machine learning for structural engineering: A state-of-the-art review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa40a22ccdaa6cc127d7",
+        "title": "Machine Learning for Electrocatalyst and Photocatalyst Design and Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39d5d66991389244c741",
+        "title": "Machine learning for a sustainable energy future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cf5b9968427eddd979d",
+        "title": "Machine-Learning-Based Disease Diagnosis: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02ad224c4bb2732cc1aa",
+        "title": "Significance of machine learning in healthcare: Features, pillars and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0aeecdf0cfd2dc583126",
+        "title": "Autoencoders and their applications in machine learning: a survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9b2622fb598d00425ca",
+        "title": "Membership Inference Attacks on Machine Learning: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6aa26b7019f40ddf4a17",
+        "title": "Federated Learning: Collaborative Machine Learning withoutCentralized Training Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e3ca3983b1f88568da5",
+        "title": "Machine learning-based integration develops an immune-derived lncRNA signature for improving outcomes in colorectal cancer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4516bd6c4862edba364",
+        "title": "Explainable machine learning in materials science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1f60fe10b1826df6063",
+        "title": "Mitigating the Multicollinearity Problem and Its Machine Learning Approach: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54a4713ebe7137d66e1f",
+        "title": "Machine Learning in Environmental Research: Common Pitfalls and Best Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c64074bf705e0783ae6",
+        "title": "OpenMM 8: Molecular Dynamics Simulation with Machine Learning Potentials",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53f05030f82570ed8f53",
+        "title": "Towards leveraging the role of machine learning and artificial intelligence in precision agriculture and smart farming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bd1232739e202a729c2",
+        "title": "Effective Heart Disease Prediction Using Machine Learning Techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5530bf002648f9fcfe05",
+        "title": "Edge Computing with Artificial Intelligence: A Machine Learning Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c1698dd9a4ea0e7934b",
+        "title": "Chemprop: A Machine Learning Package for Chemical Property Prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20ac2d0b510c603a4a38",
+        "title": "Multimodal machine learning in precision health: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7e39fa52c25d6c75086",
+        "title": "Machine learning and deep learning—A review for ecologists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_974a2373a6f9df08e6a4",
+        "title": "Educational data mining: prediction of students' academic performance using machine learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23971007b653c4ae1fa9",
+        "title": "A Review of Evaluation Metrics in Machine Learning Algorithms",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33813078067f0a1901f9",
+        "title": "Machine learning techniques and data for stock market forecasting: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d32e05e473d578ea064",
+        "title": "Practical guide to SHAP analysis: Explaining supervised machine learning model predictions in drug development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ce70aa26fba6d435bac",
+        "title": "Interpretable machine learning for knowledge generation in heterogeneous catalysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83158e079add265ac7d9",
+        "title": "Machine Learning Methods for Small Data Challenges in Molecular Science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9da668eb14a04569c97",
+        "title": "A comprehensive survey of clustering algorithms: State-of-the-art machine learning applications, taxonomy, challenges, and future research prospects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c05f4563e5ffc17d5f3b",
+        "title": "Machine learning in medical applications: A review of state-of-the-art methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5850f591b609c2f79dd6",
+        "title": "Machine learning for medical imaging: methodological failures and recommendations for the future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8dd4a72050ea1e5330dc",
+        "title": "Generalization in quantum machine learning from few training data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57ccc1d70177ca4ed76b",
+        "title": "Differentiable modelling to unify machine learning and physical models for geosciences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f93dd0eb573417f7337",
+        "title": "MRI-based brain tumor detection using convolutional deep learning methods and chosen machine learning techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89f468fa5d00af7ee0d2",
+        "title": "Artificial intelligence and machine learning in finance: A bibliometric review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edda6c7b9b2f76061dcf",
+        "title": "A survey on dataset quality in machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_decd067fda1c6e206878",
+        "title": "Machine learning for microbiologists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_10221623daf74af9bf61",
+        "title": "From patterns to patients: Advances in clinical machine learning for cancer diagnosis, prognosis, and treatment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8c8ad4f590e09f96dd6",
+        "title": "A comparative analysis of K-Nearest Neighbor, Genetic, Support Vector Machine, Decision Tree, and Long Short Term Memory algorithms in machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e4622eb88e06d88d8277",
+        "title": "Machine learning in aerodynamic shape optimization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bb96942205bb0d34024",
+        "title": "Plant leaf disease detection using computer vision and machine learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7750d158057a1c47f39e",
+        "title": "Ethical and Bias Considerations in Artificial Intelligence/Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c85febcfe5a96677daf",
+        "title": "Probabilistic weather forecasting with machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd31ca5abfc50afddca7",
+        "title": "Prediction of Soil Heavy Metal Immobilization by Biochar Using Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a26b81631a77040d6957",
+        "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d58d213d20879f493237",
+        "title": "A review of molecular representation in the age of machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_442a75df11bacd4c22c7",
+        "title": "Discovering biomarkers associated and predicting cardiovascular disease with high accuracy using a novel nexus of machine learning techniques for precision medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6bdb51e185338763736",
+        "title": "Multivariate Statistical Machine Learning Methods for Genomic Prediction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a7f879f345a925f39b0",
+        "title": "Interpretable and Explainable Machine Learning for Materials Science and Chemistry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a02ab9d149906febee77",
+        "title": "The Shapley Value in Machine Learning",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89df2fe1312d52b11b82",
+        "title": "Research and application of machine learning for additive manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_915e18f27d8198784061",
+        "title": "Physics-Informed Machine Learning",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b51e43459f58cce15c2",
+        "title": "Machine learning and deep learning applications in microbiome research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bda6217fe0a377a85dc3",
+        "title": "The Values Encoded in Machine Learning Research",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0194009d84085b2874f9",
+        "title": "Evaluation of a decided sample size in machine learning applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60f78e9b4d4d1152fa50",
+        "title": "PREDICTIVE ANALYSIS OF HEART DISEASES WITH MACHINE LEARNING APPROACHES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fb768a497ce1ab3ba9d",
+        "title": "Uncertainty quantification in scientific machine learning: Methods, metrics, and comparisons",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d2285c7bd4be90ca909",
+        "title": "Machine Learning and Deep Learning in Energy Systems: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4144b17aa25e763c44e",
+        "title": "Discovery of antimicrobial peptides in the global microbiome with machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_528d0243b4f84e35f172",
+        "title": "Artificial intelligence and machine learning in energy systems: A bibliographic perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_095addd6fdc695ccd7b9",
+        "title": "Causal machine learning for predicting treatment outcomes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ee32d3f6f43584c0e0e",
+        "title": "Machine Learning for Healthcare Wearable Devices: The Big Picture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9527605d04911b4c1fc",
+        "title": "Explainable, trustworthy, and ethical machine learning for healthcare: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3dcca5d0eede6630b3f7",
+        "title": "Groundwater level prediction using machine learning models: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b8a4c67562ee53842d4",
+        "title": "Machine learning for multi-omics data integration in cancer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aaac985dcdfb514c6fd0",
+        "title": "Water quality classification using machine learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de1607ff7b56aa558642",
+        "title": "Machine learning-based heart disease diagnosis: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_faf6690180ea365a9ca5",
+        "title": "Artificial intelligence and machine learning in cancer imaging",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51b80f734c73159674dd",
+        "title": "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb824fb713f612456620",
+        "title": "Future of machine learning in geotechnics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71d990b63d95151f80cc",
+        "title": "Comparison of machine learning methods for photovoltaic power forecasting based on numerical weather prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e52926793b0479e49f3c",
+        "title": "Financial Fraud Detection Based on Machine Learning: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3555cf31cc2360051fe8",
+        "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36deaa9c5c59a81dfaac",
+        "title": "Attention mechanisms in computer vision: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8eea74378bebe232ec9",
+        "title": "Human Computer Interaction System for Teacher-Student Interaction Model Using Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c841c31ed266086ff2ba",
+        "title": "Deep Learning for Intelligent Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b836204b7f44b81ce5d",
+        "title": "Enhancing Human–Computer Interaction in Online Education: A Machine Learning Approach to Predicting Student Emotion and Satisfaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_556e0fa5693e5e7a0810",
+        "title": "Ultrastretchable, Self-Healing Conductive Hydrogel-Based Triboelectric Nanogenerators for Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c8479995bfd801eb443",
+        "title": "Human emotion recognition from EEG-based brain–computer interface using machine learning: a comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_854b9ed5efbdc2f17771",
+        "title": "Ensemble deep learning: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9eb50bce22f4ef6ff8f",
+        "title": "Research on the Construction of Human-Computer Interaction System Based on a Machine Learning Algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58edceeddd2c3a8ff7f5",
+        "title": "Artificial intelligence and smart vision for building and construction 4.0: Machine and deep learning methods and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b98854e80a7b8f39078",
+        "title": "Deep Learning-based Human Pose Estimation: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_badd073f002f453e841d",
+        "title": "A Review of Machine Learning and Deep Learning for Object Detection, Semantic Segmentation, and Human Action Recognition in Machine and Robotic Vision",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a298a9c8ec7a6470ac82",
+        "title": "RETRACTED ARTICLE: Application of human–computer interaction system based on machine learning algorithm in artistic visual communication",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5dce453be61f9c1ab04a",
+        "title": "Augmented tactile-perception and haptic-feedback rings as human-machine interfaces aiming for immersive interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bba993b2a4ac45de4ad3",
+        "title": "A Review on Machine Learning Styles in Computer Vision—Techniques and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_813765ec1c4cf58f14f6",
+        "title": "Responsive human-computer interaction model based on recognition of facial landmarks using machine learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_510dfaf41628da347ff3",
+        "title": "Machine Learning in Cybersecurity: Techniques and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bcac64b156e7fca663b9",
+        "title": "Self‐Powered Gesture Recognition Wristband Enabled by Machine Learning for Full Keyboard and Multicommand Input",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_490afe917f5687142d60",
+        "title": "Human-Computer Interaction in Digital Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa4ebe460cb2e317db5e",
+        "title": "A Survey of Ensemble Learning: Concepts, Algorithms, Applications, and Prospects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77f3a6cc21d425bdb0f9",
+        "title": "A Survey on Measuring Cognitive Workload in Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_338e8bfe8407cbb32863",
+        "title": "Robust deep learning–based protein sequence design using ProteinMPNN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eace8bb7aeb53a7a6214",
+        "title": "Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6524ef43bfcbc1acd298",
+        "title": "Machine learning techniques for emotion detection and sentiment analysis: current state, challenges, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3671f175fbfd7e839712",
+        "title": "Multimodal Learning With Transformers: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9f02503a8b058d70de0",
+        "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_154a1063e2270db30772",
+        "title": "Adaptive Learning Using Artificial Intelligence in e-Learning: A Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42ad94bfcca3caa0a053",
+        "title": "Impact of user engagement on virtual reality behavioral response from the human–computer interaction perspective toward a service context: A hybrid statistics and machine learning approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_852d9501e57fe7d6478f",
+        "title": "RETRACTED ARTICLE: Artificial intelligence and machine learning in precision and genomic medicine",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_003bafb9acae257587b3",
+        "title": "The Role of Machine Learning in Cybersecurity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc2c2222c085c870c704",
+        "title": "Transfer learning enables predictions in network biology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0618697551c589ee1fc3",
+        "title": "Promises and challenges of generative artificial intelligence for human learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc642f39751ec86a29ac",
+        "title": "Capturing complex hand movements and object interactions using machine learning-powered stretchable smart textile gloves",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2eb1b306c8408cee95d5",
+        "title": "Methods of Improving Japanese-Chinese Machine Translation System through Machine Learning and Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4f809c78df0a49a13420",
+        "title": "Machine learning in concrete science: applications, challenges, and best practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2e58d6a343ca3cefde4",
+        "title": "A Machine Learning based Facial Expression and Emotion Recognition for Human Computer Interaction through Fuzzy Logic System",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8b300d61db8edcdddb7",
+        "title": "Transfer Learning in Deep Reinforcement Learning: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1de257a1bd4bca426df6",
+        "title": "Artificial Intelligence and Machine Learning Technology Driven Modern Drug Discovery and Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cd87701b5eb3a3c342e",
+        "title": "SLEAP: A deep learning system for multi-animal pose tracking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b21fb7591d65ef4931f3",
+        "title": "Computer vision-based hand gesture recognition for human-robot interaction: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d677fefec7ba75d3b2f",
+        "title": "Human–machine teaming is key to AI adoption: clinicians’ experiences with a deployed machine learning system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e8e76d18e2da24fabeed",
+        "title": "A survey on federated learning: challenges and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2929ade9c4b77a643c7",
+        "title": "Two new Later Stone Age sites from the Final Pleistocene in the Falémé Valley, eastern Senegal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30fee062fb1af96cbe3d",
+        "title": "Shifting machine learning for healthcare from development to deployment and from models to data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02047f9339242a8cb1e5",
+        "title": "Machine learning for the prediction of acute kidney injury in patients with sepsis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ffe78bd4279d6bfce4c",
+        "title": "Human-Computer Interaction in Customer Service: The Experience with AI Chatbots—A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e9ac0021c94ce055af3",
+        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56b29367790d2665295b",
+        "title": "A Review of Approaches for Predicting Drug–Drug Interactions Based on Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4468608da6adeb73b07d",
+        "title": "A Review of Machine Learning and Deep Learning Approaches on Mental Health Diagnosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca4c1bf611c8ac3a4ea6",
+        "title": "Deep learning, reinforcement learning, and world models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d15860d2e2c397f2254a",
+        "title": "In Situ Polymerized MXene/Polypyrrole/Hydroxyethyl Cellulose-Based Flexible Strain Sensor Enabled by Machine Learning for Handwriting Recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03dc5ff42ff5c864ae49",
+        "title": "Machine learning for human emotion recognition: a comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_074180483887ee060ac8",
+        "title": "Machine Learning and AI in Cancer Prognosis, Prediction, and Treatment Selection: A Critical Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14a5dd5df70aefac7c79",
+        "title": "Machine Learning for Lung Cancer Diagnosis, Treatment, and Prognosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6573f08ccfc3997f742",
+        "title": "Exposing the Limitations of Molecular Machine Learning with Activity Cliffs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02789dadbe9cc6876a68",
+        "title": "Hyperparameter Search for Machine Learning Algorithms for Optimizing the Computational Complexity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a74a54314ac630d0eb49",
+        "title": "A Review on Machine Learning, Artificial Intelligence, and Smart Technology in Water Treatment and Monitoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ad6f2056513be22aa4a",
+        "title": "Machine Learning in Weather Prediction and Climate Analyses—Applications and Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cbd18b0d15116773eb5",
+        "title": "Machine learning algorithms to forecast air quality: a survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e65195d728363ebfe88b",
+        "title": "Machine learning for antimicrobial peptide identification and design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6229a5a738254ef2e6c",
+        "title": "Interpretable machine learning for building energy management: A state-of-the-art review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9b7113b885508a0392c",
+        "title": "When physics meets machine learning: a survey of physics-informed machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19e58e4ced35105f0899",
+        "title": "Explainable artificial intelligence (XAI) in deep learning-based medical image analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12f30b8cf92fe10c4dbc",
+        "title": "On a Method to Measure Supervised Multiclass Model’s Interpretability: Application to Degradation Diagnosis (Short Paper)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7c8fcea7a2b3ea67a5f",
+        "title": "UniProt: the Universal Protein Knowledgebase in 2023",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36eb26bdc58982d16548",
+        "title": "Reading digits in natural images with unsupervised feature learning",
+        "reasons": [
+          "missing_source_title",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14971621e008c739d61c",
+        "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_629d29c1282973b336eb",
+        "title": "Digital-Twin-Enabled 6G: Vision, Architectural Trends, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bfc158ffd99692dca5c",
+        "title": "Multidiscipline Applications of Triboelectric Nanogenerators for the Intelligent Era of Internet of Things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_86c8451ee750e8e7b239",
+        "title": "On Assessing ML Model Robustness: A Methodological Framework (Academic Track)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c32b37641163efb1bd4a",
+        "title": "UCSF ChimeraX : Tools for structure building and analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af219c1409c3cb465713",
+        "title": "Generative Adversarial Networks",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59fcb1e6055c33200bb0",
+        "title": "SignalP 6.0 predicts all five types of signal peptides using protein language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a246d97e2ef35757c10",
+        "title": "Survey of Hallucination in Natural Language Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9db319bc4f13e3c95d22",
+        "title": "Review of Particle Physics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2f1f6009f29a6c2110b",
+        "title": "Transformative Potential of AI in Healthcare: Definitions, Applications, and Navigating the Ethical Landscape and Public Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6c6cd957a8a20532476",
+        "title": "AI-Based Conversational Agents: A Scoping Review From Technologies to Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_machine_learning",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 31,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 1,
+      "boundary_count": 15,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "machine learning"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "machine learning human-computer interaction"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(machine learning) OR (machine learning in human-computer interaction)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "machine learning",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "machine learning human-computer interaction",
+        "raw_count": 200,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(machine learning) OR (machine learning in human-computer interaction)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e1dbea14311dff30bee7",
+        "incoming_paper_id": "paper_e1dbea14311dff30bee7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d885b803cf41bdfe5ef7",
+        "incoming_paper_id": "paper_d885b803cf41bdfe5ef7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3c296c758474237ac975",
+        "incoming_paper_id": "paper_3c296c758474237ac975"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f7fc4d760b17184ec6e",
+        "incoming_paper_id": "paper_3f7fc4d760b17184ec6e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_892a00bb45e31f96963f",
+        "incoming_paper_id": "paper_892a00bb45e31f96963f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d396c3226e1b8908bf8e",
+        "incoming_paper_id": "paper_d396c3226e1b8908bf8e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0aeecdf0cfd2dc583126",
+        "incoming_paper_id": "paper_0aeecdf0cfd2dc583126"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03579412bdbde334c93f",
+        "incoming_paper_id": "paper_03579412bdbde334c93f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3737775e2a3dc3f8afab",
+        "incoming_paper_id": "paper_3737775e2a3dc3f8afab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_02ad224c4bb2732cc1aa",
+        "incoming_paper_id": "paper_02ad224c4bb2732cc1aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_15e9f007f89333d587cd",
+        "incoming_paper_id": "paper_15e9f007f89333d587cd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e472cd2a53ef1de61b5",
+        "incoming_paper_id": "paper_9e472cd2a53ef1de61b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_39d5d66991389244c741",
+        "incoming_paper_id": "paper_39d5d66991389244c741"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5530bf002648f9fcfe05",
+        "incoming_paper_id": "paper_5530bf002648f9fcfe05"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1f60fe10b1826df6063",
+        "incoming_paper_id": "paper_d1f60fe10b1826df6063"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1bd1232739e202a729c2",
+        "incoming_paper_id": "paper_1bd1232739e202a729c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a4516bd6c4862edba364",
+        "incoming_paper_id": "paper_a4516bd6c4862edba364"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20ac2d0b510c603a4a38",
+        "incoming_paper_id": "paper_20ac2d0b510c603a4a38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0b51e43459f58cce15c2",
+        "incoming_paper_id": "paper_0b51e43459f58cce15c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_974a2373a6f9df08e6a4",
+        "incoming_paper_id": "paper_974a2373a6f9df08e6a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83158e079add265ac7d9",
+        "incoming_paper_id": "paper_83158e079add265ac7d9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d58d213d20879f493237",
+        "incoming_paper_id": "paper_d58d213d20879f493237"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_decd067fda1c6e206878",
+        "incoming_paper_id": "paper_decd067fda1c6e206878"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8ce70aa26fba6d435bac",
+        "incoming_paper_id": "paper_8ce70aa26fba6d435bac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_10221623daf74af9bf61",
+        "incoming_paper_id": "paper_10221623daf74af9bf61"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4144b17aa25e763c44e",
+        "incoming_paper_id": "paper_d4144b17aa25e763c44e"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_8ce70aa26fba6d435bac",
+          "paper_53af5006376ab774f413"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_57ccc1d70177ca4ed76b",
+        "incoming_paper_id": "paper_57ccc1d70177ca4ed76b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a02ab9d149906febee77",
+        "incoming_paper_id": "paper_a02ab9d149906febee77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f9527605d04911b4c1fc",
+        "incoming_paper_id": "paper_f9527605d04911b4c1fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6ee32d3f6f43584c0e0e",
+        "incoming_paper_id": "paper_6ee32d3f6f43584c0e0e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3dcca5d0eede6630b3f7",
+        "incoming_paper_id": "paper_3dcca5d0eede6630b3f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_faf6690180ea365a9ca5",
+        "incoming_paper_id": "paper_faf6690180ea365a9ca5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e52926793b0479e49f3c",
+        "incoming_paper_id": "paper_e52926793b0479e49f3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5c445c32b417085b14aa",
+        "incoming_paper_id": "paper_5c445c32b417085b14aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_43621d6e694896f09350",
+        "incoming_paper_id": "paper_43621d6e694896f09350"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c766160ac7b259a78f13",
+        "incoming_paper_id": "paper_c766160ac7b259a78f13"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d885b803cf41bdfe5ef7",
+        "incoming_paper_id": "paper_d885b803cf41bdfe5ef7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9b8b787ef4ca4d2f0e52",
+        "incoming_paper_id": "paper_9b8b787ef4ca4d2f0e52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3c296c758474237ac975",
+        "incoming_paper_id": "paper_3c296c758474237ac975"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9f79730e4b5f4d4ca4ac",
+        "incoming_paper_id": "paper_9f79730e4b5f4d4ca4ac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e1dbea14311dff30bee7",
+        "incoming_paper_id": "paper_e1dbea14311dff30bee7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a3f95ecbf437a8127915",
+        "incoming_paper_id": "paper_a3f95ecbf437a8127915"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_197a3766494f276c59be",
+        "incoming_paper_id": "paper_197a3766494f276c59be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bc132d807864c7cb49dd",
+        "incoming_paper_id": "paper_bc132d807864c7cb49dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_892a00bb45e31f96963f",
+        "incoming_paper_id": "paper_892a00bb45e31f96963f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a486a923614cf6278f60",
+        "incoming_paper_id": "paper_a486a923614cf6278f60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d396c3226e1b8908bf8e",
+        "incoming_paper_id": "paper_d396c3226e1b8908bf8e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f7fc4d760b17184ec6e",
+        "incoming_paper_id": "paper_3f7fc4d760b17184ec6e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8dd715dd984f7e49be6c",
+        "incoming_paper_id": "paper_8dd715dd984f7e49be6c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c961c84b571a23ccf28",
+        "incoming_paper_id": "paper_0c961c84b571a23ccf28"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c032b1c58e744330c739",
+        "incoming_paper_id": "paper_c032b1c58e744330c739"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_636c14ff1395fbbf86eb",
+        "incoming_paper_id": "paper_636c14ff1395fbbf86eb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a58e2e12370ad0a1088",
+        "incoming_paper_id": "paper_8a58e2e12370ad0a1088"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a13d453bc8fbb2990b58",
+        "incoming_paper_id": "paper_a13d453bc8fbb2990b58"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0aeecdf0cfd2dc583126",
+        "incoming_paper_id": "paper_0aeecdf0cfd2dc583126"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03579412bdbde334c93f",
+        "incoming_paper_id": "paper_03579412bdbde334c93f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3737775e2a3dc3f8afab",
+        "incoming_paper_id": "paper_3737775e2a3dc3f8afab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_25d9ba583449bbdb864c",
+        "incoming_paper_id": "paper_25d9ba583449bbdb864c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_15e9f007f89333d587cd",
+        "incoming_paper_id": "paper_15e9f007f89333d587cd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_510dfaf41628da347ff3",
+        "incoming_paper_id": "paper_510dfaf41628da347ff3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_02ad224c4bb2732cc1aa",
+        "incoming_paper_id": "paper_02ad224c4bb2732cc1aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bcac64b156e7fca663b9",
+        "incoming_paper_id": "paper_bcac64b156e7fca663b9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_58edceeddd2c3a8ff7f5",
+        "incoming_paper_id": "paper_58edceeddd2c3a8ff7f5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_01ac66771084d4cc8fb7",
+        "incoming_paper_id": "paper_01ac66771084d4cc8fb7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d3d878403603d0eca5a2",
+        "incoming_paper_id": "paper_d3d878403603d0eca5a2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_39d5d66991389244c741",
+        "incoming_paper_id": "paper_39d5d66991389244c741"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e472cd2a53ef1de61b5",
+        "incoming_paper_id": "paper_9e472cd2a53ef1de61b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6524ef43bfcbc1acd298",
+        "incoming_paper_id": "paper_6524ef43bfcbc1acd298"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4009916fd29df2c21f67",
+        "incoming_paper_id": "paper_4009916fd29df2c21f67"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f7e39fa52c25d6c75086",
+        "incoming_paper_id": "paper_f7e39fa52c25d6c75086"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_58bc0f19dee530871da8",
+        "incoming_paper_id": "paper_58bc0f19dee530871da8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08ef79d1abd32876888c",
+        "incoming_paper_id": "paper_08ef79d1abd32876888c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6aa26b7019f40ddf4a17",
+        "incoming_paper_id": "paper_6aa26b7019f40ddf4a17"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5530bf002648f9fcfe05",
+        "incoming_paper_id": "paper_5530bf002648f9fcfe05"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_119d2e1aaa9a560fb8ab",
+        "incoming_paper_id": "paper_119d2e1aaa9a560fb8ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1f60fe10b1826df6063",
+        "incoming_paper_id": "paper_d1f60fe10b1826df6063"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c1698dd9a4ea0e7934b",
+        "incoming_paper_id": "paper_1c1698dd9a4ea0e7934b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aa40a22ccdaa6cc127d7",
+        "incoming_paper_id": "paper_aa40a22ccdaa6cc127d7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a4516bd6c4862edba364",
+        "incoming_paper_id": "paper_a4516bd6c4862edba364"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9b2622fb598d00425ca",
+        "incoming_paper_id": "paper_e9b2622fb598d00425ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1bd1232739e202a729c2",
+        "incoming_paper_id": "paper_1bd1232739e202a729c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8cf5b9968427eddd979d",
+        "incoming_paper_id": "paper_8cf5b9968427eddd979d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5850f591b609c2f79dd6",
+        "incoming_paper_id": "paper_5850f591b609c2f79dd6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_54a4713ebe7137d66e1f",
+        "incoming_paper_id": "paper_54a4713ebe7137d66e1f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20ac2d0b510c603a4a38",
+        "incoming_paper_id": "paper_20ac2d0b510c603a4a38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5e3ca3983b1f88568da5",
+        "incoming_paper_id": "paper_5e3ca3983b1f88568da5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_974a2373a6f9df08e6a4",
+        "incoming_paper_id": "paper_974a2373a6f9df08e6a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_23971007b653c4ae1fa9",
+        "incoming_paper_id": "paper_23971007b653c4ae1fa9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83158e079add265ac7d9",
+        "incoming_paper_id": "paper_83158e079add265ac7d9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53f05030f82570ed8f53",
+        "incoming_paper_id": "paper_53f05030f82570ed8f53"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c8c8ad4f590e09f96dd6",
+        "incoming_paper_id": "paper_c8c8ad4f590e09f96dd6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6bdb51e185338763736",
+        "incoming_paper_id": "paper_f6bdb51e185338763736"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0b51e43459f58cce15c2",
+        "incoming_paper_id": "paper_0b51e43459f58cce15c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a9da668eb14a04569c97",
+        "incoming_paper_id": "paper_a9da668eb14a04569c97"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c05f4563e5ffc17d5f3b",
+        "incoming_paper_id": "paper_c05f4563e5ffc17d5f3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6c64074bf705e0783ae6",
+        "incoming_paper_id": "paper_6c64074bf705e0783ae6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8ce70aa26fba6d435bac",
+        "incoming_paper_id": "paper_8ce70aa26fba6d435bac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f93dd0eb573417f7337",
+        "incoming_paper_id": "paper_5f93dd0eb573417f7337"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d58d213d20879f493237",
+        "incoming_paper_id": "paper_d58d213d20879f493237"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_10221623daf74af9bf61",
+        "incoming_paper_id": "paper_10221623daf74af9bf61"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d32e05e473d578ea064",
+        "incoming_paper_id": "paper_4d32e05e473d578ea064"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c85febcfe5a96677daf",
+        "incoming_paper_id": "paper_2c85febcfe5a96677daf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89f468fa5d00af7ee0d2",
+        "incoming_paper_id": "paper_89f468fa5d00af7ee0d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e4622eb88e06d88d8277",
+        "incoming_paper_id": "paper_e4622eb88e06d88d8277"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7750d158057a1c47f39e",
+        "incoming_paper_id": "paper_7750d158057a1c47f39e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa4ebe460cb2e317db5e",
+        "incoming_paper_id": "paper_fa4ebe460cb2e317db5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d2285c7bd4be90ca909",
+        "incoming_paper_id": "paper_4d2285c7bd4be90ca909"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_57ccc1d70177ca4ed76b",
+        "incoming_paper_id": "paper_57ccc1d70177ca4ed76b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_decd067fda1c6e206878",
+        "incoming_paper_id": "paper_decd067fda1c6e206878"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d15860d2e2c397f2254a",
+        "incoming_paper_id": "paper_d15860d2e2c397f2254a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_33813078067f0a1901f9",
+        "incoming_paper_id": "paper_33813078067f0a1901f9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a02ab9d149906febee77",
+        "incoming_paper_id": "paper_a02ab9d149906febee77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8dd4a72050ea1e5330dc",
+        "incoming_paper_id": "paper_8dd4a72050ea1e5330dc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89df2fe1312d52b11b82",
+        "incoming_paper_id": "paper_89df2fe1312d52b11b82"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd31ca5abfc50afddca7",
+        "incoming_paper_id": "paper_bd31ca5abfc50afddca7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4144b17aa25e763c44e",
+        "incoming_paper_id": "paper_d4144b17aa25e763c44e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc642f39751ec86a29ac",
+        "incoming_paper_id": "paper_fc642f39751ec86a29ac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a26b81631a77040d6957",
+        "incoming_paper_id": "paper_a26b81631a77040d6957"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_003bafb9acae257587b3",
+        "incoming_paper_id": "paper_003bafb9acae257587b3"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "11fcff7adc0a47e4a8b21364c9d38c3b",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

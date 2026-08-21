@@ -1,0 +1,5177 @@
+{
+  "evaluation": "P1 complete discovery pipeline coverage",
+  "generated_at": "2026-08-21T21:03:25.804778+00:00",
+  "base_url": "http://127.0.0.1:8766",
+  "health": {
+    "status": "ok",
+    "kb_version": "0.4.1",
+    "directions": 61,
+    "dynamic_provider": "multi_source",
+    "chinese_retrieval": "enabled",
+    "synthesis_provider": "unconfigured",
+    "journal_registry_ready": true,
+    "direction_profiles_ready": true,
+    "openalex_authenticated": true
+  },
+  "profile_version": "1.0.0-p1",
+  "directions": 61,
+  "raw_ge_20": 61,
+  "raw_ge_20_rate": 1.0,
+  "raw_gate_required": 58,
+  "eligible_ge_10": 1,
+  "eligible_ge_10_rate": 0.0164,
+  "eligible_gate_required": 55,
+  "provider_or_runner_failures": 0,
+  "rate_limited_directions": 0,
+  "retracted_in_final": 0,
+  "cache_hit_directions": 1,
+  "zero_diagnosis_counts": {
+    "quality_gate_too_strict": 17,
+    "language_coverage_gap": 61
+  },
+  "precision_at_20": null,
+  "precision_status": "not_measured_requires_blind_human_labels",
+  "coverage_gates_passed": false,
+  "p1_acceptance_status": "NOT_ACCEPTED",
+  "acceptance_note": "P1 cannot pass until blind human Precision@20 is measured at or above 0.80.",
+  "results": [
+    {
+      "direction_id": "ai_nlp_information_processing",
+      "labels": {
+        "zh": "AI与NLP信息处理",
+        "en": "AI and NLP for information processing"
+      },
+      "input": {
+        "selected_direction_id": "ai_nlp_information_processing",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17734.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 327,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 0,
+      "boundary_count": 7,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "AI and NLP for information processing"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "AI and NLP for information processing information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 27
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "human_ai_interaction",
+      "labels": {
+        "zh": "人机交互",
+        "en": "human-AI interaction"
+      },
+      "input": {
+        "selected_direction_id": "human_ai_interaction",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17156.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 221,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 10,
+      "boundary_count": 19,
+      "selected_count": 10,
+      "raw_target_met": true,
+      "eligible_target_met": true,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 10
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI interaction information systems"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 21
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "information_behavior",
+      "labels": {
+        "zh": "信息行为",
+        "en": "information behavior"
+      },
+      "input": {
+        "selected_direction_id": "information_behavior",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15593.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 110,
+      "hard_gate_pass_count": 25,
+      "eligible_count": 2,
+      "boundary_count": 18,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information behavior"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 10
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "information_retrieval",
+      "labels": {
+        "zh": "信息检索",
+        "en": "information retrieval"
+      },
+      "input": {
+        "selected_direction_id": "information_retrieval",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18453.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 319,
+      "hard_gate_pass_count": 23,
+      "eligible_count": 0,
+      "boundary_count": 13,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information retrieval"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information retrieval human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(information retrieval) OR (information retrieval in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 19
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "knowledge_management",
+      "labels": {
+        "zh": "知识管理",
+        "en": "knowledge management"
+      },
+      "input": {
+        "selected_direction_id": "knowledge_management",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18735.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 330,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 0,
+      "boundary_count": 10,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge management information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(knowledge management) OR (knowledge management in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "platform_governance",
+      "labels": {
+        "zh": "平台治理",
+        "en": "platform governance"
+      },
+      "input": {
+        "selected_direction_id": "platform_governance",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 9438.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 119,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 3,
+      "boundary_count": 12,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "platform governance"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 19
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "recommender_systems",
+      "labels": {
+        "zh": "推荐系统与推荐算法",
+        "en": "recommender systems and algorithms"
+      },
+      "input": {
+        "selected_direction_id": "recommender_systems",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 21063.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 324,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 0,
+      "boundary_count": 13,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "recommender systems and algorithms"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "recommender systems and algorithms information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(recommender systems and algorithms) OR (recommender systems and algorithms in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 24
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "scientometrics",
+      "labels": {
+        "zh": "科学计量与文献计量",
+        "en": "scientometrics and bibliometrics"
+      },
+      "input": {
+        "selected_direction_id": "scientometrics",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16078.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 300,
+      "hard_gate_pass_count": 8,
+      "eligible_count": 1,
+      "boundary_count": 1,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "scientometrics and bibliometrics"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "scientometrics and bibliometrics information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(scientometrics and bibliometrics) OR (scientometrics and bibliometrics in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+          "returned_rows": 0
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "social_media",
+      "labels": {
+        "zh": "社交媒体",
+        "en": "social media"
+      },
+      "input": {
+        "selected_direction_id": "social_media",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17500.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 6,
+      "boundary_count": 22,
+      "selected_count": 6,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 14
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social media information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(social media) OR (social media in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "technology_adoption",
+      "labels": {
+        "zh": "技术与AI采纳",
+        "en": "technology and AI adoption"
+      },
+      "input": {
+        "selected_direction_id": "technology_adoption",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 23203.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 345,
+      "hard_gate_pass_count": 52,
+      "eligible_count": 2,
+      "boundary_count": 8,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technology and AI adoption"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technology and AI adoption information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(technology and AI adoption) OR (technology and AI adoption in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_COMPLETE",
+          "returned_rows": 45
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_ai_enabled_information_systems",
+      "labels": {
+        "zh": "AI赋能信息系统",
+        "en": "AI-enabled information systems"
+      },
+      "input": {
+        "selected_direction_id": "topic_ai_enabled_information_systems",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 322,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "local_memory_cache",
+          "status": "hit",
+          "returned_rows": 3
+        },
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "AI-enabled information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "AI-enabled information systems human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(AI-enabled information systems) OR (AI-enabled information systems in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 22
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": true,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_ai_trust",
+      "labels": {
+        "zh": "AI信任",
+        "en": "trust in AI"
+      },
+      "input": {
+        "selected_direction_id": "topic_ai_trust",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15250.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 336,
+      "hard_gate_pass_count": 39,
+      "eligible_count": 3,
+      "boundary_count": 13,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "trust in AI"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "trust in AI user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(trust in AI) OR (trust in AI in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 36
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "labels": {
+        "zh": "算法厌恶与算法欣赏",
+        "en": "algorithm aversion and appreciation"
+      },
+      "input": {
+        "selected_direction_id": "topic_algorithm_aversion_appreciation",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 11297.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 205,
+      "hard_gate_pass_count": 11,
+      "eligible_count": 3,
+      "boundary_count": 5,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithm aversion and appreciation"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithm aversion and appreciation user behavior"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 5
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_algorithmic_management",
+      "labels": {
+        "zh": "算法管理",
+        "en": "algorithmic management"
+      },
+      "input": {
+        "selected_direction_id": "topic_algorithmic_management",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18609.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 330,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 0,
+      "boundary_count": 13,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic management information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(algorithmic management) OR (algorithmic management in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_algorithmic_news",
+      "labels": {
+        "zh": "算法新闻",
+        "en": "algorithmic news"
+      },
+      "input": {
+        "selected_direction_id": "topic_algorithmic_news",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16594.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 322,
+      "hard_gate_pass_count": 26,
+      "eligible_count": 2,
+      "boundary_count": 6,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic news"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic news digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(algorithmic news) OR (algorithmic news in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 22
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_anthropomorphism",
+      "labels": {
+        "zh": "拟人化",
+        "en": "anthropomorphism"
+      },
+      "input": {
+        "selected_direction_id": "topic_anthropomorphism",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 14922.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 302,
+      "hard_gate_pass_count": 9,
+      "eligible_count": 2,
+      "boundary_count": 3,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "anthropomorphism"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "anthropomorphism user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(anthropomorphism) OR (anthropomorphism in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 2
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_attention",
+      "labels": {
+        "zh": "注意力",
+        "en": "attention"
+      },
+      "input": {
+        "selected_direction_id": "topic_attention",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16438.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 318,
+      "hard_gate_pass_count": 21,
+      "eligible_count": 0,
+      "boundary_count": 9,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "attention"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "attention user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(attention) OR (attention in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 18
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_cognitive_load",
+      "labels": {
+        "zh": "认知负荷",
+        "en": "cognitive load"
+      },
+      "input": {
+        "selected_direction_id": "topic_cognitive_load",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16063.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 327,
+      "hard_gate_pass_count": 27,
+      "eligible_count": 0,
+      "boundary_count": 6,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "cognitive load"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "cognitive load user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(cognitive load) OR (cognitive load in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 27
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_content_moderation",
+      "labels": {
+        "zh": "内容审核",
+        "en": "content moderation"
+      },
+      "input": {
+        "selected_direction_id": "topic_content_moderation",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17062.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 318,
+      "hard_gate_pass_count": 22,
+      "eligible_count": 1,
+      "boundary_count": 11,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "content moderation"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "content moderation digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(content moderation) OR (content moderation in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 18
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_data_governance",
+      "labels": {
+        "zh": "数据治理",
+        "en": "data governance"
+      },
+      "input": {
+        "selected_direction_id": "topic_data_governance",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17390.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 330,
+      "hard_gate_pass_count": 32,
+      "eligible_count": 0,
+      "boundary_count": 7,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data governance"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data governance information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(data governance) OR (data governance in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_data_knowledge",
+      "labels": {
+        "zh": "数据与知识",
+        "en": "data and knowledge"
+      },
+      "input": {
+        "selected_direction_id": "topic_data_knowledge",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17094.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 2,
+      "boundary_count": 19,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data and knowledge"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data and knowledge knowledge and data systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(data and knowledge) OR (data and knowledge in knowledge and data systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_data_management",
+      "labels": {
+        "zh": "数据管理",
+        "en": "data management"
+      },
+      "input": {
+        "selected_direction_id": "topic_data_management",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 19016.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 2,
+      "boundary_count": 13,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data management information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(data management) OR (data management in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_data_mining",
+      "labels": {
+        "zh": "数据挖掘",
+        "en": "data mining"
+      },
+      "input": {
+        "selected_direction_id": "topic_data_mining",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16531.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 330,
+      "hard_gate_pass_count": 34,
+      "eligible_count": 0,
+      "boundary_count": 15,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data mining"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "data mining human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(data mining) OR (data mining in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_decision_intelligence",
+      "labels": {
+        "zh": "决策智能",
+        "en": "decision intelligence"
+      },
+      "input": {
+        "selected_direction_id": "topic_decision_intelligence",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16438.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 320,
+      "hard_gate_pass_count": 23,
+      "eligible_count": 1,
+      "boundary_count": 9,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "decision intelligence"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "decision intelligence knowledge and data systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(decision intelligence) OR (decision intelligence in knowledge and data systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 20
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_decision_support",
+      "labels": {
+        "zh": "决策支持",
+        "en": "decision support systems"
+      },
+      "input": {
+        "selected_direction_id": "topic_decision_support",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 19188.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 320,
+      "hard_gate_pass_count": 20,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "decision support systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "decision support systems information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(decision support systems) OR (decision support systems in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 20
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_artifact_design",
+      "labels": {
+        "zh": "数字人工物设计",
+        "en": "digital artifact design"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_artifact_design",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 12187.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 217,
+      "hard_gate_pass_count": 27,
+      "eligible_count": 1,
+      "boundary_count": 15,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital artifact design"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital artifact design human-computer interaction"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 17
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_information_environment",
+      "labels": {
+        "zh": "数字信息环境",
+        "en": "digital information environment"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_information_environment",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15594.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 317,
+      "hard_gate_pass_count": 18,
+      "eligible_count": 1,
+      "boundary_count": 5,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital information environment"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital information environment knowledge and data systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(digital information environment) OR (digital information environment in knowledge and data systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 17
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_innovation",
+      "labels": {
+        "zh": "数字创新",
+        "en": "digital innovation"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_innovation",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 28657.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 230,
+      "hard_gate_pass_count": 39,
+      "eligible_count": 3,
+      "boundary_count": 13,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital innovation"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital innovation information systems"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_markets",
+      "labels": {
+        "zh": "数字市场",
+        "en": "digital markets"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_markets",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18406.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 2,
+      "boundary_count": 3,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital markets"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital markets information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(digital markets) OR (digital markets in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_strategy",
+      "labels": {
+        "zh": "数字战略",
+        "en": "digital strategy"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_strategy",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17094.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 36,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital strategy"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital strategy information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(digital strategy) OR (digital strategy in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_digital_transformation",
+      "labels": {
+        "zh": "数字化转型",
+        "en": "digital transformation"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_transformation",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17516.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 33,
+      "eligible_count": 1,
+      "boundary_count": 14,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital transformation"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital transformation information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(digital transformation) OR (digital transformation in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_emotion",
+      "labels": {
+        "zh": "情绪",
+        "en": "emotion"
+      },
+      "input": {
+        "selected_direction_id": "topic_emotion",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16031.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 316,
+      "hard_gate_pass_count": 20,
+      "eligible_count": 0,
+      "boundary_count": 7,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "emotion"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "emotion user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(emotion) OR (emotion in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 16
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_generative_ai",
+      "labels": {
+        "zh": "生成式AI",
+        "en": "generative AI"
+      },
+      "input": {
+        "selected_direction_id": "topic_generative_ai",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17282.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 339,
+      "hard_gate_pass_count": 40,
+      "eligible_count": 1,
+      "boundary_count": 8,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "generative AI"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "generative AI digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(generative AI) OR (generative AI in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 39
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_hci",
+      "labels": {
+        "zh": "人机交互研究",
+        "en": "human-computer interaction"
+      },
+      "input": {
+        "selected_direction_id": "topic_hci",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 12968.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 230,
+      "hard_gate_pass_count": 32,
+      "eligible_count": 7,
+      "boundary_count": 8,
+      "selected_count": 7,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 13
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-computer interaction human-computer interaction"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_human_ai_communication",
+      "labels": {
+        "zh": "人机传播",
+        "en": "human-AI communication"
+      },
+      "input": {
+        "selected_direction_id": "topic_human_ai_communication",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17516.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 34,
+      "eligible_count": 1,
+      "boundary_count": 15,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI communication"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI communication digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(human-AI communication) OR (human-AI communication in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_human_ai_teams",
+      "labels": {
+        "zh": "人机团队",
+        "en": "human-AI teams"
+      },
+      "input": {
+        "selected_direction_id": "topic_human_ai_teams",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15594.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 37,
+      "eligible_count": 2,
+      "boundary_count": 21,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI teams"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "human-AI teams user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(human-AI teams) OR (human-AI teams in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_identity",
+      "labels": {
+        "zh": "身份认同",
+        "en": "identity"
+      },
+      "input": {
+        "selected_direction_id": "topic_identity",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15203.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 305,
+      "hard_gate_pass_count": 8,
+      "eligible_count": 1,
+      "boundary_count": 3,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "identity"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "identity user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(identity) OR (identity in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 5
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_influencers",
+      "labels": {
+        "zh": "社交媒体影响者",
+        "en": "social media influencers"
+      },
+      "input": {
+        "selected_direction_id": "topic_influencers",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17156.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 330,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 0,
+      "boundary_count": 19,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social media influencers"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social media influencers digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(social media influencers) OR (social media influencers in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_information_overload",
+      "labels": {
+        "zh": "信息过载",
+        "en": "information overload"
+      },
+      "input": {
+        "selected_direction_id": "topic_information_overload",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15078.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 301,
+      "hard_gate_pass_count": 6,
+      "eligible_count": 2,
+      "boundary_count": 2,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information overload"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information overload user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(information overload) OR (information overload in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 1
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_information_science",
+      "labels": {
+        "zh": "信息科学",
+        "en": "information science"
+      },
+      "input": {
+        "selected_direction_id": "topic_information_science",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17000.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 112,
+      "hard_gate_pass_count": 28,
+      "eligible_count": 4,
+      "boundary_count": 20,
+      "selected_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 16
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "information science"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 12
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_it_governance",
+      "labels": {
+        "zh": "IT治理",
+        "en": "IT governance"
+      },
+      "input": {
+        "selected_direction_id": "topic_it_governance",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16829.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 318,
+      "hard_gate_pass_count": 23,
+      "eligible_count": 2,
+      "boundary_count": 16,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "IT governance"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "IT governance information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(IT governance) OR (IT governance in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 18
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_judgment_decision_making",
+      "labels": {
+        "zh": "判断与决策",
+        "en": "judgment and decision making"
+      },
+      "input": {
+        "selected_direction_id": "topic_judgment_decision_making",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16235.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 326,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "judgment and decision making"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "judgment and decision making user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(judgment and decision making) OR (judgment and decision making in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 26
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_knowledge_discovery",
+      "labels": {
+        "zh": "知识发现",
+        "en": "knowledge discovery"
+      },
+      "input": {
+        "selected_direction_id": "topic_knowledge_discovery",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16516.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 324,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 0,
+      "boundary_count": 6,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge discovery"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge discovery human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(knowledge discovery) OR (knowledge discovery in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 24
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_knowledge_graph",
+      "labels": {
+        "zh": "知识图谱",
+        "en": "knowledge graphs"
+      },
+      "input": {
+        "selected_direction_id": "topic_knowledge_graph",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16844.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 3,
+      "boundary_count": 6,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge graphs"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "knowledge graphs information management"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(knowledge graphs) OR (knowledge graphs in information management)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_machine_learning",
+      "labels": {
+        "zh": "机器学习",
+        "en": "machine learning"
+      },
+      "input": {
+        "selected_direction_id": "topic_machine_learning",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17953.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 330,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 1,
+      "boundary_count": 15,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "machine learning"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "machine learning human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(machine learning) OR (machine learning in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_misinformation",
+      "labels": {
+        "zh": "错误信息",
+        "en": "misinformation"
+      },
+      "input": {
+        "selected_direction_id": "topic_misinformation",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17734.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 303,
+      "hard_gate_pass_count": 5,
+      "eligible_count": 1,
+      "boundary_count": 2,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "misinformation"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "misinformation digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(misinformation) OR (misinformation in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 3
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_news_consumption",
+      "labels": {
+        "zh": "新闻消费",
+        "en": "news consumption"
+      },
+      "input": {
+        "selected_direction_id": "topic_news_consumption",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16484.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 316,
+      "hard_gate_pass_count": 18,
+      "eligible_count": 1,
+      "boundary_count": 3,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "news consumption"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "news consumption digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(news consumption) OR (news consumption in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 16
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_organizational_information",
+      "labels": {
+        "zh": "组织信息",
+        "en": "organizational information"
+      },
+      "input": {
+        "selected_direction_id": "topic_organizational_information",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16687.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 301,
+      "hard_gate_pass_count": 10,
+      "eligible_count": 0,
+      "boundary_count": 5,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "organizational information"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "organizational information knowledge and data systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(organizational information) OR (organizational information in knowledge and data systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 1
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_political_communication",
+      "labels": {
+        "zh": "政治传播",
+        "en": "political communication"
+      },
+      "input": {
+        "selected_direction_id": "topic_political_communication",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16187.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 310,
+      "hard_gate_pass_count": 11,
+      "eligible_count": 0,
+      "boundary_count": 3,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "political communication"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "political communication digital media"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(political communication) OR (political communication in digital media)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 10
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_privacy_concern",
+      "labels": {
+        "zh": "隐私关注",
+        "en": "privacy concern"
+      },
+      "input": {
+        "selected_direction_id": "topic_privacy_concern",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 30906.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 321,
+      "hard_gate_pass_count": 25,
+      "eligible_count": 2,
+      "boundary_count": 8,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "privacy concern"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "privacy concern user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(privacy concern) OR (privacy concern in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 21
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_privacy_security",
+      "labels": {
+        "zh": "隐私与安全",
+        "en": "privacy and security"
+      },
+      "input": {
+        "selected_direction_id": "topic_privacy_security",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 19187.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 329,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 3,
+      "boundary_count": 12,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "privacy and security"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "privacy and security information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(privacy and security) OR (privacy and security in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 29
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_scholarly_communication",
+      "labels": {
+        "zh": "学术传播",
+        "en": "scholarly communication"
+      },
+      "input": {
+        "selected_direction_id": "topic_scholarly_communication",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 9531.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 128,
+      "hard_gate_pass_count": 37,
+      "eligible_count": 1,
+      "boundary_count": 19,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "scholarly communication"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 28
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_social_influence",
+      "labels": {
+        "zh": "社会影响",
+        "en": "social influence"
+      },
+      "input": {
+        "selected_direction_id": "topic_social_influence",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 15640.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 329,
+      "hard_gate_pass_count": 33,
+      "eligible_count": 2,
+      "boundary_count": 16,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social influence"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "social influence user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(social influence) OR (social influence in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 29
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_software_system_design",
+      "labels": {
+        "zh": "软件与系统设计",
+        "en": "software and system design"
+      },
+      "input": {
+        "selected_direction_id": "topic_software_system_design",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17016.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 315,
+      "hard_gate_pass_count": 18,
+      "eligible_count": 3,
+      "boundary_count": 4,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "software and system design"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "software and system design human-computer interaction"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(software and system design) OR (software and system design in human-computer interaction)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 15
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_technology_use",
+      "labels": {
+        "zh": "技术使用",
+        "en": "technology use"
+      },
+      "input": {
+        "selected_direction_id": "topic_technology_use",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18843.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 329,
+      "hard_gate_pass_count": 34,
+      "eligible_count": 3,
+      "boundary_count": 8,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technology use"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technology use information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(technology use) OR (technology use in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 29
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_technostress",
+      "labels": {
+        "zh": "技术压力",
+        "en": "technostress"
+      },
+      "input": {
+        "selected_direction_id": "topic_technostress",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 14875.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 300,
+      "hard_gate_pass_count": 7,
+      "eligible_count": 0,
+      "boundary_count": 6,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technostress"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "technostress user behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(technostress) OR (technostress in user behavior)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+          "returned_rows": 0
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_在线行为",
+      "labels": {
+        "zh": "在线行为",
+        "en": "online behavior"
+      },
+      "input": {
+        "selected_direction_id": "topic_在线行为",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 18610.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 329,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 1,
+      "boundary_count": 9,
+      "selected_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 19
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "online behavior"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "online behavior information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(online behavior) OR (online behavior in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 29
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_平台经济",
+      "labels": {
+        "zh": "平台经济",
+        "en": "platform economy"
+      },
+      "input": {
+        "selected_direction_id": "topic_平台经济",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 16578.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 324,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 3,
+      "boundary_count": 8,
+      "selected_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 17
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "platform economy"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "platform economy information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(platform economy) OR (platform economy in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 24
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_数字广告",
+      "labels": {
+        "zh": "数字广告",
+        "en": "digital advertising"
+      },
+      "input": {
+        "selected_direction_id": "topic_数字广告",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 14265.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 230,
+      "hard_gate_pass_count": 40,
+      "eligible_count": 2,
+      "boundary_count": 10,
+      "selected_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 18
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital advertising"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "digital advertising information systems"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_电商",
+      "labels": {
+        "zh": "电子商务",
+        "en": "electronic commerce"
+      },
+      "input": {
+        "selected_direction_id": "topic_电商",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 32625.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 321,
+      "hard_gate_pass_count": 26,
+      "eligible_count": 0,
+      "boundary_count": 5,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "electronic commerce"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "electronic commerce information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(electronic commerce) OR (electronic commerce in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 21
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    },
+    {
+      "direction_id": "topic_算法机制",
+      "labels": {
+        "zh": "算法机制",
+        "en": "algorithmic mechanisms"
+      },
+      "input": {
+        "selected_direction_id": "topic_算法机制",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 17125.0,
+      "status": "ok",
+      "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "state": "QUERY_PLAN",
+      "raw_count": 316,
+      "hard_gate_pass_count": 17,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "selected_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "retracted_in_final": 0,
+      "shortages": {
+        "zh": 10,
+        "en": 20
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "attempt": 1,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic mechanisms"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 2,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "algorithmic mechanisms information systems"
+        },
+        {
+          "provider": "openalex",
+          "attempt": 3,
+          "status": "ok",
+          "returned_rows": 100,
+          "query": "(algorithmic mechanisms) OR (algorithmic mechanisms in information systems)"
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "core",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "unpaywall",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 16
+        }
+      ],
+      "provider_rate_limited": false,
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "quality_gate_too_strict",
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "post-gate Chinese result count is zero"
+        ]
+      },
+      "score_config_version": "p1-metadata-score-1.0.0"
+    }
+  ]
+}

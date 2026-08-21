@@ -1,0 +1,1340 @@
+{
+  "direction_id": "information_behavior",
+  "labels": {
+    "zh": "信息行为",
+    "en": "information behavior"
+  },
+  "input": {
+    "selected_direction_id": "information_behavior",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 15593.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 110,
+  "hard_gate_pass_count": 25,
+  "eligible_count": 2,
+  "boundary_count": 18,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "information behavior"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 10
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "information_behavior",
+      "research_direction": "信息行为",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ]
+    },
+    "local_match": {
+      "label": "信息行为",
+      "aliases": [
+        "Information Behavior"
+      ],
+      "groups": [
+        "IM",
+        "IM × 数据 / AI / 知识管理"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:255",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:294"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "information_behavior",
+        "labels": {
+          "zh": "信息行为",
+          "en": "information behavior"
+        },
+        "group_ids": [
+          "im",
+          "im_data_ai_knowledge"
+        ],
+        "synonyms": [
+          "信息行为",
+          "information behavior",
+          "information behavior in information management"
+        ],
+        "boundaries": {
+          "include": [
+            "information behavior",
+            "information management",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "information behavior",
+            "\"information behavior\" AND \"information management\""
+          ],
+          "semantic_scholar": [
+            "information behavior",
+            "information behavior information management"
+          ],
+          "crossref": [
+            "information behavior",
+            "信息行为"
+          ],
+          "dblp": [
+            "information behavior information science"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "information behavior",
+            "information management",
+            "information science"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IM_CORE",
+          "SCIENTOMETRICS",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_SCIENCE_POLICY",
+          "CS_AI",
+          "CS_IR",
+          "CS_DATA",
+          "IS_CORE",
+          "PKU_CORE_2023_STATISTICS_METHODS"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "information behavior information management",
+          "(information behavior) OR (information behavior in information management)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:255",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:294"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_c80546c452aae5aa3d5b",
+        "title": "Research on information behavior in communities: a scoping review of community types, featured information behavior and research methods",
+        "abstract": "Purpose This scoping review article examined research on information behavior in communities over the past two decades (2000–2023). The review aims to uncover the characteristics and types of communities studied, the featured information behaviors, and the research methods employed. Design/methodology/approach The PRISMA-ScR guidelines were followed to conduct this review. Five databases were selected to search for relevant empirical research. A total of 57 studies met the inclusion criteria for review. Thematic synthesis was used to analyze the multidimensional findings of included studies. Findings A steady increase in the number of articles is evident in the past two decades. The review suggests that information behavior in community studies involved collaboration from other disciplines, such as public health and business management. More than half of the communities studied are virtual communities (56.1%), followed by communities of identity, professional communities and support communities, communities of interest, geographic communities, and academic communities. There are overlaps among these categories. Information sharing (63.2%) and information seeking (57.9%) were the most studied behavior of communities, followed by information use, information needs, and information judgment. Questionnaires (38.6%) and interviews (35.1%) were the most commonly used data collection techniques in studying information behavior in communities. It is noteworthy that eleven (19.3%) mentioned utilizing community-engaged approaches. Originality/value This is the first scoping review to explore the intersecting constructs of community research and information behavior studies. We call for further research to understand the contextual factors that shape the community’s information environments and to increase awareness of the partnership between communities and researchers.",
+        "authors": [
+          "Jia Tina Du",
+          "Qing Ke",
+          "Clara M. Chu",
+          "Helen Partridge",
+          "Dandan Ma"
+        ],
+        "year": 2024,
+        "publication_date": "2024-06-17",
+        "published_date": "2024-06-17",
+        "language": "en",
+        "doi": "10.1108/jd-10-2023-0222",
+        "url": "https://doi.org/10.1108/jd-10-2023-0222",
+        "official_url": "https://doi.org/10.1108/jd-10-2023-0222",
+        "source_title": "Journal of Documentation",
+        "journal": "Journal of Documentation",
+        "source_issns": [
+          "0022-0418",
+          "1758-7379"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 5,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12028",
+            "name": "Knowledge Management and Sharing",
+            "score": 0.9994999766349792
+          },
+          {
+            "id": "https://openalex.org/T10557",
+            "name": "Social Media and Politics",
+            "score": 0.9905999898910522
+          },
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9894000291824341
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4399726162"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://figshare.com/articles/journal_contribution/Research_on_information_behavior_in_communities_a_scoping_review_of_community_types_featured_information_behavior_and_research_methods/26183066",
+        "provider_payload_refs": [
+          "https://openalex.org/W4399726162"
+        ],
+        "journal_id": "journal_035",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IM_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 71.79,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 38.82,
+            "recency": 60.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 71.79
+      },
+      {
+        "paper_id": "paper_0e3e99384d6f929de59e",
+        "title": "Social noise: the influence of observers on social media information behavior",
+        "abstract": "Purpose The purpose of this paper is to introduce the concept of social noise. Under the influence of social noise, a social media user may adjust information behavior based on external cues, attempting to present themselves in a more desirable way to increase their social capital. Design/methodology/approach A qualitative study informed by an ethnographic approach was used to examine social media information behavior. Participants were observed using Facebook, followed by semi-structured interviews. Data analysis was theoretically grounded in thematic analysis but also adaptive to observations in the data. Findings Four constructs of social noise were identified in the data. Identity curation emerged as the overarching consideration for individuals. The constructs cultural commitments and relationship management both had a strong presence within the data as well. The fourth construct, conflict management, was identified as social media users decided how to respond to individuals or information with which they did not agree. Originality/value This study reveals that social media users' awareness of observation by others does impact their information behavior. Efforts to craft a personal reputation, build or maintain relationships, pursue important commitments and manage conflict all influence the observable information behavior of social media users. As a result, observable social media information behavior may not be an accurate reflection of an individual's true thoughts and beliefs.",
+        "authors": [
+          "Tara Zimmerman"
+        ],
+        "year": 2022,
+        "publication_date": "2022-01-19",
+        "published_date": "2022-01-19",
+        "language": "en",
+        "doi": "10.1108/jd-08-2021-0165",
+        "url": "https://doi.org/10.1108/jd-08-2021-0165",
+        "official_url": "https://doi.org/10.1108/jd-08-2021-0165",
+        "source_title": "Journal of Documentation",
+        "journal": "Journal of Documentation",
+        "source_issns": [
+          "0022-0418",
+          "1758-7379"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 17,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10557",
+            "name": "Social Media and Politics",
+            "score": 0.9988999962806702
+          },
+          {
+            "id": "https://openalex.org/T12028",
+            "name": "Knowledge Management and Sharing",
+            "score": 0.9983000159263611
+          },
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9976000189781189
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4206301377"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4206301377"
+        ],
+        "journal_id": "journal_035",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IM_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 70.18,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 62.63,
+            "recency": 20.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 70.18
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "information behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3915438,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:30.053052+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3734.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "information behavior",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 7,
+        "queried_at": "2026-08-21T21:01:42.937581+00:00",
+        "duration_ms": 1469.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1469.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Communications of the ACM",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0001-0782",
+        "query": "information behavior",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 3,
+        "queried_at": "2026-08-21T21:01:44.402115+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_cb9848d36061dfac8cef",
+        "title": "Fundamentals of Soil Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3527220d6104462ec9f8",
+        "title": "MultiPath++: Efficient Information Fusion and Trajectory Aggregation for Behavior Prediction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e77587048bea52fb48ff",
+        "title": "Online Health Information Seeking Behaviors Among Older Adults: Systematic Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a344e724df04a52ace8d",
+        "title": "The addiction behavior of short-form video app TikTok: The information quality and system quality perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8ae6f14afb1bd2f2178",
+        "title": "Risk Perception and Preventive Behavior During the COVID-19 Pandemic : Testing the Effects of Government Trust and Information Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6ef01eead02f9a11000",
+        "title": "Three-Way Behavioral Decision Making With Hesitant Fuzzy Information Systems: Survey and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc76bc3d8c901f73293c",
+        "title": "Clarifying the Relationship Between Information Seeking and Avoidance: Longitudinal Analyses of Information Behaviors and Their Normative Influences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47b9cf35cecec4d54cf8",
+        "title": "I, chatbot! the impact of anthropomorphism and gaze direction on willingness to disclose personal information and behavioral intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2288623d399aaf8116c",
+        "title": "The impact of the self-recognition ability and physical quality on coupled negative information-behavior-epidemic dynamics in multiplex networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ead0d61659795b9d70e",
+        "title": "When Experts Offer Conflicting Information: A Study of Perceived Ambiguity, Information Insufficiency, Trustworthiness and Risk Information Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ce04d031a26ddda06fd",
+        "title": "Hyper content e-module in information behavior course with the assistant of screencast",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fea032b0dc1f75ebaea2",
+        "title": "Effect of financial knowledge and information behavior on sustainable investments: evidence from India",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00073af5dbdc3a03441d",
+        "title": "Entrepreneurs’ Information-Seeking Behaviors in the Digital Age–A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eafb6e610adf754a2f95",
+        "title": "Do (Not!) Track Me: Relationship Between Willingness to Participate and Sample Composition in Online Information Behavior Tracking Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2793a982159413064a4f",
+        "title": "Developing a framework for understanding health information behavior change from avoidance to acquisition: a grounded theory exploration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7de270f9b1474451ab7b",
+        "title": "Integration of Information Behavior into Reference and Information Services Education: A Syllabus Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a6539bb07116351ef7d",
+        "title": "A study on the long-term effects and mechanisms of internet information behavior on poverty alleviation among smallholder farmers: Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2044248ffb7a30427676",
+        "title": "Task fMRI paradigms may capture more behaviorally relevant information than resting-state functional connectivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c54ecaa5c1945faa59bb",
+        "title": "Behavioral Game Theory",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24d9e055918bac39ce99",
+        "title": "The users’ point of view: towards a model of government information behavior on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9def388e08394947365",
+        "title": "Information-processing dynamics in neural networks of macaque cerebral cortex reflect cognitive state and behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad0087b309f21444a4c0",
+        "title": "Understanding Health Information Behaviors of Migrant Domestic Workers during the COVID-19 Pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09f9e0a5194ce9d5229e",
+        "title": "Examining the Role of Information Behavior in Linking Cancer Risk Perception and Cancer Worry to Cancer Fatalism in China: Cross-Sectional Survey Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fae77b4ebe12142ed43",
+        "title": "The mediating role of health awareness in the relationship between health information behavior and health outcomes among the older adults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e58d28e59570ecfad02",
+        "title": "Carbon information disclosure quality, greenwashing behavior, and enterprise value",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd801aff6730b7c9f54c",
+        "title": "Exploring Information Behavior Patterns in Response to False and Misleading Health Information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f65ff11d4e8c363034f2",
+        "title": "The effect of social media environmental information exposure on the intention to participate in pro-environmental behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28098941c115d563d884",
+        "title": "Promoting Consumer Adoption of Electric Vehicles from a Standard-Information-Behavior Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f30d8d1c1b3877ed2003",
+        "title": "Proof of biased behavior of Normalized Mutual Information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4f55c9aeee6272627d6b",
+        "title": "A behavioral intention model of Gen Z female’ health information behavior on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd9cd386b27a14c4babf",
+        "title": "Information behavior and psychological well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5f141dce47281fc0b6e",
+        "title": "Green transformational leadership and employee organizational citizenship behavior for the environment in the manufacturing industry: A social information processing perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa1102443cbef08da515",
+        "title": "Rage or rationality: Exposure to Internet censorship and the impact on individual information behaviors in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_209a49ba0fda9bcd764a",
+        "title": "Investigating Non-Newtonian Fluid Behavior in Hydrocyclones Via Computational Fluid Dynamics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_761a13e5e57e1007ad41",
+        "title": "Swiss residents’ information behavior perceptions during the COVID-19 pandemic: A longitudinal qualitative study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7663dda7a9191990e5ba",
+        "title": "Adverse effect of social media on generation Z user's behavior: Government information support as a moderating variable",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5de6b7f383659ca084ab",
+        "title": "A Compass for What Matters: Applying Virtue Ethics to Information Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78199d2092fed69c241c",
+        "title": "Impact of co-evolution of negative vaccine-related information, vaccination behavior and epidemic spreading in multilayer networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d3441b755a46e4f67091",
+        "title": "Historical Origins of Information Behavior Research by Reference Publication Year Spectroscopy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90a5d1b79ae8868c770f",
+        "title": "User acceptance of health information technologies (HIT): an application of the theory of planned behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9ca32e52ccdc571100c",
+        "title": "The coupled dynamics of information-behavior-epidemic propagation considering the heterogeneity of adoption thresholds and network structures in multiplex networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32b7e86e1f1e65c2f3a6",
+        "title": "JASIS&T special issue on information behavior and information practices theory",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_7d5e3aef82ae70dd03e2",
+        "title": "From warning messages to preparedness behavior: The role of risk perception and information interaction in the Covid-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e10778597aa787e9dab",
+        "title": "Examining the paths of influence between individual motivators, information behaviors, and outcomes in disaster risk reduction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9580359417c8986373f6",
+        "title": "When helpfulness backfires: LLMs and the risk of false medical information due to sycophantic behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7227a7ec999af586f427",
+        "title": "Interactive effects of social norms and information framing on consumers' willingness of food waste reduction behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1431ec75387650ddf356",
+        "title": "On the information behavior from quadratically coupled accelerated detectors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba668219953e9456ecfb",
+        "title": "Information search behavior at the post-purchase stage of the customer journey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18f5294644c15d8b6966",
+        "title": "Impact of information credibility on social media information adoption behavior: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a8321164e6aca727ee2",
+        "title": "Generational differences in health information behaviors during the COVID-19 crisis: A Hong Kong study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb315757145e8994505a",
+        "title": "Analyzing Students' Information Behavior in Generative AI-Supported Small Group Discussions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_adae1854056eac665499",
+        "title": "How does information encountering enhance purchase behavior? The mediating role of customer inspiration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8831937eb761b1bbe988",
+        "title": "Information Behavior of Children Using Public Libraries in Taiwan and Indonesia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57e1078984f3e62d3312",
+        "title": "Understanding online health information seeking behavior of older adults: A social cognitive perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df7aa2f2fc0f72502407",
+        "title": "Elements of information ecosystems stimulating the online consumer behavior: A mediating role of cognitive and affective trust",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c24feb973e06993bdbd1",
+        "title": "Heart Disease and Stroke Statistics—2022 Update: A Report From the American Heart Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eba60fe66370e3825ac4",
+        "title": "Default to truth in information behavior: a proposed framework for understanding vulnerability to deceptive information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_588fac7df144ecc08e8c",
+        "title": "A state of the art and scoping review of embodied information behavior in shared, co-present extended reality experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13fbee90815372f18c14",
+        "title": "Health literacy and digital health information-seeking behavior – a cross-sectional study among highly educated Swedes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00a4fbf17338689c9b67",
+        "title": "Correlates of Older Adults’ E-Health Information-Seeking Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_618ef1da6243d56d15d8",
+        "title": "Gameful Green: A Systematic Review on the Use of Serious Computer Games and Gamified Mobile Apps to Foster Pro-Environmental Information, Attitudes and Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fcf486574066927463aa",
+        "title": "Should “green information” be interactive? The influence of green information presentation on consumers’ green participation behavior for driving sustainable consumption of fashion brands",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f22ec8138973f0c3b3a",
+        "title": "Assessment of the Impact of Information Security Awareness Training Methods on Knowledge, Attitude, and Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a3681878c7c2086e399",
+        "title": "Understanding the intention-behavior gap: The role of intention strength",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_10437dd1ebd658a588fa",
+        "title": "The Evolution of Information Behavior Research",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2d671b8fbb81ed120fd",
+        "title": "Identifying and Monitoring Students’ Classroom Learning Behavior Based on Multisource Information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12b9ff311819a12b4123",
+        "title": "Online health information seeking behavior, healthcare access, and health status during exceptional times",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fd4748f091f85b68cfe",
+        "title": "Analysis of Learning Behavior Characteristics and Prediction of Learning Effect for Improving College Students’ Information Literacy Based on Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb0f085990f80fd9c0a1",
+        "title": "Artificial Intelligence–Based Chatbots for Promoting Health Behavioral Changes: Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1f8411701e614e02aaa",
+        "title": "To Incentivize or Not: Impact of Blockchain-Based Cryptoeconomic Tokens on Human Information Sharing Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a0d10573253ed1637c9",
+        "title": "The cognition, information behaviors, and preventive behaviors of Taiwanese people facing COVID-19",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e0f55c780c260a66334",
+        "title": "MSIF-MobileNetV3: An improved MobileNetV3 based on multi-scale information fusion for fish feeding behavior analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_324c3a1db3dc6d07f2fb",
+        "title": "Intolerance of uncertainty and information-seeking behavior: Experimental manipulation of threat relevance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a47293b46c51eedbe21",
+        "title": "Green production information transparency and online purchase behavior: Evidence from green agricultural products in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b27fda888e81cbfd202a",
+        "title": "Positive information shocks, investor behavior and stock price crash risk",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fda4e45f04272a1d4ad3",
+        "title": "Understanding your audience: The influence of social media user‐type on informational behaviors and hazard adjustments during Hurricane Dorian",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_545f8f59a10b89241cd6",
+        "title": "Identifying Effective Collaborative Behaviors in Building Information Modeling–Enabled Construction Projects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bf15bc3a1a3fd2bb5ac",
+        "title": "Exploring “Planned Serendipity” and On-site Information Behavior on Smartphones",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd60685e0eded9e9c798",
+        "title": "Modeling the Coupling Propagation of Information, Behavior, and Disease in Multilayer Heterogeneous Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2c6f4fcacab9dfdc8c5",
+        "title": "Peer-to-peer accommodation amid COVID-19: the effects of Airbnb cleanliness information on guests’ trust and behavioral intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1f6b9b6c0520cec596ba",
+        "title": "Understanding information behavior of South Korean Twitter users who express suicidality on Twitter",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb755f1aadbf72caa3ea",
+        "title": "Application of theory of planned behavior in identifying factors affecting online health information seeking intention and behavior of women",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8398c20570b2f0040587",
+        "title": "Co-evolution dynamics of epidemic and information under dynamical multi-source information and behavioral responses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_745d978991d7f0db3490",
+        "title": "Air pollution: a study of citizen's attitudes and behaviors using different information sources",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6dc4948dfcef868e3a1b",
+        "title": "Library and information science applied studies on collaborative information behavior",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "provider_request_failed",
+        "journal": "中国软科学",
+        "error_type": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "reason": "provider_request_failed",
+        "journal": "科学学研究",
+        "error_type": "HTTPError",
+        "http_status": 429
+      },
+      {
+        "reason": "provider_request_failed",
+        "journal": "ACM Transactions on Information Systems",
+        "error_type": "SSLWantReadError",
+        "http_status": null
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Toward Quality of Information Aware Distributed Machine Learning",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Subgraph Federated Learning with Information Bottleneck Constrained Generative Learning",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Information-aware Multi-view Outlier Detection",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Information Power!",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Validating Factual Personal Information",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Why Bother Localizing Information Technology Products?",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "A Quantum Leap in Information Science",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Panmodal Information Interaction",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Establishing the Foundations of Quantum Information Science",
+        "journal": "Communications of the ACM"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Information: 'I' vs. 'we' vs. 'they'",
+        "journal": "Communications of the ACM"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "information_behavior",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 110,
+      "deduplicated_count": 25,
+      "hard_gate_pass_count": 25,
+      "eligible_count": 2,
+      "boundary_count": 18,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "information behavior"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 10
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "information behavior",
+        "raw_count": 100,
+        "hard_gate_pass_count": 15,
+        "trigger": "initial"
+      }
+    ],
+    "dedupe_log": [],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "b67db81e918e4bd79903f85eb031a9d5",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

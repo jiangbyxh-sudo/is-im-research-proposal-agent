@@ -402,6 +402,7 @@
   "11_implementation/evaluation/p0_challenges.py": "2ef4d39d241f4fbe555e35278cb8b3c90cef33863418fa3a211d7252eab9d724",
   "11_implementation/evaluation/p0_model_baseline.py": "9cfdcb0a6dd67b634b1ba78322be1fe2210954a2faa0d66e0ee7ca561e475d03",
   "11_implementation/evaluation/p1_coverage_scan.py": "436f946ade066d180d719cadfa7f00ebc10a308b656bbda470f6e974e67699b3",
+  "11_implementation/evaluation/p1_full_pipeline_scan.py": "67a81a7792cd9c4d32aa2a672e8d742e36323ea8bf64ce244e896d0685af75d0",
   "11_implementation/evaluation/rubrics.py": "1db1246d8d59b645ddaaabd72b1012852ffa05a50062e2af49f780396e15970d",
   "11_implementation/evaluation/test_p1_retrieval.py": "5e48e3e82ce6fce904e6d13b267763ef19e7729efe32f13f0c24ce329179cd4d",
   "11_implementation/evaluation/validate_p0_baseline.py": "131363b2708dc21816307cffd8bdb78dd06937d40115ca7d9f90124657401763",

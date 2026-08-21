@@ -1,0 +1,2883 @@
+{
+  "direction_id": "topic_data_management",
+  "labels": {
+    "zh": "数据管理",
+    "en": "data management"
+  },
+  "input": {
+    "selected_direction_id": "topic_data_management",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 19016.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 31,
+  "eligible_count": 2,
+  "boundary_count": 13,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "data management"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "data management information management"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(data management) OR (data management in information management)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_data_management",
+      "research_direction": "Data Management",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ]
+    },
+    "local_match": {
+      "label": "Data Management",
+      "aliases": [
+        "Data Management"
+      ],
+      "groups": [
+        "IM"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:257"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_data_management",
+        "labels": {
+          "zh": "数据管理",
+          "en": "data management"
+        },
+        "group_ids": [
+          "im"
+        ],
+        "synonyms": [
+          "数据管理",
+          "data management",
+          "data management in information management"
+        ],
+        "boundaries": {
+          "include": [
+            "data management",
+            "information management",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "data management",
+            "\"data management\" AND \"information management\""
+          ],
+          "semantic_scholar": [
+            "data management",
+            "data management information management"
+          ],
+          "crossref": [
+            "data management",
+            "数据管理"
+          ],
+          "dblp": [
+            "data management information science"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "data management",
+            "information management",
+            "information science"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IM_CORE",
+          "SCIENTOMETRICS",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_SCIENCE_POLICY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "data management information management",
+          "(data management) OR (data management in information management)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:257"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_9de773edf192da489975",
+        "title": "Discovering research data management trends from job advertisements using a text-mining approach",
+        "abstract": "In today’s data-driven culture, research data management (RDM) is essential for the research community. The demand for reusing research datasets is a challenging and diverse process for the scientific community. Despite this, it is essential in RDM to discover trends and themes using text mining, which is scarce. The purpose of this study is to employ text mining to discover insights from job advertisements associated with RDM profiles, which collected 810 advertisements. We found RDM-related patterns using latent Dirichlet allocation (LDA) and identified three key contexts. The first is ‘research services in libraries’, with the topics of research services, research information, research universities, collection processes and library services. The second context is ‘research data’, which includes RDM, business data, university data, research data, health research, science research, social science research, data centres, data services, statistical software, digital scholarship and digital preservation. The third context is ‘workplace environment’, and the topics are leadership, work development and scientific position. Job title normalisation reveals names such as ‘data librarian’, ‘librarian’, ‘director’, ‘data curator’, ‘data manager’, ‘research data librarian’, ‘data specialist’ and ‘data officer’ are frequently employed. Focusing on titles with a single or double occurrence is new and interesting for developing nations. Reputable institutions such as Harvard, Stanford and the Massachusetts Institute of Technology, as well as countries such as the United States, the United Kingdom, Canada and Germany, are the major participants in RDM practises and services. This discovery will assist higher education institutions, RDM stakeholders, which aid in the formulation of curriculum, and job seekers to familiarise themselves with the themes.",
+        "authors": [
+          "Naseema Sheriff",
+          "R Sevukan"
+        ],
+        "year": 2026,
+        "publication_date": "2026-04-01",
+        "published_date": "2026-04-01",
+        "language": "en",
+        "doi": "10.1177/01655515231193845",
+        "url": "https://doi.org/10.1177/01655515231193845",
+        "official_url": "https://doi.org/10.1177/01655515231193845",
+        "source_title": "Journal of Information Science",
+        "journal": "Journal of Information Science",
+        "source_issns": [
+          "0165-5515",
+          "1741-6485"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 9,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_038",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IM_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.9,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 49.89,
+            "recency": 100.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.9
+      },
+      {
+        "paper_id": "paper_e71b12b8ba534827df4e",
+        "title": "Empowering the middle management: Incorporating data summarisation and visualisation techniques in management information systems",
+        "abstract": "Human–computer interaction (HCI) researchers and practitioners have explored how computers and software can aid users in decision-making. Accurate information is crucial in decision-making; therefore, when designing a management information system (MIS), it is necessary to understand the information needs of the end-users and to incorporate this understanding in a way which allows the users to obtain an accurate and intuitive snapshot of the data. Although most of the day-to-day decisions in various organisations are made by middle management employees (as opposed to executives and senior managers), previous literature has scarcely examined how middle management employees’ decision-making process can be improved through the use of MIS. In this study, we examine the impact of different data summarisation and visualisation layouts on different aspects of the decision-making process taking into consideration the decision-makers’ personal characteristics, and propose to include the results of this examination in the MIS design. To this end, we recruited participants from a crowdsourcing platform. Participants were required to complete a task which simulates middle management employees’ day-to-day operational decision-making scenario. To better understand the effects of participants’ personal characteristics and their visual abilities, participants were asked to answer a personality questionnaire and a questionnaire testing for visual abilities. The results indicate that when looking at the population as a single group, the effect of the data summarisation and visualisation layouts on the decision-making process cannot be discerned. However, when taking into consideration additional user characteristics, the results indicate that the data summarisation and visualisation layouts affect the decisions made.",
+        "authors": [
+          "Ronyt Gomez",
+          "Avshalom Elmalech"
+        ],
+        "year": 2026,
+        "publication_date": "2026-02-01",
+        "published_date": "2026-02-01",
+        "language": "en",
+        "doi": "10.1177/01655515231176649",
+        "url": "https://doi.org/10.1177/01655515231176649",
+        "official_url": "https://doi.org/10.1177/01655515231176649",
+        "source_title": "Journal of Information Science",
+        "journal": "Journal of Information Science",
+        "source_issns": [
+          "0165-5515",
+          "1741-6485"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 0,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_038",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IM_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 74.71,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 0.0,
+            "recency": 100.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 74.71
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "data management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 6466684,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:45.655497+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3578.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "data management information management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 4274693,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:49.260545+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4719.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(data management) OR (data management in information management)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 6345733,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:54.023015+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3953.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Documentation",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0022-0418",
+        "query": "data management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:00.718553+00:00",
+        "duration_ms": 1407.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1407.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Information Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0165-5515",
+        "query": "data management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:02.120945+00:00",
+        "duration_ms": 1312.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1312.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Informetrics",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1751-1577",
+        "query": "data management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:03.438256+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "数据管理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:01:58.238167+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "数据管理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 7,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:01:59.447173+00:00",
+        "duration_ms": 1265.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1265.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_b842cf516bfd3f5962ff",
+        "title": "From Data Management to Actionable Findings: A Five-Phase Process of Qualitative Data Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_904157f12398c5433a31",
+        "title": "The IMG/M data management and analysis system v.7: content updates and new features",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b021ffb5330f3af4809",
+        "title": "An Overview of Data Warehouse and Data Lake in Modern Enterprise Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21349937e16f424fc541",
+        "title": "Revolutionizing Supply Chain Management: Real-time Data Processing and Concurrency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_638f1e6154a9c8048a8e",
+        "title": "BlockMedCare: A healthcare system based on IoT, Blockchain and IPFS for data management security",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e78342e840d7232d7290",
+        "title": "Data management for production quality deep learning models: Challenges and solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c72f9bd677afa116713f",
+        "title": "The Open Handbook of Linguistic Data Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70aa68ccd79eee5d4ffe",
+        "title": "Revolutionizing Health Data Management With Blockchain Technology",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5240988965a4acd1165d",
+        "title": "How Large Language Models Will Disrupt Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e38ff079928d9eab5ed",
+        "title": "Perspective of artificial intelligence in healthcare data management: A journey towards precision medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47b0a8cb20c302ea6548",
+        "title": "AI Fairness in Data Management and Analytics: A Review on Challenges, Methodologies and Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0098e707c7a67297d16a",
+        "title": "A Survey of Blockchain Data Management Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38893d52216afd307670",
+        "title": "Efficient Medical Big Data Management With Keyword-Searchable Encryption in Healthchain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17acf87bfa9f55dc5e06",
+        "title": "A Review of Data Management and Visualization Techniques for Structural Health Monitoring Using BIM and Virtual or Augmented Reality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f25b4048ee521bb2b2a9",
+        "title": "Data Management for Machine Learning: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51c026a712fd2cd8b7c3",
+        "title": "Data management in digital twins: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40af62018b7d6d1058fc",
+        "title": "An Overview of the Fundamentals of Data Management, Analysis, and Interpretation in Quantitative Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f8678c514e777a0c7c8",
+        "title": "Data Management in Biobanking: Strategies, Challenges, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cff5525df87e40913912",
+        "title": "Introduction to Data Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be1e2c404bc16847c5c2",
+        "title": "Responsible data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f84cd1b1f72c2f975e2d",
+        "title": "Big data management algorithms in artificial Internet of Things-based fintech",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d91aadd717d6ef7887c",
+        "title": "A drone-based data management and optimization using metaheuristic algorithms and blockchain smart contracts in a secure fog environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e86c9124de01ac345248",
+        "title": "LLM for Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e6ee29abdd617b3bd24",
+        "title": "Smart Weather Data Management Based on Artificial Intelligence and Big Data Analytics for Precision Agriculture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2792e650948fa50f4d5",
+        "title": "Transforming Financial Decision-Making: The Interplay of AI, Cloud Computing and Advanced Data Management Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60f284d3de9566c35c26",
+        "title": "AI-big data analytics for building automation and management systems: a survey, actual challenges and future perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_357703d21a9bce210022",
+        "title": "Strategic Integration of Artificial Intelligence for Sustainable Businesses: Implications for Data Management and Human User Engagement in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4130f6ae6bd156881d7c",
+        "title": "A focus groups study on data sharing and research data management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d3b72f61201ad59b305",
+        "title": "Artificial intelligence-based voice assistant for BIM data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1dfdfd86508d9719bc23",
+        "title": "A comprehensive and systematic literature review on the big data management techniques in the internet of things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b6be0465ccceedc11fb",
+        "title": "Building data management capabilities to address data protection regulations: Learnings from EU-GDPR",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc6c4fd4905fa20533f9",
+        "title": "Big Data Management Algorithms, Deep Learning-Based Object Detection Technologies, and Geospatial Simulation and Sensor Fusion Tools in the Internet of Robotic Things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b915ea7645c28e183db6",
+        "title": "Deep Learning-Assisted Smart Process Planning, Robotic Wireless Sensor Networks, and Geospatial Big Data Management Algorithms in the Internet of Manufacturing Things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5e94272c0b3306fe709",
+        "title": "Health Data Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79f62f62727f71828e6d",
+        "title": "The Role of Blockchain in Finance Beyond Cryptocurrency: Trust, Data Management, and Automation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_45c15ff938363d6a4fc4",
+        "title": "AI-Assisted CBCT Data Management in Modern Dental Practice: Benefits, Limitations and Innovations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_279615990e7cd84282c9",
+        "title": "A scalable blockchain based framework for efficient IoT data management using lightweight consensus",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_996706a50d239b37ae70",
+        "title": "Methods and applications for Artificial Intelligence, Big Data, Internet of Things, and Blockchain in smart energy management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a180111b769d5ab635e1",
+        "title": "Digital twin intelligent system for industrial internet of things-based big data management and analysis in cloud environments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e483f5e96b5c954c9db4",
+        "title": "A State-of-the-Art Review in Big Data Management Engineering: Real-Life Case Studies, Challenges, and Future Research Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f5c07232f3e2d7cb799",
+        "title": "Data management challenges for artificial intelligence in plant and agricultural research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_785dba39f1147a3ed33d",
+        "title": "Practical Guide to Clinical Data Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_885d2e10dfa960690538",
+        "title": "Remote Big Data Management Tools, Sensing and Computing Technologies, and Visual Perception and Environment Mapping Algorithms in the Internet of Robotic Things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa5e9ed4b7f8437a3652",
+        "title": "Role of IoT technologies in big data management systems: A review and Smart Grid case study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75b7b68c91da1a2daa32",
+        "title": "A New Edge Computing Architecture for IoT and Multimedia Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93061d7e14918b9aa069",
+        "title": "Challenges in research data management practices: a literature analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_076286be9cde93658d9b",
+        "title": "TinyML Algorithms for Big Data Management in Large-Scale IoT Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df3adaf9645fc1ef1a64",
+        "title": "Methods of medical data management based on blockchain technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb840eaa9e0d52fc6936",
+        "title": "The Composable Data Management System Manifesto",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d73e3ef3784f2b3370a",
+        "title": "Reference Data Management: A Cornerstone of Financial Data Integrity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea19e7a0dc7397133298",
+        "title": "Beating the Algorithm: Consumer Manipulation, Personalized Pricing, and Big Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09b507020e25c2a9ccc7",
+        "title": "A data management infrastructure for the integration of imaging and omics data in life sciences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2acbad01e8f142a1bb90",
+        "title": "Blockchain-based solutions for clinical trial data management: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3aba3f59895bc43fd4b9",
+        "title": "An Intelligent Quantum Cyber-Security Framework for Healthcare Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_faffe898565cc0291811",
+        "title": "Evolution of research data management in academic libraries: A review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc0783d960c99184ce28",
+        "title": "Big Data and precision agriculture: a novel spatio-temporal semantic IoT data management framework for improved interoperability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08c986f86651c4ba6466",
+        "title": "Best practices for data management and sharing in experimental biomedical research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28a6dd1bf42123092477",
+        "title": "Enhancing data management and security protocols in financial sector projects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5d36442aa7f3cc6c6f9",
+        "title": "An intelligent failure feature learning method for failure and maintenance data management of wind turbines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3b1e998d1bdca68212c",
+        "title": "Data driven approaches for smart city planning and design: a case scenario on urban data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bdb8d01fe4c74852231",
+        "title": "Towards AI-driven transformation and smart data management: Emerging technological change in the public sector value chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56fb052a27fccac10bd3",
+        "title": "Redactable Blockchain-Based Secure and Accountable Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9bc87e66f851a60191f",
+        "title": "Building defect inspection and data management using computer vision, augmented reality, and BIM technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1798c684c809de681316",
+        "title": "Blockchain technology for efficient data management in healthcare system: Opportunity, challenges and future perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bef67033cf40daac6049",
+        "title": "Data Management and Integration of Low Power Consumption Embedded Devices IoT for Transforming Smart Agriculture into Actionable Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89e8a18896e8f5687dcb",
+        "title": "Comprehensive review and future prospects on chip-scale thermal management: Core of data center’s thermal management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d9a93ca80ddb8f44acf",
+        "title": "Evaluating maturity level of big data management and analytics in industrial companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35e280117fb8df39d73d",
+        "title": "Efficient Large-Scale Traffic Forecasting with Transformers: A Spatial Data Management Perspective",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5702ee99d55f06807335",
+        "title": "FAIR data pipeline: provenance-driven data management for traceable scientific workflows",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bf0f27eec72cefa6fcd",
+        "title": "Secure environmental, social, and governance (ESG) data management for construction projects using blockchain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf99a7a6c82feb3f96d7",
+        "title": "Enhancing biodiversity conservation and monitoring in protected areas through efficient data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cfb305efac56f94ffe9c",
+        "title": "Advanced Technologies and Data Management in the Smart Healthcare System",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80aef6a16fb7c74451a4",
+        "title": "A boundary and voxel-based 3D geological data management system leveraging BIM and GIS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb9d9721a4736344b8bf",
+        "title": "Research data management systems and the organization of universities and research institutes: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_debbfa9642edb06051b2",
+        "title": "The latest innovative avenues for the utilization of artificial Intelligence and big data analytics in water resource management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_130485ef2056afb20c8c",
+        "title": "Optimized data management and secured federated learning in the Internet of Medical Things (IoMT) with blockchain technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_136372f6c54a519de3dd",
+        "title": "Combining Blockchain and IoT for Decentralized Healthcare Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5f3027aa348fbba179d",
+        "title": "Minimum Information Standards in Chemistry: A Call for Better Research Data Management Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c2251c08e604d4d3ad2",
+        "title": "Sports Data Management, Mining, and Visualization",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae84f211734a3cbf52ef",
+        "title": "Harnessing Blockchain to Transform Healthcare Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_563b5177f5cbe8d75ff6",
+        "title": "Promoting Open Science Through Research Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_610fb2f9a847f383a1f4",
+        "title": "Green Open Innovation and Circular Economy: Investigating the Role of Big Data Management and Sustainable Supply Chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_282c7a03ab9180d99ea6",
+        "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d014cbbb5ea6bf4d759",
+        "title": "Evolutionary games for cooperation in open data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f5328bc7841ad26eef0",
+        "title": "Toward data lakes as central building blocks for data management and analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c37a065582f30c61eff0",
+        "title": "Spatio-temporal semantic data management systems for IoT in agriculture 5.0: Challenges and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfc4b62243f4a4620d90",
+        "title": "A blockchain‐based secure framework for data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec70ff4d5310b4691765",
+        "title": "Advances on Data Management and Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cffee47bb4d77470c964",
+        "title": "Behind every great research project is great data management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0001240d1530467a78ba",
+        "title": "Prediction of Battery Cycle Life Using Early-Cycle Data, Machine Learning and Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_981bc0c4eb7f9b8a1182",
+        "title": "A survey on semantic data management as intersection of ontology-based data access, semantic modeling and data lakes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbbe6d2a97fe55a70edd",
+        "title": "Research Data Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d796da500ec0bae5ac35",
+        "title": "Data management matters",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22c40e5742456803b217",
+        "title": "A Deep-Learning-Based Data-Management Scheme for Intelligent Control of Wastewater Treatment Processes Under Resource-Constrained IoT Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3dcd582276c3d54ac41c",
+        "title": "A Blockchain-based platform for data management and sharing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52d31ecf1454c1c5581c",
+        "title": "Digital Twin Data Management: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9558c8202009fd8e513c",
+        "title": "Facilitating big-data management in modern business and organizations using cloud computing: a comprehensive study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50c7685bfd3eede8a527",
+        "title": "Spine Toolbox: A flexible open-source workflow management system with scenario and data management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a7d148601768169ef8c",
+        "title": "Data integration and FAIR data management in Solid Earth Science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b7e7abbcf556b46b625",
+        "title": "AI-Driven HR Analytics: Unleashing the Power of HR Data Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5247ac95989c3a48a68",
+        "title": "Digital twin and big data-driven sustainable smart manufacturing based on information management systems for energy-intensive industries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae72e4895e342385097f",
+        "title": "2023 ESC Guidelines for the management of cardiomyopathies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75ee3aa5e02a4f2e4e8e",
+        "title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14cac12704ce819f3508",
+        "title": "2023 ESC Guidelines for the management of endocarditis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb6fec41a911dcac3f42",
+        "title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_318c5790b5ed691c787d",
+        "title": "Diagnosis and management of AML in adults: 2022 recommendations from an international expert panel on behalf of the ELN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ddd79f2d0a129811f77",
+        "title": "Logistics and Supply Chain Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8d98ad3f8e53a412f7d",
+        "title": "Overview of batteries and battery management for electric vehicles",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ce0c79997094ddcd3b2",
+        "title": "AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_acf99e0f27cd6e725d5b",
+        "title": "Data mining applications in university information management system development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9a90603bd44ddf14856",
+        "title": "On the Interplay of Data and Cognitive Bias in Crisis Information Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a7e69688d1803ab3754",
+        "title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1dcfae64eb07bd53ad1",
+        "title": "Management of validation of HPLC method for determination of acetylsalicylic acid impurities in a new pharmaceutical product",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7498dc2c9c72ab23760a",
+        "title": "The ISO/IEC 27001 Information Security Management Standard: How to Extract Value from Data in the IT Sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd318fef2013c05b4ccb",
+        "title": "Proceedings of the 32nd ACM International Conference on Information and Knowledge Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b8d53accec8b0ff945",
+        "title": "Management and Sales Forecasting of an E-commerce Information System Using Data Mining and Convolutional Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fabb128fed54678c38bf",
+        "title": "Management of Helicobacter pylori infection: the Maastricht VI/Florence consensus report",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62f54cf30bfa07d9e8fa",
+        "title": "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a0769e0b3d0dd45896c",
+        "title": "Data-driven decision-making in credit risk management: The information value of analyst reports",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0dd189d1f88df91360c",
+        "title": "World guidelines for falls prevention and management for older adults: a global initiative",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81d4ef485eca0de30ddf",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2e1d81f21a42732c5f3",
+        "title": "EULAR recommendations for the management of rheumatoid arthritis with synthetic and biological disease-modifying antirheumatic drugs: 2022 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_590194eeb979a5dd2a71",
+        "title": "Clinical features and management of human monkeypox: a retrospective observational study in the UK",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e33b8f85fd659af705d",
+        "title": "Obesity Management in Adults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_731e5f3803c9cc6d0f2d",
+        "title": "Analysis of Enterprise Financial Accounting Information Management from the Perspective of Big Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_48aa8700c66edbb68ab2",
+        "title": "Molecular docking as a tool for the discovery of molecular targets of nutraceuticals in diseases management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0621db3afd3afe3454b9",
+        "title": "KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fba1e2bccc7ac6758ebf",
+        "title": "Data mining in college student education management information system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da6ed4ac57e1c212f9ba",
+        "title": "EULAR recommendations for the management of systemic lupus erythematosus: 2023 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c27172218810833641cb",
+        "title": "Management of Hyperglycemia in Type 2 Diabetes, 2022. A Consensus Report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19f17075ff519a52e936",
+        "title": "Metaverse as a disruptive technology revolutionising tourism management and marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3125e46de1f1f58e26fc",
+        "title": "Data-Driven Decision-Making: Revolutionizing Management in the Information Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95898dbee2df63547265",
+        "title": "Big Data Analytics Applications in Information Management Driving Operational Efficiencies and Decision-Making: Mapping the Field of Knowledge with Bibliometric Analysis Using R",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4671b6f16a6cd0f60036",
+        "title": "ASAS-EULAR recommendations for the management of axial spondyloarthritis: 2022 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01c32f18b04a2b8b7472",
+        "title": "Application of big data technology in enterprise information security management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "title": "The LOTUS initiative for open knowledge management in natural products research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c46a77a7096ab348f65f",
+        "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e363bb96fbafe6d8440",
+        "title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e269b7565fd1264594be",
+        "title": "Factors Influencing Data Utilization and Performance of Health Management Information Systems: A Case Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a47c3c79859a1d5e11b",
+        "title": "Generative artificial intelligence as a new context for management theories: analysis of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52ef2c2777c82af72987",
+        "title": "Adverse effects of tyrosine kinase inhibitors in cancer therapy: pathophysiology, mechanisms and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c363d345b302c2f0d53",
+        "title": "Polycystic Ovary Syndrome: A Comprehensive Review of Pathogenesis, Management, and Drug Repurposing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0dd0775cde7bb54ee92a",
+        "title": "Management of toxicities from immunotherapy: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a64c092df52239eb520",
+        "title": "Information Security Risk Management Model for Big Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_146555ded5a6036e577b",
+        "title": "ChatGPT - Reshaping medical education and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_721e48328697413248fd",
+        "title": "Improving the spatiotemporal resolution of remotely sensed ET information for water management through Landsat, Sentinel-2, ECOSTRESS and VIIRS data fusion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ccc9d3abb94e6bf5a0ce",
+        "title": "Optimizing Decision-Making: Data Analytics Applications in Management Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b80c47aaba1d36cff47",
+        "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3bf66b7c59247c43d6e9",
+        "title": "Applications of Information Systems and Data Security in Marketing Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70aefffda6226fdc7c8e",
+        "title": "Business Process Management Journal",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95290d546577cb55ed4a",
+        "title": "HPV-associated oropharyngeal cancer: epidemiology, molecular biology and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0caff50893fb2564015",
+        "title": "RETRACTED: Enhancing tourism management through big data: Design and implementation of an integrated information system",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90c4048f61677c045706",
+        "title": "Analysis of security and privacy issues of information management of big data in B2B based healthcare systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e35e9af02921be89304a",
+        "title": "Environmental Sustainability Impacts of Solid Waste Management Practices in the Global South",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cef0bbcd207fbc916d10",
+        "title": "Policy and Management of Carbon Peaking and Carbon Neutrality: A Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88f479e7f8d630ef1fa1",
+        "title": "Application of Big Data Technology in Enterprise Information Security Management and Risk Assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b5010f006e2b1bbf49b",
+        "title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3e26992e32a3a586988",
+        "title": "EULAR recommendations for the management of ANCA-associated vasculitis: 2022 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eefd287044f78f70abbc",
+        "title": "Reinforcing data bias in crisis information management: The case of the Yemen humanitarian response",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5db425e7b7389aae883",
+        "title": "Design and implementation of college students’ physical education teaching information management system by data mining technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a02207c9f555ad01cd2b",
+        "title": "A Systematic Review on the Distribution of Invasive Plant Species Across Asia: Assessing the Rates of Invasion Success and Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30a541d41d5b6192a73c",
+        "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50391e1dbf2921a5ee24",
+        "title": "Management of Hypertrophic Cardiomyopathy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5c0cee9da066021147b",
+        "title": "The challenge of unprecedented floods and droughts in risk management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa2b0238d1f461431e47",
+        "title": "A Synopsis of the Evidence for the Science and Clinical Management of Cardiovascular-Kidney-Metabolic (CKM) Syndrome: A Scientific Statement From the American Heart Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb5f4a3e994c027cfe79",
+        "title": "Integrating BIM and AI for Smart Construction Management: Current Status and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_216cd1db22e078755f6d",
+        "title": "Current status of pesticide effects on environment, human health and it’s eco-friendly management as bioremediation: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1906650f98ab2e5c855",
+        "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea5f8db6e70616867da3",
+        "title": "Tree Information Modeling: A Data Exchange Platform for Tree Design and Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f3f94441242b5b2bb7b",
+        "title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b1a12871d9a23fcdee9",
+        "title": "Digital accumulation behaviours and information management in the workplace: exploring the tensions between digital data hoarding, organisational culture and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3f93f86942ed2771f43",
+        "title": "12th Annual International Conference on Material Science and Engineering (12th ICMSE)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46661f433d8e87579654",
+        "title": "Data quality and associated factors in the health management information system at health centers in Shashogo district, Hadiya zone, southern Ethiopia, 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0865bfa3352c4e5264cd",
+        "title": "A review of construction management challenges and BIM-based solutions: perspectives from the schedule, cost, quality, and safety management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d986a95d887686b59c86",
+        "title": "Obesity and Cancer: A Current Overview of Epidemiology, Pathogenesis, Outcomes, and Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60840045bc7e5862c75f",
+        "title": "Applications of ML/DL in the management of smart cities and societies based on new trends in information technologies: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a071ff756a82973f8b1",
+        "title": "Software design patterns for data management features in web-based information systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f51b0ddbb61c7210adf9",
+        "title": "Editor's Choice -- European Society for Vascular Surgery (ESVS) 2024 Clinical Practice Guidelines on the Management of Abdominal Aorto-Iliac Artery Aneurysms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_644ba88b157769ed23b4",
+        "title": "Artificial intelligence for waste management in smart cities: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e935b69e12ecbe19e01",
+        "title": "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9dd56f94c97d5a03a72b",
+        "title": "2023 Guideline for the Management of Patients With Aneurysmal Subarachnoid Hemorrhage: A Guideline From the American Heart Association/American Stroke Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_807d87c0becf7560fae4",
+        "title": "Recommendations From the 2023 International Evidence-based Guideline for the Assessment and Management of Polycystic Ovary Syndrome",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ec6668ca8975657b796",
+        "title": "Proceedings of the 34th ACM International Conference on Information and Knowledge Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7a2ff4da3d4e8c5b0af",
+        "title": "Information technology investment and digital transformation: the roles of digital transformation strategy and top management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a636f9ae6cee5b55862",
+        "title": "From Sensors to Safety: Internet of Emergency Services (IoES) for Emergency Response and Disaster Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d04100269e63f5204a15",
+        "title": "A systematic review of industrial wastewater management: Evaluating challenges and enablers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e878b1d7c8300c068aef",
+        "title": "Artificial intelligence and knowledge management: A partnership between human and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_020708c0eaf9dd40ef02",
+        "title": "Security Information Event Management data acquisition and analysis methods with machine learning principles",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3289c5f2d784c430243f",
+        "title": "Current Status of the Diagnosis and Management of Osteoporosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1fe317d0fc8289bc39f1",
+        "title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebd87d57402085488109",
+        "title": "FEMA—The Federal Emergency Management Agency",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53f05030f82570ed8f53",
+        "title": "Towards leveraging the role of machine learning and artificial intelligence in precision agriculture and smart farming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3af65bd71b12a425e55a",
+        "title": "Artificial intelligence (AI) applications for marketing: A literature-based study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2b5a56373727815e6ed",
+        "title": "Omicron variant of SARS‐CoV‐2: Genomics, transmissibility, and responses to current COVID‐19 vaccines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0d6b4eb41f50a14dab1",
+        "title": "A Review on Digital Twin Technology in Smart Grid, Transportation System and Smart City: Challenges and Future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0900679ac5ed2d6f7a0",
+        "title": "European Association of Urology Guidelines on Upper Urinary Tract Urothelial Carcinoma: 2023 Update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac57f264483493a0f600",
+        "title": "Exploring and retrieving sequence and metadata for species across the tree of life with NCBI Datasets",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1105bfa1399557554a1",
+        "title": "Global forest management data for 2015 at a 100 m resolution",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_deec1bdaf81211b4b0f5",
+        "title": "Assessing the role of competitive intelligence and practices of dynamic capabilities in business accommodation of SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f5591fa2e8e02ee13b4",
+        "title": "The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_124682052f683eac2594",
+        "title": "Study on city digital twin technologies for sustainable smart city design: A review and bibliometric analysis of geographic information system and building information modeling integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01b77fbd10e225fd3228",
+        "title": "Optimization of Enterprise Financial Management and Decision‐Making Systems Based on Big Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d822a81ce51c4d3013c9",
+        "title": "Attention is not all you need: the complicated case of ethically using large language models in healthcare and medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d05cca6ec65bef5949b",
+        "title": "Understanding the potential applications of Artificial Intelligence in Agriculture Sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_925308e6a6a1c8eb0ece",
+        "title": "Essentials of Business Research Methods",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9068f12252fbd2f6a898",
+        "title": "Climate Risk and Capital Structure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4232eaedbbb20ac0b26a",
+        "title": "Mortality in the United States, 2024",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a248fcc9cfbba1b73864",
+        "title": "DSMAC: Privacy-Aware Decentralized Self-Management of Data Access Control Based on Blockchain for Health Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_788956786a2f7c1780cc",
+        "title": "UAV remote sensing applications in marine monitoring: Knowledge visualization and review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_000a4a63218a22444b40",
+        "title": "The global prevalence of myocardial infarction: a systematic review and meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea489101e20266f40221",
+        "title": "Lecanemab: Appropriate Use Recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_042c3811833c58b84d7b",
+        "title": "A Systematic Review of Disaster Management Systems: Approaches, Challenges, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a42015981173b72292c",
+        "title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85ff324b2b36ba15da5d",
+        "title": "Effect of Occupational Transfers on Employee Engagement in Private Universities in Western Kenya By IJISRT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1920e240ffeb86babc82",
+        "title": "Triple-Negative Breast Cancer: A Brief Review About Epidemiology, Risk Factors, Signaling Pathways, Treatment and Role of Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e1b397b9285641c120d",
+        "title": "A Digital Twin predictive maintenance framework of air handling units based on automatic fault detection and diagnostics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e420e8bf1a8743e7533",
+        "title": "Leveraging Generative AI and Large Language Models: A Comprehensive Roadmap for Healthcare Integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd768f55364c4014042",
+        "title": "Toward the Next Generation of Digitalization in Agriculture Based on Digital Twin Paradigm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d4954cc1d37a3bbabd3",
+        "title": "Digital battery passports to enable circular and sustainable value chains: Conceptualization and use cases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e9bce8dbd47d966f487",
+        "title": "Artificial intelligence in environmental monitoring: Advancements, challenges, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7e85d53fe2234d21146",
+        "title": "Short-term power load forecasting for combined heat and power using CNN-LSTM enhanced by attention mechanism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_225214fbab768067c730",
+        "title": "Drone-Based RGB-Infrared Cross-Modality Vehicle Detection Via Uncertainty-Aware Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_967048332f7861d51dfd",
+        "title": "An update on the global disparities in kidney disease burden and care across world countries and regions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_147e9a6b309f7e56111f",
+        "title": "NCCN Guidelines® Insights: Central Nervous System Cancers, Version 2.2022",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3194eea4583c4b82cd82",
+        "title": "Data analytics for crop management: a big data view",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa3d803876da50997215",
+        "title": "Cyber risk and cybersecurity: a systematic review of data availability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df544de79d6e1fd81983",
+        "title": "Diagnosis and classification of optic neuritis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36c29f5ca74c890f47b7",
+        "title": "Assessing the Utility of ChatGPT Throughout the Entire Clinical Workflow: Development and Usability Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e1b2572ae5f7279ad80",
+        "title": "A Review of the Digital Twin Technology in the AEC‐FM Industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7177c68575d1dfe80d16",
+        "title": "Artificial intelligence and automated monitoring for assisting conservation of marine ecosystems: A perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06c859975c74ae9a8b04",
+        "title": "Cybersecurity, Data Privacy and Blockchain: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58c5c7f2ec63ad4106cb",
+        "title": "The mediating role of organizational culture: Transformational leadership and change management in virtual teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bcdfa94179da2c606e1c",
+        "title": "Blockchain technology applications in waste management: Overview, challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49fa96a8aa165f38f1af",
+        "title": "International Journal of Library and Information Science",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_120c5e62ad18a21aa956",
+        "title": "A Semi-Centralized Trust Management Model Based on Blockchain for Data Exchange in IoT System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0e27ec7177d37a11920",
+        "title": "Dynamic AES Encryption and Blockchain Key Management: A Novel Solution for Cloud Data Security",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a19d3a606b7dcc1f24af",
+        "title": "Using artificial intelligence in academic writing and research: An essential productivity tool",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8441de750267f7c545ce",
+        "title": "Covid-19 vaccines production and societal immunization under the serendipity-mindsponge-3D knowledge management theory and conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_924546fbc828c9b4a523",
+        "title": "Data Fusion for Smart Civil Infrastructure Management: A Conceptual Digital Twin Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03e0f83c66fbb5abfeb2",
+        "title": "Augmented Reality in Cultural Heritage: An Overview of the Last Decade of Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22d23ada7ba397dfa41b",
+        "title": "Artificial intelligence in E-Commerce: a bibliometric study and literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db2f10b67c3fd0b01527",
+        "title": "Integration of remote sensing data and GIS technologies in river management system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Can Generative AI Improve Corporate Values, Employee Perceptions, and Organizational Practices? A Human-Centric Case Study of Project Management SMEs in Indonesia",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Does Financial Agglomeration Promote Balanced Growth? Evidence from Enterprise-Level Structural Change",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Does Efficiency Matter in M&amp;amp;A? Evidence from Indonesia’s Industrial Estate Group Companies",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "topic_data_management",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 31,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 2,
+      "boundary_count": 13,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "data management"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "data management information management"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(data management) OR (data management in information management)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "data management",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "data management information management",
+        "raw_count": 200,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(data management) OR (data management in information management)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 2,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_70aa68ccd79eee5d4ffe",
+          "paper_f5e94272c0b3306fe709"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21349937e16f424fc541",
+        "incoming_paper_id": "paper_21349937e16f424fc541"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f5f3027aa348fbba179d",
+        "incoming_paper_id": "paper_f5f3027aa348fbba179d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_996706a50d239b37ae70",
+        "incoming_paper_id": "paper_996706a50d239b37ae70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec70ff4d5310b4691765",
+        "incoming_paper_id": "paper_ec70ff4d5310b4691765"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89e8a18896e8f5687dcb",
+        "incoming_paper_id": "paper_89e8a18896e8f5687dcb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b021ffb5330f3af4809",
+        "incoming_paper_id": "paper_7b021ffb5330f3af4809"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_c46a77a7096ab348f65f",
+          "paper_d1906650f98ab2e5c855"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60f284d3de9566c35c26",
+        "incoming_paper_id": "paper_60f284d3de9566c35c26"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f5247ac95989c3a48a68",
+        "incoming_paper_id": "paper_f5247ac95989c3a48a68"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21349937e16f424fc541",
+        "incoming_paper_id": "paper_21349937e16f424fc541"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c3f93f86942ed2771f43",
+        "incoming_paper_id": "paper_c3f93f86942ed2771f43"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ddd79f2d0a129811f77",
+        "incoming_paper_id": "paper_5ddd79f2d0a129811f77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_996706a50d239b37ae70",
+        "incoming_paper_id": "paper_996706a50d239b37ae70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f8d98ad3f8e53a412f7d",
+        "incoming_paper_id": "paper_f8d98ad3f8e53a412f7d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b021ffb5330f3af4809",
+        "incoming_paper_id": "paper_7b021ffb5330f3af4809"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b842cf516bfd3f5962ff",
+        "incoming_paper_id": "paper_b842cf516bfd3f5962ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89e8a18896e8f5687dcb",
+        "incoming_paper_id": "paper_89e8a18896e8f5687dcb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d9a90603bd44ddf14856",
+        "incoming_paper_id": "paper_d9a90603bd44ddf14856"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a0769e0b3d0dd45896c",
+        "incoming_paper_id": "paper_5a0769e0b3d0dd45896c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_acf99e0f27cd6e725d5b",
+        "incoming_paper_id": "paper_acf99e0f27cd6e725d5b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73b8d53accec8b0ff945",
+        "incoming_paper_id": "paper_73b8d53accec8b0ff945"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a47c3c79859a1d5e11b",
+        "incoming_paper_id": "paper_8a47c3c79859a1d5e11b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd318fef2013c05b4ccb",
+        "incoming_paper_id": "paper_cd318fef2013c05b4ccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7498dc2c9c72ab23760a",
+        "incoming_paper_id": "paper_7498dc2c9c72ab23760a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_52ef2c2777c82af72987",
+        "incoming_paper_id": "paper_52ef2c2777c82af72987"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_731e5f3803c9cc6d0f2d",
+        "incoming_paper_id": "paper_731e5f3803c9cc6d0f2d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c72f9bd677afa116713f",
+        "incoming_paper_id": "paper_c72f9bd677afa116713f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5240988965a4acd1165d",
+        "incoming_paper_id": "paper_5240988965a4acd1165d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0865bfa3352c4e5264cd",
+        "incoming_paper_id": "paper_0865bfa3352c4e5264cd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0a636f9ae6cee5b55862",
+        "incoming_paper_id": "paper_0a636f9ae6cee5b55862"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f5f3027aa348fbba179d",
+        "incoming_paper_id": "paper_f5f3027aa348fbba179d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60f284d3de9566c35c26",
+        "incoming_paper_id": "paper_60f284d3de9566c35c26"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "incoming_paper_id": "paper_ce2257a6f8c7ad0ce659"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17acf87bfa9f55dc5e06",
+        "incoming_paper_id": "paper_17acf87bfa9f55dc5e06"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec70ff4d5310b4691765",
+        "incoming_paper_id": "paper_ec70ff4d5310b4691765"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_01c32f18b04a2b8b7472",
+        "incoming_paper_id": "paper_01c32f18b04a2b8b7472"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3125e46de1f1f58e26fc",
+        "incoming_paper_id": "paper_3125e46de1f1f58e26fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fba1e2bccc7ac6758ebf",
+        "incoming_paper_id": "paper_fba1e2bccc7ac6758ebf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90c4048f61677c045706",
+        "incoming_paper_id": "paper_90c4048f61677c045706"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60840045bc7e5862c75f",
+        "incoming_paper_id": "paper_60840045bc7e5862c75f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_904157f12398c5433a31",
+        "incoming_paper_id": "paper_904157f12398c5433a31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e269b7565fd1264594be",
+        "incoming_paper_id": "paper_e269b7565fd1264594be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95898dbee2df63547265",
+        "incoming_paper_id": "paper_95898dbee2df63547265"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ccc9d3abb94e6bf5a0ce",
+        "incoming_paper_id": "paper_ccc9d3abb94e6bf5a0ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3bf66b7c59247c43d6e9",
+        "incoming_paper_id": "paper_3bf66b7c59247c43d6e9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53707c05b491bdbc9ad7",
+        "incoming_paper_id": "paper_53707c05b491bdbc9ad7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a64c092df52239eb520",
+        "incoming_paper_id": "paper_8a64c092df52239eb520"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eefd287044f78f70abbc",
+        "incoming_paper_id": "paper_eefd287044f78f70abbc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c363d345b302c2f0d53",
+        "incoming_paper_id": "paper_2c363d345b302c2f0d53"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_721e48328697413248fd",
+        "incoming_paper_id": "paper_721e48328697413248fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3b1a12871d9a23fcdee9",
+        "incoming_paper_id": "paper_3b1a12871d9a23fcdee9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea5f8db6e70616867da3",
+        "incoming_paper_id": "paper_ea5f8db6e70616867da3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1fe317d0fc8289bc39f1",
+        "incoming_paper_id": "paper_1fe317d0fc8289bc39f1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40af62018b7d6d1058fc",
+        "incoming_paper_id": "paper_40af62018b7d6d1058fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_282c7a03ab9180d99ea6",
+        "incoming_paper_id": "paper_282c7a03ab9180d99ea6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a0caff50893fb2564015",
+        "incoming_paper_id": "paper_a0caff50893fb2564015"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "07794be07f514f56bb4575d617158d36",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

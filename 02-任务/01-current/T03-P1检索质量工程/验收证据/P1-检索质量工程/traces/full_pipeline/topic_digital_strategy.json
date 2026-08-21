@@ -1,0 +1,2992 @@
+{
+  "direction_id": "topic_digital_strategy",
+  "labels": {
+    "zh": "数字战略",
+    "en": "digital strategy"
+  },
+  "input": {
+    "selected_direction_id": "topic_digital_strategy",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17094.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 36,
+  "eligible_count": 3,
+  "boundary_count": 11,
+  "selected_count": 3,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 17
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital strategy"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital strategy information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(digital strategy) OR (digital strategy in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文3/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_digital_strategy",
+      "research_direction": "digital strategy",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "digital strategy",
+      "aliases": [
+        "digital strategy"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:62"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_digital_strategy",
+        "labels": {
+          "zh": "数字战略",
+          "en": "digital strategy"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "数字战略",
+          "digital strategy",
+          "digital strategy in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "digital strategy",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "digital strategy",
+            "\"digital strategy\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "digital strategy",
+            "digital strategy information systems"
+          ],
+          "crossref": [
+            "digital strategy",
+            "数字战略"
+          ],
+          "dblp": [
+            "digital strategy digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "digital strategy",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "digital strategy information systems",
+          "(digital strategy) OR (digital strategy in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:62"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_0c174c9510571ecfa305",
+        "title": "Digital “x”—Charting a Path for Digital-Themed Research",
+        "abstract": "We live in a time when digital technologies reshape most aspects of business and social life. This challenges received assumptions about modes of operation in organizations. As a result, scholars and practitioners increasingly use the label “digital” to signify that something has changed to the extent that a plethora of long-established management concepts are expressed in a new formulaic form of “digital x,” and x can stand for innovation, strategy, transformation, infrastructure, etc. In the information systems discipline and beyond, “digital” has emerged as an oft-used conceptual label to characterize age-long phenomena hitherto described by the IT (or x) label. There is a sense among academic and practitioner communities that digital and IT are not mere synonyms, but beyond the hype, something fundamentally different is being signaled when the “digital” label is invoked. This paper traces the intellectual roots and foundations of the growing use of “digital” as a conceptual label, identifies when the label use is warranted as well as outlines implications that the moniker holds for future scholarship, policy, and practice. In particular, the paper offers actionable guidance that enables more reflective use of the term “digital” as we move forward.",
+        "authors": [
+          "Abayomi Baiyere",
+          "Varun Grover",
+          "Kalle Lyytinen",
+          "Stephanie L. Woerner",
+          "Alok Gupta"
+        ],
+        "year": 2023,
+        "publication_date": "2023-02-23",
+        "published_date": "2023-02-23",
+        "language": "en",
+        "doi": "10.1287/isre.2022.1186",
+        "url": "https://doi.org/10.1287/isre.2022.1186",
+        "official_url": "https://doi.org/10.1287/isre.2022.1186",
+        "source_title": "Information Systems Research",
+        "journal": "Information Systems Research",
+        "source_issns": [
+          "1047-7047",
+          "1526-5536"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 101,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12885",
+            "name": "Digital Innovation in Industries",
+            "score": 0.9470000267028809
+          },
+          {
+            "id": "https://openalex.org/T14389",
+            "name": "Innovation, Technology, and Society",
+            "score": 0.9036999940872192
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4321615845"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://research.cbs.dk/en/publications/0833f63c-3a82-4c95-83d2-eca7042c3c07",
+        "provider_payload_refs": [
+          "https://openalex.org/W4321615845"
+        ],
+        "journal_id": "journal_023",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 78.16,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 40.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 78.16
+      },
+      {
+        "paper_id": "paper_df957132cda6141af302",
+        "title": "Digital human resource strategy: Conceptualization, theoretical development, and an empirical examination of its impact on firm performance",
+        "abstract": "Companies increasingly rely on individuals' skills, enthusiasm, and creativity, all the while striving to fully embrace digitalization as an integral aspect of the business. Technological mediation has altered the design and functionality of work, although the Information Systems (IS) literature about human resource management (HRM) provides little empirical evidence of the synergy between the two fields. To shed light on how these interlinked systems generate performance gains, we draw on the sociotechnical perspective to propose the concept of digital HR strategy as an explicit recognition of the fusion and integration of HR processes and digital technologies. This paper also theorizes and empirically demonstrates that a digital HR strategy improves organizational performance. The model is empirically tested using archival data from a sample of 351 firms.",
+        "authors": [
+          "Laura Ruiz",
+          "Jose Benitez",
+          "Ana Castillo",
+          "Jéssica Braojos"
+        ],
+        "year": 2024,
+        "publication_date": "2024-05-01",
+        "published_date": "2024-05-01",
+        "language": "en",
+        "doi": "10.1016/j.im.2024.103966",
+        "url": "https://doi.org/10.1016/j.im.2024.103966",
+        "official_url": "https://doi.org/10.1016/j.im.2024.103966",
+        "source_title": "Information & Management",
+        "journal": "Information & Management",
+        "source_issns": [
+          "0378-7206",
+          "1872-7530"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 61,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12594",
+            "name": "Collaboration in agile enterprises",
+            "score": 0.9868999719619751
+          },
+          {
+            "id": "https://openalex.org/T10003",
+            "name": "Innovation and Knowledge Management",
+            "score": 0.9861999750137329
+          },
+          {
+            "id": "https://openalex.org/T11572",
+            "name": "Information Technology Governance and Strategy",
+            "score": 0.9854000210762024
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4396536448"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://doi.org/10.1016/j.im.2024.103966",
+        "provider_payload_refs": [
+          "https://openalex.org/W4396536448"
+        ],
+        "journal_id": "journal_018",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "DIGITAL_PLATFORM",
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.86,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 89.43,
+            "recency": 60.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.86
+      },
+      {
+        "paper_id": "paper_0ff2b2ba275556aca505",
+        "title": "Digital Content Creation: An Analysis of the Impact of Recommendation Systems",
+        "abstract": "The success of digital content platforms, such as YouTube, relies on both the creativity of independent content creators and the efficiency of content distribution. By sharing advertising revenue with content creators, these platforms can motivate creators to exert greater effort. Most platforms use recommendation systems to deliver personalized content recommendations to each consumer. As creators’ revenues are contingent on their demand, the demand allocation criteria inherent in the recommendation system can influence their content creation behavior. In this paper, we investigate the influence of a platform’s recommendation system on revenue-sharing plans, content creation, profits, and welfare. Our results show that a platform could benefit by biasing recommendations, that is, recommending content that is not an ideal match to a consumer’s preference, to incentivize creators to produce better-quality content. We refer to this as a biased recommendation strategy. Interestingly, we find that such a biased recommendation strategy may lead to a win-win in which the platform, consumers, and content creators can benefit. Our study also shows that consumers may be worse off when they are more knowledgeable and less dependent on the recommendation system. In addition, the platform, consumers, and creators can benefit when the platform has more accurate information on consumer preferences. This paper was accepted by Raphael Thomadsen, marketing. Supplemental Material: The online appendices are available at https://doi.org/10.1287/mnsc.2022.03655 .",
+        "authors": [
+          "Kun Qian",
+          "Sanjay Jain"
+        ],
+        "year": 2024,
+        "publication_date": "2024-03-05",
+        "published_date": "2024-03-05",
+        "language": "en",
+        "doi": "10.1287/mnsc.2022.03655",
+        "url": "https://doi.org/10.1287/mnsc.2022.03655",
+        "official_url": "https://doi.org/10.1287/mnsc.2022.03655",
+        "source_title": "Management Science",
+        "journal": "Management Science",
+        "source_issns": [
+          "0025-1909",
+          "1526-5501"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 75,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11995",
+            "name": "FinTech, Crowdfunding, Digital Finance",
+            "score": 0.9925000071525574
+          },
+          {
+            "id": "https://openalex.org/T10203",
+            "name": "Recommender Systems and Techniques",
+            "score": 0.9904000163078308
+          },
+          {
+            "id": "https://openalex.org/T11197",
+            "name": "Digital Games and Media",
+            "score": 0.9519000053405762
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4392457731"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4392457731"
+        ],
+        "journal_id": "journal_053",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.75,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 93.84,
+            "recency": 60.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.75
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital strategy",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2292944,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:25.401878+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3297.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital strategy information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1565333,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:28.728056+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3984.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(digital strategy) OR (digital strategy in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2233540,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:32.740815+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3234.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "digital strategy",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:38.517560+00:00",
+        "duration_ms": 1282.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1282.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "digital strategy",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:39.793666+00:00",
+        "duration_ms": 1328.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1328.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "digital strategy",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:41.118691+00:00",
+        "duration_ms": 1328.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1328.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "数字战略",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:56:36.225461+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "数字战略",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:56:37.394592+00:00",
+        "duration_ms": 1125.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1125.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_700b3b279b9ebce93187",
+        "title": "Mastering digital transformation: The nexus between leadership, agility, and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4357ab0f37e32c513e6",
+        "title": "Digitalization, competition strategy and corporate innovation: Evidence from Chinese manufacturing listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56434aabd9fdb7051c52",
+        "title": "A Digital Strategy Development Framework for Supply Chains",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f3a57a3b02058cb2ba1",
+        "title": "Digital transformation in the SME context: The nexus between leadership, digital capabilities and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e7d1f42a0013dd5a029",
+        "title": "The penetration effect of digital leadership on digital transformation: the role of digital strategy consensus and diversity types",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_037883abc251f7cc242f",
+        "title": "A shift in paradigm? Collaborative public administration in the context of national digitalization strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7cf3534486382888c6a6",
+        "title": "Digital strategy and environmental performance: the mediating role of digitalization in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fe77184c245c7ebf37a",
+        "title": "Creativity and digital strategies to support food cultural heritage in Mediterranean rural areas",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_070f035c409821dcbbbb",
+        "title": "International business in the digital age: Global strategies in a world of national institutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9148ddf63873448c064",
+        "title": "Investigating the Influence of Artificial Intelligence on Business Value in the Digital Era of Strategy: A Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b7647117460018d40f3",
+        "title": "Overcoming barriers to digital government: mapping the strategies of digital champions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef24c7250f06ec5c1f34",
+        "title": "Digitalization strategy adoption: The roles of key stakeholders, big data organizational culture, and leader commitment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7a2ff4da3d4e8c5b0af",
+        "title": "Information technology investment and digital transformation: the roles of digital transformation strategy and top management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_842c2a3ed864db052896",
+        "title": "The relationship between the use of technologies and digitalization strategies for digital transformation in family businesses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05d504c18964b4813210",
+        "title": "Assessing national digital strategies and their governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_882a818d9bed43985f0d",
+        "title": "NFT Digital Twins: A Digitalization Strategy to Preserve and Sustain Miao Silver Craftsmanship in the Metaverse Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddf1b4dd1efb8b2bedef",
+        "title": "Bank lending during the COVID-19 pandemic: do alliances and digital strategies matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aef79cb20a91198a0ea6",
+        "title": "Digital Strategies for Screen Time Reduction: A Randomized Field Experiment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0729141ac8e434a66673",
+        "title": "Robotic process automation and artificial intelligence capabilities driving digital strategy: a resource-based view",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7590d0a054b6d19ea9b7",
+        "title": "Localization and Global Marketing: Adapting Digital Strategies for Diverse Audiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9733570b4169f3377c0b",
+        "title": "Digitalization strategies and evaluation of maritime container supply chains",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_988c19a71392fff2c370",
+        "title": "Digital transformation to enhance Indonesian SME performance: Exploring the impact of market competition and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cb283f872ba6a9f882d",
+        "title": "Unveiling the Determinants of Digital Strategy from the Perspective of Entrepreneurial Orientation Theory: A Two-Stage SEM-ANN Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac203b3aa7b7815a5a8f",
+        "title": "Digital transformational leadership and organizational agility in digital transformation: Structural equation modelling of the moderating effects of digital culture and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5580006998bf5649d607",
+        "title": "The role of artificial intelligence in corporate digital strategies: evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50b6fc8efea9d94b38d4",
+        "title": "Possible Blockchain Solutions According to a Smart City Digitalization Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6c85d45789df865f05e",
+        "title": "National digital strategy development: Guidelines and lesson learnt from Asia Pacific countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46d2db3769d99a8b5cc2",
+        "title": "Has China's low-carbon strategy pushed forward the digital transformation of manufacturing enterprises? Evidence from the low-carbon city pilot policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3625c17e72c6f94a592",
+        "title": "Transforming performance: how agility, response, resilience and support shape success in digital strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b51115ef7f3cfcab806",
+        "title": "Understanding Local Government Digital Technology Adoption Strategies: A PRISMA Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2339d0cc025a5f63b35",
+        "title": "Museum communication management in digital ecosystems. Impact of COVID-19 on digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95ce2b494736340fb172",
+        "title": "Digital strategy for firm performance- mediating role of digital platform capabilities and digital culture in manufacturing SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9dd591d6d8d7be8be91f",
+        "title": "Dressing the Metaverse. The Digital Strategies of Fashion Brands in the Virtual Universe",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c79a7835cf007ebb2940",
+        "title": "Digital Strategies to Enhance Cultural Heritage Routes: From Integrated Survey to Digital Twins of Different European Architectural Scenarios",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cf99de33f56d7669a17",
+        "title": "Digital Marketing Strategy to Increase Sales Conversion on E-commerce Platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3797ff1358a190507f4",
+        "title": "Digitalizing cultural heritage through metaverse applications: challenges, opportunities, and strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c8f59ff971b9959bf3e",
+        "title": "Research Handbook on Digital Strategy",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_180d521bd9136600109f",
+        "title": "What drives digital engagement with sponsored videos? An investigation of video influencers’ authenticity management strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5adbbd40d603dd243ad5",
+        "title": "Understanding the role of digital technologies in education: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce4439090f973d7ac247",
+        "title": "Digital leadership role in developing business strategy suitable for digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ea0e3ffd2cc0d2b2b43",
+        "title": "National digital strategies and innovative eHealth policies concerning older adults’ dignity: a document analysis in three Scandinavian countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82e5d7cfb9aa88355a90",
+        "title": "Adoption of digital strategies across the human resource value chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8782af578c3bed9f872",
+        "title": "Does digital strategy, organizational agility, digital lead-ership promote DT? A study of digital strategy, organiza-tional agility, digital leadership affects corporate DT in Chinese technological firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e490376c97ca2fdaf60",
+        "title": "Digital Transformation and International Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4f1bb1803c0ed2413a6b",
+        "title": "A cooperative governance framework for sustainable digital transformation in construction: The role of digital enablement and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6814fe3de45bc62051af",
+        "title": "Industry-4.0-Enabled Digital Transformation: Prospects, Instruments, Challenges, and Implications for Business Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2aec280fba1c8c350c49",
+        "title": "Digital Marketing Strategies and the Impact on Customer Experience: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de8d0325e6228151285e",
+        "title": "The platformization of military communication: The digital strategy of the Israel Defense Forces on Twitter",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e28c6c88bc98f07bd728",
+        "title": "Randomized clinical trials of weight loss: Pragmatic and digital strategies and innovations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_398e81dc95840831f9a7",
+        "title": "The digitalization phenomenon and digital strategies in emerging countries: A semi-systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73d317df64e692502a72",
+        "title": "Human-Centric Digital Twins in Industry: A Comprehensive Review of Enabling Technologies and Implementation Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63987a8985e292ecb13d",
+        "title": "Unpacking the sustainable performance in the business ecosystem: Coopetition strategy, open innovation, and digitalization capability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70207961ade7809258c7",
+        "title": "Regional digital infrastructure, enterprise digital transformation and entrepreneurial orientation: Empirical evidence based on the broadband china strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ac8ab2ffda414496490",
+        "title": "What to teach when we teach digital strategy? An exploration of the nascent field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_949f0f753bbb38d44d10",
+        "title": "Attracting digital nomads: Smart destination strategies, innovation and competitiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f0bf39972644d4432cb",
+        "title": "Digital technologies in sports: Opportunities, challenges, and strategies for safeguarding athlete wellbeing and competitive integrity in the digital era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d1c91af59392ec64be4",
+        "title": "Innovation in times of crisis: The relevance of digitalization and early internationalization strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ebc09a48b924b49622b",
+        "title": "INTERLINK: A Digital Twin-Assisted Storage Strategy for Satellite-Terrestrial Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb205dcfc4a2fdcf95f1",
+        "title": "Digital light processing (DLP)‐based (bio)printing strategies for tissue modeling and regeneration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40c7c37fbfb28b653150",
+        "title": "Reconsidering government digital strategies within the context of digital inequalities: the case of the UK Digital Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_137da6a7430c6ae71b08",
+        "title": "The Implementation of a Digital Strategy in the Austrian Public Sector",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95c25c3f505d26a3a4fd",
+        "title": "Digital transformation and sustainable performance: The moderating role of market turbulence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c10033b7c53a6d2468ce",
+        "title": "Employee acceptance of digital transformation strategies: A paradox perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5013c0154fe833f4f1fa",
+        "title": "Global value chains and digital platforms: Implications for strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aeffc66d8953dd74bf69",
+        "title": "Digital governance: government strategies that impact public services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0ec77a8920003aed75d",
+        "title": "Digital Strategies and Policy Approach for Small Medium Micro Business Development in Indonesia",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b8858399b5a9fe23153",
+        "title": "Digital Strategies for Modern Workplaces and Business Through Artificial Intelligence Techniques",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59ca13092bda4be70a46",
+        "title": "Impacts of digital technologies on education and factors influencing schools' digital capacity and transformation: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5dbef33124282f66b1c1",
+        "title": "Does innovation moderate the relationship between digital facilitators, digital transformation strategies and overall performance of SMEs of UAE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c7e82060e08e215adf27",
+        "title": "Digital education strategies around the world: practices and policies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20e99a979fc0a70cdd5b",
+        "title": "Digital Marketing: The Case of Digital Marketing Strategies on Luxurious Hotels",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50156ede335bcb4109c3",
+        "title": "Digital transformation as a catalyst for business model innovation: A critical review of impact and implementation strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_375a59c73f8ca818d43b",
+        "title": "Digital strategies for nitrogen management in grain production systems: lessons from multi-method assessment using on-farm experimentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dfab3f25c78d02c60209",
+        "title": "Unpacking Approaches to Digitalization Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e066f610a4ef470b36c",
+        "title": "IT Strategy in the Hotel Industry in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9f35eaa9793c50f8e1d",
+        "title": "Maximizing Online Marketing Strategy with Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf16ba2a2b386fe2c3b0",
+        "title": "The Impact of Digital Economy on the Economic Growth and the Development Strategies in the post-COVID-19 Era: Evidence From Countries Along the “Belt and Road”",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c1b64fca8357414568c",
+        "title": "Personalization strategies in digital mental health interventions: a systematic review and conceptual framework for depressive symptoms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b43ff674b7b90c58a82c",
+        "title": "Digital transformation and social change: Leadership strategies for responsible innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_016677299dd8da12d77a",
+        "title": "Tackling the digitalization challenge: how to benefit from digitalization in practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a21197aabf89a5f2f2e",
+        "title": "Digital Health Reimbursement Strategies of 8 European Countries and Israel: Scoping Review and Policy Mapping",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "title": "Digital transformation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cb3d1d99f8b9a91e481",
+        "title": "What is digital strategy and does it really matter?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b699345c3a83e882cdb",
+        "title": "Regulating Big Tech expansionism? Sphere transgressions and the limits of Europe’s digital regulatory strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_332516559377a4cf180a",
+        "title": "Structural damage detection based on transfer learning strategy using digital twins of bridges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abc3e1c8f74d998d9136",
+        "title": "How Does the Digitalization Strategy Affect Bank Efficiency in Industry 4.0? A Bibliometric Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c074c7de3c68914c20f",
+        "title": "Enterprise digitalization, business strategy and subsidy allocation: Evidence of the signaling effect",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbc3710433943b6aaa00",
+        "title": "Impacts of digital transformation on eco-innovation and sustainable performance: Evidence from Chinese manufacturing companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3fbbf88708a67b02e60d",
+        "title": "Digitalization strategies and sustainability benefits in Mexican SMEs: Unveiling the mediating role of innovation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da16a98755b3d25f56ae",
+        "title": "Digital strategy in Brazilian family business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db66e96ba315a777b614",
+        "title": "Beyond federated data: a data commoning proposition for the EU’s citizen-centric digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f4a5201ab61a080d594",
+        "title": "Effective leadership and communication strategies in disadvantaged contexts in the digital age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aebbf196ba096b167ded",
+        "title": "Digital technologies and knowledge processes: new emerging strategies in international business. A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b877559131756aba1797",
+        "title": "Analysing the influence of digital strategy and innovation on MSMEs' performance in emerging countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d7821d148530380d262",
+        "title": "Digital entrepreneurship: The role of entrepreneurial orientation and digitalization for disruptive innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebbfbc3159b7e345b7c7",
+        "title": "Digital technologies and carbon neutrality goals: An in-depth investigation of drivers, barriers, and risk mitigation strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c903a4db441e9144bda4",
+        "title": "Assessing Green Approaches and Digital Marketing Strategies for Twin Transition via Fermatean Fuzzy SWARA-COPRAS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d46e320e0d40132363e0",
+        "title": "Driving mechanism model of enterprise green strategy evolution under digital technology empowerment: A case study based on Zhejiang Enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7c8050e24e154095def",
+        "title": "Design thinking: strategy for digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2b33817f58aba706a89",
+        "title": "Digital technologies: tensions in privacy and data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_91635b1d596182a09885",
+        "title": "Strategies to achieve a carbon neutral society: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14504d482ae0e32c9b2a",
+        "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5247ac95989c3a48a68",
+        "title": "Digital twin and big data-driven sustainable smart manufacturing based on information management systems for energy-intensive industries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c6d284f6de91d7af278",
+        "title": "Design and Development of an Eco-Innovation Management Information System to Accelerate Firms’ Digital Transformation Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a91854de8f181c038594",
+        "title": "Digital Transformation in Healthcare: Technology Acceptance and Its Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73186f9afafd15f5518b",
+        "title": "Digital-Based Information System of Zakat Management in Indonesia: Strategies for Increasing Revenue in Fiqh Muamalah Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d81883d9904dedf44838",
+        "title": "Digital twin for healthcare systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec471e4b2a65aadc351a",
+        "title": "ChatGPT for Education and Research: Opportunities, Threats, and Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_715a4aa3a266dda44d6a",
+        "title": "System Usability Scale Benchmarking for Digital Health Apps: Meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e1b397b9285641c120d",
+        "title": "A Digital Twin predictive maintenance framework of air handling units based on automatic fault detection and diagnostics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2ffbdde1422704daeac",
+        "title": "Digital twins for health: a scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61473a20acd7353cfd3a",
+        "title": "A framework for digital health equity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5a9da8ab855c372ccdc",
+        "title": "Development of a Digital Twin for smart farming: Irrigation management system for water saving",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b42f38ced808483b8b07",
+        "title": "The Role of Information Management Systems in the Implementation of the Digital Economy Development Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e77b1b091e071677adcd",
+        "title": "Digital innovations for sustainable and resilient agricultural systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97db6001059e2a2e548c",
+        "title": "Digital health for aging populations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21115afc3414481ef841",
+        "title": "Exploring Human Resource Management Digital Transformation in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0d6b4eb41f50a14dab1",
+        "title": "A Review on Digital Twin Technology in Smart Grid, Transportation System and Smart City: Challenges and Future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b7a16b5115a86f1c3ab",
+        "title": "Workplace literacy skills—how information and digital literacy affect adoption of digital technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5e075c41a2736710928",
+        "title": "From dual digitalization to digital learning space: Exploring the digital transformation of higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2278545182b9375b175",
+        "title": "A sustainable University: Digital Transformation and Beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ef7d15ffcbb90a691e1",
+        "title": "Information Systems Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84c638826e8d7912d553",
+        "title": "The Seventeenth Data Release of the Sloan Digital Sky Surveys : Complete Release of MaNGA, MaStar and APOGEE-2 Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b73e322bdb15eece27",
+        "title": "Digital Learning and Digital Institution in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5aff62b376648d8f947a",
+        "title": "A framework of digital technologies for the circular economy: Digital functions and mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b83548731726242e1d7",
+        "title": "Deep learning models for digital image processing: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc32d5e31e3f43a7b83b",
+        "title": "E-business, Information Systems Management and Sustainable Strategy Development in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2adcbb955fc3677497c0",
+        "title": "Interoperability of heterogeneous health information systems: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecc5daf5c51dc565f37f",
+        "title": "Digital twin with Machine learning for predictive monitoring of CO2 equivalent from existing buildings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60b39f4a2ec387d3bd99",
+        "title": "Barriers and facilitators to utilizing digital health technologies by healthcare professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd768f55364c4014042",
+        "title": "Toward the Next Generation of Digitalization in Agriculture Based on Digital Twin Paradigm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07e17f89d39f4d8aa6ef",
+        "title": "The effect of digital marketing capabilities on organizational ambidexterity of the information technology sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb06a3db393d62045a18",
+        "title": "Design, Modeling and Implementation of Digital Twins",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe9860e3925f8dd1673f",
+        "title": "Digital Transformation and Flexible Performance Management: A Systematic Literature Review of the Evolution of Performance Measurement Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a390ea683a4717c0b9b",
+        "title": "Strategies to save energy in the context of the energy crisis: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_996706a50d239b37ae70",
+        "title": "Methods and applications for Artificial Intelligence, Big Data, Internet of Things, and Blockchain in smart energy management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76fa6a29d7856a241bca",
+        "title": "A whole-slide foundation model for digital pathology from real-world data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8652935f416ed4901515",
+        "title": "Predictive maintenance using digital twins: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79872c1c8aa32d6f4697",
+        "title": "Digital twin framework for reconfigurable manufacturing systems (RMSs): design and simulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0fa83b6b9f94ca981ae7",
+        "title": "Teachers’ AI digital competencies and twenty-first century skills in the post-pandemic world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25e3cf69aaade86dc381",
+        "title": "Digitally-embroidered liquid metal electronic textiles for wearable wireless systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c745117efea1f20548b9",
+        "title": "Higher Education Future in the Era of Digital Transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28ed27907f61176536db",
+        "title": "A systematic review on digital literacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0441991d3b02c5ba01ed",
+        "title": "Circular economy strategies for combating climate change and other environmental issues",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cea1be7d44a052b8adb",
+        "title": "YOLO-v1 to YOLO-v8, the Rise of YOLO and Its Complementary Nature toward Digital Manufacturing and Industrial Defect Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05cf9ea2a8c35c363d38",
+        "title": "Navigating the confluence of artificial intelligence and education for sustainable development in the era of industry 4.0: Challenges, opportunities, and ethical dimensions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b66f8f55c3f9fe57814",
+        "title": "From the 'Digital Divide' to 'Digital Inequality': Studying Internet Use as Penetration Increases",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50e8350cf3ae157d820d",
+        "title": "Can digital transformation promote enterprise performance? —From the perspective of public policy and innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e520378c389fe68e370",
+        "title": "Central bank digital currency: Stability and information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7492bd0e13a97d113c39",
+        "title": "Digital literacy as a new determinant of health: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a75fb24d02a7007078e0",
+        "title": "Future agricultural systems and the role of digitalization for achieving sustainability goals. A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78ba16641119e26ffd79",
+        "title": "Additive manufacturing by digital light processing: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1eeb44fb9e3bbc8d10da",
+        "title": "ChatGPT in education: Strategies for responsible implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5685f9ea6c7614e2aa4d",
+        "title": "Impact of supply chain digitalization on supply chain resilience and performance: A multi-mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3cb56b05f614b847159",
+        "title": "A Dihydroazulene‐Based Photofluorochromic AIE System for Rewritable 4D Information Encryption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2db3881d945358deb9ca",
+        "title": "The cost-effectiveness of digital health interventions: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_829eaddc4ef10c7b5892",
+        "title": "Digital future of luxury brands: Metaverse, digital fashion, and non‐fungible tokens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f14731178107b0a1765b",
+        "title": "A conceptual framework for digital tax administration - A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c0eb73604b33a9d332b",
+        "title": "Digital Twins: State of the art theory and practice, challenges, and open research questions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ada08915190ee9afc42e",
+        "title": "Role of Digital Transformation for Achieving Sustainability: Mediated Role of Stakeholders, Key Capabilities, and Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68bda2dfdc7328431068",
+        "title": "Deploying digital health tools within large, complex health systems: key considerations for adoption and implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a974b27371fd9d653c8f",
+        "title": "Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_628af583758a8ab10916",
+        "title": "Loss of epigenetic information as a cause of mammalian aging",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68a5360964800fadfb2c",
+        "title": "Atrial fibrillation: epidemiology, screening and digital health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca099edf5dd0fc3c09a5",
+        "title": "Enhancing smart farming through the applications of Agriculture 4.0 technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_540b18adb2ec4792710c",
+        "title": "Resilience in healthcare systems: Cyber security and digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2255ee609f0cdbc7c30b",
+        "title": "Integration of TLS-derived Bridge Information Modeling (BrIM) with a Decision Support System (DSS) for digital twinning and asset management of bridge infrastructures",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b613f4f95bc303d04dcf",
+        "title": "NASA'S Advanced Information Systems Technology (AIST): Combining New Observing Strategies and Analytics Frameworks to Build Earth System Digital Twins",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f462009fb3a93e3c938",
+        "title": "Re-Thinking Data Strategy and Integration for Artificial Intelligence: Concepts, Opportunities, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e45b516136752816e81",
+        "title": "Intelligent emergency digital twin system for monitoring building fire evacuation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06165b9a7c2c1432dca9",
+        "title": "Global Challenges to Public Health Care Systems during the COVID-19 Pandemic: A Review of Pandemic Measures and Problems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28d2f904113fc9daa6dc",
+        "title": "Sustainable Supply Chain and Business Performance: The Impact of Strategy, Network Design, Information Systems, and Organizational Structure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eac6383a28f0bbab9973",
+        "title": "World Reference Base for Soil Resources. International soil classification system for naming soils and creating legends for soil maps",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12be7cd01c70dc90ea8f",
+        "title": "Applications of Digital Twin across Industries: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ff06f02c36b073404bb",
+        "title": "Digital twin for smart manufacturing, A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80d0fd4f30a2b90e6ca7",
+        "title": "Digitalization in corporate communications: understanding the emergence and consequences of CommTech and digital infrastructure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cbffb83dc0be65e180b",
+        "title": "Digital twin in energy industry: Proposed robust digital twin for power plant and other complex capital-intensive large engineering systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2d6a7f6002d7c4cb2c8",
+        "title": "The Need of Integrating Digital Education in Higher Education: Challenges and Opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_976f529b784fe0f88bb2",
+        "title": "Teachers’ digital competencies in higher education: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c122897bffd96af50bf",
+        "title": "Drivers of Digital Transformation in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a2b674cc20b5322b868",
+        "title": "A review of Blockchain Technology applications for financial services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c19854685893705447c",
+        "title": "Digital Sustainability in Information Systems Research: Conceptual Foundations and Future Directions",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_1a2a79871fe616335043",
+        "title": "Inequities in Health Care Services Caused by the Adoption of Digital Health Technologies: Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8cc70ece9b12a003a23",
+        "title": "Digital orientation, digital maturity, and digital intensity: determinants of financial success in digital transformation settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_477bbabf867c401bfc8c",
+        "title": "Meta-optics empowered vector visual cryptography for high security and rapid decryption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6dad1e2aa6c2116a8d8a",
+        "title": "Task-Oriented Communications for 6G: Vision, Principles, and Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06c859975c74ae9a8b04",
+        "title": "Cybersecurity, Data Privacy and Blockchain: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6594826e7b46dbd97fa3",
+        "title": "Cyber security: State of the art, challenges and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fbed1d957d97c9fa601",
+        "title": "Challenges for higher education in the era of widespread access to generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f54c7ee5136f3285bd9d",
+        "title": "Beyond Mobile Payments: Exploring the Evolution and Future of Fintech (BY IJISRT)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_441ed9ffd96ab7b544db",
+        "title": "Navigating Challenges and Opportunities in Multi-Omics Integration for Personalized Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_348f9733952067d329ad",
+        "title": "Digital transition from industry 4.0 to industry 5.0 in smart manufacturing: A framework for sustainable future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ce398dd0a261c4da062",
+        "title": "ChatGPT: A comprehensive review on background, applications, key challenges, bias, ethics, limitations and future scope",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09bf104ab34344600a0e",
+        "title": "Technology Roadmap for Flexible Sensors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e825cfa42f3667a72cdd",
+        "title": "Leveraging generative AI for urban digital twins: a scoping review on the autonomous generation of urban data, scenarios, designs, and 3D city models for smart city advancement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c4a6dec8688b84ab2722",
+        "title": "A Novel Text Recognition Scheme using Classification Assisted Digital Image Processing Strategy",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_107fba63bc344a414658",
+        "title": "Control Strategies for Digital Twin Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac7d3c69d087c87c5ce1",
+        "title": "New marketing strategy model of E-commerce enterprises in the era of digital economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c755e167a4e77fe87445",
+        "title": "Higher education students’ perceptions of ChatGPT: A global study of early reactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_573249d618a17489f6e2",
+        "title": "Digital twin for credit card fraud detection: opportunities, challenges, and fraud detection advancements",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fc3fdc5928ca337d9dc",
+        "title": "A data-model fusion dispatch strategy for the building energy flexibility based on the digital twin",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c39244114faf0c9fe64",
+        "title": "Joint Coding-Modulation for Digital Semantic Communications via Variational Autoencoder",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6886927828ac28c9d2b9",
+        "title": "Digital transformation of small and medium enterprises: a systematic literature review and an integrative framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33012645910c9865d29b",
+        "title": "Integrating Digital Twins with IoT-Based Blockchain: Concept, Architecture, Challenges, and Future Scope",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7f720bde8cb470317c1",
+        "title": "Research and practice of intelligent coal mine technology systems in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf4c26a4507084121134",
+        "title": "Tanzania’s and Germany’s Digital Health Strategies and Their Consistency With the World Health Organization’s Global Strategy on Digital Health 2020-2025: Comparative Policy Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af4cf99e57037543dae9",
+        "title": "Digital Health Opportunities to Improve Primary Health Care in the Context of COVID-19: Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_604300b924c7d884e985",
+        "title": "Effective Approaches to Combat Vaccine Hesitancy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17adf3a4f207883c1911",
+        "title": "Digital Transformation Security Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd4314255e2ea2519636",
+        "title": "Developments of Digital Technologies Related to Supply Chain Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88e8a270906864ecb588",
+        "title": "Research on the Relationship between Digital Transformation and Performance of SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b46a28b1e7da70d4159",
+        "title": "Navigating Digital Transformation and Technology Adoption: A Literature Review from Small and Medium-Sized Enterprises in Developing Countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce74810faaae93d74cca",
+        "title": "Renewable Energy System Controlled by Open-Source Tools and Digital Twin Model: Zero Energy Port Area in Italy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65bbf6e2e6cc1627b260",
+        "title": "Artificial Intelligence Potential in Higher Education Institutions Enhanced Learning Environment in Romania and Serbia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc7fa0b7400b912196aa",
+        "title": "Ballots and Padlocks: Building Digital Trust and Security in Democracy through Information Governance Strategies and Blockchain Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3682ccbbf402985b162",
+        "title": "Recent advances in smart wearable sensors for continuous human health monitoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f54d21307da8bd74c09",
+        "title": "Does digital financial inclusion matter for economic growth and environmental sustainability in OBRI economies? An empirical analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8899cf50f5bfe8fc1e69",
+        "title": "CYBERSECURITY IN BANKING: A GLOBAL PERSPECTIVE WITH A FOCUS ON NIGERIAN PRACTICES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c54baef6ca2c356559a",
+        "title": "Digital strategizing: An assessing review, definition, and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce58ca55d717558b322c",
+        "title": "Transform or be transformed: the importance of research on managing and sustaining digital transformations",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_f25cb08edef264b94fa7",
+        "title": "A New Digital Twin for Climate Change Adaptation, Water Management, and Disaster Risk Reduction (HIP Digital Twin)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "A Strategic Competition Between China and Japan in the Indo-Pacific: Case From The Whoosh High-Speed Train Projects in Indonesia",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 17
+    },
+    "coverage_audit": {
+      "direction_id": "topic_digital_strategy",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 36,
+      "hard_gate_pass_count": 36,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital strategy"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital strategy information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(digital strategy) OR (digital strategy in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "digital strategy",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "digital strategy information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 3,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(digital strategy) OR (digital strategy in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 7,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5adbbd40d603dd243ad5",
+        "incoming_paper_id": "paper_5adbbd40d603dd243ad5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_700b3b279b9ebce93187",
+        "incoming_paper_id": "paper_700b3b279b9ebce93187"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_016677299dd8da12d77a",
+        "incoming_paper_id": "paper_016677299dd8da12d77a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_59ca13092bda4be70a46",
+        "incoming_paper_id": "paper_59ca13092bda4be70a46"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "incoming_paper_id": "paper_dce9b1d1fcb9eeb81c87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2b33817f58aba706a89",
+        "incoming_paper_id": "paper_a2b33817f58aba706a89"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1b7647117460018d40f3",
+        "incoming_paper_id": "paper_1b7647117460018d40f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce4439090f973d7ac247",
+        "incoming_paper_id": "paper_ce4439090f973d7ac247"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_070f035c409821dcbbbb",
+        "incoming_paper_id": "paper_070f035c409821dcbbbb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e066f610a4ef470b36c",
+        "incoming_paper_id": "paper_2e066f610a4ef470b36c"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_6ef7d15ffcbb90a691e1",
+          "paper_2c19854685893705447c"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_700b3b279b9ebce93187",
+        "incoming_paper_id": "paper_700b3b279b9ebce93187"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4357ab0f37e32c513e6",
+        "incoming_paper_id": "paper_d4357ab0f37e32c513e6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_05cf9ea2a8c35c363d38",
+        "incoming_paper_id": "paper_05cf9ea2a8c35c363d38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_996706a50d239b37ae70",
+        "incoming_paper_id": "paper_996706a50d239b37ae70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f5247ac95989c3a48a68",
+        "incoming_paper_id": "paper_f5247ac95989c3a48a68"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce4439090f973d7ac247",
+        "incoming_paper_id": "paper_ce4439090f973d7ac247"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a9148ddf63873448c064",
+        "incoming_paper_id": "paper_a9148ddf63873448c064"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1b7647117460018d40f3",
+        "incoming_paper_id": "paper_1b7647117460018d40f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3e1b397b9285641c120d",
+        "incoming_paper_id": "paper_3e1b397b9285641c120d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a2b674cc20b5322b868",
+        "incoming_paper_id": "paper_5a2b674cc20b5322b868"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca099edf5dd0fc3c09a5",
+        "incoming_paper_id": "paper_ca099edf5dd0fc3c09a5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b5a9da8ab855c372ccdc",
+        "incoming_paper_id": "paper_b5a9da8ab855c372ccdc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b7a2ff4da3d4e8c5b0af",
+        "incoming_paper_id": "paper_b7a2ff4da3d4e8c5b0af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ecc5daf5c51dc565f37f",
+        "incoming_paper_id": "paper_ecc5daf5c51dc565f37f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e066f610a4ef470b36c",
+        "incoming_paper_id": "paper_2e066f610a4ef470b36c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_070f035c409821dcbbbb",
+        "incoming_paper_id": "paper_070f035c409821dcbbbb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f2278545182b9375b175",
+        "incoming_paper_id": "paper_f2278545182b9375b175"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe9860e3925f8dd1673f",
+        "incoming_paper_id": "paper_fe9860e3925f8dd1673f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_59ca13092bda4be70a46",
+        "incoming_paper_id": "paper_59ca13092bda4be70a46"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f14731178107b0a1765b",
+        "incoming_paper_id": "paper_f14731178107b0a1765b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "incoming_paper_id": "paper_dce9b1d1fcb9eeb81c87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7c6d284f6de91d7af278",
+        "incoming_paper_id": "paper_7c6d284f6de91d7af278"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73186f9afafd15f5518b",
+        "incoming_paper_id": "paper_73186f9afafd15f5518b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c174c9510571ecfa305",
+        "incoming_paper_id": "paper_0c174c9510571ecfa305"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6b51115ef7f3cfcab806",
+        "incoming_paper_id": "paper_6b51115ef7f3cfcab806"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6814fe3de45bc62051af",
+        "incoming_paper_id": "paper_6814fe3de45bc62051af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_46d2db3769d99a8b5cc2",
+        "incoming_paper_id": "paper_46d2db3769d99a8b5cc2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2b33817f58aba706a89",
+        "incoming_paper_id": "paper_a2b33817f58aba706a89"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_80d0fd4f30a2b90e6ca7",
+        "incoming_paper_id": "paper_80d0fd4f30a2b90e6ca7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0cf99de33f56d7669a17",
+        "incoming_paper_id": "paper_0cf99de33f56d7669a17"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f3797ff1358a190507f4",
+        "incoming_paper_id": "paper_f3797ff1358a190507f4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73d317df64e692502a72",
+        "incoming_paper_id": "paper_73d317df64e692502a72"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_70207961ade7809258c7",
+        "incoming_paper_id": "paper_70207961ade7809258c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b42f38ced808483b8b07",
+        "incoming_paper_id": "paper_b42f38ced808483b8b07"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f0bf39972644d4432cb",
+        "incoming_paper_id": "paper_3f0bf39972644d4432cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8e490376c97ca2fdaf60",
+        "incoming_paper_id": "paper_8e490376c97ca2fdaf60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_79872c1c8aa32d6f4697",
+        "incoming_paper_id": "paper_79872c1c8aa32d6f4697"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8e45b516136752816e81",
+        "incoming_paper_id": "paper_8e45b516136752816e81"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5aff62b376648d8f947a",
+        "incoming_paper_id": "paper_5aff62b376648d8f947a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4e7d1f42a0013dd5a029",
+        "incoming_paper_id": "paper_4e7d1f42a0013dd5a029"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95c25c3f505d26a3a4fd",
+        "incoming_paper_id": "paper_95c25c3f505d26a3a4fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c7e82060e08e215adf27",
+        "incoming_paper_id": "paper_c7e82060e08e215adf27"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_180d521bd9136600109f",
+        "incoming_paper_id": "paper_180d521bd9136600109f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c1b64fca8357414568c",
+        "incoming_paper_id": "paper_2c1b64fca8357414568c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_56434aabd9fdb7051c52",
+        "incoming_paper_id": "paper_56434aabd9fdb7051c52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c9f35eaa9793c50f8e1d",
+        "incoming_paper_id": "paper_c9f35eaa9793c50f8e1d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b3cb56b05f614b847159",
+        "incoming_paper_id": "paper_b3cb56b05f614b847159"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_949f0f753bbb38d44d10",
+        "incoming_paper_id": "paper_949f0f753bbb38d44d10"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dbc3710433943b6aaa00",
+        "incoming_paper_id": "paper_dbc3710433943b6aaa00"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ebc09a48b924b49622b",
+        "incoming_paper_id": "paper_2ebc09a48b924b49622b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_50b6fc8efea9d94b38d4",
+        "incoming_paper_id": "paper_50b6fc8efea9d94b38d4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_332516559377a4cf180a",
+        "incoming_paper_id": "paper_332516559377a4cf180a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb205dcfc4a2fdcf95f1",
+        "incoming_paper_id": "paper_bb205dcfc4a2fdcf95f1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ada08915190ee9afc42e",
+        "incoming_paper_id": "paper_ada08915190ee9afc42e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8f462009fb3a93e3c938",
+        "incoming_paper_id": "paper_8f462009fb3a93e3c938"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aeffc66d8953dd74bf69",
+        "incoming_paper_id": "paper_aeffc66d8953dd74bf69"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c10033b7c53a6d2468ce",
+        "incoming_paper_id": "paper_c10033b7c53a6d2468ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_63987a8985e292ecb13d",
+        "incoming_paper_id": "paper_63987a8985e292ecb13d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20e99a979fc0a70cdd5b",
+        "incoming_paper_id": "paper_20e99a979fc0a70cdd5b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc32d5e31e3f43a7b83b",
+        "incoming_paper_id": "paper_fc32d5e31e3f43a7b83b"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "c93aa6d282a546bf93d76e5c521136f6",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

@@ -1,0 +1,2574 @@
+{
+  "direction_id": "topic_influencers",
+  "labels": {
+    "zh": "社交媒体影响者",
+    "en": "social media influencers"
+  },
+  "input": {
+    "selected_direction_id": "topic_influencers",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17156.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 330,
+  "hard_gate_pass_count": 31,
+  "eligible_count": 0,
+  "boundary_count": 19,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "social media influencers"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "social media influencers digital media"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(social media influencers) OR (social media influencers in digital media)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_influencers",
+      "research_direction": "influencers",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ]
+    },
+    "local_match": {
+      "label": "influencers",
+      "aliases": [
+        "influencers"
+      ],
+      "groups": [
+        "IS × Journalism / Communication / Media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:220"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_influencers",
+        "labels": {
+          "zh": "社交媒体影响者",
+          "en": "social media influencers"
+        },
+        "group_ids": [
+          "is_communication_media"
+        ],
+        "synonyms": [
+          "社交媒体影响者",
+          "social media influencers",
+          "influencers",
+          "social media influencers in digital media"
+        ],
+        "boundaries": {
+          "include": [
+            "social media influencers",
+            "digital media",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "social media influencers",
+            "\"social media influencers\" AND \"digital media\""
+          ],
+          "semantic_scholar": [
+            "social media influencers",
+            "social media influencers digital media"
+          ],
+          "crossref": [
+            "social media influencers",
+            "社交媒体影响者"
+          ],
+          "dblp": [
+            "social media influencers online communication"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "social media influencers",
+            "digital media",
+            "online communication"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "COMMUNICATION",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+          "PKU_CORE_2023_COMMUNICATION"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "social media influencers digital media",
+          "(social media influencers) OR (social media influencers in digital media)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:220"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social media influencers",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1481994,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:38.788799+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3672.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social media influencers digital media",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 788897,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:42.476061+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3625.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(social media influencers) OR (social media influencers in digital media)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1440292,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:46.124619+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3297.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "social media influencers",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:51.863141+00:00",
+        "duration_ms": 1500.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1500.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "social media influencers",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:53.354668+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "social media influencers",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:54.583794+00:00",
+        "duration_ms": 1344.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1344.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "社交媒体影响者",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:49.672882+00:00",
+        "duration_ms": 1093.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1093.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "社交媒体影响者",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:50.763990+00:00",
+        "duration_ms": 1094.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1094.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_271efa227e37e37dfa78",
+        "title": "Social media influencer marketing: foundations, trends, and ways forward",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8287384fbc87fa33fccb",
+        "title": "Impact of Social Media Influencers on Customer Engagement and Purchase Intention: A Meta-Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb14d740dca238f7302d",
+        "title": "Social media influencers: An effective marketing approach?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8be4abf18d21311db932",
+        "title": "Meta‐analysis of social media influencer impact: Key antecedents and theoretical foundations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7b243235d066a78c98b",
+        "title": "The effect of social media influencers’ characteristics on consumer intention and attitude toward Keto products purchase intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_235fa52ffdd7c362f78b",
+        "title": "The impact of social media influencers on health outcomes: Systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37a81d35c30fa0bfc801",
+        "title": "Social media influencers as human brands: an interactive marketing perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5d7fecb5fbb15254a3a",
+        "title": "“I follow what you post!”: The role of social media influencers’ content characteristics in consumers' online brand-related activities (COBRAs)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11b898bdd01ab074af52",
+        "title": "E-cigarette brands and social media influencers on Instagram: a social network analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e29f4f6e5b5c31ac8795",
+        "title": "Social media influencers and consumer engagement: A review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44bdfc02915792aaa9c9",
+        "title": "Social media influencers and adolescents’ health: A scoping review of the research field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3e2bb35b9209eea38bc",
+        "title": "Consumer resource integration and service innovation in social commerce: the role of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edc8223ff226eda18674",
+        "title": "The evolution of social media influence - A literature review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d48befb89b97888f499c",
+        "title": "Digital Islam and Muslim Millennials: How Social Media Influencers Reimagine Religious Authority and Islamic Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09061c3f6165ff2b38bd",
+        "title": "Investigating the mechanism through which consumers are “inspired by” social media influencers and “inspired to” adopt influencers’ exemplars as social defaults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68088f38101c3442f06b",
+        "title": "Mega or macro social media influencers: Who endorses brands better?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bae56f69d00f88ca5c7a",
+        "title": "A Proposed Model of Self-Perceived Authenticity of Social Media Influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd755d31bed5dcfbca46",
+        "title": "The persuasive power of social media influencers in brand credibility and purchase intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e8b5699c1656fa71934",
+        "title": "Black Squares for Black Lives? Performative Allyship as Credibility Maintenance for Social Media Influencers on Instagram",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74d5601931c6fec6dbca",
+        "title": "Tradwives: Right-Wing Social Media Influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9aaaf9660b309938907",
+        "title": "Endorsement effectiveness of different social media influencers: The moderating effect of brand competence and warmth",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5ac11d4249027f9d5cb",
+        "title": "Be my friend! Cultivating parasocial relationships with social media influencers: findings from PLS-SEM and fsQCA",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ca29d4cdf3b07e5e03d",
+        "title": "Exploring the nexus of social media influencers and consumer brand engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b706094877bc10ecfda",
+        "title": "Social Media Influence on Students’ Knowledge Sharing and Learning: An Empirical Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_002b74d1dce3d51ffa3b",
+        "title": "How do social media influencers induce the urge to buy impulsively? Social commerce context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93bda9211b4e763e7915",
+        "title": "The Role of Social Media Influencers in Public Health Communication: Case COVID-19 Pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44267044dafa92883c0b",
+        "title": "Unraveling the power of social media influencers: Qualitative insights into the role of Instagram influencers in the hospitality and tourism industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f796d43dc27c6a2ec3f",
+        "title": "How do social media influencers inspire consumers' purchase decisions? The mediating role of parasocial relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecad2ba7e7fb6b36f1d2",
+        "title": "How Social Media Influencers Impact Consumer Collectives: An Embeddedness Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b53ffa2a22478065ab02",
+        "title": "Managing the Transparency Paradox Of Social-Media Influencer Disclosures",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c8d5ffb9b1b6dd9da67",
+        "title": "“Informers” or “entertainers”: The effect of social media influencers on consumers' green consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_baf06a25b5731da944d5",
+        "title": "Parasocial Interaction in Social Media Influencer-Based Marketing: An SEM Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ff4e0ffc7129ab4f569",
+        "title": "Social media influencer (SMI) as a human brand – a need fulfillment perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5283657b1b1a70e7301f",
+        "title": "Investigating the impact of authenticity of social media influencers on followers' purchase behavior: mediating analysis of parasocial interaction on Instagram",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_320b622dfbc55bc89d47",
+        "title": "Social media influencer over-endorsement: Implications from a moderated-mediation analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_685c6ca26378e398edfd",
+        "title": "The effect of social media influencers' on teenagers Behavior: an empirical study using cognitive map technique",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_920876d7fb871a2b6350",
+        "title": "Impact of social media influencers on consumers' well-being and purchase intention: a TikTok perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78eaa160cc78f23a3c91",
+        "title": "The impact of social media influencers on pregnancy, birth, and early parenting experiences: A systematic review.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c91f40d2589230394df4",
+        "title": "Social Media Influencers’ Role in Shaping Political Opinions and Actions of Young Audiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ec126661f9c45f043e5",
+        "title": "#Greenfluencing. The Impact of Parasocial Relationships with Social Media Influencers on Advertising Effectiveness and Followers’ Pro-environmental Intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cd4028680c9fea55907",
+        "title": "Parasocial relations and social media influencers' persuasive power. Exploring the moderating role of product involvement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51cbfccda718a5624a1e",
+        "title": "Virtual Influencers in Online Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fae2612f954b1bce080e",
+        "title": "Social Media Influence on Body Image and Cosmetic Surgery Considerations: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fad1cc01aee08928c482",
+        "title": "Social media influence on young people and children: Analysis on Instagram, Twitter and YouTube",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64881cb1a83047fce84a",
+        "title": "A meta-analysis of the effectiveness of social media influencers: Mechanisms and moderation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_383376ad820a229b8365",
+        "title": "Social media influencer popularity and authenticity perception in the travel industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8047fa07a465974ae3b5",
+        "title": "Foundations of consumer engagement with social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af8237c04b1ccff3aeb2",
+        "title": "Influence of social media influencer authenticity on their followers' perceptions of credibility and their positive word-of-mouth",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b71ed5ca82b10453097",
+        "title": "I’ll follow the fun: The extended investment model of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46029dfdbd21e1a3f3ad",
+        "title": "Health-Related Communication of Social Media Influencers: A Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd72980356f64ab615dd",
+        "title": "Antecedents and outcomes of Generation Z consumers’ contrastive and assimilative upward comparisons with social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad850b690fcc0743f343",
+        "title": "Rise of Social Media Influencers as a New Marketing Channel: Focusing on the Roles of Psychological Well-Being and Perceived Social Responsibility among Consumers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6644ea60926dfb0a76b3",
+        "title": "How and when social media influencers' intimate self-disclosure fosters purchase intentions: the roles of congruency and parasocial relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_679a7666ecbfe53f8800",
+        "title": "Leveraging online selling through social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_082cfdb4f2f5a882f71b",
+        "title": "The Dark Side of Social Media Influencers: A Research Agenda for Analysing Deceptive Practices and Regulatory Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f820916cc54d70c52f94",
+        "title": "Determinants of followers' purchase intentions toward brands endorsed by social media influencers: Findings from PLS and fsQCA",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e920616b19fa1844f3d5",
+        "title": "Responses to Social Media Influencers’ Misinformation about COVID-19: A Pre-Registered Multiple-Exposure Experiment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4877b9c7a908654193e3",
+        "title": "Attractive females versus trustworthy males: Explore gender effects in social media influencer marketing in Saudi restaurants",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63ae1add99037b9ca4a0",
+        "title": "The Influence of Social Media Influencers on Generation Z Consumer Behavior in Indonesia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea24e1144a982e161acb",
+        "title": "Cost-Effective Social Media Influencer Marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e183568b248eceb5b01c",
+        "title": "Predictors of social media influencer marketing effectiveness: A comprehensive literature review and meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a951125a5ac812200309",
+        "title": "Credibility of social media influencers: Impact on purchase intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a230f650956ffd966677",
+        "title": "The development of reputational capital – How social media influencers differ from traditional celebrities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bada441169963095091",
+        "title": "The effect of social media influencer marketing on sustainable food purchase: Perspectives from multi-group SEM and ANN analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_acb0b0707191b1a94d31",
+        "title": "The effect of social media influencers’ credibility on consumer’s purchase intentions through attitude toward advertisement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5706971c1acff08b8ee",
+        "title": "Less is more: Engagement with the content of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ae21a7fa330637f0c71",
+        "title": "From Likes to Sustainability: How Social Media Influencers Are Changing the Way We Consume",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bd87c698fc3fb9cf927",
+        "title": "Bridging the Trust Gap in Influencer Marketing: Ways to Sustain Consumers’ Trust and Assuage Their Distrust in the Social Media Influencer Landscape",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d99eebc58543609c9887",
+        "title": "Authentic isn't always best: When inauthentic social media influencers induce positive consumer purchase intention through inspiration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd9bf73303b1322a3e2d",
+        "title": "Do social media influencers influence the vaccination drive? An application of source credibility theory and uses and gratification theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ffd577573db7282bcdd7",
+        "title": "Oops, I've overshared! When social media influencers' self-disclosure damage perceptions of source credibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_527e97ee916fd0f36acc",
+        "title": "When social media meets destination marketing: the mediating role of attachment to social media influencer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71bed676014489344b2b",
+        "title": "Influenced or to be influenced: Engaging social media influencers in nation branding through the lens of authenticity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d70f82863ff157e83da",
+        "title": "The Use of Social Media in Sustainable Green Lifestyle Adoption: Social Media Influencers and Value Co-Creation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65114cf10d5b3aaf38c2",
+        "title": "The top 100 social media influencers in neurosurgery on Twitter",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_233380f4bf97ddb3fb67",
+        "title": "Congruence effects in social media influencer marketing: the moderating role of wishful identification in online impulse buying intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b92b5a439ef8e3eb5781",
+        "title": "The Influence of the Credibility of Social Media Influencers SMIs on the Consumers’ Purchase Intentions: Evidence from Saudi Arabia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba04f7db74693351432a",
+        "title": "Social Media Influencers: Customer Attitudes and Impact on Purchase Behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0a3f86f3c9a3b78b232",
+        "title": "How the characteristics of social media influencers and live content influence consumers' impulsive buying in live streaming commerce? The role of congruence and attachment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89abe15685db16ba1873",
+        "title": "The role of social media influencers in shaping destination image and intention to visit Jordan: The moderating impact of social media usage intensity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6962ee2926c80acf247d",
+        "title": "Social Media Influencers as Mediators of Commercial Messages",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_108d232cb99eae46d8b2",
+        "title": "Judging a book by its cover? The role of unconventional appearance on social media influencers effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b86112a1ca3a29c540e",
+        "title": "A Social Network Approach to Social Media Influencers on Instagram: The Strength of Being a Nano-Influencer in Cause Communities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_356d17a0181be31c46b2",
+        "title": "Unveiling the dark side of influencer marketing: how social media influencers (human vs virtual) diminish followers’ well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1f1372cb44015e48c57",
+        "title": "Social Media Influencer Marketing: Commentary on the Special Issue",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6f4e0220d463911c1c96",
+        "title": "The e-WOM intention of artificial intelligence (AI) color cosmetics among Chinese social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2b282a0b4d2db93717d",
+        "title": "Social Media Influencers and Purchase Intention: A Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80428fa4d2320ca46670",
+        "title": "Finding Goldilocks Influencers: How Follower Count Drives Social Media Engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53c4c38819d281166fcc",
+        "title": "The effect of social media influencers on purchase intention: Examining the mediating role of brand attitude",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b09794a29ef7fb45ac6e",
+        "title": "Social Media Influencer Marketing: A Systematic Literature Review Using TCM and ADO Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c369f84a97ef2d4333d6",
+        "title": "The Impact of Social Media Influencers on Food Consumption in Saudi Arabia, a Cross-Sectional Web-Based Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_55166066204b08a6ebb1",
+        "title": "Going Viral: Sharing of Misinformation by Social Media Influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fffaaacea43720c7130b",
+        "title": "Social media influencers’ community and content strategy and follower engagement behavior in the presence of competition: an Instagram-based investigation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8eeb6c41eb954cf617ec",
+        "title": "Social media influencers: The formation and effects of affective factors during online interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_918a78ddfc4235d0af9e",
+        "title": "Welcome to the destination! Social media influencers as cogent determinant of travel decision: A systematic literature review and conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1970216ff3699fed62f2",
+        "title": "A Multimodal Emotion Perspective on Social Media Influencer Marketing: The Effectiveness of Influencer Emotions, Network Size, and Branding on Consumer Brand Engagement Using Facial Expression and Linguistic Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d03abaf70b566d97f33",
+        "title": "The power of influence: How social media influencers are shaping consumer decision making in the digital age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e10a165e8a6d976542fa",
+        "title": "Helpful or harmful? Navigating the impact of social media influencers’ health advice: insights from health expert content creators",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75028cbaee87100e14b5",
+        "title": "Impact of the pandemic on social media influencer marketing in fashion: a qualitative study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96ff118eccf5eb2c5504",
+        "title": "Do Influencers Influence? A Meta-Analytic Comparison of Celebrities and Social Media Influencers Effects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39798c8fd583cc856c4c",
+        "title": "Digital Engagement on Social Media: How Food Image Content Influences Social Media and Influencer Marketing Outcomes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_396fe2ba6d1913c46029",
+        "title": "The Impact of Digital Disruption: Influences of Digital Media and Social Networks on Forming Digital Natives’ Attitude",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8041ad582d5c4f28f5fa",
+        "title": "When digital celebrity talks to you: How human-like virtual influencers satisfy consumer's experience through social presence on social media endorsements",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d41effeac0180bee268d",
+        "title": "The influence of digital marketing and social media marketing on consumer buying behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b91c3cb144f15592afb5",
+        "title": "Click me...! The influence of clickbait on user engagement in social media and the role of digital nudging",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bbd99f78f364800ae1f",
+        "title": "Linking social media usage and SME's sustainable performance: The role of digital leadership and innovation capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74cde6ac777477fbd2c7",
+        "title": "Fake news, disinformation and misinformation in social media: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29aef896900416c9ce56",
+        "title": "The impact of digital technology, social media, and artificial intelligence on cognitive functions: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2de03694ebd7611e60df",
+        "title": "Go vegan! digital influence and social media use in the purchase intention of vegan products in the cosmetics industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_caa1bda86b8feef6d99f",
+        "title": "Digital content marketing and consumer brand engagement on social media- do influencers’ brand content moderate the relationship?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21edc69e8b0ed09a16ce",
+        "title": "Government Digital Transformation: Understanding the Role of Government Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0aee6db13dbba933e3f",
+        "title": "Tourist behaviour: The role of digital marketing and social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b7f81571db96c6b1f70",
+        "title": "The Influence of Social-Media on Cultural Integration: A Perspective on Digital Sociology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19c1bb0ca69438ac123a",
+        "title": "The Role of Social Media in Shaping Public Opinion and Its Influence on Economic Decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bf2ba041513df3a4623",
+        "title": "Political Influencers on Social Media: An Introduction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd21f14c46c8b68eff9b",
+        "title": "Exploring the effectiveness of digital manipulation disclosures for Instagram posts on source credibility and authenticity of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5adbbd40d603dd243ad5",
+        "title": "Understanding the role of digital technologies in education: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ec92d16a1a527bfbec4",
+        "title": "Windows of developmental sensitivity to social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_780fa9ea48242e97d6d0",
+        "title": "The Use of Social Media in Children and Adolescents: Scoping Review on the Potential Risks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_890d4e7710fc48d2321f",
+        "title": "Home cooking in the digital age: When observing food influencers on social media triggers the imitation of their practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b38d0c8f630bba7dd451",
+        "title": "Psychological inoculation improves resilience against misinformation on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f30ffc00f343438387b",
+        "title": "TweetBoost: Influence of Social Media on NFT Valuation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74bf2468eeb3b395d2bc",
+        "title": "Authentically Fake? How Consumers Respond to the Influence of Virtual Influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_87a2790d4e760820c6f8",
+        "title": "The disaster of misinformation: a review of research in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dad5437d485d855c1215",
+        "title": "Customer engagement and social media: Revisiting the past to inform the future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e4d84d7e8b8f32cf8a3",
+        "title": "Digital Fashion and Social Media Influencer in Industry 5.0",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e0c721809b440fe22a2",
+        "title": "Technology, entrepreneurship, innovation and social change in digital economics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_642cd4e83ed7c10fdd27",
+        "title": "Problematic Social Media Use in Adolescents and Young Adults: Systematic Review and Meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85ac243e735b5f95c5e1",
+        "title": "Growing polarization around climate change on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7b79ad3789516bc05ed",
+        "title": "Revisiting opinion leadership in the digital realm: Social media influencers as proximal mass opinion leaders",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_357d59dae0cf79cb05d8",
+        "title": "A review on sentiment analysis from social media platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59ca13092bda4be70a46",
+        "title": "Impacts of digital technologies on education and factors influencing schools' digital capacity and transformation: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9ffccbb799085a58afb",
+        "title": "A study on the influence of digital literacy on elderly user’s intention to identify social media false information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d634822cdabfe5a4008b",
+        "title": "Social Drivers and Algorithmic Mechanisms on Digital Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e78fd95af083ec30e3d",
+        "title": "Influence of User‐Generated Content ( UGC ) in Social Media on the Intangible Cultural Heritage Preservation of Gen Z Tourists in the Digital Economy Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74ad42da9d85410db7fb",
+        "title": "Digital influencers, social power and consumer engagement in social commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e89acec9ac934a3357dd",
+        "title": "Social media literacy: A conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3a634560e43653cc7ed",
+        "title": "Determinants of SME’s Social Media Marketing Adoption: Competitive Industry as a Moderator",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7f0bab1608216f873cf",
+        "title": "Digital Media Use and Adolescents' Mental Health During the Covid-19 Pandemic: A Systematic Review and Meta-Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22ea87d8decfc75d39a8",
+        "title": "Body Perceptions and Psychological Well-Being: A Review of the Impact of Social Media and Physical Measurements on Self-Esteem and Mental Health with a Focus on Body Image Satisfaction and Its Relationship with Cultural and Gender Factors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d01084faf9d8ee87f5c4",
+        "title": "Thematic Analysis as a New Culturomic Tool: The Social Media Coverage on COVID-19 Pandemic in Italy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_402a9f2b033482c58f55",
+        "title": "Trust in Social Media: Enhancing Social Relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6894412f0c6f9bb5dc09",
+        "title": "Transforming consumers' intention to purchase green products: Role of social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84814af17cbd7f71c4d1",
+        "title": "Misinformation About COVID-19 Vaccines on Social Media: Rapid Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5bdb1658cdd9db0dd5f",
+        "title": "The social media diet: A scoping review to investigate the association between social media, body image and eating disorders amongst young people",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50c8695e7b9ff7f7496a",
+        "title": "Parasocial interactions with real and virtual influencers: The role of perceived similarity and human-likeness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31d5d9a2fd6b7e2ecfdb",
+        "title": "Role of Social Media Marketing Activities in Influencing Customer Intentions: A Perspective of a New Emerging Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d46843b1fd056b4d38df",
+        "title": "Social media and attitudes towards a COVID-19 vaccination: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35a2041f0c0cf744af1c",
+        "title": "How digital media drive affective polarization through partisan sorting",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_016677299dd8da12d77a",
+        "title": "Tackling the digitalization challenge: how to benefit from digitalization in practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05b2e10c3ab867533a49",
+        "title": "Vaping in the Digital Age: How Social Media Influences Adolescent Attitudes and Beliefs About E-Cigarette Use",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6285f791a503cc31a34f",
+        "title": "Motivate me to exercise with you: The effects of social media fitness influencers on users’ intentions to engage in physical activity and the role of user gender",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e88c8da22ef2145d194e",
+        "title": "Digital influencer marketing: How message credibility and media credibility affect trust and impulsive buying",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88823bdc9ffe94123a3b",
+        "title": "Social media: a digital social mirror for identity development during adolescence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78c571b4e26c5a27308e",
+        "title": "Virtual humans as social actors: Investigating user perceptions of virtual humans’ emotional expression on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b71f5a7f08a60d937d21",
+        "title": "Beyond the screen: Exploring the dynamics of social media influencers, digital food marketing, and gendered influences on adolescent diets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_700b3b279b9ebce93187",
+        "title": "Mastering digital transformation: The nexus between leadership, agility, and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cb2a58cbb7f4cd601d3",
+        "title": "Exploring the Influence: A Bibliometric Analysis of Social Media Marketing in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97a2bb04e2fac3c31323",
+        "title": "Research trends in social media addiction and problematic social media use: A bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54d05663081833e953",
+        "title": "Exploring the boundaries of open innovation: Evidence from social media mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_597be3a82e6a7fcc9f3c",
+        "title": "The Impact of Social Media on the Mental Health of Adolescents and Young Adults: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2bcdbf7945072ea4b55",
+        "title": "Virtual influencer marketing: the good, the bad and the unreal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7a2ef28aaddc87f4822",
+        "title": "Pengaruh Digital Marketing, Social Media Influencer Terhadap Niat Beli Produk Fashion Pada Generasi Milenial Melalui Customer Online Review di Instagram",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac3839bc57d591162df2",
+        "title": "THE INFLUENCE OF DIGITAL AND SOCIAL MEDIA MARKETING ON CONSUMER BEHAVIOUR",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd90c1725244b4d7a67c",
+        "title": "Social Media Role and Its Impact on Public Health: A Narrative Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cfa09373576a8f4d7fea",
+        "title": "Digital Social Media Influencers’ Impact on Beauty and Personal Care Purchases in South Africa",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca47663c27199d303841",
+        "title": "Feminist discourses of Spanish digital influencers: An analysis of their activity on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a9037613b77e93fe360",
+        "title": "Constructivism in the Digital Age: How Celebrity Influence and Social Media Richness Impact Youth's Perceived Absorption Capacity and Societal Polarization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fef0784a3a24ed2f3cb",
+        "title": "The Perfect Storm: A Developmental–Sociocultural Framework for the Role of Social Media in Adolescent Girls’ Body Image Concerns and Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5f90d1bea3635a58cbf",
+        "title": "How Do Social Media Influencers Affect Digital Natives 2.0 To Travel Inside Egypt? Integrating the Theory of Planned Behavior and Elaboration Likelihood Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9215bb664afd7f6ac7cd",
+        "title": "Digital media use and sleep in late adolescence and young adulthood: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31855b75c9a8b9fc5d27",
+        "title": "Social Media and Children's and Adolescents' Diets: A Systematic Review of the Underlying Social and Physiological Mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74ee8234dce39991b2b1",
+        "title": "Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4306b67d536967a6b9ab",
+        "title": "Evaluating Digital Health Services Quality via Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23256e232b78fab8ce4b",
+        "title": "Social Media and Health Communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71b48aa3b6e0204b2117",
+        "title": "Do fake followers mitigate influencers’ perceived influencing power on social media platforms? The mere number effect and boundary conditions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8eb6f91d588b7c103c83",
+        "title": "Like a natural mom: social media influencers and digital maternal ambivalence in Italy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6806524ef353c5675cf3",
+        "title": "The Influence of Social Media Digital Marketing Analysis on New Student Acceptance in a University",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e51e5c87ef9226504595",
+        "title": "Association Between Exposure to Tobacco Content on Social Media and Tobacco Use",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2fff7ec2f2d3a8da98d7",
+        "title": "Social Media Use and adolescents' mental health and well-being: An umbrella review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7203d9615a3bc4f236fd",
+        "title": "Digital transformation: A multidisciplinary perspective and future research agenda",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a2a11eff875e973032e",
+        "title": "Transformative privacy calculus: Conceptualizing the personalization‐privacy paradox on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb345a1fbdc5e11d9ca0",
+        "title": "Impact of social media marketing features on consumer's purchase decision in the fast-food industry: Brand trust as a mediator",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27102a3373cd9e210775",
+        "title": "The perceptions of social media users of digital detox apps considering personality traits",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5007f707e4de1873b777",
+        "title": "Interactive engagement through travel and tourism social media groups: A social facilitation theory perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93ddfb465da2103a01b5",
+        "title": "Digital Hoarding in Everyday Hedonic Social Media Use: The Roles of Fear of Missing out (FoMO) and Social Media Affordances",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26a0ac5809033e99beb9",
+        "title": "Exploring the influence of artificial intelligence technology on consumer repurchase intention: The mediation and moderation approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee55125b3967e6701baa",
+        "title": "Young children and screen-based media: The impact on cognitive and socioemotional development and the importance of parental mediation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f038e587d8134a3fcd12",
+        "title": "Essential Social Psychology",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fedf83f6ac47110841fb",
+        "title": "The effect of perceived security, perceived ease of use, and perceived usefulness on consumer behavioral intention through trust in digital payment platform",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06d7f8889231ef8d8afd",
+        "title": "Examining users’ news sharing behaviour on social media: role of perception of online civic engagement and dual social influences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_99d02426466cdb707a2e",
+        "title": "Investigating the impact of AI-powered technologies on Instagrammers’ purchase decisions in digitalization era–A study of the fashion and apparel industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d12367be94d7279a5cf6",
+        "title": "Loneliness across time and space",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e96044e2ad502a9d09ae",
+        "title": "Will virtual influencers overcome the uncanny valley? The moderating role of social cues",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5cbfeec4ffb3f0f4648b",
+        "title": "Virtually human: anthropomorphism in virtual influencer marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bb4d3540964c783fa74",
+        "title": "The Mobilizing Power of Influencers for Pro-Environmental Behavior Intentions and Political Participation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72e58028b816cbd80e10",
+        "title": "Leadership in the digital era: A review of who, what, when, where, and why",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2e65013b421da22b9ef",
+        "title": "Exploring ethical consumption of generation Z: theory of planned behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_babb3dbf74c694a2817f",
+        "title": "I am a virtual girl from Tokyo: Virtual influencers, digital-orientalism and the (Im)materiality of race and gender",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_446a8fc21bc5f0a7ae83",
+        "title": "The interaction effect of emoji and social media content on consumer engagement: A mixed approach on peer-to-peer accommodation brands",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f1d9b72e39d58775835",
+        "title": "Mainstreaming the Manosphere’s Misogyny Through Affective Homosocial Currencies: Exploring How Teen Boys Navigate the Andrew Tate Effect",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15738a9fa8934eaa5576",
+        "title": "Unlocking Trust Dynamics: An Exploration of Playfulness, Expertise, and Consumer Behavior in Virtual Influencer Marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73f474c6788b527f5ce3",
+        "title": "Effects of human versus virtual human influencers on the appearance anxiety of social media users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_071a56ff5ae8a7eeb9f0",
+        "title": "The effect of information adoption via social media on sustainable consumption intentions: The moderating influence of gender",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b02fb7aeb536f66315fa",
+        "title": "A multi-analytic approach to predict social media marketing influence on consumer purchase intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7f8aa213d9a1214cbad",
+        "title": "Politics – Simply Explained? How Influencers Affect Youth’s Perceived Simplification of Politics, Political Cynicism, and Political Interest",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f436380644f0a5ac535e",
+        "title": "Sweet escape: The role of empathy in social media engagement with human versus virtual influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c4b4c462392fe33a327",
+        "title": "The Adoption of Digital Technologies by Small and Medium-Sized Enterprises for Sustainability and Value Creation in Pakistan: The Application of a Two-Staged Hybrid SEM-ANN Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e354a45227bce49a4e0c",
+        "title": "Selling through social media influencers in influencer marketing: participation-based contract versus sales-based contract",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02c0649067b4fc688765",
+        "title": "Immigrant Influencers on TikTok: Diverse Microcelebrity Profiles and Algorithmic (In)Visibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30c0f96a43cb1da3fa51",
+        "title": "How humanlike is enough?: Uncover the underlying mechanism of virtual influencer endorsement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43e4f039faf4386351f7",
+        "title": "Trends in Influencer Marketing: A Review and Bibliometric Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df44926a036b4ca0cbf3",
+        "title": "\"I Felt a Little Crazy Following a 'Doll'\"",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_162374ac6d2d4bad22d7",
+        "title": "Social media use of adolescents who died by suicide: lessons from a psychological autopsy study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9f35eaa9793c50f8e1d",
+        "title": "Maximizing Online Marketing Strategy with Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f6b8e2522fc0e693d52",
+        "title": "Predicting the antecedents of consumers' intention toward purchase of mutual funds: A hybrid PLS‐SEM‐neural network approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_influencers",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 31,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 0,
+      "boundary_count": 19,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "social media influencers"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "social media influencers digital media"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(social media influencers) OR (social media influencers in digital media)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "social media influencers",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "social media influencers digital media",
+        "raw_count": 200,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(social media influencers) OR (social media influencers in digital media)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d48befb89b97888f499c",
+        "incoming_paper_id": "paper_d48befb89b97888f499c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d03abaf70b566d97f33",
+        "incoming_paper_id": "paper_4d03abaf70b566d97f33"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_271efa227e37e37dfa78",
+        "incoming_paper_id": "paper_271efa227e37e37dfa78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b3e2bb35b9209eea38bc",
+        "incoming_paper_id": "paper_b3e2bb35b9209eea38bc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8287384fbc87fa33fccb",
+        "incoming_paper_id": "paper_8287384fbc87fa33fccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bae56f69d00f88ca5c7a",
+        "incoming_paper_id": "paper_bae56f69d00f88ca5c7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8be4abf18d21311db932",
+        "incoming_paper_id": "paper_8be4abf18d21311db932"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e7b243235d066a78c98b",
+        "incoming_paper_id": "paper_e7b243235d066a78c98b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_11b898bdd01ab074af52",
+        "incoming_paper_id": "paper_11b898bdd01ab074af52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fae2612f954b1bce080e",
+        "incoming_paper_id": "paper_fae2612f954b1bce080e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68088f38101c3442f06b",
+        "incoming_paper_id": "paper_68088f38101c3442f06b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09061c3f6165ff2b38bd",
+        "incoming_paper_id": "paper_09061c3f6165ff2b38bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_39798c8fd583cc856c4c",
+        "incoming_paper_id": "paper_39798c8fd583cc856c4c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d48befb89b97888f499c",
+        "incoming_paper_id": "paper_d48befb89b97888f499c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8041ad582d5c4f28f5fa",
+        "incoming_paper_id": "paper_8041ad582d5c4f28f5fa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19c1bb0ca69438ac123a",
+        "incoming_paper_id": "paper_19c1bb0ca69438ac123a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_396fe2ba6d1913c46029",
+        "incoming_paper_id": "paper_396fe2ba6d1913c46029"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bf2ba041513df3a4623",
+        "incoming_paper_id": "paper_9bf2ba041513df3a4623"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74bf2468eeb3b395d2bc",
+        "incoming_paper_id": "paper_74bf2468eeb3b395d2bc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6bbd99f78f364800ae1f",
+        "incoming_paper_id": "paper_6bbd99f78f364800ae1f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b3e2bb35b9209eea38bc",
+        "incoming_paper_id": "paper_b3e2bb35b9209eea38bc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8f30ffc00f343438387b",
+        "incoming_paper_id": "paper_8f30ffc00f343438387b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_50c8695e7b9ff7f7496a",
+        "incoming_paper_id": "paper_50c8695e7b9ff7f7496a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_51cbfccda718a5624a1e",
+        "incoming_paper_id": "paper_51cbfccda718a5624a1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e0c721809b440fe22a2",
+        "incoming_paper_id": "paper_2e0c721809b440fe22a2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bae56f69d00f88ca5c7a",
+        "incoming_paper_id": "paper_bae56f69d00f88ca5c7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d2bcdbf7945072ea4b55",
+        "incoming_paper_id": "paper_d2bcdbf7945072ea4b55"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6285f791a503cc31a34f",
+        "incoming_paper_id": "paper_6285f791a503cc31a34f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_271efa227e37e37dfa78",
+        "incoming_paper_id": "paper_271efa227e37e37dfa78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d41effeac0180bee268d",
+        "incoming_paper_id": "paper_d41effeac0180bee268d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21edc69e8b0ed09a16ce",
+        "incoming_paper_id": "paper_21edc69e8b0ed09a16ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b91c3cb144f15592afb5",
+        "incoming_paper_id": "paper_b91c3cb144f15592afb5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d03abaf70b566d97f33",
+        "incoming_paper_id": "paper_4d03abaf70b566d97f33"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_22ea87d8decfc75d39a8",
+        "incoming_paper_id": "paper_22ea87d8decfc75d39a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a3a634560e43653cc7ed",
+        "incoming_paper_id": "paper_a3a634560e43653cc7ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29aef896900416c9ce56",
+        "incoming_paper_id": "paper_29aef896900416c9ce56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_80428fa4d2320ca46670",
+        "incoming_paper_id": "paper_80428fa4d2320ca46670"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8287384fbc87fa33fccb",
+        "incoming_paper_id": "paper_8287384fbc87fa33fccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fae2612f954b1bce080e",
+        "incoming_paper_id": "paper_fae2612f954b1bce080e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71b48aa3b6e0204b2117",
+        "incoming_paper_id": "paper_71b48aa3b6e0204b2117"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb14d740dca238f7302d",
+        "incoming_paper_id": "paper_bb14d740dca238f7302d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8be4abf18d21311db932",
+        "incoming_paper_id": "paper_8be4abf18d21311db932"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2de03694ebd7611e60df",
+        "incoming_paper_id": "paper_2de03694ebd7611e60df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_caa1bda86b8feef6d99f",
+        "incoming_paper_id": "paper_caa1bda86b8feef6d99f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74ad42da9d85410db7fb",
+        "incoming_paper_id": "paper_74ad42da9d85410db7fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31d5d9a2fd6b7e2ecfdb",
+        "incoming_paper_id": "paper_31d5d9a2fd6b7e2ecfdb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c0aee6db13dbba933e3f",
+        "incoming_paper_id": "paper_c0aee6db13dbba933e3f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d01084faf9d8ee87f5c4",
+        "incoming_paper_id": "paper_d01084faf9d8ee87f5c4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_11b898bdd01ab074af52",
+        "incoming_paper_id": "paper_11b898bdd01ab074af52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_46029dfdbd21e1a3f3ad",
+        "incoming_paper_id": "paper_46029dfdbd21e1a3f3ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e7b243235d066a78c98b",
+        "incoming_paper_id": "paper_e7b243235d066a78c98b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd72980356f64ab615dd",
+        "incoming_paper_id": "paper_bd72980356f64ab615dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_890d4e7710fc48d2321f",
+        "incoming_paper_id": "paper_890d4e7710fc48d2321f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6b7f81571db96c6b1f70",
+        "incoming_paper_id": "paper_6b7f81571db96c6b1f70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7203d9615a3bc4f236fd",
+        "incoming_paper_id": "paper_7203d9615a3bc4f236fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_402a9f2b033482c58f55",
+        "incoming_paper_id": "paper_402a9f2b033482c58f55"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_78c571b4e26c5a27308e",
+        "incoming_paper_id": "paper_78c571b4e26c5a27308e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89abe15685db16ba1873",
+        "incoming_paper_id": "paper_89abe15685db16ba1873"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dd21f14c46c8b68eff9b",
+        "incoming_paper_id": "paper_dd21f14c46c8b68eff9b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ffd577573db7282bcdd7",
+        "incoming_paper_id": "paper_ffd577573db7282bcdd7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e88c8da22ef2145d194e",
+        "incoming_paper_id": "paper_e88c8da22ef2145d194e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_233380f4bf97ddb3fb67",
+        "incoming_paper_id": "paper_233380f4bf97ddb3fb67"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_235fa52ffdd7c362f78b",
+        "incoming_paper_id": "paper_235fa52ffdd7c362f78b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e7b79ad3789516bc05ed",
+        "incoming_paper_id": "paper_e7b79ad3789516bc05ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09061c3f6165ff2b38bd",
+        "incoming_paper_id": "paper_09061c3f6165ff2b38bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71bed676014489344b2b",
+        "incoming_paper_id": "paper_71bed676014489344b2b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_37a81d35c30fa0bfc801",
+        "incoming_paper_id": "paper_37a81d35c30fa0bfc801"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5007f707e4de1873b777",
+        "incoming_paper_id": "paper_5007f707e4de1873b777"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fffaaacea43720c7130b",
+        "incoming_paper_id": "paper_fffaaacea43720c7130b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8e78fd95af083ec30e3d",
+        "incoming_paper_id": "paper_8e78fd95af083ec30e3d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53c4c38819d281166fcc",
+        "incoming_paper_id": "paper_53c4c38819d281166fcc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ba04f7db74693351432a",
+        "incoming_paper_id": "paper_ba04f7db74693351432a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e29f4f6e5b5c31ac8795",
+        "incoming_paper_id": "paper_e29f4f6e5b5c31ac8795"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5e4d84d7e8b8f32cf8a3",
+        "incoming_paper_id": "paper_5e4d84d7e8b8f32cf8a3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68088f38101c3442f06b",
+        "incoming_paper_id": "paper_68088f38101c3442f06b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_44bdfc02915792aaa9c9",
+        "incoming_paper_id": "paper_44bdfc02915792aaa9c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75028cbaee87100e14b5",
+        "incoming_paper_id": "paper_75028cbaee87100e14b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d5d7fecb5fbb15254a3a",
+        "incoming_paper_id": "paper_d5d7fecb5fbb15254a3a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_edc8223ff226eda18674",
+        "incoming_paper_id": "paper_edc8223ff226eda18674"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fff7ec2f2d3a8da98d7",
+        "incoming_paper_id": "paper_2fff7ec2f2d3a8da98d7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d9ffccbb799085a58afb",
+        "incoming_paper_id": "paper_d9ffccbb799085a58afb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_05b2e10c3ab867533a49",
+        "incoming_paper_id": "paper_05b2e10c3ab867533a49"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

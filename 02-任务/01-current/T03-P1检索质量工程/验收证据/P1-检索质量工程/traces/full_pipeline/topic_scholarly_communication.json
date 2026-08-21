@@ -1,0 +1,1293 @@
+{
+  "direction_id": "topic_scholarly_communication",
+  "labels": {
+    "zh": "学术传播",
+    "en": "scholarly communication"
+  },
+  "input": {
+    "selected_direction_id": "topic_scholarly_communication",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 9531.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 128,
+  "hard_gate_pass_count": 37,
+  "eligible_count": 1,
+  "boundary_count": 19,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "scholarly communication"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 28
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_scholarly_communication",
+      "research_direction": "scholarly communication",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY"
+      ]
+    },
+    "local_match": {
+      "label": "scholarly communication",
+      "aliases": [
+        "scholarly communication"
+      ],
+      "groups": [
+        "IM"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:263"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_scholarly_communication",
+        "labels": {
+          "zh": "学术传播",
+          "en": "scholarly communication"
+        },
+        "group_ids": [
+          "im"
+        ],
+        "synonyms": [
+          "学术传播",
+          "scholarly communication",
+          "scholarly communication in information management"
+        ],
+        "boundaries": {
+          "include": [
+            "scholarly communication",
+            "information management",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "scholarly communication",
+            "\"scholarly communication\" AND \"information management\""
+          ],
+          "semantic_scholar": [
+            "scholarly communication",
+            "scholarly communication information management"
+          ],
+          "crossref": [
+            "scholarly communication",
+            "学术传播"
+          ],
+          "dblp": [
+            "scholarly communication information science"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "scholarly communication",
+            "information management",
+            "information science"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IM_CORE",
+          "SCIENTOMETRICS",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_SCIENCE_POLICY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "scholarly communication information management",
+          "(scholarly communication) OR (scholarly communication in information management)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:263"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_b0f567ebc8cd7111e007",
+        "title": "Inclusive global scholarly communication: Toward a just and healthier information ecosystem",
+        "abstract": "Abstract Scholarly communication has long been a central topic in the field of information science. However, philosophical, and even perhaps some legal reflections, including the moral and ethical considerations of the health of information ecosystems, are fairly recent developments. In fact, recent topics are propelled by various contextual factors including economic, disciplinary, societal norms, and cultures. This article explores literature discussing the plight of scholars in low‐ and middle‐income countries that struggle to engage in scholarly communications in their fields. This topic has been explored for years, however, has often been addressed in disciplines outside of information science and knowledge management. This study posits that critical investigations lift this issue to one of justice and suggest a new critical lens that would rely on several existing lenses, including those developed to expand epistemic injustice, as well as exploring areas and perspectives that have not yet found their way into the mainstream literature. The analysis provides alternative approaches and discourse around the democratization of scholarly communications, all toward achieving a just and healthier global information ecosystem.",
+        "authors": [
+          "Angel Y. Ford",
+          "Daniel Gelaw Alemneh"
+        ],
+        "year": 2024,
+        "publication_date": "2024-05-02",
+        "published_date": "2024-05-02",
+        "language": "en",
+        "doi": "10.1002/asi.24899",
+        "url": "https://doi.org/10.1002/asi.24899",
+        "official_url": "https://doi.org/10.1002/asi.24899",
+        "source_title": "Journal of the Association for Information Science and Technology",
+        "journal": "Journal of the Association for Information Science and Technology",
+        "source_issns": [
+          "2330-1635",
+          "2330-1643"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 4,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12320",
+            "name": "Feminist Epistemology and Gender Studies",
+            "score": 0.9793000221252441
+          },
+          {
+            "id": "https://openalex.org/T11147",
+            "name": "Misinformation and Its Impacts",
+            "score": 0.9668999910354614
+          },
+          {
+            "id": "https://openalex.org/T10557",
+            "name": "Social Media and Politics",
+            "score": 0.9532999992370605
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4396585445"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/asi.24899",
+        "provider_payload_refs": [
+          "https://openalex.org/W4396585445"
+        ],
+        "journal_id": "journal_047",
+        "journal_ranking": [
+          "FMS_INT_A"
+        ],
+        "journal_pool_ids": [
+          "CS_IR",
+          "IM_CORE",
+          "SCIENTOMETRICS"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 78.34,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 34.87,
+            "recency": 60.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 78.34
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "scholarly communication",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 254266,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:02:39.930016+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3062.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Documentation",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0022-0418",
+        "query": "scholarly communication",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:45.365632+00:00",
+        "duration_ms": 1484.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1484.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Information Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0165-5515",
+        "query": "scholarly communication",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 9,
+        "accepted_before_dedupe": 9,
+        "queried_at": "2026-08-21T21:02:46.846507+00:00",
+        "duration_ms": 1407.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1407.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Journal of Informetrics",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1751-1577",
+        "query": "scholarly communication",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 9,
+        "queried_at": "2026-08-21T21:02:48.250723+00:00",
+        "duration_ms": 1187.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1187.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "学术传播",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:02:43.063095+00:00",
+        "duration_ms": 1156.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1156.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "学术传播",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 2,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:02:44.214358+00:00",
+        "duration_ms": 1141.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1141.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_f9b583fcb25718428432",
+        "title": "Scholarly knowledge graphs through structuring scholarly communication: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e87c92c6971ebdfc383",
+        "title": "A Scholarly Definition of Artificial Intelligence (AI): Advancing AI as a Conceptual Framework in Communication Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_333febef4cda45cc472f",
+        "title": "The ecosystem of research tools for scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e265b7e121699a74f8c",
+        "title": "Scholarly Communication and Machine-Generated Text: Is it Finally AI vs AI in Plagiarism Detection?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52af9a05925144d94f5c",
+        "title": "Living Papers: A Language Toolkit for Augmented Scholarly Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a416d7effcb8117c689",
+        "title": "Understanding the Publish-Review-Curate (PRC) Model of Scholarly Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bf8f5e6810eceaa177b",
+        "title": "FOREST Framework for Values-Driven Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97b1fc16c28b00b3c491",
+        "title": "Open Access, Scholarly Communication, and Open Science in Psychology: An Overview for Researchers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27c2a0f4b92f26028e13",
+        "title": "Common Scholarly Communication Infrastructure Landscape Review",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a408c968658dba1ba48",
+        "title": "Factors influencing the adoption and use of open access scholarly communication among researchers in India",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6a2c18e392e4d2bc332",
+        "title": "Use of Social Media for Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc061e038b6dffdd061f",
+        "title": "Pedagogical strategy for scholarly communication literacy and avoiding deceptive publishing practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84510c79d8ce6dbb7dd2",
+        "title": "Assessing the Use of Scholarly Communication Platforms in Zambia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6399257fc38677bf3394",
+        "title": "Preprint review services: Disrupting the scholarly communication landscape?",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_012b724d9677520b78f6",
+        "title": "Platformization of Scholarly Communication: Academic Social Networking Sites as New Infrastructures and Organizations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94be9334564db8d18d5f",
+        "title": "Scholarly Communication over a Decade of Publications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bef0494328c9855859c4",
+        "title": "How the Global South is reshaping scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_363607ec0e447d3947de",
+        "title": "The ART and LOGIC of scholarly communication: Effective skills for publication and beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75067b172fb2a47651d6",
+        "title": "Role-Based Smart Contract: An Intelligent System for Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7583878041481fd80916",
+        "title": "Scholarly Communication Competencies: An Analysis of Confidence among Australasia Library Staff",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2141f9674072760eec4",
+        "title": "AI in Scholarly Communication.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6ce799d11e357f5eaaa",
+        "title": "The Scholarly Communication Handbook",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1284adc238e60f516924",
+        "title": "Research Productivity Among Scholarly Communication Librarians",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b1e73f9ac843561d37",
+        "title": "Advancements and challenges in UAV-based communication networks: A comprehensive scholarly analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12dfeb7f29998069f2db",
+        "title": "Post or Perish? – Scholarly Communication Practices on Social Media in Times of Deep Mediatization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c3ab35311c1ef62ccc3",
+        "title": "Rethinking scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_077297e1029520be0ffa",
+        "title": "Scholarly communication librarianship and open knowledge",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95df9a8dc927582af5c5",
+        "title": "Generating scholarly content with ChatGPT: ethical challenges for medical publishing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a396ec5b3ad572a21f26",
+        "title": "The evolution and development landscape of scholarly communication based on the analysis of published articles",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f8ffffda0aff167094f",
+        "title": "Scholarly Communication: A Discipline that should be promoted",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97f8d0d6da96941bf680",
+        "title": "Fighting reviewer fatigue or amplifying bias? Considerations and recommendations for use of ChatGPT and other large language models in scholarly peer review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c487f04fd6832bde4628",
+        "title": "Every word you say: algorithmic mediation and implications of data-driven scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49cfe3bca46e9f93946b",
+        "title": "Scholarly Output on Computer Networks and Communication: A Ten-Year Bibliometric Analysis in Scopus (2013-2022)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1d9ded11b3e03a801b6",
+        "title": "AI in Higher Education: An Analysis of ChatGPT's Impact on Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b982a0a06f150d152673",
+        "title": "Leveraging Blockchain Technology for Secure and Transparent Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cf6ae60c203e10ce59f",
+        "title": "Mapping The Ethical Discourse in Generative Artificial Intelligence: A Topic Modeling Analysis of Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b78b3b23e938bb9e8e4",
+        "title": "The Pivotal Role of Bibliometric Analysis in Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7a65bcc0e98b73bcf68",
+        "title": "The Discourse of Scholarly Communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d7fb13a3d7a81ddcdc4",
+        "title": "Scholarly Communication: An Overview",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba1d3143bdff69e57781",
+        "title": "Helsinki Initiative of Multilingualism in Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b2e40741f13ce027c1a",
+        "title": "Abstracts as Poetry in Journal Articles: A Call for a New Paradigm in Scholarly Communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc810a3b0137728123f6",
+        "title": "AI and Authorship in Scholarly Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95c4ee69ae916a3cb61a",
+        "title": "The Role of Tanzanian Academic Libraries in Promoting Scholarly Communication through Open Access: A Literature Review",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b28f783c0969352aae47",
+        "title": "Community Governance In Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_567b4ed4371953920d13",
+        "title": "Strengthening research support: Scholarly communication training for liaison librarians",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03657e065aa4557c2ebf",
+        "title": "Engaging Graduate Medical and Health Sciences Students in Scholarly Communication: The Des Moines University Library’s Research & Scholarly Communication Peer Associate Program",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f297045c521213f8d8bc",
+        "title": "Scholarly Communication Practice and Strategies in Institutions of Higher Learning in Africa",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d80a49b0234396681268",
+        "title": "The Plurality of Institutional Approaches and Difficulties of Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46fae33d4534a67cad4a",
+        "title": "Predatory Practices and Scholarly Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b49318c521f3451026c5",
+        "title": "Virtual academic conferencing: a scoping review of 1984–2021 literature. Novel modalities vs. long standing challenges in scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_afd775950c3473c37d0f",
+        "title": "Scholarly communication practices and attitudes of Egyptian junior researchers: An exploratory study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e6b385a0a7152ab6b76",
+        "title": "The use of Generative Artificial Intelligence in Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cdc849185d89a508f954",
+        "title": "Openness, Integrity, Inclusion, and Innovation in Scholarly Communication: Competing or Complementary Forces?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d708955b92038514899d",
+        "title": "Toward a New World in Scholarly Communication: The 9th PUBMET2022 Conference on Scholarly Communication in the Context of Open Science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6020d7b204dfda83747c",
+        "title": "Scholarly communication between health informatics and information systems: A bibliometric study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1a596611c9dc64340d0",
+        "title": "Growing New Scholarly Communication Infrastructures for Sharing, Reusing, and Synthesizing Knowledge",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f89608f6b5715c92b66c",
+        "title": "Open Access as the Napster of Scholarly Communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6cf019356851fcb7ed2",
+        "title": "Evaluating the Factors Affecting Scholarly Communication of Journal Articles on Social and News Media: An Altmetric Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848c9e859958f4869d14",
+        "title": "Journal of Asian Pacific Communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8ef4ef5bd2638c5a90c",
+        "title": "Beyond Journals and Peer Review: Towards a More Flexible Ecosystem For Scholarly Communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc4122b891a8b5d0c481",
+        "title": "The Role of Scholarly Communication in Combating Disinformation and Misinformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_efe0d79dd7bc4cc66c0a",
+        "title": "Learning and Teaching about Scholarly Communication: Findings from Graduate Students and Mentors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_55c77ea50e949796b834",
+        "title": "A Research Ensemble of Humans, Machines, and Algorithms: Future Designs of Research and Scholarly Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e9ed4c5ddd3adc36efc",
+        "title": "Scholarly communication of early career researchers – organisation of international research with the participation of Poles and its Polish follow-up",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18c876f883c38583c0e5",
+        "title": "D-lib magazine pioneered web-based scholarly communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0d655d06c4bba09fd93",
+        "title": "Assessing scholarly communication competence in Zambian library professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a168d8641daac645afc",
+        "title": "Collaborative Networks: Integrating Blockchain for Enhanced Trust and Transparency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2dc9bc726f88edd8cc58",
+        "title": "Preprint review services: Disrupting the scholarly communication landscape?",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47f9b62a0575b65dfcf7",
+        "title": "Repositories transforming scholarly communication: an Insights special collection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c04f32a38a7a41a7bc17",
+        "title": "Translations and Open Science Exploring how translation technologies can support multilingualism in scholarly communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef930c9f81fabc3d97ce",
+        "title": "Value of institutional repositories and their role in ethical scholarly communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1570bf88265f162078f9",
+        "title": "Interventions in scholarly communication: Design lessons from public health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3722769e1b525f4f3b8b",
+        "title": "Techno-colonization of scholarly communication: A call to reclaim control",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0d445aa0c106479def06",
+        "title": "The Twitter Conference as a New Medium of Scholarly Communication (and How to Host One)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b1e3e56cb1e903dfe85",
+        "title": "Human inquiry in scholarly communication: Reconnecting with the foundations of research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dfee00f4c961b3a451a7",
+        "title": "Innovations in Scholarly Communication: The Impact of AI on Academic Publishing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d806123180590bfd957",
+        "title": "The Potential of Library Publishing Services to Transform Scholarly Communication in Ireland",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4827fdcc113b05a4c68",
+        "title": "Towards a foundation of scholarly records management: a framework to understand and organise scholarly communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7caf18b9578c9cb89c6",
+        "title": "Demystifying the way libraries support distance learning: a bibliometric analysis of scholarly communication in distance libraries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a797718030b45818d4b",
+        "title": "Reflections on the Global South's Impact on Scholarly Communication: Historical Context, Current Dynamics, and Future Pathways",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30502586cd78d96e74e6",
+        "title": "What Those Responsible for Open Infrastructure in Scholarly Communication Can Do about Possibly Predatory Practices",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_890ad1cbd969e1c594a4",
+        "title": "The structure of knowledge and dynamics of scholarly communication in mobile media and communication research, 2013–2022",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97cfa10980e521630feb",
+        "title": "The OPERAS-PL development strategy for local open scholarly communication",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8657fa521ec3eb8b02c",
+        "title": "Scholarly Communication Theories Used in Preventive Dentistry and Digital Technology",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9eb11b140c2e9e43fc15",
+        "title": "Data Papers in Scholarly Communication: Patterns of Publication and Citation Performance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1913fae59ac7e39ad981",
+        "title": "Recalibrating the scope of scholarly publishing: A modest step in a vast decolonization process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b588eca917e636022617",
+        "title": "Are automated accounts driving scholarly communication on Twitter? a case study of dissemination of COVID-19 publications",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_d107a39886e1590f6d60",
+        "title": "ChatGPT and a new academic reality: Artificial Intelligence‐written research papers and the ethics of the large language models in scholarly publishing",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Insurance Market Development, ICT Diffusion, and Economic Growth in Sub-Saharan Africa",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "retraction_or_correction",
+        "title": "Corrigendum to [‘To tweet or not to tweet?’ A study of the use of Twitter by scholarly book publishers in Social Sciences and Humanities’, Journal of Informetrics, Volume15, (2021) 1–14/Article101170]",
+        "journal": "Journal of Informetrics"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_scholarly_communication",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 128,
+      "deduplicated_count": 37,
+      "hard_gate_pass_count": 37,
+      "eligible_count": 1,
+      "boundary_count": 19,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "scholarly communication"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 28
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "scholarly communication",
+        "raw_count": 100,
+        "hard_gate_pass_count": 13,
+        "trigger": "initial"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_31bfdae3d54d355efa1d",
+        "incoming_paper_id": "paper_1c2d1b5787c5bb8270a1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cfc4902f86297cd84b6a",
+        "incoming_paper_id": "paper_cfc4902f86297cd84b6a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d597f6911bc387f77fc",
+        "incoming_paper_id": "paper_8d597f6911bc387f77fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a21d5a1ff36312ddd28b",
+        "incoming_paper_id": "paper_a21d5a1ff36312ddd28b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31bfdae3d54d355efa1d",
+        "incoming_paper_id": "paper_31bfdae3d54d355efa1d"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "26a7f109d8274972b0e8c02f697bdedd",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

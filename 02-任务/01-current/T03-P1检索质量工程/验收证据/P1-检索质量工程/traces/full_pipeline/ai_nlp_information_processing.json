@@ -1,0 +1,2765 @@
+{
+  "direction_id": "ai_nlp_information_processing",
+  "labels": {
+    "zh": "AI与NLP信息处理",
+    "en": "AI and NLP for information processing"
+  },
+  "input": {
+    "selected_direction_id": "ai_nlp_information_processing",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17734.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 327,
+  "hard_gate_pass_count": 29,
+  "eligible_count": 0,
+  "boundary_count": 7,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "AI and NLP for information processing"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "AI and NLP for information processing information management"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 27
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "ai_nlp_information_processing",
+      "research_direction": "AI与NLP信息处理",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ]
+    },
+    "local_match": {
+      "label": "AI与NLP信息处理",
+      "aliases": [
+        "AI / NLP for information processing",
+        "AI / NLP"
+      ],
+      "groups": [
+        "IM",
+        "IM × 数据 / AI / 知识管理"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:262",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:296"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "ai_nlp_information_processing",
+        "labels": {
+          "zh": "AI与NLP信息处理",
+          "en": "AI and NLP for information processing"
+        },
+        "group_ids": [
+          "im",
+          "im_data_ai_knowledge"
+        ],
+        "synonyms": [
+          "AI与NLP信息处理",
+          "AI and NLP for information processing",
+          "AI / NLP for information processing",
+          "AI / NLP",
+          "AI and NLP for information processing in information management"
+        ],
+        "boundaries": {
+          "include": [
+            "AI and NLP for information processing",
+            "information management",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "AI and NLP for information processing",
+            "\"AI and NLP for information processing\" AND \"information management\""
+          ],
+          "semantic_scholar": [
+            "AI and NLP for information processing",
+            "AI and NLP for information processing information management"
+          ],
+          "crossref": [
+            "AI and NLP for information processing",
+            "AI与NLP信息处理"
+          ],
+          "dblp": [
+            "AI and NLP for information processing information science"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "AI and NLP for information processing",
+            "information management",
+            "information science"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IM_CORE",
+          "SCIENTOMETRICS",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_SCIENCE_POLICY",
+          "CS_AI",
+          "CS_IR",
+          "CS_DATA",
+          "IS_CORE",
+          "PKU_CORE_2023_STATISTICS_METHODS"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "AI and NLP for information processing information management",
+          "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:262",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:296"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "AI and NLP for information processing",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 153791,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:02:36.047408+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3734.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "AI and NLP for information processing information management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 87888,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:02:39.805114+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3921.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 151199,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:02:43.756242+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3218.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "AI and NLP for information processing",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T21:02:49.636763+00:00",
+        "duration_ms": 1453.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1453.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "AI and NLP for information processing",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T21:02:51.100968+00:00",
+        "duration_ms": 1454.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1454.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Communications of the ACM",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0001-0782",
+        "query": "AI and NLP for information processing",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:52.542617+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "AI与NLP信息处理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 8,
+        "queried_at": "2026-08-21T21:02:47.213781+00:00",
+        "duration_ms": 1157.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1157.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "AI与NLP信息处理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 9,
+        "accepted_before_dedupe": 1,
+        "queried_at": "2026-08-21T21:02:48.381980+00:00",
+        "duration_ms": 1265.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1265.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_3e74c6621b367e071005",
+        "title": "Aion Framework: Dimensional Emergence of AI Consciousness, Observer-Induced Collapse, and Cosmological Portal Dynamics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_489865136cfc905ae273",
+        "title": "Natural language processing: state of the art, current trends and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9da93e2e27ad17e3dae4",
+        "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7513adbf6f061a6b9e54",
+        "title": "ChatGPT and Open-AI Models: A Preliminary Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e9ac0021c94ce055af3",
+        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36c9ec4c09ece23d9502",
+        "title": "Intelligent Clinical Documentation: Harnessing Generative AI for Patient-Centric Clinical Note Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c9665f6f27f4767e90e",
+        "title": "Revolutionizing education with AI: Exploring the transformative potential of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca60800029a914ce5b3c",
+        "title": "Frontiers in Artificial Intelligence and Applications",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6217ef7fd294f16bf97",
+        "title": "Chatting about ChatGPT: how may AI and GPT impact academia and libraries?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_580310e09080a22fe37e",
+        "title": "Using ChatGPT to write patient clinic letters",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_014d9e348ae057226b30",
+        "title": "Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a47051abf55ce7cfa60",
+        "title": "Artificial Intelligence-Enabled Intelligent Assistant for Personalized and Adaptive Learning in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a1490dfb060d5ec69ef",
+        "title": "The imperative for regulatory oversight of large language models (or generative AI) in healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848dae12570bc474dbb9",
+        "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_754b9993f1aa93c2ae6b",
+        "title": "The Role of AI in Hospitals and Clinics: Transforming Healthcare in the 21st Century",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1188582226ca19e0e2fe",
+        "title": "AI-Based Modeling: Techniques, Applications and Research Issues Towards Automation, Intelligent and Smart Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e5c9a83af181866de53",
+        "title": "ChatGPT and the rise of large language models: the new AI-driven infodemic threat in public health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54855aa5a37cc0b1d6",
+        "title": "Human-AI collaboration patterns in AI-assisted academic writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8d379b2a89e319fc87",
+        "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31133709c027298ed97d",
+        "title": "Shaping the Future of Education: Exploring the Potential and Consequences of AI and ChatGPT in Educational Settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_970343670146fab154d2",
+        "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df0c55a1bc265508b949",
+        "title": "Integrating Generative AI and IoT for Sustainable Smart Tourism Destinations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89c42d289d103906c435",
+        "title": "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_627e13da862bc2f0a41c",
+        "title": "Assessing the Accuracy and Reliability of AI-Generated Medical Responses: An Evaluation of the Chat-GPT Model",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbf67012bbabae4decbd",
+        "title": "Fusing Blockchain and AI With Metaverse: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0887d9b5527c6e79b609",
+        "title": "AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0302998f974e03d3a17",
+        "title": "Why Johnny Can’t Prompt: How Non-AI Experts Try (and Fail) to Design LLM Prompts",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85e6602c1ab15d89c915",
+        "title": "Exploring the opportunities and challenges of NLP models in higher education: is Chat GPT a blessing or a curse?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31a31cde56ac755d946c",
+        "title": "Applications of natural language processing and large language models in materials discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4eea226d6345341502c3",
+        "title": "A Survey of Text Representation and Embedding Techniques in NLP",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1af68d344580fdaf7a1c",
+        "title": "Evaluating the efficacy of AI content detection tools in differentiating between human and AI-generated text",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24128853752c964af8be",
+        "title": "Prompt Engineering in Large Language Models",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ad4907b5474a8e5c53c",
+        "title": "Impact of AI assistance on student agency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aec87e9aee336cb9844f",
+        "title": "Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8c6a62d18ec2a33e4a2",
+        "title": "Embracing the future of Artificial Intelligence in the classroom: the relevance of AI literacy, prompt engineering, and critical thinking in modern education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8849925a93bc2cbf3f9",
+        "title": "A large language model for electronic health records",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ae7591f6002b6351abc",
+        "title": "Post-hoc Interpretability for Neural NLP: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2463553e31c01232687c",
+        "title": "ChatGPT for healthcare services: An emerging stage for an innovative perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc35a457696301ac4cca",
+        "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca572f4c94c009c20227",
+        "title": "The promise and challenges of generative AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e669bc423268bf3223c2",
+        "title": "ChatGPT and the rise of generative AI: Threat to academic integrity?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ff5ca6ab618199a5744",
+        "title": "Bias in medical AI: Implications for clinical decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d443794a07032e9182b",
+        "title": "Neurosymbolic AI: the 3rd wave",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b552ccf99996fa47bedd",
+        "title": "Exploring LLMs Applications in Law: A Literature Review on Current Legal NLP Approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2365b78e516383d7850",
+        "title": "A Survey of Adversarial Defenses and Robustness in NLP",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9b9b8c7cdbbc90718c8",
+        "title": "A systematic review of Green AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19317fadc61ecc981ac3",
+        "title": "Artificial Intelligence (AI) and Internet of Medical Things (IoMT) Assisted Biomedical Systems for Intelligent Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bb0fcc0a5b071204f22",
+        "title": "The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af5d8a656fe0f9b34c5e",
+        "title": "Transformative effects of ChatGPT on modern education: Emerging Era of AI Chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_316a195fafaf2589ff1d",
+        "title": "AI in drug discovery and its clinical relevance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa24034355e8ee29679f",
+        "title": "Generative AI in Medicine and Healthcare: Promises, Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ac28f03fbd003942330",
+        "title": "Securing AI ‐based healthcare systems using blockchain technology: A state‐of‐the‐art systematic literature review and future research directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3962af578fb04b3fc7fb",
+        "title": "Natural language processing for innovation search – Reviewing an emerging non-human innovation intermediary",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40754fab64a0876b2527",
+        "title": "Is ChatGPT a General-Purpose Natural Language Processing Task Solver?",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9720a525fe73656f6f4",
+        "title": "Natural language processing applied to mental illness detection: a narrative review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac8e1a9fb71239162f7f",
+        "title": "Ethics of AI-Enabled Recruiting and Selection: A Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0092e8aff0362a246cc5",
+        "title": "AI-Enhanced Fintech communication: Leveraging Chatbots and NLP for efficient banking support",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2774fbce3740be5d2a4d",
+        "title": "Integration of IoT-Enabled Technologies and Artificial Intelligence (AI) for Smart City Scenario: Recent Advancements and Future Trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ce10e0967c2dd9202fb",
+        "title": "Clinical Decision Support and Natural Language Processing in Medicine: Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d3c90e83fe1dc971ecc",
+        "title": "The Role of ChatGPT in Data Science: How AI-Assisted Conversational Interfaces Are Revolutionizing the Field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e96867f0d75033e3af1",
+        "title": "A Review of the Trends and Challenges in Adopting Natural Language Processing Methods for Education Feedback Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f876e8b42104f4c8486",
+        "title": "End-to-End Transformer-Based Models in Textual-Based NLP",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8eaba2b867923e08a51",
+        "title": "The Benefits and Challenges of ChatGPT: An Overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec59b284c22803d8bcc5",
+        "title": "ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a963dd1791c4f368595",
+        "title": "From human writing to artificial intelligence generated text: examining the prospects and potential threats of ChatGPT in academic writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_203043a94f8ade9052aa",
+        "title": "Exploring AI-mediated informal digital learning of English (AI-IDLE): a mixed-method investigation of Chinese EFL learners’ AI adoption and experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa0a90e2895dbc332155",
+        "title": "AI-Assisted Deep NLP-Based Approach for Prediction of Fake News From Social Media Users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b1705db6bd84f1f3767",
+        "title": "Systematic review and meta-analysis of AI-based conversational agents for promoting mental health and well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0f242134651add4c2d5",
+        "title": "From Anecdotal Evidence to Quantitative Evaluation Methods: A Systematic Review on Evaluating Explainable AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92de2273fe9aaf5e3477",
+        "title": "Power to the People? Opportunities and Challenges for Participatory AI",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bef22751fcf18d1a7fe",
+        "title": "Generative AI in healthcare: an implementation science informed translational path on application, integration and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09b44b4c208ace3b4f40",
+        "title": "Is artificial intelligence improving the audit process?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7216d26273592c21d4ed",
+        "title": "AI in education: A review of personalized learning and educational technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_caaaac3ed908b0eff8f2",
+        "title": "Using Generative Artificial Intelligence for Language Education Research: Insights from Using OpenAI 's ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a36d3e7c6ec225753796",
+        "title": "AI adoption and diffusion in public administration: A systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79c8300319ab8edeba22",
+        "title": "AI-Driven Proactive Cloud Application Data Access Security",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03344ac081a81079a7e9",
+        "title": "A Survey on ChatGPT: AI–Generated Contents, Challenges, and Solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2f1f6009f29a6c2110b",
+        "title": "Transformative Potential of AI in Healthcare: Definitions, Applications, and Navigating the Ethical Landscape and Public Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74b3c5c030a82684df17",
+        "title": "The Future of AI in Medicine: A Perspective from a Chatbot",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4cb07eb053514557b65",
+        "title": "NLP techniques for automating responses to customer queries: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27764fb75c4c62687bc3",
+        "title": "Sentiment analysis using Twitter data: a comparative application of lexicon- and machine-learning-based approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_433505a2c3eae3ff070b",
+        "title": "Toward explainable AI (XAI) for mental health detection based on language behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4597689f92a3b43c03bc",
+        "title": "Analyzing patient experiences using natural language processing: development and validation of the artificial intelligence patient reported experience measure (AI-PREM)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4fcac2c1f74e20cfdce",
+        "title": "Distributing Accountability, Not Capability: Phase Separation and the LLM Workflow Quadrant in Autonomous AI Agent Architectures",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_152471e231fe8da54dd6",
+        "title": "On the use of AI-based tools like ChatGPT to support management research",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e420e8bf1a8743e7533",
+        "title": "Leveraging Generative AI and Large Language Models: A Comprehensive Roadmap for Healthcare Integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b28cc6cb55e2c34180dd",
+        "title": "Natural language processing in clinical neuroscience and psychiatry: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_671771e4784b2a421b2a",
+        "title": "Measuring the Carbon Intensity of AI in Cloud Instances",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_705a49e7f0b1c5f5d6a6",
+        "title": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01db4915e3422c719c59",
+        "title": "AI-augmented Business Process Management Systems: A Research Manifesto",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b12ac221da3f9b9898fe",
+        "title": "NLP-Based Automated Compliance Checking of Data Processing Agreements Against GDPR",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79925a80b7d85618b8e5",
+        "title": "Design and Development of Chatbot Based on Reinforcement Learning",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65846a722bfc28f34c9b",
+        "title": "Application of Natural Language Processing (NLP) in Detecting and Preventing Suicide Ideation: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a94a8d15959620bde16",
+        "title": "BNAI, NO-TOKEN, and MIND-UNITY: Pillars of a Systemic Revolution in Artificial Intelligence",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_487e283ada2cd23f2fea",
+        "title": "In search of artificial intelligence (AI) literacy in teacher education: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7dbf541f804324bc06de",
+        "title": "Can Generative AI improve social science?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09877d27342d59b996be",
+        "title": "An artificial intelligence algorithmic approach to ethical decision-making in human resource management processes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b15a4600b6c2c842ab9",
+        "title": "Enriching Location Representation with Detailed Semantic Information",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f0eb45ffea548ee3cd9",
+        "title": "Generative artificial intelligence in supply chain and operations management: a capability-based framework for analysis and implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd7af33ba2843e73cb16",
+        "title": "A survey on sentiment analysis methods, applications, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7516988f9b6c8ee51a6d",
+        "title": "Are Transformers Effective for Time Series Forecasting?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90103ed224531dfd88e3",
+        "title": "Large language models for generative information extraction: a survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff0a62d9637cebe62d8e",
+        "title": "A GPT-Powered Assistant for Real-Time Interaction with Building Information Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aaee20dc0e9874021587",
+        "title": "Adapted large language models can outperform medical experts in clinical text summarization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fcf8300ac02f22f8d977",
+        "title": "Federated learning-based AI approaches in smart healthcare: concepts, taxonomies, challenges and open issues",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d04100269e63f5204a15",
+        "title": "A systematic review of industrial wastewater management: Evaluating challenges and enablers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0db4875ddfbb81f48f31",
+        "title": "Survey on Explainable AI: From Approaches, Limitations and Applications Aspects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_caf6da6a8437797137d6",
+        "title": "Systematic Review on AI-Blockchain Based E-Healthcare Records Management Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f89b3da545f558b9fde0",
+        "title": "Synthetic Lies: Understanding AI-Generated Misinformation and Evaluating Algorithmic and Human Solutions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e0fd8cb7074c8263d77",
+        "title": "AI-Driven Clinical Decision Support Systems: An Ongoing Pursuit of Potential",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80a41768fb9183a2c782",
+        "title": "A Comparative Analysis on Suicidal Ideation Detection Using NLP, Machine, and Deep Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d885b803cf41bdfe5ef7",
+        "title": "Artificial intelligence, machine learning and deep learning in advanced robotics, a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b117942029a875feb3",
+        "title": "The Crowdless Future? Generative AI and Creative Problem-Solving",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_afb89dbd3fc4b609e735",
+        "title": "THE ROLE OF AI IN MARKETING PERSONALIZATION: A THEORETICAL EXPLORATION OF CONSUMER ENGAGEMENT STRATEGIES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c1466ea326cf3d9a3f4",
+        "title": "Integrated applications of building information modeling and artificial intelligence techniques in the AEC/FM industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ba42393a0096cdd8136",
+        "title": "Applications of Explainable Artificial Intelligence in Finance—a systematic review of Finance, Information Systems, and Computer Science literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_adde4099ae9834c9d377",
+        "title": "AI Agents vs. Agentic AI: A Conceptual taxonomy, applications and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5751d3454bc418cf600",
+        "title": "A comprehensive literature review of the applications of AI techniques through the lifecycle of industrial equipment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5eade1eb9b3bdd840b3",
+        "title": "Artificial Intelligence in Project Management: A Study of The Role of Ai-Powered Chatbots in Project Stakeholder Engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6b8e75c1f1b541a3a93",
+        "title": "Ethics & AI: A Systematic Review on Ethical Concerns and Related Strategies for Designing with AI in Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e2890b9378f8a0aefc1",
+        "title": "CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d0a9838bcc0ba697960",
+        "title": "Is ChatGPT Leading Generative AI? What is Beyond Expectations?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_892190291266e952b459",
+        "title": "Artificial intelligence (AI) technology in OpenAI ChatGPT application: A review of ChatGPT in writing English essay",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c462b8358bda48f9a89",
+        "title": "A Review of AI-Driven Conversational Chatbots Implementation Methodologies and Challenges (1999–2022)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d2bcc3acd31dc2fad0a",
+        "title": "A Review of the Role of Artificial Intelligence in Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_998fc3b92b580bc3517a",
+        "title": "How will AI text generation and processing impact sustainability reporting? Critical analysis, a conceptual framework and avenues for future research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71d6b06062e0695227cf",
+        "title": "A survey of multimodal information fusion for smart healthcare: Mapping the journey from data to wisdom",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f20b93a6362cbd7ce296",
+        "title": "AI-based fog and edge computing: A systematic review, taxonomy and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65b795e3dcb875dc823c",
+        "title": "BPPV Information on Google Versus AI (ChatGPT)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35c07431fe0ae647825f",
+        "title": "Generative artificial intelligence in innovation management: A preview of future research developments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8e494494925ef7894d9",
+        "title": "AI Chatbots in Digital Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3da761e1522800f2d350",
+        "title": "Clinicians’ Views on Using Artificial Intelligence in Healthcare: Opportunities, Challenges, and Beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_074180483887ee060ac8",
+        "title": "Machine Learning and AI in Cancer Prognosis, Prediction, and Treatment Selection: A Critical Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae51e99f87676ce71689",
+        "title": "Critical thinking in the AI era: An exploration of EFL students’ perceptions, benefits, and limitations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dfbabac3b85b02417ed6",
+        "title": "Large Process Models: A Vision for Business Process Management in the Age of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd32d4d735586cd0a5de",
+        "title": "E-commerce and consumer behavior: A review of AI-powered personalization and market trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c105ec3f13c2ed3650e",
+        "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4959fe0626e9a6ff41b6",
+        "title": "Current AI technologies in cancer diagnostics and treatment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_41254527750afa254fb9",
+        "title": "From ChatGPT-3 to GPT-4: A Significant Advancement in AI-Driven NLP Tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6aeff76a9e35a2a6ecf9",
+        "title": "Breast cancer risk prediction using machine learning: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_003f8ef2b78a0ed027bd",
+        "title": "Artificial Intelligence-Enabled Intelligent Assistant for Personalized and Adaptive Learning in Higher Education",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a75b2b8c9c69d2647b63",
+        "title": "AI Knows You: Deep Learning Model for Prediction of Extroversion Personality Trait",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57a848aeccc1bbbd1f5c",
+        "title": "A Comprehensive Review on the Use of Artificial Intelligence in Mental Health Care",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c702d74cd504a64c5d9c",
+        "title": "Application of ChatGPT in Business Management and Strategic Decision Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d83b52f1e59f5ea29f67",
+        "title": "Ethically Responsible Machine Learning in Fintech",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_007f1eae9eac47563ddc",
+        "title": "Automated clinical coding: what, why, and where we are?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f905e95ba1bf61a34763",
+        "title": "Applications of Artificial Intelligence to Diagnosis of Neurodegenerative Diseases",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56728924702db6947477",
+        "title": "Crisis Communication in the Age of AI",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b4a8f00c5d833b135d66",
+        "title": "Future Trends and Emerging Technologies in AI and Libraries",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0118f5950ac5308975a4",
+        "title": "Can AI replace psychotherapists? Exploring the future of mental health care",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60b73940d27d68f95d88",
+        "title": "Artificial Intelligence: A New Frontier in Rare Disease Early Diagnosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0ec79d763d05b0a1a7b",
+        "title": "A regulatory challenge for natural language processing (NLP)‐based tools such as ChatGPT to be legally used for healthcare decisions. Where are we now?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d3fec0e175ff0a414324",
+        "title": "Toxicity in chatgpt: Analyzing persona-assigned language models",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cddda97147a220f1795b",
+        "title": "An Information Management Model for Addressing Residents’ Complaints through Artificial Intelligence Techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5566d03197cd57ca49f9",
+        "title": "Exploring Various Government Health Schemes and the Use of AI in the Changing Dynamics of India",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_655ec903d52a54fa9603",
+        "title": "ADVANCED ANALYTICS AND MACHINE LEARNING FOR REVENUE OPTIMIZATION IN THE HOSPITALITY INDUSTRY: A COMPREHENSIVE REVIEW OF FRAMEWORKS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9bb0ff30b5fa2638bb2",
+        "title": "Dynamic NLP Enabled Chatbot for Rural Health Care in India",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edab5cd109c170322456",
+        "title": "Generative AI Use in the Construction Industry",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53b28d7645cfbabfe931",
+        "title": "An Automated Platform for Gathering and Managing Open-Source Cyber Threat Intelligence",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df3bb63cf065afbe6673",
+        "title": "Business Intelligence and Business Analytics With Artificial Intelligence and Machine Learning: Trends, Techniques, and Opportunities",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abf197762f951eb034b2",
+        "title": "Intelligent information management enables quality-by-design in pharmaceutical production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cae5c66dd9be4a4450f",
+        "title": "A Secure and Privacy-Preserving Blockchain-Based XAI-Justice System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de2241fc9eca7be0d840",
+        "title": "Approach to machine learning for extraction of real-world data variables from electronic health records",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0909739ca0845e5f0992",
+        "title": "Role of AI for Smart Health Diagnosis and Treatment",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60fb49a4c105189626b6",
+        "title": "Can ChatGPT provide intelligent diagnoses? A comparative study between predictive models and ChatGPT to define a new medical diagnostic bot",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94474e3dd4a4c0e400a0",
+        "title": "Industry 4.0 Technological Advancement in the Food and Beverage Manufacturing Industry in South Africa—Bibliometric Analysis via Natural Language Processing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e05dc2083ee226dc1f5",
+        "title": "Leading-edge Artificial Intelligence (AI)-Powered Financial Forecasting for Shaping the Future of Investment Strategies",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d270eceb39d38a1d10a",
+        "title": "Enhancing Information Technology Governance in Universities: A Smart Chatbot System based on Information Technology Infrastructure Library",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70a1e1168bc377a09ee4",
+        "title": "Mobile/VR/Robotics/IoT-Based Chatbots and Intelligent Personal Assistants for Social Inclusion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8b3c7c384c43645b0b3",
+        "title": "The Power of Artificial Intelligence for the Next‐Generation Oil and Gas Industry",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9578b11bd04afacc46e",
+        "title": "AI-Powered Chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8abfecb3edc9aec371a9",
+        "title": "Natural Language Processing Applications for Computer-Aided Diagnosis in Oncology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_620cac7fc25712dcada2",
+        "title": "A SYSTEMATIC REVIEW OF AI-ENHANCED DECISION SUPPORT TOOLS IN INFORMATION SYSTEMS: STRATEGIC APPLICATIONS IN SERVICE-ORIENTED ENTERPRISES AND ENTERPRISE PLANNING",
+        "reasons": [
+          "missing_source_title",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_677a975b9cf47ff9675f",
+        "title": "A machine learning application for raising WASH awareness in the times of COVID-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8e9a016e501b02177d5",
+        "title": "Natural Language Processing Basics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_489a9bdf2d2e4d467fe3",
+        "title": "Artificial Intelligence in Obsessive-Compulsive Disorder: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a85adcd8c7061cb5fdd3",
+        "title": "Business Management Transformation Through the Influence of Artificial Intelligence",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc9e219d498dd079a18b",
+        "title": "Development and feasibility testing of an artificially intelligent chatbot to answer immunization-related queries of caregivers in Pakistan: A mixed-methods study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f80080513cae12025b25",
+        "title": "Integrating Self-Attention Mechanisms For Contextually Relevant Information In Product Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3bb69856bee46e72650f",
+        "title": "A COMPREHENSIVE REVIEW OF THE IMPACT OF ARTIFICIAL INTELLIGENCE ON MODERN ACCOUNTING PRACTICES AND FINANCIAL REPORTING",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1f93ce01c07819a6ec7",
+        "title": "Enhancing Employee Engagement Through Artificial Intelligence",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95cb417c00a952060375",
+        "title": "Highway Construction Safety Analysis Using Large Language Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a209c7d535a1c9787b6",
+        "title": "The Rise of AI Chatbots in Hearing Health Care",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9919ca3c0bdf14e9440",
+        "title": "Benchmark datasets driving artificial intelligence development fail to capture the needs of medical professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9acf54838c65f9c3262",
+        "title": "Enhancing Organisational Intelligence Integration of Artificial Intelligence and Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64654a05414ffb353b87",
+        "title": "AI for Threat Detection and Mitigation: Using AI to identify and respond to cybersecurity threats in real-time.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34934e22d46a31487be6",
+        "title": "Artificial Intelligence (AI) in Construction Safety: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7296568c333d74b44b59",
+        "title": "A Survey (NLP) Natural Language Processing and Transactions on (NNL) Neural Networks and learning Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff9bd5e51ac0d16b736f",
+        "title": "DeepG2P: Fusing Multi-Modal Data to Improve Crop Production",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e4bddc82284c49a922a8",
+        "title": "Advanced Video Transcription And Summarization A Synergy of Langchain, Language Models, And VectorDB with Mozilla Deep Speech",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e4e25031d01fd91a3fb",
+        "title": "Rag-Fusion: A New Take on Retrieval Augmented Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_098b3c399d510b0d023e",
+        "title": "A REVIEW OF UTILIZING NATURAL LANGUAGE PROCESSING AND AI FOR ADVANCED DATA VISUALIZATION IN REAL-TIME ANALYTICS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0d4ebce490090d46022",
+        "title": "Vision, status, and research topics of Natural Language Processing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85f156bb8cdf9d375015",
+        "title": "Recent approaches of artificial intelligence in intensive care unit: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3fa1fbf4717a37bf02ad",
+        "title": "Cyber Attack Prediction: From Traditional Machine Learning to Generative Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_98c46a53a74e360a39f1",
+        "title": "Using Natural Language Processing to Improve Safety in the Internet of Vehicles",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f66eb6092977e73fdeba",
+        "title": "AI-powered municipal solid waste management: a comprehensive review from generation to utilization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_911e350fb2f69d13fb98",
+        "title": "Aligning community outreach initiatives with SDGs in a higher education institution with artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_210a730e89a7fb743070",
+        "title": "Methodology for Automated Master Data Management using Artificial Intelligence",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78a92113fb31c011b5ae",
+        "title": "Artificial intelligence applications in education: Natural language processing in detecting misconceptions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30d34b484643a93d4e06",
+        "title": "Natural Language Processing (NLP) Application For Classifying and Managing Tacit Knowledge in Revolutionizing AI-Driven Library",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a211c44771c4ef949eb",
+        "title": "Artificial Intelligence and Machine Learning in Tropical Disease Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_651e167d9d299630d003",
+        "title": "Artificial intelligence in soil science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_170884e5dc204c8fd52e",
+        "title": "Using deeply time-series semantics to assess depressive symptoms based on clinical interview speech",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17883f4e401293664a46",
+        "title": "Transforming Financial Reporting with AI: Enhancing Accuracy and Timeliness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b310293c40ba510bc910",
+        "title": "AI-augmented construction cost estimation: an ensemble Natural Language Processing (NLP) model to align quantity take-offs with cost indexes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44eb8b323d9c3c6fa746",
+        "title": "Implementing Artificial Intelligence Techniques to Predict Environmental Impacts: Case of Construction Products",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46537bcdd68381b1f560",
+        "title": "The Health ChatBots in Telemedicine: Intelligent Dialog System for Remote Support",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac07495d3f2e6bf26e66",
+        "title": "Semantic knowledge management system for design documentation with heterogeneous data using machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b7450e9fd7023b43458",
+        "title": "Artificial Intelligence Agent to Identify the Correct Human Resources",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46957339a9ad0fdaf429",
+        "title": "Applications of deep learning in Alzheimer’s disease: a systematic literature review of current trends, methodologies, challenges, innovations, and future directions",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b995e179d8c6f3f4249",
+        "title": "Application of Grey Relational Analysis for Utilizing Artificial Intelligence Methods in Aviation Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Innovative benefits of China’s low-carbon pilot policy",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Do government subsidies effectively reduce corporate carbon emissions",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Insurance Market Development, ICT Diffusion, and Economic Growth in Sub-Saharan Africa",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Key Drivers of Economic Growth in Developing Countries: A Comparative Study of Turkey and Bangladesh",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Incorporating Structural Information into Legal Case Retrieval",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Relevance Feedback with Brain Signals",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "User Immersion-aware Short Video Recommendation",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "An Intent Taxonomy of Legal Case Retrieval",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "A Comprehensive Survey on Multi-modal Conversational Emotion Recognition with Deep Learning",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "A Reusable Model-agnostic Framework for Faithfully Explainable Recommendation and System Scrutability",
+        "journal": "ACM Transactions on Information Systems"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Intent-aware Recommendation Based on Principal Component Analysis",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "GFairHint: Improving Individual Fairness for Graph Neural Networks via Fairness Hint",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Toward Quality of Information Aware Distributed Machine Learning",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Subgraph Federated Learning with Information Bottleneck Constrained Generative Learning",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Information-aware Multi-view Outlier Detection",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "CORE: Data Augmentation for Link Prediction via Information Bottleneck",
+        "journal": "ACM Transactions on Knowledge Discovery from Data"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "ai_nlp_information_processing",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 327,
+      "deduplicated_count": 29,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 0,
+      "boundary_count": 7,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "AI and NLP for information processing"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "AI and NLP for information processing information management"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 27
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "AI and NLP for information processing",
+        "raw_count": 100,
+        "hard_gate_pass_count": 1,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "AI and NLP for information processing information management",
+        "raw_count": 200,
+        "hard_gate_pass_count": 2,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(AI and NLP for information processing) OR (AI and NLP for information processing in information management)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 3,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_489865136cfc905ae273",
+        "incoming_paper_id": "paper_489865136cfc905ae273"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_7e9ac0021c94ce055af3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a47051abf55ce7cfa60",
+        "incoming_paper_id": "paper_6a47051abf55ce7cfa60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c9665f6f27f4767e90e",
+        "incoming_paper_id": "paper_0c9665f6f27f4767e90e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7513adbf6f061a6b9e54",
+        "incoming_paper_id": "paper_7513adbf6f061a6b9e54"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36c9ec4c09ece23d9502",
+        "incoming_paper_id": "paper_36c9ec4c09ece23d9502"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_754b9993f1aa93c2ae6b",
+        "incoming_paper_id": "paper_754b9993f1aa93c2ae6b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06372867271a6588c2ab",
+        "incoming_paper_id": "paper_06372867271a6588c2ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_848dae12570bc474dbb9",
+        "incoming_paper_id": "paper_848dae12570bc474dbb9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a1490dfb060d5ec69ef",
+        "incoming_paper_id": "paper_6a1490dfb060d5ec69ef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1188582226ca19e0e2fe",
+        "incoming_paper_id": "paper_1188582226ca19e0e2fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf54855aa5a37cc0b1d6",
+        "incoming_paper_id": "paper_bf54855aa5a37cc0b1d6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da8d379b2a89e319fc87",
+        "incoming_paper_id": "paper_da8d379b2a89e319fc87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_152471e231fe8da54dd6",
+        "incoming_paper_id": "paper_152471e231fe8da54dd6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_627e13da862bc2f0a41c",
+        "incoming_paper_id": "paper_627e13da862bc2f0a41c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cc35a457696301ac4cca",
+        "incoming_paper_id": "paper_cc35a457696301ac4cca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89c42d289d103906c435",
+        "incoming_paper_id": "paper_89c42d289d103906c435"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_01db4915e3422c719c59",
+        "incoming_paper_id": "paper_01db4915e3422c719c59"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbf67012bbabae4decbd",
+        "incoming_paper_id": "paper_bbf67012bbabae4decbd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b0302998f974e03d3a17",
+        "incoming_paper_id": "paper_b0302998f974e03d3a17"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85e6602c1ab15d89c915",
+        "incoming_paper_id": "paper_85e6602c1ab15d89c915"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c8c6a62d18ec2a33e4a2",
+        "incoming_paper_id": "paper_c8c6a62d18ec2a33e4a2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1af68d344580fdaf7a1c",
+        "incoming_paper_id": "paper_1af68d344580fdaf7a1c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3ad4907b5474a8e5c53c",
+        "incoming_paper_id": "paper_3ad4907b5474a8e5c53c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19317fadc61ecc981ac3",
+        "incoming_paper_id": "paper_19317fadc61ecc981ac3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aec87e9aee336cb9844f",
+        "incoming_paper_id": "paper_aec87e9aee336cb9844f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e669bc423268bf3223c2",
+        "incoming_paper_id": "paper_e669bc423268bf3223c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca572f4c94c009c20227",
+        "incoming_paper_id": "paper_ca572f4c94c009c20227"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4ff5ca6ab618199a5744",
+        "incoming_paper_id": "paper_4ff5ca6ab618199a5744"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec59b284c22803d8bcc5",
+        "incoming_paper_id": "paper_ec59b284c22803d8bcc5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8e420e8bf1a8743e7533",
+        "incoming_paper_id": "paper_8e420e8bf1a8743e7533"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3e96867f0d75033e3af1",
+        "incoming_paper_id": "paper_3e96867f0d75033e3af1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bb0fcc0a5b071204f22",
+        "incoming_paper_id": "paper_9bb0fcc0a5b071204f22"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a36d3e7c6ec225753796",
+        "incoming_paper_id": "paper_a36d3e7c6ec225753796"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9720a525fe73656f6f4",
+        "incoming_paper_id": "paper_e9720a525fe73656f6f4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2774fbce3740be5d2a4d",
+        "incoming_paper_id": "paper_2774fbce3740be5d2a4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ac8e1a9fb71239162f7f",
+        "incoming_paper_id": "paper_ac8e1a9fb71239162f7f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a8eaba2b867923e08a51",
+        "incoming_paper_id": "paper_a8eaba2b867923e08a51"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f4fcac2c1f74e20cfdce",
+        "incoming_paper_id": "paper_f4fcac2c1f74e20cfdce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1b1705db6bd84f1f3767",
+        "incoming_paper_id": "paper_1b1705db6bd84f1f3767"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f876e8b42104f4c8486",
+        "incoming_paper_id": "paper_5f876e8b42104f4c8486"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_671771e4784b2a421b2a",
+        "incoming_paper_id": "paper_671771e4784b2a421b2a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_203043a94f8ade9052aa",
+        "incoming_paper_id": "paper_203043a94f8ade9052aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_92de2273fe9aaf5e3477",
+        "incoming_paper_id": "paper_92de2273fe9aaf5e3477"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09b44b4c208ace3b4f40",
+        "incoming_paper_id": "paper_09b44b4c208ace3b4f40"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c2f1f6009f29a6c2110b",
+        "incoming_paper_id": "paper_c2f1f6009f29a6c2110b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03344ac081a81079a7e9",
+        "incoming_paper_id": "paper_03344ac081a81079a7e9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_580310e09080a22fe37e",
+        "incoming_paper_id": "paper_580310e09080a22fe37e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b12ac221da3f9b9898fe",
+        "incoming_paper_id": "paper_b12ac221da3f9b9898fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a4cb07eb053514557b65",
+        "incoming_paper_id": "paper_a4cb07eb053514557b65"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_487e283ada2cd23f2fea",
+        "incoming_paper_id": "paper_487e283ada2cd23f2fea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_65846a722bfc28f34c9b",
+        "incoming_paper_id": "paper_65846a722bfc28f34c9b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df0c55a1bc265508b949",
+        "incoming_paper_id": "paper_df0c55a1bc265508b949"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b552ccf99996fa47bedd",
+        "incoming_paper_id": "paper_b552ccf99996fa47bedd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a47051abf55ce7cfa60",
+        "incoming_paper_id": "paper_6a47051abf55ce7cfa60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca60800029a914ce5b3c",
+        "incoming_paper_id": "paper_ca60800029a914ce5b3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_580310e09080a22fe37e",
+        "incoming_paper_id": "paper_580310e09080a22fe37e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3da761e1522800f2d350",
+        "incoming_paper_id": "paper_3da761e1522800f2d350"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24128853752c964af8be",
+        "incoming_paper_id": "paper_24128853752c964af8be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2463553e31c01232687c",
+        "incoming_paper_id": "paper_2463553e31c01232687c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff0a62d9637cebe62d8e",
+        "incoming_paper_id": "paper_ff0a62d9637cebe62d8e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a5eade1eb9b3bdd840b3",
+        "incoming_paper_id": "paper_a5eade1eb9b3bdd840b3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31a31cde56ac755d946c",
+        "incoming_paper_id": "paper_31a31cde56ac755d946c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf36b711cd20398abad1",
+        "incoming_paper_id": "paper_bf36b711cd20398abad1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df0c55a1bc265508b949",
+        "incoming_paper_id": "paper_df0c55a1bc265508b949"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_caaaac3ed908b0eff8f2",
+        "incoming_paper_id": "paper_caaaac3ed908b0eff8f2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06372867271a6588c2ab",
+        "incoming_paper_id": "paper_06372867271a6588c2ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_79925a80b7d85618b8e5",
+        "incoming_paper_id": "paper_79925a80b7d85618b8e5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9ac28f03fbd003942330",
+        "incoming_paper_id": "paper_9ac28f03fbd003942330"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3962af578fb04b3fc7fb",
+        "incoming_paper_id": "paper_3962af578fb04b3fc7fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_27764fb75c4c62687bc3",
+        "incoming_paper_id": "paper_27764fb75c4c62687bc3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3ce10e0967c2dd9202fb",
+        "incoming_paper_id": "paper_3ce10e0967c2dd9202fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b28cc6cb55e2c34180dd",
+        "incoming_paper_id": "paper_b28cc6cb55e2c34180dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4597689f92a3b43c03bc",
+        "incoming_paper_id": "paper_4597689f92a3b43c03bc"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_a5eade1eb9b3bdd840b3",
+          "paper_a9578b11bd04afacc46e"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cc35a457696301ac4cca",
+        "incoming_paper_id": "paper_cc35a457696301ac4cca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b552ccf99996fa47bedd",
+        "incoming_paper_id": "paper_b552ccf99996fa47bedd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_433505a2c3eae3ff070b",
+        "incoming_paper_id": "paper_433505a2c3eae3ff070b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_489865136cfc905ae273",
+        "incoming_paper_id": "paper_489865136cfc905ae273"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0092e8aff0362a246cc5",
+        "incoming_paper_id": "paper_0092e8aff0362a246cc5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aa0a90e2895dbc332155",
+        "incoming_paper_id": "paper_aa0a90e2895dbc332155"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

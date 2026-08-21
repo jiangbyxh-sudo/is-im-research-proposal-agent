@@ -1,0 +1,2971 @@
+{
+  "direction_id": "technology_adoption",
+  "labels": {
+    "zh": "技术与AI采纳",
+    "en": "technology and AI adoption"
+  },
+  "input": {
+    "selected_direction_id": "technology_adoption",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 23203.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 345,
+  "hard_gate_pass_count": 52,
+  "eligible_count": 2,
+  "boundary_count": 8,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "technology and AI adoption"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "technology and AI adoption information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(technology and AI adoption) OR (technology and AI adoption in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_COMPLETE",
+      "returned_rows": 45
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "technology_adoption",
+      "research_direction": "技术与AI采纳",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "技术与AI采纳",
+      "aliases": [
+        "AI adoption",
+        "technology adoption"
+      ],
+      "groups": [
+        "IS",
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:51",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:166"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "technology_adoption",
+        "labels": {
+          "zh": "技术与AI采纳",
+          "en": "technology and AI adoption"
+        },
+        "group_ids": [
+          "is",
+          "is_psychology"
+        ],
+        "synonyms": [
+          "技术与AI采纳",
+          "technology and AI adoption",
+          "AI adoption",
+          "technology adoption",
+          "technology and AI adoption in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "technology and AI adoption",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "technology and AI adoption",
+            "\"technology and AI adoption\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "technology and AI adoption",
+            "technology and AI adoption information systems"
+          ],
+          "crossref": [
+            "technology and AI adoption",
+            "技术与AI采纳"
+          ],
+          "dblp": [
+            "technology and AI adoption digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "technology and AI adoption",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "technology and AI adoption information systems",
+          "(technology and AI adoption) OR (technology and AI adoption in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:51",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:166"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_107df55b7848e11daab6",
+        "title": "Generative Artificial Intelligence: Evolving Technology, Growing Societal Impact, and Opportunities for Information Systems Research",
+        "abstract": "Abstract The continuing, explosive developments in generative artificial intelligence (GenAI), built on large language models and related algorithms, has led to much excitement and speculation about the potential impact of this new technology. Claims include artificial intelligence (AI) being poised to revolutionize business and society and dramatically change personal life. However, it is not clear how this technology, with its significantly distinct features from past AI technologies, has transformative potential or how researchers in information systems should react to it. In this paper, we consider the evolving and emerging trends of AI in order to examine its present and predict its future impacts. Many existing papers on GenAI are either too technical for most information systems researchers or lack the depth needed to appreciate the potential impacts of GenAI. We, therefore, attempt to bridge the technical and organizational communities of GenAI from a system-oriented sociotechnical perspective. Specifically, we explore the unique features of GenAI, which are rooted in the continued change from symbolism to connectionism, and the deep systemic and inherent properties of human-AI ecosystems. We retrace the evolution of AI that proceeded the level of adoption, adaption, and use found today, in order to propose future research on various impacts of GenAI in both business and society within the context of information systems research. Our efforts are intended to contribute to the creation of a well-structured research agenda in the information systems community to support innovative strategies and operations enabled by this new wave of AI.",
+        "authors": [
+          "Veda C. Storey",
+          "Wei Thoo Yue",
+          "J. Leon Zhao",
+          "Roman Lukyanenko"
+        ],
+        "year": 2025,
+        "publication_date": "2025-02-24",
+        "published_date": "2025-02-24",
+        "language": "en",
+        "doi": "10.1007/s10796-025-10581-7",
+        "url": "https://doi.org/10.1007/s10796-025-10581-7",
+        "official_url": "https://doi.org/10.1007/s10796-025-10581-7",
+        "source_title": "Information Systems Frontiers",
+        "journal": "Information Systems Frontiers",
+        "source_issns": [
+          "1387-3326",
+          "1572-9419"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 109,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11891",
+            "name": "Big Data and Business Intelligence",
+            "score": 0.9916999936103821
+          },
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.967199981212616
+          },
+          {
+            "id": "https://openalex.org/T11719",
+            "name": "Data Quality and Management",
+            "score": 0.9153000116348267
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4407931566"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://doi.org/10.1007/s10796-025-10581-7",
+        "provider_payload_refs": [
+          "https://openalex.org/W4407931566"
+        ],
+        "journal_id": "journal_021",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PUBLIC_ADMIN"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 79.57,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 77.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 80.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 79.57
+      },
+      {
+        "paper_id": "paper_98f5e1952c4211eb8de2",
+        "title": "Technology readiness and the organizational journey towards AI adoption: An empirical study",
+        "abstract": "Artificial Intelligence (AI) is viewed as having potential for significant economic and social impact. However, its history of boom and bust cycles can make potential adopters wary. A cross-sectional, qualitative study was carried out, with a purposive sample of AI experts from research, development and business functions, to gain a deeper understanding of the adoption process. Technology Readiness Levels were used as a benchmark against which the experts could align their experiences. A model of AI adoption is proposed which embeds an extended version of the People, Processes, Technology lens, incorporating Data. The model suggests that people, process and data readiness are required in addition to technology readiness to achieve long term operational success with AI. The findings further indicate that innovative organizations should build bridges between technical and business functions.",
+        "authors": [
+          "Victoria Uren",
+          "John S. Edwards"
+        ],
+        "year": 2022,
+        "publication_date": "2022-09-26",
+        "published_date": "2022-09-26",
+        "language": "en",
+        "doi": "10.1016/j.ijinfomgt.2022.102588",
+        "url": "https://doi.org/10.1016/j.ijinfomgt.2022.102588",
+        "official_url": "https://doi.org/10.1016/j.ijinfomgt.2022.102588",
+        "source_title": "International Journal of Information Management",
+        "journal": "International Journal of Information Management",
+        "source_issns": [
+          "0268-4012",
+          "1873-4707"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 290,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11891",
+            "name": "Big Data and Business Intelligence",
+            "score": 0.9968000054359436
+          },
+          {
+            "id": "https://openalex.org/T14306",
+            "name": "Technology Assessment and Management",
+            "score": 0.9668999910354614
+          },
+          {
+            "id": "https://openalex.org/T12659",
+            "name": "Innovation Diffusion and Forecasting",
+            "score": 0.9664000272750854
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4297102741"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://doi.org/10.1016/j.ijinfomgt.2022.102588",
+        "provider_payload_refs": [
+          "https://openalex.org/W4297102741"
+        ],
+        "journal_id": "journal_028",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE1",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE1",
+          "DIGITAL_PLATFORM",
+          "PUBLIC_ADMIN"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 70.08,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.5,
+            "lexical_coverage": 50.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 70.08
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technology and AI adoption",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 441559,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:54:46.125430+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 7687.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technology and AI adoption information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 364846,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:54:53.838019+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3594.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(technology and AI adoption) OR (technology and AI adoption in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 428793,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:54:57.472147+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3594.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "technology and AI adoption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:05.385286+00:00",
+        "duration_ms": 1422.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1422.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "technology and AI adoption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 7,
+        "accepted_before_dedupe": 7,
+        "queried_at": "2026-08-21T20:55:06.822026+00:00",
+        "duration_ms": 1234.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1234.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "technology and AI adoption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:08.060574+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "技术与AI采纳",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 8,
+        "queried_at": "2026-08-21T20:55:01.307422+00:00",
+        "duration_ms": 1375.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1375.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "技术与AI采纳",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 9,
+        "accepted_before_dedupe": 9,
+        "queried_at": "2026-08-21T20:55:02.694289+00:00",
+        "duration_ms": 1406.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1406.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "技术与AI采纳",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 9,
+        "accepted_before_dedupe": 1,
+        "queried_at": "2026-08-21T20:55:04.090550+00:00",
+        "duration_ms": 1297.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1297.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_ce04cff1e0306caa46fd",
+        "title": "Adoption of AI-driven personalization in digital news platforms: An integrative model of technology acceptance and perceived contingency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_249d075398c7d1264357",
+        "title": "Artificial intelligence and communication technologies in academia: faculty perceptions and the adoption of generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4ce18c47f1f7c0d8c71",
+        "title": "The factors affecting teachers’ adoption of AI technologies: A unified model of external and internal determinants",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ed998c5d38bdf8eb714",
+        "title": "Fear of AI: an inquiry into the adoption of autonomous cars in spite of fear, and a theoretical framework for the study of artificial intelligence technology acceptance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c3217be730e61b8a446",
+        "title": "Relationship between technology readiness, AI adoption and value creation in hospitality industry: Moderating role of technological turbulence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07e4b73c14f6e8bb608e",
+        "title": "Opportunities and Adoption Challenges of AI in the Construction Industry: A PRISMA Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d343d21cb2c3fe317214",
+        "title": "AI and emerging technology adoption: a research agenda for operations management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17f24660b82e406726b8",
+        "title": "Artificial Intelligence (AI)-Based Technology Adoption in the Construction Industry: A Cross National Perspective Using the Technology Acceptance Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_093965e93b4ed4d24123",
+        "title": "Organizational Governance of Emerging Technologies: AI Adoption in Healthcare",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f963bb068dd844b214f",
+        "title": "Extending the technology acceptance model: The role of subjective norms, ethics, and trust in AI tool adoption among students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a36d3e7c6ec225753796",
+        "title": "AI adoption and diffusion in public administration: A systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31133709c027298ed97d",
+        "title": "Shaping the Future of Education: Exploring the Potential and Consequences of AI and ChatGPT in Educational Settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9c5852efdd11e86f349",
+        "title": "Investor’s perceptions on artificial intelligence (AI) technology adoption in investment services in India",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03c682d76be10be51d29",
+        "title": "Teachers' trust in AI ‐powered educational technology and a professional development program to improve it",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17115a9d63acce743525",
+        "title": "Thinking responsibly about responsible AI and ‘the dark side’ of AI",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_a7b465f453105df9a17e",
+        "title": "Does AI Technology Adoption Affect Auditors’ Decision-Making Capabilities: Evidence from Jordan?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2866883aa0cc49d5a843",
+        "title": "The impact of AI technology adoption on operational decision-making in competitive heterogeneous ports☆",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_767f5cf02666347ae074",
+        "title": "Understanding the adoption of Industry 4.0 technologies in improving environmental sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95ca6a6c2ce0d6e8989b",
+        "title": "Performance of ChatGPT on USMLE: Potential for AI-assisted medical education using large language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9aaed2862f75afcb27ea",
+        "title": "Understanding higher education students’ adoption of generative AI technologies: An empirical investigation using UTAUT2",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f04c4683c38893e211a",
+        "title": "Ethical and regulatory challenges of AI technologies in healthcare: A narrative review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da485bac61a4e19ae935",
+        "title": "Students’ voices on generative AI: perceptions, benefits, and challenges in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_140cf6f0b5d28b8e9e7d",
+        "title": "Exploring artificial intelligence adoption in public organizations: a comparative case study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85598195168ab9f58bb1",
+        "title": "Effects of Technology Perceptions, Teacher Beliefs, and AI Literacy on AI Technology Adoption in Sustainable Mathematics Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7216d26273592c21d4ed",
+        "title": "AI in education: A review of personalized learning and educational technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52bb703f658e48a15eda",
+        "title": "Assessing the interplay of trust dynamics, personalization, ethical AI practices, and tourist behavior in the adoption of AI-driven smart tourism technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "title": "Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5a99143ac2c9bf6c1b5",
+        "title": "Generative Artificial Intelligence (AI) Technology Adoption Model for Entrepreneurs: Case of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f08054f5f4504fd56e5",
+        "title": "Investigating factors influencing AI customer service adoption: an integrated model of stimulus–organism–response (SOR) and task-technology fit (TTF) theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a054576b738f7de8686",
+        "title": "Towards Adoption of Generative AI in Organizational Settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fa14c743ac5e5f5ee66",
+        "title": "To use or not to use ChatGPT in higher education? A study of students’ acceptance and use of technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c003fa34db5eccf7e2f3",
+        "title": "Drivers of generative AI adoption in higher education through the lens of the Theory of Planned Behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bfed2b38918786f94d2",
+        "title": "Explaining how algorithms work reduces consumers' concerns regarding the collection of personal data and promotes AI technology adoption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bef22751fcf18d1a7fe",
+        "title": "Generative AI in healthcare: an implementation science informed translational path on application, integration and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a72f2d08d37f3592c213",
+        "title": "Exploring artificial intelligence (AI) chatbots adoption among research scholars using unified theory of acceptance and use of technology (UTAUT)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb7a4cf719a0fa78e79f",
+        "title": "Navigating the Complexity of Generative AI Adoption in Software Engineering",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6f1a32d63d411dc6dce",
+        "title": "Emerging Drivers of Adoption of Generative AI Technology in Education: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_203043a94f8ade9052aa",
+        "title": "Exploring AI-mediated informal digital learning of English (AI-IDLE): a mixed-method investigation of Chinese EFL learners’ AI adoption and experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92c6ad7ee67ddf2a2589",
+        "title": "What factors contribute to the acceptance of artificial intelligence? A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ded6844c0a7aa42c696d",
+        "title": "The Gap Between AI and Bedside: Participatory Workshop on the Barriers to the Integration, Translation, and Adoption of Digital Health Care and AI Startup Technology Into Clinical Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21c491f0938bbfd22718",
+        "title": "FUTURE-AI: international consensus guideline for trustworthy and deployable artificial intelligence in healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c153a024c8bb86a00b27",
+        "title": "The moderating role of technology proficiency and academic discipline in AI-chatbot adoption within higher education: Insights from a PLS-SEM analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54997e454b34c3decc87",
+        "title": "Exploring the potential of using an AI language model for automated essay scoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_418645103cf1a42ec4dc",
+        "title": "Small and medium-sized enterprises as technology innovation intermediaries in sustainable business ecosystem: interplay between AI adoption, low carbon management and resilience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c19935604a6533f9521f",
+        "title": "Leading Edge or Bleeding Edge: Designing a Framework for the Adoption of AI Technology in an Educational Organization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_debe9c1de01fd35a9acf",
+        "title": "How to Increase Sport Facility Users’ Intention to Use AI Fitness Services: Based on the Technology Adoption Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa3230bc6621b882ca8a",
+        "title": "The new normal: The status quo of AI adoption in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cd0baa373e77a3fc72b",
+        "title": "Leveraging ChatGPT and other generative artificial intelligence (AI)-based applications in the hospitality and tourism industry: practices, challenges and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd055e93993447d0c713",
+        "title": "What if the devil is my guardian angel: ChatGPT as a case study of using chatbots in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4c314598b8ad6ec3935",
+        "title": "Generative AI Adoption in the Classroom: A Contextual Exploration Using the Technology Acceptance Model (TAM) and the Innovation Diffusion Theory (IDT)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d3f2e86a1a4a7692e1f1",
+        "title": "Firm Size and Artificial Intelligence (AI)-Based Technology Adoption: The Role of Corporate Size in South Korean Construction Companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_382542490054344491f7",
+        "title": "A comprehensive AI policy education framework for university teaching and learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bd2225e6e0dbedb085e",
+        "title": "Artificial intelligence in innovation management: A review of innovation capabilities and a taxonomy of AI applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c2a4b613e105e18ef1a",
+        "title": "Hello! How Can I Help You? Role of Technology Appetite on AI Adoption in the Post‐Pandemic Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5adbbd40d603dd243ad5",
+        "title": "Understanding the role of digital technologies in education: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9be6e886a18ccfd518b3",
+        "title": "Generative AI at Work",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b96c08df3f664db4a270",
+        "title": "Trust in AI: progress, challenges, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e7ad7d9479d0d32d27b",
+        "title": "Exploring the factors influencing the adoption of artificial intelligence technology by university teachers: the mediating role of confidence and AI readiness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_213c2baeb3faf4eb36e1",
+        "title": "Artificial intelligence for industry 4.0: Systematic review of applications, challenges, and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a92f4e2bae5814024d90",
+        "title": "Adoption of artificial intelligence in smart cities: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a4dcdc835061edfe4b1",
+        "title": "Bridging Governance and Technology: Key Determinants of AI Adoption in Public Administration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db4aebd5b5aba80b9860",
+        "title": "What drives students toward ChatGPT? An investigation of the factors influencing adoption and usage of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e9ac0021c94ce055af3",
+        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad6c50966ea1a3a8dae9",
+        "title": "AI adoption rate and corporate green innovation efficiency: Evidence from Chinese energy companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb9ec7be7373d1f8f322",
+        "title": "The Impact of Artificial Intelligence (AI) on Students’ Academic Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09bf104ab34344600a0e",
+        "title": "Technology Roadmap for Flexible Sensors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9b9b8c7cdbbc90718c8",
+        "title": "A systematic review of Green AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cef6ee346c372cf43078",
+        "title": "Understanding Teachers’ Adoption of AI Technologies: An Empirical Study from Chinese Middle Schools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cba60377a2a99b16cca2",
+        "title": "AI adoption in America: Who, what, and where",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5035c00cd2f7bf3bcb8d",
+        "title": "Artificial Intelligence Adoption by SMEs to Achieve Sustainable Business Performance: Application of Technology–Organization–Environment Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43902dcfaaab266e69e6",
+        "title": "AI Technology Adoption, Knowledge Sharing, and Manufacturing Firms’ Innovation Performance: The Moderating Effect of Absorptive Capacity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a66150577ced258cadb6",
+        "title": "The Rapid Adoption of Generative AI",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e617a017f9e78c45da22",
+        "title": "Opportunities, Enablers, and Challenges of Smart Technologies and AI Adoption in SMEs",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_487e283ada2cd23f2fea",
+        "title": "In search of artificial intelligence (AI) literacy in teacher education: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74f888120267ae52c80e",
+        "title": "Understanding AI Technology Adoption in Educational Settings: A Review of Theoretical Frameworks and their Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08985e5e29c02ca9c1ab",
+        "title": "Artificial intelligence and the changing sources of competitive advantage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27a405a1c0f758b7631f",
+        "title": "Text classification for evaluating digital technology adoption maturity based on BERT: An evidence of Industrial AI from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04c76b9e416441b27fe0",
+        "title": "Adoption and impacts of generative artificial intelligence: Theoretical underpinnings and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b14d2dd301e6f643fb5",
+        "title": "Adoption of Lean Construction and AI/IoT Technologies in Iran’s Public Construction Sector: A Mixed-Methods Approach Using Fuzzy Logic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8521389a57aa7b6ac0c0",
+        "title": "When does AI pay off? AI-adoption intensity, complementary investments, and R&D strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_906a8c8dab40ccbcc653",
+        "title": "From hype to strategy: navigating the reality of experimental strategic adoption of AI technologies in libraries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea7280682e654713dbd3",
+        "title": "Does AI-Driven Technostress Promote or Hinder Employees’ Artificial Intelligence Adoption Intention? A Moderated Mediation Model of Affective Reactions and Technical Self-Efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_baea0d08af15b1e53e4d",
+        "title": "An artificial intelligence (AI)-readiness and adoption framework for AgriTech firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea8f2d6e34465478f49d",
+        "title": "Artificial intelligence and firm-level productivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be100445d5aaab3063ca",
+        "title": "Recent Developments in Individual Difference Research to Inform the Adoption of AI Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9efc2e5ed125fda2354",
+        "title": "Technological optimism surpasses fear of missing out: A multigroup analysis of presumed media influence on generative AI technology adoption across varying levels of technological optimism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a1490dfb060d5ec69ef",
+        "title": "The imperative for regulatory oversight of large language models (or generative AI) in healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_200f49d9343d1f782827",
+        "title": "AI-Based Chatbots Adoption Model for Higher-Education Institutions: A Hybrid PLS-SEM-Neural Network Modelling Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97cd88ebfa212aa954e9",
+        "title": "Digital Technologies Impact on Healthcare Delivery: A Systematic Review of Artificial Intelligence (AI) and Machine-Learning (ML) Adoption, Challenges, and Opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a588e38f60770474d509",
+        "title": "Artificial intelligence in online higher education: A systematic review of empirical research from 2011 to 2020",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6354266c38d25130f04d",
+        "title": "On the Road to 6G: Visions, Requirements, Key Technologies, and Testbeds",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b95351d5e0a5aa2fa77",
+        "title": "Artificial intelligence – challenges and opportunities for international HRM: a review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5c75438fe43ed9b9ad6",
+        "title": "The IoT and AI in Agriculture: The Time Is Now—A Systematic Review of Smart Sensing Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9deded25dcd0d453c30c",
+        "title": "The Emergence of AI-Based Wearable Sensors for Digital Health Technology: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e0fd8cb7074c8263d77",
+        "title": "AI-Driven Clinical Decision Support Systems: An Ongoing Pursuit of Potential",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2fdd17bfec37280d8cc",
+        "title": "Review of the Factors Affecting Acceptance of AI-Infused Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848dae12570bc474dbb9",
+        "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_126f22fa39b75ff48543",
+        "title": "Factors affecting performance expectancy and intentions to use ChatGPT: Using SmartPLS to advance an information technology acceptance framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_778a2d9897506693ba0b",
+        "title": "The application of AI technologies in STEM education: a systematic review from 2011 to 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3af65bd71b12a425e55a",
+        "title": "Artificial intelligence (AI) applications for marketing: A literature-based study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_754b9993f1aa93c2ae6b",
+        "title": "The Role of AI in Hospitals and Clinics: Transforming Healthcare in the 21st Century",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f37817c6a5eb06c1519",
+        "title": "Learning design to support student-AI collaboration: perspectives of leading teachers for AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17a84b3285ab2c4079b7",
+        "title": "Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7513adbf6f061a6b9e54",
+        "title": "ChatGPT and Open-AI Models: A Preliminary Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7fe70ece215858b666d",
+        "title": "Enabling flexible manufacturing system (FMS) through the applications of industry 4.0 technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2774fbce3740be5d2a4d",
+        "title": "Integration of IoT-Enabled Technologies and Artificial Intelligence (AI) for Smart City Scenario: Recent Advancements and Future Trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d677fefec7ba75d3b2f",
+        "title": "Human–machine teaming is key to AI adoption: clinicians’ experiences with a deployed machine learning system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cf18f4f6df2529be8ba",
+        "title": "Challenges and Opportunities of Generative AI for Higher Education as Explained by ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f33e259e0327e51c8fa3",
+        "title": "Generative AI in higher education: A global perspective of institutional adoption policies and guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e40f3cdad35f0ce6af7",
+        "title": "Edge AI: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc35a457696301ac4cca",
+        "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8d379b2a89e319fc87",
+        "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8c6a62d18ec2a33e4a2",
+        "title": "Embracing the future of Artificial Intelligence in the classroom: the relevance of AI literacy, prompt engineering, and critical thinking in modern education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89c42d289d103906c435",
+        "title": "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72b4d2968c6859c367f9",
+        "title": "Factors Influencing the AI Adoption in Organizations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbf67012bbabae4decbd",
+        "title": "Fusing Blockchain and AI With Metaverse: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edd438a1e73265542dbf",
+        "title": "The Relationship between AI Adoption Intensity and Internal Control System and Accounting Information Quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a91854de8f181c038594",
+        "title": "Digital Transformation in Healthcare: Technology Acceptance and Its Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_492f62ad1c5f7a277e98",
+        "title": "A Systematic Literature Review of User Trust in AI-Enabled Systems: An HCI Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36eec7daf2425910944a",
+        "title": "AI models collapse when trained on recursively generated data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07a1860d12ed63e0100",
+        "title": "The Role of AI in Drug Discovery: Challenges, Opportunities, and Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5059da60fce4ce3a992",
+        "title": "AI-Based Personalized E-Learning Systems: Issues, Challenges, and Solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_015c2814c94bdef1b8c2",
+        "title": "Analysis of the adoption of emergent technologies for risk management in the era of digital manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2af6a85564f99d1c0012",
+        "title": "The AI generation gap: Are Gen Z students more interested in adopting generative AI such as ChatGPT in teaching and learning than their Gen X and millennial generation teachers?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60f284d3de9566c35c26",
+        "title": "AI-big data analytics for building automation and management systems: a survey, actual challenges and future perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c845d123a6c8a33a88d3",
+        "title": "Recent Advancements in Emerging Technologies for Healthcare Management Systems: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ad4907b5474a8e5c53c",
+        "title": "Impact of AI assistance on student agency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_add198fe93cc427a4ce7",
+        "title": "The uselessness of AI ethics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca572f4c94c009c20227",
+        "title": "The promise and challenges of generative AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_002b438a62a10820b4e9",
+        "title": "Linking circular economy and digitalisation technologies: A systematic literature review of past achievements and future promises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_227e183633bbc1556b56",
+        "title": "Investigating the Impact of User Trust on the Adoption and Use of ChatGPT: Survey Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b7a7851bc1a5abf006a",
+        "title": "Designing trust: The formation of employees’ trust in conversational AI in the digital workplace",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e878b1d7c8300c068aef",
+        "title": "Artificial intelligence and knowledge management: A partnership between human and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1f9f1abaa578c2482440",
+        "title": "Explainable AI for Healthcare 5.0: Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f323baaee91ac551fbea",
+        "title": "AI ‐driven adaptive learning for sustainable educational transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ac28f03fbd003942330",
+        "title": "Securing AI ‐based healthcare systems using blockchain technology: A state‐of‐the‐art systematic literature review and future research directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5cf22167512436a212ae",
+        "title": "Acceptance Model of Artificial Intelligence (AI)-Based Technologies in Construction Firms: Applying the Technology Acceptance Model (TAM) in Combination with the Technology–Organisation–Environment (TOE) Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17011e36b53ce9464672",
+        "title": "Assessing the nexus of Generative AI adoption, ethical considerations and organizational performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69957a727f75587fbbf2",
+        "title": "Artificial Intelligence for Sustainability—A Systematic Review of Information Systems Literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0fbf0287c9cd2c290ccc",
+        "title": "ChatGPT: the future of discharge summaries?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d443794a07032e9182b",
+        "title": "Neurosymbolic AI: the 3rd wave",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f546abee67f52b620db0",
+        "title": "Measuring Institutions’ Adoption of Artificial Intelligence Applications in Online Learning Environments: Integrating the Innovation Diffusion Theory with Technology Adoption Rate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fca361db78590dc6074c",
+        "title": "Transparency and accountability in AI systems: safeguarding wellbeing in the age of algorithmic decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60b39f4a2ec387d3bd99",
+        "title": "Barriers and facilitators to utilizing digital health technologies by healthcare professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20e14fcd296639e42221",
+        "title": "Human-centered design and evaluation of AI-empowered clinical decision support systems: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca099edf5dd0fc3c09a5",
+        "title": "Enhancing smart farming through the applications of Agriculture 4.0 technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8c5045b1fd5641ec3b0",
+        "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4959fe0626e9a6ff41b6",
+        "title": "Current AI technologies in cancer diagnostics and treatment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9d2236a64b1a1cebf7b",
+        "title": "Adoption of Digital Technologies by SMEs for Sustainability and Value Creation: Moderating Role of Entrepreneurial Orientation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82a0b5d6757f12b58258",
+        "title": "Digitalization for sustainable buildings: Technologies, applications, potential, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43baa29368e27b8b02cf",
+        "title": "Unreal influence: leveraging AI in influencer marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_403647d86532ef73689e",
+        "title": "Main drivers and barriers to the adoption of Digital Agriculture technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0166367739436637b5d9",
+        "title": "Empowering educators to be AI-ready",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3971de576d0c5a7b775",
+        "title": "Exploring factors influencing the acceptance of ChatGPT in higher education: A smart education perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_815f1c57715430ce2dab",
+        "title": "Advances in site‐specific weed management in agriculture—A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e958e105031dcb906448",
+        "title": "The prospects of artificial intelligence in urban planning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88482bd814c3e0152b68",
+        "title": "Theory of trust and acceptance of artificial intelligence technology (TrAAIT): An instrument to assess clinician trust and acceptance of artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f4f515d4beba4c6d433",
+        "title": "Harnessing Artificial Intelligence for Advancing Sustainable Development Goals in South Africa's Higher Education System: A Qualitative Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f4b4c63b9a1e6fcf326",
+        "title": "The potential of an artificial intelligence (AI) application for the tax administration system’s modernization: the case of Indonesia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78946f0df4721469ca9e",
+        "title": "Artificial intelligence for cybersecurity: Literature review and future research directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83a7b20df56358fd85be",
+        "title": "Ethical principles for artificial intelligence in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ab5003bc37d3ef96e47",
+        "title": "Remote patient monitoring using artificial intelligence: Current state, applications, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49a2f3c603a14a6a552e",
+        "title": "Artificial Intelligence and Machine Learning in Pharmacological Research: Bridging the Gap Between Data and Drug Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b9f9a36d1355fbc67e1",
+        "title": "ChatGPT as a CALL tool in language education: A study of hedonic motivation adoption models in English learning environments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a82dbd3a1daeec4c7cf",
+        "title": "Six Human-Centered Artificial Intelligence Grand Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f0bf39972644d4432cb",
+        "title": "Digital technologies in sports: Opportunities, challenges, and strategies for safeguarding athlete wellbeing and competitive integrity in the digital era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49e0da8c5c76ae66cbd2",
+        "title": "Artificial intelligence-driven supply chain resilience in Vietnamese manufacturing small- and medium-sized enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5280b3df991f291dfe51",
+        "title": "A compute-in-memory chip based on resistive random-access memory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7d36146e4708ada1baa",
+        "title": "Managing the Strategic Transformation of Higher Education through Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_171029eddecb0c54176e",
+        "title": "Blockchain Technology and Artificial Intelligence Together: A Critical Review on Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8da05db04b6af507e9e4",
+        "title": "A thorough examination of smart city applications: Exploring challenges and solutions throughout the life cycle with emphasis on safeguarding citizen privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35689226172d63696df9",
+        "title": "The Critical Factors Impacting Artificial Intelligence Applications Adoption in Vietnam: A Structural Equation Modeling Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2f7db72eb8363fcfd23",
+        "title": "Algorithmic urban planning for smart and sustainable development: Systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6acf367644bf9822413",
+        "title": "A Survey and Perspective on Industrial Cyber-Physical Systems (ICPS): From ICPS to AI-Augmented ICPS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ed5183c4bb05915c78f",
+        "title": "Human Factors and Technological Characteristics Influencing the Interaction of Medical Professionals With Artificial Intelligence–Enabled Clinical Decision Support Systems: Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9975f0630891687d2cf5",
+        "title": "The Role of Chatbots in Academic Libraries: An Experience-based Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9b91b99d2c5f5bc733c",
+        "title": "Explainability and artificial intelligence in medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c42763c8c892b2e1c83",
+        "title": "Augmenting human innovation teams with artificial intelligence: Exploring transformer‐based language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c122897bffd96af50bf",
+        "title": "Drivers of Digital Transformation in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2bd75296f359ead49ee",
+        "title": "Practical and ethical challenges of large language models in education: A systematic scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fe4a0fab775719ddb41",
+        "title": "BLOOM: A 176B-Parameter Open-Access Multilingual Language Model",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03a5f3cf0c5ac84dbded",
+        "title": "Does AI adoption redefine financial reporting accuracy, auditing efficiency, and information asymmetry? An integrated model of TOE-TAM-RDT and big data governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2187341bd41db388fda",
+        "title": "Machines that feel: behavioral determinants of attitude towards affect recognition technology—upgrading technology acceptance theory with the mindsponge model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df0825268ce325b97ec1",
+        "title": "Reducing carbon emission at the corporate level: Does artificial intelligence matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e590c518057b3cb025b2",
+        "title": "Perceptions and usage of AI chatbots among students in higher education across genders, academic levels and fields of study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54d2f831d194cfcd5f72",
+        "title": "Drivers of generative artificial intelligence to fostering exploitative and exploratory innovation: A TOE framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d00e2313218be72b5dc",
+        "title": "The Impact of Artificial Intelligence on Workers’ Skills: Upskilling and Reskilling in Organisations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad2b78d6db66e9cdf591",
+        "title": "Artificial intelligence healthcare service resources adoption by medical institutions based on TOE framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_826de100a2caa95a54a5",
+        "title": "Emerging Artificial Intelligence–Empowered mHealth: Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0279c012ce08f3e768c4",
+        "title": "Data privacy in healthcare: Global challenges and solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35bb5cb90037a77d1a78",
+        "title": "Artificial intelligence (AI) library services innovative conceptual framework for the digital transformation of university education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf8ea6f5d5ba336ddad5",
+        "title": "Expectations and beyond: The nexus of AI instrumentality and brand credibility in voice assistant retention using extended expectation‐confirmation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_beae38ec4348bf96de96",
+        "title": "Informed consent for artificial intelligence in emergency medicine: A practical guide",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1a5e12c5ceef132725b",
+        "title": "Smart Sensors and Smart Data for Precision Agriculture: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02651f9dd6c10352e617",
+        "title": "Evolution of artificial intelligence research in Technological Forecasting and Social Change: Research topics, trends, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a96bfdaffe370487d52b",
+        "title": "Potential for Artificial Intelligence (AI) and Machine Learning (ML) Applications in Biodiversity Conservation, Managing Forests, and Related Services in India",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bb3ea8d3e85fefd5214",
+        "title": "TOWARDS A CONCEPTUAL FRAMEWORK FOR ETHICAL AI DEVELOPMENT IN IT SYSTEMS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0bdd7494ee7b6b11eb16",
+        "title": "Edge Computing AI-IoT Integrated Energy-efficient Intelligent Transportation System for Smart Cities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd6800b11183833385d6",
+        "title": "Integrating artificial intelligence and Internet of Things (IoT) for enhanced crop monitoring and management in precision agriculture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12e763fde2410a56d777",
+        "title": "Towards sustainable agriculture: key determinants of adopting artificial intelligence in agriculture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a65b5c1c7179a1fbf35",
+        "title": "Artificial intelligence applications for sustainable solid waste management practices in Australia: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11e84eb195f2d29d92bf",
+        "title": "Artificial Intelligence (AI) and Information Systems: Perspectives to Responsible AI",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Innovative benefits of China’s low-carbon pilot policy",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Do government subsidies effectively reduce corporate carbon emissions",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Insurance Market Development, ICT Diffusion, and Economic Growth in Sub-Saharan Africa",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Key Drivers of Economic Growth in Developing Countries: A Comparative Study of Turkey and Bangladesh",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "technology_adoption",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 345,
+      "deduplicated_count": 52,
+      "hard_gate_pass_count": 52,
+      "eligible_count": 2,
+      "boundary_count": 8,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "technology and AI adoption"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "technology and AI adoption information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(technology and AI adoption) OR (technology and AI adoption in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_COMPLETE",
+        "returned_rows": 45
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "technology and AI adoption",
+        "raw_count": 100,
+        "hard_gate_pass_count": 4,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "technology and AI adoption information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 8,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(technology and AI adoption) OR (technology and AI adoption in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 12,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_da485bac61a4e19ae935",
+          "paper_90ce16b1cb8b2dc409a9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_5a054576b738f7de8686"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9be6e886a18ccfd518b3"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_6a1490dfb060d5ec69ef"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_767f5cf02666347ae074",
+        "incoming_paper_id": "paper_767f5cf02666347ae074"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7f04c4683c38893e211a",
+        "incoming_paper_id": "paper_7f04c4683c38893e211a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95ca6a6c2ce0d6e8989b",
+        "incoming_paper_id": "paper_95ca6a6c2ce0d6e8989b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da485bac61a4e19ae935",
+        "incoming_paper_id": "paper_da485bac61a4e19ae935"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "incoming_paper_id": "paper_90ce16b1cb8b2dc409a9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5adbbd40d603dd243ad5",
+        "incoming_paper_id": "paper_5adbbd40d603dd243ad5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06372867271a6588c2ab",
+        "incoming_paper_id": "paper_06372867271a6588c2ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_98f5e1952c4211eb8de2",
+        "incoming_paper_id": "paper_98f5e1952c4211eb8de2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_7e9ac0021c94ce055af3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_382542490054344491f7",
+        "incoming_paper_id": "paper_382542490054344491f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_200f49d9343d1f782827",
+        "incoming_paper_id": "paper_200f49d9343d1f782827"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9be6e886a18ccfd518b3",
+        "incoming_paper_id": "paper_9be6e886a18ccfd518b3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6354266c38d25130f04d",
+        "incoming_paper_id": "paper_6354266c38d25130f04d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a36d3e7c6ec225753796",
+        "incoming_paper_id": "paper_a36d3e7c6ec225753796"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09bf104ab34344600a0e",
+        "incoming_paper_id": "paper_09bf104ab34344600a0e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c003fa34db5eccf7e2f3",
+        "incoming_paper_id": "paper_c003fa34db5eccf7e2f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31133709c027298ed97d",
+        "incoming_paper_id": "paper_31133709c027298ed97d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7216d26273592c21d4ed",
+        "incoming_paper_id": "paper_7216d26273592c21d4ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a1490dfb060d5ec69ef",
+        "incoming_paper_id": "paper_6a1490dfb060d5ec69ef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17115a9d63acce743525",
+        "incoming_paper_id": "paper_17115a9d63acce743525"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9deded25dcd0d453c30c",
+        "incoming_paper_id": "paper_9deded25dcd0d453c30c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_203043a94f8ade9052aa",
+        "incoming_paper_id": "paper_203043a94f8ade9052aa"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_0cf18f4f6df2529be8ba"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb7a4cf719a0fa78e79f",
+        "incoming_paper_id": "paper_fb7a4cf719a0fa78e79f"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_da8d379b2a89e319fc87"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_140cf6f0b5d28b8e9e7d",
+        "incoming_paper_id": "paper_140cf6f0b5d28b8e9e7d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0e0fd8cb7074c8263d77",
+        "incoming_paper_id": "paper_0e0fd8cb7074c8263d77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_17a84b3285ab2c4079b7",
+        "incoming_paper_id": "paper_e93a6e4b136d0a42cef9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a66150577ced258cadb6",
+        "incoming_paper_id": "paper_a66150577ced258cadb6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21c491f0938bbfd22718",
+        "incoming_paper_id": "paper_21c491f0938bbfd22718"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c9b9b8c7cdbbc90718c8",
+        "incoming_paper_id": "paper_c9b9b8c7cdbbc90718c8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1cd0baa373e77a3fc72b",
+        "incoming_paper_id": "paper_1cd0baa373e77a3fc72b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cba60377a2a99b16cca2",
+        "incoming_paper_id": "paper_cba60377a2a99b16cca2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4ce18c47f1f7c0d8c71",
+        "incoming_paper_id": "paper_d4ce18c47f1f7c0d8c71"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ad6c50966ea1a3a8dae9",
+        "incoming_paper_id": "paper_ad6c50966ea1a3a8dae9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c5c75438fe43ed9b9ad6",
+        "incoming_paper_id": "paper_c5c75438fe43ed9b9ad6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5035c00cd2f7bf3bcb8d",
+        "incoming_paper_id": "paper_5035c00cd2f7bf3bcb8d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_baea0d08af15b1e53e4d",
+        "incoming_paper_id": "paper_baea0d08af15b1e53e4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_98f5e1952c4211eb8de2",
+        "incoming_paper_id": "paper_98f5e1952c4211eb8de2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_126f22fa39b75ff48543",
+        "incoming_paper_id": "paper_126f22fa39b75ff48543"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d2fdd17bfec37280d8cc",
+        "incoming_paper_id": "paper_d2fdd17bfec37280d8cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0fbf0287c9cd2c290ccc",
+        "incoming_paper_id": "paper_0fbf0287c9cd2c290ccc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_200f49d9343d1f782827",
+        "incoming_paper_id": "paper_200f49d9343d1f782827"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_92c6ad7ee67ddf2a2589",
+        "incoming_paper_id": "paper_92c6ad7ee67ddf2a2589"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd055e93993447d0c713",
+        "incoming_paper_id": "paper_cd055e93993447d0c713"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_213c2baeb3faf4eb36e1",
+        "incoming_paper_id": "paper_213c2baeb3faf4eb36e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31133709c027298ed97d",
+        "incoming_paper_id": "paper_31133709c027298ed97d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8b7a7851bc1a5abf006a",
+        "incoming_paper_id": "paper_8b7a7851bc1a5abf006a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_140cf6f0b5d28b8e9e7d",
+        "incoming_paper_id": "paper_140cf6f0b5d28b8e9e7d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08985e5e29c02ca9c1ab",
+        "incoming_paper_id": "paper_08985e5e29c02ca9c1ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fa14c743ac5e5f5ee66",
+        "incoming_paper_id": "paper_4fa14c743ac5e5f5ee66"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea8f2d6e34465478f49d",
+        "incoming_paper_id": "paper_ea8f2d6e34465478f49d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d7fe70ece215858b666d",
+        "incoming_paper_id": "paper_d7fe70ece215858b666d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a588e38f60770474d509",
+        "incoming_paper_id": "paper_a588e38f60770474d509"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a36d3e7c6ec225753796",
+        "incoming_paper_id": "paper_a36d3e7c6ec225753796"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_107df55b7848e11daab6",
+        "incoming_paper_id": "paper_107df55b7848e11daab6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5b95351d5e0a5aa2fa77",
+        "incoming_paper_id": "paper_5b95351d5e0a5aa2fa77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17115a9d63acce743525",
+        "incoming_paper_id": "paper_17115a9d63acce743525"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_82a0b5d6757f12b58258",
+        "incoming_paper_id": "paper_82a0b5d6757f12b58258"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21c491f0938bbfd22718",
+        "incoming_paper_id": "paper_21c491f0938bbfd22718"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07e4b73c14f6e8bb608e",
+        "incoming_paper_id": "paper_07e4b73c14f6e8bb608e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1cd0baa373e77a3fc72b",
+        "incoming_paper_id": "paper_1cd0baa373e77a3fc72b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_72b4d2968c6859c367f9",
+        "incoming_paper_id": "paper_72b4d2968c6859c367f9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03c682d76be10be51d29",
+        "incoming_paper_id": "paper_03c682d76be10be51d29"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9ac28f03fbd003942330",
+        "incoming_paper_id": "paper_9ac28f03fbd003942330"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cdd9783e85d689444524",
+        "incoming_paper_id": "paper_cdd9783e85d689444524"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bd2225e6e0dbedb085e",
+        "incoming_paper_id": "paper_9bd2225e6e0dbedb085e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce04cff1e0306caa46fd",
+        "incoming_paper_id": "paper_ce04cff1e0306caa46fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69957a727f75587fbbf2",
+        "incoming_paper_id": "paper_69957a727f75587fbbf2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7216d26273592c21d4ed",
+        "incoming_paper_id": "paper_7216d26273592c21d4ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_249d075398c7d1264357",
+        "incoming_paper_id": "paper_249d075398c7d1264357"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4ce18c47f1f7c0d8c71",
+        "incoming_paper_id": "paper_d4ce18c47f1f7c0d8c71"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20e14fcd296639e42221",
+        "incoming_paper_id": "paper_20e14fcd296639e42221"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_db4aebd5b5aba80b9860",
+        "incoming_paper_id": "paper_db4aebd5b5aba80b9860"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_54997e454b34c3decc87",
+        "incoming_paper_id": "paper_54997e454b34c3decc87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9ed998c5d38bdf8eb714",
+        "incoming_paper_id": "paper_9ed998c5d38bdf8eb714"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea7280682e654713dbd3",
+        "incoming_paper_id": "paper_ea7280682e654713dbd3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_edd438a1e73265542dbf",
+        "incoming_paper_id": "paper_edd438a1e73265542dbf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_487e283ada2cd23f2fea",
+        "incoming_paper_id": "paper_487e283ada2cd23f2fea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b96c08df3f664db4a270",
+        "incoming_paper_id": "paper_b96c08df3f664db4a270"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_04c76b9e416441b27fe0",
+        "incoming_paper_id": "paper_04c76b9e416441b27fe0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17f24660b82e406726b8",
+        "incoming_paper_id": "paper_17f24660b82e406726b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a054576b738f7de8686",
+        "incoming_paper_id": "paper_5a054576b738f7de8686"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb7a4cf719a0fa78e79f",
+        "incoming_paper_id": "paper_fb7a4cf719a0fa78e79f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb9ec7be7373d1f8f322",
+        "incoming_paper_id": "paper_bb9ec7be7373d1f8f322"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_093965e93b4ed4d24123",
+        "incoming_paper_id": "paper_093965e93b4ed4d24123"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0e0fd8cb7074c8263d77",
+        "incoming_paper_id": "paper_0e0fd8cb7074c8263d77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d343d21cb2c3fe317214",
+        "incoming_paper_id": "paper_d343d21cb2c3fe317214"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "490d77c4603a40b9ad19ad6ce987f802",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

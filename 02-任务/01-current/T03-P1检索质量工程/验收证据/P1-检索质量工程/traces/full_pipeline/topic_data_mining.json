@@ -1,0 +1,2583 @@
+{
+  "direction_id": "topic_data_mining",
+  "labels": {
+    "zh": "数据挖掘",
+    "en": "data mining"
+  },
+  "input": {
+    "selected_direction_id": "topic_data_mining",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16531.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 330,
+  "hard_gate_pass_count": 34,
+  "eligible_count": 0,
+  "boundary_count": 15,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "data mining"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "data mining human-computer interaction"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(data mining) OR (data mining in human-computer interaction)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_data_mining",
+      "research_direction": "data mining",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "data mining",
+      "aliases": [
+        "data mining"
+      ],
+      "groups": [
+        "IS × Computer Science / HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:118"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_data_mining",
+        "labels": {
+          "zh": "数据挖掘",
+          "en": "data mining"
+        },
+        "group_ids": [
+          "is_cs_hci"
+        ],
+        "synonyms": [
+          "数据挖掘",
+          "data mining",
+          "data mining in human-computer interaction"
+        ],
+        "boundaries": {
+          "include": [
+            "data mining",
+            "human-computer interaction",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "data mining",
+            "\"data mining\" AND \"human-computer interaction\""
+          ],
+          "semantic_scholar": [
+            "data mining",
+            "data mining human-computer interaction"
+          ],
+          "crossref": [
+            "data mining",
+            "数据挖掘"
+          ],
+          "dblp": [
+            "data mining computing"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "data mining",
+            "human-computer interaction",
+            "computing"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "CS_AI",
+          "HCI",
+          "CS_IR",
+          "CS_DATA",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "data mining human-computer interaction",
+          "(data mining) OR (data mining in human-computer interaction)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:118"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "data mining",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1010701,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:56.969553+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4032.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "data mining human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 177234,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:01.020907+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3641.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(data mining) OR (data mining in human-computer interaction)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1002355,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:04.689660+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3250.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "data mining",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:09.341345+00:00",
+        "duration_ms": 1329.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1329.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "data mining",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:10.678592+00:00",
+        "duration_ms": 1375.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1375.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "data mining",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:12.055382+00:00",
+        "duration_ms": 1421.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1421.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "数据挖掘",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:08.148800+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_56bd56adc54a046c4e04",
+        "title": "TBtools-II: A “one for all, all for one” bioinformatics platform for biological big-data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d87f2d749151c5f6a4d",
+        "title": "Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_974a2373a6f9df08e6a4",
+        "title": "Educational data mining: prediction of students' academic performance using machine learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef2e3a458f7b78afae77",
+        "title": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ab36917bd65b8158742",
+        "title": "An outliers detection and elimination framework in classification task of data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_10ddc1a8cda6944011f8",
+        "title": "A Comparison of Undersampling, Oversampling, and SMOTE Methods for Dealing with Imbalanced Classification in Educational Data Mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66ba8d183310d513b0f6",
+        "title": "REVIEW OF DATA PRE-PROCESSING TECHNIQUES IN DATA MINING",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42bcf15fb1f1fa072b27",
+        "title": "Knowledge Discovery: Methods from data mining and machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23d5720acddaa31789ed",
+        "title": "Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_618a41f9c6870d4e0826",
+        "title": "ChIP-Atlas 2021 update: a data-mining suite for exploring epigenomic landscapes by fully integrating ChIP-seq, ATAC-seq and Bisulfite-seq data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d1c4e28daf2a81bca88",
+        "title": "Proceedings of the 17th ACM International Conference on Web Search and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae82a271eaa394f230db",
+        "title": "Educational data mining to predict students' academic performance: A survey study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74afea35711a790d8afb",
+        "title": "Using Markov Chains and Data Mining Techniques to Predict Students’ Academic Performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47496b0849fd5ae8ef74",
+        "title": "Applications of data mining and machine learning framework in aquaculture and fisheries: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a53d1d45aee3b2cafd1",
+        "title": "Potential of ChatGPT and GPT-4 for Data Mining of Free-Text CT Reports on Lung Cancer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d23be281ed536af636c5",
+        "title": "Spatiotemporal data mining: a survey on challenges and open problems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a5f692b751d642a7393",
+        "title": "MOF Synthesis Prediction Enabled by Automatic Data Mining and Machine Learning**",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65b189dfc88cd1c38934",
+        "title": "Proceedings of the Sixteenth ACM International Conference on Web Search and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_baee5055803fa12f1b4c",
+        "title": "Next-Generation Morphometry for pathomics-data mining in histopathology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec3e81bad4faa61abc86",
+        "title": "Diabetes prediction model using data mining techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_648057668dd5c49ae23c",
+        "title": "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f716c3002c2c13a89f0c",
+        "title": "Proceedings of the 2022 SIAM International Conference on Data Mining (SDM)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_056c0fffbcdd2ee6bd65",
+        "title": "ChIP-Atlas 3.0: a data-mining suite to explore chromosome architecture together with large-scale regulome data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20432595db381d4a3212",
+        "title": "State-of-the-art review on advancements of data mining in structural health monitoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ca71c149f083b3d17c5",
+        "title": "The Secondary Use of Electronic Health Records for Data Mining: Data Characteristics and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68ed278b90b5f4051b60",
+        "title": "Data Mining Techniques for Web Mining: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19739f1d4f5bab4a8697",
+        "title": "Analysis and Prediction of Students’ Academic Performance Based on Educational Data Mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92f58554930db627388c",
+        "title": "An overview of deep learning methods for multimodal medical data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba61c4789f69e1f2565b",
+        "title": "Proceedings of the 2023 SIAM International Conference on Data Mining (SDM)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c7ad13061c13f8dda5ad",
+        "title": "A review on data fusion in multimodal learning analytics and educational data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee1f8cb57a00a260c368",
+        "title": "Technical and Biological Biases in Bulk Transcriptomic Data Mining for Cancer Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a7aa758e2051099d9cba",
+        "title": "A Real-World Disproportionality Analysis of Olaparib: Data Mining of the Public Version of FDA Adverse Event Reporting System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dcca7f5297a8e6ff5ac6",
+        "title": "Student Retention Using Educational Data Mining and Predictive Analytics: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c75a482cf4ac702bf509",
+        "title": "A systematic survey of data mining and big data analysis in internet of things",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1e25bd8540622ad0ddf",
+        "title": "A Systematic Literature Review on Identifying Patterns Using Unsupervised Clustering Algorithms: A Data Mining Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d3c9c6f8bfe94da9146",
+        "title": "Analysis of Income on the Basis of Occupation using Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6b6c313a1d0e0338e12",
+        "title": "Classification Technique and its Combination with Clustering and Association Rule Mining in Educational Data Mining — A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df985338364da0812826",
+        "title": "Data Mining for Terahertz Generation Crystals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d86dc9f53dff07c65803",
+        "title": "Application of Smart Techniques, Internet of Things and Data Mining for Resource Use Efficient and Sustainable Crop Production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f045d644ede5c666259",
+        "title": "Integrative multi-omics and systems bioinformatics in translational neuroscience: A data mining perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f92bc127cebc36c837a",
+        "title": "Statistical and Machine-Learning Data Mining: Techniques for Better Predictive Modeling and Analysis of Big Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2d05f8e198092e5d009",
+        "title": "Advances in Knowledge Discovery and Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7290540baa75068fec9e",
+        "title": "Explainable AI and machine learning: performance evaluation and explainability of classifiers on educational data mining inspired career counseling",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69f119a7dae65b1e91a8",
+        "title": "Big Data Security through Privacy – Preserving Data Mining (PPDM): A Decentralization Approach",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3a0f044aa70a3546f58",
+        "title": "Explainable and interpretable machine learning and data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3970604b770099060d3",
+        "title": "Proceedings of the 2024 SIAM International Conference on Data Mining (SDM)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddbf3aa7fb7326caaede",
+        "title": "A dynamic anomaly detection method of building energy consumption based on data mining technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e656836fc541f623b05f",
+        "title": "A Deeper Look into the EU Text and Data Mining Exceptions: Harmonisation, Data Ownership, and the Future of Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0a9b408c6b6f4840e59",
+        "title": "Web Data Mining with Organized Contents Using Naive Bayes Algorithm",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39167301d607644d9027",
+        "title": "Exploring patient medication adherence and data mining methods in clinical big data: A contemporary review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19caa765503d39392975",
+        "title": "FE$${}^\\textrm{ANN}$$: an efficient data-driven multiscale approach based on physics-constrained neural networks and automated data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d04752bef6b8eceb607",
+        "title": "Fraud detection in financial statements using data mining and GAN models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40ce4d659a374112e365",
+        "title": "Introduction to Data Mining and Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6f9d19d550229878ef23",
+        "title": "Computational Intelligence in Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01480bc6b0dd6c2be6be",
+        "title": "MS-DIAL 5 multimodal mass spectrometry data mining unveils lipidome complexities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95f469d3574c06e2c47d",
+        "title": "Introduction to Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75c683974c7550ba44f6",
+        "title": "Artificial Intelligence-Based Medical Data Mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b49c8e07e6e9781549fb",
+        "title": "Data Mining Methods and Applications",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb55508e4fa8ed7eb8a0",
+        "title": "Survey On Recognition Hand Gesture By Using Data Mining Algorithms",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_788773690870c6941536",
+        "title": "Data mining in predictive maintenance systems: A taxonomy and systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc3256848ef14317e275",
+        "title": "Machine Learning, Data Mining for IoT-Based Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_117f320f997bc21fd6c8",
+        "title": "Clinlabomics: leveraging clinical laboratory data by data mining strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b8d53accec8b0ff945",
+        "title": "Management and Sales Forecasting of an E-commerce Information System Using Data Mining and Convolutional Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a8e2919e954a653b197",
+        "title": "The research progress and prospect of data mining methods on corrosion prediction of oil and gas pipelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20c993641ecbe193cec4",
+        "title": "Data Warehousing and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81f0fd7d0d5fb617619d",
+        "title": "TomoTwin: generalized 3D localization of macromolecules in cryo-electron tomograms with structural data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c311d133f657c09716d",
+        "title": "Software fault prediction using data mining, machine learning and deep learning techniques: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7541a96b9a1eecb1843f",
+        "title": "Healthcare insurance fraud detection using data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0a27be76393ed93deb9",
+        "title": "Data mining and machine learning in cancer survival research: An overview and future recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf785a7cf4f8d701374c",
+        "title": "Exploring data mining and machine learning in gynecologic oncology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2cd96f24e2b3caf5b65",
+        "title": "Research on coal mine hidden danger analysis and risk early warning technology based on data mining in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dea3966a4454582f3db9",
+        "title": "Flood prediction with time series data mining: Systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31ab9f805985133fe63a",
+        "title": "Introduction to Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f34c0608502e4c9cd32",
+        "title": "Privacy-preserving federated learning for collaborative medical data mining in multi-institutional settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23c346c2ba7c909a4c13",
+        "title": "E-Commerce Fraud Detection Model by Computer Artificial Intelligence Data Mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_acf99e0f27cd6e725d5b",
+        "title": "Data mining applications in university information management system development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbfd085756b24bceaa88",
+        "title": "Image and data mining in reticular chemistry powered by GPT-4V",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72654c4fe42e8a15b1df",
+        "title": "Generative pre-trained transformers (GPT)-based automated data mining for building energy management: Advantages, limitations and the future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_155d4d7b646fd01312e1",
+        "title": "Application of novel data-mining technique based nitrate concentration susceptibility prediction approach for coastal aquifers in India",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c098582a95798f337dff",
+        "title": "Hybrid data mining technique based breast cancer prediction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2bd4eb745a16c0a65ca",
+        "title": "Big data mining, rational modification, and ancestral sequence reconstruction inferred multiple xylose isomerases for biorefinery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f08472cdcc09819ef60",
+        "title": "Educational Data Mining: A Bibliometric Analysis of an Emerging Field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_069d6dc321f128b0b2c5",
+        "title": "Dark Web Illegal Activities Crawling and Classifying Using Data Mining Techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3384415128aea30b5e01",
+        "title": "Finding dependencies in the corporate environment using data mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0ca50407fd77b8b13ba",
+        "title": "Proceedings of the 16th International Conference on Educational Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eea50f7e8335738ab399",
+        "title": "Protection of data privacy from vulnerability using two-fish technique with Apriori algorithm in data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a8c80abc6e27c69bf17",
+        "title": "Introduction to Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9dbef6e24e613e808aa",
+        "title": "A data mining method to extract traffic network for maritime transport management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43c32feae855c1d020c2",
+        "title": "Building a quantitative composition-microstructure-property relationship of dual-phase steels via multimodal data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_746679ea4658a6d63356",
+        "title": "An Efficient Techniques For Disease Prediction From Medical Data Using Data Mining And Machine Learning",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2df389adcd71ff50426",
+        "title": "Diabetes Estimation Through Data Mining Using Optimization, Clustering, and Secure Cloud Storage Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_875e6042d48e662cf7c2",
+        "title": "Supply chain risk identification: a real-time data-mining approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e1d3a73fbcd8dad0435",
+        "title": "Multi-objective optimization-based privacy in data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11a9110ecd6bd1eeb983",
+        "title": "Educational Data Mining to Support Programming Learning Using Problem-Solving Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49b45fa2079168872b9e",
+        "title": "Water Quality Management Using Hybrid Machine Learning and Data Mining Algorithms: An Indexing Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eadc155f8d0ef864e2f7",
+        "title": "Data Mining in Healthcare: Current Applications and Issues",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ee576892c04dca62dd3",
+        "title": "Implementing in-situ self-organizing maps with memristor crossbar arrays for data mining and optimization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70081d8683d8580300c9",
+        "title": "Introduction to The Data Mining Techniques in Cybersecurity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5fb7968bada80f49368",
+        "title": "A comparative analysis of data mining techniques for agricultural and hydrological drought prediction in the eastern Mediterranean",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b21fb7591d65ef4931f3",
+        "title": "Computer vision-based hand gesture recognition for human-robot interaction: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c841c31ed266086ff2ba",
+        "title": "Deep Learning for Intelligent Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58a87142af501455732d",
+        "title": "Human Action Recognition From Various Data Modalities: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2d1b1b9378dcee57de2",
+        "title": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1dbea14311dff30bee7",
+        "title": "Human-in-the-loop machine learning: a state of the art",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef2b2f7f021c78f3d386",
+        "title": "Sentiment analysis and opinion mining on educational data: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43f1630ef7ff74df602e",
+        "title": "Improved prediction of protein-protein interactions using AlphaFold2",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b98854e80a7b8f39078",
+        "title": "Deep Learning-based Human Pose Estimation: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c8479995bfd801eb443",
+        "title": "Human emotion recognition from EEG-based brain–computer interface using machine learning: a comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e41d681a9d73ab37b49",
+        "title": "Human-Computer Interaction for Recognizing Speech Emotions Using Multilayer Perceptron Classifier",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_968d92014f9eab3843c3",
+        "title": "Process mining for healthcare: Characteristics and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50c3c9d3ebec091442a2",
+        "title": "Personalized recommendation of entertainment robots in fine arts education based on human–computer interaction and data mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3555cf31cc2360051fe8",
+        "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f681a3281984c8a8fe3b",
+        "title": "Future of industry 5.0 in society: human-centric solutions, challenges and prospective research areas",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c112287db0adc8eafa4",
+        "title": "Data augmentation: A comprehensive survey of modern approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a5844cd933e04797fa8",
+        "title": "Multimodal Human–Robot Interaction for Human‐Centric Smart Manufacturing: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f4700f1be37f2b50069",
+        "title": "Cyber Threat Intelligence Mining for Proactive Cybersecurity Defense: A Survey and New Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea3e3667056192205fed",
+        "title": "Systematic Review of Multimodal Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_199c2e39b7a1b416982c",
+        "title": "Human-Computer Interaction – INTERACT 2023",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1926b68e8fd027b4a99e",
+        "title": "Process Mining: A 360 Degree Overview",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32b630e73b6f18e855ad",
+        "title": "Personalized education and Artificial Intelligence in the United States, China, and India: A systematic review using a Human-In-The-Loop model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0a34c1c56e9fb38866f",
+        "title": "A Review on Data-Driven Process Monitoring Methods: Characterization and Mining of Industrial Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0618697551c589ee1fc3",
+        "title": "Promises and challenges of generative artificial intelligence for human learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4f00fdee28db63605d7",
+        "title": "Spatially resolved multiomics of human cardiac niches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d67b3ae63c82c8445dd7",
+        "title": "Human-Computer Interaction System: A Survey of Talking-Head Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_458fa264a97db1858f1d",
+        "title": "Human-Computer Interaction: Enhancing User Experience in Interactive Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bba993b2a4ac45de4ad3",
+        "title": "A Review on Machine Learning Styles in Computer Vision—Techniques and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42cbc205dc1f1fefe340",
+        "title": "Accurate predictions on small data with a tabular foundation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d396c3226e1b8908bf8e",
+        "title": "Small data machine learning in materials science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8df57c9326025d11bbce",
+        "title": "STUDYING HUMAN ROBOT INTERACTION AND ITS CHARACTERISTICS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc35a457696301ac4cca",
+        "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30cdb15201fe70bf6ca7",
+        "title": "Computer-Aided Drug Design and Drug Discovery: A Prospective Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17d5a0eb53feff00f19e",
+        "title": "A Review on Global E-Waste Management: Urban Mining towards a Sustainable Future and Circular Economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_285171bfaf9b663a3c5d",
+        "title": "Artificial intelligence for multimodal data integration in oncology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6978bbaf6e87f3d1ffeb",
+        "title": "Artificial Intelligence and Data Mining for the Pharmacovigilance of Drug–Drug Interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54855aa5a37cc0b1d6",
+        "title": "Human-AI collaboration patterns in AI-assisted academic writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7e7b6c366a0e3279b22",
+        "title": "Conversational and generative artificial intelligence and human–chatbot interaction in education and research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a80d8309f2ae4e9923f0",
+        "title": "Computer-Aided Traditional Art Design Based on Artificial Intelligence and Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50192760a4e872081f3d",
+        "title": "The use of Big Data Analytics in healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab3b8abf675f690bb67a",
+        "title": "Human–machine interaction towards Industry 5.0: Human-centric smart manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1084a2eb0097e353413",
+        "title": "XAI Systems Evaluation: A Review of Human and Computer-Centred Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_327bd97dcfe3b208aac0",
+        "title": "The Human Phenotype Ontology in 2024: phenotypes around the world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2d6681a7fddeeb591cc",
+        "title": "Convolutional networks for supervised mining of molecular patterns within cellular context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_629012f4fe2996c95ec6",
+        "title": "Blockchain and Cryptocurrency in Human Computer Interaction: A Systematic Literature Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_010462f3f107112facad",
+        "title": "Teaching for Values in Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe56f17223836ab2847d",
+        "title": "\"Help Me Help the AI\": Understanding How Explainability Can Support Human-AI Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e2890b9378f8a0aefc1",
+        "title": "CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b565caf4a2e45a6496d",
+        "title": "Deep learning in multimodal remote sensing data fusion: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ee263d6e541bf17eb31",
+        "title": "Does Synthetic Data Generation of LLMs Help Clinical Text Mining?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_064a174fe5b308b643af",
+        "title": "A Computer Science Perspective on Digital Transformation in Production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b33db8867a97e358e1d",
+        "title": "Multimodal Sentiment Analysis With Image-Text Interaction Network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a7f716c1366738f8f6e0",
+        "title": "An efficient way of text-based emotion analysis from social media using LRA-DNN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21115afc3414481ef841",
+        "title": "Exploring Human Resource Management Digital Transformation in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ceccf3e18ef6e0fa0d5a",
+        "title": "Deep learning approach to text analysis for human emotion detection from big data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38d56d72a6cb0e600fe6",
+        "title": "Big data with cloud computing: Discussions and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f462009fb3a93e3c938",
+        "title": "Re-Thinking Data Strategy and Integration for Artificial Intelligence: Concepts, Opportunities, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c20ffe3917fe14534444",
+        "title": "Financial Big Data Management and Control and Artificial Intelligence Analysis Method Based on Data Mining Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0206a9ba547317af13bb",
+        "title": "What is Human-Centered about Human-Centered AI? A Map of the Research Landscape",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_366e30baddf2b7b6ab49",
+        "title": "Hierarchical graph learning for protein–protein interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03f9df9a88501c349eaa",
+        "title": "Towards hybrid human‐AI learning technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83158e079add265ac7d9",
+        "title": "Machine Learning Methods for Small Data Challenges in Molecular Science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84751df363e2c4b63bb4",
+        "title": "Deep seabed mining: Frontiers in engineering geology and environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c42763c8c892b2e1c83",
+        "title": "Augmenting human innovation teams with artificial intelligence: Exploring transformer‐based language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58c5be1f33bcec88ab5f",
+        "title": "Redefining Creativity in the Era of AI? Perspectives of Computer Scientists and New Media Artists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ff035bd0ada37849508",
+        "title": "Human and artificial intelligence collaboration for socially shared regulation in learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9130b2ab5bf9127f86b0",
+        "title": "Human Action Recognition: A Taxonomy-Based Survey, Updates, and Opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1452923f625c8b6cbf7a",
+        "title": "Algorithms, Humans, and Interactions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6de7ae72c7d6224d0dd",
+        "title": "ARTIFICIAL INTELLIGENCE FOR THE REAL WORLD",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1115e4c8226e7bf9468a",
+        "title": "State of Industry 5.0—Analysis and Identification of Current Research Trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_581e3732397703500778",
+        "title": "Evaluating Large Language Models in Generating Synthetic HCI Research Data: a Case Study",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df8ced373fb4e03351c2",
+        "title": "Real-world data: a brief review of the methods, applications, challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_badd073f002f453e841d",
+        "title": "A Review of Machine Learning and Deep Learning for Object Detection, Semantic Segmentation, and Human Action Recognition in Machine and Robotic Vision",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc0545d249b187fd191b",
+        "title": "A Survey on Medical Explainable AI (XAI): Recent Progress, Explainability Approach, Human Interaction and Scoring System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf7f14d2cd3b5ddc8a22",
+        "title": "Privacy-preserving data (stream) mining techniques and their impact on data mining accuracy: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_916927a47a8c68214eb6",
+        "title": "The STRING database in 2023: protein–protein association networks and functional enrichment analyses for any sequenced genome of interest",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce610ce3b64f1ad082c3",
+        "title": "A novel data-driven method for mining battery open-circuit voltage characterization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd394926926d8bd3b4bf",
+        "title": "Feature dimensionality reduction: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cfa3171b9e537c7114f3",
+        "title": "Automated pipeline for superalloy data by text mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27952f9d2287ea351f74",
+        "title": "Mining for equitable health: Assessing the impact of missing data in electronic health records",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8ea41c07157b1007c3e",
+        "title": "Diseases 2.0: a weekly updated database of disease–gene associations from text mining and data integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29491780974a470b42b6",
+        "title": "dbCAN3: automated carbohydrate-active enzyme and substrate annotation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e047a73caa7b4a0839bd",
+        "title": "Sangerbox: A comprehensive, interaction‐friendly clinical bioinformatics analysis platform",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_996706a50d239b37ae70",
+        "title": "Methods and applications for Artificial Intelligence, Big Data, Internet of Things, and Blockchain in smart energy management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd39be08eec10caa026a",
+        "title": "Artificial Intelligence for Remote Sensing Data Analysis: A review of challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9da668eb14a04569c97",
+        "title": "A comprehensive survey of clustering algorithms: State-of-the-art machine learning applications, taxonomy, challenges, and future research prospects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_800453a195894ae308b2",
+        "title": "Perceived usefulness of online customer reviews: A review mining approach using machine learning & exploratory data analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa9bc14ff968508c7dac",
+        "title": "Mining imaging and clinical data with machine learning approaches for the diagnosis and early detection of Parkinson’s disease",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f9cad4198fca87870b0",
+        "title": "Concept-cognitive learning survey: Mining and fusing knowledge from data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7316bce1c9e973c1e2e",
+        "title": "IOSR Journal of Humanities and Social Science",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_882804ce620c1e01e902",
+        "title": "The environmental impacts of river sand mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_875ec905cc0ff8216238",
+        "title": "Integrating artificial intelligence into the modernization of traditional Chinese medicine industry: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8865f08332c1c9dc727b",
+        "title": "Network pharmacology: towards the artificial intelligence-based precision traditional Chinese medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_data_mining",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 34,
+      "hard_gate_pass_count": 34,
+      "eligible_count": 0,
+      "boundary_count": 15,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "data mining"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "data mining human-computer interaction"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(data mining) OR (data mining in human-computer interaction)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "data mining",
+        "raw_count": 100,
+        "hard_gate_pass_count": 1,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "data mining human-computer interaction",
+        "raw_count": 200,
+        "hard_gate_pass_count": 4,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(data mining) OR (data mining in human-computer interaction)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 5,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_40ce4d659a374112e365",
+          "paper_95f469d3574c06e2c47d"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_40ce4d659a374112e365",
+          "paper_31ab9f805985133fe63a"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_974a2373a6f9df08e6a4",
+        "incoming_paper_id": "paper_974a2373a6f9df08e6a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_72654c4fe42e8a15b1df",
+        "incoming_paper_id": "paper_72654c4fe42e8a15b1df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_47496b0849fd5ae8ef74",
+        "incoming_paper_id": "paper_47496b0849fd5ae8ef74"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d23be281ed536af636c5",
+        "incoming_paper_id": "paper_d23be281ed536af636c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68ed278b90b5f4051b60",
+        "incoming_paper_id": "paper_68ed278b90b5f4051b60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_056c0fffbcdd2ee6bd65",
+        "incoming_paper_id": "paper_056c0fffbcdd2ee6bd65"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ca71c149f083b3d17c5",
+        "incoming_paper_id": "paper_7ca71c149f083b3d17c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7290540baa75068fec9e",
+        "incoming_paper_id": "paper_7290540baa75068fec9e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8f92bc127cebc36c837a",
+        "incoming_paper_id": "paper_8f92bc127cebc36c837a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2f045d644ede5c666259",
+        "incoming_paper_id": "paper_2f045d644ede5c666259"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_39167301d607644d9027",
+        "incoming_paper_id": "paper_39167301d607644d9027"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b3a0f044aa70a3546f58",
+        "incoming_paper_id": "paper_b3a0f044aa70a3546f58"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_069d6dc321f128b0b2c5",
+        "incoming_paper_id": "paper_069d6dc321f128b0b2c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7541a96b9a1eecb1843f",
+        "incoming_paper_id": "paper_7541a96b9a1eecb1843f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eadc155f8d0ef864e2f7",
+        "incoming_paper_id": "paper_eadc155f8d0ef864e2f7"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_199c2e39b7a1b416982c",
+        "incoming_paper_id": "paper_f0bb894f9bd4ba2cf6f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75c683974c7550ba44f6",
+        "incoming_paper_id": "paper_75c683974c7550ba44f6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_788773690870c6941536",
+        "incoming_paper_id": "paper_788773690870c6941536"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_56bd56adc54a046c4e04",
+        "incoming_paper_id": "paper_56bd56adc54a046c4e04"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ef2e3a458f7b78afae77",
+        "incoming_paper_id": "paper_ef2e3a458f7b78afae77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d87f2d749151c5f6a4d",
+        "incoming_paper_id": "paper_8d87f2d749151c5f6a4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_974a2373a6f9df08e6a4",
+        "incoming_paper_id": "paper_974a2373a6f9df08e6a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_66ba8d183310d513b0f6",
+        "incoming_paper_id": "paper_66ba8d183310d513b0f6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3ab36917bd65b8158742",
+        "incoming_paper_id": "paper_3ab36917bd65b8158742"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_10ddc1a8cda6944011f8",
+        "incoming_paper_id": "paper_10ddc1a8cda6944011f8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_72654c4fe42e8a15b1df",
+        "incoming_paper_id": "paper_72654c4fe42e8a15b1df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5d1c4e28daf2a81bca88",
+        "incoming_paper_id": "paper_5d1c4e28daf2a81bca88"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_42bcf15fb1f1fa072b27",
+        "incoming_paper_id": "paper_42bcf15fb1f1fa072b27"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ef2b2f7f021c78f3d386",
+        "incoming_paper_id": "paper_ef2b2f7f021c78f3d386"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_618a41f9c6870d4e0826",
+        "incoming_paper_id": "paper_618a41f9c6870d4e0826"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_23d5720acddaa31789ed",
+        "incoming_paper_id": "paper_23d5720acddaa31789ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7a5f692b751d642a7393",
+        "incoming_paper_id": "paper_7a5f692b751d642a7393"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a53d1d45aee3b2cafd1",
+        "incoming_paper_id": "paper_8a53d1d45aee3b2cafd1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_47496b0849fd5ae8ef74",
+        "incoming_paper_id": "paper_47496b0849fd5ae8ef74"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d23be281ed536af636c5",
+        "incoming_paper_id": "paper_d23be281ed536af636c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_056c0fffbcdd2ee6bd65",
+        "incoming_paper_id": "paper_056c0fffbcdd2ee6bd65"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f716c3002c2c13a89f0c",
+        "incoming_paper_id": "paper_f716c3002c2c13a89f0c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68ed278b90b5f4051b60",
+        "incoming_paper_id": "paper_68ed278b90b5f4051b60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ae82a271eaa394f230db",
+        "incoming_paper_id": "paper_ae82a271eaa394f230db"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74afea35711a790d8afb",
+        "incoming_paper_id": "paper_74afea35711a790d8afb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_648057668dd5c49ae23c",
+        "incoming_paper_id": "paper_648057668dd5c49ae23c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ca71c149f083b3d17c5",
+        "incoming_paper_id": "paper_7ca71c149f083b3d17c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_92f58554930db627388c",
+        "incoming_paper_id": "paper_92f58554930db627388c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_baee5055803fa12f1b4c",
+        "incoming_paper_id": "paper_baee5055803fa12f1b4c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b0a34c1c56e9fb38866f",
+        "incoming_paper_id": "paper_b0a34c1c56e9fb38866f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_65b189dfc88cd1c38934",
+        "incoming_paper_id": "paper_65b189dfc88cd1c38934"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f2d1b1b9378dcee57de2",
+        "incoming_paper_id": "paper_f2d1b1b9378dcee57de2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec3e81bad4faa61abc86",
+        "incoming_paper_id": "paper_ec3e81bad4faa61abc86"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20432595db381d4a3212",
+        "incoming_paper_id": "paper_20432595db381d4a3212"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a7f716c1366738f8f6e0",
+        "incoming_paper_id": "paper_a7f716c1366738f8f6e0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ba61c4789f69e1f2565b",
+        "incoming_paper_id": "paper_ba61c4789f69e1f2565b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8f92bc127cebc36c837a",
+        "incoming_paper_id": "paper_8f92bc127cebc36c837a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c7ad13061c13f8dda5ad",
+        "incoming_paper_id": "paper_c7ad13061c13f8dda5ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ee1f8cb57a00a260c368",
+        "incoming_paper_id": "paper_ee1f8cb57a00a260c368"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19739f1d4f5bab4a8697",
+        "incoming_paper_id": "paper_19739f1d4f5bab4a8697"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7290540baa75068fec9e",
+        "incoming_paper_id": "paper_7290540baa75068fec9e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c6b6c313a1d0e0338e12",
+        "incoming_paper_id": "paper_c6b6c313a1d0e0338e12"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d86dc9f53dff07c65803",
+        "incoming_paper_id": "paper_d86dc9f53dff07c65803"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dcca7f5297a8e6ff5ac6",
+        "incoming_paper_id": "paper_dcca7f5297a8e6ff5ac6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c75a482cf4ac702bf509",
+        "incoming_paper_id": "paper_c75a482cf4ac702bf509"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1115e4c8226e7bf9468a",
+        "incoming_paper_id": "paper_1115e4c8226e7bf9468a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f3970604b770099060d3",
+        "incoming_paper_id": "paper_f3970604b770099060d3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d3c9c6f8bfe94da9146",
+        "incoming_paper_id": "paper_3d3c9c6f8bfe94da9146"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a7aa758e2051099d9cba",
+        "incoming_paper_id": "paper_a7aa758e2051099d9cba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_968d92014f9eab3843c3",
+        "incoming_paper_id": "paper_968d92014f9eab3843c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_117f320f997bc21fd6c8",
+        "incoming_paper_id": "paper_117f320f997bc21fd6c8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df985338364da0812826",
+        "incoming_paper_id": "paper_df985338364da0812826"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2f045d644ede5c666259",
+        "incoming_paper_id": "paper_2f045d644ede5c666259"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_39167301d607644d9027",
+        "incoming_paper_id": "paper_39167301d607644d9027"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b3a0f044aa70a3546f58",
+        "incoming_paper_id": "paper_b3a0f044aa70a3546f58"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c20ffe3917fe14534444",
+        "incoming_paper_id": "paper_c20ffe3917fe14534444"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_01480bc6b0dd6c2be6be",
+        "incoming_paper_id": "paper_01480bc6b0dd6c2be6be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6f9d19d550229878ef23",
+        "incoming_paper_id": "paper_6f9d19d550229878ef23"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1e25bd8540622ad0ddf",
+        "incoming_paper_id": "paper_d1e25bd8540622ad0ddf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69f119a7dae65b1e91a8",
+        "incoming_paper_id": "paper_69f119a7dae65b1e91a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9ee263d6e541bf17eb31",
+        "incoming_paper_id": "paper_9ee263d6e541bf17eb31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e656836fc541f623b05f",
+        "incoming_paper_id": "paper_e656836fc541f623b05f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19caa765503d39392975",
+        "incoming_paper_id": "paper_19caa765503d39392975"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc3256848ef14317e275",
+        "incoming_paper_id": "paper_fc3256848ef14317e275"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3a8e2919e954a653b197",
+        "incoming_paper_id": "paper_3a8e2919e954a653b197"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2d05f8e198092e5d009",
+        "incoming_paper_id": "paper_a2d05f8e198092e5d009"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7541a96b9a1eecb1843f",
+        "incoming_paper_id": "paper_7541a96b9a1eecb1843f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_81f0fd7d0d5fb617619d",
+        "incoming_paper_id": "paper_81f0fd7d0d5fb617619d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ddbf3aa7fb7326caaede",
+        "incoming_paper_id": "paper_ddbf3aa7fb7326caaede"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_977e1c9a3f309e5d81f3",
+        "incoming_paper_id": "paper_977e1c9a3f309e5d81f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_069d6dc321f128b0b2c5",
+        "incoming_paper_id": "paper_069d6dc321f128b0b2c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eea50f7e8335738ab399",
+        "incoming_paper_id": "paper_eea50f7e8335738ab399"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7f4700f1be37f2b50069",
+        "incoming_paper_id": "paper_7f4700f1be37f2b50069"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5d04752bef6b8eceb607",
+        "incoming_paper_id": "paper_5d04752bef6b8eceb607"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9f34c0608502e4c9cd32",
+        "incoming_paper_id": "paper_9f34c0608502e4c9cd32"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eadc155f8d0ef864e2f7",
+        "incoming_paper_id": "paper_eadc155f8d0ef864e2f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20c993641ecbe193cec4",
+        "incoming_paper_id": "paper_20c993641ecbe193cec4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dbfd085756b24bceaa88",
+        "incoming_paper_id": "paper_dbfd085756b24bceaa88"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75c683974c7550ba44f6",
+        "incoming_paper_id": "paper_75c683974c7550ba44f6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d0a9b408c6b6f4840e59",
+        "incoming_paper_id": "paper_d0a9b408c6b6f4840e59"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3384415128aea30b5e01",
+        "incoming_paper_id": "paper_3384415128aea30b5e01"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f9dbef6e24e613e808aa",
+        "incoming_paper_id": "paper_f9dbef6e24e613e808aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_43c32feae855c1d020c2",
+        "incoming_paper_id": "paper_43c32feae855c1d020c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e2df389adcd71ff50426",
+        "incoming_paper_id": "paper_e2df389adcd71ff50426"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf7f14d2cd3b5ddc8a22",
+        "incoming_paper_id": "paper_bf7f14d2cd3b5ddc8a22"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

@@ -1,0 +1,2296 @@
+{
+  "direction_id": "topic_digital_innovation",
+  "labels": {
+    "zh": "数字创新",
+    "en": "digital innovation"
+  },
+  "input": {
+    "selected_direction_id": "topic_digital_innovation",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 28657.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 230,
+  "hard_gate_pass_count": 39,
+  "eligible_count": 3,
+  "boundary_count": 13,
+  "selected_count": 3,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 17
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital innovation"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital innovation information systems"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文3/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_digital_innovation",
+      "research_direction": "digital innovation",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "digital innovation",
+      "aliases": [
+        "digital innovation"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:60"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_digital_innovation",
+        "labels": {
+          "zh": "数字创新",
+          "en": "digital innovation"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "数字创新",
+          "digital innovation",
+          "digital innovation in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "digital innovation",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "digital innovation",
+            "\"digital innovation\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "digital innovation",
+            "digital innovation information systems"
+          ],
+          "crossref": [
+            "digital innovation",
+            "数字创新"
+          ],
+          "dblp": [
+            "digital innovation digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "digital innovation",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "digital innovation information systems",
+          "(digital innovation) OR (digital innovation in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:60"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_d19a27392723df43f2bf",
+        "title": "Attention to Digital Innovation: Exploring the Impact of a Chief Information Officer in the Top Management Team",
+        "abstract": "We draw on the attention-based view of the firm to examine whether and when the presence of a CIO in the TMT has a positive effect on both firms’ ideated digital innovation (IDI) (i.e., the intensity of firms’ digital patenting activity) and commercialized digital innovation (CDI) (i.e., the digital sophistication of firms’ new products). Building on the idea that attention processes are context dependent, we also explore the moderating roles of CEO characteristics (IT background and role tenure) as well as environmental characteristics (the industry’s IT attention). We analyze data from a cross-industry panel of U.S. S&P 500 firms over eight years that includes up to 2,852 firm-year observations. The results indicate that CIO presence in the TMT is positively related to a firm’s IDI and CDI. Furthermore, they show that the organizational context related to CEO characteristics moderates the CIO-CDI relationship and that the environmental context related to the industry’s IT attention moderates the CIO-IDI relationship. Our research contributes to the information systems literature by providing robust evidence that CIO presence in the TMT positively influences a firm’s digital innovation outcomes, showing how internal and external boundary conditions affect the work of CIOs, and elaborating the role of managerial attention as an underlying mechanism explaining digital innovation.",
+        "authors": [
+          "David Bendig",
+          "Robin Wagner",
+          "Erk P. Piening",
+          "J. Nils Foege"
+        ],
+        "year": 2023,
+        "publication_date": "2023-12-01",
+        "published_date": "2023-12-01",
+        "language": "en",
+        "doi": "10.25300/misq/2023/17152",
+        "url": "https://doi.org/10.25300/misq/2023/17152",
+        "official_url": "https://doi.org/10.25300/misq/2023/17152",
+        "source_title": "MIS Quarterly",
+        "journal": "MIS Quarterly",
+        "source_issns": [
+          "0276-7783",
+          "2162-9730"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 99,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10003",
+            "name": "Innovation and Knowledge Management",
+            "score": 0.9830999970436096
+          },
+          {
+            "id": "https://openalex.org/T11849",
+            "name": "Intellectual Capital and Performance Analysis",
+            "score": 0.9714999794960022
+          },
+          {
+            "id": "https://openalex.org/T12659",
+            "name": "Innovation Diffusion and Forecasting",
+            "score": 0.932699978351593
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4391114245"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://doi.org/10.25300/misq/2023/17152",
+        "provider_payload_refs": [
+          "https://openalex.org/W4391114245"
+        ],
+        "journal_id": "journal_051",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 83.74,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 99.78,
+            "recency": 40.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 83.74
+      },
+      {
+        "paper_id": "paper_b0c463d3d7189cf4eb85",
+        "title": "Interoperability in the era of digital innovation: An information systems research agenda",
+        "abstract": "Digital innovation enables new forms of cyber-physical innovation based on digital business ecosystems. However, the realization of the opportunities arising from such innovation substantially hinges on interoperability, that is, the ability of two or more systems to exchange information and understand that exchanged information. While interoperability is a long-standing topic in research and practice alike and a valuable knowledge base exists, digital innovation poses novel challenges that might not be covered by conventional wisdom. Accordingly, we review the literature and, first, propose an organizing framework for existing interoperability knowledge involving the contextual conditions of low interoperability, the mechanisms to increase interoperability, and the associated outcomes. Second, we use the framework to identify previous research foci in the scholarly discourse about interoperability and to discuss the potential limitations of this past work in light of digital innovation. Third, we propose a research agenda that enables information systems (IS) research to address the identified limitations—involving conceptual, scoping, and methodological issues—and provide specific recommendations on how to address the identified issues in future IS research. Finally, we propose five major research topics for further inquiry by combining the challenges identified in current knowledge with the current shift toward hyper-connected ecosystems underlying digital innovation.",
+        "authors": [
+          "Daniel Hodapp",
+          "André Hanelt"
+        ],
+        "year": 2022,
+        "publication_date": "2022-02-07",
+        "published_date": "2022-02-07",
+        "language": "en",
+        "doi": "10.1177/02683962211064304",
+        "url": "https://doi.org/10.1177/02683962211064304",
+        "official_url": "https://doi.org/10.1177/02683962211064304",
+        "source_title": "Journal of Information Technology",
+        "journal": "Journal of Information Technology",
+        "source_issns": [
+          "0268-3962",
+          "1466-4437"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 98,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11437",
+            "name": "Digital Platforms and Economics",
+            "score": 0.9975000023841858
+          },
+          {
+            "id": "https://openalex.org/T11675",
+            "name": "Open Source Software Innovations",
+            "score": 0.9925000071525574
+          },
+          {
+            "id": "https://openalex.org/T10068",
+            "name": "Technology Adoption and User Behaviour",
+            "score": 0.9883999824523926
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4210255269"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://resolver.sub.uni-goettingen.de/purl?gro-2/164073",
+        "provider_payload_refs": [
+          "https://openalex.org/W4210255269"
+        ],
+        "journal_id": "journal_039",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE",
+          "ORG_STRATEGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 79.47,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 99.57,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 79.47
+      },
+      {
+        "paper_id": "paper_0c174c9510571ecfa305",
+        "title": "Digital “x”—Charting a Path for Digital-Themed Research",
+        "abstract": "We live in a time when digital technologies reshape most aspects of business and social life. This challenges received assumptions about modes of operation in organizations. As a result, scholars and practitioners increasingly use the label “digital” to signify that something has changed to the extent that a plethora of long-established management concepts are expressed in a new formulaic form of “digital x,” and x can stand for innovation, strategy, transformation, infrastructure, etc. In the information systems discipline and beyond, “digital” has emerged as an oft-used conceptual label to characterize age-long phenomena hitherto described by the IT (or x) label. There is a sense among academic and practitioner communities that digital and IT are not mere synonyms, but beyond the hype, something fundamentally different is being signaled when the “digital” label is invoked. This paper traces the intellectual roots and foundations of the growing use of “digital” as a conceptual label, identifies when the label use is warranted as well as outlines implications that the moniker holds for future scholarship, policy, and practice. In particular, the paper offers actionable guidance that enables more reflective use of the term “digital” as we move forward.",
+        "authors": [
+          "Abayomi Baiyere",
+          "Varun Grover",
+          "Kalle Lyytinen",
+          "Stephanie L. Woerner",
+          "Alok Gupta"
+        ],
+        "year": 2023,
+        "publication_date": "2023-02-23",
+        "published_date": "2023-02-23",
+        "language": "en",
+        "doi": "10.1287/isre.2022.1186",
+        "url": "https://doi.org/10.1287/isre.2022.1186",
+        "official_url": "https://doi.org/10.1287/isre.2022.1186",
+        "source_title": "Information Systems Research",
+        "journal": "Information Systems Research",
+        "source_issns": [
+          "1047-7047",
+          "1526-5536"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 101,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12885",
+            "name": "Digital Innovation in Industries",
+            "score": 0.9470000267028809
+          },
+          {
+            "id": "https://openalex.org/T14389",
+            "name": "Innovation, Technology, and Society",
+            "score": 0.9036999940872192
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4321615845"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://research.cbs.dk/en/publications/0833f63c-3a82-4c95-83d2-eca7042c3c07",
+        "provider_payload_refs": [
+          "https://openalex.org/W4321615845"
+        ],
+        "journal_id": "journal_023",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 75.36,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 75.36
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital innovation",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1418637,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:03.525373+00:00",
+        "transport": {
+          "attempts": 2,
+          "duration_ms": 18984.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital innovation information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1007341,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:22.524861+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3516.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "digital innovation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:28.609353+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "digital innovation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:29.789125+00:00",
+        "duration_ms": 1187.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1187.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "digital innovation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:30.975485+00:00",
+        "duration_ms": 1188.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1188.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "数字创新",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:56:26.225261+00:00",
+        "duration_ms": 1125.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1125.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "数字创新",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 6,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:56:27.348924+00:00",
+        "duration_ms": 1266.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1266.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_e72e071936870382cda2",
+        "title": "Digital innovation and performance of manufacturing firms: An affordance perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e77b1b091e071677adcd",
+        "title": "Digital innovations for sustainable and resilient agricultural systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35fa08abcbee52f08493",
+        "title": "Government digital initiatives and firm digital innovation: Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83ce96878c917aad0e49",
+        "title": "Digital innovation and the effects of artificial intelligence on firms’ research and development – Automation or augmentation, exploration or exploitation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63df5714c992f723c701",
+        "title": "Digital innovation in entrepreneurial firms: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e643fbca147b20899ab",
+        "title": "Environmental decentralization, digital finance and green technology innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d79e47fc8d602af1f8ba",
+        "title": "Employee-driven digital innovation: A systematic review and a research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84502cc9b078c57ed8c7",
+        "title": "Digitalization and sustainable development: How could digital economy development improve green innovation in China?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_533a0193c01bbd1bfbbe",
+        "title": "Can digital innovation improve firm performance: Evidence from digital patents of Chinese listed firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a2f08972af101d4c054",
+        "title": "Digital innovation ecosystems in agri-food: design principles and organizational framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2d50b656527d2608f98",
+        "title": "Enhancing Digital Innovation for the Sustainable Transformation of Manufacturing Industry: A Pressure-State-Response System Framework to Perceptions of Digital Green Innovation and Its Performance for Green and Intelligent Manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23d93e878b72d3438cd4",
+        "title": "The role of digital technology and digital innovation towards firm performance in a digital economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b975d52f5f784e19fa3",
+        "title": "Digitalization, innovation and environmental policies aimed at achieving sustainable production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a013f467e1e5b7730c2",
+        "title": "Does digital innovation cause better ESG performance? an empirical test of a-listed firms in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f1b9b5c5c87036a9634",
+        "title": "Distributed innovation, digital entrepreneurial opportunity, IT-enabled capabilities, and enterprises' digital innovation performance: a moderated mediating model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc366ff5b6038deeb967",
+        "title": "Innovation in emerging economies: Research on the digital economy driving high-quality green development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_55f348f2fbe86dee31d0",
+        "title": "Digital innovation and entrepreneurship: a review of challenges in competitive markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50e8350cf3ae157d820d",
+        "title": "Can digital transformation promote enterprise performance? —From the perspective of public policy and innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_feb7e19639e9f7290346",
+        "title": "Determinants of digital innovation in the public sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1581b8c9775a1fcb04f",
+        "title": "Digital Innovations in MSMEs during Economic Disruptions: Experiences and Challenges of Young Entrepreneurs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95bb1da07ab2f1c1c6a2",
+        "title": "Digital Innovation, Data Analytics, and Supply Chain Resiliency: A Bibliometric-based Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06ec1667e8b1ccb5f361",
+        "title": "Substantive digital innovation or symbolic digital innovation: Which type of digital innovation is more conducive to corporate ESG performance?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_854a00b23c8a4a2dc5f7",
+        "title": "The digital economy, enterprise digital transformation, and enterprise innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90d6072650607c298dff",
+        "title": "Digital economy: An innovation driving factor for low-carbon development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ae6c2fea841144d7d74",
+        "title": "Exploring the effect of digital transformation on Firms’ innovation performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4357ab0f37e32c513e6",
+        "title": "Digitalization, competition strategy and corporate innovation: Evidence from Chinese manufacturing listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76ec32ce45e00b2eaf56",
+        "title": "Digitalization, innovation and marketing in logistics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f43f5f6d615d3832638b",
+        "title": "The role of digitalization on green economic growth: Does industrial structure optimization and green innovation matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9966779d4c943e201419",
+        "title": "Digital Sustainable Entrepreneurship: A Digital Capability Perspective through Digital Innovation Orientation for Social and Environmental Value Creation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2fb9518e2d32344ed4c",
+        "title": "The impact of business owners’ individual characteristics on patenting in the context of digital innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab2c65ddc81140b4eaf6",
+        "title": "How does the digital transformation drive digital technology innovation of enterprises? Evidence from enterprise's digital patents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7f54aea666dcb2af61b",
+        "title": "Non-technical inhibitors: Exploring the adoption of digital innovation in the UK construction industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9c5e2c665cad09eb9c1",
+        "title": "Profiting from digital innovation: Patents, copyright and performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83e60c0b3c5659b4aeb5",
+        "title": "Mapping digital innovation: A bibliometric analysis and systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b05f66a403ae440d83e",
+        "title": "Paradoxes of implementing digital manufacturing systems: A longitudinal study of digital innovation projects for disruptive change",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c569528ddaaafb147b6",
+        "title": "How organizational readiness for digital innovation shapes digital business model innovation in family businesses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_884c4f612f39ec371e9a",
+        "title": "The impact of China's green credit policy on enterprise digital innovation: evidence from heavily-polluting Chinese listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_729a38c5f2145599d1f9",
+        "title": "The Relationship Between Digital Organizational Culture, Digital Capability, Digital Innovation, Organizational Resilience, and Competitive Advantage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cfe5aac0d8374b7dd2f",
+        "title": "Institutionalising the digital transition: The role of digital innovation intermediaries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ccd2092487357949fa01",
+        "title": "How does digital finance influence green technology innovation in China? Evidence from the financing constraints perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a477c915b0ae46968024",
+        "title": "Innovation Performance in the Digital Divide Context: Nexus of Digital Infrastructure, Digital Innovation, and E-knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a763857b84a81860a1b",
+        "title": "Organisations’ Resources and External Shocks: Exploring Digital Innovation in Family Firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_052b56eb08751d841812",
+        "title": "Digital innovation: An essence for Industry 4.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07c9e68e364f506e930b",
+        "title": "Firms' digitalization in manufacturing and the structure and direction of green innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c0f70ff7cf41a2c4157",
+        "title": "An adoption-implementation framework of digital green knowledge to improve the performance of digital green innovation practices for industry 5.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6cf52954afa2acf7050",
+        "title": "Ethics of Digital Innovation in Public Administration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab2d4c8b3d8021478f80",
+        "title": "The impact of judicial protection of intellectual property on digital innovation: Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69694c753a9cf6ca66c9",
+        "title": "Digital technology and business model innovation: A systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c261365b1129f4b7dcc2",
+        "title": "Impact of digitalization on technological innovations in small and medium-sized enterprises (SMEs)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eff2847379dfac82004b",
+        "title": "Exploring digital innovation in smart tourism destinations: insights from 31 premier tourist cities in digital China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_332059fefed5bb521ba4",
+        "title": "Institutional entrepreneurship for responsible digital innovation: The case of corporate digital responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e0c721809b440fe22a2",
+        "title": "Technology, entrepreneurship, innovation and social change in digital economics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a221602b8542dcc3498b",
+        "title": "The role of strategic orientations for digital innovation: When entrepreneurship meets sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_822657316a2b40ff00b8",
+        "title": "Can Digital Transformation Promote Green Technology Innovation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca60a9a678dee7560f60",
+        "title": "Digital innovation and corporate social responsibility performance: Evidence from firms' digital patents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24aec4701a78e9bbe80b",
+        "title": "The effects of digital transformation on innovation and productivity: Firm-level evidence of South African manufacturing micro and small enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36d240b6c5a6338421bc",
+        "title": "Can digital transformation overcome the enterprise innovation dilemma: Effect, mechanism and effective boundary",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0037a9dcf971d45ad5b7",
+        "title": "Regions facing the ‘twin transition’: combining regional green and digital innovations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_809868cbd424d5a656aa",
+        "title": "Breaking barriers to innovation: The power of digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73e2452ea0bc9b30db26",
+        "title": "Digital innovations: Implications for African agribusinesses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0c54438831d9bbeed80",
+        "title": "Digital Innovation Enabled Nanomaterial Manufacturing; Machine Learning Strategies and Green Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ac046d05b1c6c42fe98",
+        "title": "Accelerating Innovation With Generative AI: AI-Augmented Digital Prototyping and Innovation Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7864096b74b86ecd9054",
+        "title": "Peer effects of digital innovation behavior: an external environment perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6544bfe8327688969e51",
+        "title": "Digital infrastructure and innovation: Digital divide or digital dividend?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38a0f0c5d82ddeedbb9b",
+        "title": "Does market orientation promote enterprise digital innovation? Based on the survey data of China's digital core industries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1df762a82e04b1f783c0",
+        "title": "Digital Transformation and Innovation: The Influence of Digital Technologies on Turnover from Innovation Activities and Types of Innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02adb74e52729e17faa8",
+        "title": "Digital transformation, risk-taking, and innovation: Evidence from data on listed enterprises in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a55f0dd7326f6aa9bd5",
+        "title": "Digital innovation and organizational changes in the healthcare sector: Multiple case studies of telemedicine project implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1ffbc43995dce86595f",
+        "title": "Does digital finance promote the green innovation of China's listed companies?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd5d0ccb02684566d8ec",
+        "title": "Influence of digital finance and green technology innovation on China's carbon emission efficiency: Empirical analysis based on spatial metrology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fac6b88832b7bb1b6c0",
+        "title": "The impact of digital transformation on innovation performance - The mediating role of innovation factors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec67b816e678256c422e",
+        "title": "Analyzing the Influence of Artificial Intelligence on Digital Innovation: A SmartPLS Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc131b8cadf80eebb9c4",
+        "title": "Digital transformation anxiety: absorptive capacity, dynamic capability, and digital innovation performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd4dda2855e29ab8b35d",
+        "title": "Can digital finance promote corporate green innovation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9f9ca54f7f6a982b2d5",
+        "title": "Disruptive digital innovations in healthcare: Knowing the past and anticipating the future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_133f1454276fb539790e",
+        "title": "How does competition policy affect enterprise digitization? Dual perspectives of digital commitment and digital innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b3109239a5be7a8a559",
+        "title": "Digital innovation in family firms: The roles of non-family managers and transgenerational control intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d7821d148530380d262",
+        "title": "Digital entrepreneurship: The role of entrepreneurial orientation and digitalization for disruptive innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff64f7a0c6c29b1b0334",
+        "title": "Digital innovation and financial access for small and medium-sized enterprises in a currency union",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_99f51ea281e1ff62637c",
+        "title": "How digital platform capabilities improve sustainable innovation performance of firms: The mediating role of open innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1674c37db42a7104aca9",
+        "title": "Financial innovation and digitalization promote business growth: The interplay of green technology innovation, product market competition and firm performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6af34a115ba30d808b4",
+        "title": "Digital inclusive finance and digital innovation in private enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b44983ca66dfb5c05cf3",
+        "title": "Investigating the effects of stakeholder collaboration strategies on risk prevention performance in a digital innovation ecosystem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbc3710433943b6aaa00",
+        "title": "Impacts of digital transformation on eco-innovation and sustainable performance: Evidence from Chinese manufacturing companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_136e973c5647a6c6dbcc",
+        "title": "Digital Innovation Ecosystem on Digital Entrepreneur",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a24a3330cdc65a616eae",
+        "title": "Digital Transformation on Enterprise Green Innovation: Effect and Transmission Mechanism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3965a87714d3df11eca2",
+        "title": "Digital Innovations for Occupational Safety: Empowering Workers in Hazardous Environments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a196f6c5d1c496694c0",
+        "title": "Internationalization of Digital Innovations: A Rapidly Evolving Research Stream",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f36dae2554015c4c872d",
+        "title": "AI-Powered Innovation in Digital Transformation: Key Pillars and Industry Impact",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_613d3a17e12d645ea44a",
+        "title": "Digital innovations in tourism: the perceptions of stakeholders",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_100bf7469f93f21f0e56",
+        "title": "How Digital Tools Align with Organizational Agility and Strengthen Digital Innovation in Automotive Startups",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04feec124bd535bd8a4a",
+        "title": "Digital innovation strategies in the public sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e399f64e92616f8b7ff",
+        "title": "A systematic review of digital innovations in technology-enhanced learning designs in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5adbbd40d603dd243ad5",
+        "title": "Understanding the role of digital technologies in education: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a91854de8f181c038594",
+        "title": "Digital Transformation in Healthcare: Technology Acceptance and Its Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_016677299dd8da12d77a",
+        "title": "Tackling the digitalization challenge: how to benefit from digitalization in practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14504d482ae0e32c9b2a",
+        "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c6d284f6de91d7af278",
+        "title": "Design and Development of an Eco-Innovation Management Information System to Accelerate Firms’ Digital Transformation Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35b8830b21c73159d898",
+        "title": "Digital transformation in education: Critical components for leaders of system change",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_002b438a62a10820b4e9",
+        "title": "Linking circular economy and digitalisation technologies: A systematic literature review of past achievements and future promises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2d6a7f6002d7c4cb2c8",
+        "title": "The Need of Integrating Digital Education in Higher Education: Challenges and Opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d81883d9904dedf44838",
+        "title": "Digital twin for healthcare systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_898cb947fec70ebd46ca",
+        "title": "Digital business model innovation: toward construct clarity and future research directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_700b3b279b9ebce93187",
+        "title": "Mastering digital transformation: The nexus between leadership, agility, and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59ca13092bda4be70a46",
+        "title": "Impacts of digital technologies on education and factors influencing schools' digital capacity and transformation: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd4ceceeab41bdc70716",
+        "title": "Knowledge Management in the Digital Age: Harnessing Information and Innovation with Knowledge Management Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21115afc3414481ef841",
+        "title": "Exploring Human Resource Management Digital Transformation in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1987449d56eed5dbda7",
+        "title": "Generation and Assessment of Intellectual and Informational Capital as a Foundation for Corporations’ Digital Innovations in the “Open Innovation” System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72d98c78f7708fdbd2f0",
+        "title": "Insight into the impact of digital accounting information system on sustainable innovation ecosystem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61473a20acd7353cfd3a",
+        "title": "A framework for digital health equity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2ffbdde1422704daeac",
+        "title": "Digital twins for health: a scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1f82c25d19c03a2a862",
+        "title": "Food start-ups: leveraging digital marketing and disruptive information systems innovations to survive in the post-COVID environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f80d02cd7134a8caf06",
+        "title": "Adoption of information and digital technologies for sustainable smart manufacturing systems for industry 4.0 in small, medium, and micro enterprises (SMMEs)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_578b7bba97930758c656",
+        "title": "The Path to Smart Farming: Innovations and Opportunities in Precision Agriculture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd521f4c4fbc9869f8c1",
+        "title": "The Role of System Quality, Information Quality, and Top Management Support in Enhancing Business Sustainability: From a Digital Innovation Perspective",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_706bbc264d55ae2ea9c2",
+        "title": "Digital Information Systems on Business Agility and Innovation in the Era of Industry 6.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97db6001059e2a2e548c",
+        "title": "Digital health for aging populations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0d6b4eb41f50a14dab1",
+        "title": "A Review on Digital Twin Technology in Smart Grid, Transportation System and Smart City: Challenges and Future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9db5b57961f2e6b42f5c",
+        "title": "INFORMATION SYSTEMS IN HEALTH MANAGEMENT: INNOVATIONS AND CHALLENGES IN THE DIGITAL ERA",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b7a16b5115a86f1c3ab",
+        "title": "Workplace literacy skills—how information and digital literacy affect adoption of digital technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5e075c41a2736710928",
+        "title": "From dual digitalization to digital learning space: Exploring the digital transformation of higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e48111f0e6f44a74cb8",
+        "title": "ACCESS: Advancing Innovation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "title": "Digital transformation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3daf2175f3f8753584d1",
+        "title": "Digital transformation of peatland eco-innovations (‘Paludiculture’): Enabling a paradigm shift towards the real-time sustainable production of ‘green-friendly’ products and services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ef7d15ffcbb90a691e1",
+        "title": "Information Systems Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b73e322bdb15eece27",
+        "title": "Digital Learning and Digital Institution in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_633b11d5e7da87582d0f",
+        "title": "Artificial intelligence enabling circular business model innovation in digital servitization: Conceptualizing dynamic capabilities, AI capacities, business models and effects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2b33817f58aba706a89",
+        "title": "Digital technologies: tensions in privacy and data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bd2225e6e0dbedb085e",
+        "title": "Artificial intelligence in innovation management: A review of innovation capabilities and a taxonomy of AI applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3326f0dae26a4bff98fd",
+        "title": "Industry 4.0 Digital Technologies and Information Systems: Implications for Manufacturing Firms Innovation Performance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0734010e625bd0042df9",
+        "title": "Linking Digital Capacity to Innovation Performance: the Mediating Role of Absorptive Capacity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bdaddfa8f0fd08f050d1",
+        "title": "Economic Innovation Caused by Digital Transformation and Impact on Social Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07e17f89d39f4d8aa6ef",
+        "title": "The effect of digital marketing capabilities on organizational ambidexterity of the information technology sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd768f55364c4014042",
+        "title": "Toward the Next Generation of Digitalization in Agriculture Based on Digital Twin Paradigm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60b39f4a2ec387d3bd99",
+        "title": "Barriers and facilitators to utilizing digital health technologies by healthcare professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb06a3db393d62045a18",
+        "title": "Design, Modeling and Implementation of Digital Twins",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1fd36e67c0f37a2d8230",
+        "title": "The evolution of the digital service ecosystem and digital business model innovation in retail: The emergence of meta-ecosystems and the value of physical interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ada08915190ee9afc42e",
+        "title": "Role of Digital Transformation for Achieving Sustainability: Mediated Role of Stakeholders, Key Capabilities, and Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e494847d9716da788e9f",
+        "title": "Is digitalization a source of innovation? Exploring the role of digital diffusion in SME innovation performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2db3881d945358deb9ca",
+        "title": "The cost-effectiveness of digital health interventions: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_064a174fe5b308b643af",
+        "title": "A Computer Science Perspective on Digital Transformation in Production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab42fc7492a4a16ac124",
+        "title": "Digital Economy, Technological Innovation and Urban Resilience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30cf8adc2200566abba8",
+        "title": "Artificial intelligence and corporate innovation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26e029c1c9aa819ade47",
+        "title": "The nexus of digital transformation and innovation: A multilevel framework and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54592cb4505d59f1f61b",
+        "title": "Can digital finance promote urban innovation? Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a542bbd88a75b61db28",
+        "title": "Towards Sustainable Digital Agriculture for Smallholder Farmers: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0fa83b6b9f94ca981ae7",
+        "title": "Teachers’ AI digital competencies and twenty-first century skills in the post-pandemic world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_254e1c1920fba3463c00",
+        "title": "Digital technology innovation and corporate resilience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b473dd62950b75a48ba",
+        "title": "The impact of accounting information systems, knowledge management, digital platforms, and digital innovation on the performance of SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c745117efea1f20548b9",
+        "title": "Higher Education Future in the Era of Digital Transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_112c6c9887ceca7c061f",
+        "title": "Digital transformation of healthcare sector. What is impeding adoption and continued usage of technology-driven innovations by end-users?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_55e703d90adb2a6d38ba",
+        "title": "Digital Transformation and Innovation Performance in Small- and Medium-Sized Enterprises: A Systems Perspective on the Interplay of Digital Adoption, Digital Drive, and Digital Culture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28ed27907f61176536db",
+        "title": "A systematic review on digital literacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1884cc3f2bb2c7d38956",
+        "title": "Digital Finance Development and the Digital Transformation of Enterprises: Based on the Perspective of Financing Constraint and Innovation Drive",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cea1be7d44a052b8adb",
+        "title": "YOLO-v1 to YOLO-v8, the Rise of YOLO and Its Complementary Nature toward Digital Manufacturing and Industrial Defect Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2da5ee781b0b9e4d2942",
+        "title": "Perceived risks and vulnerabilities of employing digitalization and digital data in agriculture – Socially robust orientations from a transdisciplinary process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fde094457e450cf5e39",
+        "title": "Digital twin in power system research and development: Principle, scope, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5aff62b376648d8f947a",
+        "title": "A framework of digital technologies for the circular economy: Digital functions and mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c93ea13e19298203a387",
+        "title": "Digital Transformation in Higher Education Institutions as a Driver of Social Oriented Innovations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f0bf39972644d4432cb",
+        "title": "Digital technologies in sports: Opportunities, challenges, and strategies for safeguarding athlete wellbeing and competitive integrity in the digital era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5685f9ea6c7614e2aa4d",
+        "title": "Impact of supply chain digitalization on supply chain resilience and performance: A multi-mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c122897bffd96af50bf",
+        "title": "Drivers of Digital Transformation in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a75fb24d02a7007078e0",
+        "title": "Future agricultural systems and the role of digitalization for achieving sustainability goals. A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e4da5c13577495c75b5",
+        "title": "Digitalization Effect on Business Performance: Role of Business Model Innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_829eaddc4ef10c7b5892",
+        "title": "Digital future of luxury brands: Metaverse, digital fashion, and non‐fungible tokens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8d13758e1e3ed914881",
+        "title": "Digital green value co-creation behavior, digital green network embedding and digital green innovation performance: moderating effects of digital green network fragmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c0eb73604b33a9d332b",
+        "title": "Digital Twins: State of the art theory and practice, challenges, and open research questions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c035c3f2f365bab149f",
+        "title": "Digitalization driven retail business model innovation: Evaluation of past and avenues for future research trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02bbe4183aeab4236f77",
+        "title": "How digital transformation helps enterprises achieve high-quality development? Empirical evidence from Chinese listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 17
+    },
+    "coverage_audit": {
+      "direction_id": "topic_digital_innovation",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 230,
+      "deduplicated_count": 39,
+      "hard_gate_pass_count": 39,
+      "eligible_count": 3,
+      "boundary_count": 13,
+      "selected_count": 3,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital innovation"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital innovation information systems"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "digital innovation",
+        "raw_count": 100,
+        "hard_gate_pass_count": 7,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "digital innovation information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 12,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b0c463d3d7189cf4eb85",
+        "incoming_paper_id": "paper_b0c463d3d7189cf4eb85"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e77b1b091e071677adcd",
+        "incoming_paper_id": "paper_e77b1b091e071677adcd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_50e8350cf3ae157d820d",
+        "incoming_paper_id": "paper_50e8350cf3ae157d820d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ae6c2fea841144d7d74",
+        "incoming_paper_id": "paper_5ae6c2fea841144d7d74"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2d50b656527d2608f98",
+        "incoming_paper_id": "paper_a2d50b656527d2608f98"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_822657316a2b40ff00b8",
+        "incoming_paper_id": "paper_822657316a2b40ff00b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d19a27392723df43f2bf",
+        "incoming_paper_id": "paper_d19a27392723df43f2bf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6544bfe8327688969e51",
+        "incoming_paper_id": "paper_6544bfe8327688969e51"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1df762a82e04b1f783c0",
+        "incoming_paper_id": "paper_1df762a82e04b1f783c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24aec4701a78e9bbe80b",
+        "incoming_paper_id": "paper_24aec4701a78e9bbe80b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7fac6b88832b7bb1b6c0",
+        "incoming_paper_id": "paper_7fac6b88832b7bb1b6c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_02adb74e52729e17faa8",
+        "incoming_paper_id": "paper_02adb74e52729e17faa8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83ce96878c917aad0e49",
+        "incoming_paper_id": "paper_83ce96878c917aad0e49"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f36dae2554015c4c872d",
+        "incoming_paper_id": "paper_f36dae2554015c4c872d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a24a3330cdc65a616eae",
+        "incoming_paper_id": "paper_a24a3330cdc65a616eae"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dbc3710433943b6aaa00",
+        "incoming_paper_id": "paper_dbc3710433943b6aaa00"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53347828224055a1b955",
+        "incoming_paper_id": "paper_53347828224055a1b955"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_63df5714c992f723c701",
+        "incoming_paper_id": "paper_63df5714c992f723c701"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d79e47fc8d602af1f8ba",
+        "incoming_paper_id": "paper_d79e47fc8d602af1f8ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b975d52f5f784e19fa3",
+        "incoming_paper_id": "paper_7b975d52f5f784e19fa3"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "bd9a086eeaf248d4bba5d8ccec734c73",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

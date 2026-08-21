@@ -1,0 +1,2985 @@
+{
+  "direction_id": "topic_hci",
+  "labels": {
+    "zh": "人机交互研究",
+    "en": "human-computer interaction"
+  },
+  "input": {
+    "selected_direction_id": "topic_hci",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 12968.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 230,
+  "hard_gate_pass_count": 32,
+  "eligible_count": 7,
+  "boundary_count": 8,
+  "selected_count": 7,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 13
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "human-computer interaction"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "human-computer interaction human-computer interaction"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文7/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_hci",
+      "research_direction": "HCI",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "HCI",
+      "aliases": [
+        "HCI"
+      ],
+      "groups": [
+        "IS × Computer Science / HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:114"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_hci",
+        "labels": {
+          "zh": "人机交互研究",
+          "en": "human-computer interaction"
+        },
+        "group_ids": [
+          "is_cs_hci"
+        ],
+        "synonyms": [
+          "人机交互研究",
+          "human-computer interaction",
+          "HCI",
+          "human-computer interaction in human-computer interaction"
+        ],
+        "boundaries": {
+          "include": [
+            "human-computer interaction",
+            "human-computer interaction",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "human-computer interaction",
+            "\"human-computer interaction\" AND \"human-computer interaction\""
+          ],
+          "semantic_scholar": [
+            "human-computer interaction",
+            "human-computer interaction human-computer interaction"
+          ],
+          "crossref": [
+            "human-computer interaction",
+            "人机交互研究"
+          ],
+          "dblp": [
+            "human-computer interaction computing"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "human-computer interaction",
+            "human-computer interaction",
+            "computing"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "CS_AI",
+          "HCI",
+          "CS_IR",
+          "CS_DATA",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "human-computer interaction human-computer interaction",
+          "(human-computer interaction) OR (human-computer interaction in human-computer interaction)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:114"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_a0f3f86c85ff56182877",
+        "title": "Post-growth Human–Computer Interaction",
+        "abstract": "Human–Computer Interaction (HCI) researchers have increasingly been questioning computing’s engagement with unsustainable and unjust economic growth, pushing for identifying alternatives. Incorporating degrowth, post-development, and steady-state approaches, post-growth philosophy offers an alternative not rooted in growth but in improving quality of life. It recommends an equitable reduction in resource use through sensible distributive practices where fulfillment is based on values including solidarity, cooperation, care, social justice, and localized development. In this paper, we describe opportunities for HCI to take a post-growth orientation in research, design, and practice to reimagine the design of sociotechnical systems toward advancing sustainable, just, and humane futures. We aim for the critiques, concerns, and recommendations offered by post-growth to be integrated into transformative HCI practices for technology-mediated change.",
+        "authors": [
+          "Vishal Sharma",
+          "Neha Kumar",
+          "Bonnie Nardi"
+        ],
+        "year": 2023,
+        "publication_date": "2023-09-19",
+        "published_date": "2023-09-19",
+        "language": "en",
+        "doi": "10.1145/3624981",
+        "url": "https://doi.org/10.1145/3624981",
+        "official_url": "https://doi.org/10.1145/3624981",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 95,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10803",
+            "name": "Innovative Human-Technology Interaction",
+            "score": 0.9995999932289124
+          },
+          {
+            "id": "https://openalex.org/T12238",
+            "name": "Green IT and Sustainability",
+            "score": 0.996399998664856
+          },
+          {
+            "id": "https://openalex.org/T14147",
+            "name": "Innovative Approaches in Technology and Social Development",
+            "score": 0.9958999752998352
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4386864859"
+        },
+        "providers": [
+          "openalex",
+          "crossref"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex",
+            "crossref"
+          ],
+          "abstract": [
+            "openalex",
+            "crossref"
+          ],
+          "authors": [
+            "openalex",
+            "crossref"
+          ],
+          "year": [
+            "openalex",
+            "crossref"
+          ],
+          "doi": [
+            "openalex",
+            "crossref"
+          ],
+          "source_title": [
+            "openalex",
+            "crossref"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex",
+            "crossref"
+          ],
+          "published_date": [
+            "openalex",
+            "crossref"
+          ],
+          "url": [
+            "openalex",
+            "crossref"
+          ],
+          "official_url": [
+            "openalex",
+            "crossref"
+          ],
+          "journal": [
+            "openalex",
+            "crossref"
+          ],
+          "document_type": [
+            "openalex",
+            "crossref"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://dl.acm.org/doi/pdf/10.1145/3624981",
+        "provider_payload_refs": [
+          "https://openalex.org/W4386864859"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 84.91,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 98.9,
+            "recency": 40.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 67.5
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 84.91
+      },
+      {
+        "paper_id": "paper_0f084d9271215c28f864",
+        "title": "Optimal Feedback Control for Modeling Human–Computer Interaction",
+        "abstract": "Optimal feedback control (OFC) is a theory from the motor control literature that explains how humans move their body to achieve a certain goal, e.g., pointing with the finger. OFC is based on the assumption that humans aim at controlling their body optimally, within the constraints imposed by body, environment, and task. In this article, we explain how this theory can be applied to understanding Human-Computer Interaction (HCI) in the case of pointing. We propose that the human body and computer dynamics can be interpreted as a single dynamical system. The system state is controlled by the user via muscle control signals, and estimated from observations. Between-trial variability arises from signal-dependent control noise and observation noise. We compare four different models from optimal control theory and evaluate to what degree these models can replicate movements in the case of mouse pointing. We introduce a procedure to identify parameters that best explain observed user behavior. To support HCI researchers in simulating, analyzing, and optimizing interaction movements, we provide the Python toolbox OFC4HCI . We conclude that OFC presents a powerful framework for HCI to understand and simulate motion of the human body and of the interface on a moment-by-moment basis.",
+        "authors": [
+          "Florian Fischer",
+          "Arthur Fleig",
+          "Markus Klar",
+          "Jörg Müller"
+        ],
+        "year": 2022,
+        "publication_date": "2022-04-14",
+        "published_date": "2022-04-14",
+        "language": "en",
+        "doi": "10.1145/3524122",
+        "url": "https://doi.org/10.1145/3524122",
+        "official_url": "https://doi.org/10.1145/3524122",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 26,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10982",
+            "name": "Motor Control and Adaptation",
+            "score": 0.9998999834060669
+          },
+          {
+            "id": "https://openalex.org/T10784",
+            "name": "Muscle activation and electromyography studies",
+            "score": 0.9983000159263611
+          },
+          {
+            "id": "https://openalex.org/T10914",
+            "name": "Tactile and Sensory Interactions",
+            "score": 0.9973000288009644
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W3204384305"
+        },
+        "providers": [
+          "openalex",
+          "crossref"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex",
+            "crossref"
+          ],
+          "abstract": [
+            "openalex",
+            "crossref"
+          ],
+          "authors": [
+            "openalex",
+            "crossref"
+          ],
+          "year": [
+            "openalex",
+            "crossref"
+          ],
+          "doi": [
+            "openalex",
+            "crossref"
+          ],
+          "source_title": [
+            "openalex",
+            "crossref"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex",
+            "crossref"
+          ],
+          "published_date": [
+            "openalex",
+            "crossref"
+          ],
+          "url": [
+            "openalex",
+            "crossref"
+          ],
+          "official_url": [
+            "openalex",
+            "crossref"
+          ],
+          "journal": [
+            "openalex",
+            "crossref"
+          ],
+          "document_type": [
+            "openalex",
+            "crossref"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://dl.acm.org/doi/pdf/10.1145/3524122",
+        "provider_payload_refs": [
+          "https://openalex.org/W3204384305"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 80.17,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 71.41,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 67.5
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 80.17
+      },
+      {
+        "paper_id": "paper_cd76605a7b81added2a1",
+        "title": "A Scoping Review of Informed Consent Practices in Human–Computer Interaction Research",
+        "abstract": "Obtaining informed consent is a fundamental ethical requirement in research involving human subjects, designed to ensure autonomy, respect, and the protection of participants. However, new technologies and research methodologies in Human–Computer Interaction (HCI) present unique challenges in maintaining ethical standards and require a deeper understanding of how consent practices are implemented. This scoping review provides a detailed examination of the frameworks, methodologies, and practices for obtaining informed consent in HCI. We present recognized universal principles while also discussing the ethical guidelines, and legal frameworks that underpin consent processes. Furthermore, we analyze the practices of disclosure, screening, consenting, and confirmation to assess how researchers ensure voluntary participation. The review addresses key criticisms and challenges identified in the literature, suggesting improvements and exploring alternative approaches. By offering comprehensive insights into the complexities of informed consent, we underscore the ongoing need for ethical awareness and continuous refinement of ethical conduct in HCI.",
+        "authors": [
+          "Valentin Schwind",
+          "Netsanet Zelalem Tadesse",
+          "Estefania Silva da Cunha",
+          "Yeganeh Hamidi",
+          "Soltan Sanjar Sultani",
+          "Jessica Sehrt"
+        ],
+        "year": 2025,
+        "publication_date": "2025-08-31",
+        "published_date": "2025-08-31",
+        "language": "en",
+        "doi": "10.1145/3721284",
+        "url": "https://doi.org/10.1145/3721284",
+        "official_url": "https://doi.org/10.1145/3721284",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 12,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 80.16,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 55.58,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 80.16
+      },
+      {
+        "paper_id": "paper_fafac98aa9b10ca465f5",
+        "title": "Sketching Snapshots: Reflecting on Human–Computer Interaction Education through Sketching",
+        "abstract": "Reflection provides students and instructors insight into mindsets, learning progress, and course design. However, most reflective activities in HCI courses focus on specific skills and content. We propose sketching as a flexible and expressive medium for reflecting on larger topics to reveal implicit perspectives about multifaceted concepts of HCI. We developed “Sketching Snapshots,” an activity to elicit student perspectives on high-level concepts. To evaluate this activity, we ran pre- and post-semester workshops in two HCI courses in the US and UK. We analyze 68 sketches from 41 students, 9 student interviews, and 2 instructor interviews and find that sketching is effective for supporting student and instructor reflection. We then report case studies in two additional contexts and synthesize recommendations for deploying reflective sketching. We propose incorporating Sketching Snapshots in courses can facilitate reflection on complex concepts, improve teaching, and spark conversations about what HCI means to us and our students.",
+        "authors": [
+          "Sarah Sterman",
+          "Miriam Sturdee",
+          "Angela Miguel"
+        ],
+        "year": 2026,
+        "publication_date": "2026-02-28",
+        "published_date": "2026-02-28",
+        "language": "en",
+        "doi": "10.1145/3771924",
+        "url": "https://doi.org/10.1145/3771924",
+        "official_url": "https://doi.org/10.1145/3771924",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 2,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 78.98,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 23.8,
+            "recency": 100.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 78.98
+      },
+      {
+        "paper_id": "paper_a14914b9c04ebe2ea616",
+        "title": "Active Inference and Human–Computer Interaction",
+        "abstract": "Active Inference is a closed-loop computational theoretical basis for understanding behaviour, based on agents with internal probabilistic generative models that encode their beliefs about how hidden states in their environment cause their sensations. We review Active Inference and how it could be applied to model the human–computer interaction loop. Active Inference provides a coherent framework for managing generative models of humans, their environments, sensors and interface components. It informs off-line design and supports real-time, online adaptation. It provides model-based explanations for behaviours observed in HCI, and new conceptual tools with the potential to measure important concepts such as agency and engagement in interaction. We discuss how Active Inference offers a new basis for a theory of interaction in HCI, tools for design of modern, complex sensor-based systems, and integration of artificial intelligence technologies, enabling it to cope with diversity in human users and contexts. We discuss the practical challenges in implementing such Active Inference-based systems.",
+        "authors": [
+          "Roderick Murray-Smith",
+          "John H. Williamson",
+          "Sebastian Stein"
+        ],
+        "year": 2025,
+        "publication_date": "2025-12-31",
+        "published_date": "2025-12-31",
+        "language": "en",
+        "doi": "10.1145/3762812",
+        "url": "https://doi.org/10.1145/3762812",
+        "official_url": "https://doi.org/10.1145/3762812",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 4,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 78.09,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 34.87,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 78.09
+      },
+      {
+        "paper_id": "paper_96dbea60eec2dfc97b02",
+        "title": "On the Design of and Interaction with Conversational Agents: An Organizing and Assessing Review of Human-Computer Interaction Research",
+        "abstract": "Conversational agents (CAs), described as software with which humans interact through natural language, have increasingly attracted interest in both academia and practice because of improved capabilities driven by advances in artificial intelligence and, specifically, natural language processing. CAs are used in contexts such as peoples private lives, education, and healthcare, as well as in organizations to innovate or automate tasks for example, in marketing, sales, or customer service. In addition to these application contexts, CAs take on different forms in terms of their embodiment, the communication mode, and their (often human-like) design. Despite their popularity, many CAs are unable to fulfill expectations, and fostering a positive user experience is challenging. To better understand how CAs can be designed to fulfill their intended purpose and how humans interact with them, a number of studies focusing on human-computer interaction have been carried out in recent years, which have contributed to our understanding of this technology. However, currently, a structured overview of this research is lacking, thus impeding the systematic identification of research gaps and knowledge on which future studies can build. To address this issue, we conducted an organizing and assessing review of 262 studies, applying a sociotechnical lens to analyze CA research regarding user interaction, context, agent design, as well as CA perceptions and outcomes. This study contributes an overview of the status quo of CA research, identifies four research streams through cluster analysis, and proposes a research agenda comprising six avenues and sixteen directions to move the field forward",
+        "authors": [
+          "Stephan Diederich",
+          "Alfred Brendel",
+          "TU Dresden, Germany",
+          "Stefan Morana",
+          "Lutz M. Kolbe"
+        ],
+        "year": 2022,
+        "publication_date": "2022-01-01",
+        "published_date": "2022-01-01",
+        "language": "en",
+        "doi": "10.17705/1jais.00724",
+        "url": "https://doi.org/10.17705/1jais.00724",
+        "official_url": "https://doi.org/10.17705/1jais.00724",
+        "source_title": "Journal of the Association for Information Systems",
+        "journal": "Journal of the Association for Information Systems",
+        "source_issns": [
+          "1536-9323"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 306,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12128",
+            "name": "AI in Service Interactions",
+            "score": 0.9990000128746033
+          },
+          {
+            "id": "https://openalex.org/T12028",
+            "name": "Knowledge Management and Sharing",
+            "score": 0.9621999859809875
+          },
+          {
+            "id": "https://openalex.org/T10803",
+            "name": "Innovative Human-Technology Interaction",
+            "score": 0.9606000185012817
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W3204753692"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://resolver.sub.uni-goettingen.de/purl?gro-2/106112",
+        "provider_payload_refs": [
+          "https://openalex.org/W3204753692"
+        ],
+        "journal_id": "journal_048",
+        "journal_ranking": [
+          "FMS_INT_A"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.1,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 81.0,
+            "lexical_coverage": 60.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.1
+      },
+      {
+        "paper_id": "paper_6e4bfb1e049f05c28cf1",
+        "title": "The Placebo Effect of Artificial Intelligence in Human–Computer Interaction",
+        "abstract": "In medicine, patients can obtain real benefits from a sham treatment. These benefits are known as the placebo effect. We report two experiments (Experiment I: N = 369; Experiment II: N = 100) demonstrating a placebo effect in adaptive interfaces. Participants were asked to solve word puzzles while being supported by no system or an adaptive AI interface. All participants experienced the same word puzzle difficulty and had no support from an AI throughout the experiments. Our results showed that the belief of receiving adaptive AI support increases expectations regarding the participant’s own task performance, sustained after interaction. These expectations were positively correlated to performance, as indicated by the number of solved word puzzles. We integrate our findings into technological acceptance theories and discuss implications for the future assessment of AI-based user interfaces and novel technologies. We argue that system descriptions can elicit placebo effects through user expectations biasing the results of user-centered studies.",
+        "authors": [
+          "Thomas Kosch",
+          "Robin Welsch",
+          "Lewis L. Chuang",
+          "Albrecht Schmidt"
+        ],
+        "year": 2022,
+        "publication_date": "2022-06-08",
+        "published_date": "2022-06-08",
+        "language": "en",
+        "doi": "10.1145/3529225",
+        "url": "https://doi.org/10.1145/3529225",
+        "official_url": "https://doi.org/10.1145/3529225",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 131,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12035",
+            "name": "Pain Management and Placebo Effect",
+            "score": 0.9993000030517578
+          },
+          {
+            "id": "https://openalex.org/T11953",
+            "name": "Neuroethics, Human Enhancement, Biomedical Innovations",
+            "score": 0.9861999750137329
+          },
+          {
+            "id": "https://openalex.org/T10648",
+            "name": "Virtual Reality Applications and Impacts",
+            "score": 0.9850000143051147
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4224105048"
+        },
+        "providers": [
+          "openalex",
+          "crossref"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex",
+            "crossref"
+          ],
+          "abstract": [
+            "openalex",
+            "crossref"
+          ],
+          "authors": [
+            "openalex",
+            "crossref"
+          ],
+          "year": [
+            "openalex",
+            "crossref"
+          ],
+          "doi": [
+            "openalex",
+            "crossref"
+          ],
+          "source_title": [
+            "openalex",
+            "crossref"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex",
+            "crossref"
+          ],
+          "published_date": [
+            "openalex",
+            "crossref"
+          ],
+          "url": [
+            "openalex",
+            "crossref"
+          ],
+          "official_url": [
+            "openalex",
+            "crossref"
+          ],
+          "journal": [
+            "openalex",
+            "crossref"
+          ],
+          "document_type": [
+            "openalex",
+            "crossref"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://dl.acm.org/doi/pdf/10.1145/3529225",
+        "provider_payload_refs": [
+          "https://openalex.org/W4224105048"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 75.47,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 81.0,
+            "lexical_coverage": 60.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 67.5
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 75.47
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1046500,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:36.457505+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3531.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-computer interaction human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1046500,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:40.006082+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3797.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "human-computer interaction",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:45.064953+00:00",
+        "duration_ms": 1406.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1406.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "human-computer interaction",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:46.469482+00:00",
+        "duration_ms": 1454.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1454.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "human-computer interaction",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:47.921113+00:00",
+        "duration_ms": 1453.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1453.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "人机交互研究",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:57:43.900097+00:00",
+        "duration_ms": 1156.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1156.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_77f3a6cc21d425bdb0f9",
+        "title": "A Survey on Measuring Cognitive Workload in Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_556e0fa5693e5e7a0810",
+        "title": "Ultrastretchable, Self-Healing Conductive Hydrogel-Based Triboelectric Nanogenerators for Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c841c31ed266086ff2ba",
+        "title": "Deep Learning for Intelligent Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26d551f94d4bfe9e6d77",
+        "title": "Advances in Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ffe78bd4279d6bfce4c",
+        "title": "Human-Computer Interaction in Customer Service: The Experience with AI Chatbots—A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_712248df372f6f2a4218",
+        "title": "Universal Access in Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d29ff38c904dae9510f4",
+        "title": "Self-healing liquid metal hydrogel for human–computer interaction and infrared camouflage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cfc8cc243c8cafb45c3",
+        "title": "ARHPE: Asymmetric Relation-Aware Representation Learning for Head Pose Estimation in Industrial Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_490afe917f5687142d60",
+        "title": "Human-Computer Interaction in Digital Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a20c564f1cb04bafa3e",
+        "title": "Using ChatGPT for human–computer interaction research: a primer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e41d681a9d73ab37b49",
+        "title": "Human-Computer Interaction for Recognizing Speech Emotions Using Multilayer Perceptron Classifier",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eac1404a04093c2f1b88",
+        "title": "ChatGPT: perspectives from human–computer interaction and psychology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f14b898f62b46f9d4be",
+        "title": "Artificial intelligence assisted improved human-computer interactions for computer systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da5dc146dd3cff061c25",
+        "title": "State-of-the-Art Human-Computer-Interaction in Metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d34199c40617baa1bec9",
+        "title": "Digital Twins in Human-Computer Interaction: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea3e3667056192205fed",
+        "title": "Systematic Review of Multimodal Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_199c2e39b7a1b416982c",
+        "title": "Human-Computer Interaction – INTERACT 2023",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe7a158691f709e7186e",
+        "title": "Playing with AI to Investigate Human-Computer Interaction Technology and Improving Critical Thinking Skills to Pursue 21st Century Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f01b4deca76a7f6da033",
+        "title": "Humidity Adaptive Antifreeze Hydrogel Sensor for Intelligent Control and Human‐Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc9fd20cfd2d3d53d8bb",
+        "title": "Nordic Human-Computer Interaction Conference",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5caaa7bf283c41d61b1",
+        "title": "Metaverse-Based Learning Opportunities and Challenges: A Phenomenological Metaverse Human–Computer Interaction Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_229497e88f0b6d1e94bd",
+        "title": "Usability and Human–Computer Interaction (HCI)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e98fe590f111a73140ba",
+        "title": "Wi-Fi Sensing for Joint Gesture Recognition and Human Identification From Few Samples in Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d67b3ae63c82c8445dd7",
+        "title": "Human-Computer Interaction System: A Survey of Talking-Head Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_458fa264a97db1858f1d",
+        "title": "Human-Computer Interaction: Enhancing User Experience in Interactive Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d7129b6f3ad0350a9c6",
+        "title": "Aloe Inspired Special Structure Hydrogel Pressure Sensor for Real‐Time Human‐Computer Interaction and Muscle Rehabilitation System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f0173a1824035998d84",
+        "title": "Ultrasensitive electrospinning fibrous strain sensor with synergistic conductive network for human motion monitoring and human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9894972e8fa13a414d1",
+        "title": "Flexible MXene‐Based Hydrogel Enables Wearable Human–Computer Interaction for Intelligent Underwater Communication and Sensing Rescue",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee102b28cd6203db3668",
+        "title": "Research Progress of Human–Computer Interaction Technology Based on Gesture Recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_637daf0d13764e614df2",
+        "title": "Two-Stage Micropyramids Enhanced Flexible Piezoresistive Sensor for Health Monitoring and Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef435f7786ca5600896b",
+        "title": "Nursing and human-computer interaction in healthcare robots for older people: An integrative review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8d6e9a171882903329b",
+        "title": "A generic non-invasive neuromotor interface for human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6256fb284e59aabb9568",
+        "title": "A Human‐Computer Interaction Strategy for An FPGA Platform Boosted Integrated “Perception‐Memory” System Based on Electronic Tattoos and Memristors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe152caf5e43695d94a3",
+        "title": "Bionic octopus-like flexible three-dimensional force sensor for meticulous handwriting recognition in human-computer interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b002d68a574325ce82df",
+        "title": "The Illusion of Empathy? Notes on Displays of Emotion in Human-Computer Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa58ea2de8c745f14222",
+        "title": "Human-Computer Interaction with Detection of Speaker Emotions Using Convolution Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84df05bdbddb7cb1e8d3",
+        "title": "An Exploration into Human–Computer Interaction: Hand Gesture Recognition Management in a Challenging Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fda9d48a47ed26d4b072",
+        "title": "Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c97eff6c4578b4f0e227",
+        "title": "Emotion recognition framework using multiple modalities for an effective human–computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23234b8791ea0694a3da",
+        "title": "HeadTrack: Real-Time Human–Computer Interaction via Wireless Earphones",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96f0eeba62f90110e7a0",
+        "title": "Flexible wearable electronics for enhanced human-computer interaction and virtual reality applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad8afc25b09b4a0e31c4",
+        "title": "Five premises to understand human–computer interactions as AI is changing the world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50141bd8f1beab3232c7",
+        "title": "More-Than-Human Perspectives and Values in Human-Computer Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe649241f07095ab31b9",
+        "title": "Flexible pressure visualization equipment for human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a106fa347dcc88d76034",
+        "title": "Natural Language Processing Advancements: Breaking Barriers in Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3424b928e0ea245042b4",
+        "title": "Influencing factors on students’ learning effectiveness of AI-based technology application: Mediation variable of the human-computer interaction experience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a6a1d6be5faa5169668",
+        "title": "A Systematic Review of Human–Computer Interaction (HCI) Research in Medical and Other Engineering Fields",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_010462f3f107112facad",
+        "title": "Teaching for Values in Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74c28f3600f1034d1a3d",
+        "title": "RETRACTED: Artificial intelligence-based creative thinking skill analysis model using human–computer interaction in art design teaching",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53299735284e7dd103ee",
+        "title": "Trust models and theories in human–computer interaction: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_629012f4fe2996c95ec6",
+        "title": "Blockchain and Cryptocurrency in Human Computer Interaction: A Systematic Literature Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3ee8ebbe9ba2985a61f",
+        "title": "Is High-Fidelity Important for Human-like Virtual Avatars in Human Computer Interactions?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1693ba71ffba0f35849",
+        "title": "Human-computer interaction based health diagnostics using ResNet34 for tongue image classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6aacf67471bdaf96a94",
+        "title": "Utilising the triboelectricity of the human body for human-computer interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67e519f808ee24b1b96e",
+        "title": "A generic noninvasive neuromotor interface for human-computer interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d03c5b525e390967b4e8",
+        "title": "“Intelligent Tutoring System in Education for Disabled Learners Using Human–Computer Interaction and Augmented Reality”",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_177f115388b830a6d446",
+        "title": "Linguistic analysis of human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97a73aaf78b302a4ef01",
+        "title": "Mechanoluminescent optical fiber sensors for human–computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70b0dc458d26df37c5c3",
+        "title": "Implications of Human-Computer Interaction Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c5b63b2546fbf544b18",
+        "title": "Participatory Design in Human-Computer Interaction: Cases, Characteristics, and Lessons",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b632d306880fc0fe71b",
+        "title": "The Future of Emotion in Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_509807e8d0ee0cb4bdd1",
+        "title": "Dying, Death, and the Afterlife in Human-Computer Interaction. A Scoping Review.",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf258105505bd26ffe42",
+        "title": "Effects of Interface Design and Live Atmosphere on Consumers’ Impulse-Buying Behaviour from the Perspective of Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ad6e55f641b12fbebf8",
+        "title": "Human–Computer Interaction with a Real-Time Speech Emotion Recognition with Ensembling Techniques 1D Convolution Neural Network and Attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2b2fbac91a15470a8d5",
+        "title": "Human-Computer Interaction with Hand Gesture Recognition Using ResNet and MobileNet",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62f9a520d4af7a42e530",
+        "title": "Universal Access in Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_913d65eeac22ae846e0f",
+        "title": "Thinking with care in human–computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c11045f32f05aa903cba",
+        "title": "More-than-Human Perspectives in Human-Computer Interaction Research: A Scoping Review",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e4c7d472cf17ecdb7815",
+        "title": "Demystifying Federated Learning in Artificial Intelligence With Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_855ef5addb3127d01af9",
+        "title": "An assistant or A friend? The role of parasocial relationship of human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cdd93647d425bb3b572",
+        "title": "Dispensing with Humans in Human-Computer Interaction Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_046693cc0fda99bd8251",
+        "title": "External Human–Machine Interfaces for Automated Vehicles in Shared Spaces: A Review of the Human–Computer Interaction Literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa782f7443d8fe91e9f4",
+        "title": "Convolutional Neural Networks‐Motivated High‐Performance Multi‐Functional Electronic Skin for Intelligent Human‐Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46ce17fa7416da1d2c5b",
+        "title": "Common ground, cooperation, and recipient design in human-computer interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7009d5e80b2c7c0ecc12",
+        "title": "User oppression in human-computer interaction: a dialectical-existential perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9abf452a50685d9012c2",
+        "title": "Human–Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9594581ba03b0254c9a7",
+        "title": "GranDIHC-BR: Grand Research Challenges in Human-Computer Interaction in Brazil for 2025-2035",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b340b8ad904715fe8bc",
+        "title": "A Multimodal Human-Computer Interaction for Smart Learning System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b21fb7591d65ef4931f3",
+        "title": "Computer vision-based hand gesture recognition for human-robot interaction: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6cd544122d2a4a4a99b1",
+        "title": "Self-powered wearable human-computer interaction system based on kapok cellulose nanofibers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1a7237b0098e9a6b1dc",
+        "title": "Human–Computer Interaction and Digital Literacy Promote Educational Learning in Pre-school Children: Mediating Role of Psychological Resilience for Kids’ Mental Well-Being and School Readiness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d38c2e63b2aa683615f7",
+        "title": "Human–computer interaction in healthcare: Comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3edf0cb5ac1a1502956f",
+        "title": "Cultures in Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a80d8309f2ae4e9923f0",
+        "title": "Computer-Aided Traditional Art Design Based on Artificial Intelligence and Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71e7db635da46ad4aa3b",
+        "title": "HUMAN-COMPUTER INTERACTION: ENHANCING USER EXPERIENCE IN INTERACTIVE SYSTEMS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e637908e9c256553eddc",
+        "title": "11 Human-Computer Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_693cae3d7c334165d9c9",
+        "title": "Selection of suitable distance education platforms based on human–computer interaction criteria under fuzzy environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_934f221e963fc4fbbb31",
+        "title": "Haptics for Human-Computer Interaction: From the Skin to the Brain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa351c6c1349bd12ecf9",
+        "title": "2022 International Congress on Human-Computer Interaction, Optimization and Robotic Applications (HORA)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36d85e596fd8a2c48c99",
+        "title": "A Flexible Capacitive Pressure Sensor with Adjustable Detection Range Based on the Inflatable Dielectric Layer for Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c224b492631461f5e913",
+        "title": "Thermal and wind devices for multisensory human-computer interaction: an overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73a876f76acb1fc82fb1",
+        "title": "Effects of social skills on lexical alignment in human-human interaction and human-computer interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76bd2338a40e62a58d78",
+        "title": "A Review on Human-Computer Interaction (HCI)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_707c8df4c6d5108a8dea",
+        "title": "Human-Computer Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36deaa9c5c59a81dfaac",
+        "title": "Attention mechanisms in computer vision: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77ca483c9a9b584f3843",
+        "title": "A Trust Scale for Human-Robot Interaction: Translation, Adaptation, and Validation of a Human Computer Trust Scale",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b276b215a34715c099ac",
+        "title": "Brain–Computer Interface Integrated With Augmented Reality for Human–Robot Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d185a78392ef6a7b713",
+        "title": "Computer Vision-Based Assessment of Autistic Children: Analyzing Interactions, Emotions, Human Pose, and Life Skills",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0945b33029bbb8dc18cc",
+        "title": "Current status and trends of technology, methods, and applications of Human–Computer Intelligent Interaction (HCII): A bibliometric research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b35a3140f6c4d63979b7",
+        "title": "Human-Centered Trustworthy Framework: A Human–Computer Interaction Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abc8336ab587d4e77663",
+        "title": "A Systematic Review on Human and Computer Interaction",
+        "reasons": [
+          "missing_source_title",
+          "source_not_qualified"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 13
+    },
+    "coverage_audit": {
+      "direction_id": "topic_hci",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 230,
+      "deduplicated_count": 32,
+      "hard_gate_pass_count": 32,
+      "eligible_count": 7,
+      "boundary_count": 8,
+      "selected_count": 7,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "human-computer interaction"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "human-computer interaction human-computer interaction"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "human-computer interaction",
+        "raw_count": 100,
+        "hard_gate_pass_count": 5,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "human-computer interaction human-computer interaction",
+        "raw_count": 200,
+        "hard_gate_pass_count": 10,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_77f3a6cc21d425bdb0f9",
+          "paper_fda9d48a47ed26d4b072"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_c97eff6c4578b4f0e227"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_23234b8791ea0694a3da"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_50141bd8f1beab3232c7"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_fe649241f07095ab31b9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_e3ee8ebbe9ba2985a61f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_97a73aaf78b302a4ef01"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_70b0dc458d26df37c5c3"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_509807e8d0ee0cb4bdd1"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_4ad6e55f641b12fbebf8"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_199c2e39b7a1b416982c",
+        "incoming_paper_id": "paper_f0bb894f9bd4ba2cf6f0"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_3cdd93647d425bb3b572"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_046693cc0fda99bd8251"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_96dbea60eec2dfc97b02",
+          "paper_9abf452a50685d9012c2"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_4b340b8ad904715fe8bc"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_f1a7237b0098e9a6b1dc"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9abf452a50685d9012c2",
+          "paper_b6c54b5cdd9b07dc12ab"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_3edf0cb5ac1a1502956f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9abf452a50685d9012c2",
+          "paper_0f084d9271215c28f864"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_a80d8309f2ae4e9923f0"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_71e7db635da46ad4aa3b"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9abf452a50685d9012c2",
+          "paper_693cae3d7c334165d9c9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_934f221e963fc4fbbb31"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9abf452a50685d9012c2",
+          "paper_aa351c6c1349bd12ecf9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_c224b492631461f5e913"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_fda9d48a47ed26d4b072",
+          "paper_73a876f76acb1fc82fb1"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9abf452a50685d9012c2",
+          "paper_76bd2338a40e62a58d78"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_96dbea60eec2dfc97b02",
+          "paper_707c8df4c6d5108a8dea"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_77f3a6cc21d425bdb0f9",
+        "incoming_paper_id": "paper_77f3a6cc21d425bdb0f9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_96dbea60eec2dfc97b02",
+        "incoming_paper_id": "paper_96dbea60eec2dfc97b02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_556e0fa5693e5e7a0810",
+        "incoming_paper_id": "paper_556e0fa5693e5e7a0810"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c841c31ed266086ff2ba",
+        "incoming_paper_id": "paper_c841c31ed266086ff2ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26d551f94d4bfe9e6d77",
+        "incoming_paper_id": "paper_26d551f94d4bfe9e6d77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b21fb7591d65ef4931f3",
+        "incoming_paper_id": "paper_b21fb7591d65ef4931f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9ffe78bd4279d6bfce4c",
+        "incoming_paper_id": "paper_9ffe78bd4279d6bfce4c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_712248df372f6f2a4218",
+        "incoming_paper_id": "paper_712248df372f6f2a4218"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9cfc8cc243c8cafb45c3",
+        "incoming_paper_id": "paper_9cfc8cc243c8cafb45c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d29ff38c904dae9510f4",
+        "incoming_paper_id": "paper_d29ff38c904dae9510f4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_490afe917f5687142d60",
+        "incoming_paper_id": "paper_490afe917f5687142d60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a20c564f1cb04bafa3e",
+        "incoming_paper_id": "paper_9a20c564f1cb04bafa3e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a0f3f86c85ff56182877",
+        "incoming_paper_id": "paper_a0f3f86c85ff56182877"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9f14b898f62b46f9d4be",
+        "incoming_paper_id": "paper_9f14b898f62b46f9d4be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6e4bfb1e049f05c28cf1",
+        "incoming_paper_id": "paper_6e4bfb1e049f05c28cf1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e41d681a9d73ab37b49",
+        "incoming_paper_id": "paper_7e41d681a9d73ab37b49"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eac1404a04093c2f1b88",
+        "incoming_paper_id": "paper_eac1404a04093c2f1b88"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da5dc146dd3cff061c25",
+        "incoming_paper_id": "paper_da5dc146dd3cff061c25"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d34199c40617baa1bec9",
+        "incoming_paper_id": "paper_d34199c40617baa1bec9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e98fe590f111a73140ba",
+        "incoming_paper_id": "paper_e98fe590f111a73140ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f0173a1824035998d84",
+        "incoming_paper_id": "paper_3f0173a1824035998d84"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea3e3667056192205fed",
+        "incoming_paper_id": "paper_ea3e3667056192205fed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe7a158691f709e7186e",
+        "incoming_paper_id": "paper_fe7a158691f709e7186e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_199c2e39b7a1b416982c",
+        "incoming_paper_id": "paper_199c2e39b7a1b416982c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f01b4deca76a7f6da033",
+        "incoming_paper_id": "paper_f01b4deca76a7f6da033"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cc9fd20cfd2d3d53d8bb",
+        "incoming_paper_id": "paper_cc9fd20cfd2d3d53d8bb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_229497e88f0b6d1e94bd",
+        "incoming_paper_id": "paper_229497e88f0b6d1e94bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5caaa7bf283c41d61b1",
+        "incoming_paper_id": "paper_e5caaa7bf283c41d61b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d67b3ae63c82c8445dd7",
+        "incoming_paper_id": "paper_d67b3ae63c82c8445dd7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_458fa264a97db1858f1d",
+        "incoming_paper_id": "paper_458fa264a97db1858f1d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d7129b6f3ad0350a9c6",
+        "incoming_paper_id": "paper_2d7129b6f3ad0350a9c6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c9894972e8fa13a414d1",
+        "incoming_paper_id": "paper_c9894972e8fa13a414d1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a8d6e9a171882903329b",
+        "incoming_paper_id": "paper_a8d6e9a171882903329b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ee102b28cd6203db3668",
+        "incoming_paper_id": "paper_ee102b28cd6203db3668"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_637daf0d13764e614df2",
+        "incoming_paper_id": "paper_637daf0d13764e614df2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe152caf5e43695d94a3",
+        "incoming_paper_id": "paper_fe152caf5e43695d94a3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ef435f7786ca5600896b",
+        "incoming_paper_id": "paper_ef435f7786ca5600896b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa58ea2de8c745f14222",
+        "incoming_paper_id": "paper_fa58ea2de8c745f14222"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b002d68a574325ce82df",
+        "incoming_paper_id": "paper_b002d68a574325ce82df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6256fb284e59aabb9568",
+        "incoming_paper_id": "paper_6256fb284e59aabb9568"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84df05bdbddb7cb1e8d3",
+        "incoming_paper_id": "paper_84df05bdbddb7cb1e8d3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_50141bd8f1beab3232c7",
+        "incoming_paper_id": "paper_50141bd8f1beab3232c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c97eff6c4578b4f0e227",
+        "incoming_paper_id": "paper_c97eff6c4578b4f0e227"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_23234b8791ea0694a3da",
+        "incoming_paper_id": "paper_23234b8791ea0694a3da"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_96f0eeba62f90110e7a0",
+        "incoming_paper_id": "paper_96f0eeba62f90110e7a0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fda9d48a47ed26d4b072",
+        "incoming_paper_id": "paper_fda9d48a47ed26d4b072"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ad8afc25b09b4a0e31c4",
+        "incoming_paper_id": "paper_ad8afc25b09b4a0e31c4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe649241f07095ab31b9",
+        "incoming_paper_id": "paper_fe649241f07095ab31b9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e3ee8ebbe9ba2985a61f",
+        "incoming_paper_id": "paper_e3ee8ebbe9ba2985a61f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3a6a1d6be5faa5169668",
+        "incoming_paper_id": "paper_3a6a1d6be5faa5169668"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6aacf67471bdaf96a94",
+        "incoming_paper_id": "paper_f6aacf67471bdaf96a94"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a106fa347dcc88d76034",
+        "incoming_paper_id": "paper_a106fa347dcc88d76034"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_67e519f808ee24b1b96e",
+        "incoming_paper_id": "paper_67e519f808ee24b1b96e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74c28f3600f1034d1a3d",
+        "incoming_paper_id": "paper_74c28f3600f1034d1a3d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_010462f3f107112facad",
+        "incoming_paper_id": "paper_010462f3f107112facad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_629012f4fe2996c95ec6",
+        "incoming_paper_id": "paper_629012f4fe2996c95ec6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53299735284e7dd103ee",
+        "incoming_paper_id": "paper_53299735284e7dd103ee"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3424b928e0ea245042b4",
+        "incoming_paper_id": "paper_3424b928e0ea245042b4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_177f115388b830a6d446",
+        "incoming_paper_id": "paper_177f115388b830a6d446"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_046693cc0fda99bd8251",
+        "incoming_paper_id": "paper_046693cc0fda99bd8251"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a1693ba71ffba0f35849",
+        "incoming_paper_id": "paper_a1693ba71ffba0f35849"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_97a73aaf78b302a4ef01",
+        "incoming_paper_id": "paper_97a73aaf78b302a4ef01"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c11045f32f05aa903cba",
+        "incoming_paper_id": "paper_c11045f32f05aa903cba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_70b0dc458d26df37c5c3",
+        "incoming_paper_id": "paper_70b0dc458d26df37c5c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d03c5b525e390967b4e8",
+        "incoming_paper_id": "paper_d03c5b525e390967b4e8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c5b63b2546fbf544b18",
+        "incoming_paper_id": "paper_0c5b63b2546fbf544b18"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73a876f76acb1fc82fb1",
+        "incoming_paper_id": "paper_73a876f76acb1fc82fb1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3cdd93647d425bb3b572",
+        "incoming_paper_id": "paper_3cdd93647d425bb3b572"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3b632d306880fc0fe71b",
+        "incoming_paper_id": "paper_3b632d306880fc0fe71b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_509807e8d0ee0cb4bdd1",
+        "incoming_paper_id": "paper_509807e8d0ee0cb4bdd1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e2b2fbac91a15470a8d5",
+        "incoming_paper_id": "paper_e2b2fbac91a15470a8d5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4ad6e55f641b12fbebf8",
+        "incoming_paper_id": "paper_4ad6e55f641b12fbebf8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_855ef5addb3127d01af9",
+        "incoming_paper_id": "paper_855ef5addb3127d01af9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62f9a520d4af7a42e530",
+        "incoming_paper_id": "paper_62f9a520d4af7a42e530"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf258105505bd26ffe42",
+        "incoming_paper_id": "paper_bf258105505bd26ffe42"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_913d65eeac22ae846e0f",
+        "incoming_paper_id": "paper_913d65eeac22ae846e0f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e4c7d472cf17ecdb7815",
+        "incoming_paper_id": "paper_e4c7d472cf17ecdb7815"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a80d8309f2ae4e9923f0",
+        "incoming_paper_id": "paper_a80d8309f2ae4e9923f0"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_199c2e39b7a1b416982c",
+        "incoming_paper_id": "paper_f0bb894f9bd4ba2cf6f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa782f7443d8fe91e9f4",
+        "incoming_paper_id": "paper_fa782f7443d8fe91e9f4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7009d5e80b2c7c0ecc12",
+        "incoming_paper_id": "paper_7009d5e80b2c7c0ecc12"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9abf452a50685d9012c2",
+        "incoming_paper_id": "paper_9abf452a50685d9012c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_46ce17fa7416da1d2c5b",
+        "incoming_paper_id": "paper_46ce17fa7416da1d2c5b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9594581ba03b0254c9a7",
+        "incoming_paper_id": "paper_9594581ba03b0254c9a7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4b340b8ad904715fe8bc",
+        "incoming_paper_id": "paper_4b340b8ad904715fe8bc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f1a7237b0098e9a6b1dc",
+        "incoming_paper_id": "paper_f1a7237b0098e9a6b1dc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0f084d9271215c28f864",
+        "incoming_paper_id": "paper_0f084d9271215c28f864"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d38c2e63b2aa683615f7",
+        "incoming_paper_id": "paper_d38c2e63b2aa683615f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6cd544122d2a4a4a99b1",
+        "incoming_paper_id": "paper_6cd544122d2a4a4a99b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71e7db635da46ad4aa3b",
+        "incoming_paper_id": "paper_71e7db635da46ad4aa3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e637908e9c256553eddc",
+        "incoming_paper_id": "paper_e637908e9c256553eddc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b6c54b5cdd9b07dc12ab",
+        "incoming_paper_id": "paper_b6c54b5cdd9b07dc12ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0f084d9271215c28f864",
+        "incoming_paper_id": "paper_0f084d9271215c28f864"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a0f3f86c85ff56182877",
+        "incoming_paper_id": "paper_a0f3f86c85ff56182877"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6e4bfb1e049f05c28cf1",
+        "incoming_paper_id": "paper_6e4bfb1e049f05c28cf1"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "463b69849ba74f9599acbc8f940786c6",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

@@ -1,0 +1,2440 @@
+{
+  "direction_id": "topic_technostress",
+  "labels": {
+    "zh": "技术压力",
+    "en": "technostress"
+  },
+  "input": {
+    "selected_direction_id": "topic_technostress",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 14875.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 300,
+  "hard_gate_pass_count": 7,
+  "eligible_count": 0,
+  "boundary_count": 6,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "technostress"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "technostress user behavior"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(technostress) OR (technostress in user behavior)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+      "returned_rows": 0
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_technostress",
+      "research_direction": "technostress",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "technostress",
+      "aliases": [
+        "technostress"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:171"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_technostress",
+        "labels": {
+          "zh": "技术压力",
+          "en": "technostress"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "技术压力",
+          "technostress",
+          "technostress in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "technostress",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "technostress",
+            "\"technostress\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "technostress",
+            "technostress user behavior"
+          ],
+          "crossref": [
+            "technostress",
+            "技术压力"
+          ],
+          "dblp": [
+            "technostress behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "technostress",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "technostress user behavior",
+          "(technostress) OR (technostress in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:171"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technostress",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 12257,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:19.580732+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3250.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technostress user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 5351,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:22.850473+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3766.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(technostress) OR (technostress in user behavior)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 12257,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:26.636222+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3016.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "technostress",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:31.072488+00:00",
+        "duration_ms": 1078.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1078.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "technostress",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:32.155410+00:00",
+        "duration_ms": 1109.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1109.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "technostress",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:33.263646+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "技术压力",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:29.856244+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_42440db01cfdcba43f38",
+        "title": "Teleworking and technostress: early consequences of a COVID-19 lockdown",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85a703cb18064df96b0b",
+        "title": "Understanding technostress and employee well-being in digital work: the roles of work exhaustion and workplace knowledge diversity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e7e2e6951415cea83b7",
+        "title": "TECHNOSTRESS: A comprehensive literature review on dimensions, impacts, and management strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40f30c39e12f82c81a3a",
+        "title": "Overcoming the “Dark Side” of Technology—A Scoping Review on Preventing and Coping with Work-Related Technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0891db463201d245dc5",
+        "title": "Technostress and the smart hospitality employee",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83753e0b65d416b931a8",
+        "title": "Impact of Technostress on Continuance Intentions to Use Mobile Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a3bd5021569bda9fe31",
+        "title": "Positioning Technostress in the JD-R Model Perspective: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be93b16d7d2cd091b9f0",
+        "title": "Leadership and technostress: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_535b86fa980cf89967e9",
+        "title": "Relating the dark side of new‐age technologies and customer technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32c1836755042ace65ee",
+        "title": "The Moderating Effects of Technostress Inhibitors on Techno-Stressors and Employee's Well-Being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_850930a8f03395f07e7b",
+        "title": "Exploring the impact of digital knowledge management on technostress and sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea7280682e654713dbd3",
+        "title": "Does AI-Driven Technostress Promote or Hinder Employees’ Artificial Intelligence Adoption Intention? A Moderated Mediation Model of Affective Reactions and Technical Self-Efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a993c0fcb19d51965b0f",
+        "title": "How to prevent technostress at the digital workplace: a Delphi study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be128111a4498d83defb",
+        "title": "Always connected @ work. Technostress and well-being with academics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_158b039c15dfd7ba85a2",
+        "title": "The relationship between Technostress levels and job satisfaction of Teachers within the COVID-19 period",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07cffee17ec167cd0852",
+        "title": "Factors Influencing Teacher’s Technostress Experienced in Using Emerging Technology: A Qualitative Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94e4aace96dbd93a7d25",
+        "title": "Technostress at work during the COVID-19 lockdown phase (2020–2021): a systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5336c1d55db4d78b3b4",
+        "title": "Artificial intelligence and employee outcomes: Investigating the role of job insecurity and technostress in the hospitality industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_226e7c7b8f9368f69191",
+        "title": "The role of digital leaders’ emotional intelligence in mitigating employee technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f30961a6c95972c902b7",
+        "title": "Technostress causes cognitive overload in high-stress people: Eye tracking analysis in a virtual kiosk test",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6ef8a8c7c1c01f427c2",
+        "title": "Investigating the role of technostress, cognitive appraisal and coping strategies on students' learning performance in higher education: a multidimensional transactional theory of stress approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07a27c93ddc36036bbf3",
+        "title": "Unraveling the dark side of ChatGPT: a moderated mediation model of technology anxiety and technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66d89d197f5f9c829253",
+        "title": "An integrated bibliometric analysis and systematic review modelling students’ technostress in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0425367bab64b58316e1",
+        "title": "Examining technostress and its impact on worker well-being in the digital gig economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c530249730048fef8924",
+        "title": "Technostress from Smartphone Use and Its Impact on University Students’ Sleep Quality and Academic Performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fbab7bb0f763bc249c5",
+        "title": "The influence of technostress, work–family conflict, and perceived organisational support on workplace flourishing amidst COVID-19",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0bf793652f20a2555401",
+        "title": "Investigating e-Retailers’ Intentions to Adopt Cryptocurrency Considering the Mediation of Technostress and Technology Involvement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd53bfb64e49a87610da",
+        "title": "How technostress and self-control of social networking sites affect academic achievement and wellbeing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e1da63f4cf296b52055",
+        "title": "Technostress among teachers: A systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9aa5d33d8270e79e8f56",
+        "title": "How technostress may affect employee performance in educational work environments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85eb9d0bec770f38c1e5",
+        "title": "Technostress in students and quality of online learning: role of instructor and university support",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a13f5d8df892bfd6c2d",
+        "title": "Teleworking: role of psychological well-being and technostress in the relationship between trust in management and employee performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a56e6054bb1c5639edd0",
+        "title": "Technostress: A catalyst to leave the teaching profession - A survey designed to measure technostress among teachers in Pakistan during COVID-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a9dfc85ac6ed966c0af",
+        "title": "Technostress, Quality of Work Life, and Job Performance: A Moderated Mediation Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be25f0461d7f2e9b91d5",
+        "title": "Technostress, coping, and anxious and depressive symptomatology in university students during the Covid-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3879b5d0fa876032b1ff",
+        "title": "Social Support as Technostress Inhibitor",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b4cfb6e640cfe1db8683",
+        "title": "Technostress, anxiety, and depression among university students: A report from Paraguay",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a267cb8e9d77fd305d3",
+        "title": "How new ways of working during COVID-19 affect employee well-being via technostress, need for recovery, and work engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71ffebfbe8069b9d829f",
+        "title": "Technostress and academic motivation: direct and indirect effects on university students' psychological health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20a5621426f2236c0f17",
+        "title": "Machine learning and artificial intelligence-induced technostress in organizations: a study on automation-augmentation paradox with socio-technical systems as coping mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db9a2a7d01b484646808",
+        "title": "Factors That Impact the Relationship between Perceived Organizational Support and Technostress in Teachers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_083c5c1ea0128eaa1811",
+        "title": "RETRACTED: The impact of teleworking technostress on satisfaction, anxiety and performance",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ee97311aa42be12b461",
+        "title": "Teaching after the pandemic: The role of technostress and organizational support on intentions to adopt remote teaching technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3761373f1605ff81e79b",
+        "title": "The influence of technostress on the intention to use blockchain technology: the perspectives of Jordanian auditors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53593bf384be4370f9b6",
+        "title": "Effect of technostress on Psychological well-being of post-graduate students: A perspective and correlational study of Higher Education Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3bdb59279126f081883b",
+        "title": "Mental wellbeing in digital workplaces: The role of digital resources, technostress, and burnout",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_855a4d938d7098729319",
+        "title": "The impact of technostress on organizational functioning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_903392aec861820f5c4c",
+        "title": "Impact of technostress on work-life balance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e79371a99ff5b563dc5a",
+        "title": "Navigating Technostress in primary schools: a study on teacher experiences, school support, and health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75939371a9bdb74819ff",
+        "title": "Effects of Instant Messaging Related Technostress on Work Performance and Well-Being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b52d6a828835f9b4bf9d",
+        "title": "Exploring the influence of technostress creators on in‐service teachers' attitudes toward ICT and ICT adoption intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_794297a95a6c9c36907a",
+        "title": "Towards a bright side of technostress in higher education teachers: Identifying several antecedents and outcomes of techno-eustress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_217bb53dd8eeed0cf6cc",
+        "title": "Burnout and technostress during the COVID-19 pandemic: the perception of higher education teachers and researchers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ed31e852ddff94f368c",
+        "title": "Co-working with AI is a Double-sword in Technostress? An Integrative Review of Human-AI Collaboration from a Holistic Process of Technostress",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_842639406948f1d4cccf",
+        "title": "TPACK-SAMR digital literacy competence, technostress, and teaching performance: Correlational study among EFL lecturers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_760d1898c6ba8cf3afbd",
+        "title": "“Technology is killing me!”: the moderating effect of organization home-work interface on the linkage between technostress and stress at work",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0bb0f2323f038b72b9b8",
+        "title": "Psychometric properties of the Polish adaptation of Technostress Creators and Technostress Inhibitors Scale",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dda3739d8f9fd7dd9f10",
+        "title": "New spaces of inequality with the rise of remote work: Autonomy, technostress, and life disruption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_644b3eff592ca3fda06e",
+        "title": "A scientometric analysis of technostress in education from 1991 to 2022",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a1e404207461a1e9a70",
+        "title": "Exploring technostress in disruptive teaching practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09f82c3eafbc6577ffe8",
+        "title": "Defensive routines as coping mechanisms against technostress: roles of digital leadership and employee goal orientation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b2406813302807dabe0",
+        "title": "Navigating AI unpredictability: Exploring technostress in AI-powered healthcare systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a14837e1f65ae5037c5",
+        "title": "Navigating technostress: a deep dive into health practitioners' technological challenges in hospital settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7cabf90dfa0a77f869f",
+        "title": "Digital learning of English as a foreign language among university students: How are approaches to learning linked to digital competence and technostress?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df702c40ba7150ccab7d",
+        "title": "The Phenomenon of Technostress during the COVID-19 Pandemic Due to Work from Home in Indonesia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69da5c46bce0e4e65bb2",
+        "title": "Mindfulness and technostress in the workplace: a qualitative approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b92dbb3b9b246c68aa20",
+        "title": "Teacher technostress and coping mechanisms during Covid-19 pandemic: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae20b2506e74877b3bff",
+        "title": "Technostress: A Concept Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5ecdca851a1376e3c5e",
+        "title": "Technostress Creators and Outcomes Among Egyptian Medical Staff and Students: A Multicenter Cross-Sectional Study of Remote Working Environment During COVID-19 Pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0980017b0f2ff40e2e6b",
+        "title": "Determinants of Technostress: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_142caa9ab67bdd15b2a1",
+        "title": "Fostering the digital mindset to mitigate technostress: an empirical study of empowering individuals for using digital technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce3e79f9dbff2712317c",
+        "title": "Technostress and hotel guests: A mere hurdle or a major friction point?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bddbc0a9849580a51a17",
+        "title": "Occupational Risk of Technostress Related to the Use of ICT among Teachers in Spain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6020b4eb34a2ccc381a0",
+        "title": "Impact of Technostress on Withdrawal Behavior and Workplace Flourishing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84772189ffd8c406f7a7",
+        "title": "ChatGPT adoption in entrepreneurship and digital entrepreneurial intention: A moderated mediation model of technostress and digital entrepreneurial self-efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_565e40efca0abdfb5e31",
+        "title": "Technostress Impact on Educator Productivity: Gender Differences in Jordan's Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31c4dc2a33b9475ad055",
+        "title": "Does Technostress Increase R&D Employees' Knowledge Hiding in the Digital Era?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c7b69aac94d27bfa25b4",
+        "title": "Using machine learning algorithms to examine the impact of technostress creators on student learning burnout and perceived academic performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08404b5d02b20dfaf74a",
+        "title": "Mental health in the “era” of artificial intelligence: technostress and the perceived impact on anxiety and depressive disorders—an SEM analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b45d12c5750d310eb4fb",
+        "title": "Hybrid and virtual work settings; the interaction between technostress, perceived organisational support, work-family conflict and the impact on work engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70e1e5b4ed657cd7c80f",
+        "title": "Digitalization in Urology—A Multimethod Study of the Relationships between Physicians’ Technostress, Burnout, Work Engagement and Job Satisfaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f3a832428628bb5144d",
+        "title": "Digital innovation drivers in retail banking: the role of leadership, culture, and technostress inhibitors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83a410750d467ad1c44a",
+        "title": "Anxiety or engaged? Research on the impact of technostress on employees' innovative behavior in the era of artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ed863e22ed6d72dcd0e",
+        "title": "Technostress and time spent online. A cross-cultural comparison for teachers and students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05162668d58eca6c75fb",
+        "title": "‘You’re still on mute’. A study of video conferencing fatigue during the COVID-19 pandemic from a technostress perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b6928fb75a53c3cc643",
+        "title": "Managing technostress in the STEM world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f9e900ad4b0bddafe68",
+        "title": "Countering technostress in virtual work environments: The role of work-based learning and digital leadership in enhancing employee well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab2a26f50480a4492e3c",
+        "title": "How Digital Competence Reduces Technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2093393d920517c7aea",
+        "title": "Technostress, Academic Self-Efficacy, and Resistance to Innovation: Buffering Roles of Knowledge Sharing Culture and Constructive Deviant Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_006eb421411160b339e4",
+        "title": "Understanding the impact of technology usage at work on academics’ psychological well-being: a perspective of technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0844e0c7fbde925cff0f",
+        "title": "How and when does hospitality employees’ core beliefs challenge foster their proactive coping for technostress?: Examining the roles of promotion focus, job insecurity, and technostress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b7d5455acf31eb1cc7c",
+        "title": "From innovation to stress: analyzing hybrid technology adoption and its role in technostress among students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ca3cd16882c90b7f568",
+        "title": "The dualistic view of challenge-hindrance technostress in accounting information systems: Technological antecedents and coping responses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38450cec9ed327998365",
+        "title": "The Technostress of ChatGPT Usage: How Do Perceived AI Characteristics Affect User Discontinuous Usage Through AI Anxiety and User Negative Attitudes?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f9676ddf92d71b9fba",
+        "title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b4d063a04d399b62e8ed",
+        "title": "The Influence of Social Isolation, Technostress, and Personality on the Acceptance of Online Meeting Platforms during the COVID-19 Pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1da17b49ae4bbf2a0872",
+        "title": "Impact of technostress and information technology support on HRIS user satisfaction: a moderation study through technology self-efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bab969a1439806489fa6",
+        "title": "Assessing the relationship between technostress and knowledge hiding—a moderated mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26753eceeb7f3543e8fc",
+        "title": "Understanding mobile e-wallet consumers’ intentions and user behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4f9b17704b11974ef2b9",
+        "title": "Investigating Factors Influencing Nurses’ Behavioral Intention to Use Mobile Learning: Using a Modified Unified Theory of Acceptance and Use of Technology Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b9ba377f007b4176f49",
+        "title": "TPACK, Organizational Support, and Technostress in Explaining Teacher Performance During Fully Online Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bfedb8645f61ecb2dca",
+        "title": "Attentional and Behavioral Disengagement as Coping Responses to Technostress and Financial Stress: An Experiment Based on Psychophysiological, Perceptual, and Behavioral Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a344e724df04a52ace8d",
+        "title": "The addiction behavior of short-form video app TikTok: The information quality and system quality perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b6c3750278cc2aa106d5",
+        "title": "Modeling English teachers’ behavioral intention to use artificial intelligence in middle schools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49357b4a2d240ec949c5",
+        "title": "Understanding meaningful work in the context of technostress, COVID-19, frustration, and corporate social responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd10020e689834595ccc",
+        "title": "Beyond the prompt: exploring technostress, flow and personality in generative AI behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b098734cda4d7283528",
+        "title": "A new scale to assess technostress levels in an Italian banking context: the Work-Related Technostress Questionnaire",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f2ca9086f48c43acd20",
+        "title": "Does digital transformation increase firms' productivity perception? The role of technostress and work engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e7e8328d3ae6a5e3fcb",
+        "title": "Technostress of students during COVID-19 - a sign of the time?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c7b786f6f46df9bb0ba",
+        "title": "Spanish Validation of the Technostress Creators Scale",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_370466c46dfefcac4d27",
+        "title": "Unpacking Technostress: A Systematic Review on its Effects and Mitigation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66d374650c622b32c0be",
+        "title": "Mobile Instant Messaging Uses and Technostress: A Qualitative Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca3ab33758db229e42aa",
+        "title": "How to explain AI systems to end users: a systematic literature review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c9d8e4dce1f7d7690c0",
+        "title": "A technostress–entrepreneurship nexus in the developing world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c48de76c1dc84b5f5384",
+        "title": "Understanding the Impact of Technostress on University Teachers’ Online Teaching During the COVID-19 Pandemic with the Transactional Theory of Stress (TTS)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce8d34d18346644bd190",
+        "title": "Artificial intelligence (AI) for user experience (UX) design: a systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_badb1887a12516dd2f9b",
+        "title": "Prospective associations of technostress at work, burnout symptoms, hair cortisol, and chronic low-grade inflammation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a598f5b9509aeb512997",
+        "title": "Unrestrained buying behavior in the metaverse: exploring the moderating role of technostress and self-control",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47ecc4a2818949b1f4cb",
+        "title": "Technostress Creators and Job Performance Among Frontliners: Theorizing the Moderating Role of Self-Efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3db16673fe0ca2c14ade",
+        "title": "Role and Status of Biomarkers in Technostress Research: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_810315ca59df22abf281",
+        "title": "Resistance of facial recognition payment service: a mixed method approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f47d8df6cd461000fc7a",
+        "title": "Technostress and medical students’ intention to use online learning during the COVID-19 pandemic in Pakistan: The moderating effect of computer self-efficacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d91f28723637d09b0e30",
+        "title": "Technostress impact on the intention to adopt blockchain technology in auditing companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04b106d1a255d0151385",
+        "title": "Technostress, Burnout, and Job Satisfaction: An Empirical Study of STEM Teachers’ Well-Being and Performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65da330bfb3c62d3a07c",
+        "title": "The Impact of Technostress Generated by Artificial Intelligence on the Quality of Life: The Mediating Role of Positive and Negative Affect",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d594a70dac223d6d0400",
+        "title": "Validation of a Measurement Scale on Technostress for University Students in Chile",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0afe8463024e84dcf829",
+        "title": "Indicators of technostress, their association with burnout and the moderating role of support offers among nurses in German hospitals: a cross-sectional study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf3423709382d4709e6e",
+        "title": "How and When May Technostress Impact Workers’ Psycho-Physical Health and Work-Family Interface? A Study during the COVID-19 Pandemic in Italy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_852a59d1afb59f11cfea",
+        "title": "Role of Technostress in Job Satisfaction and Work Engagement in People Working with Information and Communication Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4fdca34e2741757f57a",
+        "title": "Technostress of HR professionals: the darker implication of remote work transformations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac4e0a06275f2c9086e3",
+        "title": "Turning Lemons into Lemonade: Social Support as a Moderator of the Relationship Between Technostress and Quality of Life Among University Students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6389496964fa71290ee2",
+        "title": "THE EFFECT OF TECHNOSTRESS ON ONLINE LEARNING BEHAVIOUR AMONG UNDERGRADUATES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbc873cc2f267cc68122",
+        "title": "Can welfare states buffer technostress? Income and technostress in the context of various OECD countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0441f3c826648a7b02a7",
+        "title": "The Impact of Technostress on Teacher Educators’ Work–Family Conflict and Life Satisfaction While Working Remotely during COVID-19 in Pakistan",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88d437f86a97cae75a70",
+        "title": "Technostress Among Older Workers: A Central European Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fbe5f6443f3b13df9222",
+        "title": "Positive reframing as a mediator between gratitude and technostress amongst Indian students during the COVID-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3f240b215cd56a48a8c",
+        "title": "The Effect of Organization Employees' Perspective on Digital Transformation on Their Technostress Levels and Performance: A Public Institution Example",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba857d8b472f9e09461f",
+        "title": "Technostress and generative AI in the workplace: a qualitative analysis of young professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_011699097da7ddcdc052",
+        "title": "The Effect of Information Overload, and Social Media Fatigue on Online Consumers Purchasing Decisions: The Mediating Role of Technostress and Information Anxiety",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17a8d00accabf14008f8",
+        "title": "Enforced remote working: The impact of digital platform-induced stress and remote working experience on technology exhaustion and subjective wellbeing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb3e04c263da2e4c0bb7",
+        "title": "The meta-commerce paradox: exploring consumer non-adoption intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b3dd9d8f6d6292a4235",
+        "title": "Closing the divide: Exploring higher education teachers’ perspectives on educational technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64f0dd56c75ac03c3980",
+        "title": "Insights from the Job Demands–Resources Model: AI's dual impact on employees’ work and life well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_697fb8636edb84b3ea19",
+        "title": "Social network sites (SNS) an archetype of techno-social stress: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ce03fc0b237cb37ce42",
+        "title": "Remote work and work-life balance: Lessons learned from the covid-19 pandemic and suggestions for HRD practitioners",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ba35a234e25f71baa12",
+        "title": "A narrative review of immersive virtual reality’s ergonomics and risks at the workplace: cybersickness, visual fatigue, muscular fatigue, acute stress, and mental overload",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eefcb8887e1c9a37481b",
+        "title": "Techno-overload and well-being of French small business owners: identifying the flipside of digital technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ba830999c49836a533b",
+        "title": "Remote working and digital transformation during the COVID-19 pandemic: Economic–financial impacts and psychological drivers for employees",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e355d5a65fd8dcb58ff8",
+        "title": "Work-from-home (WFH) during COVID-19 pandemic – A netnographic investigation using Twitter data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_274b6e8ac6d54d0897d1",
+        "title": "Problematic social media use and associated consequences on academic performance decrement during Covid-19",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b17be8de598ee64cb32",
+        "title": "A Literature Review of Digital Literacy over Two Decades",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9caef841f71d968daced",
+        "title": "A mixed-method exploration of effects of technostress on remote / hybrid working professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31c900226a64d7468034",
+        "title": "The Role of Mindfulness in Mitigating the Negative Consequences of Technostress",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_technostress",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 300,
+      "deduplicated_count": 7,
+      "hard_gate_pass_count": 7,
+      "eligible_count": 0,
+      "boundary_count": 6,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "technostress"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "technostress user behavior"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(technostress) OR (technostress in user behavior)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+        "returned_rows": 0
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "technostress",
+        "raw_count": 100,
+        "hard_gate_pass_count": 7,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "technostress user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 9,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(technostress) OR (technostress in user behavior)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 15,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f79d7b706d7674f54f80",
+        "incoming_paper_id": "paper_f79d7b706d7674f54f80"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7a3bd5021569bda9fe31",
+        "incoming_paper_id": "paper_7a3bd5021569bda9fe31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_42440db01cfdcba43f38",
+        "incoming_paper_id": "paper_42440db01cfdcba43f38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31c900226a64d7468034",
+        "incoming_paper_id": "paper_31c900226a64d7468034"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83753e0b65d416b931a8",
+        "incoming_paper_id": "paper_83753e0b65d416b931a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea7280682e654713dbd3",
+        "incoming_paper_id": "paper_ea7280682e654713dbd3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be93b16d7d2cd091b9f0",
+        "incoming_paper_id": "paper_be93b16d7d2cd091b9f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_850930a8f03395f07e7b",
+        "incoming_paper_id": "paper_850930a8f03395f07e7b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_32c1836755042ace65ee",
+        "incoming_paper_id": "paper_32c1836755042ace65ee"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a993c0fcb19d51965b0f",
+        "incoming_paper_id": "paper_a993c0fcb19d51965b0f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_158b039c15dfd7ba85a2",
+        "incoming_paper_id": "paper_158b039c15dfd7ba85a2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_226e7c7b8f9368f69191",
+        "incoming_paper_id": "paper_226e7c7b8f9368f69191"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07cffee17ec167cd0852",
+        "incoming_paper_id": "paper_07cffee17ec167cd0852"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_94e4aace96dbd93a7d25",
+        "incoming_paper_id": "paper_94e4aace96dbd93a7d25"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dd53bfb64e49a87610da",
+        "incoming_paper_id": "paper_dd53bfb64e49a87610da"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0425367bab64b58316e1",
+        "incoming_paper_id": "paper_0425367bab64b58316e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0bf793652f20a2555401",
+        "incoming_paper_id": "paper_0bf793652f20a2555401"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be25f0461d7f2e9b91d5",
+        "incoming_paper_id": "paper_be25f0461d7f2e9b91d5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c530249730048fef8924",
+        "incoming_paper_id": "paper_c530249730048fef8924"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85eb9d0bec770f38c1e5",
+        "incoming_paper_id": "paper_85eb9d0bec770f38c1e5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fbab7bb0f763bc249c5",
+        "incoming_paper_id": "paper_4fbab7bb0f763bc249c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3879b5d0fa876032b1ff",
+        "incoming_paper_id": "paper_3879b5d0fa876032b1ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a9dfc85ac6ed966c0af",
+        "incoming_paper_id": "paper_9a9dfc85ac6ed966c0af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ee97311aa42be12b461",
+        "incoming_paper_id": "paper_7ee97311aa42be12b461"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_855a4d938d7098729319",
+        "incoming_paper_id": "paper_855a4d938d7098729319"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75939371a9bdb74819ff",
+        "incoming_paper_id": "paper_75939371a9bdb74819ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0a267cb8e9d77fd305d3",
+        "incoming_paper_id": "paper_0a267cb8e9d77fd305d3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_903392aec861820f5c4c",
+        "incoming_paper_id": "paper_903392aec861820f5c4c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_083c5c1ea0128eaa1811",
+        "incoming_paper_id": "paper_083c5c1ea0128eaa1811"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71ffebfbe8069b9d829f",
+        "incoming_paper_id": "paper_71ffebfbe8069b9d829f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_db9a2a7d01b484646808",
+        "incoming_paper_id": "paper_db9a2a7d01b484646808"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e79371a99ff5b563dc5a",
+        "incoming_paper_id": "paper_e79371a99ff5b563dc5a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0bb0f2323f038b72b9b8",
+        "incoming_paper_id": "paper_0bb0f2323f038b72b9b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4ed31e852ddff94f368c",
+        "incoming_paper_id": "paper_4ed31e852ddff94f368c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f3a832428628bb5144d",
+        "incoming_paper_id": "paper_5f3a832428628bb5144d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_217bb53dd8eeed0cf6cc",
+        "incoming_paper_id": "paper_217bb53dd8eeed0cf6cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ae20b2506e74877b3bff",
+        "incoming_paper_id": "paper_ae20b2506e74877b3bff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4a1e404207461a1e9a70",
+        "incoming_paper_id": "paper_4a1e404207461a1e9a70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09f82c3eafbc6577ffe8",
+        "incoming_paper_id": "paper_09f82c3eafbc6577ffe8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0980017b0f2ff40e2e6b",
+        "incoming_paper_id": "paper_0980017b0f2ff40e2e6b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69da5c46bce0e4e65bb2",
+        "incoming_paper_id": "paper_69da5c46bce0e4e65bb2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84772189ffd8c406f7a7",
+        "incoming_paper_id": "paper_84772189ffd8c406f7a7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4a14837e1f65ae5037c5",
+        "incoming_paper_id": "paper_4a14837e1f65ae5037c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08404b5d02b20dfaf74a",
+        "incoming_paper_id": "paper_08404b5d02b20dfaf74a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_006eb421411160b339e4",
+        "incoming_paper_id": "paper_006eb421411160b339e4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bddbc0a9849580a51a17",
+        "incoming_paper_id": "paper_bddbc0a9849580a51a17"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_565e40efca0abdfb5e31",
+        "incoming_paper_id": "paper_565e40efca0abdfb5e31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c5ecdca851a1376e3c5e",
+        "incoming_paper_id": "paper_c5ecdca851a1376e3c5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31c4dc2a33b9475ad055",
+        "incoming_paper_id": "paper_31c4dc2a33b9475ad055"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8ed863e22ed6d72dcd0e",
+        "incoming_paper_id": "paper_8ed863e22ed6d72dcd0e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3b7d5455acf31eb1cc7c",
+        "incoming_paper_id": "paper_3b7d5455acf31eb1cc7c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ab2a26f50480a4492e3c",
+        "incoming_paper_id": "paper_ab2a26f50480a4492e3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_70e1e5b4ed657cd7c80f",
+        "incoming_paper_id": "paper_70e1e5b4ed657cd7c80f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b45d12c5750d310eb4fb",
+        "incoming_paper_id": "paper_b45d12c5750d310eb4fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7a3bd5021569bda9fe31",
+        "incoming_paper_id": "paper_7a3bd5021569bda9fe31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f79d7b706d7674f54f80",
+        "incoming_paper_id": "paper_f79d7b706d7674f54f80"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f8f4fb40c05f9fe5ad1",
+        "incoming_paper_id": "paper_3f8f4fb40c05f9fe5ad1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_efb0beabcc06c1c7ec2c",
+        "incoming_paper_id": "paper_efb0beabcc06c1c7ec2c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_42440db01cfdcba43f38",
+        "incoming_paper_id": "paper_42440db01cfdcba43f38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_38450cec9ed327998365",
+        "incoming_paper_id": "paper_38450cec9ed327998365"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4f9b17704b11974ef2b9",
+        "incoming_paper_id": "paper_4f9b17704b11974ef2b9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b4d063a04d399b62e8ed",
+        "incoming_paper_id": "paper_b4d063a04d399b62e8ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83753e0b65d416b931a8",
+        "incoming_paper_id": "paper_83753e0b65d416b931a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6e7e2e6951415cea83b7",
+        "incoming_paper_id": "paper_6e7e2e6951415cea83b7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31c900226a64d7468034",
+        "incoming_paper_id": "paper_31c900226a64d7468034"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a0891db463201d245dc5",
+        "incoming_paper_id": "paper_a0891db463201d245dc5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea7280682e654713dbd3",
+        "incoming_paper_id": "paper_ea7280682e654713dbd3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85a703cb18064df96b0b",
+        "incoming_paper_id": "paper_85a703cb18064df96b0b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40f30c39e12f82c81a3a",
+        "incoming_paper_id": "paper_40f30c39e12f82c81a3a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bab969a1439806489fa6",
+        "incoming_paper_id": "paper_bab969a1439806489fa6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be93b16d7d2cd091b9f0",
+        "incoming_paper_id": "paper_be93b16d7d2cd091b9f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1da17b49ae4bbf2a0872",
+        "incoming_paper_id": "paper_1da17b49ae4bbf2a0872"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_850930a8f03395f07e7b",
+        "incoming_paper_id": "paper_850930a8f03395f07e7b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_32c1836755042ace65ee",
+        "incoming_paper_id": "paper_32c1836755042ace65ee"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a993c0fcb19d51965b0f",
+        "incoming_paper_id": "paper_a993c0fcb19d51965b0f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8b9ba377f007b4176f49",
+        "incoming_paper_id": "paper_8b9ba377f007b4176f49"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_535b86fa980cf89967e9",
+        "incoming_paper_id": "paper_535b86fa980cf89967e9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be128111a4498d83defb",
+        "incoming_paper_id": "paper_be128111a4498d83defb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_158b039c15dfd7ba85a2",
+        "incoming_paper_id": "paper_158b039c15dfd7ba85a2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_810315ca59df22abf281",
+        "incoming_paper_id": "paper_810315ca59df22abf281"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07cffee17ec167cd0852",
+        "incoming_paper_id": "paper_07cffee17ec167cd0852"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_94e4aace96dbd93a7d25",
+        "incoming_paper_id": "paper_94e4aace96dbd93a7d25"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_226e7c7b8f9368f69191",
+        "incoming_paper_id": "paper_226e7c7b8f9368f69191"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5336c1d55db4d78b3b4",
+        "incoming_paper_id": "paper_e5336c1d55db4d78b3b4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dd53bfb64e49a87610da",
+        "incoming_paper_id": "paper_dd53bfb64e49a87610da"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0425367bab64b58316e1",
+        "incoming_paper_id": "paper_0425367bab64b58316e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a56e6054bb1c5639edd0",
+        "incoming_paper_id": "paper_a56e6054bb1c5639edd0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0bf793652f20a2555401",
+        "incoming_paper_id": "paper_0bf793652f20a2555401"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f30961a6c95972c902b7",
+        "incoming_paper_id": "paper_f30961a6c95972c902b7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c530249730048fef8924",
+        "incoming_paper_id": "paper_c530249730048fef8924"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be25f0461d7f2e9b91d5",
+        "incoming_paper_id": "paper_be25f0461d7f2e9b91d5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fbab7bb0f763bc249c5",
+        "incoming_paper_id": "paper_4fbab7bb0f763bc249c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07a27c93ddc36036bbf3",
+        "incoming_paper_id": "paper_07a27c93ddc36036bbf3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a9dfc85ac6ed966c0af",
+        "incoming_paper_id": "paper_9a9dfc85ac6ed966c0af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85eb9d0bec770f38c1e5",
+        "incoming_paper_id": "paper_85eb9d0bec770f38c1e5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_66d89d197f5f9c829253",
+        "incoming_paper_id": "paper_66d89d197f5f9c829253"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3879b5d0fa876032b1ff",
+        "incoming_paper_id": "paper_3879b5d0fa876032b1ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d6ef8a8c7c1c01f427c2",
+        "incoming_paper_id": "paper_d6ef8a8c7c1c01f427c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd057d71290351cf50cb",
+        "incoming_paper_id": "paper_cd057d71290351cf50cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_05b09f537d6d44754a89",
+        "incoming_paper_id": "paper_05b09f537d6d44754a89"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75939371a9bdb74819ff",
+        "incoming_paper_id": "paper_75939371a9bdb74819ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_855a4d938d7098729319",
+        "incoming_paper_id": "paper_855a4d938d7098729319"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0a267cb8e9d77fd305d3",
+        "incoming_paper_id": "paper_0a267cb8e9d77fd305d3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_903392aec861820f5c4c",
+        "incoming_paper_id": "paper_903392aec861820f5c4c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3b2406813302807dabe0",
+        "incoming_paper_id": "paper_3b2406813302807dabe0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e1da63f4cf296b52055",
+        "incoming_paper_id": "paper_2e1da63f4cf296b52055"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_083c5c1ea0128eaa1811",
+        "incoming_paper_id": "paper_083c5c1ea0128eaa1811"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ee97311aa42be12b461",
+        "incoming_paper_id": "paper_7ee97311aa42be12b461"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71ffebfbe8069b9d829f",
+        "incoming_paper_id": "paper_71ffebfbe8069b9d829f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_db9a2a7d01b484646808",
+        "incoming_paper_id": "paper_db9a2a7d01b484646808"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9aa5d33d8270e79e8f56",
+        "incoming_paper_id": "paper_9aa5d33d8270e79e8f56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a13f5d8df892bfd6c2d",
+        "incoming_paper_id": "paper_9a13f5d8df892bfd6c2d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd10020e689834595ccc",
+        "incoming_paper_id": "paper_bd10020e689834595ccc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c5ecdca851a1376e3c5e",
+        "incoming_paper_id": "paper_c5ecdca851a1376e3c5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20a5621426f2236c0f17",
+        "incoming_paper_id": "paper_20a5621426f2236c0f17"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53593bf384be4370f9b6",
+        "incoming_paper_id": "paper_53593bf384be4370f9b6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b4cfb6e640cfe1db8683",
+        "incoming_paper_id": "paper_b4cfb6e640cfe1db8683"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e79371a99ff5b563dc5a",
+        "incoming_paper_id": "paper_e79371a99ff5b563dc5a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3761373f1605ff81e79b",
+        "incoming_paper_id": "paper_3761373f1605ff81e79b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4ed31e852ddff94f368c",
+        "incoming_paper_id": "paper_4ed31e852ddff94f368c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dda3739d8f9fd7dd9f10",
+        "incoming_paper_id": "paper_dda3739d8f9fd7dd9f10"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3bdb59279126f081883b",
+        "incoming_paper_id": "paper_3bdb59279126f081883b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0bb0f2323f038b72b9b8",
+        "incoming_paper_id": "paper_0bb0f2323f038b72b9b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_217bb53dd8eeed0cf6cc",
+        "incoming_paper_id": "paper_217bb53dd8eeed0cf6cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7bfedb8645f61ecb2dca",
+        "incoming_paper_id": "paper_7bfedb8645f61ecb2dca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4a1e404207461a1e9a70",
+        "incoming_paper_id": "paper_4a1e404207461a1e9a70"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f3a832428628bb5144d",
+        "incoming_paper_id": "paper_5f3a832428628bb5144d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_794297a95a6c9c36907a",
+        "incoming_paper_id": "paper_794297a95a6c9c36907a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0980017b0f2ff40e2e6b",
+        "incoming_paper_id": "paper_0980017b0f2ff40e2e6b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_49357b4a2d240ec949c5",
+        "incoming_paper_id": "paper_49357b4a2d240ec949c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ae20b2506e74877b3bff",
+        "incoming_paper_id": "paper_ae20b2506e74877b3bff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69da5c46bce0e4e65bb2",
+        "incoming_paper_id": "paper_69da5c46bce0e4e65bb2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b52d6a828835f9b4bf9d",
+        "incoming_paper_id": "paper_b52d6a828835f9b4bf9d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b92dbb3b9b246c68aa20",
+        "incoming_paper_id": "paper_b92dbb3b9b246c68aa20"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4a14837e1f65ae5037c5",
+        "incoming_paper_id": "paper_4a14837e1f65ae5037c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84772189ffd8c406f7a7",
+        "incoming_paper_id": "paper_84772189ffd8c406f7a7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09f82c3eafbc6577ffe8",
+        "incoming_paper_id": "paper_09f82c3eafbc6577ffe8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_644b3eff592ca3fda06e",
+        "incoming_paper_id": "paper_644b3eff592ca3fda06e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_842639406948f1d4cccf",
+        "incoming_paper_id": "paper_842639406948f1d4cccf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08404b5d02b20dfaf74a",
+        "incoming_paper_id": "paper_08404b5d02b20dfaf74a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bddbc0a9849580a51a17",
+        "incoming_paper_id": "paper_bddbc0a9849580a51a17"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

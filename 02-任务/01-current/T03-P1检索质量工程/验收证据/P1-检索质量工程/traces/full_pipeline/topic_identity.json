@@ -1,0 +1,2758 @@
+{
+  "direction_id": "topic_identity",
+  "labels": {
+    "zh": "身份认同",
+    "en": "identity"
+  },
+  "input": {
+    "selected_direction_id": "topic_identity",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 15203.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 305,
+  "hard_gate_pass_count": 8,
+  "eligible_count": 1,
+  "boundary_count": 3,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "identity"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "identity user behavior"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(identity) OR (identity in user behavior)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 5
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_identity",
+      "research_direction": "identity",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "identity",
+      "aliases": [
+        "identity"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:173"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_identity",
+        "labels": {
+          "zh": "身份认同",
+          "en": "identity"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "身份认同",
+          "identity",
+          "identity in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "identity",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "identity",
+            "\"identity\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "identity",
+            "identity user behavior"
+          ],
+          "crossref": [
+            "identity",
+            "身份认同"
+          ],
+          "dblp": [
+            "identity behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "identity",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "identity user behavior",
+          "(identity) OR (identity in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:173"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_d79c9f9e50f07631ce0f",
+        "title": "Bystanders Join in Cyberbullying on Social Networking Sites: The Deindividuation and Moral Disengagement Perspectives",
+        "abstract": "Bystanders Join in Cyberbullying on Social Networking Sites: The Deindividuation and Moral Disengagement Perspectives Cyberbullying on social networking sites escalates when bystanders join in the bullying. Bystanders’ joining-in behaviors reinforce the abuse, expose victims to a larger audience, and encourage further abuse by signaling their approval of the aggressive behavior. This study developed an integrative model that explains bystanders’ joining-in cyberbullying behaviors on SNSs to offer actionable insights into reducing such harmful behaviors. We tested the model using 1,179 responses using a scenario survey study. Our findings suggest that IT artifacts (including digital profile, search and privacy, relational ties, and network transparency) activated two key mechanisms that lead to cyberbullying joining-in behaviors: (i) the deindividuation experiences that attenuate self-identity and put salience on group/social identity, and (ii) the moral disengagement practices that permit the exercise of cognitive maneuvers to justify group-interested choices that do not align with social standard. The findings explain why people who do not know each other gang up to bully a target on social media. Platform owners who wish to discourage bystanders from joining in undesirable activities may consider regulating how users could share and access digital resources in a social network and should acknowledge the influence of social identity in igniting, driving, and prolonging harmful online group behaviors.",
+        "authors": [
+          "Tommy K. H. Chan",
+          "Christy M.K. Cheung",
+          "Izak Benbasat",
+          "Bo Xiao",
+          "Zach W. Y. Lee"
+        ],
+        "year": 2022,
+        "publication_date": "2022-08-18",
+        "published_date": "2022-08-18",
+        "language": "en",
+        "doi": "10.1287/isre.2022.1161",
+        "url": "https://doi.org/10.1287/isre.2022.1161",
+        "official_url": "https://doi.org/10.1287/isre.2022.1161",
+        "source_title": "Information Systems Research",
+        "journal": "Information Systems Research",
+        "source_issns": [
+          "1047-7047",
+          "1526-5536"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 66,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10485",
+            "name": "Bullying, Victimization, and Aggression",
+            "score": 0.9995999932289124
+          },
+          {
+            "id": "https://openalex.org/T12262",
+            "name": "Hate Speech and Cyberbullying Detection",
+            "score": 0.9936000108718872
+          },
+          {
+            "id": "https://openalex.org/T10557",
+            "name": "Social Media and Politics",
+            "score": 0.9872000217437744
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4292489786"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://durham-repository.worktribe.com/output/1196852",
+        "provider_payload_refs": [
+          "https://openalex.org/W4292489786"
+        ],
+        "journal_id": "journal_023",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 72.47,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 66.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 91.11,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 72.47
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "identity",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2624799,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:46.168994+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3390.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "identity user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 335411,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:49.585050+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3344.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(identity) OR (identity in user behavior)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2624827,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:52.952346+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3562.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "identity",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 1,
+        "queried_at": "2026-08-21T20:59:57.937047+00:00",
+        "duration_ms": 1141.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1141.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "identity",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:59:59.086266+00:00",
+        "duration_ms": 1140.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1140.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "identity",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:00.225187+00:00",
+        "duration_ms": 1125.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1125.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "身份认同",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:56.758107+00:00",
+        "duration_ms": 1187.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1187.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_6a5ce5a78b8a3b8423b8",
+        "title": "Modernity and Self-Identity",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0f50cbb93b35aebf537",
+        "title": "Dissecting cell identity via network inference and in silico gene perturbation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3ddec1dc9996251aee9",
+        "title": "Measuring Sex, Gender Identity, and Sexual Orientation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d67511280c8e7b226b26",
+        "title": "Deep Visual Proteomics defines single-cell identity and heterogeneity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57a77c816a72a5531b04",
+        "title": "Childhood and Society",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_817a860fbfafb3a4ed1a",
+        "title": "Effective influencer marketing: A social identity perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_158babcca9b68e82be3d",
+        "title": "National identity predicts public health support during a global pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fbea4ec00fb45db4c35",
+        "title": "Identity Theory",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cf73c3830c8f71decaa",
+        "title": "Spatial-Temporal Identity: A Simple yet Effective Baseline for Multivariate Time Series Forecasting",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b79e6f107a2b766daa6",
+        "title": "Identity, structure, and function of the mitochondrial permeability transition pore: controversies, consensus, recent advances, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6409b60a24e15a27f23",
+        "title": "A single-cell Arabidopsis root atlas reveals developmental trajectories in wild-type and cell identity mutants",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_140c205e8182187d2788",
+        "title": "Preferences for identity-first versus person-first language in a US sample of autism stakeholders",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f63207ab5773666d0349",
+        "title": "Identity: Youth and Crisis",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c66949d092e8e839ae4",
+        "title": "A non-canonical tricarboxylic acid cycle underlies cellular identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9684119352323f19a63c",
+        "title": "WHITE IDENTITY POLITICS",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd6fc4d479c9a21447e0",
+        "title": "Identities: A developmental social-psychological perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c92e1557c834710cbff1",
+        "title": "The tRNA identity landscape for aminoacylation and beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0086703aa07811eba26e",
+        "title": "Chapter 12: What does the Anthropocene hold for citizenship?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b92ae83d424d2085b13",
+        "title": "Cultural Identity and Cinematic Representation [1992]",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b4af861f53c49e38bce",
+        "title": "An Identity Approach to Second Language Acquisition",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6fbf08cebeae72b5d236",
+        "title": "Cultural Identity and Diaspora",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e501090bc6bdd16bbfb",
+        "title": "Blockchain-Based Identity Management System and Self-Sovereign Identity Ecosystem: A Comprehensive Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9d6a28082b7f580184e",
+        "title": "Protecting Celebrities from DeepFake with Identity Consistency Transformer",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a455601f59ff08135770",
+        "title": "Gender Identity 5 Years After Social Transition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ccc6bf334246a05de121",
+        "title": "Understanding Identity",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54480241af2b2a3a2400",
+        "title": "Implicit Identity Driven Deepfake Face Swapping Detection",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf1f4e8d04354a0a5a56",
+        "title": "Reconciling identity leadership and leader identity: A dual-identity framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7553d173453355c62c1",
+        "title": "Implicit Identity Leakage: The Stumbling Block to Improving Deepfake Detection Generalization",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbba211e231ab3ea15fd",
+        "title": "A conceptual framework to understand language teacher identities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_acb14375103a91f41e46",
+        "title": "Nurses’ turnover intention, hope and career identity: the mediating role of job satisfaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ba84d801e558eec6307",
+        "title": "Beyond Blood: Rethinking Indigenous Identity",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_456e88720d9066eb41e0",
+        "title": "The politics of identity: who counts as aboriginal today?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abd136d6e6c126f9059f",
+        "title": "Profiling cell identity and tissue architecture with single-cell and spatial transcriptomics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29c35168211b94e4e049",
+        "title": "CEO's Hometown Identity and Corporate Social Responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dff2f705627d389bf472",
+        "title": "StainedGlass: interactive visualization of massive tandem repeat structures with identity heatmaps",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1652488cae7f7b085cfa",
+        "title": "Come as You Are: Examining Autistic Identity Development and the Neurodiversity Movement through an Intersectional Lens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b55278c490379d188dd7",
+        "title": "Macrophage in liver Fibrosis: Identities and mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca456ba44c6f9539bdb3",
+        "title": "Gender Without Identity",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26f21f8061cf7ddda6e5",
+        "title": "A Critical Review of Professional Identity Formation Interventions in Medical Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7317b8fabd4757a46cf1",
+        "title": "Identity, positionality and reflexivity: relevance and application to research paramedics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_719d54e9725b924404df",
+        "title": "Professional identity research in the health professions—a scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9652d6fb66c174d520af",
+        "title": "Proper acquisition of cell class identity in organoids allows definition of fate specification programs of the human cerebral cortex",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0b83a738bdd0317430e",
+        "title": "Transpositioning: Translanguaging and the Liquidity of Identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90f344f120c2b8393737",
+        "title": "Rural Identity as a Contributing Factor to Anti-Intellectualism in the U.S.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca7b5de091cdcdd3ef1a",
+        "title": "Identity and difference",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f129ddbfaea560ac992c",
+        "title": "Intersectional insights into racism and health: not just a question of identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18e94728e3beab9b0072",
+        "title": "Self-Sovereign Identity: A Systematic Review, Mapping and Taxonomy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee074f0b744515479f2a",
+        "title": "Accurate detection of identity-by-descent segments in human ancient DNA",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bcc053e0a378484b9f33",
+        "title": "Understanding teacher identity in teachers' professional lives: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e468dbc2f33ddaddb06",
+        "title": "PDX1 is the cornerstone of pancreatic β-cell functions and identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3a9e04595d24e414033",
+        "title": "Leveraging zero knowledge proofs for blockchain-based identity sharing: A survey of advancements, challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f605c1b7c4df5755f60b",
+        "title": "Annamalai's Binomial Identity and Theorem",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fad6f56e46c687a4155a",
+        "title": "Social Identity Theory",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88823bdc9ffe94123a3b",
+        "title": "Social media: a digital social mirror for identity development during adolescence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddaea8c257f8965c5203",
+        "title": "The role of transcription factors in shaping regulatory T cell identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e8a4d273930b4b89266",
+        "title": "Disinformation and Echo Chambers: How Disinformation Circulates on Social Media Through Identity-Driven Controversies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a9693327327cbfa6988",
+        "title": "Stigma. Notes on the Management of Spoiled Identity",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c778ef8551175367bdb",
+        "title": "Heterogeneous Network Representation Learning Approach for Ethereum Identity Identification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca3235e760449703967a",
+        "title": "Through tensions to identity-based motivations: Exploring teacher professional identity in Artificial Intelligence-enhanced teacher training",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aeb7ed8eb75c4b2ed769",
+        "title": "MyoD is a 3D genome structure organizer for muscle cell identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a7fc789fe772ef3a94e",
+        "title": "Furthering the person-first versus identity-first language debate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a9b79a30165100ecb47",
+        "title": "The dark side of AI identity: Investigating when and why AI identity entitles unethical behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c8d3a6be8c7ad588607",
+        "title": "Organizational identity",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2eddc4303af476bdf9e",
+        "title": "Self-Sovereign Identity",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cdb20d1c02f2498324b9",
+        "title": "Is Affective Polarization Driven by Identity, Loyalty, or Substance?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b21d9e2a0f94add433fc",
+        "title": "Manifestations of professional identity work: an integrative review of research in professional identity formation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6fdc50cd16bb2303a947",
+        "title": "Work Together: Correlation-Identity Reconstruction Hashing for Unsupervised Cross-Modal Retrieval",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68f68b455af8b7736d79",
+        "title": "Positionality: The Interplay of Space, Context and Identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9dbd1082d67367d8cdee",
+        "title": "Autistic identity: A systematic review of quantitative research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30681f3b1b306af76dd8",
+        "title": "Transnational TESOL Practitioners’ Identity Tensions: A Collaborative Autoethnography",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a945f3af814cfb5f9e0",
+        "title": "Christian Nationalism and Political Violence: Victimhood, Racial Identity, Conspiracy, and Support for the Capitol Attacks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f78f3bf3279dc2fdec2",
+        "title": "Identity effects in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae8112df1fe41d83a9e2",
+        "title": "Technological knowledge coupling and green innovation in manufacturing firms: Moderating roles of mimetic pressure and environmental identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6f649d45cba01eb43233",
+        "title": "Generation of human islet cell type-specific identity genesets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6efc8696501949fa5c2a",
+        "title": "Identity Threats as a Reason for Resistance to Artificial Intelligence: Survey Study With Medical Students and Professionals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7547e1da0828b0999a7",
+        "title": "Loss of liver function in chronic liver disease: An identity crisis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e822b29c79c0706a7d6e",
+        "title": "Integrated identity and auditing management using blockchain mechanism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_908e87ea8c8f6e25c794",
+        "title": "Trust in an AI versus a Human teammate: The effects of teammate identity and performance on Human-AI cooperation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3986ca5b6f5da5e2a08c",
+        "title": "Digital body, identity and privacy in social virtual reality: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1acc069c9e8f93b90b7e",
+        "title": "Cleavage Identities in Voters’ Own Words: Harnessing Open‐Ended Survey Responses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a56dbc734df127282e1",
+        "title": "A study of the antecedents and effects of green self-identity on green behavioral intentions of young adults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e261bb5970b92e42d4d8",
+        "title": "Social Groups and Identities",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff6ae890ac51c70db928",
+        "title": "Women Entrepreneurs Negotiating Identities in Liminal Digital Spaces",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56f12cac3b020daa199b",
+        "title": "Maximizing Cloud Security: Empirical Evaluation of an Efficient Identity oriented Signature Verification Scheme for Wireless Networks",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d138a476c3c1ccf9d8e",
+        "title": "Annotators with Attitudes: How Annotator Beliefs And Identities Bias Toxic Language Detection",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18184f95e8ba6e7cfe23",
+        "title": "Coming Into Identity: How Gender Minorities Experience Identity Formation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2ad6a0e20b659357f21",
+        "title": "Processes of Asian American identity development : a study of Japanese American women's perceptions of their struggle to achieve positive identities as Americans of Asian ancestry.",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03f71c368a101184ce35",
+        "title": "SpiceMix enables integrative single-cell spatial modeling of cell identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f96eecb087760c5d9e2",
+        "title": "Identity-Preserving Talking Face Generation with Landmark and Appearance Priors",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e044db627bb3dae81548",
+        "title": "Singlehood as an identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bca0f737f1e0f2c31bda",
+        "title": "Professional identity formation: linking meaning to well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6698724a17d183a9604",
+        "title": "Ethnic-racial identity in Europe: Adapting the identity project intervention in five countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74d28142265cddac4c82",
+        "title": "Synovial fibroblasts assume distinct functional identities and secrete R-spondin 2 in osteoarthritis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d44e440297c1163b5b8d",
+        "title": "SmartDID: A Novel Privacy-Preserving Identity Based on Blockchain for IoT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73af37f2f1273e57680d",
+        "title": "Ranking the biases: The choice of OTUs vs. ASVs in 16S rRNA amplicon data analysis has stronger effects on diversity measures than rarefaction and OTU identity threshold",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_feee57dbdba10c35eb41",
+        "title": "Transgender identity: Development, management and affirmation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e759c2eaf5fc303e5560",
+        "title": "zk-creds: Flexible Anonymous Credentials from zkSNARKs and Existing Identity Infrastructure",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f1eb3c3454a074fc93",
+        "title": "Effect of AI chatbot empathy and identity disclosure on willingness to donate: the mediation of humanness and social presence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f88dc7c6c4622f30be2",
+        "title": "Design, resistance and the performance of identity on TikTok",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dcf7e8039e337ca0ed7b",
+        "title": "The updated Consolidated Framework for Implementation Research based on user feedback",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cd87701b5eb3a3c342e",
+        "title": "SLEAP: A deep learning system for multi-animal pose tracking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0bc9d70e59f7b8ad08dc",
+        "title": "Chatbots or Humans? Effects of Agent Identity and Information Sensitivity on Users’ Privacy Management and Behavioral Intentions: A Comparative Experimental Study between China and the United States",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94757d0f5c5e8aefbc3c",
+        "title": "Antecedents and consequences of conspicuous green behavior on social media: Incorporating the virtual self-identity into the theory of planned behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0a59624a5e1c822847d",
+        "title": "Your Identity is Your Behavior - Continuous User Authentication based on Machine Learning and Touch Dynamics",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d44d2050363b5c82ab9",
+        "title": "Elevating Security: Mouse Dynamics in Behavior Biometrics for User Identity Authentication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f9676ddf92d71b9fba",
+        "title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73874414c155b7a87962",
+        "title": "My AI Friend: How Users of a Social Chatbot Understand Their Human–AI Friendship",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ad533ddeb9c75972788",
+        "title": "Becoming “us” in digital spaces: How online users creatively and strategically exploit social media affordances to build up social identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebd93bf4f28c2ddf8cf7",
+        "title": "Toward User-Driven Algorithm Auditing: Investigating users’ strategies for uncovering harmful algorithmic behavior",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33456ddc0de6828e19dc",
+        "title": "An Experimental Study to Examine Relationships Between IT Identity and Users’ Post-Adoption Behaviors for Different Types of Health Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4db625f77b0494138dc",
+        "title": "What Influences Users’ Continuous Behavioral Intention in Cultural Heritage Virtual Tourism: Integrating Experience Economy Theory and Stimulus–Organism–Response (SOR) Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e75d28b951daf4fae70",
+        "title": "Augmenting sparse behavior data for user identity linkage with self-generated by model and mixup-generated samples",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd80bc573d0e6e74410f",
+        "title": "THE ROLE OF AI IN ENHANCING IDENTITY AND ACCESS MANAGEMENT SYSTEMS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e863ba6ab72378024ccd",
+        "title": "AI-Driven Cloud Security: Examining the Impact of User Behavior Analysis on Threat Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04e913c03522b313659f",
+        "title": "User Behavior Analytics and Mitigation Strategies through Identity and Access Management Solutions: Enhancing Cybersecurity with Machine Learning and Emerging Technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f173c96d699585dd10e",
+        "title": "Cybersecurity Practices for Social Media Users: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c534e94ee58859d979ff",
+        "title": "Effects of Anthropomorphic Design Cues of Chatbots on Users’ Perception and Visual Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54fe48cf8ccb8e0e4c41",
+        "title": "The i-frame and the s-frame: How focusing on individual-level solutions has led behavioral public policy astray",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_672836599dd073eeb11a",
+        "title": "Parasocial relationships, social media, & well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79c1224dae1ed62198e0",
+        "title": "The User Experience of ChatGPT: Findings from a Questionnaire Study of Early Users",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d05364878229267e93a3",
+        "title": "Behavioral paradigms for studying pro-environmental behavior: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69d1a47d28b4297ce590",
+        "title": "From digital museuming to on-site visiting: The mediation of cultural identity and perceived value",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c23a509d6b42b4369da5",
+        "title": "A literature review on users' behavioral intention toward chatbots' adoption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e619a1350d4ae9e3e89",
+        "title": "You Can’t Hide Behind Your Headset: User Profiling in Augmented and Virtual Reality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73f3bf6b674d5bd70f57",
+        "title": "“Chatting with ChatGPT”: Analyzing the factors influencing users' intention to Use the Open AI's ChatGPT using the UTAUT model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0f019383b9ad622dec6",
+        "title": "Multi-user centered design: acceptance, user experience, user research and user testing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b86574ec399f92f170dd",
+        "title": "Digital identity, privacy security, and their legal safeguards in the Metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60010d182079c909d30b",
+        "title": "User Behavior Clustering Based Method for EV Charging Forecast",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e074edee9fcabad53ec",
+        "title": "What is a (Digital) Identity Wallet? A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a77cf0937613daa3eac6",
+        "title": "HG-SL: Jointly Learning of Global and Local User Spreading Behavior for Fake News Early Detection",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d84487e413d6f4c9e6fd",
+        "title": "Do Violent Protests Affect Expressions of Party Identity? Evidence from the Capitol Insurrection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d11c79624a0437b2c0a",
+        "title": "GPT-4 Technical Report",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b58791e304221978328e",
+        "title": "Do Users Write More Insecure Code with AI Assistants?",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be9f772f542bd2becf52",
+        "title": "LabGym: Quantification of user-defined animal behaviors using learning-based holistic assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1dfd06a0808fd6a6631",
+        "title": "The Coding Manual for Qualitative Researchers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7042ad854e07aeab91e7",
+        "title": "User Behavior-Based Dynamic Authentication Design for Enhanced Identity Security",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5455ef24328191c0b8c6",
+        "title": "Effects of Identity Cues and Communication Channels in Social Networking Sites Campaign Chatbots on User Perceptions and Behavior Intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fdddb0e539238f3a3894",
+        "title": "The Role of Social Identity Labels in CVEs on User Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0624d1deb1bbf869440",
+        "title": "Social Media Marketing during COVID-19: Behaviors of Jordanian Users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2f5c0824f0421fac504",
+        "title": "Effects of Explainable Artificial Intelligence on trust and human behavior in a high-risk decision task",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d5515c150d7ce12756b",
+        "title": "Understanding the user experience of customer service chatbots: An experimental study of chatbot interaction design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_91bb6fddbf7b0ffe296e",
+        "title": "Behavior Privacy Preserving in RF Sensing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75f1d5973ce34381cea4",
+        "title": "Extending UTAUT with national identity and fairness to understand user adoption of DCEP in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46bb0cc7581cd9c9c4ee",
+        "title": "Addressing climate change with behavioral science: A global intervention tournament in 63 countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c332945cf4d929cfeba8",
+        "title": "Evaluating the barriers affecting cybersecurity behavior in the Metaverse using PLS-SEM and fuzzy sets (fsQCA)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12f13c8ed52b07a73b38",
+        "title": "Link User Identities Across Social Networks Based on Contact Graph and User Social Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d96c51c552c2f322bfb1",
+        "title": "Exploring the Needs of Users for Supporting Privacy-Protective Behaviors in Smart Homes",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9baa5782ab22d9ba42be",
+        "title": "User behavior-based and graph-based hybrid approach for detection of Sybil Attack in online social networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63c15c376aa8debf6045",
+        "title": "The Dark Side of Metaverse: A Multi-Perspective of Deviant Behaviors From PLS-SEM and fsQCA Findings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b90bd858e11e17295b3",
+        "title": "Users’ experience with health-related content on YouTube: an exploratory study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24ba9101ed0f02335441",
+        "title": "Applying Digital Twins in Metaverse: User Interface, Security and Privacy Challenges",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0c79fbe8aac2fd3a97d",
+        "title": "Research on How Dou Yin Micro-Drama Shapes Users’ Cultural Identity and Social Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8d3c94188076c5877e4",
+        "title": "Leveraging gamification technology to motivate environmentally responsible behavior: An empirical examination of Ant Forest",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c77b03fe8b586c673ea",
+        "title": "AI anthropomorphism and its effect on users' self-congruence and self–AI integration: A theoretical framework and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a62ca18e57fd3d5cf5f",
+        "title": "Privacy concerns in social media UGC communities: Understanding user behavior sentiments in complex networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b496d2db2e56f472540",
+        "title": "CP-Link: Exploiting Continuous Spatio-Temporal Check-In Patterns for User Identity Linkage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f07491665cab3c4fa77c",
+        "title": "Metaverse friends with social benefits: Effects of social identity on the intention to purchase virtual products through site attachment, user engagement, and public self-consciousness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d3e2c9cbc11934cec88",
+        "title": "Measures for explainable AI: Explanation goodness, user satisfaction, mental models, curiosity, trust, and human-AI performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20886d9103535526a81d",
+        "title": "Sexual identity, gender, and anticipated discrimination in prosocial behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11a8d46e86be0c51e44e",
+        "title": "Why do Chinese people consume video game live streaming on the platform? An exploratory study connecting affordance-based gratifications, user identification, and user engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_257d4c0bb14ad3dbc681",
+        "title": "Digital Identity Verification and Management System of Blockchain-Based Verifiable Certificate with the Privacy Protection of Identity and Behavior",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0186dbb234ba599c2f3f",
+        "title": "Sustainable Purchasing Behaviors in Generation Z: The Role of Social Identity and Behavioral Intentions in the Saudi Context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e5334e08c4acfa44619",
+        "title": "Influencing Green Purchase Intention through Eco Labels and User-Generated Content",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5564ed7400035b70e181",
+        "title": "Consumer behavior in the metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37dc11a64524b70d070c",
+        "title": "Are TikTok Algorithms Influencing Users’ Self-Perceived Identities and Personal Values? A Mini Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b18fcd29970fb1218abc",
+        "title": "The impact of user-generated content on intention to select a travel destination",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f94fab15861a84b0cecb",
+        "title": "Effects of social capital of social networking site on social identity and continuous participant behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1809f03bf8d440ad6ac8",
+        "title": "Understanding continuous sharing behavior of online travel community users: a case of TripAdvisor",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53a2db8c36e1b37f4f0f",
+        "title": "The Power of Social Validation: A Literature Review on How Likes, Comments, and Shares Shape User Behavior on Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6354266c38d25130f04d",
+        "title": "On the Road to 6G: Visions, Requirements, Key Technologies, and Testbeds",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af911ccf60d63fba967e",
+        "title": "A Systematic Review of Identity and Access Management Requirements in Enterprises and Potential Contributions of Self-Sovereign Identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_339c852307a7c0426e05",
+        "title": "MotionID: Towards practical behavioral biometrics-based implicit user authentication on smartphones",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18d271152679ccb997f0",
+        "title": "Assessing behavioral data science privacy issues in government artificial intelligence deployment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e1a52e622fe91bf3dad",
+        "title": "Why do user innovators want to pursue user entrepreneurship? On the influence of the communitarian identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e74839bfd9aa1d917c08",
+        "title": "Current interpretations of the I-PACE model of behavioral addictions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51eb9df6b3def801f5de",
+        "title": "Cross-domain recommendation via user interest alignment",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cbe882fd56ce794587a4",
+        "title": "Anti-Money Laundering by Group-Aware Deep Graph Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f49b5e2d7024c26401d5",
+        "title": "Is AI-based digital marketing ethical? Assessing a new data privacy paradox",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_210b4eedcecc06bce7fd",
+        "title": "Social Media User Behavior and Emotions during Crisis Events",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eeadd2ee82c930e16aba",
+        "title": "How the Identity of Substance Users Shapes Public Opinion on Opioid Policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1194e8bd721195000ab1",
+        "title": "When digital spaces matter: The influence of uniqueness and place attachment on self‐identity expression with brands using generative AI on the metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26a4387ba53c86b6fab0",
+        "title": "MMAuth: A Continuous Authentication Framework on Smartphones Using Multiple Modalities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51ee7efb74820f76da15",
+        "title": "Generative language models exhibit social identity biases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a8ee64d9ff484e429c6",
+        "title": "Mobile behavioral biometrics for passive authentication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37e850a1a9d5cc170b7e",
+        "title": "NFT luxury brand marketing in the metaverse: Leveraging blockchain‐certified NFTs to drive consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3ec451e262fa626db00",
+        "title": "ByteTrack: Multi-object Tracking by Associating Every Detection Box",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1614c004e9e1fba75dbf",
+        "title": "Borderlands/La Frontera",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8227663b59bd71a339a8",
+        "title": "A Social Psychology of Protest",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0fd99a5c07908f2f1bb0",
+        "title": "How to Do Critical Discourse Analysis: A Multimodal Introduction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2de1b911deeb4ddde4f",
+        "title": "TrackFormer: Multi-Object Tracking with Transformers",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0de854a9e22450a8187b",
+        "title": "Internet of Things Strategic Research Roadmap",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c567035122c606f4a477",
+        "title": "Exploring the factors influencing continuous usage intention of academic social network sites",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a4e2a9d5f0fcb3a777c",
+        "title": "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06deec3bf19c9c9781cd",
+        "title": "The hallmarks of cancer metabolism: Still emerging",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b755ee2d79c2ad196b13",
+        "title": "Deepfakes and beyond: A Survey of face manipulation and fake detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f91aca139ad375ba07ab",
+        "title": "US-China Education Review A",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_afc54176c34bd063a42f",
+        "title": "The Fourth Industrial Revolution: what it means, how to respond1",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc34f78c4a6b2d2bd4ea",
+        "title": "Digital Mirrors: AI Companions and the Self",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b005c6c56c19955cafe",
+        "title": "New Zealand Journal of Ecology",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2d6ff94f6e61a8afc61",
+        "title": "IoT-based blockchain intrusion detection using optimized recurrent neural network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7829b32e7c79c441e4d2",
+        "title": "What is holding customers back? Assessing the moderating roles of personal and social norms on CSR’S routes to Airbnb repurchase intention in the COVID-19 era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c095079349dfbb443935",
+        "title": "Modernity and the Holocaust",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_883d4b52c26efec46fa4",
+        "title": "The Amplification of Exaggerated and False News on Social Media: The Roles of Platform Use, Motivations, Affect, and Ideology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_947207e3fdf8e02812b4",
+        "title": "An Improved Identity-Based Anonymous Authentication Scheme Resistant to Semi-Trusted Server Attacks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39b711d2d0957cf8960a",
+        "title": "Multi-animal pose estimation, identification and tracking with DeepLabCut",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_831f034cac4a8e9ac25b",
+        "title": "Large language models generate functional protein sequences across diverse families",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6f8e7874f12160d815b",
+        "title": "GAI identity threat: When and why do individuals feel threatened?",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_identity",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 305,
+      "deduplicated_count": 8,
+      "hard_gate_pass_count": 8,
+      "eligible_count": 1,
+      "boundary_count": 3,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "identity"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "identity user behavior"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(identity) OR (identity in user behavior)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 5
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "identity",
+        "raw_count": 100,
+        "hard_gate_pass_count": 1,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "identity user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 4,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(identity) OR (identity in user behavior)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 7,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_6e501090bc6bdd16bbfb",
+          "paper_e2eddc4303af476bdf9e"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_817a860fbfafb3a4ed1a",
+        "incoming_paper_id": "paper_817a860fbfafb3a4ed1a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88823bdc9ffe94123a3b",
+        "incoming_paper_id": "paper_88823bdc9ffe94123a3b"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_f0a59624a5e1c822847d",
+        "incoming_paper_id": "paper_a445f6f8377a388b4b22"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6e501090bc6bdd16bbfb",
+        "incoming_paper_id": "paper_6e501090bc6bdd16bbfb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d6409b60a24e15a27f23",
+        "incoming_paper_id": "paper_d6409b60a24e15a27f23"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3986ca5b6f5da5e2a08c",
+        "incoming_paper_id": "paper_3986ca5b6f5da5e2a08c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ee074f0b744515479f2a",
+        "incoming_paper_id": "paper_ee074f0b744515479f2a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d138a476c3c1ccf9d8e",
+        "incoming_paper_id": "paper_2d138a476c3c1ccf9d8e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3e8a4d273930b4b89266",
+        "incoming_paper_id": "paper_3e8a4d273930b4b89266"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a5ce5a78b8a3b8423b8",
+        "incoming_paper_id": "paper_6a5ce5a78b8a3b8423b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_57a77c816a72a5531b04",
+        "incoming_paper_id": "paper_57a77c816a72a5531b04"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0086703aa07811eba26e",
+        "incoming_paper_id": "paper_0086703aa07811eba26e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2cd87701b5eb3a3c342e",
+        "incoming_paper_id": "paper_2cd87701b5eb3a3c342e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_817a860fbfafb3a4ed1a",
+        "incoming_paper_id": "paper_817a860fbfafb3a4ed1a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f0f50cbb93b35aebf537",
+        "incoming_paper_id": "paper_f0f50cbb93b35aebf537"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88823bdc9ffe94123a3b",
+        "incoming_paper_id": "paper_88823bdc9ffe94123a3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c3ddec1dc9996251aee9",
+        "incoming_paper_id": "paper_c3ddec1dc9996251aee9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d67511280c8e7b226b26",
+        "incoming_paper_id": "paper_d67511280c8e7b226b26"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d11c79624a0437b2c0a",
+        "incoming_paper_id": "paper_3d11c79624a0437b2c0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_672836599dd073eeb11a",
+        "incoming_paper_id": "paper_672836599dd073eeb11a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_94757d0f5c5e8aefbc3c",
+        "incoming_paper_id": "paper_94757d0f5c5e8aefbc3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f63207ab5773666d0349",
+        "incoming_paper_id": "paper_f63207ab5773666d0349"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5c66949d092e8e839ae4",
+        "incoming_paper_id": "paper_5c66949d092e8e839ae4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0bc9d70e59f7b8ad08dc",
+        "incoming_paper_id": "paper_0bc9d70e59f7b8ad08dc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dd80bc573d0e6e74410f",
+        "incoming_paper_id": "paper_dd80bc573d0e6e74410f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d6409b60a24e15a27f23",
+        "incoming_paper_id": "paper_d6409b60a24e15a27f23"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0b79e6f107a2b766daa6",
+        "incoming_paper_id": "paper_0b79e6f107a2b766daa6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8b92ae83d424d2085b13",
+        "incoming_paper_id": "paper_8b92ae83d424d2085b13"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7fbea4ec00fb45db4c35",
+        "incoming_paper_id": "paper_7fbea4ec00fb45db4c35"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8cf73c3830c8f71decaa",
+        "incoming_paper_id": "paper_8cf73c3830c8f71decaa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d6f8e7874f12160d815b",
+        "incoming_paper_id": "paper_d6f8e7874f12160d815b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_158babcca9b68e82be3d",
+        "incoming_paper_id": "paper_158babcca9b68e82be3d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b86574ec399f92f170dd",
+        "incoming_paper_id": "paper_b86574ec399f92f170dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1e074edee9fcabad53ec",
+        "incoming_paper_id": "paper_1e074edee9fcabad53ec"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69d1a47d28b4297ce590",
+        "incoming_paper_id": "paper_69d1a47d28b4297ce590"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_140c205e8182187d2788",
+        "incoming_paper_id": "paper_140c205e8182187d2788"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9684119352323f19a63c",
+        "incoming_paper_id": "paper_9684119352323f19a63c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ad533ddeb9c75972788",
+        "incoming_paper_id": "paper_2ad533ddeb9c75972788"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_abd136d6e6c126f9059f",
+        "incoming_paper_id": "paper_abd136d6e6c126f9059f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6e501090bc6bdd16bbfb",
+        "incoming_paper_id": "paper_6e501090bc6bdd16bbfb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d84487e413d6f4c9e6fd",
+        "incoming_paper_id": "paper_d84487e413d6f4c9e6fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d79c9f9e50f07631ce0f",
+        "incoming_paper_id": "paper_d79c9f9e50f07631ce0f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6fbf08cebeae72b5d236",
+        "incoming_paper_id": "paper_6fbf08cebeae72b5d236"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cf1f4e8d04354a0a5a56",
+        "incoming_paper_id": "paper_cf1f4e8d04354a0a5a56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f4db625f77b0494138dc",
+        "incoming_paper_id": "paper_f4db625f77b0494138dc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd6fc4d479c9a21447e0",
+        "incoming_paper_id": "paper_bd6fc4d479c9a21447e0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ccc6bf334246a05de121",
+        "incoming_paper_id": "paper_ccc6bf334246a05de121"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b4af861f53c49e38bce",
+        "incoming_paper_id": "paper_7b4af861f53c49e38bce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c92e1557c834710cbff1",
+        "incoming_paper_id": "paper_c92e1557c834710cbff1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a455601f59ff08135770",
+        "incoming_paper_id": "paper_a455601f59ff08135770"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cbe882fd56ce794587a4",
+        "incoming_paper_id": "paper_cbe882fd56ce794587a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d9d6a28082b7f580184e",
+        "incoming_paper_id": "paper_d9d6a28082b7f580184e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ba84d801e558eec6307",
+        "incoming_paper_id": "paper_7ba84d801e558eec6307"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_54480241af2b2a3a2400",
+        "incoming_paper_id": "paper_54480241af2b2a3a2400"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f0b83a738bdd0317430e",
+        "incoming_paper_id": "paper_f0b83a738bdd0317430e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26a4387ba53c86b6fab0",
+        "incoming_paper_id": "paper_26a4387ba53c86b6fab0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f7553d173453355c62c1",
+        "incoming_paper_id": "paper_f7553d173453355c62c1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbba211e231ab3ea15fd",
+        "incoming_paper_id": "paper_bbba211e231ab3ea15fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29c35168211b94e4e049",
+        "incoming_paper_id": "paper_29c35168211b94e4e049"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dff2f705627d389bf472",
+        "incoming_paper_id": "paper_dff2f705627d389bf472"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be54433323dbffd592c0",
+        "incoming_paper_id": "paper_be54433323dbffd592c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f0a59624a5e1c822847d",
+        "incoming_paper_id": "paper_f0a59624a5e1c822847d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_456e88720d9066eb41e0",
+        "incoming_paper_id": "paper_456e88720d9066eb41e0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0a9693327327cbfa6988",
+        "incoming_paper_id": "paper_0a9693327327cbfa6988"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ee074f0b744515479f2a",
+        "incoming_paper_id": "paper_ee074f0b744515479f2a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_acb14375103a91f41e46",
+        "incoming_paper_id": "paper_acb14375103a91f41e46"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c8d3a6be8c7ad588607",
+        "incoming_paper_id": "paper_2c8d3a6be8c7ad588607"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b55278c490379d188dd7",
+        "incoming_paper_id": "paper_b55278c490379d188dd7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f129ddbfaea560ac992c",
+        "incoming_paper_id": "paper_f129ddbfaea560ac992c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d138a476c3c1ccf9d8e",
+        "incoming_paper_id": "paper_2d138a476c3c1ccf9d8e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26f21f8061cf7ddda6e5",
+        "incoming_paper_id": "paper_26f21f8061cf7ddda6e5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca7b5de091cdcdd3ef1a",
+        "incoming_paper_id": "paper_ca7b5de091cdcdd3ef1a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca456ba44c6f9539bdb3",
+        "incoming_paper_id": "paper_ca456ba44c6f9539bdb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7317b8fabd4757a46cf1",
+        "incoming_paper_id": "paper_7317b8fabd4757a46cf1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1194e8bd721195000ab1",
+        "incoming_paper_id": "paper_1194e8bd721195000ab1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9652d6fb66c174d520af",
+        "incoming_paper_id": "paper_9652d6fb66c174d520af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e468dbc2f33ddaddb06",
+        "incoming_paper_id": "paper_9e468dbc2f33ddaddb06"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1652488cae7f7b085cfa",
+        "incoming_paper_id": "paper_1652488cae7f7b085cfa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f49b5e2d7024c26401d5",
+        "incoming_paper_id": "paper_f49b5e2d7024c26401d5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fad6f56e46c687a4155a",
+        "incoming_paper_id": "paper_fad6f56e46c687a4155a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90f344f120c2b8393737",
+        "incoming_paper_id": "paper_90f344f120c2b8393737"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e261bb5970b92e42d4d8",
+        "incoming_paper_id": "paper_e261bb5970b92e42d4d8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f605c1b7c4df5755f60b",
+        "incoming_paper_id": "paper_f605c1b7c4df5755f60b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f173c96d699585dd10e",
+        "incoming_paper_id": "paper_3f173c96d699585dd10e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8c778ef8551175367bdb",
+        "incoming_paper_id": "paper_8c778ef8551175367bdb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f07491665cab3c4fa77c",
+        "incoming_paper_id": "paper_f07491665cab3c4fa77c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3e8a4d273930b4b89266",
+        "incoming_paper_id": "paper_3e8a4d273930b4b89266"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ddaea8c257f8965c5203",
+        "incoming_paper_id": "paper_ddaea8c257f8965c5203"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be54433323dbffd592c0",
+        "incoming_paper_id": "paper_be54433323dbffd592c0"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "12a665d0e843467c8d7c7c744f857606",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

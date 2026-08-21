@@ -1,0 +1,2151 @@
+{
+  "direction_id": "topic_数字广告",
+  "labels": {
+    "zh": "数字广告",
+    "en": "digital advertising"
+  },
+  "input": {
+    "selected_direction_id": "topic_数字广告",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 14265.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 230,
+  "hard_gate_pass_count": 40,
+  "eligible_count": 2,
+  "boundary_count": 10,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital advertising"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital advertising information systems"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_数字广告",
+      "research_direction": "数字广告",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "数字广告",
+      "aliases": [
+        "数字广告"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_数字广告",
+        "labels": {
+          "zh": "数字广告",
+          "en": "digital advertising"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "数字广告",
+          "digital advertising",
+          "digital advertising in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "digital advertising",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "digital advertising",
+            "\"digital advertising\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "digital advertising",
+            "digital advertising information systems"
+          ],
+          "crossref": [
+            "digital advertising",
+            "数字广告"
+          ],
+          "dblp": [
+            "digital advertising digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "digital advertising",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "digital advertising information systems",
+          "(digital advertising) OR (digital advertising in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_0ff2b2ba275556aca505",
+        "title": "Digital Content Creation: An Analysis of the Impact of Recommendation Systems",
+        "abstract": "The success of digital content platforms, such as YouTube, relies on both the creativity of independent content creators and the efficiency of content distribution. By sharing advertising revenue with content creators, these platforms can motivate creators to exert greater effort. Most platforms use recommendation systems to deliver personalized content recommendations to each consumer. As creators’ revenues are contingent on their demand, the demand allocation criteria inherent in the recommendation system can influence their content creation behavior. In this paper, we investigate the influence of a platform’s recommendation system on revenue-sharing plans, content creation, profits, and welfare. Our results show that a platform could benefit by biasing recommendations, that is, recommending content that is not an ideal match to a consumer’s preference, to incentivize creators to produce better-quality content. We refer to this as a biased recommendation strategy. Interestingly, we find that such a biased recommendation strategy may lead to a win-win in which the platform, consumers, and content creators can benefit. Our study also shows that consumers may be worse off when they are more knowledgeable and less dependent on the recommendation system. In addition, the platform, consumers, and creators can benefit when the platform has more accurate information on consumer preferences. This paper was accepted by Raphael Thomadsen, marketing. Supplemental Material: The online appendices are available at https://doi.org/10.1287/mnsc.2022.03655 .",
+        "authors": [
+          "Kun Qian",
+          "Sanjay Jain"
+        ],
+        "year": 2024,
+        "publication_date": "2024-03-05",
+        "published_date": "2024-03-05",
+        "language": "en",
+        "doi": "10.1287/mnsc.2022.03655",
+        "url": "https://doi.org/10.1287/mnsc.2022.03655",
+        "official_url": "https://doi.org/10.1287/mnsc.2022.03655",
+        "source_title": "Management Science",
+        "journal": "Management Science",
+        "source_issns": [
+          "0025-1909",
+          "1526-5501"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 75,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11995",
+            "name": "FinTech, Crowdfunding, Digital Finance",
+            "score": 0.9925000071525574
+          },
+          {
+            "id": "https://openalex.org/T10203",
+            "name": "Recommender Systems and Techniques",
+            "score": 0.9904000163078308
+          },
+          {
+            "id": "https://openalex.org/T11197",
+            "name": "Digital Games and Media",
+            "score": 0.9519000053405762
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4392457731"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4392457731"
+        ],
+        "journal_id": "journal_053",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.75,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 93.84,
+            "recency": 60.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.75
+      },
+      {
+        "paper_id": "paper_7ca9460f68e0bf97903d",
+        "title": "The Consumption of Advertising in the Digital Age: Attention and Ad Content",
+        "abstract": "This article studies the consumption of advertising when attention is costly. Our objective is to understand the advertiser’s optimal decision for informational and noninformational content when facing consumers with heavy distractions common in the digital age. We take an equilibrium approach in which an ad is consumed if and only if the content of the ad is worth the viewer’s attention. We classify many advertising decisions observed in practice. First, an advertiser can structure content to induce curiosity for continued viewing by showing the information that is relatively less likely to resonate with the broad audience. This tactic is evident in clickbait ads and “mystery ads.” Second, we find that digital ads, which tend to be skippable, have lower amounts of noninformational content (e.g., entertainment) relative to nonskippable ads. This finding can explain the industry perception that ads on digital media are of lower copy quality than traditional ads. This paper was accepted by Dmitri Kuksov, marketing. Funding: This work was supported by the Marketing Science Institute [Grant 4000790]. Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2023.4793 .",
+        "authors": [
+          "Anthony Dukes",
+          "Qihong Liu"
+        ],
+        "year": 2023,
+        "publication_date": "2023-06-05",
+        "published_date": "2023-06-05",
+        "language": "en",
+        "doi": "10.1287/mnsc.2023.4793",
+        "url": "https://doi.org/10.1287/mnsc.2023.4793",
+        "official_url": "https://doi.org/10.1287/mnsc.2023.4793",
+        "source_title": "Management Science",
+        "journal": "Management Science",
+        "source_issns": [
+          "0025-1909",
+          "1526-5501"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 21,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11161",
+            "name": "Consumer Market Behavior and Pricing",
+            "score": 0.9994000196456909
+          },
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9980000257492065
+          },
+          {
+            "id": "https://openalex.org/T12659",
+            "name": "Innovation Diffusion and Forecasting",
+            "score": 0.9961000084877014
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4379389169"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4379389169"
+        ],
+        "journal_id": "journal_053",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 74.86,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 66.98,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 74.86
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital advertising",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 189565,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:03.555192+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3953.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital advertising information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 133225,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:07.521574+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3563.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "digital advertising",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:13.730700+00:00",
+        "duration_ms": 1266.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1266.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "digital advertising",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:15.000861+00:00",
+        "duration_ms": 1359.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1359.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "digital advertising",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:16.367475+00:00",
+        "duration_ms": 1453.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1453.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "数字广告",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:57:11.264732+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "数字广告",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 3,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:57:12.478898+00:00",
+        "duration_ms": 1250.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1250.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_39b0bd64bd47481aeb5e",
+        "title": "Investigating the effect of advertising irritation on digital advertising effectiveness: A moderated mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5d1d0e182d5acfd6b15",
+        "title": "Digital Advertising in the Age of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9f35eaa9793c50f8e1d",
+        "title": "Maximizing Online Marketing Strategy with Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc0f2b5ec8d831e2666d",
+        "title": "Leveraging Digital Advertising Platforms for Consumer Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b78fc48a616c6e8049ad",
+        "title": "Privacy-Centric Digital Advertising: Implications for Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7cf4685de03940e935e",
+        "title": "The Impact of Generative AI and ChatGPT on Creating Digital Advertising Campaigns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_967cce9e57365dc455ba",
+        "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef6fa705361bee4da754",
+        "title": "Enhancing Digital Advertising with Blockchain Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f083e47890f4b82c06e8",
+        "title": "Determinants of consumers’ attitudes towards digital advertising – A meta-analytic comparison across time and touchpoints",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b21f672b0ab6460aa1b6",
+        "title": "The regulation of digital advertising under the DSA: A critical assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c362cce852aa061cd19",
+        "title": "Tales of Two Channels: Digital Advertising Performance Between AI Recommendation and User Subscription Channels",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e0b1c80f57ca01a36ea",
+        "title": "Linking blockchain technology and digital advertising: How blockchain technology can enhance digital advertising to be more effective, efficient, and trustworthy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97a07b62f83cc79d5661",
+        "title": "Does digital advertising affect vote choice? Evidence from a randomized field experiment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e23034416e951881fda2",
+        "title": "Building the Future of Digital Advertising One Block at a Time: How Blockchain Technology Can Change Advertising Practice and Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a6da6d8ab5c8629467a",
+        "title": "Composing with generative AI on digital advertising platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_776d1140ac68a9cf5d2e",
+        "title": "Digital advertising spillover, online-exclusive product launches, and manufacturer-remanufacturer competition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_013b34c8e4ca78786698",
+        "title": "A bibliometric analysis of digital advertising in social media: the state of the art and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e3c87b1499ea0f1c3df",
+        "title": "Digital Advertising in the 2022 Midterms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9f898c62e5f388687d4",
+        "title": "The effects of targeted digital advertising on consumer welfare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9db585d332fa8966d6d4",
+        "title": "“You Will:” A Macroeconomic Analysis of Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_885c5fdc581092cc6079",
+        "title": "Media planning of digital advertising campaigns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94bc23b253181e176466",
+        "title": "Analyzing institutional platform power: Evolving relations of dependence in the mobile digital advertising ecosystem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_698319ace139b9024688",
+        "title": "Challenges of digital advertising from the study of the influencers' phenomenon in social networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a656fb6d6618896f853",
+        "title": "Digital Advertising in U.S. Federal Elections, 2004-2020",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77f6c9e23b0e7ae6aca5",
+        "title": "Digital Advertising Trends and Effectiveness in the Modern Era: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6419612a609b846347e",
+        "title": "AI Empowered Personalized Digital Advertising Marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d820dd5d6f90cf5500d",
+        "title": "Against Opacity: Explainable AI and Large Language Models for Effective Digital Advertising",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_923b63c81f352b08da2f",
+        "title": "Generative AI in Digital Advertising Campaigns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_314f8c1f68e21fcf0462",
+        "title": "Disinformation and fake news as externalities of digital advertising: a close reading of sociotechnical imaginaries in programmatic advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59d23b9b5ae60ac88f7a",
+        "title": "Toward Better Digital Advertising: The Role of the Anthropomorphic Virtual Agent",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_291119212099792da86e",
+        "title": "The influence of targeted digital advertising on consumers' purchase intention: Comparative analysis based on the perspective of ads content source",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fbd12ee4302e67d7ab3d",
+        "title": "Exploring human perception in interactive digital advertising: A Genetic-Kansei engineering approach with human-AI collaboration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_291640ffe6a689fb3422",
+        "title": "Peran social media officer dalam merancang konten instagram untuk branding di adconomic digital advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cbe275e7acdc00823bba",
+        "title": "Impact of Digital Advertising via Social Media Tools on the Buying Behavior of Fast Food Consumers. A Case of Jordan",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_707a47a2b6814bbb7e09",
+        "title": "Measuring the ROI of paid advertising campaigns in digital marketing and its effect on business profitability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68c7b6be05997e0084e5",
+        "title": "Perceptions of Greenwashing and Purchase Intentions: A Model of Gen Z Responses to ESG-Labeled Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8423d7652b7285fa1cba",
+        "title": "Political digital advertising: implications and way forward for Nigeria’s 2023 general elections",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_575d59ee84aafb1965ef",
+        "title": "Assessing digital advertising exposure using a virtual experimental protocol",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f42850295d8e6d56db1",
+        "title": "What Are the Unique Features of Digital Advertising? The Six Principles of Digital Advertising in the 21 st Century",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be1eefa8ec7ce822ea8e",
+        "title": "Applying Digital Advertising in Food and Beverage Industry for McDonald’s with Marketing 5.0 Approach",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8378fd39032971706c31",
+        "title": "Harmonious CSR and sustainable branding: evaluating the moderating role of corporate reputation and SDGs in shaping consumer trust in digital advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7631a83852aa2616ca58",
+        "title": "How Do Digital Advertising Auctions Impact Product Prices?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43ff17dd8b4df4900347",
+        "title": "Does digital influencer endorsement contribute to building consumers’ attitude toward digital advertising during COVID-19 pandemic? mediating role of brand attitude",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d4531c48d9bec977962",
+        "title": "Personalization payoff: understanding receptivity to tailored/personalized digital advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed0d129a6abdc83fd8f9",
+        "title": "Have I Seen you Before? Measuring the Value of Tracking for Digital Advertising",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6d6fd8a1f4d7dffaea1",
+        "title": "Linguistic innovations in a multilingual digital advertising context in Tanzania: a translanguaging perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e81276c06cf06053652",
+        "title": "Emission-smart advertising: Balancing performance with CO2 emissions in digital advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddf58653d3a007cd3e9f",
+        "title": "Analysis of The Influence of Online Consumer Reviews, Seasonal Digital Advertising and Celebrity Endorsers on Repurchase Intention of E-Commerce Consumers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_338828a5f7a4f9dfb58b",
+        "title": "Case Study Application of Business Intelligence in Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e36ceb03041ed197399",
+        "title": "Meta Ads digital advertising in social networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a91330bf23616ca6556",
+        "title": "DIGITAL ADVERTISING PRACTICES: ADVERTISING AGENCY PERSPECTIVE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5dc4c8ad3b1f664a794a",
+        "title": "Data Privacy in Digital Advertising",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7901710caed2ef93120",
+        "title": "MACHINE LEARNING IN ADTECH: TRANSFORMING DIGITAL ADVERTISING",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92aeafaf88cae591c761",
+        "title": "Digital Advertising And Its Impact On Online Consumer Buying Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9bbfbd78e399d608acc",
+        "title": "Data Privacy in Digital Advertising: Towards a Post Third-Party Cookie Era",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e07fcb207489f2cf2dc",
+        "title": "Federated Learning Optimizing Multi-Scenario Ad Targeting and Investment Returns in Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08595ff8ab7196f29c28",
+        "title": "Effectiveness of traditional and digital advertising platforms for the marketing of tourism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f534fa7edcab711ad477",
+        "title": "Disentangling Control and Personalization: Exploring the Effects of Ad Choice and Ad Personalization in Digital Advertising Effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_341e87a092c89f86af21",
+        "title": "From Home Base to Swing States: The Evolution of Digital Advertising Strategies during the 2020 US Presidential Primary",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e49d72b06b2757e680b",
+        "title": "Digital analytics approach to understanding short video advertising in digital marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5cefb944e253697977b6",
+        "title": "Digital public health interventions at scale: The impact of social media advertising on beliefs and outcomes related to COVID vaccines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e140bcee36cc1c9bb6bf",
+        "title": "The impact of digital advertising channels on the customer buying behavior: The moderating task of advertising strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_956d397e164a18867049",
+        "title": "Effective Digital Advertising: The Influence of Customised Ads, Self-esteem and Product Attributes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1b203a217c84d88e553",
+        "title": "The Evolution of Digital Advertising in Africa: Emerging Trends, Key Challenges, and Business Opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d0a5fd3a54555aad0c2",
+        "title": "Managed Campaigns and Data-Augmented Auctions for Digital Advertising",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf74f861a73b9ed4efeb",
+        "title": "Digital Advertising and Market Structure: Implications for Privacy Regulation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb9fa8b8d95cfdfda47c",
+        "title": "A Faster Real-time Face Detector Support Smart Digital Advertising on Low-cost Computing Device",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_91d47ff2cc0afc3b916d",
+        "title": "Digital Video Advertising: Breakthrough or Extension of TV Advertising in the New Digital Media Landscape?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62a9933bd73f72a51576",
+        "title": "Blended QR Code for Digital Advertising",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69890ec4404635341830",
+        "title": "The Influence of Blockchain Technology on Digital Advertising Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32cd96890d6abb1fdabe",
+        "title": "AI-powered personalized advertising and purchase intention in Vietnam’s digital landscape: The role of trust, relevance, and usefulness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2fa7ed3387d2c1a03187",
+        "title": "Observing “tuned” advertising on digital platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8bc3970123e67f4cb40",
+        "title": "Wastewater-Informed Digital Advertising as a COVID-19 Geotargeted Neighborhood Intervention: Jefferson County, Kentucky, 2021–2022",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_722df9b52114acc9ee17",
+        "title": "Assessing the Intersection of Artificial Intelligence and Digital Advertising",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d75b3011cf6ee409973",
+        "title": "Simulacra Politics: Digital Advertising for the 2024 Presidential Election on Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be5140ff13fa01350b41",
+        "title": "Specificity and current trends in the digital advertising development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58eb19770c3b424e632d",
+        "title": "study on digital advertising and its impact on consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b6ed5403d0a5bcb80f8a",
+        "title": "The Cost of Banning TikTok: Implications for Digital Advertising",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_544b704f3643531fbae1",
+        "title": "Digital Advertising Platforms' Effects on Consumers' Buying Behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5f7081ed86035bbd2b3",
+        "title": "The Evolution of Digital Advertising: AI-Driven Innovations in Targeting and Personalization for International Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd9069fa1d65cf79c838",
+        "title": "Research on Cross-Platform Digital Advertising User Behavior Analysis Framework Based on Federated Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_819165c9aa3cb830a9d8",
+        "title": "Digital consumer engagement: examining the impact of native advertising exposure in a social network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_973e16ff5162aeb2c576",
+        "title": "The Impact of Emotional Appeals on Consumer Engagement in Digital Advertising",
+        "reasons": [
+          "missing_source_title",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7758a62bb09d3be375c1",
+        "title": "Digital transformation, online advertising, and consumer behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2879c7029fd12d9886f",
+        "title": "Tackling Cookieless Domain Recommendation for Digital Advertising Targetting",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3747f3dadffee1e40c06",
+        "title": "Cognitive Targeting and Neuromarketing Applications in AI-Driven Digital Advertising",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c22baa2cb6f8367d6f29",
+        "title": "Digital advertising in smart cities – methods for raising consumer engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9687eba63c8bc6b92582",
+        "title": "Influence of Digital Advertising on Consumers Buying Behaviour in Delta State",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_188448754f81fe4269c0",
+        "title": "The Impact of New Transparency in Digital Advertising on Media Coverage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ea6ea8bc2b007206d93",
+        "title": "Advertising as governance: The digital commodity audience and platform advertising dependency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1ed272b91e0d71f5996",
+        "title": "Is Consumer Generated Branding the Way Forward for Digital Advertising: Examining the Effects of Message Source, Presentation Format and Involvement on Consumer Decisions on X (Formerly Twitter)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1468a6792f652a5279d9",
+        "title": "Customer Segmentation and Targeted Retail Pricing in Digital Advertising using Gaussian Mixture Models for Maximizing Gross Income",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17b49b275a9b0849b4ce",
+        "title": "The Rise of AI in Digital Advertising: Trends, Challenges, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbf32b157ff3b5986cdc",
+        "title": "Understanding Generative AI Implementation in Digital Advertising Among Retail SMEs in Pakistan",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90c4fa4a47440e8acc25",
+        "title": "ChatGPT, AI Advertising, and Advertising Research and Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b7a16b5115a86f1c3ab",
+        "title": "Workplace literacy skills—how information and digital literacy affect adoption of digital technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2b33817f58aba706a89",
+        "title": "Digital technologies: tensions in privacy and data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b73e322bdb15eece27",
+        "title": "Digital Learning and Digital Institution in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "title": "Digital transformation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07e17f89d39f4d8aa6ef",
+        "title": "The effect of digital marketing capabilities on organizational ambidexterity of the information technology sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_829eaddc4ef10c7b5892",
+        "title": "Digital future of luxury brands: Metaverse, digital fashion, and non‐fungible tokens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_388e1d970ab5906023dd",
+        "title": "Digital transformation, sustainability, and purpose in the multinational enterprise",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1188582226ca19e0e2fe",
+        "title": "AI-Based Modeling: Techniques, Applications and Research Issues Towards Automation, Intelligent and Smart Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_544cd9b7023e41823544",
+        "title": "The Impact of Digital Marketing on the Performance of SMEs: An Analytical Study in Light of Modern Digital Transformations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6db1f4bf0d60f03851b7",
+        "title": "How Deepfakes and Artificial Intelligence Could Reshape the Advertising Industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c548f9ece063146ec615",
+        "title": "Digital transformation, for better or worse: a critical multi‐level research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a47d60c87cf4b0b8bb2",
+        "title": "Financial literacy in the digital age—A research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_769d4cb8dbed666b7b84",
+        "title": "The role of digital marketing channels on consumer buying decisions through eWOM in the Jordanian markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_053eea347a7dade96dcd",
+        "title": "The role of digitalization in business and management: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b4a6506a417e0657ea46",
+        "title": "Fairness in Information Access Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_770e35ed15c7c740ce8e",
+        "title": "Development and Transformation in Digital Marketing and Branding with Artificial Intelligence and Digital Technologies Dynamics in the Metaverse Universe",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ab5216cbf6aeb343588",
+        "title": "Effect of disclosing AI-generated content on prosocial advertising evaluation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e95d262032049ce5bf1a",
+        "title": "The value relevance of digital marketing capabilities to firm performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ce7fde7fc835f4d229e",
+        "title": "Consumer Behaviour to Be Considered in Advertising: A Systematic Analysis and Future Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34e28d8e6c5edb0be84a",
+        "title": "How do digital capabilities affect firm performance? The mediating role of technological capabilities in the “new normal”",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a498dbbc45002cfe265b",
+        "title": "An AI-enabled approach for improving advertising identification and promotion in social networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ef0a708daf369b694be",
+        "title": "Is YouTube a reliable source of health-related information? A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_649f822bc74f094ef970",
+        "title": "Digital governance: A conceptual framework and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1730b77e352615093640",
+        "title": "The Future of Dataveillance in Advertising Theory and Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edb9591d7351bf0fd19b",
+        "title": "Advertising Benefits from Ethical Artificial Intelligence Algorithmic Purchase Decision Pathways",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b47cb09f64835f279a7",
+        "title": "Designing the metaverse: A study on inclusion, diversity, equity, accessibility and safety for digital immersive environments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_babe3d405fd4b615b776",
+        "title": "Digital-only banking experience: Insights from gen Y and gen Z",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83ce96878c917aad0e49",
+        "title": "Digital innovation and the effects of artificial intelligence on firms’ research and development – Automation or augmentation, exploration or exploitation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7203d9615a3bc4f236fd",
+        "title": "Digital transformation: A multidisciplinary perspective and future research agenda",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd4b4d88a93b9bcb94b5",
+        "title": "Influencer endorsement posts and their effects on advertising attitudes and purchase intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4758c95dfb08fc40ce18",
+        "title": "The next hype in social media advertising: Examining virtual influencers’ brand endorsement effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e4e0c3ea172e213d69a",
+        "title": "Metaverse marketing: How the metaverse will shape the future of consumer research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40ff9d7e765442f13aa7",
+        "title": "Trust and digital privacy: willingness to disclose personal information to banking chatbot services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a66c091a422e51946f8e",
+        "title": "Impactful Digital Twin in the Healthcare Revolution",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9dfa99b2a01162b350ac",
+        "title": "Digital interaction literacy model – Conceptualizing competencies for literate interactions with voice-based AI systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c11ebafcd86eaf3f889",
+        "title": "Searching for New Technology Acceptance Model under Social Context: Analyzing the Determinants of Acceptance of Intelligent Information Technology in Digital Transformation and Implications for the Requisites of Digital Sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d927508de1c4ec5fe9b",
+        "title": "Developing an Information Model for E-Commerce Platforms: A Study on Modern Socio-Economic Systems in the Context of Global Digitalization and Legal Compliance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad88b38e7327239fc132",
+        "title": "Relationship between Advertising Disclosure, Influencer Credibility and Purchase Intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a24a3330cdc65a616eae",
+        "title": "Digital Transformation on Enterprise Green Innovation: Effect and Transmission Mechanism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b33003f2ea263a486a",
+        "title": "Artificial Intelligence in Digital Marketing: Insights from a Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_070f035c409821dcbbbb",
+        "title": "International business in the digital age: Global strategies in a world of national institutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb91fb5905e3492acde5",
+        "title": "Prospects and challenges of Metaverse application in data‐driven intelligent transportation systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e277178df533b84cb667",
+        "title": "Beyond the bubble: Will NFTs and digital proof of ownership empower creative industry entrepreneurs?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d8f1d228fa3c356f7ab",
+        "title": "How to Bell the Cat? A Theoretical Review of Generative Artificial Intelligence towards Digital Disruption in All Walks of Life",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67c86f081d473a73d04b",
+        "title": "Corporate Digital Responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cf99de33f56d7669a17",
+        "title": "Digital Marketing Strategy to Increase Sales Conversion on E-commerce Platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9140603ac5d0690a5e2",
+        "title": "Tourism’s Use of Web-Based Information Systems and the Influence of Tourism Trends",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6de57607114fb1b6a9ca",
+        "title": "Exploring the sustainability challenges facing digitalization and internet data centers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2209a050c7791f30e4d6",
+        "title": "Impact of Digital Transformation on Enterprise Carbon Intensity: The Moderating Role of Digital Information Resources",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6dd219620c0ab2a745b",
+        "title": "The Dark Sides of AI Advertising: The Integration of Cognitive Appraisal Theory and Information Quality Theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e9d71ffd90e894d1d22",
+        "title": "Global tobacco advertising, promotion and sponsorship regulation: what’s old, what’s new and where to next?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_010d40bf0e8c14f7a6d0",
+        "title": "Marketing of commercial milk formula: a system to capture parents, communities, science, and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d86cf333be4423995ea2",
+        "title": "Values and Ethics in Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8e494494925ef7894d9",
+        "title": "AI Chatbots in Digital Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4cc49ff236b0e588509",
+        "title": "Artificial Intelligence and Machine Learning Approaches in Digital Education: A Systematic Revision",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d5abcad8d2bfb09bb1a",
+        "title": "Digital trade, digital economy and the digital economy partnership agreement (DEPA)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f302812d11eeab07d22",
+        "title": "Adolescents’ self-efficacy and digital health literacy: a cross-sectional mixed methods study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_968f0ad1895b5777d613",
+        "title": "Determinants of digital technology adoption in innovative SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecdb8bb6c3c5ba9cea74",
+        "title": "Green Advertising on Social Media: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c8c212ef85305df8104",
+        "title": "Customer Engagement in Multi-Sensory Virtual Reality Advertising: The Effect of Sound and Scent Congruence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_adf7d03828423fc8e95c",
+        "title": "Digital Constitutionalism in Europe",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c5d8c4901c09dd9fad3",
+        "title": "An Extended Technology-Organization-Environment (TOE) Framework for Online Retailing Utilization in Digital Transformation: Empirical Evidence from Vietnam",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73679bfc889798d8cac2",
+        "title": "Achieving Digital Wellbeing Through Digital Self-control Tools: A Systematic Review and Meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79884181b2dea9cf24b7",
+        "title": "Recommendations to advance digital health equity: a systematic review of qualitative studies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6834211e9ac407529536",
+        "title": "Digital literacy and online political behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b303450140ef23818588",
+        "title": "Perspectives: Advertising and climate change – Part of the problem or part of the solution?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11411c6f4ff7b3f5a189",
+        "title": "Exploring global trends and future directions in advertising research: A focus on consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc5c7acdaa89b6f41783",
+        "title": "Heuristic processing of green advertising: Review and policy implications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83d3018dc5a0c61a3edb",
+        "title": "The Economics of Digital Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b61f2c7a3d3e5e1cb601",
+        "title": "Privacy in targeted advertising on mobile devices: a survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24ba9101ed0f02335441",
+        "title": "Applying Digital Twins in Metaverse: User Interface, Security and Privacy Challenges",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab95ab484f0541556fd5",
+        "title": "How consumer digital signals are reshaping the customer journey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53c031d73c2c86aac060",
+        "title": "Bridging the digital health divide: a narrative review of the causes, implications, and solutions for digital health inequalities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ce445daae67906201a2",
+        "title": "Consumers’ self-reported and brain responses to advertising post on Instagram: the effect of number of followers and argument quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25337e5d03a086f7bde7",
+        "title": "Nowcasting Daily Population Displacement in Ukraine through Social Media Advertising Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9190e3c258cfd5deec7b",
+        "title": "Social commerce advertising avoidance and shopping cart abandonment: A fs/QCA analysis of German consumers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e02b949b62d6287f99e",
+        "title": "Barriers to digital inclusion among older people: a intergenerational reflection on the need to develop digital competences for the group with the highest level of digital exclusion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_646626d0002b9f8a539f",
+        "title": "The impact of digital content of marketing mix on marketing performance: An experimental study at five-star hotels in Jordan",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf1a392f240658103a3e",
+        "title": "Application of visual communication in digital animation advertising design using convolutional neural networks and big data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3366af931a0c34e56d45",
+        "title": "The Impact of Digital Transformation on Business Models and Competitive Advantage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7aa60f87a9555370c2a",
+        "title": "The Institutional Logic of Digitalization",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e29e3ae7c3b556d7beff",
+        "title": "Diversity in the digital age: how consumers respond to diverse virtual influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be4ee9cff6fc50078b9f",
+        "title": "How digital technologies reshape marketing: evidence from a qualitative investigation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69ec6e277ad4d2b6965c",
+        "title": "Screen time and preschool children: Promoting health and development in a digital world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e5ff3a61d6c483b415f",
+        "title": "The Impact of Digital Transformation on Performance: Evidence from Vietnamese Commercial Banks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e71834c71c380a1f8bc",
+        "title": "Digital Privacy",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "topic_数字广告",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 230,
+      "deduplicated_count": 40,
+      "hard_gate_pass_count": 40,
+      "eligible_count": 2,
+      "boundary_count": 10,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital advertising"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital advertising information systems"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "digital advertising",
+        "raw_count": 100,
+        "hard_gate_pass_count": 4,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "digital advertising information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 11,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_cc0f2b5ec8d831e2666d",
+        "incoming_paper_id": "paper_9a16efa8f48fb993cb5b"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_5dc4c8ad3b1f664a794a",
+          "paper_c9bbfbd78e399d608acc"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_b21f672b0ab6460aa1b6",
+        "incoming_paper_id": "paper_057597d0a9d0d74306ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c9f35eaa9793c50f8e1d",
+        "incoming_paper_id": "paper_c9f35eaa9793c50f8e1d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_707a47a2b6814bbb7e09",
+        "incoming_paper_id": "paper_707a47a2b6814bbb7e09"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_3e71834c71c380a1f8bc",
+          "paper_40ff9d7e765442f13aa7"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e23034416e951881fda2",
+        "incoming_paper_id": "paper_e23034416e951881fda2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ea6ea8bc2b007206d93",
+        "incoming_paper_id": "paper_5ea6ea8bc2b007206d93"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1064cf9cb3a6ff3f7474",
+        "incoming_paper_id": "paper_1064cf9cb3a6ff3f7474"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fa7ed3387d2c1a03187",
+        "incoming_paper_id": "paper_2fa7ed3387d2c1a03187"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "1139b51339bf427786c65c7a1d4ab77f",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

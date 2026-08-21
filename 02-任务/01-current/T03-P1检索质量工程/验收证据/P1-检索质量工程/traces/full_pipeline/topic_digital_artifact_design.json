@@ -1,0 +1,1961 @@
+{
+  "direction_id": "topic_digital_artifact_design",
+  "labels": {
+    "zh": "数字人工物设计",
+    "en": "digital artifact design"
+  },
+  "input": {
+    "selected_direction_id": "topic_digital_artifact_design",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 12187.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 217,
+  "hard_gate_pass_count": 27,
+  "eligible_count": 1,
+  "boundary_count": 15,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital artifact design"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital artifact design human-computer interaction"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 17
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_digital_artifact_design",
+      "research_direction": "digital artifact design",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "digital artifact design",
+      "aliases": [
+        "digital artifact design"
+      ],
+      "groups": [
+        "IS × Computer Science / HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:122"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_digital_artifact_design",
+        "labels": {
+          "zh": "数字人工物设计",
+          "en": "digital artifact design"
+        },
+        "group_ids": [
+          "is_cs_hci"
+        ],
+        "synonyms": [
+          "数字人工物设计",
+          "digital artifact design",
+          "digital artifact design in human-computer interaction"
+        ],
+        "boundaries": {
+          "include": [
+            "digital artifact design",
+            "human-computer interaction",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "digital artifact design",
+            "\"digital artifact design\" AND \"human-computer interaction\""
+          ],
+          "semantic_scholar": [
+            "digital artifact design",
+            "digital artifact design human-computer interaction"
+          ],
+          "crossref": [
+            "digital artifact design",
+            "数字人工物设计"
+          ],
+          "dblp": [
+            "digital artifact design computing"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "digital artifact design",
+            "human-computer interaction",
+            "computing"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "CS_AI",
+          "HCI",
+          "CS_IR",
+          "CS_DATA",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "digital artifact design human-computer interaction",
+          "(digital artifact design) OR (digital artifact design in human-computer interaction)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:122"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_a0f3f86c85ff56182877",
+        "title": "Post-growth Human–Computer Interaction",
+        "abstract": "Human–Computer Interaction (HCI) researchers have increasingly been questioning computing’s engagement with unsustainable and unjust economic growth, pushing for identifying alternatives. Incorporating degrowth, post-development, and steady-state approaches, post-growth philosophy offers an alternative not rooted in growth but in improving quality of life. It recommends an equitable reduction in resource use through sensible distributive practices where fulfillment is based on values including solidarity, cooperation, care, social justice, and localized development. In this paper, we describe opportunities for HCI to take a post-growth orientation in research, design, and practice to reimagine the design of sociotechnical systems toward advancing sustainable, just, and humane futures. We aim for the critiques, concerns, and recommendations offered by post-growth to be integrated into transformative HCI practices for technology-mediated change.",
+        "authors": [
+          "Vishal Sharma",
+          "Neha Kumar",
+          "Bonnie Nardi"
+        ],
+        "year": 2023,
+        "publication_date": "2023-09-19",
+        "published_date": "2023-09-19",
+        "language": "en",
+        "doi": "10.1145/3624981",
+        "url": "https://doi.org/10.1145/3624981",
+        "official_url": "https://doi.org/10.1145/3624981",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 92,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10803",
+            "name": "Innovative Human-Technology Interaction",
+            "score": 0.9995999932289124
+          },
+          {
+            "id": "https://openalex.org/T12238",
+            "name": "Green IT and Sustainability",
+            "score": 0.996399998664856
+          },
+          {
+            "id": "https://openalex.org/T14147",
+            "name": "Innovative Approaches in Technology and Social Development",
+            "score": 0.9958999752998352
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4386864859"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://dl.acm.org/doi/pdf/10.1145/3624981",
+        "provider_payload_refs": [
+          "https://openalex.org/W4386864859"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 71.79,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 79.14,
+            "lexical_coverage": 57.14,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 98.21,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 71.79
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital artifact design",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 173725,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:24.388132+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3750.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital artifact design human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 62706,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:28.162019+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3250.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "digital artifact design",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:32.725511+00:00",
+        "duration_ms": 1360.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1360.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "digital artifact design",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 3,
+        "accepted_before_dedupe": 3,
+        "queried_at": "2026-08-21T20:58:34.078615+00:00",
+        "duration_ms": 1234.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1234.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "digital artifact design",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:58:35.312806+00:00",
+        "duration_ms": 1235.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1235.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "数字人工物设计",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:31.578286+00:00",
+        "duration_ms": 1140.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1140.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_12511a671726060ebda2",
+        "title": "The interplay of digital transformation and employee competency: A design science approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cba43ee0719c4d99c5f4",
+        "title": "End-to-end design of wearable sensors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7890d6f91e879c23197",
+        "title": "A Conceptual UX Model for the Design and Evaluation of Interactive Digital Artifacts over Time",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5e075c41a2736710928",
+        "title": "From dual digitalization to digital learning space: Exploring the digital transformation of higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "title": "Digital transformation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84c638826e8d7912d553",
+        "title": "The Seventeenth Data Release of the Sloan Digital Sky Surveys : Complete Release of MaNGA, MaStar and APOGEE-2 Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b83548731726242e1d7",
+        "title": "Deep learning models for digital image processing: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5bbc42548f9bc40040e5",
+        "title": "3D digital technologies applied to the design and printing of auxiliary structures for fragment adhesion strategies on wax artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1709a4861b21800b6266",
+        "title": "Children's participation in the design of digital artifacts in rural schools",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9deded25dcd0d453c30c",
+        "title": "The Emergence of AI-Based Wearable Sensors for Digital Health Technology: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_972225a0f0bbb0e917ce",
+        "title": "Digital platforms as socio-cultural artifacts: developing digital methods for cultural research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c88d986ae87199d8baff",
+        "title": "Sustainability through digital transformation: A systematic literature review for research guidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_678778ecdfad1af24fdc",
+        "title": "Digital Twins in Agriculture: A State-of-the-art review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75428572e7625d8a07fa",
+        "title": "Digital Twins in Built Environments: An Investigation of the Characteristics, Applications, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c548f9ece063146ec615",
+        "title": "Digital transformation, for better or worse: a critical multi‐level research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_309c7e239456d569bdfa",
+        "title": "The architectural design and implementation of a digital platform for Industry 4.0 SME collaboration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d788a771b62d34149c2f",
+        "title": "Reducing Noise, Artifacts and Interference in Single-Channel EMG Signals: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f37817c6a5eb06c1519",
+        "title": "Learning design to support student-AI collaboration: perspectives of leading teachers for AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b345328cea2d0c49d41e",
+        "title": "From servitization to digital servitization: How digitalization transforms companies' transition towards services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3648de09fe43d93213e1",
+        "title": "Artificial Intelligence education for young children: Why, what, and how in curriculum design and implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad675bec90c9628528f7",
+        "title": "Digital Interaction with Physical Museum Artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cbffb83dc0be65e180b",
+        "title": "Digital twin in energy industry: Proposed robust digital twin for power plant and other complex capital-intensive large engineering systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c8be5fc2a7eafc0f494",
+        "title": "A unified view of a human digital twin",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13a03a8fcfb6436a7ff0",
+        "title": "p5.fab: Direct Control of Digital Fabrication Machines from a Creative Coding Environment",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_718b948e3245b2e588db",
+        "title": "Characteristics of digital artifacts in international endeavors of digital‐based international new ventures",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1a79b301234e2c42aeb",
+        "title": "Distinguishing digitization and digitalization: A systematic review and conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc92d92276c2d4f7af9a",
+        "title": "The Embracement of Design Science Research Methodology in the Development of Digital Transformation Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67c86f081d473a73d04b",
+        "title": "Corporate Digital Responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bbcb3eb21a76af5d150",
+        "title": "Digital Repository as a Service (D-RaaS): Enhancing Access and Preservation of Cultural Heritage Artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb2e2cb758b0e05f2b19",
+        "title": "Circular economy is key! Designing a digital artifact to foster smarter household biowaste sorting",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bc4055d784de5c0123a",
+        "title": "Enhancing brick-and-mortar store shopping experience with an augmented reality shopping assistant application using personalized recommendations and explainable artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_48ee3fbae1ba5b6548cb",
+        "title": "The OMiLAB Digital Innovation environment: Agile conceptual models to bridge business value with Digital and Physical Twins for Product-Service Systems development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0d3ed9811ce0a3d9e6ef",
+        "title": "Predictive Maintenance on the Energy Distribution Grid–Design and Evaluation of a Digital Industrial Platform in the Context of a Smart Service System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e277178df533b84cb667",
+        "title": "Beyond the bubble: Will NFTs and digital proof of ownership empower creative industry entrepreneurs?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d11c79624a0437b2c0a",
+        "title": "GPT-4 Technical Report",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22e29954753fdba47016",
+        "title": "Using Convolutional Neural Network to Design and Predict the Forces and Kinematic Performance and External Rotation Moment of the Hip Joint in the Pelvis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de3f5dcb468cb22bde0d",
+        "title": "Beyond the Artifact: Power as a Lens for Creativity Support Tools",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e856de0de1f4f23d5566",
+        "title": "Design of Digital Workplace Stress-Reduction Intervention Systems: Effects of Intervention Type and Timing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a80516d4f91442b39e31",
+        "title": "Classification of Barriers to Digital Transformation in Higher Education Institutions: Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6fd2ae941b6852029ad8",
+        "title": "How digitalization reinvented entrepreneurial resilience during COVID-19",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c365b0e18f49a6a891ad",
+        "title": "Digital Twins and Enabling Technologies in Museums and Cultural Heritage: An Overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_596453957f023178f310",
+        "title": "Development of a Method for the Engineering of Digital Innovation Using Design Science Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6f81f6831455fb90dbc9",
+        "title": "Digital Twin: From Concept to Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_488f312026f7efae7db7",
+        "title": "When the digital twin meets the preventive conservation of movable wooden artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c1080ff2f8b11ec46bf",
+        "title": "Cultural and Contextual Adaptation of Digital Health Interventions: Narrative Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb01a3e27564d749b526",
+        "title": "Crowdsourcing forensics: Creating a curated catalog of digital forensic artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6535ba2c5c8bcda47430",
+        "title": "A systematic review of digital transformation technologies in museum exhibition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40b800ecbbbbe3f96d45",
+        "title": "Artifacts and Anomalies in Raman Spectroscopy: A Review on Origins and Correction Procedures",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bca654f572be565bd213",
+        "title": "Strategies for digital entrepreneurship success: the role of digital implementation and dynamic capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ed8136a879ad953cb2b",
+        "title": "Web of Digital Twins",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_657053874e3df9781255",
+        "title": "Building an Integrated Digital Transformation System Framework: A Design Science Research, the Case of FedUni",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b99f1f1726373e05d2e",
+        "title": "Healthsheet: Development of a Transparency Artifact for Health Datasets",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29be70310b5c15fd19fe",
+        "title": "Securing the digital world: Protecting smart infrastructures and digital industries with artificial intelligence (AI)-enabled malware and intrusion detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_064a174fe5b308b643af",
+        "title": "A Computer Science Perspective on Digital Transformation in Production",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5c7578db28f3016d57f",
+        "title": "Effect of Digital Game-Based Learning on Student Engagement and Motivation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_def6793d61792872e3dd",
+        "title": "Management of Machine Learning Lifecycle Artifacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02cf21105d737b05b79a",
+        "title": "Digital transformation, ESG practice, and total factor productivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a401358dfef84a7bd309",
+        "title": "Corporate Digital Responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_209d8a18d0327f21b496",
+        "title": "Design for Manufacture and Assembly of Digital Fabrication and Additive Manufacturing in Construction: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f88501f317b56268354",
+        "title": "Artificial Intelligence (AI) in early childhood education: Curriculum design and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0226d5b716b3f7a191c3",
+        "title": "Application of Digital Twins in multiple fields",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fba619f24a8cddaf8837",
+        "title": "The promise of digital technologies for sustainable entrepreneurship: A systematic literature review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a16a8af4ce0a89406d27",
+        "title": "The diagnostic and triage accuracy of digital and online symptom checker tools: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63df5714c992f723c701",
+        "title": "Digital innovation in entrepreneurial firms: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be8c3430364fe3de0d7d",
+        "title": "Leveraging storytelling and digital artifacts to design social justice curriculum in urban communities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d79e47fc8d602af1f8ba",
+        "title": "Employee-driven digital innovation: A systematic review and a research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30cdb15201fe70bf6ca7",
+        "title": "Computer-Aided Drug Design and Drug Discovery: A Prospective Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7495b619e755e139496f",
+        "title": "From private digital platforms to public data spaces: implications for the digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9533e7ad256db71df22",
+        "title": "From Rural China to the Digital Wilds: Negotiating Digital Repertoires to Claim the Right to Speak",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5770e7fa55a879ee3d86",
+        "title": "FAIR Digital Twins for Data-Intensive Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a7273b885b09420fdf22",
+        "title": "Digital Therapeutics (DTx)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66c52f5e42b1023b9bc3",
+        "title": "Design and Evaluation of Reconfigurable Intelligent Surfaces in Real-World Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6e765672f6e36096ace",
+        "title": "Emotions and Digital Well-Being: on Social Media’s Emotional Affordances",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c19854685893705447c",
+        "title": "Digital Sustainability in Information Systems Research: Conceptual Foundations and Future Directions",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_3cf944029b95c4b9a884",
+        "title": "How Do UX Practitioners Communicate AI as a Design Material? Artifacts, Conceptions, and Propositions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fdd179c4a210e440584",
+        "title": "Cardiac CT blooming artifacts: clinical significance, root causes and potential solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66597583956e8ce7ba92",
+        "title": "Digital twin-driven smart supply chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2fd54eba4b9d3928899",
+        "title": "Digital empowerment for rural migrant students in China: Identity, investment, and digital literacies beyond the classroom",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66cae30d5f7b2c95e387",
+        "title": "Protecting, Transforming, and Projecting the Single Market. Open Strategic Autonomy and Digital Sovereignty in the EU’s Trade and Digital Policies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e6a25e7a366eb15be91",
+        "title": "PneuFab: Designing Low-Cost 3D-Printed Inflatable Structures for Blow Molding Artifacts",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_178766f3a07979230fd3",
+        "title": "Artificial intelligence for digital citizen participation: Design principles for a collective intelligence architecture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_029fec9297cddd7729c2",
+        "title": "Ageism in the Discourse and Practice of Designing Digital Technology for Older Persons: A Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_178eeaec81a9ffb7c9bb",
+        "title": "Understanding the process of building institutional trust among digital payment users through national cybersecurity commitment trustworthiness cues: a critical realist perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ddc5843dbbcf2a32f9e",
+        "title": "Digital Extended Specimens: Enabling an Extensible Network of Biodiversity Data Records as Integrated Digital Objects on the Internet",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c39cc05a7ce73c41fece",
+        "title": "Digital twin of electric vehicle battery systems: Comprehensive review of the use cases, requirements, and platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fea8549d0b277d1c9a41",
+        "title": "Digital Storytelling With Youth From Refugee Backgrounds: Possibilities for Language and Digital Literacy Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbcc8a1afc33a8cafd51",
+        "title": "Crafting and Assessing Design Science Research for Entrepreneurship",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38e38de2264e64fb376f",
+        "title": "From Treatment to Healing:Envisioning a Decolonial Digital Mental Health",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a542bbd88a75b61db28",
+        "title": "Towards Sustainable Digital Agriculture for Smallholder Farmers: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e74dd3f1488842a6ff02",
+        "title": "The use of co-production, co-design and co-creation to mobilise knowledge in the management of health conditions: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb3a7eb0e02fb7a8ba61",
+        "title": "Critical digital literacies, agentic practices, and AI-mediated informal digital learning of English",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1dc018a21730a016fbe1",
+        "title": "The Devil is in the Details: Whole Slide Image Acquisition and Processing for Artifacts Detection, Color Variation, and Data Augmentation: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b47d81d11575f51bfd8",
+        "title": "Research Trends, Challenges, and Emerging Topics in Digital Forensics: A Review of Reviews",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77f3a6cc21d425bdb0f9",
+        "title": "A Survey on Measuring Cognitive Workload in Human-Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50c8695e7b9ff7f7496a",
+        "title": "Parasocial interactions with real and virtual influencers: The role of perceived similarity and human-likeness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c8479995bfd801eb443",
+        "title": "Human emotion recognition from EEG-based brain–computer interface using machine learning: a comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe7a158691f709e7186e",
+        "title": "Playing with AI to Investigate Human-Computer Interaction Technology and Improving Critical Thinking Skills to Pursue 21st Century Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1f062fdc53bcd243b81",
+        "title": "Metaverse: Perspectives from graphics, interactions and visualization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a82dbd3a1daeec4c7cf",
+        "title": "Six Human-Centered Artificial Intelligence Grand Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01356cee1face95fa9e4",
+        "title": "Metaverse beyond the hype: Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18d3b9f99b27c1824152",
+        "title": "Generative artificial intelligence, human creativity, and art",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6fc9609db08687eb14d",
+        "title": "A Review of Immersive Technologies, Knowledge Representation, and AI for Human-Centered Digital Experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f2980f8b0eb4a6a680d",
+        "title": "Digital Twin: Where do humans fit in?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ddf738d8a5f0321b052",
+        "title": "Towards a Science of Human-AI Decision Making: An Overview of Design Space in Empirical Human-Subject Studies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93db5fdd6b2e4145e37c",
+        "title": "Human digital twin: a survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1d1167025186b0288d4",
+        "title": "Glioblastoma remodelling of human neural circuits decreases survival",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1084a2eb0097e353413",
+        "title": "XAI Systems Evaluation: A Review of Human and Computer-Centred Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e2890b9378f8a0aefc1",
+        "title": "CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe59c8a4c0199cf595ee",
+        "title": "Ascribing consciousness to artificial intelligence: human-AI interaction and its carry-over effects on human-human interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_010462f3f107112facad",
+        "title": "Teaching for Values in Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe56f17223836ab2847d",
+        "title": "\"Help Me Help the AI\": Understanding How Explainability Can Support Human-AI Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6941d4057516f4c9a17c",
+        "title": "Humans as Creativity Gatekeepers: Are We Biased Against AI Creativity?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_629012f4fe2996c95ec6",
+        "title": "Blockchain and Cryptocurrency in Human Computer Interaction: A Systematic Literature Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c11045f32f05aa903cba",
+        "title": "More-than-Human Perspectives in Human-Computer Interaction Research: A Scoping Review",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84df05bdbddb7cb1e8d3",
+        "title": "An Exploration into Human–Computer Interaction: Hand Gesture Recognition Management in a Challenging Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bdd25f3346021fb0f7a8",
+        "title": "Nonverbal Cues in Human–Robot Interaction: A Communication Studies Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d002d14161325f4ed555",
+        "title": "Patterns and Opportunities for the Design of Human-Plant Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3726e71d9a01c5b6f56",
+        "title": "A Human-Centric Metaverse Enabled by Brain-Computer Interface: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33eba6528c048287fc2b",
+        "title": "Anthropomorphism in human–robot interactions: a multidimensional conceptualization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23b688d460dc9dd2dcd1",
+        "title": "Decentering Through Design: Bridging Posthuman Theory with More-than-Human Design Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cdd93647d425bb3b572",
+        "title": "Dispensing with Humans in Human-Computer Interaction Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bb43c022d95e1cef7e4",
+        "title": "A Comprehensive Survey on Computer Forensics: State-of-the-Art, Tools, Techniques, Challenges, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77ca483c9a9b584f3843",
+        "title": "A Trust Scale for Human-Robot Interaction: Translation, Adaptation, and Validation of a Human Computer Trust Scale",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70b0dc458d26df37c5c3",
+        "title": "Implications of Human-Computer Interaction Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0021fde4e1c488d75d3",
+        "title": "The effect of AI-based inspiration on human design ideation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_509807e8d0ee0cb4bdd1",
+        "title": "Dying, Death, and the Afterlife in Human-Computer Interaction. A Scoping Review.",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5517c92bf1b7ff5ce4da",
+        "title": "Smooth and Resilient Human–Machine Teamwork as an Industry 5.0 Design Challenge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2af4fcd28ef0799191f",
+        "title": "The role of politeness in human–machine interactions: a systematic literature review and future perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1452923f625c8b6cbf7a",
+        "title": "Algorithms, Humans, and Interactions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52cfd815520427f59f80",
+        "title": "Human heuristics for AI-generated language are flawed",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58c5be1f33bcec88ab5f",
+        "title": "Redefining Creativity in the Era of AI? Perspectives of Computer Scientists and New Media Artists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09bf104ab34344600a0e",
+        "title": "Technology Roadmap for Flexible Sensors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc0545d249b187fd191b",
+        "title": "A Survey on Medical Explainable AI (XAI): Recent Progress, Explainability Approach, Human Interaction and Scoring System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1aadfd6b94485c270e66",
+        "title": "EOG-Based Human–Computer Interface: 2000–2020 Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b05f85701096ff39631c",
+        "title": "Advanced systems and technologies for the enhancement of user experience in cultural spaces: an overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "title": "Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbb262e8e8562fc9ee37",
+        "title": "Augmentation Technologies and Artificial Intelligence in Technical Communication",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d763945cf25f2c4c86be",
+        "title": "Human-centred learning analytics and AI in education: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8567a133da74082b47dd",
+        "title": "Human–Computer Interaction (HCI) Advances to Re-Contextualize Cultural Heritage toward Multiperspectivity, Inclusion, and Sensemaking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c9665f6f27f4767e90e",
+        "title": "Revolutionizing education with AI: Exploring the transformative potential of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbdcabe03f8e898213d9",
+        "title": "Revolutionizing Digital Pathology With the Power of Generative Artificial Intelligence and Foundation Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5fffef0638d3cee5f75",
+        "title": "Combining human and artificial intelligence for enhanced AI literacy in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fde3ec55a9d01ac6f19",
+        "title": "A survey on the design and evolution of social robots — Past, present and future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_480e9fabad8d9b679ebd",
+        "title": "The Illusion of Agency in Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cfeb12b99df330d74928",
+        "title": "Human-Centered and Sustainable Artificial Intelligence in Industry 5.0: Challenges and Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de175c55079066fd688c",
+        "title": "Understanding Design Collaboration Between Designers and Artificial Intelligence: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_223af878af628f9f9007",
+        "title": "Brain–computer interface: trend, challenges, and threats",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bf5ed71c1edbda10fc0",
+        "title": "Internet of Things (IoT), Building Information Modeling (BIM), and Digital Twin (DT) in Construction Industry: A Review, Bibliometric, and Network Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f5057da7f3a40c2ed56",
+        "title": "Mental Workload and Human-Robot Interaction in Collaborative Tasks: A Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49060f7b11e4312e1bff",
+        "title": "Brain–computer interfaces: the innovative key to unlocking neurological conditions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b05da4a7f74152d520fc",
+        "title": "Making Data Tangible: A Cross-disciplinary Design Space for Data Physicalization",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74c447f5891bd50d27cd",
+        "title": "Dealing with Complexity in Design Science Research: A Methodology Using Design Echelons",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_digital_artifact_design",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 217,
+      "deduplicated_count": 27,
+      "hard_gate_pass_count": 27,
+      "eligible_count": 1,
+      "boundary_count": 15,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital artifact design"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital artifact design human-computer interaction"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 17
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "digital artifact design",
+        "raw_count": 100,
+        "hard_gate_pass_count": 6,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "digital artifact design human-computer interaction",
+        "raw_count": 200,
+        "hard_gate_pass_count": 14,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_12511a671726060ebda2",
+        "incoming_paper_id": "paper_12511a671726060ebda2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cba43ee0719c4d99c5f4",
+        "incoming_paper_id": "paper_cba43ee0719c4d99c5f4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5e075c41a2736710928",
+        "incoming_paper_id": "paper_e5e075c41a2736710928"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_30cdb15201fe70bf6ca7",
+        "incoming_paper_id": "paper_30cdb15201fe70bf6ca7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "incoming_paper_id": "paper_dce9b1d1fcb9eeb81c87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_064a174fe5b308b643af",
+        "incoming_paper_id": "paper_064a174fe5b308b643af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c8be5fc2a7eafc0f494",
+        "incoming_paper_id": "paper_2c8be5fc2a7eafc0f494"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6b83548731726242e1d7",
+        "incoming_paper_id": "paper_6b83548731726242e1d7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7f37817c6a5eb06c1519",
+        "incoming_paper_id": "paper_7f37817c6a5eb06c1519"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "incoming_paper_id": "paper_4da74ce4f1f2b4f9fa49"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75428572e7625d8a07fa",
+        "incoming_paper_id": "paper_75428572e7625d8a07fa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_678778ecdfad1af24fdc",
+        "incoming_paper_id": "paper_678778ecdfad1af24fdc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c548f9ece063146ec615",
+        "incoming_paper_id": "paper_c548f9ece063146ec615"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3648de09fe43d93213e1",
+        "incoming_paper_id": "paper_3648de09fe43d93213e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d11c79624a0437b2c0a",
+        "incoming_paper_id": "paper_3d11c79624a0437b2c0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_309c7e239456d569bdfa",
+        "incoming_paper_id": "paper_309c7e239456d569bdfa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b345328cea2d0c49d41e",
+        "incoming_paper_id": "paper_b345328cea2d0c49d41e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e6a25e7a366eb15be91",
+        "incoming_paper_id": "paper_9e6a25e7a366eb15be91"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ad675bec90c9628528f7",
+        "incoming_paper_id": "paper_ad675bec90c9628528f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3cbffb83dc0be65e180b",
+        "incoming_paper_id": "paper_3cbffb83dc0be65e180b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_11e1b3e5690b33f28d0c",
+        "incoming_paper_id": "paper_11e1b3e5690b33f28d0c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a1a79b301234e2c42aeb",
+        "incoming_paper_id": "paper_a1a79b301234e2c42aeb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bc92d92276c2d4f7af9a",
+        "incoming_paper_id": "paper_bc92d92276c2d4f7af9a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de3f5dcb468cb22bde0d",
+        "incoming_paper_id": "paper_de3f5dcb468cb22bde0d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e856de0de1f4f23d5566",
+        "incoming_paper_id": "paper_e856de0de1f4f23d5566"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a80516d4f91442b39e31",
+        "incoming_paper_id": "paper_a80516d4f91442b39e31"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_972225a0f0bbb0e917ce",
+        "incoming_paper_id": "paper_972225a0f0bbb0e917ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0226d5b716b3f7a191c3",
+        "incoming_paper_id": "paper_0226d5b716b3f7a191c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c174c9510571ecfa305",
+        "incoming_paper_id": "paper_0c174c9510571ecfa305"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c365b0e18f49a6a891ad",
+        "incoming_paper_id": "paper_c365b0e18f49a6a891ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6fd2ae941b6852029ad8",
+        "incoming_paper_id": "paper_6fd2ae941b6852029ad8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73679bfc889798d8cac2",
+        "incoming_paper_id": "paper_73679bfc889798d8cac2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6f81f6831455fb90dbc9",
+        "incoming_paper_id": "paper_6f81f6831455fb90dbc9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6535ba2c5c8bcda47430",
+        "incoming_paper_id": "paper_6535ba2c5c8bcda47430"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6e765672f6e36096ace",
+        "incoming_paper_id": "paper_f6e765672f6e36096ace"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73679bfc889798d8cac2",
+        "incoming_paper_id": "paper_73679bfc889798d8cac2"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "cacc7e0f17e04aec9b3342d439980352",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

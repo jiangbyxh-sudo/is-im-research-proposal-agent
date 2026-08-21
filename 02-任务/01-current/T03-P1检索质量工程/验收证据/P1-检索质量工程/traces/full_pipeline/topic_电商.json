@@ -1,0 +1,2603 @@
+{
+  "direction_id": "topic_电商",
+  "labels": {
+    "zh": "电子商务",
+    "en": "electronic commerce"
+  },
+  "input": {
+    "selected_direction_id": "topic_电商",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 32625.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 321,
+  "hard_gate_pass_count": 26,
+  "eligible_count": 0,
+  "boundary_count": 5,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "electronic commerce"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "electronic commerce information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(electronic commerce) OR (electronic commerce in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 21
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_电商",
+      "research_direction": "电商",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "电商",
+      "aliases": [
+        "电商"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_电商",
+        "labels": {
+          "zh": "电子商务",
+          "en": "electronic commerce"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "电子商务",
+          "electronic commerce",
+          "电商",
+          "electronic commerce in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "electronic commerce",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "electronic commerce",
+            "\"electronic commerce\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "electronic commerce",
+            "electronic commerce information systems"
+          ],
+          "crossref": [
+            "electronic commerce",
+            "电子商务"
+          ],
+          "dblp": [
+            "electronic commerce digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "electronic commerce",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "electronic commerce information systems",
+          "(electronic commerce) OR (electronic commerce in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:91"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "electronic commerce",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 174882,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:48.767916+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4078.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "electronic commerce information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 143005,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:56:52.862674+00:00",
+        "transport": {
+          "attempts": 2,
+          "duration_ms": 19094.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(electronic commerce) OR (electronic commerce in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 172986,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:57:11.978875+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 2969.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "electronic commerce",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:57:17.564648+00:00",
+        "duration_ms": 1313.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1313.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "electronic commerce",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:57:18.871859+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "electronic commerce",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 8,
+        "accepted_before_dedupe": 7,
+        "queried_at": "2026-08-21T20:57:20.053790+00:00",
+        "duration_ms": 1312.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1312.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "电子商务",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:57:15.200933+00:00",
+        "duration_ms": 1156.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1156.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "电子商务",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:57:16.357429+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_293a76f8d3dd89e272f0",
+        "title": "Overview of Electronic commerce (E-commerce)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35f40419b543944bcd84",
+        "title": "Journal of Electronic Commerce in Organizations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7249756b788ec876492d",
+        "title": "The Determinants of Impulsive Buying Behavior in Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b8aa297fc20b22886d3",
+        "title": "Measuring customer satisfaction in electronic commerce: the impact of e-service quality and user experience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8fb1f61b76e6cb5e1745",
+        "title": "Sustainability and Consumer Behavior in Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d522056450bb850c1511",
+        "title": "Behavior or culture? Investigating the use of cryptocurrencies for electronic commerce across the USA and China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_824e71e1f6c45752ec25",
+        "title": "Impact of heuristic–systematic cues on the purchase intention of the electronic commerce consumer through the perception of product quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2cc07f94c2aab4351d7",
+        "title": "Digitization, digitalization, and digital transformation in accounting, electronic commerce, and supply chains",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34076981d2a734ec932d",
+        "title": "An optimization model for fresh-food electronic commerce supply chain with carbon emissions and food waste",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c1d20a4ea756da849b5",
+        "title": "WORK PROGRAMME ON ELECTRONIC COMMERCE",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be1bb0a2b61b30f8b588",
+        "title": "The Future of Electronic Commerce in the IoT Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5914f502a1e4723782f3",
+        "title": "Digital Business and Electronic Commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44a63d41927955e2b3f8",
+        "title": "Impact of seller- and buyer-created content on product sales in the electronic commerce platform: The role of informativeness, readability, multimedia richness, and extreme valence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_784e9739792e7b75e7cc",
+        "title": "THE INFLUENCE OF ONLINE CUSTOMER REVIEWS AND E-SERVICE QUALITY ON BUYING DECISIONS IN ELECTRONIC COMMERCE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e97d7f09b3a4a919a62",
+        "title": "Task-oriented vs. social-oriented: chatbot communication styles in electronic commerce service recovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1029e9770285c7f2e994",
+        "title": "ELECTRONIC COMMERCE AND SUSTAINABILITY OF SMES IN ANAMBRA STATE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac54aacd931468144037",
+        "title": "The nexus between electronic commerce and environmental pollution: The roles of energy efficiency and resource consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe64f19bf2045e24c2fc",
+        "title": "Utilizing Trusted Lightweight Ciphers to Support Electronic-Commerce Transaction Cryptography",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03b862ebe83cc0ef8065",
+        "title": "The Utility of Blockchain Technology in the Electronic Commerce of Tourism Services: An Exploratory Study on Romanian Consumers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4999d8e0e4a8de299353",
+        "title": "ELECTRONIC COMMERCE (E-COMMERCE)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_41db8ff9eaa9a6f9fd4b",
+        "title": "Optimising small-scale electronic commerce supply chain operations: a dynamic cost-sharing contract approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9744368fad114ee4cbda",
+        "title": "Impact and Assessment of Electronic Commerce on Consumer Buying Behaviour",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd6c494b03afc823c554",
+        "title": "Extending the Frontiers of Electronic Commerce Knowledge through Cybersecurity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5af38291a05e0767dad",
+        "title": "Dataset for the electronic customer relationship management based on S-O-R model in electronic commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b09719df6023126441a",
+        "title": "The risks perceived by the consumer in the acceptance of electronic commerce. A study of Bolivia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1a64ff3f519875ad2d9",
+        "title": "How Positive and Negative Electronic Word of Mouth (eWOM) Affects Customers’ Intention to Use Social Commerce? A Dual-Stage Multi Group-SEM and ANN Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cbc09060fc061303f02",
+        "title": "Layerwise Interoperability in Metaverse: Key to Next-Generation Electronic Commerce",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c73ed22982587e47138",
+        "title": "Artificial Intelligence in Electronic Commerce: Investigating the Customers' Acceptance of Using Chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3c3d0cc867709772c48",
+        "title": "The impact of business intelligence on electronic commerce growth: The mediating role of customer behavior analytics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83b9a72c7eb66682fd2a",
+        "title": "Has Electronic Commerce Growth Narrowed the Urban–Rural Income Gap? The Intermediary Effect of the Technological Innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_075c9551a65eb62edd22",
+        "title": "Identifying and prioritizing the critical quality attributes for business-to-business cross-border electronic commerce platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b5ac973ab9479c1912f",
+        "title": "Is there a direct benefit of using electronic commerce and electronic banking in mitigating climate change?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_109233b38ec1d670bf69",
+        "title": "Life cycle assessment of returnable mailers used for apparel electronic commerce: A case study in Canada",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96c142da5c257ebb1358",
+        "title": "Bitcoin Cryptocurrency and Electronic Commerce in Saudi Arabia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d32e7f2c19924b44d6f1",
+        "title": "E-Commerce Promotional Products Selection Using SWARA and TOPSIS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c914f079ea5ece622ce4",
+        "title": "How do customer anxiety levels impact relationship marketing in electronic commerce?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_215cb6dd5b9099627ed1",
+        "title": "Buy Now Pay Later—A Fad or a Reality? A Perspective on Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81ac37f0d1bd1cea7707",
+        "title": "Personalized recommendation model of electronic commerce in new media era based on semantic emotion analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb1f24399620837c92bd",
+        "title": "The influence of brand experience on brand loyalty in the electronic commerce sector: the mediating effect of brand association and brand trust",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eab85c529f107a690a95",
+        "title": "ELECTRONIC COMMERCE MARKET IN UKRAINE: CURRENT STATE AND TRENDS OF POST-WAR RECOVERY",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76b9fd390f6ced71a72d",
+        "title": "Evaluating consumers benefits in electronic-commerce using fuzzy TOPSIS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9faa95a6305fdbc9f654",
+        "title": "Adoption of electronic commerce as a resilience strategy for women's entrepreneurship in the Democratic Republic of Congo",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_354a47a902b6af6e4d95",
+        "title": "Call for Metaverse e-commerce: future challenges and opportunities for electronic commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d25baa8408776c870035",
+        "title": "Electronic Commerce and Consumer Protection in Jordan: The Emerging Trend",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b5529aa5461597f8f49",
+        "title": "Exploring the academic development trace and theme evolution in Cross-Border Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ced3648c79f7d2495434",
+        "title": "The Impact of COVID-19 on the Electronic Commerce User’s Behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d3c3a7721420b4df92c",
+        "title": "Legal Comparison of Electronic Contract in Electronic Commerce Between Indonesia and the United States Based on the United Nations Commission on International Trade Law",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e34097645c37bf8d81e",
+        "title": "Electronic commerce: Overview of risk disturbing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c2cfb73746238673bfc",
+        "title": "RETRACTED: An empirical evaluation of technology acceptance model for Artificial Intelligence in E-commerce",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a36e624091716a36261b",
+        "title": "Artificial intelligence’s effect on customer loyalty in the context of electronic commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f1efc8eeb45c370ae05",
+        "title": "Factors Influencing Customers Loyalty Towards Electronic Commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f76cd71482550a3c831b",
+        "title": "DEVELOPMENT OF ELECTRONIC COMMERCE AND ITS IMPACT ON THE DOMESTIC AND INTERNATIONAL BUSINESS ENVIRONMENT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8e195a0e3315c5d5330",
+        "title": "International Journal of Cases on Electronic Commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4adcfbccab934f6f722d",
+        "title": "Implementation of Virtual Laboratory of Electronic Commerce Into University Course",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70a2cc8139a29c7b5b7f",
+        "title": "DEVELOPMENT OF A CUSTOMER SERVICE SYSTEM IN ELECTRONIC COMMERCE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_486c297cb068cdea484d",
+        "title": "Cultural Dimensions and Consumption Values of Cross-Border Electronic Commerce: A Canonical Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd32d4d735586cd0a5de",
+        "title": "E-commerce and consumer behavior: A review of AI-powered personalization and market trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_466cdbb147e508acc7b4",
+        "title": "Mobile Application Design: Sale of Clothes Through Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71238bb8d2f8046b88ef",
+        "title": "The future of analytics in digital marketing and electronic commerce: how digitalization and sustainability affect consumers, firms, and policymakers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1a7b2713925e8f89093",
+        "title": "An Electronic Commerce Big Data Analytics Architecture and Platform",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a953c3fb0b27bb4cab75",
+        "title": "Electronic Commerce Research during the COVID-19 Pandemic: A Bibliometric Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c897197cfb15b4a9d5b",
+        "title": "Analysis of Classification Algorithms for the Prediction of Purchase Intention in Electronic Commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6edb4a7d51d3736b0bd2",
+        "title": "Design and Implementation of a Web-Based Electronic-Commerce System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c140513d03b2e42a5ea",
+        "title": "Strategi Pelaku Bisnis Electronic Commerce (E-Commerce)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3520781d8dfde3599a5c",
+        "title": "PLIB ontology for B2B electronic commerce",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_768b94e495d9c9a674e8",
+        "title": "Virtual Marketplace Dynamics: Understanding Consumer Behavior on Business-to-Consumer Electronic-Commerce Platforms",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d1192d797c392d305c9",
+        "title": "OPPORTUNITIES AND ADVANTAGES OF ELECTRONIC COMMERCE IN BUSINESS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_249c6687f7d0a399e370",
+        "title": "A REVIEW OF THE DEVELOPMENT OF ELECTRONIC COMMERCE IN RUSSIA AND ITS IMPLICATIONS FOR SMALL BUSINESSES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6968d0f510341af9157",
+        "title": "Impact of the Pandemic on the Development and Regulation of Electronic Commerce in Russia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76ce56a2b11ec4b140bb",
+        "title": "Last Mile Delivery Technologies for Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c37bebe401ea99ced89",
+        "title": "Legal regulations of electronic commerce under the conditions of the development of the digital economy in Ukraine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07880282abbefd394a84",
+        "title": "How do strategic attributes of electronic commerce impel the perceived value and electronic loyalty of online food delivery applications (OFDAs)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bedb9442a5e7e4e428f2",
+        "title": "The Impact of Electronic Commerce on China’s Energy Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bf6de39125d391df541",
+        "title": "Users authentication issues and challenges in electronic commerce applications",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4464438d9fcd0a181d4f",
+        "title": "Factors of Adoption of Electronic Commerce in SMEs in Mexico",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56078d07324f086ce5ab",
+        "title": "Adoption of electronic commerce by agribusiness small medium enterprises in the upper east region of Ghana",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e241369196ebbdf5f94d",
+        "title": "Evaluation of regional features of electronic commerce in Europe",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f6bf3b912245c6e61aa",
+        "title": "Emotional dialogue generation model of electronic commerce intelligent customer service based on topic expansion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ba0b9acade08625d62e",
+        "title": "AI-Driven Recommendations: A Systematic Review of the State of the Art in E-Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc8cb34e7ab320cd2561",
+        "title": "Marketing Management of Electronic Commerce in the Process of Current Marketing Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f32ada10e72d0bd119d",
+        "title": "Digital and advanced electronic signature: the security function, especially in electronic commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d56a0cf3588011d35d67",
+        "title": "MODEL OF IMPLEMENTATION OF ELECTRONIC COMMERCE TECHNOLOGIES",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a19135a9950d6a5680db",
+        "title": "The Influence of Artificial Intelligence on the Automation of Processes in Electronic Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_623534fde2d982ad1bf8",
+        "title": "The Mapping of Electronic Commerce Issues and Consumer Protection Policy in Indonesia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0342ed9b3559d42fe8c0",
+        "title": "Compensation Method of Electronic Commerce Data Transmission Delay Based on Fuzzy Encryption Algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8feea91767d06e78c5bd",
+        "title": "The impact of electronic commerce on the Peruvian firms' revenue",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00bf8350599135ddf44e",
+        "title": "Live Streaming Commerce: A Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5abb8db36b51cf7b96c6",
+        "title": "Framework for Detection of Fraud at Point of Sale on Electronic Commerce sites using Logistic Regression",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb4ea1e0b508b0aa08b8",
+        "title": "Digital Accounting of Export Electronic Commerce of Small Enterprises in Ukraine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c81d7433f4b703c89a72",
+        "title": "Blockchain and electronic commerce: Transforming networks, platforms, and value creation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1bae730e9444bcd72c9",
+        "title": "The Effect of Motivating and Inhibitory Factors on Using the Electronic Commerce by Adopting UTAUT2 and SQB Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c724f0346eced3618a18",
+        "title": "An Empirical Study of Impact of Electronic Commerce on Business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a37243a009a43b49a634",
+        "title": "Legal provisions of information and communication component of electronic commerce in accordance with the law of Ukraine \"On electronic communications\"",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22e9440d14f858114394",
+        "title": "Exploring Electronic Commerce Technology by Business Education Graduates for Employment Opportunities and Self-Reliance in Nigeria",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6fa31416ed10a548f82e",
+        "title": "THE ELECTRONIC MARKET (MARKETPLACE) ON ELECTRONIC TRADE (E-COMMERCE) IN INDONESIA",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9994f8a11b12a8aedc56",
+        "title": "Use of E-Commerce in The World of Business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cbe04078b033f5cc337",
+        "title": "RETRACTED ARTICLE: Customer centric hybrid recommendation system for E-Commerce applications by integrating hybrid sentiment analysis",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_812fb16fd07e5d05123c",
+        "title": "How Live Streaming Changes Shopping Decisions in E-commerce: A Study of Live Streaming Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81f478d59ce60defbeb8",
+        "title": "Progress on implementing and using electronic health record systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9feb0063c688a46f7283",
+        "title": "Research on Logistics Management Information System of Electronic Commerce Based on Computer Information Technology",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c035530956b04fea6ca",
+        "title": "A systematic review and research perspective on recommender systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d99f379975f347e20cbe",
+        "title": "A Survey of Graph Neural Networks for Recommender Systems: Challenges, Methods, and Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_835a86ef39feb8373d2b",
+        "title": "Pakistan Journal of Commerce and Social Sciences",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b8d53accec8b0ff945",
+        "title": "Management and Sales Forecasting of an E-commerce Information System Using Data Mining and Convolutional Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3542f95d4f41f71d1029",
+        "title": "ISSUES AND CHALLENGES OF ELECTRONIC PAYMENT SYSTEMS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1b6b1ad6015d4da63ae",
+        "title": "New Trends in E-Commerce Research: Linking Social Commerce and Sharing Commerce: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9cca6e47079b3eefe4c",
+        "title": "Machine learning based recommender system for e-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d927508de1c4ec5fe9b",
+        "title": "Developing an Information Model for E-Commerce Platforms: A Study on Modern Socio-Economic Systems in the Context of Global Digitalization and Legal Compliance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_86aa2df67ff994701738",
+        "title": "The effect of electronic human resources management on organizational health of telecommuni-cations companies in Jordan",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27cce393bd9d3daee400",
+        "title": "Cryptography and Information Security",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d3559bfad1abd83259a",
+        "title": "Application Research of Computer Artificial Intelligence Technology in Electronic Commerce Information Retrieval System",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05e3ddd6a672a54d84cf",
+        "title": "Development and Management of E-Commerce Information Systems Using Edge Computing and Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64c00ff6101222e7e75f",
+        "title": "The development and validation of a scale to measure perceived value of mobile commerce (MVAL-SCALE)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ba42393a0096cdd8136",
+        "title": "Applications of Explainable Artificial Intelligence in Finance—a systematic review of Finance, Information Systems, and Computer Science literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b2386673b48811e2bd6",
+        "title": "Blockchain’s role in e-commerce sellers’ decision-making on information disclosure under competition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e48749e7a749d5543b9a",
+        "title": "Applying particle swarm optimization algorithm-based collaborative filtering recommender system considering rating and review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a167a9e24c776f235d4e",
+        "title": "Blockchain’s coming to hospital to digitalize healthcare services: Designing a distributed electronic health record ecosystem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e287b00dea354faf7ce",
+        "title": "The ever-changing business of e-commerce-net benefits while designing a new platform for small companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ceecfe7779cf98e6055e",
+        "title": "Knowledge evolutionary process of Artificial intelligence in E-commerce: Main path analysis and science mapping analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3d0fd703f4a9b62a064",
+        "title": "The Impact of Artificial Intelligence on Firm Performance: An Application of the Resource-Based View to e-Commerce Firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5593badf55fe678a1f1b",
+        "title": "USE OF CRYPTOCURRENCIES BITCOIN AND ETHEREUM IN THE FIELD OF E-COMMERCE: CASE STUDY OF UKRAINE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cf99de33f56d7669a17",
+        "title": "Digital Marketing Strategy to Increase Sales Conversion on E-commerce Platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd984b7cf46429b50a9d",
+        "title": "Developing supply chain resilience through integration: An empirical study on an e‐commerce platform",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_564b1927f491cda48c4d",
+        "title": "The Information Security Management Systems in E-Business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52b56b317da05056dba4",
+        "title": "A review on customer segmentation methods for personalized customer targeting in e-commerce use cases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c658cc9cc96f71e5801",
+        "title": "The Rising Trends of Smart E-Commerce Logistics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70c36c695ef4c226edd3",
+        "title": "Cyber Shopping Beyond Boundaries: The Metaverse Revolution in e‐Commerce and Consumer Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5d8743db09a1a6d48a4",
+        "title": "Revolutionizing E-Commerce With Consumer-Driven Energy-Efficient WSNs: A Multi-Characteristics Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_913b5766e99b506fe19f",
+        "title": "A Customer-Centric View of E-Commerce Security and Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a7e7073e16c9a791a74",
+        "title": "Influence of Perceived Value on Consumers’ Continuous Purchase Intention in Live-Streaming E-Commerce—Mediated by Consumer Trust",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ce9a60ac44c503135d4",
+        "title": "Enterprise Information Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1da021f5ba4793d36b32",
+        "title": "A Review of Blockchain’s Role in E-Commerce Transactions: Open Challenges, and Future Research Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95e7a82f7c34b7f6a31a",
+        "title": "Cyber security threats: A never-ending challenge for e-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f30955bde99308ae3d49",
+        "title": "A Brief Survey of Machine Learning and Deep Learning Techniques for E-Commerce Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92a4972865b5dd37e98f",
+        "title": "AI-based chatbots in conversational commerce and their effects on product and price perceptions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a0d6e63fb330af84e51",
+        "title": "A Systematic Review on Machine Learning and Deep Learning Models for Electronic Information Security in Mobile Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f997c21a2438ddc8752",
+        "title": "Electronic waste: A critical assessment on the unimaginable growing pollutant, legislations and environmental impacts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd809dd8bd46c2c24cd4",
+        "title": "What Drives Consumer Purchasing Intention in Live Streaming E-Commerce?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c87efae0619123c6b3ad",
+        "title": "Live Commerce Platforms: A New Paradigm for E-Commerce Platform Economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c11ab31931f1fba93ad",
+        "title": "The Development of a Design Theory for Web Based Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6cd37c5512277fbbd0b6",
+        "title": "Reselling or agency selling? The strategic role of live streaming commerce in distribution contract selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28d2f904113fc9daa6dc",
+        "title": "Sustainable Supply Chain and Business Performance: The Impact of Strategy, Network Design, Information Systems, and Organizational Structure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b512f9023bc249144f8c",
+        "title": "Assessing the Effects of the COVID-19 Pandemic on M-Commerce Adoption: An Adapted UTAUT2 Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c34709f0fffd18d2ad2",
+        "title": "A meta‐analysis of the elaboration likelihood model in the electronic word of mouth literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ddf44d60d47d2cdd307",
+        "title": "The influence of consumer perception on purchase intention: Evidence from cross-border E-commerce platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3f21a11e8fd3fef2825",
+        "title": "A study on the influence of the characteristics of key opinion leaders on consumers’ purchase intention in live streaming commerce: based on dual-systems theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb25b551cf57b0401762",
+        "title": "Purchasing in the digital age: A meta-analytical perspective on trust, risk, security, and e-WOM in e-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bc2f527f30d5bdfd507",
+        "title": "Sustainable Logistics for E-Commerce: A Literature Review and Bibliometric Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3e2bb35b9209eea38bc",
+        "title": "Consumer resource integration and service innovation in social commerce: the role of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc6a36416af7d57d151a",
+        "title": "Advancing Sustainable Practices in Electronic Customer Relationship Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7828aa4d51b208c654e",
+        "title": "Edge Computing in E-commerce Business: Economic Impacts and Advantages of Scalable Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17cbc88221b3ba71053e",
+        "title": "E-Commerce Fraud Detection Based on Machine Learning Techniques: Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e837bed5be9f32e903b1",
+        "title": "E-commerce recommender system based on improved K-means commodity information management model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_389904f6f141264b10d2",
+        "title": "The influence of social media marketing activities on customer loyalty: A study of e-commerce industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a45b03df49c093fc4ef6",
+        "title": "Drivers of purchase intention in Instagram Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_148d06da5b1bb5216f01",
+        "title": "E-Commerce Policy and International Business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2db7a7e1b07885afd03",
+        "title": "Big data analytics and innovation in e-commerce: current insights and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5ad9242dba0388fb9a8",
+        "title": "The role of digital platforms in e-commerce food supply chain resilience under exogenous disruptions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fd4dcca1f062f92aa4f",
+        "title": "Implementing E-Commerce from Logistic Perspective: Literature Review and Methodological Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d710eb5724acaa827614",
+        "title": "AI in E-Commerce: Application of the Use and Gratification Model to The Acceptance of Chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f6d6d204a52712352b1",
+        "title": "Evaluating Recommender Systems: Survey and Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_492f62ad1c5f7a277e98",
+        "title": "A Systematic Literature Review of User Trust in AI-Enabled Systems: An HCI Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_053a10de7abc2024d40b",
+        "title": "A Blockchain-Based E-Commerce Reputation System Built With Verifiable Credentials",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f27b6c177be78be39580",
+        "title": "Application of E-commerce Technologies in Accelerating the Success of SME Operation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1c0415dd195f543b387",
+        "title": "Effects of Background Fitting of e-Commerce Live Streaming on Consumers’ Purchase Intentions: A Cognitive-Affective Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a164f39ac23921650c8",
+        "title": "Secure E-Commerce Scheme",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ee8b18153649271ef80",
+        "title": "A bibliometric and content analysis of technological advancement applications in agricultural e-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4257c412bee0e2dcfb70",
+        "title": "Two Decades of M-Commerce Consumer Research: A Bibliometric Analysis Using R Biblioshiny",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2fac5ec5ac17a3d5ecb",
+        "title": "RETRACTED: Determinants of Social Commerce Usage and Online Impulse Purchase: Implications for Business and Digital Revolution",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f2c3c353f04952175a9",
+        "title": "Global Research Trends in Consumer Behavior and Sustainability in E-Commerce: A Bibliometric Analysis of the Knowledge Structure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70685aa1e8b78c4e9a56",
+        "title": "Repurchase intention of e-commerce customers in Indonesia: An overview of the effect of e-service quality, e-word of mouth, customer trust, and customer satisfaction mediation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d633f6c478e55c47ad4f",
+        "title": "E-commerce Policy and the Global Economy: A Path to More Inclusive Development?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1035657c160eb9d9d60d",
+        "title": "E-Commerce Website based on Chatbot",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ae20d511d10c3ccddaa",
+        "title": "Drivers of consumer adoption of e-Commerce: A meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b4d3baeacc8c293e5fc",
+        "title": "Intention to use e-commerce vs physical shopping. Difference between consumers in the post-COVID era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42d310de887bd1a738d9",
+        "title": "Optimal platform sales mode in live streaming commerce supply chains",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e439470528f263d6135",
+        "title": "Prediction of User’s Intention to Use Metaverse System in Medical Education: A Hybrid SEM-ML Learning Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5af16e5d4ac46e10b44c",
+        "title": "An Improved LSTM-Based Failure Classification Model for Financial Companies Using Natural Language Processing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76c7647d7f94b60aa8fd",
+        "title": "Explainable and responsible artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5644b2165a53b6217d58",
+        "title": "A Neural Network Ensemble With Feature Engineering for Improved Credit Card Fraud Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4149003166214c6b2c3b",
+        "title": "Evaluation of Online Markets Considering Trust and Resilience: A Framework for Predicting Customer Behavior in E-Commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d8d6572943f723ba80a",
+        "title": "PUF-Based Authentication and Key Agreement Protocols for IoT, WSNs, and Smart Grids: A Comprehensive Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_041bf82b1547d2de7518",
+        "title": "Determinants of Continuance Intention to Use Mobile Commerce during the Emergence of COVID-19 in Indonesia: DeLone and McLean Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_790eace6172ae1621975",
+        "title": "Factors That Affect User Satisfaction of Using E-Commerce Chatbot: A Study on Generation Z",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d882b84976b0c8a7a4d0",
+        "title": "The digital economy: Challenges and opportunities in the new era of technology and electronic communications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47a5698994599cb47378",
+        "title": "Uncovering the identity of Electronic Markets research through text mining techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7257e994337e7ab05e61",
+        "title": "Electronic Payment Behaviors of Consumers under Digital Transformation in Finance—A Case Study of Third-Party Payments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_effdac90d796a23b2095",
+        "title": "PENYELESAIAN SENGKETA SISTEM PEMBAYARAN CASH ON DELIVERY (COD) PADA MEDIA E-COMMERCE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef3d142adde98e60d635",
+        "title": "Digital transformation in small and medium enterprises: a scientometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47ad79d59bb0afccd885",
+        "title": "BlockTicket: A framework for electronic tickets based on smart contract",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f63d500e14513488e6a",
+        "title": "Hybrid IoT and Data Fusion Model for e‐Commerce Big Data Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bcf2307100b4a0f4ec90",
+        "title": "Explainable Artificial Intelligence for Predictive Modeling in Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8708c7f437a27343175e",
+        "title": "Information Discovery in E-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ef32121300f50b9b030",
+        "title": "Intelligent Warehouse Picking Improvement Model for e-Logistics Warehouse Using Single Picker Routing Problem and Wave Picking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c3e4b77c0c0a464b8a6",
+        "title": "An artificial-intelligence-enabled sustainable supply chain model for B2C E-commerce business in the international trade",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f50a459bbbbdc8b620f",
+        "title": "Intrusion detection approach for cloud and IoT environments using deep learning and Capuchin Search Algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_800453a195894ae308b2",
+        "title": "Perceived usefulness of online customer reviews: A review mining approach using machine learning & exploratory data analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a543f323f179953e9657",
+        "title": "AI is better when I'm sure: The influence of certainty of needs on consumers' acceptance of AI chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b6e6c15b85fa43d586f",
+        "title": "Digital Economy: Approaches and Features of Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af329a7d6f5033ccf595",
+        "title": "Dynamics of Digital Payments Enable the World's Safest Way to Pay",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5683dfae5432f6f0860",
+        "title": "E-commerce in high uncertainty avoidance cultures: The driving forces of repurchase and word-of-mouth intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50f4e9a477f3e236a5f4",
+        "title": "Study of E-Commerce and Impact of Machine Learning in E-Commerce",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_215a00a6e2dc1b457956",
+        "title": "Reshaping the central place hierarchy of the urban hotel industry through O2O e-commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_405643e6163ab9fbe4d9",
+        "title": "Feature Extracted Deep Neural Collaborative Filtering for E-Book Service Recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f10ef75b2a772a0940a1",
+        "title": "Internationalisation through digital platforms: a systematic review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25965444fb6bb94500c2",
+        "title": "Impacts of Social Media Advertising on Purchase Intention and Customer Loyalty in E-Commerce Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13f99826324be3266119",
+        "title": "Attitude towards Online Shopping during Pandemics: Do Gender, Social Factors and Platform Quality Matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62f2db06ac9859f1ca88",
+        "title": "Selling myself: Anthropomorphic products in electronic commerce",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_9be5f5bcde950feba8e8",
+        "title": "How commitment and platform adoption drive the e-commerce performance of SMEs: A mixed-method inquiry into e-commerce affordances",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_457121d6608dbe8be4e4",
+        "title": "Re-examining post-acceptance model of information systems continuance: A revised theoretical model using MASEM approach",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "retraction_or_correction",
+        "title": "Correction to: Do Real-Time Reviews Matter? Examining how Bullet Screen Influences Consumers’ Purchase Intention in Live Streaming Commerce",
+        "journal": "Information Systems Frontiers"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_电商",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 321,
+      "deduplicated_count": 26,
+      "hard_gate_pass_count": 26,
+      "eligible_count": 0,
+      "boundary_count": 5,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "electronic commerce"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "electronic commerce information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(electronic commerce) OR (electronic commerce in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 21
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "electronic commerce",
+        "raw_count": 100,
+        "hard_gate_pass_count": 2,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "electronic commerce information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 6,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(electronic commerce) OR (electronic commerce in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 7,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_1029e9770285c7f2e994",
+        "incoming_paper_id": "paper_87d493828945ec54770f"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_e2cc07f94c2aab4351d7",
+        "incoming_paper_id": "paper_b29ddbc03cb09b1967cd"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_8c140513d03b2e42a5ea",
+        "incoming_paper_id": "paper_f7b1b08c955e861e8aeb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d32e7f2c19924b44d6f1",
+        "incoming_paper_id": "paper_d32e7f2c19924b44d6f1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_824e71e1f6c45752ec25",
+        "incoming_paper_id": "paper_824e71e1f6c45752ec25"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c2cfb73746238673bfc",
+        "incoming_paper_id": "paper_2c2cfb73746238673bfc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd32d4d735586cd0a5de",
+        "incoming_paper_id": "paper_cd32d4d735586cd0a5de"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00bf8350599135ddf44e",
+        "incoming_paper_id": "paper_00bf8350599135ddf44e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ba0b9acade08625d62e",
+        "incoming_paper_id": "paper_7ba0b9acade08625d62e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1029e9770285c7f2e994",
+        "incoming_paper_id": "paper_1029e9770285c7f2e994"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_44a63d41927955e2b3f8",
+        "incoming_paper_id": "paper_44a63d41927955e2b3f8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5914f502a1e4723782f3",
+        "incoming_paper_id": "paper_5914f502a1e4723782f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d522056450bb850c1511",
+        "incoming_paper_id": "paper_d522056450bb850c1511"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_784e9739792e7b75e7cc",
+        "incoming_paper_id": "paper_784e9739792e7b75e7cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be1bb0a2b61b30f8b588",
+        "incoming_paper_id": "paper_be1bb0a2b61b30f8b588"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03b862ebe83cc0ef8065",
+        "incoming_paper_id": "paper_03b862ebe83cc0ef8065"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe64f19bf2045e24c2fc",
+        "incoming_paper_id": "paper_fe64f19bf2045e24c2fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9994f8a11b12a8aedc56",
+        "incoming_paper_id": "paper_9994f8a11b12a8aedc56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_293a76f8d3dd89e272f0",
+        "incoming_paper_id": "paper_293a76f8d3dd89e272f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_824e71e1f6c45752ec25",
+        "incoming_paper_id": "paper_824e71e1f6c45752ec25"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2cbe04078b033f5cc337",
+        "incoming_paper_id": "paper_2cbe04078b033f5cc337"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_35f40419b543944bcd84",
+        "incoming_paper_id": "paper_35f40419b543944bcd84"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7249756b788ec876492d",
+        "incoming_paper_id": "paper_7249756b788ec876492d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e48749e7a749d5543b9a",
+        "incoming_paper_id": "paper_e48749e7a749d5543b9a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_64c00ff6101222e7e75f",
+        "incoming_paper_id": "paper_64c00ff6101222e7e75f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ceecfe7779cf98e6055e",
+        "incoming_paper_id": "paper_ceecfe7779cf98e6055e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4e287b00dea354faf7ce",
+        "incoming_paper_id": "paper_4e287b00dea354faf7ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c2cfb73746238673bfc",
+        "incoming_paper_id": "paper_2c2cfb73746238673bfc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1029e9770285c7f2e994",
+        "incoming_paper_id": "paper_1029e9770285c7f2e994"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd32d4d735586cd0a5de",
+        "incoming_paper_id": "paper_cd32d4d735586cd0a5de"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0b8aa297fc20b22886d3",
+        "incoming_paper_id": "paper_0b8aa297fc20b22886d3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3542f95d4f41f71d1029",
+        "incoming_paper_id": "paper_3542f95d4f41f71d1029"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5593badf55fe678a1f1b",
+        "incoming_paper_id": "paper_5593badf55fe678a1f1b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5d8743db09a1a6d48a4",
+        "incoming_paper_id": "paper_e5d8743db09a1a6d48a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_27cce393bd9d3daee400",
+        "incoming_paper_id": "paper_27cce393bd9d3daee400"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8fb1f61b76e6cb5e1745",
+        "incoming_paper_id": "paper_8fb1f61b76e6cb5e1745"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_564b1927f491cda48c4d",
+        "incoming_paper_id": "paper_564b1927f491cda48c4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e1a64ff3f519875ad2d9",
+        "incoming_paper_id": "paper_e1a64ff3f519875ad2d9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_34076981d2a734ec932d",
+        "incoming_paper_id": "paper_34076981d2a734ec932d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_44a63d41927955e2b3f8",
+        "incoming_paper_id": "paper_44a63d41927955e2b3f8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5914f502a1e4723782f3",
+        "incoming_paper_id": "paper_5914f502a1e4723782f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c1d20a4ea756da849b5",
+        "incoming_paper_id": "paper_0c1d20a4ea756da849b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d522056450bb850c1511",
+        "incoming_paper_id": "paper_d522056450bb850c1511"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_784e9739792e7b75e7cc",
+        "incoming_paper_id": "paper_784e9739792e7b75e7cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e2cc07f94c2aab4351d7",
+        "incoming_paper_id": "paper_e2cc07f94c2aab4351d7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_05e3ddd6a672a54d84cf",
+        "incoming_paper_id": "paper_05e3ddd6a672a54d84cf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be1bb0a2b61b30f8b588",
+        "incoming_paper_id": "paper_be1bb0a2b61b30f8b588"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ba0b9acade08625d62e",
+        "incoming_paper_id": "paper_7ba0b9acade08625d62e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9feb0063c688a46f7283",
+        "incoming_paper_id": "paper_9feb0063c688a46f7283"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3e97d7f09b3a4a919a62",
+        "incoming_paper_id": "paper_3e97d7f09b3a4a919a62"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f27b6c177be78be39580",
+        "incoming_paper_id": "paper_f27b6c177be78be39580"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb25b551cf57b0401762",
+        "incoming_paper_id": "paper_fb25b551cf57b0401762"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00bf8350599135ddf44e",
+        "incoming_paper_id": "paper_00bf8350599135ddf44e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_03b862ebe83cc0ef8065",
+        "incoming_paper_id": "paper_03b862ebe83cc0ef8065"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a164f39ac23921650c8",
+        "incoming_paper_id": "paper_5a164f39ac23921650c8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b4d3baeacc8c293e5fc",
+        "incoming_paper_id": "paper_7b4d3baeacc8c293e5fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f76cd71482550a3c831b",
+        "incoming_paper_id": "paper_f76cd71482550a3c831b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ac54aacd931468144037",
+        "incoming_paper_id": "paper_ac54aacd931468144037"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe64f19bf2045e24c2fc",
+        "incoming_paper_id": "paper_fe64f19bf2045e24c2fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07880282abbefd394a84",
+        "incoming_paper_id": "paper_07880282abbefd394a84"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e837bed5be9f32e903b1",
+        "incoming_paper_id": "paper_e837bed5be9f32e903b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1d3559bfad1abd83259a",
+        "incoming_paper_id": "paper_1d3559bfad1abd83259a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_70a2cc8139a29c7b5b7f",
+        "incoming_paper_id": "paper_70a2cc8139a29c7b5b7f"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_1029e9770285c7f2e994",
+        "incoming_paper_id": "paper_87d493828945ec54770f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0342ed9b3559d42fe8c0",
+        "incoming_paper_id": "paper_0342ed9b3559d42fe8c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4999d8e0e4a8de299353",
+        "incoming_paper_id": "paper_4999d8e0e4a8de299353"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ce9a60ac44c503135d4",
+        "incoming_paper_id": "paper_2ce9a60ac44c503135d4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c37bebe401ea99ced89",
+        "incoming_paper_id": "paper_0c37bebe401ea99ced89"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7d1192d797c392d305c9",
+        "incoming_paper_id": "paper_7d1192d797c392d305c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5af38291a05e0767dad",
+        "incoming_paper_id": "paper_e5af38291a05e0767dad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bf6de39125d391df541",
+        "incoming_paper_id": "paper_2bf6de39125d391df541"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_56078d07324f086ce5ab",
+        "incoming_paper_id": "paper_56078d07324f086ce5ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6fa31416ed10a548f82e",
+        "incoming_paper_id": "paper_6fa31416ed10a548f82e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8c73ed22982587e47138",
+        "incoming_paper_id": "paper_8c73ed22982587e47138"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3520781d8dfde3599a5c",
+        "incoming_paper_id": "paper_3520781d8dfde3599a5c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9cbc09060fc061303f02",
+        "incoming_paper_id": "paper_9cbc09060fc061303f02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c34709f0fffd18d2ad2",
+        "incoming_paper_id": "paper_1c34709f0fffd18d2ad2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cb4ea1e0b508b0aa08b8",
+        "incoming_paper_id": "paper_cb4ea1e0b508b0aa08b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_075c9551a65eb62edd22",
+        "incoming_paper_id": "paper_075c9551a65eb62edd22"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_41db8ff9eaa9a6f9fd4b",
+        "incoming_paper_id": "paper_41db8ff9eaa9a6f9fd4b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9744368fad114ee4cbda",
+        "incoming_paper_id": "paper_9744368fad114ee4cbda"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5b5ac973ab9479c1912f",
+        "incoming_paper_id": "paper_5b5ac973ab9479c1912f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_109233b38ec1d670bf69",
+        "incoming_paper_id": "paper_109233b38ec1d670bf69"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_215cb6dd5b9099627ed1",
+        "incoming_paper_id": "paper_215cb6dd5b9099627ed1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d56a0cf3588011d35d67",
+        "incoming_paper_id": "paper_d56a0cf3588011d35d67"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_96c142da5c257ebb1358",
+        "incoming_paper_id": "paper_96c142da5c257ebb1358"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62f2db06ac9859f1ca88",
+        "incoming_paper_id": "paper_62f2db06ac9859f1ca88"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e3bae03645e4edf70771",
+        "incoming_paper_id": "paper_e3bae03645e4edf70771"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

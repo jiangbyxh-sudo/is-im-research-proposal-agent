@@ -1,0 +1,2629 @@
+{
+  "direction_id": "topic_attention",
+  "labels": {
+    "zh": "注意力",
+    "en": "attention"
+  },
+  "input": {
+    "selected_direction_id": "topic_attention",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16438.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 318,
+  "hard_gate_pass_count": 21,
+  "eligible_count": 0,
+  "boundary_count": 9,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "attention"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "attention user behavior"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(attention) OR (attention in user behavior)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 18
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_attention",
+      "research_direction": "attention",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "attention",
+      "aliases": [
+        "attention"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:175"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_attention",
+        "labels": {
+          "zh": "注意力",
+          "en": "attention"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "注意力",
+          "attention",
+          "attention in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "attention",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "attention",
+            "\"attention\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "attention",
+            "attention user behavior"
+          ],
+          "crossref": [
+            "attention",
+            "注意力"
+          ],
+          "dblp": [
+            "attention behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "attention",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "attention user behavior",
+          "(attention) OR (attention in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:175"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "attention",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 5299256,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:01.367307+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3828.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "attention user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 661333,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:05.212614+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3735.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(attention) OR (attention in user behavior)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 5299256,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:08.976911+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3813.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "attention",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 3,
+        "accepted_before_dedupe": 3,
+        "queried_at": "2026-08-21T21:00:14.136647+00:00",
+        "duration_ms": 1266.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1266.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "attention",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 5,
+        "accepted_before_dedupe": 5,
+        "queried_at": "2026-08-21T21:00:15.412711+00:00",
+        "duration_ms": 1156.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1156.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "attention",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:16.568415+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "注意力",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:12.974478+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_de7f369c49264708f812",
+        "title": "Attention Is All You Need",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36deaa9c5c59a81dfaac",
+        "title": "Attention mechanisms in computer vision: A survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7a2bf5923de2476634e",
+        "title": "Attention And Cognitive Control 1",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0d8c976eb30b8f2d56d7",
+        "title": "ResNeSt: Split-Attention Networks",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_863d8eaf63ee194534f0",
+        "title": "Visual attention network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26e8f8ac1b32a361884a",
+        "title": "Efficient Multi-Scale Attention Module with Cross-Spatial Learning",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_122986a9c57b6a703c86",
+        "title": "Attention and Interpretation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_398cbe60fa6901d3b4ad",
+        "title": "Vision Transformer with Deformable Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17eab01edda061984268",
+        "title": "BiFormer: Vision Transformer with Bi-Level Routing Attention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42287c23c45720952be8",
+        "title": "Attention and performance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fcc99c92f855d72750a",
+        "title": "Beyond Self-Attention: External Attention Using Two Linear Layers for Visual Tasks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aca0ca0b3f56bfbf5294",
+        "title": "Dense Nested Attention Network for Infrared Small Target Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec1cd6daf171259431c0",
+        "title": "MixFormer: End-to-End Tracking with Iterative Mixed Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f79cc0f5636e97c2885a",
+        "title": "Large Separable Kernel Attention: Rethinking the Large Kernel Attention design in CNN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1f85f4982c18dc84fe1",
+        "title": "On the Integration of Self-Attention and Convolution",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24af0e1485266ca97321",
+        "title": "EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_269714dc1e76a4581bb4",
+        "title": "Neighborhood Attention Transformer",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20cc7c789a406a7362ab",
+        "title": "AiATrack: Attention in Attention for Transformer Visual Tracking",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cb90f07d0e86cbf51ad",
+        "title": "DEA-Net: Single Image Dehazing Based on Detail-Enhanced Convolution and Content-Guided Attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_705a49e7f0b1c5f5d6a6",
+        "title": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9eb7a2dbf2e0be9dddfd",
+        "title": "Attention and Performance VII",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bccce4c7b041136e99a",
+        "title": "UniFormer: Unifying Convolution and Self-Attention for Visual Recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93d252778c58b72c3f95",
+        "title": "SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fc0b5517731969e94a5",
+        "title": "Attention, please! A survey of neural attention models in deep learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74269a2acaf5a46cc233",
+        "title": "SAITS: Self-attention-based imputation for time series",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29e00e43369533262a0a",
+        "title": "Deciphering spatial domains from spatially resolved transcriptomics with an adaptive graph attention auto-encoder",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67402aaffff25e325749",
+        "title": "Efficient Long-Range Attention Network for Image Super-Resolution",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e87f4ecbceedd831bdf1",
+        "title": "Attention‐Induced Trading and Returns: Evidence from Robinhood Users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_98ab1436cf3e28ac3934",
+        "title": "Mixed local channel attention for object detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6565fea9741dc1052761",
+        "title": "DaViT: Dual Attention Vision Transformers",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f0606f01363f3ad04a4",
+        "title": "DATFuse: Infrared and Visible Image Fusion via Dual Attention Transformer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2637878e8b8a634533b",
+        "title": "Hierarchical Question-Image Co-Attention for Visual Question Answering",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00c22211d4f3697d9b1e",
+        "title": "The multi-modal fusion in visual question answering: a review of attention mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0edf64559a3920f6ce1",
+        "title": "Attention-deficit/hyperactivity disorder",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53588c88b91edd35e182",
+        "title": "Distract Your Attention: Multi-Head Cross Attention Network for Facial Expression Recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_085596b60d547319820c",
+        "title": "Agent Attention: On the Integration of Softmax and Linear Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_342269c0c1e3f33f269f",
+        "title": "Medical Image Segmentation via Cascaded Attention Decoding",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0abe40afe7bafbee2eb",
+        "title": "Weighted Feature Fusion of Convolutional Neural Network and Graph Attention Network for Hyperspectral Image Classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69378889f0fc31743297",
+        "title": "MANIQA: Multi-dimension Attention Network for No-Reference Image Quality Assessment",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_605978e06876a1addac8",
+        "title": "Attention Spiking Neural Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52559a00188c6dd92a3a",
+        "title": "Beyond Self-Attention: Deformable Large Kernel Attention for Medical Image Segmentation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df229865c3aadce412d1",
+        "title": "Attention Attention Everywhere: Monocular Depth Prediction with Skip Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5db1efb6fc54c9d0e883",
+        "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9b911184aa9d1feba58",
+        "title": "ICAFusion: Iterative cross-attention guided feature fusion for multispectral object detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe5a66fdb88b5a02d3d6",
+        "title": "Physics-Informed Attention Temporal Convolutional Network for EEG-Based Motor Imagery Classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f068f92fda9c8ffbbb5",
+        "title": "EMCAD: Efficient Multi-Scale Convolutional Attention Decoding for Medical Image Segmentation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e163d18fa21947b4869",
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea8658ed8b3bc9318c68",
+        "title": "The Embedding Hypothesis: From Fourier Circuits to No-Q Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4cb4aa5b42f5cdbefae9",
+        "title": "Channel prior convolutional attention for medical image segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d338263c8111bdde36f",
+        "title": "Spectral–Spatial Morphological Attention Transformer for Hyperspectral Image Classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d555b228837f36698f06",
+        "title": "SRFormer: Permuted Self-Attention for Single Image Super-Resolution",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c6a65bef7d2faad5fd6",
+        "title": "Shunted Self-Attention via Multi-Scale Token Aggregation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3fde1e094c0c8f655fe9",
+        "title": "CAT: Cross Attention in Vision Transformer",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0018e54e4bc232143c86",
+        "title": "Time Series Prediction Based on LSTM-Attention-LSTM Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e38fabceed46ab182be0",
+        "title": "Attention-Guided Pyramid Context Networks for Detecting Infrared Small Target Under Complex Background",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9721878a696551daf19d",
+        "title": "ASF-YOLO: A novel YOLO model with attentional scale sequence fusion for cell instance segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95739c65dfcee47d65da",
+        "title": "Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8bef0ebe9d1939159e",
+        "title": "The Devil Is in the Details: Window-based Attention for Image Compression",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a03ab14a3ccde8f3701",
+        "title": "CrossFuse: A novel cross attention mechanism based infrared and visible image fusion approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_295a787a6a65777f661c",
+        "title": "The attention‐based view: Review and conceptual extension towards situated attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2a564dfbf107652a850",
+        "title": "Boosting Crowd Counting via Multifaceted Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05f1a933f12d9affaf65",
+        "title": "GhostNetV2: Enhance Cheap Operation with Long-Range Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ffa10d77e737ab967fc",
+        "title": "FLatten Transformer: Vision Transformer using Focused Linear Attention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4dc54c3c8c0662fa80f5",
+        "title": "CrossFormer++: A Versatile Vision Transformer Hinging on Cross-Scale Attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c738b825e24c7531c80",
+        "title": "DCSAU-Net: A deeper and more compact split-attention U-Net for medical image segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6606e39c7f91d1aa144d",
+        "title": "Rethinking Mobile Block for Efficient Attention-based Models",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e021b8f9bc2970bbda87",
+        "title": "Attention Concatenation Volume for Accurate and Efficient Stereo Matching",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_48a83bf1a144b436bcdb",
+        "title": "AAU-Net: An Adaptive Attention U-Net for Breast Lesions Segmentation in Ultrasound Images",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_591ce420c10e9ffb7f6c",
+        "title": "Polarized self-attention: Towards high-quality pixel-wise mapping",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90a980ef15ee25a59920",
+        "title": "Interpretable bilinear attention network with domain adaptation improves drug–target prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1488b0c3722e61d97a97",
+        "title": "Pupillometry as an integrated readout of distinct attentional networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d697a5699ede7961a66",
+        "title": "EPSANet: An Efficient Pyramid Squeeze Attention Block on Convolutional Neural Network",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_efdcd53d03c6778370eb",
+        "title": "SCSA: Exploring the synergistic effects between spatial and channel attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_120e56b44c5c34ff6e94",
+        "title": "TransAttUnet: Multi-Level Attention-Guided U-Net With Transformer for Medical Image Segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ccea4f127818099538b1",
+        "title": "Visual attention methods in deep learning: An in-depth survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e129811a4f28f381958",
+        "title": "YOLOv12: Attention-Centric Real-Time Object Detectors",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22f08588699355980c83",
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3ee5b9fe1679fd50282",
+        "title": "Transformer Tracking with Cyclic Shifting Window Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83c7d30bed75f71a2ba1",
+        "title": "MALUNet: A Multi-Attention and Light-weight UNet for Skin Lesion Segmentation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30ee3b147ef48591304b",
+        "title": "MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd8ea2467fd79dfd9b79",
+        "title": "Learning attention-guided pyramidal features for few-shot fine-grained recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc09be8b709940aad351",
+        "title": "SwinBERT: End-to-End Transformers with Sparse Attention for Video Captioning",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e355b070063ad3752a38",
+        "title": "A Lightweight YOLOv8 Tomato Detection Algorithm Combining Feature Enhancement and Attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8d132288c6d23c00e74",
+        "title": "EfficientViT: Lightweight Multi-Scale Attention for High-Resolution Dense Prediction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50738507de5475659056",
+        "title": "AASIST: Audio Anti-Spoofing Using Integrated Spectro-Temporal Graph Attention Networks",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71f4a5c2b53c80e09289",
+        "title": "Interior Attention-Aware Network for Infrared Small Target Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_714fe271208b4a342fef",
+        "title": "Attention based spatiotemporal graph attention networks for traffic flow forecasting",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8382d81b04c27443948",
+        "title": "LiConvFormer: A lightweight fault diagnosis framework using separable multiscale convolution and broadcast self-attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_548e9ceb77cea8670d69",
+        "title": "How to Do Nothing: Resisting the Attention Economy",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab6fd9406d5540b4467b",
+        "title": "Graph Attention Networks: A Comprehensive Review of Methods and Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_586f9711dab48ab29d61",
+        "title": "Dual Cross-Attention for medical image segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d43b5491a45bb8bfc32e",
+        "title": "DCdetector: Dual Attention Contrastive Representation Learning for Time Series Anomaly Detection",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5dae4286d9f1bddae185",
+        "title": "STAnet: A Spatiotemporal Attention Network for Decoding Auditory Spatial Attention From EEG",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb9f5ed661c16b07da7e",
+        "title": "FANet: A Feedback Attention Network for Improved Biomedical Image Segmentation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b53215dd73c83e6e046",
+        "title": "Channel attention & temporal attention based temporal convolutional network: A dual attention framework for remaining useful life prediction of the aircraft engines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f749da3e12b57c96f8f8",
+        "title": "Attention mechanism in intelligent fault diagnosis of machinery: A review of technique and application",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9fb95017935465f8fe5",
+        "title": "The minimum land area requiring conservation attention to safeguard biodiversity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_403bab4fee6496c36239",
+        "title": "Transformer-based attention network for stock movement prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a62ee762ad6e687c0cf",
+        "title": "Wayformer: Motion Forecasting via Simple & Efficient Attention Networks",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1d6eaf5cb0b44c162fe",
+        "title": "An index of cryptocurrency environmental attention (ICEA)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dcf7e8039e337ca0ed7b",
+        "title": "The updated Consolidated Framework for Implementation Research based on user feedback",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72274e45c04e2ece0519",
+        "title": "Exploring the Behavior of Users With Attention-Deficit/Hyperactivity Disorder on Twitter: Comparative Analysis of Tweet Content and User Interactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51dc93ee04715ecf6b48",
+        "title": "Does visual attention help? Towards better understanding and predicting users’ good abandonment behavior in mobile search",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3281e6f091a971397a14",
+        "title": "LSAB: User Behavioral Pattern Modeling in Sequential Recommendation by Learning Self-Attention Bias",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c834d9e9205e8c70b520",
+        "title": "EulerFormer: Sequential User Behavior Modeling with Complex Vector Attention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28000a5e68ff9e6a9e88",
+        "title": "A multi-model attention based CNN-BiLSTM model for personality traits prediction based on user behavior on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f73943fbcc951be2c20d",
+        "title": "Sequential Recommendation via Stochastic Self-Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27b26823e0e97051e03f",
+        "title": "Modeling user micro-behaviors and original interest via Adaptive Multi-Attention Network for session-based recommendation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe320b1cdbe51f9b0d34",
+        "title": "Multi-Behavior Hypergraph-Enhanced Transformer for Sequential Recommendation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c534e94ee58859d979ff",
+        "title": "Effects of Anthropomorphic Design Cues of Chatbots on Users’ Perception and Visual Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5b3f06f4a86e58dace5",
+        "title": "AI in the hands of imperfect users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59c1e2522d04741554e1",
+        "title": "UsbVisdaNet: User Behavior Visual Distillation and Attention Network for Multimodal Sentiment Classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a4a0ad7a95b061528b1",
+        "title": "Time-Aware Attention-Based Gated Network for Credit Card Fraud Detection by Extracting Transactional Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb0f085990f80fd9c0a1",
+        "title": "Artificial Intelligence–Based Chatbots for Promoting Health Behavioral Changes: Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dd0fe85e78d6bd1dff76",
+        "title": "Hybrid CNN Based Attention with Category Prior for User Image Behavior Modeling",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e6fcafcd43aa10c8f52",
+        "title": "AutoAttention: Automatic Field Pair Selection for Attention in User Behavior Modeling",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3d57a616d08abb2b23b",
+        "title": "What motivates users' viewing and purchasing behavior motivations in live streaming: A stream-streamer-viewer perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d88f55b33b94b06dff2",
+        "title": "Predicting Pedestrian Crossing Intention With Feature Fusion and Spatio-Temporal Attention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee03dfc0a2252559d901",
+        "title": "PS-SA: An Efficient Self-Attention via Progressive Sampling for User Behavior Sequence Modeling",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aaeef09941a421c2ec61",
+        "title": "Social media user behavior analysis applied to the fashion and apparel industry in the big data era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef46e9a9d8679d6dd5f8",
+        "title": "TWIN: TWo-stage Interest Network for Lifelong User Behavior Modeling in CTR Prediction at Kuaishou",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1b3c9ed8680f9711550",
+        "title": "Sampling Is All You Need on Modeling Long-Term User Behaviors for CTR Prediction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f678f31223d7bdf7cea",
+        "title": "Frequency Enhanced Hybrid Attention Network for Sequential Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_840e1ac1d36e2f099ad5",
+        "title": "Real-Time Attention Monitoring System for Classroom: A Deep Learning Approach for Student’s Behavior Recognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_840f9a2df0c2a934e6c6",
+        "title": "Driver Behavior Classification: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_16e8ba6b4ebb98df08e3",
+        "title": "Multi-View Graph Convolutional Network for Multimedia Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9edfcdac5b8b1e103e9f",
+        "title": "Exploring the factors influencing consumer engagement behavior regarding short-form video advertising: A big data perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63b9d37fb73637b0d1bc",
+        "title": "Learning Transactional Behavioral Representations for Credit Card Fraud Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9eca5c869ff44f199e5",
+        "title": "K-Means Clustering Approach for Intelligent Customer Segmentation Using Customer Purchase Behavior Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b6dd47dd497e04fbbf0",
+        "title": "The impact of smartphone deprivation on attentional bias in problematic smartphone users: Evidence from behavioral and physiological perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebd93bf4f28c2ddf8cf7",
+        "title": "Toward User-Driven Algorithm Auditing: Investigating users’ strategies for uncovering harmful algorithmic behavior",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e32ef6c5bcf9549324e6",
+        "title": "AUBRec: adaptive augmented self-attention via user behaviors for sequential recommendation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73874414c155b7a87962",
+        "title": "My AI Friend: How Users of a Social Chatbot Understand Their Human–AI Friendship",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26fca77c27d708a2bdb0",
+        "title": "Attention marketing in fragmented entertainment: How advertising embedding influences purchase decision in short-form video apps",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e597447d958224877be9",
+        "title": "You Are How You Use Apps: User Profiling Based on Spatiotemporal App Usage Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a787db78c75612753f40",
+        "title": "Factors Influencing Continued Usage Behavior on Mobile Health Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6ec295104b4796d7896",
+        "title": "Personalized Federated Learning With Model-Contrastive Learning for Multi-Modal User Modeling in Human-Centric Metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54fe48cf8ccb8e0e4c41",
+        "title": "The i-frame and the s-frame: How focusing on individual-level solutions has led behavioral public policy astray",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2929ade9c4b77a643c7",
+        "title": "Two new Later Stone Age sites from the Final Pleistocene in the Falémé Valley, eastern Senegal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80504405009653bff5df",
+        "title": "Multi-Behavior Sequential Recommendation with Temporal Graph Transformer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd0c3877e3334807055b",
+        "title": "Multi-Behavior Graph Neural Networks for Recommender System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_236d0e8f95c7a674f848",
+        "title": "Roles, Users, Benefits, and Limitations of Chatbots in Health Care: Rapid Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_906921ca755e2ca532a6",
+        "title": "Multi-behavior Self-supervised Learning for Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_133e8c13d86521ba1151",
+        "title": "On the User Behavior Leakage from Recommender System Exposure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_097ab00e3c7ca65d554e",
+        "title": "Portrait of decentralized application users: an overview based on large-scale Ethereum data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_492f62ad1c5f7a277e98",
+        "title": "A Systematic Literature Review of User Trust in AI-Enabled Systems: An HCI Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fca1e892f8c2a1535262",
+        "title": "Personalized Behavior-Aware Transformer for Multi-Behavior Sequential Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0773b9b25a91ee57a2f9",
+        "title": "A neuromarker for drug and food craving distinguishes drug users from non-users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cb59f663c997525c087",
+        "title": "A survey of Behavior Trees in robotics and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cede7489a609f3597e9d",
+        "title": "Information Propagation Prediction Based on Spatial–Temporal Attention and Heterogeneous Graph Convolutional Networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f154e4b5e96eb258e72",
+        "title": "FeedRec: News Feed Recommendation with Various User Feedbacks",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32c0b1981c2a7b920379",
+        "title": "RAG-based explainable prediction of road users behaviors for automated driving using knowledge graphs and large language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c0fd5ce867c2a15c4a6",
+        "title": "The Effect of Social Media User Behaviors on Security and Privacy Threats",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26753eceeb7f3543e8fc",
+        "title": "Understanding mobile e-wallet consumers’ intentions and user behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9ff66299f7a6f847a64",
+        "title": "What Drives Users to Adopt a Digital Museum? A Case of Virtual Exhibition Hall of National Costume Museum",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27764fb75c4c62687bc3",
+        "title": "Sentiment analysis using Twitter data: a comparative application of lexicon- and machine-learning-based approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8c9168e06173bfb8ace",
+        "title": "An Overview of Chatbot-Based Mobile Mental Health Apps: Insights From App Description and User Reviews",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9286947689a7106393c2",
+        "title": "Towards Understanding the Dark Patterns That Steal Our Attention",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7161671ac5d2aaccd0c",
+        "title": "GUGEN: Global User Graph Enhanced Network for Next POI Recommendation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79c1224dae1ed62198e0",
+        "title": "The User Experience of ChatGPT: Findings from a Questionnaire Study of Early Users",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5818b93e76d9d9c0614",
+        "title": "Co-Writing with Opinionated Language Models Affects Users’ Views",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b15b520fecb548428865",
+        "title": "Pedestrian Behavior Prediction Using Deep Learning Methods for Urban Scenarios: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba0f72238edd7148686c",
+        "title": "Multi-View Enhanced Graph Attention Network for Session-Based Music Recommendation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_840d110ee8dd34e7cb77",
+        "title": "The Eye in Extended Reality: A Survey on Gaze Interaction and Eye Tracking in Head-worn Extended Reality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce1f3dc4f82f873385f6",
+        "title": "Reading Between the Lines: Modeling User Behavior and Costs in AI-Assisted Programming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_031d9d8848b079d14e8c",
+        "title": "The Influences of Virtual Reality Shopping Characteristics on Consumers’ Impulse Buying Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c5fedd499cee5fab900",
+        "title": "Neural Collaborative Learning for User Preference Discovery From Biased Behavior Sequences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ce70b0deb9a218c80c1",
+        "title": "News Recommendation with Candidate-aware User Modeling",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_490d9eb6a8eee76b3f47",
+        "title": "Representation Learning with Large Language Models for Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2cbd1685fb0ea7f6a69",
+        "title": "A longitudinal study on artificial intelligence adoption: understanding the drivers of ChatGPT usage behavior change in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c23a509d6b42b4369da5",
+        "title": "A literature review on users' behavioral intention toward chatbots' adoption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d05364878229267e93a3",
+        "title": "Behavioral paradigms for studying pro-environmental behavior: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4eca442a37f17cbf321",
+        "title": "Behavior-Contextualized Item Preference Modeling for Multi-Behavior Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_811689a3c77de9fd2d38",
+        "title": "Impacts of Personal Characteristics on User Trust in Conversational Recommender Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da5d82656e967620b4c3",
+        "title": "Would you go invisible on social media? An empirical study on the antecedents of users' lurking behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3aed0ec8caebe622405d",
+        "title": "TWIN V2: Scaling Ultra-Long User Behavior Sequence Modeling for Enhanced CTR Prediction at Kuaishou",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0f019383b9ad622dec6",
+        "title": "Multi-user centered design: acceptance, user experience, user research and user testing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eff7d0509c1321b47a6b",
+        "title": "Path Modeling of Visual Attention, User Perceptions, and Behavior Change Intentions in Conversations With Embodied Agents in VR",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8eab5c82e2e7d41c48e8",
+        "title": "Analysis and modeling of changes in online shopping behavior due to Covid-19 pandemic: A Florida case study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d05e1f6868e48c6be10",
+        "title": "Attention Mechanism Model Combined With Adversarial Learning for E-Commerce User Behavior Classification and Personality Recommendation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73f3bf6b674d5bd70f57",
+        "title": "“Chatting with ChatGPT”: Analyzing the factors influencing users' intention to Use the Open AI's ChatGPT using the UTAUT model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8acdc4edaf1ce5c8cab6",
+        "title": "Deep CNN-LSTM With Self-Attention Model for Human Activity Recognition Using Wearable Sensor",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60010d182079c909d30b",
+        "title": "User Behavior Clustering Based Method for EV Charging Forecast",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b88c22798d68e3444fd",
+        "title": "De-Anchor: Mitigating Attention Polarization for Lifelong User Behavior Modeling in Click-Through Rate Prediction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca1fcad01e62d48444f4",
+        "title": "HAN: Hierarchical Attention Network for Learning Latent Context-Aware User Preferences With Attribute Awareness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0635eaa5c58340c59c79",
+        "title": "Towards Human-Centered Explainable AI: A Survey of User Studies for Model Explanations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9609b1e961d7b79d13f9",
+        "title": "Research on elderly users' intentions to accept wearable devices based on the improved UTAUT model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d559bdcfcd382891e2de",
+        "title": "Natural behavior is the language of the brain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32c969171931fcee476f",
+        "title": "Users’ emotional and behavioral responses to deepfake videos of K-pop idols",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad2923dcee430cb3762e",
+        "title": "Does artificial intelligence (AI) boost digital banking user satisfaction? Integration of expectation confirmation model and antecedents of artificial intelligence enabled digital banking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7af470622c329f74d1c4",
+        "title": "Attention-guided graph convolutional network for multi-behavior recommendation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e40509b1b1596968d504",
+        "title": "How transparency modulates trust in artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75d7c37d33e0966465d4",
+        "title": "A novel intelligent control method for domestic refrigerators based on user behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c445c32b417085b14aa",
+        "title": "",
+        "reasons": [
+          "missing_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0088a399433e2dfaa8e4",
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d822a81ce51c4d3013c9",
+        "title": "Attention is not all you need: the complicated case of ethically using large language models in healthcare and medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc5af403e8fc980e97d3",
+        "title": "The global prevalence of attention deficit hyperactivity disorder in children and adolescents: An umbrella review of meta-analyses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f31b40e5cc4dbb50cea5",
+        "title": "Aggregate Confusion: The Divergence of ESG Ratings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_7d0f78670e366ac17195",
+        "title": "User incentive mechanism in blockchain-based online community: An empirical study of steemit",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_attention",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 318,
+      "deduplicated_count": 21,
+      "hard_gate_pass_count": 21,
+      "eligible_count": 0,
+      "boundary_count": 9,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "attention"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "attention user behavior"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(attention) OR (attention in user behavior)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 18
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "attention",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "attention user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 3,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(attention) OR (attention in user behavior)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 3,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36deaa9c5c59a81dfaac",
+        "incoming_paper_id": "paper_36deaa9c5c59a81dfaac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_705a49e7f0b1c5f5d6a6",
+        "incoming_paper_id": "paper_705a49e7f0b1c5f5d6a6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de7f369c49264708f812",
+        "incoming_paper_id": "paper_de7f369c49264708f812"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36deaa9c5c59a81dfaac",
+        "incoming_paper_id": "paper_36deaa9c5c59a81dfaac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b7a2bf5923de2476634e",
+        "incoming_paper_id": "paper_b7a2bf5923de2476634e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0d8c976eb30b8f2d56d7",
+        "incoming_paper_id": "paper_0d8c976eb30b8f2d56d7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_122986a9c57b6a703c86",
+        "incoming_paper_id": "paper_122986a9c57b6a703c86"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_863d8eaf63ee194534f0",
+        "incoming_paper_id": "paper_863d8eaf63ee194534f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26e8f8ac1b32a361884a",
+        "incoming_paper_id": "paper_26e8f8ac1b32a361884a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_398cbe60fa6901d3b4ad",
+        "incoming_paper_id": "paper_398cbe60fa6901d3b4ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_42287c23c45720952be8",
+        "incoming_paper_id": "paper_42287c23c45720952be8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17eab01edda061984268",
+        "incoming_paper_id": "paper_17eab01edda061984268"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5fcc99c92f855d72750a",
+        "incoming_paper_id": "paper_5fcc99c92f855d72750a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aca0ca0b3f56bfbf5294",
+        "incoming_paper_id": "paper_aca0ca0b3f56bfbf5294"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f73943fbcc951be2c20d",
+        "incoming_paper_id": "paper_f73943fbcc951be2c20d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec1cd6daf171259431c0",
+        "incoming_paper_id": "paper_ec1cd6daf171259431c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f79cc0f5636e97c2885a",
+        "incoming_paper_id": "paper_f79cc0f5636e97c2885a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f1f85f4982c18dc84fe1",
+        "incoming_paper_id": "paper_f1f85f4982c18dc84fe1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24af0e1485266ca97321",
+        "incoming_paper_id": "paper_24af0e1485266ca97321"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_269714dc1e76a4581bb4",
+        "incoming_paper_id": "paper_269714dc1e76a4581bb4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9eb7a2dbf2e0be9dddfd",
+        "incoming_paper_id": "paper_9eb7a2dbf2e0be9dddfd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20cc7c789a406a7362ab",
+        "incoming_paper_id": "paper_20cc7c789a406a7362ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_705a49e7f0b1c5f5d6a6",
+        "incoming_paper_id": "paper_705a49e7f0b1c5f5d6a6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6bccce4c7b041136e99a",
+        "incoming_paper_id": "paper_6bccce4c7b041136e99a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9cb90f07d0e86cbf51ad",
+        "incoming_paper_id": "paper_9cb90f07d0e86cbf51ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d88f55b33b94b06dff2",
+        "incoming_paper_id": "paper_4d88f55b33b94b06dff2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f678f31223d7bdf7cea",
+        "incoming_paper_id": "paper_5f678f31223d7bdf7cea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fc0b5517731969e94a5",
+        "incoming_paper_id": "paper_4fc0b5517731969e94a5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_93d252778c58b72c3f95",
+        "incoming_paper_id": "paper_93d252778c58b72c3f95"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74269a2acaf5a46cc233",
+        "incoming_paper_id": "paper_74269a2acaf5a46cc233"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_67402aaffff25e325749",
+        "incoming_paper_id": "paper_67402aaffff25e325749"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e87f4ecbceedd831bdf1",
+        "incoming_paper_id": "paper_e87f4ecbceedd831bdf1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29e00e43369533262a0a",
+        "incoming_paper_id": "paper_29e00e43369533262a0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_98ab1436cf3e28ac3934",
+        "incoming_paper_id": "paper_98ab1436cf3e28ac3934"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6565fea9741dc1052761",
+        "incoming_paper_id": "paper_6565fea9741dc1052761"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0f0606f01363f3ad04a4",
+        "incoming_paper_id": "paper_0f0606f01363f3ad04a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e0edf64559a3920f6ce1",
+        "incoming_paper_id": "paper_e0edf64559a3920f6ce1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e163d18fa21947b4869",
+        "incoming_paper_id": "paper_2e163d18fa21947b4869"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b2637878e8b8a634533b",
+        "incoming_paper_id": "paper_b2637878e8b8a634533b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00c22211d4f3697d9b1e",
+        "incoming_paper_id": "paper_00c22211d4f3697d9b1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_085596b60d547319820c",
+        "incoming_paper_id": "paper_085596b60d547319820c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53588c88b91edd35e182",
+        "incoming_paper_id": "paper_53588c88b91edd35e182"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df229865c3aadce412d1",
+        "incoming_paper_id": "paper_df229865c3aadce412d1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3a4a0ad7a95b061528b1",
+        "incoming_paper_id": "paper_3a4a0ad7a95b061528b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69378889f0fc31743297",
+        "incoming_paper_id": "paper_69378889f0fc31743297"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5db1efb6fc54c9d0e883",
+        "incoming_paper_id": "paper_5db1efb6fc54c9d0e883"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26fca77c27d708a2bdb0",
+        "incoming_paper_id": "paper_26fca77c27d708a2bdb0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_342269c0c1e3f33f269f",
+        "incoming_paper_id": "paper_342269c0c1e3f33f269f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_605978e06876a1addac8",
+        "incoming_paper_id": "paper_605978e06876a1addac8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e0abe40afe7bafbee2eb",
+        "incoming_paper_id": "paper_e0abe40afe7bafbee2eb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_52559a00188c6dd92a3a",
+        "incoming_paper_id": "paper_52559a00188c6dd92a3a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f9b911184aa9d1feba58",
+        "incoming_paper_id": "paper_f9b911184aa9d1feba58"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2f068f92fda9c8ffbbb5",
+        "incoming_paper_id": "paper_2f068f92fda9c8ffbbb5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_22f08588699355980c83",
+        "incoming_paper_id": "paper_22f08588699355980c83"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe5a66fdb88b5a02d3d6",
+        "incoming_paper_id": "paper_fe5a66fdb88b5a02d3d6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_16e8ba6b4ebb98df08e3",
+        "incoming_paper_id": "paper_16e8ba6b4ebb98df08e3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea8658ed8b3bc9318c68",
+        "incoming_paper_id": "paper_ea8658ed8b3bc9318c68"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4cb4aa5b42f5cdbefae9",
+        "incoming_paper_id": "paper_4cb4aa5b42f5cdbefae9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d338263c8111bdde36f",
+        "incoming_paper_id": "paper_8d338263c8111bdde36f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d555b228837f36698f06",
+        "incoming_paper_id": "paper_d555b228837f36698f06"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c6a65bef7d2faad5fd6",
+        "incoming_paper_id": "paper_1c6a65bef7d2faad5fd6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3fde1e094c0c8f655fe9",
+        "incoming_paper_id": "paper_3fde1e094c0c8f655fe9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95739c65dfcee47d65da",
+        "incoming_paper_id": "paper_95739c65dfcee47d65da"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_548e9ceb77cea8670d69",
+        "incoming_paper_id": "paper_548e9ceb77cea8670d69"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_295a787a6a65777f661c",
+        "incoming_paper_id": "paper_295a787a6a65777f661c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cede7489a609f3597e9d",
+        "incoming_paper_id": "paper_cede7489a609f3597e9d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9721878a696551daf19d",
+        "incoming_paper_id": "paper_9721878a696551daf19d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da8bef0ebe9d1939159e",
+        "incoming_paper_id": "paper_da8bef0ebe9d1939159e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe320b1cdbe51f9b0d34",
+        "incoming_paper_id": "paper_fe320b1cdbe51f9b0d34"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0018e54e4bc232143c86",
+        "incoming_paper_id": "paper_0018e54e4bc232143c86"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e38fabceed46ab182be0",
+        "incoming_paper_id": "paper_e38fabceed46ab182be0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a03ab14a3ccde8f3701",
+        "incoming_paper_id": "paper_6a03ab14a3ccde8f3701"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9286947689a7106393c2",
+        "incoming_paper_id": "paper_9286947689a7106393c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6606e39c7f91d1aa144d",
+        "incoming_paper_id": "paper_6606e39c7f91d1aa144d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2a564dfbf107652a850",
+        "incoming_paper_id": "paper_a2a564dfbf107652a850"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8c738b825e24c7531c80",
+        "incoming_paper_id": "paper_8c738b825e24c7531c80"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1488b0c3722e61d97a97",
+        "incoming_paper_id": "paper_1488b0c3722e61d97a97"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e021b8f9bc2970bbda87",
+        "incoming_paper_id": "paper_e021b8f9bc2970bbda87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4dc54c3c8c0662fa80f5",
+        "incoming_paper_id": "paper_4dc54c3c8c0662fa80f5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_05f1a933f12d9affaf65",
+        "incoming_paper_id": "paper_05f1a933f12d9affaf65"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ffa10d77e737ab967fc",
+        "incoming_paper_id": "paper_7ffa10d77e737ab967fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e355b070063ad3752a38",
+        "incoming_paper_id": "paper_e355b070063ad3752a38"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90a980ef15ee25a59920",
+        "incoming_paper_id": "paper_90a980ef15ee25a59920"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e129811a4f28f381958",
+        "incoming_paper_id": "paper_7e129811a4f28f381958"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c3ee5b9fe1679fd50282",
+        "incoming_paper_id": "paper_c3ee5b9fe1679fd50282"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_591ce420c10e9ffb7f6c",
+        "incoming_paper_id": "paper_591ce420c10e9ffb7f6c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dc09be8b709940aad351",
+        "incoming_paper_id": "paper_dc09be8b709940aad351"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d697a5699ede7961a66",
+        "incoming_paper_id": "paper_3d697a5699ede7961a66"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83c7d30bed75f71a2ba1",
+        "incoming_paper_id": "paper_83c7d30bed75f71a2ba1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_efdcd53d03c6778370eb",
+        "incoming_paper_id": "paper_efdcd53d03c6778370eb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd8ea2467fd79dfd9b79",
+        "incoming_paper_id": "paper_bd8ea2467fd79dfd9b79"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_48a83bf1a144b436bcdb",
+        "incoming_paper_id": "paper_48a83bf1a144b436bcdb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_120e56b44c5c34ff6e94",
+        "incoming_paper_id": "paper_120e56b44c5c34ff6e94"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ccea4f127818099538b1",
+        "incoming_paper_id": "paper_ccea4f127818099538b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_840d110ee8dd34e7cb77",
+        "incoming_paper_id": "paper_840d110ee8dd34e7cb77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5dae4286d9f1bddae185",
+        "incoming_paper_id": "paper_5dae4286d9f1bddae185"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_30ee3b147ef48591304b",
+        "incoming_paper_id": "paper_30ee3b147ef48591304b"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

@@ -1,0 +1,2906 @@
+{
+  "direction_id": "topic_human_ai_teams",
+  "labels": {
+    "zh": "人机团队",
+    "en": "human-AI teams"
+  },
+  "input": {
+    "selected_direction_id": "topic_human_ai_teams",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 15594.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 37,
+  "eligible_count": 2,
+  "boundary_count": 21,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "human-AI teams"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "human-AI teams user behavior"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(human-AI teams) OR (human-AI teams in user behavior)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_human_ai_teams",
+      "research_direction": "human-AI teams",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "human-AI teams",
+      "aliases": [
+        "human-AI teams"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:172"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_human_ai_teams",
+        "labels": {
+          "zh": "人机团队",
+          "en": "human-AI teams"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "人机团队",
+          "human-AI teams",
+          "human-AI teams in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "human-AI teams",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "human-AI teams",
+            "\"human-AI teams\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "human-AI teams",
+            "human-AI teams user behavior"
+          ],
+          "crossref": [
+            "human-AI teams",
+            "人机团队"
+          ],
+          "dblp": [
+            "human-AI teams behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "human-AI teams",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "human-AI teams user behavior",
+          "(human-AI teams) OR (human-AI teams in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:172"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_5c4a72f111587e8c7e62",
+        "title": "Advancing Human-AI Complementarity: The Impact of User Expertise and Algorithmic Tuning on Joint Decision Making",
+        "abstract": "Human-AI collaboration for decision-making strives to achieve team performance that exceeds the performance of humans or AI alone. However, many factors can impact success of Human-AI teams, including a user’s domain expertise, mental models of an AI system, trust in recommendations, and more. This article reports on a study that examines users’ interactions with three simulated algorithmic models, all with equivalent accuracy rates but each tuned differently in terms of true positive and true negative rates. Our study examined user performance in a non-trivial blood vessel labeling task where participants indicated whether a given blood vessel was flowing or stalled. Users completed 140 trials across multiple stages, first without an AI and then with recommendations from an AI-Assistant. Although all users had prior experience with the task, their levels of proficiency varied widely. Our results demonstrated that while recommendations from an AI-Assistant can aid in users’ decision making, several underlying factors, including user base expertise and complementary human-AI tuning, significantly impact the overall team performance. First, users’ base performance matters, particularly in comparison to the performance level of the AI. Novice users improved, but not to the accuracy level of the AI. Highly proficient users were generally able to discern when they should follow the AI recommendation and typically maintained or improved their performance. Mid-performers, who had a similar level of accuracy to the AI, were most variable in terms of whether the AI recommendations helped or hurt their performance. Second, tuning an AI algorithm to complement users’ strengths and weaknesses also significantly impacted users’ performance. For example, users in our study were better at detecting flowing blood vessels, so when the AI was tuned to reduce false negatives (at the expense of increasing false positives), users were able to reject those recommendations more easily and improve in accuracy. Finally, users’ perception of the AI’s performance relative to their own performance had an impact on whether users’ accuracy improved when given recommendations from the AI. Overall, this work reveals important insights on the complex interplay of factors influencing Human-AI collaboration and provides recommendations on how to design and tune AI algorithms to complement users in decision-making tasks.",
+        "authors": [
+          "Kori Inkpen",
+          "Shreya Chappidi",
+          "Keri Mallari",
+          "Besmira Nushi",
+          "Divya Ramesh",
+          "Pietro Michelucci",
+          "Vani Mandava",
+          "Libuše Hannah Vepřek",
+          "Gabrielle Quinn"
+        ],
+        "year": 2023,
+        "publication_date": "2023-03-10",
+        "published_date": "2023-03-10",
+        "language": "en",
+        "doi": "10.1145/3534561",
+        "url": "https://doi.org/10.1145/3534561",
+        "official_url": "https://doi.org/10.1145/3534561",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 120,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10525",
+            "name": "Human-Automation Interaction and Safety",
+            "score": 0.9976000189781189
+          },
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.9896000027656555
+          },
+          {
+            "id": "https://openalex.org/T11636",
+            "name": "Artificial Intelligence in Healthcare and Education",
+            "score": 0.9750000238418579
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4323841539"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4323841539"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 75.57,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 85.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 75.57
+      },
+      {
+        "paper_id": "paper_036f1734e1515bf76ee9",
+        "title": "Would you trust an AI team member? Team trust in human– AI teams",
+        "abstract": "Abstract Given that AI is becoming an increasingly active participant in work teams, this study explores how team trust emerges in human–AI teams compared to human–human teams. Adopting a multi‐level approach, we conducted two experimental studies ( N Study1 = 247 two‐member teams and N Study2 = 106 three‐member teams, 828 individuals overall) and investigated how team composition (with AI or human team members) impacts interpersonal trust (affective and cognitive) and thus team trust. In two‐member teams, interpersonal trust via perceived trustworthiness and not via perceived similarity was lower in human–AI teams compared to human–human teams. Exploratory findings showed that team identification and cognitive interpersonal trust were also lower in two‐member human–AI teams than in human–human teams. However, in three‐member teams, we found no differences in team trust via interpersonal trust between the two team types. Instead, our findings revealed that perceived trustworthiness and perceived similarity increased interpersonal trust and, in turn, team trust for both team types. With this research, we showed that underlying theories and evidence of team trust in human‐only teams can enhance understanding of human–AI teams, though the results indicated certain differences that call for further investigation.",
+        "authors": [
+          "Eleni Georganta",
+          "Anna‐Sophie Ulfert"
+        ],
+        "year": 2024,
+        "publication_date": "2024-04-27",
+        "published_date": "2024-04-27",
+        "language": "en",
+        "doi": "10.1111/joop.12504",
+        "url": "https://doi.org/10.1111/joop.12504",
+        "official_url": "https://doi.org/10.1111/joop.12504",
+        "source_title": "Journal of Occupational and Organizational Psychology",
+        "journal": "Journal of Occupational and Organizational Psychology",
+        "source_issns": [
+          "0963-1798",
+          "2044-8325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 48,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10970",
+            "name": "Team Dynamics and Performance",
+            "score": 0.9988999962806702
+          },
+          {
+            "id": "https://openalex.org/T10525",
+            "name": "Human-Automation Interaction and Safety",
+            "score": 0.9771000146865845
+          },
+          {
+            "id": "https://openalex.org/T12594",
+            "name": "Collaboration in agile enterprises",
+            "score": 0.9348000288009644
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4395701788"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/joop.12504",
+        "provider_payload_refs": [
+          "https://openalex.org/W4395701788"
+        ],
+        "journal_id": "journal_044",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "PSYCHOLOGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 72.51,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.5,
+            "lexical_coverage": 50.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 84.33,
+            "recency": 60.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 72.51
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-AI teams",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 399021,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:34.470702+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3000.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-AI teams user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 138228,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:37.480811+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3859.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(human-AI teams) OR (human-AI teams in user behavior)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 394034,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:59:41.376149+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3265.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "human-AI teams",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:59:46.157298+00:00",
+        "duration_ms": 1406.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1391.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "human-AI teams",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:59:47.557073+00:00",
+        "duration_ms": 1235.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1235.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "human-AI teams",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:59:48.795466+00:00",
+        "duration_ms": 1218.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1218.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "人机团队",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:59:44.900613+00:00",
+        "duration_ms": 1250.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1250.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_e43b175d9f50b4099361",
+        "title": "The role of shared mental models in human-AI teams: a theoretical review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c84013efb15dd9808b7",
+        "title": "Social perception in Human-AI teams: Warmth and competence predict receptivity to AI teammates",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7ff761b25af948b1edd",
+        "title": "Defining human-AI teaming the human-centered way: a scoping review and network analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e32cfe510ab159c79382",
+        "title": "Ethics in human–AI teaming: principles and perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ba12273d7a7286db20e",
+        "title": "Adapt and overcome: Perceptions of adaptive autonomous agents for human-AI teaming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dda309e19c19e9faa1f9",
+        "title": "Investigating AI Teammate Communication Strategies and Their Impact in Human-AI Teams for Effective Teamwork",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e52bf0b38e9e0110642",
+        "title": "Shaping a multidisciplinary understanding of team trust in human-AI teams: a theoretical framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4410e11707ebc56526bd",
+        "title": "Towards Ethical AI: Empirically Investigating Dimensions of AI Ethics, Trust Repair, and Performance in Human-AI Teaming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_afc4f90d259113314887",
+        "title": "Integrating AI in organizations for value creation through Human-AI teaming: A dynamic-capabilities approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95222a1b96fd8425686f",
+        "title": "Examining the impact of varying levels of AI teammate influence on human-AI teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17eef971eded1ee58f78",
+        "title": "Humans as teammates: The signal of human–AI teaming enhances consumer acceptance of chatbots",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7befdeb6baa2684a6c3c",
+        "title": "An Agile New Research Framework for Hybrid Human-AI Teaming: Trust, Transparency, and Transferability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fced1aba160d293c5a56",
+        "title": "You Complete Me: Human-AI Teams and Complementary Expertise",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b87730c397f5ac9bb051",
+        "title": "Human-AI teams—Challenges for a team-centered AI at work",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_786b535bbd7c1e7d3a5c",
+        "title": "The Role of Adaptation in Collective Human–AI Teaming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fbfa9bc37436ca38024",
+        "title": "Decision Making Strategies and Team Efficacy in Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e15344b8f76b111d2ac",
+        "title": "Towards Human-AI Teaming to Mitigate Alert Fatigue in Security Operations Centres",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_897b12862f24f7b5e5de",
+        "title": "Applying HCAI in Developing Effective Human-AI Teaming: A Perspective from Human-AI Joint Cognitive Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_635065b1148db5739ecb",
+        "title": "Designing explainable AI to improve human-AI team performance: A medical stakeholder-driven scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bdc88d3bb4bdf8578be",
+        "title": "Human-AI teaming: leveraging transactive memory and speaking up for enhanced team effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fa93d5dba04fe4c1a18",
+        "title": "Understanding the Evolvement of Trust Over Time within Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_521a54781ab4526dfaea",
+        "title": "Human Factors Requirements for Human-AI Teaming in Aviation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db2dd896e08dc5b1f265",
+        "title": "Understanding the influence of AI autonomy on AI explainability levels in human-AI teams using a mixed methods approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3523c4a4f232d7855265",
+        "title": "Human-AI Teaming in Critical Care: A Comparative Analysis of Data Scientists’ and Clinicians’ Perspectives on AI Augmentation and Automation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9117168b3819641e7c4b",
+        "title": "Understanding the processes of trust and distrust contagion in Human–AI Teams: A qualitative approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5debf53b4ff52abae6af",
+        "title": "Elaborating Team Roles for Artificial Intelligence-based Teammates in Human-AI Collaboration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2970dadfa1c148b503cc",
+        "title": "Empirically Understanding the Potential Impacts and Process of Social Influence in Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e3668f6cd107cac0b58",
+        "title": "Communication in Human-AI Teaming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df79234f105fd9005879",
+        "title": "On the Utility of Prediction Sets in Human-AI Teams",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c392eec3fc95837a965",
+        "title": "I Know This Looks Bad, But I Can Explain: Understanding When AI Should Explain Actions In Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d677fefec7ba75d3b2f",
+        "title": "Human–machine teaming is key to AI adoption: clinicians’ experiences with a deployed machine learning system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b4689c2e7eff055973a",
+        "title": "Artificial Trust as a Tool in Human-AI Teams",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b760cdd4adce01ccd7",
+        "title": "Collective Intelligence in Human-AI Teams: A Bayesian Theory of Mind Approach",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_081eb242ee14e8fd06e7",
+        "title": "Toward a science of human–AI teaming for decision making: A complementarity framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68b62b3971236f505696",
+        "title": "Special Issue on Human-AI Teaming and Special Issue on AI in Healthcare",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1fc8f4abb9a76b58aeab",
+        "title": "Unraveling Human-AI Teaming: A Review and Outlook",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abd35252fa0f4f7aa735",
+        "title": "Trusting Autonomous Teammates in Human-AI Teams - A Literature Review",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7603ce964138c55aab03",
+        "title": "What you say vs what you do: Utilizing positive emotional expressions to relay AI teammate intent within human–AI teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c88b6c0534504cd184e",
+        "title": "Human-AI teaming in healthcare: 1 + 1 > 2?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d21480824c7dca85b534",
+        "title": "DDoD: Dual Denial of Decision Attacks on Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8052af78e2b7a94c4bd8",
+        "title": "AI Potentiality and Awareness: A Position Paper from the Perspective of Human-AI Teaming in Cybersecurity",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e4af622471ccd17a360f",
+        "title": "More than Task Performance: Developing New Criteria for Successful Human-AI Teaming Using the Cooperative Card Game Hanabi",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_135b7776d895fe444f88",
+        "title": "Human-AI Teams in Aviation: Considerations from Human Factors and Team Science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c5a7bc420112060db60",
+        "title": "Towards a reference software architecture for human-AI teaming in smart manufacturing",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_601e7df065d1e5073e49",
+        "title": "Foundations for Human-AI teaming for self-regulated learning with explainable AI (XAI)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e879d80f888769a9d326",
+        "title": "Forming Effective Human-AI Teams: Building Machine Learning Models that Complement the Capabilities of Multiple Experts",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46d2c3b65a02561035e5",
+        "title": "Modeling perceived information needs in human-AI teams: improving AI teammate utility and driving team cognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f38a1000c9962cda31cc",
+        "title": "Algorithmic loafing and mitigation strategies in Human-AI teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9c29e018bb75f2063b8",
+        "title": "Does AI at Work Increase Stress? Text Mining Social Media About Human–AI Team Processes and AI Control",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b84f25b0553befb4be7f",
+        "title": "When Teams Embrace AI: Human Collaboration Strategies in Generative Prompting in a Creative Design Task",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fbb0151fe45e43e1af28",
+        "title": "IMPACTS Homeostasis Trust Management System: Optimizing Trust in Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94f93b4d0dd09a41657e",
+        "title": "A Minecraft Based Simulated Task Environment for Human AI Teaming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f178b9aec0ab8cdeb0c9",
+        "title": "Supporting Human-AI Teams:Transparency, explainability, and situation awareness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ad531c5cbdf573b22e0",
+        "title": "Trust is Contagious: Social Influences in Human-Human-AI Team",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fab94aa4baed6836a4c7",
+        "title": "Human-Centered Team Training for Human-AI Teams: From Training with AI Tools to Training for AI Teammates",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_227f5bfb38c4916aa5a7",
+        "title": "A Cybersecurity Game to Probe Human-AI Teaming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c86b07d888cbe091c0b",
+        "title": "A Framework for Supporting Adaptive Human-AI Teaming in Air Traffic Control",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69b5dab273b101e70166",
+        "title": "Verbal vs. Visual: How Humans Perceive and Collaborate with AI Teammates Using Different Communication Modalities in Various Human-AI Team Compositions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1af2e3ed0156d52e692",
+        "title": "Human control of AI systems: from supervision to teaming",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1820b8622c91edeff8c",
+        "title": "Visual correspondence-based explanations improve AI robustness and human-AI team accuracy",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_621b562d16beeb7b70cf",
+        "title": "On the Effect of Information Asymmetry in Human-AI Teams",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d2646f5cd7acbecce3c",
+        "title": "Empirical Impacts of Independent and Collaborative Training on Task Performance and Improvement in Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b07b913224bd33c9dba3",
+        "title": "A 2 C: A modular multi-stage collaborative decision framework for human–AI teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_729210726d9df362e7e7",
+        "title": "Modeling Goal Alignment in Human-AI Teaming: A Dynamic Game Theory Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c5d4c8e3242a251bea5",
+        "title": "Human AI Teaming for Coronary CT Angiography Assessment: Impact on Imaging Workflow and Diagnostic Accuracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cb45b27b40ccf418532b",
+        "title": "The National Academies Board on Human-Systems Integration (BOHSI) Panel: Human-AI Teaming: Research Frontiers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25de1994efc9745c06a4",
+        "title": "The Effect of AI Teammate Ethicality on Trust Outcomes and Individual Performance in Human-AI Teams",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6679663e60a761c763b4",
+        "title": "Towards an Operational Design Domain for Safe Human-AI Teaming in the Field of AI-Based Air Traffic Controller Operations",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "title": "Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a7432b05e6047130119",
+        "title": "Mutually beneficial decision making in Human-AI teams: Understanding soldier’s perception and expectations from AI teammates in human-AI teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_efcccb10764ae87fae8a",
+        "title": "A Human Centric Design Approach for Future Human-AI Teams in Aviation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d00fd6b9c220d211ce0",
+        "title": "Writing with generative AI and human-machine teaming: Insights and recommendations from faculty and students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2d936976f82b7b5fb16",
+        "title": "Empowering human-AI teams via Intentional Behavioral Synchrony",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1601111409c2d6166813",
+        "title": "Accelerated experimental design using a human–AI teaming framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c4c83769f20b874b4751",
+        "title": "Human-AI Teams' Impact on Organizations - A Review",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c212153a6f9a39c87a8",
+        "title": "AI-teaming: Redefining collaboration in the digital era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c10c13a7078a007e8ad3",
+        "title": "Measuring meaningful human control in human–AI teaming: effects of team design in AI-assisted pandemic triage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e03d626efecbe50887b4",
+        "title": "Challenges and opportunities when bringing machines onto the team: Human-AI teaming and flood evacuation decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c42763c8c892b2e1c83",
+        "title": "Augmenting human innovation teams with artificial intelligence: Exploring transformer‐based language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84f1f634bab7e8c1a4e3",
+        "title": "HMIway-env: A Framework for Simulating Behaviors and Preferences to Support Human-AI Teaming in Driving",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d2083fe63a17b5d6cef",
+        "title": "Agent Teaming Situation Awareness (ATSA): A Situation Awareness Framework for Human-AI Teaming",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e40509b1b1596968d504",
+        "title": "How transparency modulates trust in artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae384d25d24b21b488aa",
+        "title": "Understanding Human-AI Teaming Dynamics through Gaming Environments",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e7702fea02faf0001b4",
+        "title": "The complex relationship of AI ethics and trust in human–AI teaming: insights from advanced real-world subject matter experts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_905dde94b881f0037975",
+        "title": "Human Systems Integration of Human-AI Teaming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff467daef1ebabcccebe",
+        "title": "AFSD-Physics: Exploring the governing equations of temperature evolution during additive friction stir deposition by a human-AI teaming approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a7f19a4becf78045474",
+        "title": "Introducing Human–AI Teaming",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a411887ee05ba380835",
+        "title": "Teaming Up with an AI: Exploring Human–AI Collaboration in a Writing Scenario with ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bdf3a6a353d140ffea9f",
+        "title": "JSwarm: A Jingulu-Inspired Human-AI-Teaming Language for Context-Aware Swarm Guidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e1f6ad178a91324acf1",
+        "title": "Navigating AI Convergence in Human–Artificial Intelligence Teams: A Signaling Theory Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a818793ea5b42b6c1cf",
+        "title": "Interaction Configurations and Prompt Guidance in Conversational AI for Question Answering in Human-AI Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2de64d0e77a2853e205",
+        "title": "Collective Intelligence in Human-AI Teams: A Bayesian Theory of Mind Approach",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79186eb85a30ffe7f076",
+        "title": "Idle Minds: The Role of Social Loafing in Human-AI Teams",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0887d9b5527c6e79b609",
+        "title": "AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9be6e886a18ccfd518b3",
+        "title": "Generative AI at Work",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e878b1d7c8300c068aef",
+        "title": "Artificial intelligence and knowledge management: A partnership between human and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3af65bd71b12a425e55a",
+        "title": "Artificial intelligence (AI) applications for marketing: A literature-based study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ab79855718660ca0a76f",
+        "title": "The Situation Awareness Framework for Explainable AI (SAFE-AI) and Human Factors Considerations for XAI Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54855aa5a37cc0b1d6",
+        "title": "Human-AI collaboration patterns in AI-assisted academic writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1188582226ca19e0e2fe",
+        "title": "AI-Based Modeling: Techniques, Applications and Research Issues Towards Automation, Intelligent and Smart Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0635eaa5c58340c59c79",
+        "title": "Towards Human-Centered Explainable AI: A Survey of User Studies for Model Explanations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d3e2c9cbc11934cec88",
+        "title": "Measures for explainable AI: Explanation goodness, user satisfaction, mental models, curiosity, trust, and human-AI performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1dbea14311dff30bee7",
+        "title": "Human-in-the-loop machine learning: a state of the art",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_492f62ad1c5f7a277e98",
+        "title": "A Systematic Literature Review of User Trust in AI-Enabled Systems: An HCI Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cb59f663c997525c087",
+        "title": "A survey of Behavior Trees in robotics and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8c5045b1fd5641ec3b0",
+        "title": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848dae12570bc474dbb9",
+        "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f04c4683c38893e211a",
+        "title": "Ethical and regulatory challenges of AI technologies in healthcare: A narrative review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f9676ddf92d71b9fba",
+        "title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8d379b2a89e319fc87",
+        "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b80c47aaba1d36cff47",
+        "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03f9df9a88501c349eaa",
+        "title": "Towards hybrid human‐AI learning technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb0f085990f80fd9c0a1",
+        "title": "Artificial Intelligence–Based Chatbots for Promoting Health Behavioral Changes: Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbf67012bbabae4decbd",
+        "title": "Fusing Blockchain and AI With Metaverse: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe56f17223836ab2847d",
+        "title": "\"Help Me Help the AI\": Understanding How Explainability Can Support Human-AI Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17115a9d63acce743525",
+        "title": "Thinking responsibly about responsible AI and ‘the dark side’ of AI",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_1b2cd102bad7a52cd974",
+        "title": "Humans versus AI: whether and why we prefer human-created compared to AI-created artwork",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30a541d41d5b6192a73c",
+        "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2929ade9c4b77a643c7",
+        "title": "Two new Later Stone Age sites from the Final Pleistocene in the Falémé Valley, eastern Senegal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca572f4c94c009c20227",
+        "title": "The promise and challenges of generative AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ff5ca6ab618199a5744",
+        "title": "Bias in medical AI: Implications for clinical decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58308fcd9d70dd3f5b1d",
+        "title": "Improving Human-AI Collaboration With Descriptions of AI Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e2890b9378f8a0aefc1",
+        "title": "CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa24034355e8ee29679f",
+        "title": "Generative AI in Medicine and Healthcare: Promises, Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43baa29368e27b8b02cf",
+        "title": "Unreal influence: leveraging AI in influencer marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0eed3792c0b4d736ff7",
+        "title": "Human–AI Interactions in Public Sector Decision Making: “Automation Bias” and “Selective Adherence” to Algorithmic Advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d73c432c93fd41dd6bb2",
+        "title": "Explainable medical imaging AI needs human-centered design: guidelines and evidence from a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0206a9ba547317af13bb",
+        "title": "What is Human-Centered about Human-Centered AI? A Map of the Research Landscape",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20160133d6ba6c4ef9cb",
+        "title": "Rethinking the entwinement between artificial intelligence and human learning: What capabilities do learners need for a world with AI?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0166367739436637b5d9",
+        "title": "Empowering educators to be AI-ready",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ffe78bd4279d6bfce4c",
+        "title": "Human-Computer Interaction in Customer Service: The Experience with AI Chatbots—A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_970343670146fab154d2",
+        "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5b3f06f4a86e58dace5",
+        "title": "AI in the hands of imperfect users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1f9f1abaa578c2482440",
+        "title": "Explainable AI for Healthcare 5.0: Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2053ee172b524c1b36f",
+        "title": "The impact of Generative AI (GenAI) on practices, policies and research direction in education: a case of ChatGPT and Midjourney",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19317fadc61ecc981ac3",
+        "title": "Artificial Intelligence (AI) and Internet of Medical Things (IoMT) Assisted Biomedical Systems for Intelligent Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46007005a1d69c78a9cd",
+        "title": "Influencing human–AI interaction by priming beliefs about AI can increase perceived trustworthiness, empathy and effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebd8fcb116c757a9be4b",
+        "title": "A Survey on the Convergence of Edge Computing and AI for UAVs: Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f89b3da545f558b9fde0",
+        "title": "Synthetic Lies: Understanding AI-Generated Misinformation and Evaluating Algorithmic and Human Solutions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7dbf541f804324bc06de",
+        "title": "Can Generative AI improve social science?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00a0dcdd2b2b9a44d193",
+        "title": "The Ethical Implications of Artificial Intelligence (AI) For Meaningful Work",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ffaeb7a3487cac33251",
+        "title": "Human-AI Ensembles: When Can They Work?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e863ba6ab72378024ccd",
+        "title": "AI-Driven Cloud Security: Examining the Impact of User Behavior Analysis on Threat Detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d96aabf7f85a1170da73",
+        "title": "Regulating ChatGPT and other Large Generative AI Models",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bb0fcc0a5b071204f22",
+        "title": "The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2f5c0824f0421fac504",
+        "title": "Effects of Explainable Artificial Intelligence on trust and human behavior in a high-risk decision task",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8da6e08a206b4654a3ca",
+        "title": "The Impact of Imperfect XAI on Human-AI Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b3dc1c634b5546e2aa8",
+        "title": "Do AI chatbots improve students learning outcomes? Evidence from a meta‐analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2732780006c768ed4cf9",
+        "title": "Towards Intelligent-TPACK: An empirical study on teachers’ professional knowledge to ethically integrate artificial intelligence (AI)-based tools into education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a82dbd3a1daeec4c7cf",
+        "title": "Six Human-Centered Artificial Intelligence Grand Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0fa83b6b9f94ca981ae7",
+        "title": "Teachers’ AI digital competencies and twenty-first century skills in the post-pandemic world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_530c8fac610ba4e9c9d2",
+        "title": "Explanations Can Reduce Overreliance on AI Systems During Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f372cd9b86f25a286c58",
+        "title": "Performance of ChatGPT on USMLE: Potential for AI-Assisted Medical Education Using Large Language Models",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f323baaee91ac551fbea",
+        "title": "AI ‐driven adaptive learning for sustainable educational transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02f6737036f087bc78a2",
+        "title": "How AI revolutionizes innovation management – Perceptions and implementation preferences of AI-based innovators",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_898d987a0d9ea2e9411d",
+        "title": "Game changers: A generative AI prompt protocol to enhance human-AI knowledge co-construction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe94e42186defa9a0632",
+        "title": "Who Should I Trust: AI or Myself? Leveraging Human and AI Correctness Likelihood to Promote Appropriate Trust in AI-Assisted Decision-Making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0b5047a6e92d19c3c719",
+        "title": "Exploring automation bias in human–AI collaboration: a review and implications for explainable AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ddf738d8a5f0321b052",
+        "title": "Towards a Science of Human-AI Decision Making: An Overview of Design Space in Empirical Human-Subject Studies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_929fe38ad12522b70d5a",
+        "title": "AI Ethics: Integrating Transparency, Fairness, and Privacy in AI Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_227e183633bbc1556b56",
+        "title": "Investigating the Impact of User Trust on the Adoption and Use of ChatGPT: Survey Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4fcac2c1f74e20cfdce",
+        "title": "Distributing Accountability, Not Capability: Phase Separation and the LLM Workflow Quadrant in Autonomous AI Agent Architectures",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bef22751fcf18d1a7fe",
+        "title": "Generative AI in healthcare: an implementation science informed translational path on application, integration and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8bae1881578ba34db628",
+        "title": "The future of AI and education: Some cautionary notes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32b630e73b6f18e855ad",
+        "title": "Personalized education and Artificial Intelligence in the United States, China, and India: A systematic review using a Human-In-The-Loop model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac8e1a9fb71239162f7f",
+        "title": "Ethics of AI-Enabled Recruiting and Selection: A Review and Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d08fa19f9069eac3ef00",
+        "title": "ChatGPT: Bullshit spewer or the end of traditional assessments in higher education?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bd34c2aa04c04cafc51",
+        "title": "Human-AI Collaboration: The Effect of AI Delegation on Human Task Performance and Task Satisfaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_553d92852d8b6106eaea",
+        "title": "”Because AI is 100% right and safe”: User Attitudes and Sources of AI Authority in India",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c6b8e75c1f1b541a3a93",
+        "title": "Ethics & AI: A Systematic Review on Ethical Concerns and Related Strategies for Designing with AI in Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fbd8db05f419928526c",
+        "title": "Transparency and explainability of AI systems: From ethical guidelines to requirements",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_439727b226472407c1e4",
+        "title": "Understanding the Role of Human Intuition on Reliance in Human-AI Decision-Making with Explanations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b117942029a875feb3",
+        "title": "The Crowdless Future? Generative AI and Creative Problem-Solving",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1167b71aa83727d7624f",
+        "title": "User Intentions to Use ChatGPT for Self-Diagnosis and Health-Related Purposes: Cross-sectional Survey Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4903a34ab5e00a99bf9c",
+        "title": "MONAI: An open-source framework for deep learning in healthcare",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96d184f3b9af842e7e59",
+        "title": "An era of ChatGPT as a significant futuristic support tool: A study on features, abilities, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9431a9f76b5226cec953",
+        "title": "Ten Years of Industrie 4.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09b44b4c208ace3b4f40",
+        "title": "Is artificial intelligence improving the audit process?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d1c572385ae20144dea",
+        "title": "Artificial intelligence in healthcare: Complementing, not replacing, doctors and healthcare providers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_058c9facbda4336277ab",
+        "title": "Experimental evidence of effective human–AI collaboration in medical decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eaf5b00840ed19bda0f3",
+        "title": "Artificial intelligence in virtual reality simulation for interprofessional communication training: Mixed method study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3f51e78b0b3cc0f3d7a",
+        "title": "Artificial intelligence technologies and compassion in healthcare: A systematic scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a75b2b8c9c69d2647b63",
+        "title": "AI Knows You: Deep Learning Model for Prediction of Extroversion Personality Trait",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95ed22524e3bc2cd9c8a",
+        "title": "Exploring the synergies between collaborative robotics, digital twins, augmentation, and industry 5.0 for smart manufacturing: A state-of-the-art review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ac046d05b1c6c42fe98",
+        "title": "Accelerating Innovation With Generative AI: AI-Augmented Digital Prototyping and Innovation Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b36dfd965eb480e66827",
+        "title": "Modeling, Replicating, and Predicting Human Behavior: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19b7426a968694805dc0",
+        "title": "Let's Think Together! Assessing Shared Mental Models, Performance, and Trust in Human-Agent Teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_572af3afbdf4800e73a7",
+        "title": "ChatGPT Research Group for Optimizing the Crystallinity of MOFs and COFs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2edebb952926cdc2dce",
+        "title": "Artificial Intelligence (AI) Trust Framework and Maturity Model: Applying an Entropy Lens to Improve Security, Privacy, and Ethical AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5517c92bf1b7ff5ce4da",
+        "title": "Smooth and Resilient Human–Machine Teamwork as an Industry 5.0 Design Challenge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3746677f9374cc0af42",
+        "title": "Artificial Intelligence and Public Health: An Exploratory Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2f808a41ea6068a4522",
+        "title": "Maximizing employee engagement through artificial intelligent organizational culture in the context of leadership and training of employees: Testing linear and non-linear relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a39b4027f2d29655075f",
+        "title": "Human-Centered Artificial Intelligence: The Superlative Approach to Achieve Sustainable Development Goals in the Fourth Industrial Revolution",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1fe7427014896fc6c9e6",
+        "title": "FOCUS AND MODALITY: DEFINING A ROADMAP TO FUTURE AI-HUMAN TEAMING IN DESIGN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9710c36486d7cadfe69b",
+        "title": "AI as a cognitive collaborator: Assimilation and accommodation in human–machine teaming for innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3287555dd3961606ef6",
+        "title": "Friend or Foe? Teaming Between Artificial Intelligence and Workers with Variation in Experience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c88c3bc9fc5cf8351879",
+        "title": "Knowing About Knowing: An Illusion of Human Competence Can Hinder Appropriate Reliance on AI Systems",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9731c79f9099ad76a781",
+        "title": "Integrating artificial intelligence into a talent management model to increase the work engagement and performance of enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_752a2104d18632c5e0d8",
+        "title": "Who Goes First? Influences of Human-AI Workflow on Decision Making in Clinical Imaging",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a090270dbb37f2bf166",
+        "title": "Decoding the agility of artificial intelligence-assisted human design teams",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35ef5b1836f2ad632065",
+        "title": "Exploring a Behavioral Model of “Positive Friction” in Human-AI Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9d2ebcafb2d3418805b",
+        "title": "Present and future of gait assessment in clinical practice: Towards the application of novel trends and technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf47453d25750673e4b6",
+        "title": "Toward fairness in artificial intelligence for medical image analysis: identification and mitigation of potential biases in the roadmap from data collection to model deployment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e09f033cc628e0ca126f",
+        "title": "Artificial Intelligence Versus Human-Controlled Doctor in Virtual Reality Simulation for Sepsis Team Training: Randomized Controlled Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f25291680a30dd3bd649",
+        "title": "The Utility of Explainable AI in Ad Hoc Human-Machine Teaming",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34bc58883fd6912a6a77",
+        "title": "Moral Judgments in the Age of Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1d63d0a2275164d7abe",
+        "title": "Machine and deep learning for personality traits detection: a comprehensive survey and open research challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cdae4480dcb645a1c3b6",
+        "title": "Managing innovation in the era of AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_451f986bfca47ea96c43",
+        "title": "Capable but Amoral? Comparing AI and Human Expert Collaboration in Ethical Decision Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1deced524b586ce5192c",
+        "title": "AI in human teams: effects on technology use, members’ interactions, and creative performance under time scarcity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8baf10ef7de64bea50be",
+        "title": "ENIGMA: An explainable digital twin security solution for cyber–physical systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cffd51c524323afc14b8",
+        "title": "Human Control of AI Systems: from Supervision to Teaming",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_083410cc9924b2ddf68c",
+        "title": "Tribulations and future opportunities for artificial intelligence in precision medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e44c7b8cff9ba7fc064b",
+        "title": "The cyclical ethical effects of using artificial intelligence in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4867e6c59dcee2c14d22",
+        "title": "AI literacy and trust: A multi-method study of Human-GAI team collaboration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77914e78362607dd9a49",
+        "title": "Understanding User Reliance on AI in Assisted Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64201d7ce90e3f25b609",
+        "title": "Design patterns for human-AI co-learning: A wizard-of-Oz evaluation in an urban-search-and-rescue task",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "topic_human_ai_teams",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 37,
+      "hard_gate_pass_count": 37,
+      "eligible_count": 2,
+      "boundary_count": 21,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "human-AI teams"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "human-AI teams user behavior"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(human-AI teams) OR (human-AI teams in user behavior)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "human-AI teams",
+        "raw_count": 100,
+        "hard_gate_pass_count": 1,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "human-AI teams user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 5,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(human-AI teams) OR (human-AI teams in user behavior)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 9,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_521a54781ab4526dfaea",
+        "incoming_paper_id": "paper_e3286a5cce11b7f6c2d7"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_1fc8f4abb9a76b58aeab",
+        "incoming_paper_id": "paper_4ebf2bef343f53bc65da"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_9c5a7bc420112060db60",
+        "incoming_paper_id": "paper_3199b3916905c855e62f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21d93754871e92a001bd",
+        "incoming_paper_id": "paper_21d93754871e92a001bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "incoming_paper_id": "paper_90ce16b1cb8b2dc409a9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a812119fbff95049a7fd",
+        "incoming_paper_id": "paper_a812119fbff95049a7fd"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9be6e886a18ccfd518b3"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e40509b1b1596968d504",
+        "incoming_paper_id": "paper_e40509b1b1596968d504"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c42763c8c892b2e1c83",
+        "incoming_paper_id": "paper_1c42763c8c892b2e1c83"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_da8d379b2a89e319fc87"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5d677fefec7ba75d3b2f",
+        "incoming_paper_id": "paper_5d677fefec7ba75d3b2f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f7ff761b25af948b1edd",
+        "incoming_paper_id": "paper_f7ff761b25af948b1edd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5debf53b4ff52abae6af",
+        "incoming_paper_id": "paper_5debf53b4ff52abae6af"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_fa24034355e8ee29679f"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e32cfe510ab159c79382",
+        "incoming_paper_id": "paper_e32cfe510ab159c79382"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_970343670146fab154d2"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dda309e19c19e9faa1f9",
+        "incoming_paper_id": "paper_dda309e19c19e9faa1f9"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_a2053ee172b524c1b36f"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6c212153a6f9a39c87a8",
+        "incoming_paper_id": "paper_6c212153a6f9a39c87a8"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_d96aabf7f85a1170da73"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9bb0fcc0a5b071204f22"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e52bf0b38e9e0110642",
+        "incoming_paper_id": "paper_7e52bf0b38e9e0110642"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_036f1734e1515bf76ee9",
+        "incoming_paper_id": "paper_036f1734e1515bf76ee9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b87730c397f5ac9bb051",
+        "incoming_paper_id": "paper_b87730c397f5ac9bb051"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e40509b1b1596968d504",
+        "incoming_paper_id": "paper_e40509b1b1596968d504"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a812119fbff95049a7fd",
+        "incoming_paper_id": "paper_a812119fbff95049a7fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ab79855718660ca0a76f",
+        "incoming_paper_id": "paper_ab79855718660ca0a76f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e43b175d9f50b4099361",
+        "incoming_paper_id": "paper_e43b175d9f50b4099361"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5d677fefec7ba75d3b2f",
+        "incoming_paper_id": "paper_5d677fefec7ba75d3b2f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f7ff761b25af948b1edd",
+        "incoming_paper_id": "paper_f7ff761b25af948b1edd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6c84013efb15dd9808b7",
+        "incoming_paper_id": "paper_6c84013efb15dd9808b7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c42763c8c892b2e1c83",
+        "incoming_paper_id": "paper_1c42763c8c892b2e1c83"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e32cfe510ab159c79382",
+        "incoming_paper_id": "paper_e32cfe510ab159c79382"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5debf53b4ff52abae6af",
+        "incoming_paper_id": "paper_5debf53b4ff52abae6af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dda309e19c19e9faa1f9",
+        "incoming_paper_id": "paper_dda309e19c19e9faa1f9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4ba12273d7a7286db20e",
+        "incoming_paper_id": "paper_4ba12273d7a7286db20e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f178b9aec0ab8cdeb0c9",
+        "incoming_paper_id": "paper_f178b9aec0ab8cdeb0c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4410e11707ebc56526bd",
+        "incoming_paper_id": "paper_4410e11707ebc56526bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e52bf0b38e9e0110642",
+        "incoming_paper_id": "paper_7e52bf0b38e9e0110642"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8da6e08a206b4654a3ca",
+        "incoming_paper_id": "paper_8da6e08a206b4654a3ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_036f1734e1515bf76ee9",
+        "incoming_paper_id": "paper_036f1734e1515bf76ee9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fced1aba160d293c5a56",
+        "incoming_paper_id": "paper_fced1aba160d293c5a56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b87730c397f5ac9bb051",
+        "incoming_paper_id": "paper_b87730c397f5ac9bb051"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_afc4f90d259113314887",
+        "incoming_paper_id": "paper_afc4f90d259113314887"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_530c8fac610ba4e9c9d2",
+        "incoming_paper_id": "paper_530c8fac610ba4e9c9d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95222a1b96fd8425686f",
+        "incoming_paper_id": "paper_95222a1b96fd8425686f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b84f25b0553befb4be7f",
+        "incoming_paper_id": "paper_b84f25b0553befb4be7f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17eef971eded1ee58f78",
+        "incoming_paper_id": "paper_17eef971eded1ee58f78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1d00fd6b9c220d211ce0",
+        "incoming_paper_id": "paper_1d00fd6b9c220d211ce0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7befdeb6baa2684a6c3c",
+        "incoming_paper_id": "paper_7befdeb6baa2684a6c3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e2929ade9c4b77a643c7",
+        "incoming_paper_id": "paper_e2929ade9c4b77a643c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5fbfa9bc37436ca38024",
+        "incoming_paper_id": "paper_5fbfa9bc37436ca38024"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_897b12862f24f7b5e5de",
+        "incoming_paper_id": "paper_897b12862f24f7b5e5de"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b1af2e3ed0156d52e692",
+        "incoming_paper_id": "paper_b1af2e3ed0156d52e692"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20160133d6ba6c4ef9cb",
+        "incoming_paper_id": "paper_20160133d6ba6c4ef9cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_786b535bbd7c1e7d3a5c",
+        "incoming_paper_id": "paper_786b535bbd7c1e7d3a5c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a411887ee05ba380835",
+        "incoming_paper_id": "paper_9a411887ee05ba380835"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_635065b1148db5739ecb",
+        "incoming_paper_id": "paper_635065b1148db5739ecb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8e15344b8f76b111d2ac",
+        "incoming_paper_id": "paper_8e15344b8f76b111d2ac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6c212153a6f9a39c87a8",
+        "incoming_paper_id": "paper_6c212153a6f9a39c87a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1bdc88d3bb4bdf8578be",
+        "incoming_paper_id": "paper_1bdc88d3bb4bdf8578be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_db2dd896e08dc5b1f265",
+        "incoming_paper_id": "paper_db2dd896e08dc5b1f265"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe94e42186defa9a0632",
+        "incoming_paper_id": "paper_fe94e42186defa9a0632"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_521a54781ab4526dfaea",
+        "incoming_paper_id": "paper_521a54781ab4526dfaea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fa93d5dba04fe4c1a18",
+        "incoming_paper_id": "paper_4fa93d5dba04fe4c1a18"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3523c4a4f232d7855265",
+        "incoming_paper_id": "paper_3523c4a4f232d7855265"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_898d987a0d9ea2e9411d",
+        "incoming_paper_id": "paper_898d987a0d9ea2e9411d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9117168b3819641e7c4b",
+        "incoming_paper_id": "paper_9117168b3819641e7c4b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4bd34c2aa04c04cafc51",
+        "incoming_paper_id": "paper_4bd34c2aa04c04cafc51"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68b62b3971236f505696",
+        "incoming_paper_id": "paper_68b62b3971236f505696"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7c392eec3fc95837a965",
+        "incoming_paper_id": "paper_7c392eec3fc95837a965"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_abd35252fa0f4f7aa735",
+        "incoming_paper_id": "paper_abd35252fa0f4f7aa735"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2970dadfa1c148b503cc",
+        "incoming_paper_id": "paper_2970dadfa1c148b503cc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e3668f6cd107cac0b58",
+        "incoming_paper_id": "paper_7e3668f6cd107cac0b58"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4e1f6ad178a91324acf1",
+        "incoming_paper_id": "paper_4e1f6ad178a91324acf1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73b760cdd4adce01ccd7",
+        "incoming_paper_id": "paper_73b760cdd4adce01ccd7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06372867271a6588c2ab",
+        "incoming_paper_id": "paper_06372867271a6588c2ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df79234f105fd9005879",
+        "incoming_paper_id": "paper_df79234f105fd9005879"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "f571c5f1e8914f0c8c8028193932f513",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

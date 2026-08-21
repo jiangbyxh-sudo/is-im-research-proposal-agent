@@ -1,0 +1,3206 @@
+{
+  "direction_id": "topic_generative_ai",
+  "labels": {
+    "zh": "生成式AI",
+    "en": "generative AI"
+  },
+  "input": {
+    "selected_direction_id": "topic_generative_ai",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17282.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 339,
+  "hard_gate_pass_count": 40,
+  "eligible_count": 1,
+  "boundary_count": 8,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "generative AI"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "generative AI digital media"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(generative AI) OR (generative AI in digital media)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 39
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_generative_ai",
+      "research_direction": "generative AI",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ]
+    },
+    "local_match": {
+      "label": "generative AI",
+      "aliases": [
+        "generative AI"
+      ],
+      "groups": [
+        "IS × Journalism / Communication / Media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:222"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_generative_ai",
+        "labels": {
+          "zh": "生成式AI",
+          "en": "generative AI"
+        },
+        "group_ids": [
+          "is_communication_media"
+        ],
+        "synonyms": [
+          "生成式AI",
+          "generative AI",
+          "generative AI in digital media"
+        ],
+        "boundaries": {
+          "include": [
+            "generative AI",
+            "digital media",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "generative AI",
+            "\"generative AI\" AND \"digital media\""
+          ],
+          "semantic_scholar": [
+            "generative AI",
+            "generative AI digital media"
+          ],
+          "crossref": [
+            "generative AI",
+            "生成式AI"
+          ],
+          "dblp": [
+            "generative AI online communication"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "generative AI",
+            "digital media",
+            "online communication"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "COMMUNICATION",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+          "PKU_CORE_2023_COMMUNICATION"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "generative AI digital media",
+          "(generative AI) OR (generative AI in digital media)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:222"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_e292e33b875dc8533d33",
+        "title": "Generative AI and its Transformative Value for Digital Platforms",
+        "abstract": "The emergence of generative artificial intelligence (GenAI) represents a watershed moment in the evolution of digital platforms. The capabilities of this AI technology go beyond traditional AI systems, enabling the autonomous generation of novel outcomes with significant implications for platform value creation, architecture, governance, and stakeholder interactions. We develop an integrative conceptual framework that identifies four key mechanisms through which GenAI transforms digital platforms: intelligent automation, democratization, hyper-personalization, and collaborative innovation. Through intelligent automation, GenAI transforms boundary resources from passive interfaces into active, intelligent mediators of value creation. Democratization systematically lowers barriers to platform participation. Hyper-personalization enables dynamic, individual-level adaptation of platform content. Collaborative innovation transforms platform innovation by making GenAI an active participant in human-AI value co-creation. We use this framework to situate the papers in the special issue and develop a research agenda that explores the transformative impact of GenAI on platform stakeholder relationships.",
+        "authors": [
+          "Michael Wessel",
+          "Martin Adam",
+          "Alexander Benlian",
+          "Ann Majchrzak",
+          "Ferdinand Thies"
+        ],
+        "year": 2025,
+        "publication_date": "2025-04-03",
+        "published_date": "2025-04-03",
+        "language": "en",
+        "doi": "10.1080/07421222.2025.2487315",
+        "url": "https://doi.org/10.1080/07421222.2025.2487315",
+        "official_url": "https://doi.org/10.1080/07421222.2025.2487315",
+        "source_title": "Journal of Management Information Systems",
+        "journal": "Journal of Management Information Systems",
+        "source_issns": [
+          "0742-1222",
+          "1557-928X"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 110,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11437",
+            "name": "Digital Platforms and Economics",
+            "score": 0.9962999820709229
+          },
+          {
+            "id": "https://openalex.org/T10270",
+            "name": "Blockchain Technology Applications and Security",
+            "score": 0.9653000235557556
+          },
+          {
+            "id": "https://openalex.org/T12659",
+            "name": "Innovation Diffusion and Forecasting",
+            "score": 0.9455999732017517
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4411527440"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://www.tandfonline.com/doi/pdf/10.1080/07421222.2025.2487315?needAccess=true",
+        "provider_payload_refs": [
+          "https://openalex.org/W4411527440"
+        ],
+        "journal_id": "journal_042",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_A"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 86.85,
+          "band": "high",
+          "components": {
+            "semantic_relevance": 94.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 86.85
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "generative AI",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 602155,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:52.614120+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3672.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "generative AI digital media",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 110018,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:56.297488+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3156.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(generative AI) OR (generative AI in digital media)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 597822,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:59.494729+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3703.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "generative AI",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:01:05.872840+00:00",
+        "duration_ms": 1437.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1422.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "generative AI",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:01:07.306265+00:00",
+        "duration_ms": 1281.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1281.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "generative AI",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:01:08.587421+00:00",
+        "duration_ms": 1266.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1266.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "生成式AI",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 8,
+        "queried_at": "2026-08-21T21:01:03.371501+00:00",
+        "duration_ms": 1281.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1281.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "生成式AI",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 2,
+        "accepted_before_dedupe": 1,
+        "queried_at": "2026-08-21T21:01:04.654502+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_9133ea4a9a232eb34fca",
+        "title": "Exploiting Generative AI to Scale up Intelligent Tutoring Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "title": "Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da485bac61a4e19ae935",
+        "title": "Students’ voices on generative AI: perceptions, benefits, and challenges in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9be6e886a18ccfd518b3",
+        "title": "Generative AI at Work",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2274f17eb77478fa349d",
+        "title": "Generative AI and ChatGPT: Applications, challenges, and AI-human collaboration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ba59060284b506f91224",
+        "title": "Generative AI at Work",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37c59cbc1b8a54d0fa87",
+        "title": "Generative AI and the future of education: Ragnarök or reformation? A paradoxical perspective from management educators",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36c9ec4c09ece23d9502",
+        "title": "Intelligent Clinical Documentation: Harnessing Generative AI for Patient-Centric Clinical Note Generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a1490dfb060d5ec69ef",
+        "title": "The imperative for regulatory oversight of large language models (or generative AI) in healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25d14ebe154f11f06ad1",
+        "title": "Art and the science of generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cf18f4f6df2529be8ba",
+        "title": "Challenges and Opportunities of Generative AI for Higher Education as Explained by ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24af4b2fd2a55de85c2d",
+        "title": "What ChatGPT and generative AI mean for science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8d379b2a89e319fc87",
+        "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0359980be23308af9b3f",
+        "title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ebd6aeadfdfe350c2a1",
+        "title": "Generative AI enhances individual creativity but reduces the collective diversity of novel content",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e669bc423268bf3223c2",
+        "title": "ChatGPT and the rise of generative AI: Threat to academic integrity?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70037cceaedf7026341d",
+        "title": "Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a6893109d2a06835024",
+        "title": "Guidance for generative AI in education and research",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3843342eb8440daa4cc1",
+        "title": "Unlocking the Power of ChatGPT: A Framework for Applying Generative AI in Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bb0fcc0a5b071204f22",
+        "title": "The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e47419dc541e180e82c9",
+        "title": "TPACK in the age of ChatGPT and Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa24034355e8ee29679f",
+        "title": "Generative AI in Medicine and Healthcare: Promises, Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2053ee172b524c1b36f",
+        "title": "The impact of Generative AI (GenAI) on practices, policies and research direction in education: a case of ChatGPT and Midjourney",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bef22751fcf18d1a7fe",
+        "title": "Generative AI in healthcare: an implementation science informed translational path on application, integration and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca572f4c94c009c20227",
+        "title": "The promise and challenges of generative AI in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8559657c263817fad099",
+        "title": "Generative AI for Software Practitioners",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d96aabf7f85a1170da73",
+        "title": "Regulating ChatGPT and other Large Generative AI Models",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d146e52784d60e65266",
+        "title": "Generative AI: Here to stay, but for good?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97c6a5a6b9bc7c98bebe",
+        "title": "Generative AI in Education and Research: Opportunities, Concerns, and Solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9165d58560a26e113938",
+        "title": "A multimodal generative AI copilot for human pathology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_241aff360473a4c3892f",
+        "title": "Future research recommendations for transforming higher education with generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cdf29799fdb0d0d3b9b2",
+        "title": "A Comprehensive Review on Generative AI for Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_449555c5279a7573309c",
+        "title": "The Robots Are Here: Navigating the Generative AI Revolution in Computing Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e9ac0021c94ce055af3",
+        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7dbf541f804324bc06de",
+        "title": "Can Generative AI improve social science?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_200898ca2c56f72f122a",
+        "title": "Generative AI in Medical Practice: In-Depth Exploration of Privacy and Security Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35327ecb5f6899860871",
+        "title": "Generative AI meets copyright",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_970343670146fab154d2",
+        "title": "A Comprehensive Survey of AI-Generated Content (AIGC): A History of Generative AI from GAN to ChatGPT",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea46339f5ac0d2e60a7f",
+        "title": "Ethical Challenges and Solutions of Generative AI: An Interdisciplinary Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4be281779ed4edbf561e",
+        "title": "Design Principles for Generative AI Applications",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b45f280b97ccf28b43c",
+        "title": "The Metacognitive Demands and Opportunities of Generative AI",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6f0a88057843dbdc229b",
+        "title": "Exploring students’ perspectives on Generative AI-assisted academic writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a054576b738f7de8686",
+        "title": "Towards Adoption of Generative AI in Organizational Settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2af6a85564f99d1c0012",
+        "title": "The AI generation gap: Are Gen Z students more interested in adopting generative AI such as ChatGPT in teaching and learning than their Gen X and millennial generation teachers?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d8733d75ba8d7206a0b",
+        "title": "Engineering Education in the Era of ChatGPT: Promise and Pitfalls of Generative AI for Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76c1940795749bb87231",
+        "title": "Autonomous travel decision-making: An early glimpse into ChatGPT and generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a59b2f69489c0f701a5",
+        "title": "Generative AI tools and assessment: Guidelines of the world's top-ranking universities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68c79a6050915934c821",
+        "title": "Computing Education in the Era of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ea4c3a0c2367844ccfb",
+        "title": "Generative AI for Economic Research: Use Cases and Implications for Economists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_98bf205974c5c8a09c7d",
+        "title": "Generative AI for Customizable Learning Experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b34dbac42043962cc02",
+        "title": "Governance of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c003fa34db5eccf7e2f3",
+        "title": "Drivers of generative AI adoption in higher education through the lens of the Theory of Planned Behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_216e484e420f99991557",
+        "title": "The impending disruption of creative industries by generative AI: Opportunities, challenges, and research agenda",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_571086ade82eb0a9295a",
+        "title": "Generative AI Can Harm Learning",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9f3bc6214d86995ba64",
+        "title": "Generative AI design for building structures",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77fe488fc506aa6ca699",
+        "title": "Is it harmful or helpful? Examining the causes and consequences of generative AI usage among university students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_613091d4693d53cb3fcb",
+        "title": "Generative AI in Higher Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b117942029a875feb3",
+        "title": "The Crowdless Future? Generative AI and Creative Problem-Solving",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc64de20bc3f4f7da862",
+        "title": "ChatGPT and Generative AI: Possibilities for Its Contribution to Lesson Planning, Critical Thinking and Openness in Teacher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ac046d05b1c6c42fe98",
+        "title": "Accelerating Innovation With Generative AI: AI-Augmented Digital Prototyping and Innovation Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40d8544b620f2257fe24",
+        "title": "Sentiment Analysis in the Age of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0c485992518e8df5158",
+        "title": "Generative AI and Teachers’ Perspectives on Its Implementation in Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e848a0a6587a83f926f",
+        "title": "Unleashing the Power of Edge-Cloud Generative AI in Mobile Networks: A Survey of AIGC Services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_269da5c1b58834970964",
+        "title": "How generative AI Is shaping the future of marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f33e259e0327e51c8fa3",
+        "title": "Generative AI in higher education: A global perspective of institutional adoption policies and guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0e1a99078be237270c5e",
+        "title": "The potential of generative AI for personalized persuasion at scale",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dca80eb7cf1370d23e41",
+        "title": "Generative AI and Firm Values",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_567ca523409232807c3e",
+        "title": "Generative AI and the future of higher education: a threat to academic integrity or reformation? Evidence from multicultural perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_908e7cb3ca2aba23988f",
+        "title": "The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21db9353af6cc7909099",
+        "title": "Future of software development with generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_803020bc22b52a700cdc",
+        "title": "Creativity in the age of generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83fd23ba6eca4df88d62",
+        "title": "Will generative AI replace teachers in higher education? A study of teacher and student perceptions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e420e8bf1a8743e7533",
+        "title": "Leveraging Generative AI and Large Language Models: A Comprehensive Roadmap for Healthcare Integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff82593717038604c292",
+        "title": "Privacy and Security Concerns in Generative AI: A Comprehensive Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d4e5451087a6b51f0ef",
+        "title": "Investigating Explainability of Generative AI for Code through Scenario-based Design",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79b6cbd609d7fc271965",
+        "title": "Advancements in Generative AI: A Comprehensive Review of GANs, GPT, Autoencoders, Diffusion Model, and Transformers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d24015bd1ad9d1af96cf",
+        "title": "ChatGPT is not all you need. A State of the Art Review of large Generative AI models",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_934c40310d18a1c92625",
+        "title": "Generative AI and ChatGPT in School Children’s Education: Evidence from a School Lesson",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7951865cee6efe080d1d",
+        "title": "The impact of generative AI on higher education learning and teaching: A study of educators’ perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5cb28d020a08bb0eb202",
+        "title": "Educator and Student Perspectives on the Impact of Generative AI on Assessments in Higher Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1631d3884637930ddcb2",
+        "title": "“It happened to be the perfect thing”: experiences of generative AI chatbots for mental health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c6a1e46cbed3d384703",
+        "title": "Generative AI in Higher Education: Balancing Innovation and Integrity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4bb3907321a8fd209b7b",
+        "title": "The Effects of Generative AI on Design Fixation and Divergent Thinking",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d0a9838bcc0ba697960",
+        "title": "Is ChatGPT Leading Generative AI? What is Beyond Expectations?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82d0844ee2c45a785f6f",
+        "title": "Investigating students’ cognitive processes in generative AI-assisted digital multimodal composing and traditional writing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b78bc3a6b2d415029c2",
+        "title": "Towards social generative AI for education: theory, practices and ethics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_392a4728b32055804fd8",
+        "title": "A Systematic Review of Generative AI for Teaching and Learning Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e60627f4f69721f72805",
+        "title": "Generative AI Literacy: Twelve Defining Competencies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fbed1d957d97c9fa601",
+        "title": "Challenges for higher education in the era of widespread access to generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3b212e676b2e824e417",
+        "title": "How organizations can innovate with generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c9c51f51da7a76ac37ef",
+        "title": "Generative AI and jobs",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96c2d4cbcd0ac2fe8ceb",
+        "title": "Are both generative AI and ChatGPT game changers for 21st-Century operations and supply chain excellence?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb7a4cf719a0fa78e79f",
+        "title": "Navigating the Complexity of Generative AI Adoption in Software Engineering",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_234c083515b7dae6cf13",
+        "title": "Reconceptualizing ChatGPT and generative AI as a student-driven innovation in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d805815b401ba9ec94cc",
+        "title": "On the assessment of generative AI in modeling tasks: an experience report with ChatGPT and UML",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a92e704d0928cc89c03",
+        "title": "The effects of generative AI on initial language teacher education: The perceptions of teacher educators",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_536a5e830cd3b7c27e00",
+        "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53ab52a0e5d0cdd0aefe",
+        "title": "Unleashing the power of generative AI in drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_336455dfe2197fa201af",
+        "title": "Collaborating With ChatGPT: Considering the Implications of Generative Artificial Intelligence for Journalism and Media Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c0a43e84825cad037ae",
+        "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2bb7b3d648ce2b7bb67",
+        "title": "Examining Science Education in ChatGPT: An Exploratory Study of Generative Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33b891ea2338351f5eaa",
+        "title": "Generative artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c766160ac7b259a78f13",
+        "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_382542490054344491f7",
+        "title": "A comprehensive AI policy education framework for university teaching and learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30a541d41d5b6192a73c",
+        "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4a79ac65b5644d906927",
+        "title": "Impact of digital media literacy on attitude toward generative AI acceptance in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5506eebcc58bc933cee1",
+        "title": "Transforming Digital Marketing with Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cd0baa373e77a3fc72b",
+        "title": "Leveraging ChatGPT and other generative artificial intelligence (AI)-based applications in the hospitality and tourism industry: practices, challenges and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3109fc155d6babffa149",
+        "title": "Artificial intelligence prompt engineering as a new digital competence: Analysis of generative AI technologies such as ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_188cbc12047870470754",
+        "title": "Editorial: Written by ChatGPT, illustrated by Midjourney: generative AI for content marketing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31133709c027298ed97d",
+        "title": "Shaping the Future of Education: Exploring the Potential and Consequences of AI and ChatGPT in Educational Settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_162eac2353ccef6a8a4c",
+        "title": "Generative AI as Digital Media",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83db9d3bfcad7b274246",
+        "title": "Speculative futures on ChatGPT and generative artificial intelligence (AI): A collective reflection from the educational landscape",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3217089e1525b6351da6",
+        "title": "Generative artificial intelligence: a systematic review and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c9665f6f27f4767e90e",
+        "title": "Revolutionizing education with AI: Exploring the transformative potential of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9386db2cf1e75060e840",
+        "title": "AI as Agency Without Intelligence: on ChatGPT, Large Language Models, and Other Generative Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b5dbd12f8c7050da73b",
+        "title": "Perspectives of Generative AI in the Context of Digital Transformation of Society, Audio-Visual Media and Mass Communication: Instrumentalism, Ethics and Freedom",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_203043a94f8ade9052aa",
+        "title": "Exploring AI-mediated informal digital learning of English (AI-IDLE): a mixed-method investigation of Chinese EFL learners’ AI adoption and experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06372867271a6588c2ab",
+        "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33cf991075da872d8b42",
+        "title": "Modelling Generative AI Acceptance, Perceived Teachers' Enthusiasm and Self‐Efficacy to English as a Foreign Language Learners' Well‐Being in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a6b1d3690bb29fb8d24",
+        "title": "The Willingness of College Educators in Animation and Digital Media to Embrace Generative AI",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b7aa60331dd3262becf",
+        "title": "Generative AI and the Automating of Academia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1188582226ca19e0e2fe",
+        "title": "AI-Based Modeling: Techniques, Applications and Research Issues Towards Automation, Intelligent and Smart Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca54e35c49b8517eb00e",
+        "title": "Generative Artificial Intelligence: Implications and Considerations for Higher Education Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7513adbf6f061a6b9e54",
+        "title": "ChatGPT and Open-AI Models: A Preliminary Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_723a13b67ec8c7791d6a",
+        "title": "Generative AI for Transformative Healthcare: A Comprehensive Study of Emerging Models, Applications, Case Studies, and Limitations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c81f9dd917933afb4a16",
+        "title": "The impact of generative artificial intelligence on socioeconomic inequalities and policy making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2ffbdde1422704daeac",
+        "title": "Digital twins for health: a scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_754b9993f1aa93c2ae6b",
+        "title": "The Role of AI in Hospitals and Clinics: Transforming Healthcare in the 21st Century",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848dae12570bc474dbb9",
+        "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00a5636b5b73d783dad2",
+        "title": "Griefbots, Deadbots, Postmortem Avatars: on Responsible Applications of Generative AI in the Digital Afterlife Industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74cde6ac777477fbd2c7",
+        "title": "Fake news, disinformation and misinformation in social media: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_698138b84f733e905aa6",
+        "title": "Digital Persona: Reflection on the Power of Generative AI for Customer Profiling in Social Media Marketing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_166d0326d6e11ac2781e",
+        "title": "Foundation metrics for evaluating effectiveness of healthcare conversations powered by generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79b66584be844a80d18e",
+        "title": "Addressing 6 challenges in generative AI for digital health: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa99589a9060d7822f33",
+        "title": "The dark side of generative artificial intelligence: A critical analysis of controversies and risks of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bc84b001c08d7065bda",
+        "title": "Generative-AI, the media industries, and the disappearance of human creative labour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d8f1d228fa3c356f7ab",
+        "title": "How to Bell the Cat? A Theoretical Review of Generative Artificial Intelligence towards Digital Disruption in All Walks of Life",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aae2dc4d1489855b3f85",
+        "title": "The GenAI is out of the bottle: generative artificial intelligence from a business model innovation perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb462d8cd1b38ab48f4f",
+        "title": "Generative Visual AI in News Organizations: Challenges, Opportunities, Perceptions, and Policies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d224fb6869ed3dbc1b60",
+        "title": "Chatbots, generative AI, and scholarly manuscripts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a47c3c79859a1d5e11b",
+        "title": "Generative artificial intelligence as a new context for management theories: analysis of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f0eb45ffea548ee3cd9",
+        "title": "Generative artificial intelligence in supply chain and operations management: a capability-based framework for analysis and implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1198c65d83acd8c0dc4",
+        "title": "AI and ethics: Investigating the first policy responses of higher education institutions to the challenge of generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c6b7a0432c5375d510c",
+        "title": "Testing of detection tools for AI-generated text",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a5f30fa949349014686",
+        "title": "Generative AI in Education: Pedagogical, Theoretical, and Methodological Perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35c07431fe0ae647825f",
+        "title": "Generative artificial intelligence in innovation management: A preview of future research developments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8e494494925ef7894d9",
+        "title": "AI Chatbots in Digital Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a91854de8f181c038594",
+        "title": "Digital Transformation in Healthcare: Technology Acceptance and Its Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7cf4685de03940e935e",
+        "title": "The Impact of Generative AI and ChatGPT on Creating Digital Advertising Campaigns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f43d9cfe563d78ba076",
+        "title": "The Artificial Intelligence Assessment Scale (AIAS): A Framework for Ethical Integration of Generative AI in Educational Assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c847054e90b553fe63f",
+        "title": "Academic Integrity considerations of AI Large Language Models in the post-pandemic era: ChatGPT and beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a59dc0953cf6950a6312",
+        "title": "Generative AI and Marketing Education: What the Future Holds",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6071804664d05b5141c1",
+        "title": "Uses of Generative AI in the Newsroom: Mapping Journalists’ Perceptions of Perils and Possibilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5cdc7ecbb6e280852acc",
+        "title": "Smart product platforming powered by AI and generative AI: Personalization for the circular economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_791c84c35e7f9f747a41",
+        "title": "Generative AI in innovation and marketing processes: A roadmap of research opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_447744f0e45d607c5119",
+        "title": "A Survey of Generative AI Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f323baaee91ac551fbea",
+        "title": "AI ‐driven adaptive learning for sustainable educational transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8f00788240f957ea0e5",
+        "title": "Large language models in medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d11c79624a0437b2c0a",
+        "title": "GPT-4 Technical Report",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d71d9b53e123af4bbcaa",
+        "title": "Scientific discovery in the age of artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7b0ef0cc42c67f257fb",
+        "title": "Experimental evidence on the productivity effects of generative artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae8459c2b911a750fb34",
+        "title": "The effect of generative artificial intelligence (AI)-based tool use on students' computational thinking skills, programming self-efficacy and motivation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b4a0493d7a0be70d7aa",
+        "title": "Fairness and Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, and Mitigation Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d77713f0d03a1b5462a",
+        "title": "ChatGPT for Language Teaching and Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d08fa19f9069eac3ef00",
+        "title": "ChatGPT: Bullshit spewer or the end of traditional assessments in higher education?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f5591fa2e8e02ee13b4",
+        "title": "The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4082e7adfcaf289e31bd",
+        "title": "ChatGPT in higher education: Considerations for academic integrity and student learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a1d7a445a164113bf472",
+        "title": "Reinvent 4: Modern AI–driven generative molecule design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b293175f7e8383b75026",
+        "title": "Exploring the Potential Impact of Artificial Intelligence (AI) on International Students in Higher Education: Generative AI, Chatbots, Analytics, and International Student Success",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95df9a8dc927582af5c5",
+        "title": "Generating scholarly content with ChatGPT: ethical challenges for medical publishing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4db0032872d0b8eeb251",
+        "title": "ChatGPT is fun, but not an author",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_155702ccc2abad3ac96c",
+        "title": "The effects of over-reliance on AI dialogue systems on students' cognitive abilities: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e199abbc57e953fb6251",
+        "title": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Innovative benefits of China’s low-carbon pilot policy",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Do government subsidies effectively reduce corporate carbon emissions",
+        "journal": "中国软科学"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_generative_ai",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 339,
+      "deduplicated_count": 40,
+      "hard_gate_pass_count": 40,
+      "eligible_count": 1,
+      "boundary_count": 8,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "generative AI"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "generative AI digital media"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(generative AI) OR (generative AI in digital media)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 39
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "generative AI",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "generative AI digital media",
+        "raw_count": 200,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(generative AI) OR (generative AI in digital media)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_9133ea4a9a232eb34fca",
+          "paper_90ce16b1cb8b2dc409a9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_da485bac61a4e19ae935"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9be6e886a18ccfd518b3"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_2274f17eb77478fa349d"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_37c59cbc1b8a54d0fa87"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_6a1490dfb060d5ec69ef"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_25d14ebe154f11f06ad1"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_0cf18f4f6df2529be8ba"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_24af4b2fd2a55de85c2d"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_da8d379b2a89e319fc87"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_e669bc423268bf3223c2"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_70037cceaedf7026341d"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_8a6893109d2a06835024"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_3843342eb8440daa4cc1"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9bb0fcc0a5b071204f22"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_e47419dc541e180e82c9"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_fa24034355e8ee29679f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_a2053ee172b524c1b36f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_8559657c263817fad099"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_d96aabf7f85a1170da73"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_8d146e52784d60e65266"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_97c6a5a6b9bc7c98bebe"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_241aff360473a4c3892f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_449555c5279a7573309c"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_35327ecb5f6899860871"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_970343670146fab154d2"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_5a054576b738f7de8686"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_2af6a85564f99d1c0012"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_76c1940795749bb87231"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9a59b2f69489c0f701a5"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_0ea4c3a0c2367844ccfb"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_c9f3bc6214d86995ba64"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_fc64de20bc3f4f7da862"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_5ac046d05b1c6c42fe98"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_d0c485992518e8df5158"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_613091d4693d53cb3fcb",
+          "paper_f33e259e0327e51c8fa3"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_dca80eb7cf1370d23e41"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_dfd859b6df2979fbee9c"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_803020bc22b52a700cdc"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_8e420e8bf1a8743e7533"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_d24015bd1ad9d1af96cf"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_934c40310d18a1c92625"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_5cb28d020a08bb0eb202"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_6d0a9838bcc0ba697960"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_82d0844ee2c45a785f6f"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_7b78bc3a6b2d415029c2"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_9fbed1d957d97c9fa601"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_c9c51f51da7a76ac37ef"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_96c2d4cbcd0ac2fe8ceb"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_234c083515b7dae6cf13"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_d805815b401ba9ec94cc"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_90ce16b1cb8b2dc409a9",
+          "paper_536a5e830cd3b7c27e00"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "incoming_paper_id": "paper_90ce16b1cb8b2dc409a9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da485bac61a4e19ae935",
+        "incoming_paper_id": "paper_da485bac61a4e19ae935"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9be6e886a18ccfd518b3",
+        "incoming_paper_id": "paper_9be6e886a18ccfd518b3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_7e9ac0021c94ce055af3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a1490dfb060d5ec69ef",
+        "incoming_paper_id": "paper_6a1490dfb060d5ec69ef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea46339f5ac0d2e60a7f",
+        "incoming_paper_id": "paper_ea46339f5ac0d2e60a7f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da8d379b2a89e319fc87",
+        "incoming_paper_id": "paper_da8d379b2a89e319fc87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca572f4c94c009c20227",
+        "incoming_paper_id": "paper_ca572f4c94c009c20227"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2053ee172b524c1b36f",
+        "incoming_paper_id": "paper_a2053ee172b524c1b36f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d96aabf7f85a1170da73",
+        "incoming_paper_id": "paper_d96aabf7f85a1170da73"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa24034355e8ee29679f",
+        "incoming_paper_id": "paper_fa24034355e8ee29679f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_970343670146fab154d2",
+        "incoming_paper_id": "paper_970343670146fab154d2"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_7e9ac0021c94ce055af3",
+          "paper_33b891ea2338351f5eaa"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2af6a85564f99d1c0012",
+        "incoming_paper_id": "paper_2af6a85564f99d1c0012"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_30a541d41d5b6192a73c"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_449555c5279a7573309c",
+        "incoming_paper_id": "paper_449555c5279a7573309c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7dbf541f804324bc06de",
+        "incoming_paper_id": "paper_7dbf541f804324bc06de"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_98bf205974c5c8a09c7d",
+        "incoming_paper_id": "paper_98bf205974c5c8a09c7d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_82b117942029a875feb3",
+        "incoming_paper_id": "paper_82b117942029a875feb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0e1a99078be237270c5e",
+        "incoming_paper_id": "paper_0e1a99078be237270c5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_567ca523409232807c3e",
+        "incoming_paper_id": "paper_567ca523409232807c3e"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_1cd0baa373e77a3fc72b"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c003fa34db5eccf7e2f3",
+        "incoming_paper_id": "paper_c003fa34db5eccf7e2f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff82593717038604c292",
+        "incoming_paper_id": "paper_ff82593717038604c292"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40d8544b620f2257fe24",
+        "incoming_paper_id": "paper_40d8544b620f2257fe24"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_613091d4693d53cb3fcb",
+        "incoming_paper_id": "paper_613091d4693d53cb3fcb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2b34dbac42043962cc02",
+        "incoming_paper_id": "paper_2b34dbac42043962cc02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d0c485992518e8df5158",
+        "incoming_paper_id": "paper_d0c485992518e8df5158"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f33e259e0327e51c8fa3",
+        "incoming_paper_id": "paper_f33e259e0327e51c8fa3"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_83db9d3bfcad7b274246"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_269da5c1b58834970964",
+        "incoming_paper_id": "paper_269da5c1b58834970964"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_392a4728b32055804fd8",
+        "incoming_paper_id": "paper_392a4728b32055804fd8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_908e7cb3ca2aba23988f",
+        "incoming_paper_id": "paper_908e7cb3ca2aba23988f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dca80eb7cf1370d23e41",
+        "incoming_paper_id": "paper_dca80eb7cf1370d23e41"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb7a4cf719a0fa78e79f",
+        "incoming_paper_id": "paper_fb7a4cf719a0fa78e79f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6d0a9838bcc0ba697960",
+        "incoming_paper_id": "paper_6d0a9838bcc0ba697960"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c3b212e676b2e824e417",
+        "incoming_paper_id": "paper_c3b212e676b2e824e417"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_ca54e35c49b8517eb00e"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_536a5e830cd3b7c27e00",
+        "incoming_paper_id": "paper_536a5e830cd3b7c27e00"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1631d3884637930ddcb2",
+        "incoming_paper_id": "paper_1631d3884637930ddcb2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_934c40310d18a1c92625",
+        "incoming_paper_id": "paper_934c40310d18a1c92625"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e60627f4f69721f72805",
+        "incoming_paper_id": "paper_e60627f4f69721f72805"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_fa99589a9060d7822f33"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_4d8f1d228fa3c356f7ab"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_aae2dc4d1489855b3f85"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_8a47c3c79859a1d5e11b"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_6d0a9838bcc0ba697960",
+        "incoming_paper_id": "paper_f5b43436a8fdce5d2a0f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9133ea4a9a232eb34fca",
+        "incoming_paper_id": "paper_9133ea4a9a232eb34fca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90ce16b1cb8b2dc409a9",
+        "incoming_paper_id": "paper_90ce16b1cb8b2dc409a9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da485bac61a4e19ae935",
+        "incoming_paper_id": "paper_da485bac61a4e19ae935"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2274f17eb77478fa349d",
+        "incoming_paper_id": "paper_2274f17eb77478fa349d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9be6e886a18ccfd518b3",
+        "incoming_paper_id": "paper_9be6e886a18ccfd518b3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_7e9ac0021c94ce055af3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ba59060284b506f91224",
+        "incoming_paper_id": "paper_ba59060284b506f91224"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ea46339f5ac0d2e60a7f",
+        "incoming_paper_id": "paper_ea46339f5ac0d2e60a7f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_25d14ebe154f11f06ad1",
+        "incoming_paper_id": "paper_25d14ebe154f11f06ad1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24af4b2fd2a55de85c2d",
+        "incoming_paper_id": "paper_24af4b2fd2a55de85c2d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a1490dfb060d5ec69ef",
+        "incoming_paper_id": "paper_6a1490dfb060d5ec69ef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da8d379b2a89e319fc87",
+        "incoming_paper_id": "paper_da8d379b2a89e319fc87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0359980be23308af9b3f",
+        "incoming_paper_id": "paper_0359980be23308af9b3f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_37c59cbc1b8a54d0fa87",
+        "incoming_paper_id": "paper_37c59cbc1b8a54d0fa87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0cf18f4f6df2529be8ba",
+        "incoming_paper_id": "paper_0cf18f4f6df2529be8ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a6893109d2a06835024",
+        "incoming_paper_id": "paper_8a6893109d2a06835024"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36c9ec4c09ece23d9502",
+        "incoming_paper_id": "paper_36c9ec4c09ece23d9502"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_7e9ac0021c94ce055af3",
+        "incoming_paper_id": "paper_dfd859b6df2979fbee9c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca572f4c94c009c20227",
+        "incoming_paper_id": "paper_ca572f4c94c009c20227"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2053ee172b524c1b36f",
+        "incoming_paper_id": "paper_a2053ee172b524c1b36f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3843342eb8440daa4cc1",
+        "incoming_paper_id": "paper_3843342eb8440daa4cc1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e669bc423268bf3223c2",
+        "incoming_paper_id": "paper_e669bc423268bf3223c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_70037cceaedf7026341d",
+        "incoming_paper_id": "paper_70037cceaedf7026341d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e47419dc541e180e82c9",
+        "incoming_paper_id": "paper_e47419dc541e180e82c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d96aabf7f85a1170da73",
+        "incoming_paper_id": "paper_d96aabf7f85a1170da73"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ebd6aeadfdfe350c2a1",
+        "incoming_paper_id": "paper_7ebd6aeadfdfe350c2a1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_336455dfe2197fa201af",
+        "incoming_paper_id": "paper_336455dfe2197fa201af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9165d58560a26e113938",
+        "incoming_paper_id": "paper_9165d58560a26e113938"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_97c6a5a6b9bc7c98bebe",
+        "incoming_paper_id": "paper_97c6a5a6b9bc7c98bebe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa24034355e8ee29679f",
+        "incoming_paper_id": "paper_fa24034355e8ee29679f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_970343670146fab154d2",
+        "incoming_paper_id": "paper_970343670146fab154d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_382542490054344491f7",
+        "incoming_paper_id": "paper_382542490054344491f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8559657c263817fad099",
+        "incoming_paper_id": "paper_8559657c263817fad099"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cdf29799fdb0d0d3b9b2",
+        "incoming_paper_id": "paper_cdf29799fdb0d0d3b9b2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_241aff360473a4c3892f",
+        "incoming_paper_id": "paper_241aff360473a4c3892f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bb0fcc0a5b071204f22",
+        "incoming_paper_id": "paper_9bb0fcc0a5b071204f22"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d146e52784d60e65266",
+        "incoming_paper_id": "paper_8d146e52784d60e65266"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2bb7b3d648ce2b7bb67",
+        "incoming_paper_id": "paper_a2bb7b3d648ce2b7bb67"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_30a541d41d5b6192a73c",
+        "incoming_paper_id": "paper_30a541d41d5b6192a73c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2af6a85564f99d1c0012",
+        "incoming_paper_id": "paper_2af6a85564f99d1c0012"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_449555c5279a7573309c",
+        "incoming_paper_id": "paper_449555c5279a7573309c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_188cbc12047870470754",
+        "incoming_paper_id": "paper_188cbc12047870470754"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7dbf541f804324bc06de",
+        "incoming_paper_id": "paper_7dbf541f804324bc06de"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_98bf205974c5c8a09c7d",
+        "incoming_paper_id": "paper_98bf205974c5c8a09c7d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68c79a6050915934c821",
+        "incoming_paper_id": "paper_68c79a6050915934c821"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6f0a88057843dbdc229b",
+        "incoming_paper_id": "paper_6f0a88057843dbdc229b"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_f7b0ef0cc42c67f257fb"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_ae8459c2b911a750fb34"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a59b2f69489c0f701a5",
+        "incoming_paper_id": "paper_9a59b2f69489c0f701a5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_35327ecb5f6899860871",
+        "incoming_paper_id": "paper_35327ecb5f6899860871"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_567ca523409232807c3e",
+        "incoming_paper_id": "paper_567ca523409232807c3e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0e1a99078be237270c5e",
+        "incoming_paper_id": "paper_0e1a99078be237270c5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9b45f280b97ccf28b43c",
+        "incoming_paper_id": "paper_9b45f280b97ccf28b43c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_77fe488fc506aa6ca699",
+        "incoming_paper_id": "paper_77fe488fc506aa6ca699"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_82b117942029a875feb3",
+        "incoming_paper_id": "paper_82b117942029a875feb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1cd0baa373e77a3fc72b",
+        "incoming_paper_id": "paper_1cd0baa373e77a3fc72b"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_33b891ea2338351f5eaa",
+          "paper_8f5591fa2e8e02ee13b4"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_33b891ea2338351f5eaa",
+        "incoming_paper_id": "paper_33b891ea2338351f5eaa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c003fa34db5eccf7e2f3",
+        "incoming_paper_id": "paper_c003fa34db5eccf7e2f3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff82593717038604c292",
+        "incoming_paper_id": "paper_ff82593717038604c292"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_613091d4693d53cb3fcb",
+        "incoming_paper_id": "paper_613091d4693d53cb3fcb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4be281779ed4edbf561e",
+        "incoming_paper_id": "paper_4be281779ed4edbf561e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_200898ca2c56f72f122a",
+        "incoming_paper_id": "paper_200898ca2c56f72f122a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2b34dbac42043962cc02",
+        "incoming_paper_id": "paper_2b34dbac42043962cc02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ac046d05b1c6c42fe98",
+        "incoming_paper_id": "paper_5ac046d05b1c6c42fe98"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e848a0a6587a83f926f",
+        "incoming_paper_id": "paper_2e848a0a6587a83f926f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d0c485992518e8df5158",
+        "incoming_paper_id": "paper_d0c485992518e8df5158"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_76c1940795749bb87231",
+        "incoming_paper_id": "paper_76c1940795749bb87231"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40d8544b620f2257fe24",
+        "incoming_paper_id": "paper_40d8544b620f2257fe24"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5506eebcc58bc933cee1",
+        "incoming_paper_id": "paper_5506eebcc58bc933cee1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f33e259e0327e51c8fa3",
+        "incoming_paper_id": "paper_f33e259e0327e51c8fa3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7951865cee6efe080d1d",
+        "incoming_paper_id": "paper_7951865cee6efe080d1d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a054576b738f7de8686",
+        "incoming_paper_id": "paper_5a054576b738f7de8686"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83db9d3bfcad7b274246",
+        "incoming_paper_id": "paper_83db9d3bfcad7b274246"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ea4c3a0c2367844ccfb",
+        "incoming_paper_id": "paper_0ea4c3a0c2367844ccfb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_269da5c1b58834970964",
+        "incoming_paper_id": "paper_269da5c1b58834970964"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_571086ade82eb0a9295a",
+        "incoming_paper_id": "paper_571086ade82eb0a9295a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c9f3bc6214d86995ba64",
+        "incoming_paper_id": "paper_c9f3bc6214d86995ba64"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_392a4728b32055804fd8",
+        "incoming_paper_id": "paper_392a4728b32055804fd8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31133709c027298ed97d",
+        "incoming_paper_id": "paper_31133709c027298ed97d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d8733d75ba8d7206a0b",
+        "incoming_paper_id": "paper_2d8733d75ba8d7206a0b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_79b6cbd609d7fc271965",
+        "incoming_paper_id": "paper_79b6cbd609d7fc271965"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb462d8cd1b38ab48f4f",
+        "incoming_paper_id": "paper_fb462d8cd1b38ab48f4f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_908e7cb3ca2aba23988f",
+        "incoming_paper_id": "paper_908e7cb3ca2aba23988f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dca80eb7cf1370d23e41",
+        "incoming_paper_id": "paper_dca80eb7cf1370d23e41"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "27003bcb70644f4e9f436ce443db85e6",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

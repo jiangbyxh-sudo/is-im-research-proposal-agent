@@ -1,0 +1,2235 @@
+{
+  "direction_id": "topic_algorithm_aversion_appreciation",
+  "labels": {
+    "zh": "算法厌恶与算法欣赏",
+    "en": "algorithm aversion and appreciation"
+  },
+  "input": {
+    "selected_direction_id": "topic_algorithm_aversion_appreciation",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 11297.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 205,
+  "hard_gate_pass_count": 11,
+  "eligible_count": 3,
+  "boundary_count": 5,
+  "selected_count": 3,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 17
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "algorithm aversion and appreciation"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "algorithm aversion and appreciation user behavior"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 5
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文3/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_algorithm_aversion_appreciation",
+      "research_direction": "algorithm aversion / appreciation",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "algorithm aversion / appreciation",
+      "aliases": [
+        "algorithm aversion / appreciation"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:164"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_algorithm_aversion_appreciation",
+        "labels": {
+          "zh": "算法厌恶与算法欣赏",
+          "en": "algorithm aversion and appreciation"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "算法厌恶与算法欣赏",
+          "algorithm aversion and appreciation",
+          "algorithm aversion / appreciation",
+          "algorithm aversion and appreciation in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "algorithm aversion and appreciation",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "algorithm aversion and appreciation",
+            "\"algorithm aversion and appreciation\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "algorithm aversion and appreciation",
+            "algorithm aversion and appreciation user behavior"
+          ],
+          "crossref": [
+            "algorithm aversion and appreciation",
+            "算法厌恶与算法欣赏"
+          ],
+          "dblp": [
+            "algorithm aversion and appreciation behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "algorithm aversion and appreciation",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "algorithm aversion and appreciation user behavior",
+          "(algorithm aversion and appreciation) OR (algorithm aversion and appreciation in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:164"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_dbae685c8edee48a842f",
+        "title": "AI aversion or appreciation? A capability–personalization framework and a meta-analytic review.",
+        "abstract": "Artificial intelligence (AI) is transforming human life. While some studies find that people prefer humans over AI (AI aversion), others find the opposite (AI appreciation). To reconcile these conflicting findings, we introduce the Capability-Personalization Framework. This theoretical framework posits that when deciding between AI and humans in a context, individuals focus on two dimensions: (a) perceived capability of AI and (b) perceived necessity for personalization. We propose that AI appreciation occurs when (a) AI is perceived as more capable than humans and (b) personalization is perceived as unnecessary in a given decision context, whereas AI aversion occurs when these conditions are not met. Our Capability-Personalization Framework is substantiated by a meta-analysis of 442 effect sizes from 163 studies (N = 82,078): AI appreciation occurs (d = 0.27, 95% CI [0.17, 0.37]) when AI is perceived as more capable than humans and personalization is perceived as unnecessary in a given decision context; otherwise, AI aversion occurs (d = -0.50, 95% CI [-0.63, -0.37]). Moderation analyses suggest that AI appreciation is more pronounced for tangible robots (vs. intangible algorithms), for attitudinal (vs. behavioral) outcomes, in between-subjects (vs. within-subjects) study designs, and in low unemployment countries, while AI aversion is more pronounced in countries with high levels of education and internet use. Overall, our integrative framework and meta-analysis advance knowledge about AI-human preferences and offer valuable implications for AI developers and users. (PsycInfo Database Record (c) 2025 APA, all rights reserved).",
+        "authors": [
+          "Xin Qin",
+          "Xiang Zhou",
+          "Chen Chen",
+          "Dongyuan Wu",
+          "Hansen Zhou",
+          "Xiushuai Dong",
+          "Limei Cao",
+          "Jie Lu"
+        ],
+        "year": 2025,
+        "publication_date": "2025-05-01",
+        "published_date": "2025-05-01",
+        "language": "en",
+        "doi": "10.1037/bul0000477",
+        "url": "https://doi.org/10.1037/bul0000477",
+        "official_url": "https://doi.org/10.1037/bul0000477",
+        "source_title": "Psychological Bulletin",
+        "journal": "Psychological Bulletin",
+        "source_issns": [
+          "0033-2909",
+          "1939-1455"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 67,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11636",
+            "name": "Artificial Intelligence in Healthcare and Education",
+            "score": 0.7872999906539917
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4411150624"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4411150624"
+        ],
+        "journal_id": "journal_062",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "PSYCHOLOGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 82.2,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 88.17,
+            "lexical_coverage": 83.33,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 91.43,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 82.2
+      },
+      {
+        "paper_id": "paper_412e4cedbc91cc1d576c",
+        "title": "An Integrative Perspective on Algorithm Aversion and Appreciation in Decision-Making",
+        "abstract": "People have conflicting responses for support from algorithms or humans in decision-making. On the one hand, they fail to benefit from algorithms due to algorithm aversion, as they reject decisions provided by algorithms more frequently than those made by humans. On the other hand, many prefer algorithmic over human advice, an effect of algorithm appreciation. However, currently, we lack a shared understanding of these constructs’ meaning and measurements, resulting in a lack of theoretical integration of empirical findings. Thus, in this research note, we conceptualize algorithm aversion as the preference for humans over algorithms in decision-making and analyze approaches in current research to measure this preference. First, we outline the implications of focusing on a specific understanding of algorithms as computational procedures or as embedded in material or nonmaterial objects. Then, we classify four decision configurations that distinguish individuals’ evaluations of algorithms, human advisors, their own judgments, or combinations of these. Consequently, we develop a classification scheme that provides guidance for future research to develop more specific hypotheses on the direction of preferences (aversion vs. appreciation) and the effect of moderators.",
+        "authors": [
+          "Ekaterina Jussupow",
+          "Izak Benbasat",
+          "Armin Heinzl"
+        ],
+        "year": 2024,
+        "publication_date": "2024-07-19",
+        "published_date": "2024-07-19",
+        "language": "en",
+        "doi": "10.25300/misq/2024/18512",
+        "url": "https://doi.org/10.25300/misq/2024/18512",
+        "official_url": "https://doi.org/10.25300/misq/2024/18512",
+        "source_title": "MIS Quarterly",
+        "journal": "MIS Quarterly",
+        "source_issns": [
+          "0276-7783",
+          "2162-9730"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 92,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.6358000040054321
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4400803056"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://misq.umn.edu/misq/article-pdf/48/4/1575/9564/11_rn_10_25300_misq_2024_18512.pdf",
+        "provider_payload_refs": [
+          "https://openalex.org/W4400803056"
+        ],
+        "journal_id": "journal_051",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 76.15,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.5,
+            "lexical_coverage": 50.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 98.21,
+            "recency": 60.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 76.15
+      },
+      {
+        "paper_id": "paper_1f88f3a4b5417d148c0b",
+        "title": "Prejudiced against the Machine? Implicit Associations and the Transience of Algorithm Aversion",
+        "abstract": "Algorithm aversion is an important and persistent issue that prevents harvesting the benefits of advancements in artificial intelligence. The literature thus far has provided explanations that primarily focus on conscious reflective processes. Here, we supplement this view by taking an unconscious perspective that can be highly informative. Building on theories of implicit prejudice, in a preregistered study, we suggest that people develop an implicit bias (i.e., prejudice) against artificial intelligence (AI) systems, as a different and threatening “species,” the behavior of which is unknown. Like in other contexts of prejudice, we expected people to be guided by this implicit bias but try to override it. This leads to some willingness to rely on algorithmic advice (appreciation), which is reduced as a function of people’s implicit prejudice against the machine. Next, building on the somatic marker hypothesis and the accessibility-diagnosticity perspective, we provide an explanation as to why aversion is ephemeral. As people learn about the performance of an algorithm, they depend less on primal implicit biases when deciding whether to rely on the AI’s advice. Two studies (n1 = 675, n2 = 317) that use the implicit association test consistently support this view. Two additional studies (n3 = 255, n4 = 332) rule out alternative explanations and provide stronger support for our assertions. The findings ultimately suggest that moving the needle between aversion and appreciation depends initially on one’s general unconscious bias against AI because there is insufficient information to override it. They further suggest that in later use stages, this shift depends on accessibility to diagnostic information about the AI’s performance, which reduces the weight given to unconscious prejudice.",
+        "authors": [
+          "Ofir Turel",
+          "Shivam Kalhan"
+        ],
+        "year": 2023,
+        "publication_date": "2023-12-01",
+        "published_date": "2023-12-01",
+        "language": "en",
+        "doi": "10.25300/misq/2022/17961",
+        "url": "https://doi.org/10.25300/misq/2022/17961",
+        "official_url": "https://doi.org/10.25300/misq/2022/17961",
+        "source_title": "MIS Quarterly",
+        "journal": "MIS Quarterly",
+        "source_issns": [
+          "0276-7783",
+          "2162-9730"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 135,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12520",
+            "name": "Psychology of Moral and Emotional Judgment",
+            "score": 0.9954000115394592
+          },
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.9919000267982483
+          },
+          {
+            "id": "https://openalex.org/T12026",
+            "name": "Explainable Artificial Intelligence (XAI)",
+            "score": 0.9721999764442444
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4391114267"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4391114267"
+        ],
+        "journal_id": "journal_051",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 75.02,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 77.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 75.02
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "algorithm aversion and appreciation",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3220,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:36.577549+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3297.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "algorithm aversion and appreciation user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1866,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:39.899211+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3297.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "algorithm aversion and appreciation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 1,
+        "queried_at": "2026-08-21T20:58:44.411925+00:00",
+        "duration_ms": 1125.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1125.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "algorithm aversion and appreciation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:45.538842+00:00",
+        "duration_ms": 1187.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1187.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "algorithm aversion and appreciation",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:58:46.715759+00:00",
+        "duration_ms": 1141.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1141.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "算法厌恶与算法欣赏",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:43.325839+00:00",
+        "duration_ms": 1078.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1078.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_631f67edc3c509888824",
+        "title": "A Cogitation on the ChatGPT Craze from the Perspective of Psychological Algorithm Aversion and Appreciation",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4dd19f272d18c9976700",
+        "title": "Exploring the Duality of Perceptions: Insights into Uncertainties, Aversion and Appreciation Towards Algorithmic HRM",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f54ab543ff7d9dd1637",
+        "title": "Algorithmic appreciation or aversion? The moderating effects of uncertainty on algorithmic decision making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06ca3bd157b0cbe11b50",
+        "title": "Algorithm aversion or appreciation? Three randomized field trials of personalized risk-communication nudges to encourage flu vaccination",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f371e3c0aff711db71ed",
+        "title": "A Simple Explanation Reconciles “Algorithm Aversion” and “Algorithm Appreciation”: Hypotheticals vs. Real Judgments",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_894c2da8eb3b4bdf851e",
+        "title": "The Influence of ‘Algorithm Aversion’ and ‘Algorithm Appreciation’ Among Consumers in Unstructured Tasks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a79540e9998468db2d7",
+        "title": "Algorithm Aversion, Appreciation, and Investor Return Beliefs",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53df70bba739de143912",
+        "title": "How do people react to AI failure? Automation bias, algorithmic aversion, and perceived controllability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e40509b1b1596968d504",
+        "title": "How transparency modulates trust in artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9a63feeca1f5d50626c",
+        "title": "Algorithm appreciation or aversion: the effects of accuracy disclosure on users' reliance on algorithmic suggestions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6773ca670f9e7a0491a6",
+        "title": "Algorithm aversion? On the influence of advice accuracy on trust in algorithmic advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f934b0211861afbaf441",
+        "title": "Is algorithm aversion WEIRD? A cross-country comparison of individual-differences and algorithm aversion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36aeb9a95d28d715c8cb",
+        "title": "Algorithm aversion in delegated investing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71f756c1ff963e6f0614",
+        "title": "The extent of algorithm aversion in decision-making situations with varying gravity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ac8435f2db06f2ef0b1",
+        "title": "Human favoritism, not AI aversion: People’s perceptions (and bias) toward generative AI, human experts, and human–GAI collaboration in persuasive content generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ec389ff7abe98e88541",
+        "title": "Cultural Differences in People's Reactions and Applications of Robots, Algorithms, and Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04055a86be84e8e58d03",
+        "title": "When Self-Humanization Leads to Algorithm Aversion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35b7728d9ffccedbdc7d",
+        "title": "Machine Replacement: A Mind-Role Fit Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a425c2a0925d3a3447f",
+        "title": "A dimensional exploration and scale development study of algorithm aversion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_453902cfad09590b6652",
+        "title": "The ABC of algorithmic aversion: not agent, but benefits and control determine the acceptance of automated decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d06b973171a7570e4ab7",
+        "title": "The risk of algorithm transparency: How algorithm complexity drives the effects on the use of advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8377484ec19c6df6bdb6",
+        "title": "Do People Recover from Algorithm Aversion? An Experimental Study of Algorithm Aversion over Time",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2310f8f8d6d1a936b30f",
+        "title": "Overcoming Algorithm Aversion: A Comparison between Process and Outcome Control",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7d2a4519f3891cf1a74",
+        "title": "Averse to what: Consumer aversion to algorithmic labels, but not their outputs?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ba5a4b52a20a06040f6",
+        "title": "Algorithm aversion or appreciation?",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_619353ddb60747535ba7",
+        "title": "From algorithm aversion to AI dependence: Deskilling, upskilling, and emerging addictions in the GenAI age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d57bcef6c1dd6aaa1947",
+        "title": "Psychological Distance and Algorithm Aversion: Congruency and Advisor Confidence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b1de749d174a4953fc2",
+        "title": "Content Analysis of Judges' Sentiments Toward Artificial Intelligence Risk Assessment Tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_649a5e0c76faa2e3234b",
+        "title": "Employees Adhere More to Unethical Instructions from Human Than AI Supervisors: Complementing Experimental Evidence with Machine Learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cef957561f3815876e4d",
+        "title": "Biased Humans, (Un)Biased Algorithms?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a10627dea926215ce26",
+        "title": "Public aversion against ChatGPT in creative fields?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f852092c7ac46940e053",
+        "title": "Human preferences toward algorithmic advice in a word association task",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_823b66f48d8e80a10cc1",
+        "title": "Stop ordering machine learning algorithms by their explainability! A user-centered investigation of performance and explainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc9e0be3a86fbefa63ea",
+        "title": "Perceptions of Justice By Algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d0faa10c2224f478858",
+        "title": "Human Workers at the Center: Algorithm Aversion and Appreciation as Reactions to AI in Organizations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c99a488c1a11a7868605",
+        "title": "Decision authority and the returns to algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ccd78011156e56669d2",
+        "title": "Beyond algorithm aversion: The impact of psychological readiness on algorithmic advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f9676ddf92d71b9fba",
+        "title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1452923f625c8b6cbf7a",
+        "title": "Algorithms, Humans, and Interactions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d6f13f012b901ad59608",
+        "title": "When Ai is Perceived to Be Fairer than a Human: Understanding Perceptions of Algorithmic Decisions in a Job Application Context",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c5a52b82d78f8351032",
+        "title": "AI Aversion or Appreciation? Meta-Analytic Evidence for a Capability-Personalization Framework",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0c5eda601c69236b548",
+        "title": "Is AI as trustworthy as human experts? The role of advice source, technology knowledge, and perceptions of AI’s impact in organizational decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9ba577e2dd15c79eb2f",
+        "title": "Offloading under cognitive load: Humans are willing to offload parts of an attentionally demanding task to an algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_daffc02465bebe3c9343",
+        "title": "A Meta-Analysis and Review About the (Un)Fairness Perceptions of Algorithmic Decision-Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88092f80fd7c6199a88f",
+        "title": "The lonely algorithm problem: the relationship between algorithmic personalization and social connectedness on TikTok",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cefd6c953fd741ed2a4",
+        "title": "A Cogitation on the ChatGPT Craze from the Perspective of Psychological Algorithm Aversion and Appreciation [Retraction]",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a8ead3fdcd2ede6c9b9",
+        "title": "The impact of text topic and assumed human vs. AI authorship on competence and quality assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c2c17c27bf118423aca",
+        "title": "Corrupted by Algorithms? How AI-generated and Human-written Advice Shape (Dis)honesty",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94ff4da2fbc398c3e510",
+        "title": "Algorithmic media use and algorithm literacy: An integrative literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65fea032a00c308cc8cd",
+        "title": "Using algorithms to improve knowledge work",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96b6ff011c7fc7e8a0d6",
+        "title": "What do we know about algorithmic literacy? The status quo and a research agenda for a growing field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_003b32acf4d32d77d9ec",
+        "title": "Strategic Human Resource Management in the Era of Algorithmic Technologies: Key Insights and Future Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22cc0f1d34d7b4588936",
+        "title": "Exploring the role of AI algorithmic agents: The impact of algorithmic decision autonomy on consumer purchase decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26fca483e9e55a02a486",
+        "title": "Disentangling Fairness Perceptions in Algorithmic Decision-Making: the Effects of Explanations, Human Oversight, and Contestability",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cf8239247b8e3ff0ddbf",
+        "title": "Should I Trust the Artificial Intelligence to Recruit? Recruiters’ Perceptions and Behavior When Faced With Algorithm-Based Recommendation Systems During Resume Screening",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e47c449acd00b0d2196f",
+        "title": "The effect of transparency and trust on intelligent system acceptance: Evidence from a user-based study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7198b6a0fcab0e8462ce",
+        "title": "Galyean Appreciation Club Review: revisiting nutrition and health of newly received cattle—what have we learned in the last 15 years?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_882328875a5d9aa24fea",
+        "title": "“Look! It’s a Computer Program! It’s an Algorithm! It’s AI!”: Does Terminology Affect Human Perceptions and Evaluations of Algorithmic Decision-Making Systems?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0852f24173aa31a04758",
+        "title": "Comparing Different Kinds of Influence on an Algorithm in Its Forecasting Process and Their Impact on Algorithm Aversion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95ad72daee5296822919",
+        "title": "Negative performance feedback from algorithms or humans? effect of medical researchers’ algorithm aversion on scientific misconduct",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1995e53fb53f588862bb",
+        "title": "An Anatomy of Algorithm Aversion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4000ef2f04733e1745b",
+        "title": "Easing AI-advertising aversion: how leadership for the greater good buffers negative response to AI-generated ads",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67774085162ebee70cf4",
+        "title": "Algorithm aversion or appreciation? Three randomized field trials of personalized risk-communication nudges to encourage flu vaccination",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67926840c15b5afc36e5",
+        "title": "Towards Transparency in Dermatology Image Datasets with Skin Tone Annotations by Experts, Crowds, and an Algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c11400cf4232d174729",
+        "title": "Consumers’ persuasion knowledge of algorithms in social media advertising: identifying consumer groups based on awareness, appropriateness, and coping ability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e03e695282882df207d2",
+        "title": "Algorithmic Management: Its Implications for Information Systems Research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_001099ab43f94d5b4bb5",
+        "title": "Do we like robot? Consumers' attitude towards the algorithm",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b323827103bc69c8d3c1",
+        "title": "Algorithms as partners in crime: A lesson in ethics by design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f38b4f1bd9c7c20622e7",
+        "title": "Content Analysis of Judges’ Sentiments Toward Artificial Intelligence Risk Assessment Tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1f35018e75518fc151e0",
+        "title": "Trusting Humans or Bots? Examining Trust Transfer and Algorithm Aversion in China’s E-Government Services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df137575ca988f8c1878",
+        "title": "Algorithm fashion designer? ascribed mind and perceived design expertise of AI versus human",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f162bc34538e60dd245b",
+        "title": "The Facets and Consequences of Uncertainty in Human–AI Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_074e8d8ca613be3b36ad",
+        "title": "Overcoming Algorithm Aversion: The Power of Task-Procedure-Fit",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b172205ff7bdb0dd2a1e",
+        "title": "Behavioral Finance in the Digital Era",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68c09e629df8afe8867c",
+        "title": "Adapting to the algorithm: how accuracy comparisons promote the use of a decision aid",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da64f83acf799656f766",
+        "title": "Artificial Intelligence Can’t Be Charmed: The Effects of Impartiality on Laypeople’s Algorithmic Preferences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4746a8f5a79b3356bc65",
+        "title": "Humans and Algorithms Detecting Fake News: Effects of Individual and Contextual Confidence on Trust in Algorithmic Advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25e44259c326ec0d1df7",
+        "title": "Attitudinal and behavioral correlates of algorithmic awareness among German and U.S. social media users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fee57208f447536760d",
+        "title": "Algorithmic Decisions, Desire for Control, and the Preference for Human Review over Algorithmic Review",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f06254013e86f0d9c662",
+        "title": "Algorithmic Gatekeeping for Professional Communicators",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd33af34f1d526af373d",
+        "title": "Unveiling coping mechanisms in marketplace discrimination: The allure of artificial intelligence recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3521323e03bfdd06920",
+        "title": "The interactive effect of recommendation subjects and message types on consumers' suboptimal food purchase intentions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ab5216cbf6aeb343588",
+        "title": "Effect of disclosing AI-generated content on prosocial advertising evaluation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a918ff3d78ff4b7d523",
+        "title": "Just Because We Can, Doesn’t Mean We Should: Algorithm Aversion as a Principled Resistance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06a192f76e8f68e0ad0d",
+        "title": "Shifting accountability to artificial intelligence: delegating challenging decisions to AI for responsibility avoidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04b4b2440f7549d65f32",
+        "title": "People Perceive Algorithmic Assessments as Less Fair and Trustworthy Than Identical Human Assessments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00feb231501a5f5b0420",
+        "title": "Trust Formation, Error Impact, and Repair in Human–AI Financial Advisory: A Dynamic Behavioral Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eefc444df668dedb9dd5",
+        "title": "Algorithm dependency in platformized news use",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7455e094b89dc9179b9f",
+        "title": "When algorithms and human experts contradict, whom do users follow?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8fcb6bfb74b79419736f",
+        "title": "Adoption of AI-Enabled Tools in Social Development Organizations in India: An Extension of UTAUT Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0afbc404dcd880d4ba2e",
+        "title": "Algorithm aversion during disruptions: The case of safety stock",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a0cd3d0d42e7bc5b029",
+        "title": "Algorithmic versus human surveillance leads to lower perceptions of autonomy and increased resistance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5b3f06f4a86e58dace5",
+        "title": "AI in the hands of imperfect users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd5963b16b79e4ff69c",
+        "title": "Understanding the impact of explanations on advice-taking: a user study for AI-based clinical Decision Support Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_41401d0ddf2ac62d40e4",
+        "title": "Behavioral finance factors and investment decisions: A mediating role of risk perception",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_553d92852d8b6106eaea",
+        "title": "”Because AI is 100% right and safe”: User Attitudes and Sources of AI Authority in India",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73cf18aec8a68f47e402",
+        "title": "Assessing AI adoption in developing country academia: A trust and privacy-augmented UTAUT framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7777a621364add047b5",
+        "title": "Lie detection algorithms disrupt the social dynamics of accusation behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f4f042d7cf2685d81d9",
+        "title": "Understanding Users’ Acceptance of Artificial Intelligence Applications: A Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b2e92ef4a012c821c1c",
+        "title": "How gamifying AI shapes customer motivation, engagement, and purchase behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9995f4c96f5a725fad3",
+        "title": "Beyond algorithm aversion: How users trade off decisional agency and optimal outcomes when choosing between algorithms and human decision-makers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ed05f7fef699893af3e",
+        "title": "When ChatGPT Gives Incorrect Answers: The Impact of Inaccurate Information by Generative AI on Tourism Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04b1037aba20502fc359",
+        "title": "Bridging the user equilibrium and the system optimum in static traffic assignment: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12c94518649b89acd58f",
+        "title": "The role of trust and algorithms in consumers’ front-of-pack labels acceptance: a cross-country investigation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29589c33c70e8e3db13f",
+        "title": "A comprehensive study on factors influencing online impulse buying behavior: Evidence from Shopee video platform",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d9fb253de69ecaea244",
+        "title": "Towards the design of user-centric strategy recommendation systems for collaborative Human–AI tasks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28c422ec00536db214a9",
+        "title": "Are Two Heads Better Than One in AI-Assisted Decision Making? Comparing the Behavior and Performance of Groups and Individuals in Human-AI Collaborative Recidivism Risk Assessment",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f56025b7f7f986beb388",
+        "title": "Understanding how users may work around algorithmic bias",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa633a12425b18a62fa2",
+        "title": "Valuing the Societal Impact of Medicines and Other Health Technologies: A User Guide to Current Best Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c88c3bc9fc5cf8351879",
+        "title": "Knowing About Knowing: An Illusion of Human Competence Can Hinder Appropriate Reliance on AI Systems",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c67a632df0af44d40429",
+        "title": "Algorithmic Bias in Image-Generating Artificial Intelligence: Prevalence and User Perceptions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fc50c74a139292d3c25",
+        "title": "Zombies in the Loop? Humans Trust Untrustworthy AI-Advisors for Ethical Decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69a49711182f922d32ca",
+        "title": "Artificial Intelligence and Machine Learning: Exploring drivers, barriers, and future developments in marketing management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a0c212236077dd7c1d4",
+        "title": "Algorithm-based advice taking and clinical judgement: impact of advice distance and algorithm information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_791759cc78930345e798",
+        "title": "Dynamics of Reliance on Algorithmic Advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e238369ebbcab71fc66",
+        "title": "Why Do Swiss HR Departments Dislike Algorithms in Their Recruitment Process? An Empirical Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79379466378c41366f31",
+        "title": "A systematic review of empirical studies on advice-based decisions in behavioral and organizational research.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d1fdc0a2d8f8ea6df16",
+        "title": "The Role of Algorithm and Task Familiarity in Algorithm Aversion: An Empirical Study",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77462e74159a831a1b3a",
+        "title": "The Order & Complexity Toolbox for Aesthetics (OCTA): A systematic approach to study the relations between order, complexity, and aesthetic appreciation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec36d95f67de2e57ae00",
+        "title": "Co-design of Human-centered, Explainable AI for Clinical Decision Support",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d08732a9e2fb80f59f9",
+        "title": "Heterogeneity in Algorithm-Assisted Decision-Making: A Case Study in Child Abuse Hotline Screening",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_791c84c35e7f9f747a41",
+        "title": "Generative AI in innovation and marketing processes: A roadmap of research opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e1a7030157bb81e7515",
+        "title": "Meaningful Explanation Effect on User’s Trust in an AI Medical System: Designing Explanations for Non-Expert Users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6885c16599456e209636",
+        "title": "Put Yourself in My Shoes: Revisiting the Moral Value of Algorithm Aversion Through Reciprocity and Vulnerability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44b0e93dac908c193924",
+        "title": "Plan-Then-Execute: An Empirical Study of User Trust and Team Performance When Using LLM Agents As A Daily Assistant",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38004eed72d072662313",
+        "title": "Research on the Influence of Short Video AI Personalized Recommendation on Consumers’ Impulsive Buying Behavior—Moderating Effects Based on Algorithmic Attitudes",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2fdad87b533c7cc9869",
+        "title": "Public administration meets artificial intelligence: Towards a meaningful behavioral research agenda on algorithmic decision-making in government",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e4c606dc2f4dbb09ed5",
+        "title": "Trustworthy artificial intelligence and the European Union AI act: On the conflation of trustworthiness and acceptability of risk",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 17
+    },
+    "coverage_audit": {
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 205,
+      "deduplicated_count": 11,
+      "hard_gate_pass_count": 11,
+      "eligible_count": 3,
+      "boundary_count": 5,
+      "selected_count": 3,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "algorithm aversion and appreciation"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "algorithm aversion and appreciation user behavior"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 5
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "algorithm aversion and appreciation",
+        "raw_count": 100,
+        "hard_gate_pass_count": 7,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "algorithm aversion and appreciation user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 12,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_d6f13f012b901ad59608",
+        "incoming_paper_id": "paper_09280967698b38bf8c51"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_2ba5a4b52a20a06040f6",
+          "paper_67774085162ebee70cf4"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_412e4cedbc91cc1d576c",
+        "incoming_paper_id": "paper_412e4cedbc91cc1d576c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dbae685c8edee48a842f",
+        "incoming_paper_id": "paper_dbae685c8edee48a842f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e40509b1b1596968d504",
+        "incoming_paper_id": "paper_e40509b1b1596968d504"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53df70bba739de143912",
+        "incoming_paper_id": "paper_53df70bba739de143912"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b2f9676ddf92d71b9fba",
+        "incoming_paper_id": "paper_b2f9676ddf92d71b9fba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4dd19f272d18c9976700",
+        "incoming_paper_id": "paper_4dd19f272d18c9976700"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_823b66f48d8e80a10cc1",
+        "incoming_paper_id": "paper_823b66f48d8e80a10cc1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36aeb9a95d28d715c8cb",
+        "incoming_paper_id": "paper_36aeb9a95d28d715c8cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca3a6d3f5517500a429d",
+        "incoming_paper_id": "paper_ca3a6d3f5517500a429d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6773ca670f9e7a0491a6",
+        "incoming_paper_id": "paper_6773ca670f9e7a0491a6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71f756c1ff963e6f0614",
+        "incoming_paper_id": "paper_71f756c1ff963e6f0614"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e47c449acd00b0d2196f",
+        "incoming_paper_id": "paper_e47c449acd00b0d2196f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1ec389ff7abe98e88541",
+        "incoming_paper_id": "paper_1ec389ff7abe98e88541"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_04055a86be84e8e58d03",
+        "incoming_paper_id": "paper_04055a86be84e8e58d03"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_25e44259c326ec0d1df7",
+        "incoming_paper_id": "paper_25e44259c326ec0d1df7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6ac8435f2db06f2ef0b1",
+        "incoming_paper_id": "paper_6ac8435f2db06f2ef0b1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_453902cfad09590b6652",
+        "incoming_paper_id": "paper_453902cfad09590b6652"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_619353ddb60747535ba7",
+        "incoming_paper_id": "paper_619353ddb60747535ba7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2310f8f8d6d1a936b30f",
+        "incoming_paper_id": "paper_2310f8f8d6d1a936b30f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d06b973171a7570e4ab7",
+        "incoming_paper_id": "paper_d06b973171a7570e4ab7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cf8239247b8e3ff0ddbf",
+        "incoming_paper_id": "paper_cf8239247b8e3ff0ddbf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd93026c424157f75b44",
+        "incoming_paper_id": "paper_cd93026c424157f75b44"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b7d2a4519f3891cf1a74",
+        "incoming_paper_id": "paper_b7d2a4519f3891cf1a74"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d9a63feeca1f5d50626c",
+        "incoming_paper_id": "paper_d9a63feeca1f5d50626c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc9e0be3a86fbefa63ea",
+        "incoming_paper_id": "paper_fc9e0be3a86fbefa63ea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_96b6ff011c7fc7e8a0d6",
+        "incoming_paper_id": "paper_96b6ff011c7fc7e8a0d6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9c5a52b82d78f8351032",
+        "incoming_paper_id": "paper_9c5a52b82d78f8351032"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1452923f625c8b6cbf7a",
+        "incoming_paper_id": "paper_1452923f625c8b6cbf7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c99a488c1a11a7868605",
+        "incoming_paper_id": "paper_c99a488c1a11a7868605"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_631f67edc3c509888824",
+        "incoming_paper_id": "paper_631f67edc3c509888824"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_94ff4da2fbc398c3e510",
+        "incoming_paper_id": "paper_94ff4da2fbc398c3e510"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_26fca483e9e55a02a486",
+        "incoming_paper_id": "paper_26fca483e9e55a02a486"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9ba577e2dd15c79eb2f",
+        "incoming_paper_id": "paper_e9ba577e2dd15c79eb2f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88092f80fd7c6199a88f",
+        "incoming_paper_id": "paper_88092f80fd7c6199a88f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00feb231501a5f5b0420",
+        "incoming_paper_id": "paper_00feb231501a5f5b0420"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8377484ec19c6df6bdb6",
+        "incoming_paper_id": "paper_8377484ec19c6df6bdb6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c2c17c27bf118423aca",
+        "incoming_paper_id": "paper_2c2c17c27bf118423aca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_003b32acf4d32d77d9ec",
+        "incoming_paper_id": "paper_003b32acf4d32d77d9ec"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_22cc0f1d34d7b4588936",
+        "incoming_paper_id": "paper_22cc0f1d34d7b4588936"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_882328875a5d9aa24fea",
+        "incoming_paper_id": "paper_882328875a5d9aa24fea"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e03e695282882df207d2",
+        "incoming_paper_id": "paper_e03e695282882df207d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95ad72daee5296822919",
+        "incoming_paper_id": "paper_95ad72daee5296822919"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0852f24173aa31a04758",
+        "incoming_paper_id": "paper_0852f24173aa31a04758"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1995e53fb53f588862bb",
+        "incoming_paper_id": "paper_1995e53fb53f588862bb"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_d6f13f012b901ad59608",
+        "incoming_paper_id": "paper_09280967698b38bf8c51"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df137575ca988f8c1878",
+        "incoming_paper_id": "paper_df137575ca988f8c1878"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_649a5e0c76faa2e3234b",
+        "incoming_paper_id": "paper_649a5e0c76faa2e3234b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a767742ab52d1e2f0ca",
+        "incoming_paper_id": "paper_5a767742ab52d1e2f0ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6ab5216cbf6aeb343588",
+        "incoming_paper_id": "paper_6ab5216cbf6aeb343588"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68c09e629df8afe8867c",
+        "incoming_paper_id": "paper_68c09e629df8afe8867c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4746a8f5a79b3356bc65",
+        "incoming_paper_id": "paper_4746a8f5a79b3356bc65"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7c11400cf4232d174729",
+        "incoming_paper_id": "paper_7c11400cf4232d174729"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_da64f83acf799656f766",
+        "incoming_paper_id": "paper_da64f83acf799656f766"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8fcb6bfb74b79419736f",
+        "incoming_paper_id": "paper_8fcb6bfb74b79419736f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06ca3bd157b0cbe11b50",
+        "incoming_paper_id": "paper_06ca3bd157b0cbe11b50"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9fee57208f447536760d",
+        "incoming_paper_id": "paper_9fee57208f447536760d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f06254013e86f0d9c662",
+        "incoming_paper_id": "paper_f06254013e86f0d9c662"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1f35018e75518fc151e0",
+        "incoming_paper_id": "paper_1f35018e75518fc151e0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eefc444df668dedb9dd5",
+        "incoming_paper_id": "paper_eefc444df668dedb9dd5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1a918ff3d78ff4b7d523",
+        "incoming_paper_id": "paper_1a918ff3d78ff4b7d523"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0afbc404dcd880d4ba2e",
+        "incoming_paper_id": "paper_0afbc404dcd880d4ba2e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_04b4b2440f7549d65f32",
+        "incoming_paper_id": "paper_04b4b2440f7549d65f32"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7455e094b89dc9179b9f",
+        "incoming_paper_id": "paper_7455e094b89dc9179b9f"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_2310f8f8d6d1a936b30f",
+        "incoming_paper_id": "paper_2f73aea6d53cf8d6faba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca3a6d3f5517500a429d",
+        "incoming_paper_id": "paper_ca3a6d3f5517500a429d"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "f366ff2dc322497d9d6dbf78835dffce",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

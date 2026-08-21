@@ -1,0 +1,3071 @@
+{
+  "direction_id": "topic_judgment_decision_making",
+  "labels": {
+    "zh": "判断与决策",
+    "en": "judgment and decision making"
+  },
+  "input": {
+    "selected_direction_id": "topic_judgment_decision_making",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16235.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 326,
+  "hard_gate_pass_count": 31,
+  "eligible_count": 3,
+  "boundary_count": 11,
+  "selected_count": 3,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 17
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "judgment and decision making"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "judgment and decision making user behavior"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(judgment and decision making) OR (judgment and decision making in user behavior)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 26
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文3/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_judgment_decision_making",
+      "research_direction": "judgment / decision making",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "PSYCHOLOGY",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_PSYCHOLOGY",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "judgment / decision making",
+      "aliases": [
+        "judgment / decision making"
+      ],
+      "groups": [
+        "IS × Psychology"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:176"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_judgment_decision_making",
+        "labels": {
+          "zh": "判断与决策",
+          "en": "judgment and decision making"
+        },
+        "group_ids": [
+          "is_psychology"
+        ],
+        "synonyms": [
+          "判断与决策",
+          "judgment and decision making",
+          "judgment / decision making",
+          "judgment and decision making in user behavior"
+        ],
+        "boundaries": {
+          "include": [
+            "judgment and decision making",
+            "user behavior",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "judgment and decision making",
+            "\"judgment and decision making\" AND \"user behavior\""
+          ],
+          "semantic_scholar": [
+            "judgment and decision making",
+            "judgment and decision making user behavior"
+          ],
+          "crossref": [
+            "judgment and decision making",
+            "判断与决策"
+          ],
+          "dblp": [
+            "judgment and decision making behavioral research"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "judgment and decision making",
+            "user behavior",
+            "behavioral research"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PSYCHOLOGY",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_PSYCHOLOGY",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "judgment and decision making user behavior",
+          "(judgment and decision making) OR (judgment and decision making in user behavior)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:176"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_412e4cedbc91cc1d576c",
+        "title": "An Integrative Perspective on Algorithm Aversion and Appreciation in Decision-Making",
+        "abstract": "People have conflicting responses for support from algorithms or humans in decision-making. On the one hand, they fail to benefit from algorithms due to algorithm aversion, as they reject decisions provided by algorithms more frequently than those made by humans. On the other hand, many prefer algorithmic over human advice, an effect of algorithm appreciation. However, currently, we lack a shared understanding of these constructs’ meaning and measurements, resulting in a lack of theoretical integration of empirical findings. Thus, in this research note, we conceptualize algorithm aversion as the preference for humans over algorithms in decision-making and analyze approaches in current research to measure this preference. First, we outline the implications of focusing on a specific understanding of algorithms as computational procedures or as embedded in material or nonmaterial objects. Then, we classify four decision configurations that distinguish individuals’ evaluations of algorithms, human advisors, their own judgments, or combinations of these. Consequently, we develop a classification scheme that provides guidance for future research to develop more specific hypotheses on the direction of preferences (aversion vs. appreciation) and the effect of moderators.",
+        "authors": [
+          "Ekaterina Jussupow",
+          "Izak Benbasat",
+          "Armin Heinzl"
+        ],
+        "year": 2024,
+        "publication_date": "2024-07-19",
+        "published_date": "2024-07-19",
+        "language": "en",
+        "doi": "10.25300/misq/2024/18512",
+        "url": "https://doi.org/10.25300/misq/2024/18512",
+        "official_url": "https://doi.org/10.25300/misq/2024/18512",
+        "source_title": "MIS Quarterly",
+        "journal": "MIS Quarterly",
+        "source_issns": [
+          "0276-7783",
+          "2162-9730"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 92,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.6358000040054321
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4400803056"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://misq.umn.edu/misq/article-pdf/48/4/1575/9564/11_rn_10_25300_misq_2024_18512.pdf",
+        "provider_payload_refs": [
+          "https://openalex.org/W4400803056"
+        ],
+        "journal_id": "journal_051",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 73.35,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 66.5,
+            "lexical_coverage": 50.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 98.21,
+            "recency": 60.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 73.35
+      },
+      {
+        "paper_id": "paper_e4e262fcd3cfaba373f7",
+        "title": "Individual Differences in Judgment and Decision-Making: Novel Predictors of Counterproductive Work Behavior",
+        "abstract": "The current paper proposed individual differences in judgment and decision-making (JDM)-namely, the skill associated with recognizing social norms, decision-making styles, and risk-benefit perceptions-as a novel set of predictors of counterproductive work behavior (CWB). We hypothesized that the skill associated with recognizing social norms, rational decision-making style, and perceived riskiness of unethical behavior would be related negatively to CWB, whereas the avoidant decision-making style, spontaneous decision-making style, and perceived benefits of unethical behavior would be related positively to CWB. Moreover, we hypothesized that JDM-focused individual differences would exhibit incremental validity above and beyond the traditional individual difference predictors of CWB (personality, trait affect, and cognitive ability). Results from three independent samples provided strong support for the hypotheses. The strongest predictor of CWB was individual differences in perceived benefits of unethical behavior (meta-analytic correlation across the three samples = .487). This result suggests a simple insight, yet one almost completely missing from the existing CWB literature: People who believe unethical behavior is likely to benefit them will tend to enact more CWB than those who do not. Additionally, across the three samples, the novel JDM-focused individual difference predictors performed well in comparison to the traditional individual difference predictors, suggesting their usefulness to research and practice. We therefore suggest several avenues for future research on JDM-focused individual differences as predictors of CWB. Additionally, vis-à-vis practical implications, we discuss the possibility of using JDM-focused individual differences in employee selection and organizational intervention contexts with the aim of reducing CWB.",
+        "authors": [
+          "Balca Alaybek",
+          "Reeshad S. Dalal",
+          "Brynee Dade"
+        ],
+        "year": 2022,
+        "publication_date": "2022-11-02",
+        "published_date": "2022-11-02",
+        "language": "en",
+        "doi": "10.1007/s10869-022-09843-x",
+        "url": "https://doi.org/10.1007/s10869-022-09843-x",
+        "official_url": "https://doi.org/10.1007/s10869-022-09843-x",
+        "source_title": "Journal of Business and Psychology",
+        "journal": "Journal of Business and Psychology",
+        "source_issns": [
+          "0889-3268",
+          "1573-353X"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 14,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10006",
+            "name": "Job Satisfaction and Organizational Behavior",
+            "score": 0.9987000226974487
+          },
+          {
+            "id": "https://openalex.org/T11058",
+            "name": "Ethics in Business and Education",
+            "score": 0.9922000169754028
+          },
+          {
+            "id": "https://openalex.org/T10315",
+            "name": "Decision-Making and Behavioral Economics",
+            "score": 0.9843000173568726
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4307864174"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s10869-022-09843-x.pdf",
+        "provider_payload_refs": [
+          "https://openalex.org/W4307864174"
+        ],
+        "journal_id": "journal_031",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "PSYCHOLOGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 72.58,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 86.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 58.68,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 72.58
+      },
+      {
+        "paper_id": "paper_89a5944b881f0a3ba8b0",
+        "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+        "abstract": "Automated decision-making systems become increasingly powerful due to higher model complexity. While powerful in prediction accuracy, Deep Learning models are black boxes by nature, preventing users from making informed judgments about the correctness and fairness of such an automated system. Explanations have been proposed as a general remedy to the black box problem. However, it remains unclear if effects of explanations on user trust generalise over varying accuracy levels. In an online user study with 959 participants, we examined the practical consequences of adding explanations for user trust: We evaluated trust for three explanation types on three classifiers of varying accuracy. We find that the influence of our explanations on trust differs depending on the classifier’s accuracy. Thus, the interplay between trust and explanations is more complex than previously reported. Our findings also reveal discrepancies between self-reported and behavioural trust, showing that the choice of trust measure impacts the results.",
+        "authors": [
+          "Andrea Papenmeier",
+          "Dagmar Kern",
+          "Gwenn Englebienne",
+          "Christin Seifert"
+        ],
+        "year": 2022,
+        "publication_date": "2022-03-31",
+        "published_date": "2022-03-31",
+        "language": "en",
+        "doi": "10.1145/3495013",
+        "url": "https://doi.org/10.1145/3495013",
+        "official_url": "https://doi.org/10.1145/3495013",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 140,
+        "topics": [
+          {
+            "id": "https://openalex.org/T12026",
+            "name": "Explainable Artificial Intelligence (XAI)",
+            "score": 0.9997000098228455
+          },
+          {
+            "id": "https://openalex.org/T11689",
+            "name": "Adversarial Robustness in Machine Learning",
+            "score": 0.9901000261306763
+          },
+          {
+            "id": "https://openalex.org/T10883",
+            "name": "Ethics and Social Impacts of AI",
+            "score": 0.9897000193595886
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4220693086"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://dl.acm.org/doi/pdf/10.1145/3495013",
+        "provider_payload_refs": [
+          "https://openalex.org/W4220693086"
+        ],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 70.77,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 69.33,
+            "lexical_coverage": 66.67,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 70.77
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "judgment and decision making",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 475643,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:06.077379+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3812.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "judgment and decision making user behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 135826,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:09.906826+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3594.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(judgment and decision making) OR (judgment and decision making in user behavior)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 467663,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:13.536258+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3547.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "judgment and decision making",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:18.477197+00:00",
+        "duration_ms": 1454.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1454.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Current Directions in Psychological Science",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0963-7214",
+        "query": "judgment and decision making",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 6,
+        "accepted_before_dedupe": 6,
+        "queried_at": "2026-08-21T21:00:19.917513+00:00",
+        "duration_ms": 1218.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1218.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "judgment and decision making",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:00:21.144479+00:00",
+        "duration_ms": 1141.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1141.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "判断与决策",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:17.333423+00:00",
+        "duration_ms": 1140.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1140.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_23d158b5a05dcb34ff18",
+        "title": "Cognitive and implicit biases in nurses' judgment and decision-making: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d02941d5516c1da7a6c",
+        "title": "Sampling in Judgment and Decision Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84131069ac5f81708562",
+        "title": "Judgment and Decision-Making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3dc9d392f46eb08700ad",
+        "title": "Advancing judgment and decision-making research in sport psychology by using the body as an informant in embodied choices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19ba933aa5eed88a0da1",
+        "title": "Affective integration in experience, judgment, and decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40cf1ed6f8effadf5af5",
+        "title": "Clinical judgment and decision-making of the Undergraduate Nursing students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b54b9f38a8b9b2208fd",
+        "title": "Cognitive biases in accounting judgment and decision making: a review, a typology, and a future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df8bf9dde8715245b97f",
+        "title": "Analyzing the Factors That Affect Auditor’s Judgment and Decision Making in Lebanese Audit Firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd6a4052b8c780b7777b",
+        "title": "Decoupling Judgment and Decision Making: A Tale of Two Tails",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_643ba93995dd3897f137",
+        "title": "Contractualist tendencies and reasoning in moral judgment and decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3500adbde1f09063d88",
+        "title": "Doing the right thing, in the right place, with the right people, at the right time; a study of the development of judgment and decision making in mid-career outdoor instructors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbadc1fab1c39910a272",
+        "title": "Contractualist tendencies and reasoning in moral judgment and decision making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cbd47593b1459242091c",
+        "title": "Engineering Judgment and Decision Making in Undergraduate Student Writing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35600af1d31624ea9766",
+        "title": "The Role of Numeracy in Judgment and Decision Making: The Replication of Eleven Effects Across Various Numeracy Scales",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2b34d6ec2be02e05afb",
+        "title": "Foreign Language Effects on Judgment and Decision Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c943280b342aab1f4f4e",
+        "title": "Consumer Well-Being in Judgment and Decision-Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_673d348dca908cbe4507",
+        "title": "Individual differences in inaccurate versus accurate economic judgment and decision making. Metacognitive approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e2e95d9923b48f6dd91",
+        "title": "Artificial intelligence in nursing: advancing clinical judgment and decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09877d27342d59b996be",
+        "title": "An artificial intelligence algorithmic approach to ethical decision-making in human resource management processes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ab405cc57650968aed5",
+        "title": "How the expertise heuristic accelerates decision-making and credibility judgments in social media by means of effort reduction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cdd9783e85d689444524",
+        "title": "To Engage or Not to Engage with AI for Critical Judgments: How Professionals Deal with Opacity When Using AI for Medical Diagnosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae8d2e29dff36e46ed09",
+        "title": "The effect of implementation of the Stewardship Code on nonprofessional investors’ judgment and decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_675b1d8a576b3f960a20",
+        "title": "Confirmation bias in AI-assisted decision-making: AI triage recommendations congruent with expert judgments increase psychologist trust and recommendation acceptance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_150b8a9d6dbf84ca8c88",
+        "title": "A Conceptualization of Mood Influences on Group Judgment and Decision Making: The Key Function of Dominant Cognitive Processing Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_deffccf32d94b4863bc1",
+        "title": "Theorizing Engineering Judgment at the Intersection of Decision-Making and Identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9c9aff918869c5ce6c9",
+        "title": "Cognitive bias and how to improve sustainable decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de9e97d1bdcba7d62d22",
+        "title": "The Role of Age-Related Changes to Memory in Social Judgment and Decision Making Involving Artificial Social Agents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c46c5423c0de354dcb1",
+        "title": "COVID-19: judgment and decision making on CSR",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac559369ff11fb55cc40",
+        "title": "The effect of personalized audit communication and evidence inconsistency on auditor judgments and decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3dcddc8bc10731498669",
+        "title": "An adaptive two-stage consensus reaching process based on heterogeneous judgments and social relations for large-scale group decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af9c6dba7c54fdf57991",
+        "title": "A critical overview of theories in research on judgment and decision-making using algorithmic advice: The potential of cognitive continuum theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_86318af478dee8b36893",
+        "title": "Blockchain Applications: The Impact of a Firm's Choice of Financial Accounting System on Nonprofessional Investor Judgment and Decision-Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_376f6fd4633bfb9c36e6",
+        "title": "Balancing Act: Exploring the Interplay Between Human Judgment and Artificial Intelligence in Problem-solving, Creativity, and Decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64a893b8a22472b0b8d2",
+        "title": "HUMAN JUDGMENT IN ARTIFICIAL INTELLIGENCE FOR BUSINESS DECISION-MAKING: AN EMPIRICAL STUDY",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24dcd3016db81cdd873e",
+        "title": "Mindfulness training reduces slippery slope effects in moral decision-making and moral judgment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a959fda6b22fbf25755",
+        "title": "An Evolving Landscape of the Psychology of Judgment and Decision-Making: A Bibliometric Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c27fce1c93a85b6a6972",
+        "title": "Group judgments and decision-making in accounting: enhancing the financial reporting judgments of accountants",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4952b17c1f87bb6cc722",
+        "title": "Editorial: Understanding and Overcoming Biases in Judgment and Decision-Making With Real-Life Consequences",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4207fcf5a2935b779183",
+        "title": "DARK PERSONALITY TRAITS AND THE THEORY OF PLANNED BEHAVIOR IN AUDITOR JUDGMENT AND DECISION MAKING",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f702879da906615c3a6d",
+        "title": "Confidence judgments interfere with perceptual decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7369f4d2b26738e1435b",
+        "title": "The superior explanatory power of models that admit trade-offs in moral judgment and decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6f248f43d1b5751844c",
+        "title": "Personalized decision-making for acute cholecystitis: Understanding surgeon judgment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c9d8fa7c39a1db1d840",
+        "title": "Evaluating Judgment and Decision Making in Accounting from Process or Performance Dimension to Cultural Influences",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e72a67e048f7ab77913d",
+        "title": "Artificial Intelligence-Assisted Decision-Making Method for Legal Judgment Based on Deep Neural Network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23f9f9e9ed0d595fd90b",
+        "title": "The balanced scorecard framework as a key performance measurement innovation: a judgment and decision-making perspective",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c40f92508b1d718631e",
+        "title": "Towards truer and fairer. The Judgment and Decision-Making research journey through accounting paradigms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c28a417b735e6d95a317",
+        "title": "Exploring Judgment and Decision-Making in School Psychology: Setting an Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_582e012220eaff4ee896",
+        "title": "The effect of olfaction on social judgment and decision-making and its mechanism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62e44648df855b7123aa",
+        "title": "A Comprehensive Review of Multiple Criteria Decision-Making (MCDM) Methods: Advancements, Applications, and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_165e2a929e5d730979c7",
+        "title": "Future of Business Culture: An Artificial Intelligence‐Driven Digital Framework for Organization Decision‐Making Process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9979326f51563f745750",
+        "title": "Can artificial intelligence help for scientific writing?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47f6f894482775cd8eb3",
+        "title": "Nursing judgment in the age of generative artificial intelligence: A cross-national study on clinical decision-making performance among emergency nurses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_530c8fac610ba4e9c9d2",
+        "title": "Explanations Can Reduce Overreliance on AI Systems During Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a189bb222a37ef15915d",
+        "title": "Seven Elements of Phronesis: A Framework for Understanding Judgment in Relation to Automated Decision-Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38d6c9130c5053acb5f2",
+        "title": "GRADE Guidance: Using Thresholds for Judgments on Health Benefits and Harms in Decision Making (GRADE Guidance 42)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_343d2c5c7d8443b0bbcf",
+        "title": "Human judgment in the age of automated decision-making systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2d45e508f7f3e81b417",
+        "title": "Interpersonal influences on decision-making capacity: a content analysis of court judgments",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_439727b226472407c1e4",
+        "title": "Understanding the Role of Human Intuition on Reliance in Human-AI Decision-Making with Explanations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d25ac9d153724ae9282b",
+        "title": "Decision making with the deterministic judgment of urea production with various hydrogen sources: technical, economic, and environmental aspects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb4acfba37528a3e77e3",
+        "title": "A Mixed Judgment Standard for Surrogate Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0eed3792c0b4d736ff7",
+        "title": "Human–AI Interactions in Public Sector Decision Making: “Automation Bias” and “Selective Adherence” to Algorithmic Advice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34c89583d9c78372a648",
+        "title": "Fairness perceptions of algorithmic decision-making: A systematic review of the empirical literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff3117863941301a945d",
+        "title": "Prediction and Judgment: Why Artificial Intelligence Increases the Importance of Humans in War",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c75fd720a417d0742ae5",
+        "title": "Fostering Clinical Decision-Making Using Screen-Based Simulations Aligned with the NCSBN Clinical Judgment Measurement Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c22ae7f848f90f97023",
+        "title": "Geotechnical uncertainty, modeling, and decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed06082f9d544bfe933a",
+        "title": "Utilizing people, analytics, and AI for decision making in the digitalized retail supply chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e32cfe510ab159c79382",
+        "title": "Ethics in human–AI teaming: principles and perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_70a213d3541985f92f8d",
+        "title": "Judgment by Peers: Lay Participation in Legal Decision Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0a5755bb3868d2e52ce",
+        "title": "Consistency Indices in Analytic Hierarchy Process: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_466540e5bc72a3b02ca8",
+        "title": "Intermediate Judgments and Trust in Artificial Intelligence-Supported Decision-Making",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_036e56a64a25001c86a4",
+        "title": "Cultivating Clinical Judgment in Pharmacological Decision-Making Through Reflection on Practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2a3557f97f2d2e9fb82",
+        "title": "The effects of communicating scientific uncertainty on trust and decision making in a public health context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d31bbad96d617d3d05b2",
+        "title": "An approach for fuzzy group decision making and consensus measure with hesitant judgments of experts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_897d5bc3e1790aa3ea07",
+        "title": "Judgment and Embodied Cognition of Lawyers. Moral Decision-Making and Interoceptive Physiology in the Legal Field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d0019c32ee1291d61e6",
+        "title": "Multiple attribute group decision making based on quasirung orthopair fuzzy sets: Application to electric vehicle charging station site selection problem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_093191f086bf751cca22",
+        "title": "The effects of person‐specific, task, and environmental factors on digital transformation and innovation in auditing: A review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9290ad6bcb3ee6225eaf",
+        "title": "AI in medical diagnosis: AI prediction & human judgment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec4a4a7d3a0c639d4fec",
+        "title": "Decision aids for people facing health treatment or screening decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4423ad1f1c3879e55493",
+        "title": "Three Challenges for AI-Assisted Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95ca6a6c2ce0d6e8989b",
+        "title": "Performance of ChatGPT on USMLE: Potential for AI-assisted medical education using large language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_058c9facbda4336277ab",
+        "title": "Experimental evidence of effective human–AI collaboration in medical decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b3a19f16395611b8891",
+        "title": "Decision Making in Moral Judgment Context is Modulated by Individual Metacognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e4c66d532e12cb2f2a3",
+        "title": "The impact of inconsistent human annotations on AI driven clinical decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_073f433620369ac0ca05",
+        "title": "‘Just like I thought’: Street‐level bureaucrats trust AI recommendations if they confirm their professional judgment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1f6aa9f7a0c7d1a920f4",
+        "title": "It depends coaching – The most fundamental, simple and complex principle or a mere copout?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fcbe21543758254bb602",
+        "title": "Artificial intelligence based decision-making in accounting and auditing: ethical challenges and normative thinking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c4838ad479a89949b579",
+        "title": "Artificial Intelligence and Decision-Making in Healthcare: A Thematic Analysis of a Systematic Review of Reviews",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62512b7dac9e68916f08",
+        "title": "The influence of cognitive bias on crisis decision-making: Experimental evidence on the comparison of bias effects between crisis decision-maker groups",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c279d2a0ce71ed9405e2",
+        "title": "Fairness and Explanation in AI-Informed Decision Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2d5d64fe2af0a6c726a",
+        "title": "Business analytics and decision science: A review of techniques in strategic business decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae1a94e9244ace1e3b6b",
+        "title": "For which decisions is Shared Decision Making considered appropriate? – A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_039704912a89f322fc43",
+        "title": "Review of Studies on Emotion Recognition and Judgment Based on Physiological Signals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35f5503b14659134b170",
+        "title": "A Stratified Fuzzy Decision-Making Approach for Sustainable Circular Supplier Selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8fdbf4037726f98cf4f8",
+        "title": "A comprehensive guide to the TOPSIS method for multi-criteria decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d3fc2ccc9b83879d22bd",
+        "title": "Deciding Fast and Slow: The Role of Cognitive Biases in AI-assisted Decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e8cbead2cf5b78e76f6",
+        "title": "Computational ethics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dcf7e8039e337ca0ed7b",
+        "title": "The updated Consolidated Framework for Implementation Research based on user feedback",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21d93754871e92a001bd",
+        "title": "Training language models to follow instructions with human feedback",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2f5c0824f0421fac504",
+        "title": "Effects of Explainable Artificial Intelligence on trust and human behavior in a high-risk decision task",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_227e183633bbc1556b56",
+        "title": "Investigating the Impact of User Trust on the Adoption and Use of ChatGPT: Survey Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2f9676ddf92d71b9fba",
+        "title": "A multilevel review of artificial intelligence in organizations: Implications for organizational behavior research and practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1167b71aa83727d7624f",
+        "title": "User Intentions to Use ChatGPT for Self-Diagnosis and Health-Related Purposes: Cross-sectional Survey Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_41401d0ddf2ac62d40e4",
+        "title": "Behavioral finance factors and investment decisions: A mediating role of risk perception",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ed05f7fef699893af3e",
+        "title": "When ChatGPT Gives Incorrect Answers: The Impact of Inaccurate Information by Generative AI on Tourism Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cee91b87036e94f76206",
+        "title": "Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd5963b16b79e4ff69c",
+        "title": "Understanding the impact of explanations on advice-taking: a user study for AI-based clinical Decision Support Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f532a96c4340b090c42e",
+        "title": "Explainable Artificial Intelligence (XAI): What we know and what is left to attain Trustworthy Artificial Intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_492f62ad1c5f7a277e98",
+        "title": "A Systematic Literature Review of User Trust in AI-Enabled Systems: An HCI Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ac39e3b0e38422271a3a",
+        "title": "Deep Learning and Neural Networks: Decision-Making Implications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b8c9168e06173bfb8ace",
+        "title": "An Overview of Chatbot-Based Mobile Mental Health Apps: Insights From App Description and User Reviews",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ddf738d8a5f0321b052",
+        "title": "Towards a Science of Human-AI Decision Making: An Overview of Design Space in Empirical Human-Subject Studies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7957d9ae2fee2bf1437",
+        "title": "Legitimacy of Algorithmic Decision-Making: Six Threats and the Need for a Calibrated Institutional Response",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de22d701119b0f0ce23c",
+        "title": "Perspectives on Large Language Models for Relevance Judgment",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64f9de865eab9bb25f6d",
+        "title": "GRADE guidance 35: update on rating imprecision for assessing contextualized certainty of evidence and making decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68edbc0046de7ce4f32b",
+        "title": "Strategic Framework for Leveraging Artificial Intelligence in Future Marketing Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92f9c9acbd97dae14348",
+        "title": "Sustainable strategic investment decision-making practices in UK companies: The influence of governance mechanisms on synergy between industry 4.0 and circular economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5b3f06f4a86e58dace5",
+        "title": "AI in the hands of imperfect users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_614600b40a8e4896a3b4",
+        "title": "Exploring collaborative decision-making: A quasi-experimental study of human and Generative AI interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dab1e9b35a64cd82fe38",
+        "title": "Development and validation of an autonomous artificial intelligence agent for clinical decision-making in oncology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b605ea587fc440528003",
+        "title": "Barriers to adopting automated organisational decision-making through the use of artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc35a457696301ac4cca",
+        "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54fe48cf8ccb8e0e4c41",
+        "title": "The i-frame and the s-frame: How focusing on individual-level solutions has led behavioral public policy astray",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7641459c04b0c9e142c6",
+        "title": "Mitigating knowledge imbalance in AI-advised decision-making through collaborative user involvement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4f20bee7f159d53c537e",
+        "title": "Privacy Cynicism and its Role in Privacy Decision-Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e73dd68a909a997aa61c",
+        "title": "Challenges of human—machine collaboration in risky decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01b77fbd10e225fd3228",
+        "title": "Optimization of Enterprise Financial Management and Decision‐Making Systems Based on Big Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5818b93e76d9d9c0614",
+        "title": "Co-Writing with Opinionated Language Models Affects Users’ Views",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c81f9dd917933afb4a16",
+        "title": "The impact of generative artificial intelligence on socioeconomic inequalities and policy making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26dcda9fc75ac34eeedf",
+        "title": "Tourists’ Online Information Search Behavior: Combined User-Generated and Marketer-Generated Content in Restaurant Decision Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb81a0f597d70d91c1e9",
+        "title": "Footwear consumer behavior: The influence of stimuli on emotions and decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_debbe803c7e3881ec9bf",
+        "title": "Shared Decision Making in the Care of Patients With Cancer",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7349ca61bafcc6eb7d1",
+        "title": "A Fuzzy-Logic Approach Based on Driver Decision-Making Behavior Modeling and Simulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6cd8b87282e2477ec161",
+        "title": "Understanding Uncertainty: How Lay Decision-makers Perceive and Interpret Uncertainty in Human-AI Decision Making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4144f6ff7434ffe6ee0",
+        "title": "The black box problem revisited. Real and imaginary challenges for automated legal decision making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c534e94ee58859d979ff",
+        "title": "Effects of Anthropomorphic Design Cues of Chatbots on Users’ Perception and Visual Behaviors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e47c449acd00b0d2196f",
+        "title": "The effect of transparency and trust on intelligent system acceptance: Evidence from a user-based study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_752a2104d18632c5e0d8",
+        "title": "Who Goes First? Influences of Human-AI Workflow on Decision Making in Clinical Imaging",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0635eaa5c58340c59c79",
+        "title": "Towards Human-Centered Explainable AI: A Survey of User Studies for Model Explanations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bcc51c9479162373032",
+        "title": "The Impact of Online Reviews on Consumers’ Purchasing Decisions: Evidence From an Eye-Tracking Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68bffa861d75a608b1c8",
+        "title": "Ethical Decision-Making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe94e42186defa9a0632",
+        "title": "Who Should I Trust: AI or Myself? Leveraging Human and AI Correctness Likelihood to Promote Appropriate Trust in AI-Assisted Decision-Making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c829be5ef860b4b0fce7",
+        "title": "Why Do Retail Customers Adopt Artificial Intelligence (AI) Based Autonomous Decision-Making Systems?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_148dc38832792040b99b",
+        "title": "Towards data-driven decision making: the role of analytical culture and centralization efforts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_410612b7fe42d70c7b4c",
+        "title": "Artificial Intelligence Decision-Making Transparency and Employees’ Trust: The Parallel Multiple Mediating Effect of Effectiveness and Discomfort",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_41068af434e30198a495",
+        "title": "Ethical Risk Factors and Mechanisms in Artificial Intelligence Decision Making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c09b5712dafc788bbcc",
+        "title": "Random Forest Algorithm Overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d57bee7413d10c54a98f",
+        "title": "Environmental Decision-Making in Times of Polarization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0f019383b9ad622dec6",
+        "title": "Multi-user centered design: acceptance, user experience, user research and user testing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7a024547580c36d6cff",
+        "title": "Human-like intuitive behavior and reasoning biases emerged in large language models but disappeared in ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1984342b33685bf73ee",
+        "title": "The psychological drivers of misinformation belief and its resistance to correction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d694d6d8deae797445e",
+        "title": "Explainable Artificial Intelligence (XAI) from a user perspective: A synthesis of prior literature and problematizing avenues for future research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf97fc987650b6572391",
+        "title": "A Personalized Patient Preference Predictor for Substituted Judgments in Healthcare: Technically Feasible and Ethically Desirable",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cb4aca7fca7afe93868",
+        "title": "Interaction-Aware Decision-Making for Automated Vehicles Using Social Value Orientation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fba3281669564b5bc70",
+        "title": "Effects of Explanations in AI-Assisted Decision Making: Principles and Comparisons",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19e58e4ced35105f0899",
+        "title": "Explainable artificial intelligence (XAI) in deep learning-based medical image analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00ad50ae73169d92c560",
+        "title": "American Geriatrics Society 2023 updated AGS Beers Criteria® for potentially inappropriate medication use in older adults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8885a04f901d5c621e9c",
+        "title": "How the different explanation classes impact trust calibration: The case of clinical decision support systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_823b66f48d8e80a10cc1",
+        "title": "Stop ordering machine learning algorithms by their explainability! A user-centered investigation of performance and explainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_204e898ed346c7115c01",
+        "title": "Are Algorithmic Decisions Legitimate? The Effect of Process and Outcomes on Perceptions of Legitimacy of AI Decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57cb3427648fe3ee844a",
+        "title": "Enhancing AI-Assisted Group Decision Making through LLM-Powered Devil's Advocate",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_065fe9921ddd64782b92",
+        "title": "Emotion-related impulsivity and risky decision-making: A systematic review and meta-regression",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26fca483e9e55a02a486",
+        "title": "Disentangling Fairness Perceptions in Algorithmic Decision-Making: the Effects of Explanations, Human Oversight, and Contestability",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19afc79a469f9b58e401",
+        "title": "5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes:Standards of Care in Diabetes—2023",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd1e67818fe2e8f77796",
+        "title": "Cognitive Bias in Decision-Making with LLMs",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d3e2c9cbc11934cec88",
+        "title": "Measures for explainable AI: Explanation goodness, user satisfaction, mental models, curiosity, trust, and human-AI performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_720f878b8b8a2f29ddd1",
+        "title": "Comparative Analysis of Intrusion Detection Systems and Machine Learning-Based Model Analysis Through Decision Tree",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed2ad9af24a28cac9bc8",
+        "title": "Effects of Subjective Norms and Environmental Mechanism on Green Purchase Behavior: An Extended Model of Theory of Planned Behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20a896d7a59a1a572eb5",
+        "title": "Enhancing Intuitive Decision-Making and Reliance Through Human–AI Collaboration: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e95143d84d0d3f394e93",
+        "title": "Investment Intention and Decision Making: A Systematic Literature Review and Future Research Agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_283d1f8b97606126094a",
+        "title": "Information use in public administration and policy decision‐making: A research synthesis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73a1e3e5b705beee55da",
+        "title": "Overcoming the pitfalls and perils of algorithms: A classification of machine learning biases and mitigation methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b792ee305ff305fc0a1",
+        "title": "Minimizing the misinformation concern over social networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e8cd03df16c2a9e439f2",
+        "title": "Unveiling the Influence of AI Predictive Analytics on Patient Outcomes: A Comprehensive Narrative Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89657fc6ef0037e4c829",
+        "title": "A comparison between fuzzy AHP and fuzzy TOPSIS methods to software requirements selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8897f376820d03efd1c8",
+        "title": "AI-induced Deskilling in Medicine: A Mixed-Method Review and Research Agenda for Healthcare and Beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_892fff4366a9bde76e0c",
+        "title": "The consequences of sleep deprivation on cognitive performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07ecee005fc3d8b91245",
+        "title": "Medical Artificial Intelligence and Human Values",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_912606b38cb4037f2ef6",
+        "title": "User Experience Evaluation of B2C E‐Commerce Websites Based on Fuzzy Information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3e4b21ed3ed408ffe94",
+        "title": "Improving sustainability in the tourism industry through blockchain technology: Challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a58dc73aa3f658bb281a",
+        "title": "The Challenges of Machine Learning: A Critical Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8435841a665765ad14c",
+        "title": "The impact of AI errors in a human-in-the-loop process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa034aab38f6c700d7e5",
+        "title": "Conviction Narrative Theory: A theory of choice under radical uncertainty",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ed9f973d61eeb2dbc65",
+        "title": "Enhancing precision agriculture: A comprehensive review of machine learning and AI vision applications in all-terrain vehicle for farm automation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4dd337c7d49e8c5fa14b",
+        "title": "A Novel Trust Assessment System for Online Social Networking Environment Using Learning Assisted Classification Model",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29dfa9ed1417b2449d0b",
+        "title": "Sustainable resilient recycling partner selection for urban waste management: Consolidating perspectives of decision-makers and experts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c65dc3182438bd856711",
+        "title": "Good or best practice statements: proposal for the operationalisation and implementation of GRADE guidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5517af58448bfa898e00",
+        "title": "How Explainable Artificial Intelligence Can Increase or Decrease Clinicians’ Trust in AI Applications in Health Care: Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59fbe6bc22bd645f8265",
+        "title": "Outsourcing logistics operations in circular economy towards to sustainable development goals",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9fb75b265f18e9662a7",
+        "title": "Screening for lung cancer: 2023 guideline update from the American Cancer Society",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0d3197b440109a6fd9fb",
+        "title": "Sample Size for Interview in Qualitative Research in Social Sciences: A Guide to Novice Researchers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_395b0b9f4f4af9e828cd",
+        "title": "A fuzzy extension of MEREC method using parabolic measure and its applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2326a73c0228cc5aabdb",
+        "title": "Effect of Generative Artificial Intelligence on Strategic Decision-Making in Entrepreneurial Business Initiatives: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46275f7cb1997435bec9",
+        "title": "Cognition-aware Knowledge Graph Reasoning for Explainable Recommendation",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_872a958fec1905ebc7d6",
+        "title": "Closing the loop – The human role in artificial intelligence for education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e274195cc4532730fce",
+        "title": "How AI can learn from the law: putting humans in the loop only on appeal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71de146a717743fed10e",
+        "title": "Toward Clinical Generative AI: Conceptual Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_313ad0c06f63a32a019a",
+        "title": "Fairness-aware large-scale collective opinion generation paradigm: A case study of evaluating blockchain adoption barriers in medical supply chain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7537b6016996e6dce89c",
+        "title": "AI-Assisted Decision-making: a Cognitive Modeling Approach to Infer Latent Reliance Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b878668b4d4071e32259",
+        "title": "Advanced Fuzzy-Based Decision-Making: The Linear Diophantine Fuzzy CODAS Method for Logistic Specialist Selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d010d3e9409f36b29715",
+        "title": "Spherical fuzzy sets based integrated DEMATEL, ANP, VIKOR approach and its application for renewable energy selection in Turkey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_594e54b67f288bf10a95",
+        "title": "Managerial Accounting for Decision-Making and Planning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96b76ffa9a5e09aeacf1",
+        "title": "Confidence reflects a noisy decision reliability estimate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09280967698b38bf8c51",
+        "title": "When AI is Perceived to Be Fairer than a Human: Understanding Perceptions of Algorithmic Decisions in a Job Application Context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e09cb479046b1fa3e84",
+        "title": "Automating the OODA loop in the age of intelligent machines: reaffirming the role of humans in command-and-control decision-making in the digital age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f082b173c49041c7b0e",
+        "title": "Subjective signal strength distinguishes reality from imagination",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa445bbb860696334dbd",
+        "title": "Harnessing dual process theory for online product evaluation based on user-generated content",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3fd4c92ae737e68bdc0",
+        "title": "An optimization model for rescuer assignments under an uncertain environment by using Dempster–Shafer theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_500533d721da759b089c",
+        "title": "Circular economy adoption challenges in the food supply chain for sustainable development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecfc7533e0ea3a0a0f10",
+        "title": "The Influence of Electronic Word‐of‐Mouth (eWOM) on Promoting Sustainable Tourism in Bangladesh",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42e621e577aeb53bbb53",
+        "title": "Digital transformation in operations management: Fundamental change through agency reversal",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e077f82f964425f81780",
+        "title": "An Integrated Fuzzy Delphi and Best Worst Method (BWM) for performance measurement in higher education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d8fdbe1af1ed8181542",
+        "title": "AI Shall Have No Dominion: on How to Measure Technology Dominance in AI-supported Human decision-making",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_721866afa7990668995c",
+        "title": "FP-intuitionistic multi fuzzy N-soft set and its induced FP-Hesitant N soft set in decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e64f019f7364a63ab58f",
+        "title": "Seeing through the fake: how users detect and interpret deepfakes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8db88d02e8500349ef25",
+        "title": "Safety assessment of excavation system via TOPSIS-based MCDM modelling in fuzzy environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68f3b3cfcbde5eca5cc6",
+        "title": "Swiping more, thinking less: Using TikTok hinders analytic thinking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_44201a9e5a142462ef24",
+        "title": "Near-Suicide Phenomenon: An Investigation into the Psychology of Patients with Serious Illnesses Withdrawing from Treatment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddabb5aefa91ccfd5b9b",
+        "title": "An outranking approach with 2-tuple linguistic Fermatean fuzzy sets for multi-attribute group decision-making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c32050037e243f94b8b8",
+        "title": "Teaching strategies of clinical reasoning in advanced nursing clinical practice: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3a8aab4dd8bd28fc6b8",
+        "title": "Multi-attribute group decision making method with dual comprehensive clouds under information environment of dual uncertain Z-numbers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be876ae79602feea4345",
+        "title": "RETRACTED: An empirical assessment of financial literacy and behavioral biases on investment decision: Fresh evidence from small investor perception",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bcfb6bc6c22439ed8a22",
+        "title": "Dynamic influences on static measures of metacognition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ac5a6ac26a3f87fd93f",
+        "title": "Measuring Variability in Proctor Decision Making on High‐Stakes Assessments: Improving Test Security in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e66fcaf69ce281422e62",
+        "title": "Contrastive Learning for Legal Judgment Prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96287d4b834d98acb266",
+        "title": "A new multi-criteria decision-making approach for the design and selection of materials and manufacturing processes of toys for children with autism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 17
+    },
+    "coverage_audit": {
+      "direction_id": "topic_judgment_decision_making",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 326,
+      "deduplicated_count": 31,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 3,
+      "boundary_count": 11,
+      "selected_count": 3,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "judgment and decision making"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "judgment and decision making user behavior"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(judgment and decision making) OR (judgment and decision making in user behavior)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 26
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "judgment and decision making",
+        "raw_count": 100,
+        "hard_gate_pass_count": 3,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "judgment and decision making user behavior",
+        "raw_count": 200,
+        "hard_gate_pass_count": 7,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(judgment and decision making) OR (judgment and decision making in user behavior)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 10,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_2d02941d5516c1da7a6c",
+          "paper_84131069ac5f81708562"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_bd6a4052b8c780b7777b"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_bbadc1fab1c39910a272"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_673d348dca908cbe4507"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_3c46c5423c0de354dcb1"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_86318af478dee8b36893"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_9c40f92508b1d718631e"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_c28a417b735e6d95a317"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_84131069ac5f81708562",
+          "paper_582e012220eaff4ee896"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_466540e5bc72a3b02ca8",
+        "incoming_paper_id": "paper_59d435bc04e2cd61dd95"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09877d27342d59b996be",
+        "incoming_paper_id": "paper_09877d27342d59b996be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62e44648df855b7123aa",
+        "incoming_paper_id": "paper_62e44648df855b7123aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_530c8fac610ba4e9c9d2",
+        "incoming_paper_id": "paper_530c8fac610ba4e9c9d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95ca6a6c2ce0d6e8989b",
+        "incoming_paper_id": "paper_95ca6a6c2ce0d6e8989b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_23d158b5a05dcb34ff18",
+        "incoming_paper_id": "paper_23d158b5a05dcb34ff18"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_34c89583d9c78372a648",
+        "incoming_paper_id": "paper_34c89583d9c78372a648"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d0eed3792c0b4d736ff7",
+        "incoming_paper_id": "paper_d0eed3792c0b4d736ff7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c279d2a0ce71ed9405e2",
+        "incoming_paper_id": "paper_c279d2a0ce71ed9405e2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8c22ae7f848f90f97023",
+        "incoming_paper_id": "paper_8c22ae7f848f90f97023"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8dcf5e73ef5947630b60",
+        "incoming_paper_id": "paper_8dcf5e73ef5947630b60"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4423ad1f1c3879e55493",
+        "incoming_paper_id": "paper_4423ad1f1c3879e55493"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ec4a4a7d3a0c639d4fec",
+        "incoming_paper_id": "paper_ec4a4a7d3a0c639d4fec"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c4838ad479a89949b579",
+        "incoming_paper_id": "paper_c4838ad479a89949b579"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d3fc2ccc9b83879d22bd",
+        "incoming_paper_id": "paper_d3fc2ccc9b83879d22bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fcbe21543758254bb602",
+        "incoming_paper_id": "paper_fcbe21543758254bb602"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_165e2a929e5d730979c7",
+        "incoming_paper_id": "paper_165e2a929e5d730979c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_439727b226472407c1e4",
+        "incoming_paper_id": "paper_439727b226472407c1e4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62512b7dac9e68916f08",
+        "incoming_paper_id": "paper_62512b7dac9e68916f08"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_412e4cedbc91cc1d576c",
+        "incoming_paper_id": "paper_412e4cedbc91cc1d576c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_039704912a89f322fc43",
+        "incoming_paper_id": "paper_039704912a89f322fc43"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ab405cc57650968aed5",
+        "incoming_paper_id": "paper_7ab405cc57650968aed5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9290ad6bcb3ee6225eaf",
+        "incoming_paper_id": "paper_9290ad6bcb3ee6225eaf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_073f433620369ac0ca05",
+        "incoming_paper_id": "paper_073f433620369ac0ca05"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_675b1d8a576b3f960a20",
+        "incoming_paper_id": "paper_675b1d8a576b3f960a20"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_09877d27342d59b996be",
+        "incoming_paper_id": "paper_09877d27342d59b996be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_23d158b5a05dcb34ff18",
+        "incoming_paper_id": "paper_23d158b5a05dcb34ff18"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cdd9783e85d689444524",
+        "incoming_paper_id": "paper_cdd9783e85d689444524"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9979326f51563f745750",
+        "incoming_paper_id": "paper_9979326f51563f745750"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a0a5755bb3868d2e52ce",
+        "incoming_paper_id": "paper_a0a5755bb3868d2e52ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_165e2a929e5d730979c7",
+        "incoming_paper_id": "paper_165e2a929e5d730979c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62512b7dac9e68916f08",
+        "incoming_paper_id": "paper_62512b7dac9e68916f08"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ab405cc57650968aed5",
+        "incoming_paper_id": "paper_7ab405cc57650968aed5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d02941d5516c1da7a6c",
+        "incoming_paper_id": "paper_2d02941d5516c1da7a6c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84131069ac5f81708562",
+        "incoming_paper_id": "paper_84131069ac5f81708562"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_675b1d8a576b3f960a20",
+        "incoming_paper_id": "paper_675b1d8a576b3f960a20"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff3117863941301a945d",
+        "incoming_paper_id": "paper_ff3117863941301a945d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_deffccf32d94b4863bc1",
+        "incoming_paper_id": "paper_deffccf32d94b4863bc1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3dc9d392f46eb08700ad",
+        "incoming_paper_id": "paper_3dc9d392f46eb08700ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89a5944b881f0a3ba8b0",
+        "incoming_paper_id": "paper_89a5944b881f0a3ba8b0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3dcddc8bc10731498669",
+        "incoming_paper_id": "paper_3dcddc8bc10731498669"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_376f6fd4633bfb9c36e6",
+        "incoming_paper_id": "paper_376f6fd4633bfb9c36e6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_073f433620369ac0ca05",
+        "incoming_paper_id": "paper_073f433620369ac0ca05"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_439727b226472407c1e4",
+        "incoming_paper_id": "paper_439727b226472407c1e4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_20a896d7a59a1a572eb5",
+        "incoming_paper_id": "paper_20a896d7a59a1a572eb5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_412e4cedbc91cc1d576c",
+        "incoming_paper_id": "paper_412e4cedbc91cc1d576c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19ba933aa5eed88a0da1",
+        "incoming_paper_id": "paper_19ba933aa5eed88a0da1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40cf1ed6f8effadf5af5",
+        "incoming_paper_id": "paper_40cf1ed6f8effadf5af5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e32cfe510ab159c79382",
+        "incoming_paper_id": "paper_e32cfe510ab159c79382"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9c9aff918869c5ce6c9",
+        "incoming_paper_id": "paper_e9c9aff918869c5ce6c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9290ad6bcb3ee6225eaf",
+        "incoming_paper_id": "paper_9290ad6bcb3ee6225eaf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e4e262fcd3cfaba373f7",
+        "incoming_paper_id": "paper_e4e262fcd3cfaba373f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6f248f43d1b5751844c",
+        "incoming_paper_id": "paper_f6f248f43d1b5751844c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24dcd3016db81cdd873e",
+        "incoming_paper_id": "paper_24dcd3016db81cdd873e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df8bf9dde8715245b97f",
+        "incoming_paper_id": "paper_df8bf9dde8715245b97f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f702879da906615c3a6d",
+        "incoming_paper_id": "paper_f702879da906615c3a6d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_64a893b8a22472b0b8d2",
+        "incoming_paper_id": "paper_64a893b8a22472b0b8d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e72a67e048f7ab77913d",
+        "incoming_paper_id": "paper_e72a67e048f7ab77913d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8b54b9f38a8b9b2208fd",
+        "incoming_paper_id": "paper_8b54b9f38a8b9b2208fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd6a4052b8c780b7777b",
+        "incoming_paper_id": "paper_bd6a4052b8c780b7777b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2e8cbead2cf5b78e76f6",
+        "incoming_paper_id": "paper_2e8cbead2cf5b78e76f6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_38d6c9130c5053acb5f2",
+        "incoming_paper_id": "paper_38d6c9130c5053acb5f2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d0019c32ee1291d61e6",
+        "incoming_paper_id": "paper_4d0019c32ee1291d61e6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_093191f086bf751cca22",
+        "incoming_paper_id": "paper_093191f086bf751cca22"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_643ba93995dd3897f137",
+        "incoming_paper_id": "paper_643ba93995dd3897f137"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d25ac9d153724ae9282b",
+        "incoming_paper_id": "paper_d25ac9d153724ae9282b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_47f6f894482775cd8eb3",
+        "incoming_paper_id": "paper_47f6f894482775cd8eb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbadc1fab1c39910a272",
+        "incoming_paper_id": "paper_bbadc1fab1c39910a272"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cbd47593b1459242091c",
+        "incoming_paper_id": "paper_cbd47593b1459242091c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ed06082f9d544bfe933a",
+        "incoming_paper_id": "paper_ed06082f9d544bfe933a"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "a2ca6c5836ae4a8e843e37fbf0788b50",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

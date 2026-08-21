@@ -1,0 +1,2659 @@
+{
+  "direction_id": "knowledge_management",
+  "labels": {
+    "zh": "知识管理",
+    "en": "knowledge management"
+  },
+  "input": {
+    "selected_direction_id": "knowledge_management",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 18735.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 330,
+  "hard_gate_pass_count": 31,
+  "eligible_count": 0,
+  "boundary_count": 10,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "knowledge management"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "knowledge management information management"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(knowledge management) OR (knowledge management in information management)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "knowledge_management",
+      "research_direction": "知识管理",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "CS_AI",
+        "CS_IR",
+        "CS_DATA",
+        "IS_CORE",
+        "PKU_CORE_2023_STATISTICS_METHODS"
+      ]
+    },
+    "local_match": {
+      "label": "知识管理",
+      "aliases": [
+        "Knowledge Management"
+      ],
+      "groups": [
+        "IM",
+        "IM × 数据 / AI / 知识管理"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:256",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:292"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "knowledge_management",
+        "labels": {
+          "zh": "知识管理",
+          "en": "knowledge management"
+        },
+        "group_ids": [
+          "im",
+          "im_data_ai_knowledge"
+        ],
+        "synonyms": [
+          "知识管理",
+          "knowledge management",
+          "knowledge management in information management"
+        ],
+        "boundaries": {
+          "include": [
+            "knowledge management",
+            "information management",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "knowledge management",
+            "\"knowledge management\" AND \"information management\""
+          ],
+          "semantic_scholar": [
+            "knowledge management",
+            "knowledge management information management"
+          ],
+          "crossref": [
+            "knowledge management",
+            "知识管理"
+          ],
+          "dblp": [
+            "knowledge management information science"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "knowledge management",
+            "information management",
+            "information science"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IM_CORE",
+          "SCIENTOMETRICS",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_SCIENCE_POLICY",
+          "CS_AI",
+          "CS_IR",
+          "CS_DATA",
+          "IS_CORE",
+          "PKU_CORE_2023_STATISTICS_METHODS"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "knowledge management information management",
+          "(knowledge management) OR (knowledge management in information management)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:256",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:292"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "knowledge management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3334527,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:43.076742+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3469.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "knowledge management information management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2584355,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:46.569657+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4406.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(knowledge management) OR (knowledge management in information management)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3263783,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:01:51.006332+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4109.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "knowledge management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:01:57.718364+00:00",
+        "duration_ms": 1360.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1360.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "knowledge management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:01:59.080671+00:00",
+        "duration_ms": 1469.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1469.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Communications of the ACM",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0001-0782",
+        "query": "knowledge management",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T21:02:00.541852+00:00",
+        "duration_ms": 1234.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1234.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "知识管理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:01:55.385216+00:00",
+        "duration_ms": 1157.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1157.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "知识管理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:01:56.553883+00:00",
+        "duration_ms": 1171.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1171.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_e3c1d68885de878d0a71",
+        "title": "Journal of Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e878b1d7c8300c068aef",
+        "title": "Artificial intelligence and knowledge management: A partnership between human and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd318fef2013c05b4ccb",
+        "title": "Proceedings of the 32nd ACM International Conference on Information and Knowledge Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "title": "The LOTUS initiative for open knowledge management in natural products research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36deb51a81143cfea0a4",
+        "title": "How do green knowledge management and green technology innovation impact corporate environmental performance? Understanding the role of green knowledge acquisition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f766534f554c5ada04ca",
+        "title": "The Future of Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_76e6c4b91b9d61ebe821",
+        "title": "Achieving green innovation and sustainable development goals through green knowledge management: Moderating role of organizational green culture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aedca7ad579c13b952fc",
+        "title": "Relationships among knowledge-oriented leadership, customer knowledge management, innovation quality and firm performance in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4cb3c6cbd7bbbd18704d",
+        "title": "Green knowledge management and organizational green culture: an interaction for organizational green innovation and green performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9032c9cfa75b5b1d285",
+        "title": "Knowledge management enablers and knowledge management processes: a direct and configurational approach to stimulate green innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff07213ba1defc2d1c9a",
+        "title": "Knowledge Management Perspective of Generative Artificial Intelligence",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_68448b5d42e1e16b8f28",
+        "title": "Green knowledge management: Scale development and validation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ec6668ca8975657b796",
+        "title": "Proceedings of the 34th ACM International Conference on Information and Knowledge Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1c0c2120b7af448df45b",
+        "title": "Proceedings of the 33rd ACM International Conference on Information and Knowledge Management",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e271d1990619edd00ea9",
+        "title": "Integrating knowledge management and orientation dynamics for organization transition from eco-innovation to circular economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5d78f547b830ddb3423",
+        "title": "Artificial Intelligence and Knowledge Management: Impacts, Benefits, and Implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2f64bb53007fe18d3ad",
+        "title": "A review of knowledge management research in the past three decades: a bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af1c4ce36a2e115bbe28",
+        "title": "Do green entrepreneurial orientation and green knowledge management matter in the pursuit of ambidextrous green innovation: A moderated mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e404988d897d2fdfd8b6",
+        "title": "Green knowledge management: A key driver of green technology innovation and sustainable performance in the construction organizations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f05d51e6e259f9b6ee29",
+        "title": "Opportunities and challenges of ChatGPT for design knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46549ee95776fade716b",
+        "title": "A systematic review of knowledge management and new product development projects: Trends, issues, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f81a06f6b398a0b2f06f",
+        "title": "VINE Journal of Information and Knowledge Management Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3f7044c4d329e42da09",
+        "title": "Understanding the impact of knowledge management factors on the sustainable use of AI-based chatbots for educational purposes using a hybrid SEM-ANN approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cbdd0fec1ddc79a20761",
+        "title": "The role of environmental management accounting and environmental knowledge management practices influence on environmental performance: mediated-moderated model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9f0bc5b9b4ca729c5cb",
+        "title": "Knowledge management and performance: a bibliometric analysis based on Scopus and WOS data (1988–2021)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ea44d0d23af0a52feaee",
+        "title": "Knowledge Management Foundations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_482b6807b1687c2337b4",
+        "title": "Sustainable organizational performance through blockchain technology adoption and knowledge management in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_663b94cce1bd227bb258",
+        "title": "Digitally transforming the organization through knowledge management: a socio-technical system (STS) perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73b240a74c9208058820",
+        "title": "Knowledge management in SMEs: a follow-up literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35833c54dea06101276f",
+        "title": "Supporting the implementation of AI in business communication: the role of knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8441de750267f7c545ce",
+        "title": "Covid-19 vaccines production and societal immunization under the serendipity-mindsponge-3D knowledge management theory and conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53e5b53ab40eacd243cb",
+        "title": "The Effect of Knowledge Management on the Sustainability of Technology-Driven Businesses in Emerging Markets: The Mediating Role of Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd61dd3f964ac8d0cb0a",
+        "title": "The Impact of Employee Development Practices on Human Capital and Social Capital: The Mediating Contribution of Knowledge Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80f973cbdfadc74e744b",
+        "title": "Toward a resilient supply chain model: critical role of knowledge management and dynamic capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69db624421e466a21fdd",
+        "title": "AI capability and green innovation impact on sustainable performance: Moderating role of big data and knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc5746550e510a15bd7b",
+        "title": "Knowledge management initiatives for achieving sustainable development goal 4.7: higher education institutions’ stakeholder perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d669674b0122bc1ebcfa",
+        "title": "The mediating role of knowledge management processes in the effective use of artificial intelligence in manufacturing firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82ffe10f3b543d5915df",
+        "title": "Knowledge-based dynamic capabilities: a scientometric analysis of marriage between knowledge management and dynamic capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_850930a8f03395f07e7b",
+        "title": "Exploring the impact of digital knowledge management on technostress and sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fdd74e180f499e17c63b",
+        "title": "Green entrepreneurship success in the age of generative artificial intelligence: The interplay of technology adoption, knowledge management, and government support",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cd525a33a6f5992fa51",
+        "title": "Fourth Industrial Revolution between Knowledge Management and Digital Humanities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa0f3d9e7495385d2199",
+        "title": "Partial least square structural equation modelling (PLS-SEM) in knowledge management studies: Knowledge sharing in virtual communities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6cbbadb6354c39494f86",
+        "title": "Understanding knowledge management and upskilling in Fourth Industrial Revolution: transformational shift and SECI model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b55ee998beec8dcff91",
+        "title": "Fostering product and process innovation through transformational leadership and knowledge management capability: the moderating role of innovation culture",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a77a089d2085dafef59",
+        "title": "African Journal of Business Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d9b03a62bc7c9e9830a",
+        "title": "International Journal of Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd42a37d86946308c12c",
+        "title": "Knowledge Management in Society 5.0: A Sustainability Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_960d3bcdb1a0167ad976",
+        "title": "Decision making in university contexts based on knowledge management systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca8b08a59544bc202405",
+        "title": "Knowledge worker mobility and knowledge management in MNEs: A bibliometric analysis and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c25fda8ef14377cf2777",
+        "title": "The impact of business intelligence, big data analytics capability, and green knowledge management on sustainability performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31a9f2e74346148f2a8c",
+        "title": "Knowledge management of product design: A requirements-oriented knowledge management framework based on Kansei engineering and knowledge map",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58879c69b944b30d79e6",
+        "title": "Past, present and future of AI in marketing and knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5978f05812d19be780e3",
+        "title": "A bibliometric analysis of cultural heritage research in the humanities: The Web of Science as a tool of knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82613432f8c32adda091",
+        "title": "The effect of knowledge management on sustainable performance: evidence from the Spanish wine industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bdd91c5de8610680dbe9",
+        "title": "Investigating Healthcare 4.0 Transition Through a Knowledge Management Perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e56ec06309f47c1c72f7",
+        "title": "Knowledge management effects and performance in health care: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62598429fea72b0bec76",
+        "title": "Ontology-Based Knowledge Management Tools for Knowledge Sharing in Organization—A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d7d573f527461a13732",
+        "title": "The influence of knowledge management on innovation and organizational performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_10928863123acb14a835",
+        "title": "The Organizational Resources and Knowledge Management Capability: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8496cfcd8f1b5b6247ab",
+        "title": "The effects of entrepreneurial ecosystems, knowledge management capabilities, and knowledge spillovers on international open innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b683c1034a12fe19cf4b",
+        "title": "Enhancing firm performance through innovation: the roles of intellectual capital, government support, knowledge sharing and knowledge management success",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_01967cb4ef469b904b87",
+        "title": "Exploring the mediating role of knowledge management practices to corporate sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8595068e17ccb697dbf",
+        "title": "Decision-Making Procedures and Their Relation to Knowledge Management and Quality Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75d02530d0408d9440b6",
+        "title": "Generative AI as source of change of knowledge management paradigm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19c7249b08fd5604ecc3",
+        "title": "BIM and ontology-based knowledge management for dam safety monitoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28f7d4a2143251eb6092",
+        "title": "Entrepreneurial Leadership and Entrepreneurial Success: The Role of Knowledge Management Processes and Knowledge Entrepreneurship",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8f11c856ca5675d93c8b",
+        "title": "Theoretical Nexus of Knowledge Management and Tourism Business Enterprise Competitiveness: An Integrated Overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9fbc9a49e41bd40cd188",
+        "title": "Integrating artificial intelligence for knowledge management systems – synergy among people and technology: a systematic review of the evidence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3282f678798a33ed1375",
+        "title": "Research on the impact of generative artificial intelligence (GenAI) on enterprise innovation performance: a knowledge management perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6feea009e6a04d49877",
+        "title": "AI capability and environmental sustainability performance: Moderating role of green knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a62292809cb4e3fbfaf",
+        "title": "Digital transformation in tourism and hospitality industry: a literature review of blockchain, financial technology, and knowledge management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_268b5361573b84545830",
+        "title": "Corporate reputation and culture: the link between knowledge management and sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_133ce82e2f59ac292675",
+        "title": "Organizational social activities and knowledge management behaviors: An affective events perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58151c3dca8e1910b43d",
+        "title": "Impact of Knowledge Management Systems on Customer Perspective",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d446dd31c06f0495434b",
+        "title": "The role of knowledge management processes in leveraging competitive strategies to achieve firm innovativeness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72d3f6a660f576705965",
+        "title": "Artificial intelligence orientation and internationalization speed: A knowledge management perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7fb9f17710828cb64f50",
+        "title": "Knowledge management and technological innovation in family SMEs context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee034d3d25b90cf6ec44",
+        "title": "The relationship between knowledge management strategies and corporate social responsibility: Effects on innovation capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1d14cd8c2b15c9068169",
+        "title": "A systematic literature review on knowledge management in SMEs: current trends and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fe51f7d2d89bc53b228",
+        "title": "Transforming knowledge management in the construction industry through information and communications technology: A 15-year review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc40584db8f7a9b03070",
+        "title": "ChatGPT: a game changer for knowledge management in organizations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_af933b4566b92e0fcd50",
+        "title": "A bibliometric review on knowledge management in tourism and hospitality: past, present and future trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93e1bde8764444fc34e7",
+        "title": "The role of cloud computing in knowledge management for small and medium enterprises: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8928425b4888c69fd37b",
+        "title": "Knowledge Management-Based Artificial Intelligence (AI) Adoption in Construction SMEs: The Moderating Role of Knowledge Integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecd60d909103b2d8b38e",
+        "title": "Financial performance and global start-ups: the impact of knowledge management practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fbf61db00a95a0ab151d",
+        "title": "The intersection between knowledge management and organizational learning in tourism and hospitality: A bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_979f8b5f2c0f506be319",
+        "title": "A Study of the Impact of Transformational Leadership, Organizational Learning, and Knowledge Management on Organizational Innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3bbd582650e4dd8070e7",
+        "title": "Knowledge management in small and medium enterprises: a systematic literature review, bibliometric analysis, and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a52f58431e5251fed55d",
+        "title": "AI-empowered Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8af6b92a0c3d0ec8abb8",
+        "title": "An Investigation into the Effect of Knowledge Management on Employee Retention in the Telecom Sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c48122f1664b71910907",
+        "title": "From inclusive climate to organizational innovation: Examining internal and external enablers for knowledge management capacity.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6598477e2f5b5b56f55c",
+        "title": "Information and Knowledge Management, Intellectual Capital, and Sustainable Growth in Networked Small and Medium Enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb4d7fd5ff359727a88c",
+        "title": "Knowledge management in offshoring innovation by SMEs: role of internal knowledge creation capability, absorptive capacity and formal knowledge-sharing routines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f8951ebc51765352281",
+        "title": "Understanding the implementations and limitations in knowledge management and knowledge sharing using a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fff2b2f4fd25f50255cb",
+        "title": "PENGARUH TEKNOLOGI INFORMASI, SISTEM INFORMASI BERBASIS WEB DAN KNOWLEDGE MANAGEMENT TERHADAP KINERJA KARYAWAN (LITERATURE REVIEW EXECUTIVE SUPPORT SISTEM (ESS) FOR BUSINESS)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0553a816dacc6011983",
+        "title": "Interaction between knowledge management, intellectual capital and innovation in higher education institutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1318074782df6e5df310",
+        "title": "Strategic foresight, knowledge management, and open innovation: Drivers of new product development success",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bea58749c192888b469",
+        "title": "The transformative impact of AI on knowledge management processes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c78325b4b2926742a467",
+        "title": "Health care managers' competence in knowledge management: A scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae72e4895e342385097f",
+        "title": "2023 ESC Guidelines for the management of cardiomyopathies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_318c5790b5ed691c787d",
+        "title": "Diagnosis and management of AML in adults: 2022 recommendations from an international expert panel on behalf of the ELN",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbea598513d028646814",
+        "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14cac12704ce819f3508",
+        "title": "2023 ESC Guidelines for the management of endocarditis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ddd79f2d0a129811f77",
+        "title": "Logistics and Supply Chain Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb6fec41a911dcac3f42",
+        "title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bdaed6f26178f19d1dc0",
+        "title": "Role of entrepreneurial orientation, information management, and knowledge management in improving firm performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a7e69688d1803ab3754",
+        "title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62f54cf30bfa07d9e8fa",
+        "title": "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0dd189d1f88df91360c",
+        "title": "World guidelines for falls prevention and management for older adults: a global initiative",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81d4ef485eca0de30ddf",
+        "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fabb128fed54678c38bf",
+        "title": "Management of Helicobacter pylori infection: the Maastricht VI/Florence consensus report",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ded461278663db9e2bd",
+        "title": "Potential features of building information modeling (BIM) for application of project management knowledge areas in the construction industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21349937e16f424fc541",
+        "title": "Revolutionizing Supply Chain Management: Real-time Data Processing and Concurrency",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07a758fc222f1d922f7e",
+        "title": "Critical soft skills for information and knowledge management practitioners in the fourth industrial revolution",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bcd4ce81a53fe97e4fb",
+        "title": "Potential features of building information modelling for application of project management knowledge areas as advances modeling tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95898dbee2df63547265",
+        "title": "Big Data Analytics Applications in Information Management Driving Operational Efficiencies and Decision-Making: Mapping the Field of Knowledge with Bibliometric Analysis Using R",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_48aa8700c66edbb68ab2",
+        "title": "Molecular docking as a tool for the discovery of molecular targets of nutraceuticals in diseases management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a42ca6d4378744076fd",
+        "title": "The impact of administrative management and information technology on e-government success: The mediating role of knowledge management practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19f17075ff519a52e936",
+        "title": "Metaverse as a disruptive technology revolutionising tourism management and marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9cf313d3d7960b6d6d2",
+        "title": "Exploring a body of knowledge for promoting the building information model for facility management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a47c3c79859a1d5e11b",
+        "title": "Generative artificial intelligence as a new context for management theories: analysis of ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52ef2c2777c82af72987",
+        "title": "Adverse effects of tyrosine kinase inhibitors in cancer therapy: pathophysiology, mechanisms and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2321f70b5dbc9eb6f857",
+        "title": "Farmer knowledge and the intention to use smartphone-based information management technologies in Uganda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c27172218810833641cb",
+        "title": "Management of Hyperglycemia in Type 2 Diabetes, 2022. A Consensus Report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f516bce0acd4972b0e67",
+        "title": "Can “splitting” be beneficial? The impact of top management team information-knowledge faultline on enterprise green transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4671b6f16a6cd0f60036",
+        "title": "ASAS-EULAR recommendations for the management of axial spondyloarthritis: 2022 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c46a77a7096ab348f65f",
+        "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8d98ad3f8e53a412f7d",
+        "title": "Overview of batteries and battery management for electric vehicles",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e7a520b2b51248279f5",
+        "title": "14th International Conference on Software, Knowledge, Information Management and Applications",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de333fc1fc99f6b754a9",
+        "title": "Knowledge graph of building information modelling (BIM) for facilities management (FM)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e363bb96fbafe6d8440",
+        "title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83f2df21d007475144c9",
+        "title": "HBIM and Information Management for Knowledge and Conservation of Architectural Heritage: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_54cc2c5fbb067e9840fb",
+        "title": "American Association of Oral and Maxillofacial Surgeons’ Position Paper on Medication-Related Osteonecrosis of the Jaws—2022 Update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b80c47aaba1d36cff47",
+        "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95290d546577cb55ed4a",
+        "title": "HPV-associated oropharyngeal cancer: epidemiology, molecular biology and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cef0bbcd207fbc916d10",
+        "title": "Policy and Management of Carbon Peaking and Carbon Neutrality: A Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57c5c774ba4487ab6c8a",
+        "title": "Skeletal infections: microbial pathogenesis, immunity and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_146555ded5a6036e577b",
+        "title": "ChatGPT - Reshaping medical education and clinical management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b5010f006e2b1bbf49b",
+        "title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de5edc2e12a7e69c651f",
+        "title": "Investigating the nexus between information technology capabilities, knowledge management, and green product innovation: evidence from SME industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_561b2bf1aaee64fc2b12",
+        "title": "Management of knowledge and competence through human resource information system—A structured review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd4ceceeab41bdc70716",
+        "title": "Knowledge Management in the Digital Age: Harnessing Information and Innovation with Knowledge Management Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30a541d41d5b6192a73c",
+        "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e3f3fdd95a23a6a2d7c2",
+        "title": "Stakeholder Analysis for Sustainable Land Management (SLM) in Ethiopia : Assessment of Opportunities, Strategic Constraints, Information Needs, and Knowledge Gaps",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa2b0238d1f461431e47",
+        "title": "A Synopsis of the Evidence for the Science and Clinical Management of Cardiovascular-Kidney-Metabolic (CKM) Syndrome: A Scientific Statement From the American Heart Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64ef2c438c01e2381801",
+        "title": "Knowledge management in boards of directors: effects of informational faultlines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4cc4331d28d08463152f",
+        "title": "Enhancing cognitive metrics in supply chain management through information and knowledge exchange",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e35e9af02921be89304a",
+        "title": "Environmental Sustainability Impacts of Solid Waste Management Practices in the Global South",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3e26992e32a3a586988",
+        "title": "EULAR recommendations for the management of ANCA-associated vasculitis: 2022 update",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b35abd75ed7bafb307b",
+        "title": "Examination the effects of organizational innovation and knowledge management strategy in information technology companies in R&D departments on service quality and product innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b6b7bc17c109e50cb64a",
+        "title": "Infodemic Management Using Digital Information and Knowledge Cocreation to Address COVID-19 Vaccine Hesitancy: Case Study From Ghana",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a35284442e8a12b435b",
+        "title": "A digital sustainability approach for effective knowledge and information management in education specific non-profit organizations: Culture Intelligent IS Solutions",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5615d25010512c7748b8",
+        "title": "Information and Knowledge Management",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_216cd1db22e078755f6d",
+        "title": "Current status of pesticide effects on environment, human health and it’s eco-friendly management as bioremediation: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1906650f98ab2e5c855",
+        "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50391e1dbf2921a5ee24",
+        "title": "Management of Hypertrophic Cardiomyopathy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5c0cee9da066021147b",
+        "title": "The challenge of unprecedented floods and droughts in risk management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08d5e2e99dfcf3f5b779",
+        "title": "Boundary objects, knowledge integration, and innovation management: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7a2ff4da3d4e8c5b0af",
+        "title": "Information technology investment and digital transformation: the roles of digital transformation strategy and top management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c82c497ead93670fdd9e",
+        "title": "Knowledge Management for Information Querying System in Education via the Combination of Rela-Ops Model and Knowledge Graph",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b90a5227e7dd2d05055",
+        "title": "The Ocean and Cryosphere in a Changing Climate",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2dcd41610c9266a6e9e0",
+        "title": "Information Processing and Management of Uncertainty in Knowledge-Based Systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0865bfa3352c4e5264cd",
+        "title": "A review of construction management challenges and BIM-based solutions: perspectives from the schedule, cost, quality, and safety management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f51b0ddbb61c7210adf9",
+        "title": "Editor's Choice -- European Society for Vascular Surgery (ESVS) 2024 Clinical Practice Guidelines on the Management of Abdominal Aorto-Iliac Artery Aneurysms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_644ba88b157769ed23b4",
+        "title": "Artificial intelligence for waste management in smart cities: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b7dd849ca50302d9d63b",
+        "title": "Boosting large‐scale construction project risk management: Application of the impact of building information modeling, knowledge management, and sustainable practices for optimal productivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_807d87c0becf7560fae4",
+        "title": "Recommendations From the 2023 International Evidence-based Guideline for the Assessment and Management of Polycystic Ovary Syndrome",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5e935b69e12ecbe19e01",
+        "title": "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0280d2749b69ab0bf6e",
+        "title": "A management knowledge graph approach for critical infrastructure protection: Ontology design, information extraction and relation prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f53edf788751698731a",
+        "title": "An original Data, Information and Knowledge management approach for model-based engineering projects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da4898b175cc8354090",
+        "title": "Assessing the performance of ChatGPT in answering questions regarding cirrhosis and hepatocellular carcinoma",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d0be5d8c54c421eaf7e",
+        "title": "Information Systems Effect on Enabling Knowledge Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d04100269e63f5204a15",
+        "title": "A systematic review of industrial wastewater management: Evaluating challenges and enablers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_053eea347a7dade96dcd",
+        "title": "The role of digitalization in business and management: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9dd56f94c97d5a03a72b",
+        "title": "2023 Guideline for the Management of Patients With Aneurysmal Subarachnoid Hemorrhage: A Guideline From the American Heart Association/American Stroke Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f33040c49d459c0f9f8",
+        "title": "KNOWLEDGE AND INFORMATION MANAGEMENT IN THE COMPANY AS A STRATEGIC BUSINESS RESOURCE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd7d005630a9942f0a59",
+        "title": "Sustainable entrepreneurship and knowledge management: Role of green information technology in building sustainable entrepreneurial ecosystems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebd87d57402085488109",
+        "title": "FEMA—The Federal Emergency Management Agency",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e74dd3f1488842a6ff02",
+        "title": "The use of co-production, co-design and co-creation to mobilise knowledge in the management of health conditions: a systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0809d7f22cb4816813d",
+        "title": "Digital Twins. HBIM information repositories to centralize knowledge and interdisciplinary management of architectural heritage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad2f4121c6cccd4ede45",
+        "title": "Exploring the nexus of knowledge management, absorptive capacity and corporate sustainable development: the moderating role of information technology (IT)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ee864d701ae80da4c71a",
+        "title": "Managing the COVID-19 Pandemic: Enhancing Sustainable Supply Chain Performance through Management Innovation, Information Processing Capability, Business Model Innovation and Knowledge Management Capability in Pakistan",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53fdc1efa30a5413bbf3",
+        "title": "Diagnosis and management of endometriosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_64dc3baf481b30bd2b52",
+        "title": "Leveraging the Internet of Things Applications for Enhancing Knowledge Management in Information Institutions",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d822a81ce51c4d3013c9",
+        "title": "Attention is not all you need: the complicated case of ethically using large language models in healthcare and medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62c97ff87703b2edb74d",
+        "title": "A function-based typology for Earth’s ecosystems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_deec1bdaf81211b4b0f5",
+        "title": "Assessing the role of competitive intelligence and practices of dynamic capabilities in business accommodation of SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a47051abf55ce7cfa60",
+        "title": "Artificial Intelligence-Enabled Intelligent Assistant for Personalized and Adaptive Learning in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dcaaf738f52556326a73",
+        "title": "Challenges in Healing Wound: Role of Complementary and Alternative Medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbf3592626ead6968556",
+        "title": "Environmental pollutants and their effects on human health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75eafccd75afb882131a",
+        "title": "A review of the effects of forest fire on soil properties",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_788956786a2f7c1780cc",
+        "title": "UAV remote sensing applications in marine monitoring: Knowledge visualization and review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d59f1bb48e0fc10d0730",
+        "title": "The Great Resignation: the great knowledge exodus or the onset of the Great Knowledge Revolution?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94aa5c58c4baa5e539be",
+        "title": "2022 WSAVA guidelines for the recognition, assessment and treatment of pain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81c1acdeb5d111551659",
+        "title": "Dealing with knowledge hiding to improve innovation capabilities in the hotel industry: The unconventional role of knowledge-oriented leadership",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_028174bff66ba33821aa",
+        "title": "Knowledge demands for energy management in manufacturing industry - A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36c29f5ca74c890f47b7",
+        "title": "Assessing the Utility of ChatGPT Throughout the Entire Clinical Workflow: Development and Usability Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3fd3659fa5ce44ac9365",
+        "title": "How do plants defend themselves against pathogens-Biochemical mechanisms and genetic interventions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e1b2572ae5f7279ad80",
+        "title": "A Review of the Digital Twin Technology in the AEC‐FM Industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd53221d2d3ca6f35ba4",
+        "title": "Diagnosis and Management of Non-Metastatic Upper Tract Urothelial Carcinoma: AUA/SUO Guideline",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a811fba2b977f9b74cf",
+        "title": "Diabetes and Ramadan: Practical guidelines 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ee33a5d5531f01db18f",
+        "title": "EAACI Molecular Allergology User's Guide 2.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30cf8adc2200566abba8",
+        "title": "Artificial intelligence and corporate innovation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fba7b8152aeca5ee2e6f",
+        "title": "Building a knowledge graph for operational hazard management of utility tunnels",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_953965812a039f28f0a0",
+        "title": "Impact of Organisational Factors on the Circular Economy Practices and Sustainable Performance of Small and Medium-sized Enterprises in Vietnam",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_819cd45a1145568ef024",
+        "title": "Digital Technology Adoption in SMEs: What Technological, Environmental and Organizational Factors Influence in Emerging Countries?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ff783cfaad0ff4d0154",
+        "title": "Fostering employee's pro-environmental behavior through green transformational leadership, green human resource management and environmental knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fee1574e8748d31ce919",
+        "title": "Sustainable Water Management: Understanding the Socioeconomic and Cultural Dimensions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7177c68575d1dfe80d16",
+        "title": "Artificial intelligence and automated monitoring for assisting conservation of marine ecosystems: A perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6381db2cb0c5e3fc1122",
+        "title": "Use of management controls and product innovation in startups: intervention of knowledge sharing and technological turbulence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6dc954aabbaee92cda21",
+        "title": "Plastic Waste Management in India: Challenges, Opportunities, and Roadmap for Circular Economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e82f82d8b7925effeef3",
+        "title": "A Comprehensive Survey of Graph Neural Networks for Knowledge Graphs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9eac1cee2d064bc08d4b",
+        "title": "Integrated Pest Management (IPM) in Agriculture and Its Role in Maintaining Ecological Balance and Biodiversity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06c859975c74ae9a8b04",
+        "title": "Cybersecurity, Data Privacy and Blockchain: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72a8d2e4a54c37fc5c69",
+        "title": "Where the rubber meets the road: Emerging environmental impacts of tire wear particles and their chemical cocktails",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c82b864c184ac62bd4f2",
+        "title": "Introduction to Information Science",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ca93c14ecf0770154f3",
+        "title": "Advancing public sector knowledge management: towards an understanding of knowledge formation in public administration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a42015981173b72292c",
+        "title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ceb2ed54e94d7de9b241",
+        "title": "Intracranial pressure: current perspectives on physiology and monitoring",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d00454018ed67bf03451",
+        "title": "Global knowledge base for municipal solid waste management: Framework development and application in waste generation prediction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d95aabd6a18d8f27e9bd",
+        "title": "The State of the World’s Land and Water Resources for Food and Agriculture 2021 – Systems at breaking point",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_115efeac2c66843168b7",
+        "title": "Urban Digital Twin Challenges: A Systematic Review and Perspectives for Sustainable Smart Cities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57d8ae1717974058236f",
+        "title": "The implementation of artificial intelligence in organizations: A systematic literature review",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Can Generative AI Improve Corporate Values, Employee Perceptions, and Organizational Practices? A Human-Centric Case Study of Project Management SMEs in Indonesia",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "knowledge_management",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 31,
+      "hard_gate_pass_count": 31,
+      "eligible_count": 0,
+      "boundary_count": 10,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "knowledge management"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "knowledge management information management"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(knowledge management) OR (knowledge management in information management)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "knowledge management",
+        "raw_count": 100,
+        "hard_gate_pass_count": 0,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "knowledge management information management",
+        "raw_count": 200,
+        "hard_gate_pass_count": 0,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(knowledge management) OR (knowledge management in information management)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 1,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_8441de750267f7c545ce",
+        "incoming_paper_id": "paper_939d508f840199e50da0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a77a089d2085dafef59",
+        "incoming_paper_id": "paper_8a77a089d2085dafef59"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd318fef2013c05b4ccb",
+        "incoming_paper_id": "paper_cd318fef2013c05b4ccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ec6668ca8975657b796",
+        "incoming_paper_id": "paper_2ec6668ca8975657b796"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c0c2120b7af448df45b",
+        "incoming_paper_id": "paper_1c0c2120b7af448df45b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f81a06f6b398a0b2f06f",
+        "incoming_paper_id": "paper_f81a06f6b398a0b2f06f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fe51f7d2d89bc53b228",
+        "incoming_paper_id": "paper_4fe51f7d2d89bc53b228"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6598477e2f5b5b56f55c",
+        "incoming_paper_id": "paper_6598477e2f5b5b56f55c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "incoming_paper_id": "paper_ce2257a6f8c7ad0ce659"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e878b1d7c8300c068aef",
+        "incoming_paper_id": "paper_e878b1d7c8300c068aef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff07213ba1defc2d1c9a",
+        "incoming_paper_id": "paper_ff07213ba1defc2d1c9a"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_6598477e2f5b5b56f55c",
+          "paper_5615d25010512c7748b8"
+        ]
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_c46a77a7096ab348f65f",
+          "paper_d1906650f98ab2e5c855"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b5d78f547b830ddb3423",
+        "incoming_paper_id": "paper_b5d78f547b830ddb3423"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f2f64bb53007fe18d3ad",
+        "incoming_paper_id": "paper_f2f64bb53007fe18d3ad"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_5615d25010512c7748b8",
+          "paper_9f53edf788751698731a"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_76e6c4b91b9d61ebe821",
+        "incoming_paper_id": "paper_76e6c4b91b9d61ebe821"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f05d51e6e259f9b6ee29",
+        "incoming_paper_id": "paper_f05d51e6e259f9b6ee29"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a77a089d2085dafef59",
+        "incoming_paper_id": "paper_8a77a089d2085dafef59"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd318fef2013c05b4ccb",
+        "incoming_paper_id": "paper_cd318fef2013c05b4ccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bbea598513d028646814",
+        "incoming_paper_id": "paper_bbea598513d028646814"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1c0c2120b7af448df45b",
+        "incoming_paper_id": "paper_1c0c2120b7af448df45b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ec6668ca8975657b796",
+        "incoming_paper_id": "paper_2ec6668ca8975657b796"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_54cc2c5fbb067e9840fb",
+        "incoming_paper_id": "paper_54cc2c5fbb067e9840fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f81a06f6b398a0b2f06f",
+        "incoming_paper_id": "paper_f81a06f6b398a0b2f06f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "incoming_paper_id": "paper_ce2257a6f8c7ad0ce659"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6b90a5227e7dd2d05055",
+        "incoming_paper_id": "paper_6b90a5227e7dd2d05055"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ddd79f2d0a129811f77",
+        "incoming_paper_id": "paper_5ddd79f2d0a129811f77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4da4898b175cc8354090",
+        "incoming_paper_id": "paper_4da4898b175cc8354090"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a812119fbff95049a7fd",
+        "incoming_paper_id": "paper_a812119fbff95049a7fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e3c1d68885de878d0a71",
+        "incoming_paper_id": "paper_e3c1d68885de878d0a71"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e878b1d7c8300c068aef",
+        "incoming_paper_id": "paper_e878b1d7c8300c068aef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff07213ba1defc2d1c9a",
+        "incoming_paper_id": "paper_ff07213ba1defc2d1c9a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a47c3c79859a1d5e11b",
+        "incoming_paper_id": "paper_8a47c3c79859a1d5e11b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f2f64bb53007fe18d3ad",
+        "incoming_paper_id": "paper_f2f64bb53007fe18d3ad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bdaed6f26178f19d1dc0",
+        "incoming_paper_id": "paper_bdaed6f26178f19d1dc0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4fe51f7d2d89bc53b228",
+        "incoming_paper_id": "paper_4fe51f7d2d89bc53b228"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08d5e2e99dfcf3f5b779",
+        "incoming_paper_id": "paper_08d5e2e99dfcf3f5b779"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_52ef2c2777c82af72987",
+        "incoming_paper_id": "paper_52ef2c2777c82af72987"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6598477e2f5b5b56f55c",
+        "incoming_paper_id": "paper_6598477e2f5b5b56f55c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_36deb51a81143cfea0a4",
+        "incoming_paper_id": "paper_36deb51a81143cfea0a4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_318c5790b5ed691c787d",
+        "incoming_paper_id": "paper_318c5790b5ed691c787d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b5d78f547b830ddb3423",
+        "incoming_paper_id": "paper_b5d78f547b830ddb3423"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f05d51e6e259f9b6ee29",
+        "incoming_paper_id": "paper_f05d51e6e259f9b6ee29"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd61dd3f964ac8d0cb0a",
+        "incoming_paper_id": "paper_bd61dd3f964ac8d0cb0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07a758fc222f1d922f7e",
+        "incoming_paper_id": "paper_07a758fc222f1d922f7e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ded461278663db9e2bd",
+        "incoming_paper_id": "paper_5ded461278663db9e2bd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a9cf313d3d7960b6d6d2",
+        "incoming_paper_id": "paper_a9cf313d3d7960b6d6d2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2321f70b5dbc9eb6f857",
+        "incoming_paper_id": "paper_2321f70b5dbc9eb6f857"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0865bfa3352c4e5264cd",
+        "incoming_paper_id": "paper_0865bfa3352c4e5264cd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5e7a520b2b51248279f5",
+        "incoming_paper_id": "paper_5e7a520b2b51248279f5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aedca7ad579c13b952fc",
+        "incoming_paper_id": "paper_aedca7ad579c13b952fc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bcd4ce81a53fe97e4fb",
+        "incoming_paper_id": "paper_2bcd4ce81a53fe97e4fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e74dd3f1488842a6ff02",
+        "incoming_paper_id": "paper_e74dd3f1488842a6ff02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95898dbee2df63547265",
+        "incoming_paper_id": "paper_95898dbee2df63547265"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_76e6c4b91b9d61ebe821",
+        "incoming_paper_id": "paper_76e6c4b91b9d61ebe821"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9fbc9a49e41bd40cd188",
+        "incoming_paper_id": "paper_9fbc9a49e41bd40cd188"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a42ca6d4378744076fd",
+        "incoming_paper_id": "paper_5a42ca6d4378744076fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f766534f554c5ada04ca",
+        "incoming_paper_id": "paper_f766534f554c5ada04ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f516bce0acd4972b0e67",
+        "incoming_paper_id": "paper_f516bce0acd4972b0e67"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e3f3fdd95a23a6a2d7c2",
+        "incoming_paper_id": "paper_e3f3fdd95a23a6a2d7c2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83f2df21d007475144c9",
+        "incoming_paper_id": "paper_83f2df21d007475144c9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_561b2bf1aaee64fc2b12",
+        "incoming_paper_id": "paper_561b2bf1aaee64fc2b12"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4cb3c6cbd7bbbd18704d",
+        "incoming_paper_id": "paper_4cb3c6cbd7bbbd18704d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f9032c9cfa75b5b1d285",
+        "incoming_paper_id": "paper_f9032c9cfa75b5b1d285"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de333fc1fc99f6b754a9",
+        "incoming_paper_id": "paper_de333fc1fc99f6b754a9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3282f678798a33ed1375",
+        "incoming_paper_id": "paper_3282f678798a33ed1375"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b7a2ff4da3d4e8c5b0af",
+        "incoming_paper_id": "paper_b7a2ff4da3d4e8c5b0af"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4cc4331d28d08463152f",
+        "incoming_paper_id": "paper_4cc4331d28d08463152f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bdd91c5de8610680dbe9",
+        "incoming_paper_id": "paper_bdd91c5de8610680dbe9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c82c497ead93670fdd9e",
+        "incoming_paper_id": "paper_c82c497ead93670fdd9e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5615d25010512c7748b8",
+        "incoming_paper_id": "paper_5615d25010512c7748b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b6b7bc17c109e50cb64a",
+        "incoming_paper_id": "paper_b6b7bc17c109e50cb64a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bd42a37d86946308c12c",
+        "incoming_paper_id": "paper_bd42a37d86946308c12c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68448b5d42e1e16b8f28",
+        "incoming_paper_id": "paper_68448b5d42e1e16b8f28"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2dcd41610c9266a6e9e0",
+        "incoming_paper_id": "paper_2dcd41610c9266a6e9e0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd4ceceeab41bdc70716",
+        "incoming_paper_id": "paper_fd4ceceeab41bdc70716"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c0553a816dacc6011983",
+        "incoming_paper_id": "paper_c0553a816dacc6011983"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de5edc2e12a7e69c651f",
+        "incoming_paper_id": "paper_de5edc2e12a7e69c651f"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

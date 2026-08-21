@@ -1,0 +1,2640 @@
+{
+  "direction_id": "topic_knowledge_discovery",
+  "labels": {
+    "zh": "知识发现",
+    "en": "knowledge discovery"
+  },
+  "input": {
+    "selected_direction_id": "topic_knowledge_discovery",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16516.0,
+  "status": "ok",
+  "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+  "state": "QUERY_PLAN",
+  "raw_count": 324,
+  "hard_gate_pass_count": 29,
+  "eligible_count": 0,
+  "boundary_count": 6,
+  "selected_count": 0,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 20
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "knowledge discovery"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "knowledge discovery human-computer interaction"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(knowledge discovery) OR (knowledge discovery in human-computer interaction)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "dblp",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 24
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "quality_gate_too_strict",
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "QUERY_PLAN",
+    "status_code": "DYNAMIC_RETRIEVAL_UNAVAILABLE",
+    "message_to_user": "多源检索已运行，但没有论文同时通过期刊范围闸门和未校准的70分候选阈值；诊断与扩展记录已保留。",
+    "request": {
+      "selected_direction_id": "topic_knowledge_discovery",
+      "research_direction": "knowledge discovery",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "CS_AI",
+        "HCI",
+        "CS_IR",
+        "CS_DATA",
+        "ZH_IS_IM_CORE",
+        "ZH_METHODS_ANALYTICS",
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "PKU_CORE_2023_PSYCHOLOGY"
+      ]
+    },
+    "local_match": {
+      "label": "knowledge discovery",
+      "aliases": [
+        "knowledge discovery"
+      ],
+      "groups": [
+        "IS × Computer Science / HCI"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:120"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_knowledge_discovery",
+        "labels": {
+          "zh": "知识发现",
+          "en": "knowledge discovery"
+        },
+        "group_ids": [
+          "is_cs_hci"
+        ],
+        "synonyms": [
+          "知识发现",
+          "knowledge discovery",
+          "knowledge discovery in human-computer interaction"
+        ],
+        "boundaries": {
+          "include": [
+            "knowledge discovery",
+            "human-computer interaction",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "knowledge discovery",
+            "\"knowledge discovery\" AND \"human-computer interaction\""
+          ],
+          "semantic_scholar": [
+            "knowledge discovery",
+            "knowledge discovery human-computer interaction"
+          ],
+          "crossref": [
+            "knowledge discovery",
+            "知识发现"
+          ],
+          "dblp": [
+            "knowledge discovery computing"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "knowledge discovery",
+            "human-computer interaction",
+            "computing"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "dblp",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "CS_AI",
+          "HCI",
+          "CS_IR",
+          "CS_DATA",
+          "ZH_IS_IM_CORE",
+          "ZH_METHODS_ANALYTICS",
+          "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+          "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+          "PKU_CORE_2023_INFORMATION_RESOURCE",
+          "PKU_CORE_2023_PSYCHOLOGY"
+        ],
+        "document_types": [
+          "journal-article",
+          "proceedings-article"
+        ],
+        "fallback_queries": [
+          "knowledge discovery human-computer interaction",
+          "(knowledge discovery) OR (knowledge discovery in human-computer interaction)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:120"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "blocked"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "configure_dynamic_provider",
+      "reset_request"
+    ],
+    "papers": [],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "knowledge discovery",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1020150,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:13.498884+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3562.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "knowledge discovery human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 191191,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:17.075649+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3906.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(knowledge discovery) OR (knowledge discovery in human-computer interaction)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 994203,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:58:21.004729+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3531.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "knowledge discovery",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:58:25.963901+00:00",
+        "duration_ms": 1141.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1141.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1046-8188",
+        "query": "knowledge discovery",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:27.112949+00:00",
+        "duration_ms": 1531.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1531.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Knowledge Discovery from Data",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1556-4681",
+        "query": "knowledge discovery",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:58:28.635324+00:00",
+        "duration_ms": 1344.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1344.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "心理学报",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "0439-755X",
+        "query": "知识发现",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:58:24.800899+00:00",
+        "duration_ms": 1171.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1171.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_8d87f2d749151c5f6a4d",
+        "title": "Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef2e3a458f7b78afae77",
+        "title": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42bcf15fb1f1fa072b27",
+        "title": "Knowledge Discovery: Methods from data mining and machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_648057668dd5c49ae23c",
+        "title": "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfd7703817938e62f65e",
+        "title": "Unsupervised hierarchical methodology of maritime traffic pattern extraction for knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a9a411e4bff85169c07",
+        "title": "Just Add Data: automated predictive modeling for knowledge discovery and feature selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2d05f8e198092e5d009",
+        "title": "Advances in Knowledge Discovery and Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a1f72d111d18675e89a",
+        "title": "Fuzzy-Granular Concept-Cognitive Learning via Three-Way Decision: Performance Evaluation on Dynamic Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77f67eaee23c4b50af42",
+        "title": "Materials Discovery With Machine Learning and Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40ce4d659a374112e365",
+        "title": "Introduction to Data Mining and Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c356542ee46530ae489f",
+        "title": "Interactive knowledge discovery and knowledge visualization for decision support in multi-objective optimization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92bb2f9f62db0df836e2",
+        "title": "Blockchain-Enabled Smart Agricultural Knowledge Discovery System using Edge Computing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_438c5679d8b35fe6c17c",
+        "title": "Data Mining and Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_478ef4ae24822550aab5",
+        "title": "Machine Learning and Knowledge Discovery in Databases",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b525f535d0ea18f6e0e6",
+        "title": "Chemical Species Ontology for Data Integration and Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90e3f79a11322f8e6fd1",
+        "title": "City2vec: Urban knowledge discovery based on population mobile network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fdaca80a3fbc28891df0",
+        "title": "Manifold Learning for Knowledge Discovery and Intelligent Inverse Design of Photonic Nanostructures: Breaking the Geometric Complexity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_183bf8d049ce8de7798a",
+        "title": "Agent-Based Recommendation in E-Learning Environment Using Knowledge Discovery and Machine Learning Approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9631c54ae27f3b65b090",
+        "title": "A comprehensive review of clustering techniques in artificial intelligence for knowledge discovery: Taxonomy, challenges, applications and future prospects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5b9e35968f4b3cfab20",
+        "title": "Integrating Artificial Intelligence and Visualization for Visual Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a7f9b46ed01a037e03f",
+        "title": "8 Decolonizing Methodologies: Research and Indigenous Peoples",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5b527448a56bf20dcf4",
+        "title": "Explaining deep learning for ECG analysis: Building blocks for auditing and knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73798b204ee3d394eaff",
+        "title": "Multi-objective optimization and innovization-based knowledge discovery of sustainable machining process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f67fd68188ec2330cc11",
+        "title": "Knowledge discovery in heart disease dataset",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_04f7949760f2be80123e",
+        "title": "Machine Learning and Knowledge Discovery in Databases. Research Track",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7410c8a0ec941bee649",
+        "title": "Knowledge discovery for course choice decision in Massive Open Online Courses using machine learning approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d71d9b53e123af4bbcaa",
+        "title": "Scientific discovery in the age of artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf6b79fd298a1290abe0",
+        "title": "Knowledge Discovery on Cryptocurrency Exchange Rate Prediction Using Machine Learning Pipelines",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c4b516be3c4097dadea",
+        "title": "Retracted: Unlocking the Power of Natural Language Processing to Automate Knowledge Discovery",
+        "reasons": [
+          "retraction_or_correction",
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c4eaaa3577237a9613e4",
+        "title": "Human resources analytics in practice: A knowledge discovery process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b4a71e10ff66e212068",
+        "title": "A review of biomedical datasets relating to drug discovery: a knowledge graph perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce6520028496eef0fcd0",
+        "title": "Visual Knowledge Discovery with Artificial Intelligence: Challenges and Future Directions",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_389148fee4ba44f64f02",
+        "title": "Machine Learning and Knowledge Discovery in Databases",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52b4a88fe3a909f9a83b",
+        "title": "Knowledge Discovery from Large Amounts of Social Media Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25afe7b183a695ccbbb1",
+        "title": "Unsupervised knowledge discovery framework: From AIS data processing to maritime traffic networks generating",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e358cf602fef09d10ec",
+        "title": "Knowledge Discovery in Engineering Applications Using Machine Learning Techniques",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b4953bb4b7b8d5e82af7",
+        "title": "Domain knowledge discovery from abstracts of scientific literature on Nickel-based single crystal superalloys",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e0f46cce370552a6d29",
+        "title": "KNOWLEDGE DISCOVERY AND DATA MINING OF STRUCTURED AND UNSTRUCTURED BUSINESS DATA: PROBLEMS AND PROSPECTS OF IMPLEMENTATION AND ADAPTATION IN CRISIS CONDITIONS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8acc992d7fd8fd99b957",
+        "title": "Advances in Knowledge Discovery and Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e690b7d5e59464a3ba5",
+        "title": "Visual Knowledge Discovery with General Line Coordinates",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72c1c936ef38460856d9",
+        "title": "A data-driven multi-perspective approach to cybersecurity knowledge discovery through topic modelling",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ccedb2816d5d6e3f49eb",
+        "title": "Knowledge Discovery from Archaeological Materials",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_766542e4b7e640f5388e",
+        "title": "Use of an in silico knowledge discovery approach to determine mechanistic studies of silver nanoparticles-induced toxicity from in vitro to in vivo",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd64d2e359d2ae1b48bd",
+        "title": "Big data analytics and knowledge discovery for urban computing and intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_beebd3d620e1ce99c0b0",
+        "title": "AiGet: Transforming Everyday Moments into Hidden Knowledge Discovery with AI Assistance on Smart Glasses",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a74f33fa7ff90a089775",
+        "title": "Knowledge Discovery Systems: An Overview",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_03694cf989ca637d346c",
+        "title": "pathfinder: A Semantic Framework for Literature Review and Knowledge Discovery in Astronomy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e13407155723c4c5493e",
+        "title": "Design of A Smart Tourism Management System through Multisource Data Visualization-Based Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7df704b3ee09e80445c2",
+        "title": "Artificial Intelligence and Visualization: Advancing Visual Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84f047dfa55cd0414901",
+        "title": "Knowledge discovery of Middle East dust sources using Apriori spatial data mining algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d90795912490a1e831fd",
+        "title": "Knowledge Discovery in Ubiquitous and Personal Sleep Tracking: Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd719850ed5f8d8239f5",
+        "title": "Soundscape Analytics: A New Frontier of Knowledge Discovery in Soundscape Data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f368114cc365f0344f0",
+        "title": "Astronomical Knowledge Discovery in Databases by the CoLiTec Software",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8950f24fac29fdde0c7",
+        "title": "A Hybrid Deep Learning-Based Intelligent System for Sports Action Recognition via Visual Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5aaeda8cb2ee0c1a077c",
+        "title": "An Evolutive Frequent Pattern Tree-based Incremental Knowledge Discovery Algorithm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_52ee7c7211b032c1ce51",
+        "title": "Visualization and Visual Knowledge Discovery from Big Uncertain Data",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79d648f3b0fdc00e7b8d",
+        "title": "Multi-granulation-based knowledge discovery in incomplete generalized multi-scale decision systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_023b622d240ee3833af6",
+        "title": "MRAgent: an LLM-based automated agent for causal knowledge discovery in disease via Mendelian randomization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47b361ad7263c97b390e",
+        "title": "Advances in Knowledge Discovery and Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_272b534c0c1ab280e7e5",
+        "title": "Optimal scale selection and knowledge discovery in generalized multi-scale decision tables",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5576a58c54260f9f8540",
+        "title": "Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a6b664f107a48d0ef20",
+        "title": "2023 International Conference on Artificial Intelligence and Knowledge Discovery in Concurrent Engineering (ICECONF)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22d47ea6b0ec09a4d3e1",
+        "title": "TCMKD: From ancient wisdom to modern insights-A comprehensive platform for traditional Chinese medicine knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11471a2659c971cfebaa",
+        "title": "Why KDAC? A general activation function for knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95aed8f3263a568108b8",
+        "title": "RETRACTED: Trajectory clustering and query processing analysis framework for knowledge discovery in cloud environment",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1d8832a92db12e89705",
+        "title": "Knowledge-Driven Cybersecurity Intelligence: Software Vulnerability Coexploitation Behavior Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e8eb75e719b324188a6",
+        "title": "Understanding the performance of knowledge graph embeddings in drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_627096de951574faeb94",
+        "title": "Evaluation of GenAI in Biomedical Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_910c1443d23d4c2a2df8",
+        "title": "Knowledge discovery of zakat administration worldwide from YouTube and Zoom via text mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4090228ec99a5f21b858",
+        "title": "A Data-Driven Knowledge Discovery Framework for Smart Education Management Using Behavioral Characteristics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5b17b9d91d0cc8e84846",
+        "title": "The contribution of brain banks to knowledge discovery in amyotrophic lateral sclerosis: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9d89776abbae80f7371",
+        "title": "Aerothermal performance analysis and knowledge discovery of film holes on the squealer tip of a gas turbine blade",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26d04b6ff47a1b018c23",
+        "title": "Knowledge Discovery in a Recommender System: The Matrix Factorization Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c767a169a9069c5bbf49",
+        "title": "Deep blue artificial intelligence for knowledge discovery of the intermediate ocean",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d595c165555c03f36b5c",
+        "title": "A strategy for archives metadata representation on CIDOC-CRM and knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_783ad8caa9b681b24f7c",
+        "title": "Computational modeling for medical data: From data collection to knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a5619d4163cf2a205ff",
+        "title": "Proposal of an innovative MCDA evaluation methodology: knowledge discovery through rank reversal, standard deviation, and relationship with stock return",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69b923041e7a2679e143",
+        "title": "2024 International Conference on Cyber-Enabled Distributed Computing and Knowledge Discovery (CyberC)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe3d020e6e44462a1e55",
+        "title": "The construction of a TCM knowledge graph and application of potential knowledge discovery in diabetic kidney disease by integrating diagnosis and treatment guidelines and real-world clinical data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e4280f5016f70adf1b0",
+        "title": "An Enhanced Simulation-Based Multi-Objective Optimization Approach with Knowledge Discovery for Reconfigurable Manufacturing Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ebece5aae194ff12193b",
+        "title": "Multidimensional knowledge discovery of cultural relics resources in the Tang tomb mural category",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15a38aa46a9c1ffee6db",
+        "title": "A Filter-APOSD approach for feature selection and linguistic knowledge discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ffb1f3a233fdd4a168c4",
+        "title": "Advances in Natural Computation, Fuzzy Systems and Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d886c7ac89944bee70f6",
+        "title": "2023 International Conference on IT Innovation and Knowledge Discovery (ITIKD)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a21c95a130a3e660572b",
+        "title": "The Gene Ontology knowledgebase in 2023",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5dd8aaabe8a6944922b",
+        "title": "Utilizing domain knowledge in data-driven process discovery: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66d9d0a18b8c651c8364",
+        "title": "A Light Attention-Mixed-Base Deep Learning Architecture toward Process Multivariable Modeling and Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4076318400411064e0c6",
+        "title": "A Segmentation Scheme for Knowledge Discovery in Human Activity Spotting",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fca9b0b07e791b58a830",
+        "title": "A Methodology for Knowledge Discovery in Labeled and Heterogeneous Graphs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a59b72ab5f6c41f5a326",
+        "title": "Weighting Approaches in Data Mining and Knowledge Discovery: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60bc75699f9f281ddc22",
+        "title": "Exploring the Role of Generative Artificial Intelligence in Enhancing Information Retrieval and Knowledge Discovery in Academic Libraries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4acfea2e174e12131307",
+        "title": "Information exchange and knowledge discovery for additive manufacturing digital thread: a comprehensive literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4fc809c9f762b4afb78",
+        "title": "Leveraging Multi-AI Agents for Cross-Domain Knowledge Discovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06a076646cb90688167d",
+        "title": "AUTOMA: Automated Generation of Attack Hypotheses and Their Variants for Threat Hunting Using Knowledge Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_984b27a71738344a7e22",
+        "title": "Advances in Knowledge Discovery and Data Mining",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_306ab894d94383b0c8a2",
+        "title": "Computational approaches streamlining drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_48aa8700c66edbb68ab2",
+        "title": "Molecular docking as a tool for the discovery of molecular targets of nutraceuticals in diseases management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e878b1d7c8300c068aef",
+        "title": "Artificial intelligence and knowledge management: A partnership between human and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_239270aeae582a6826b2",
+        "title": "Small molecule metabolites: discovery of biomarkers and therapeutic targets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_260e5eed6627f38cb203",
+        "title": "Plant-Derived Natural Products: A Source for Drug Discovery and Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30cdb15201fe70bf6ca7",
+        "title": "Computer-Aided Drug Design and Drug Discovery: A Prospective Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07a1860d12ed63e0100",
+        "title": "The Role of AI in Drug Discovery: Challenges, Opportunities, and Strategies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1dbea14311dff30bee7",
+        "title": "Human-in-the-loop machine learning: a state of the art",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_073791b40322d85672e9",
+        "title": "OpenCell: Endogenous tagging for the cartography of human cellular organization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d07981e68ca69812d8e1",
+        "title": "Molecular modeling in drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61581973a052c15167b4",
+        "title": "Knowledge Graphs: Opportunities and Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c8479995bfd801eb443",
+        "title": "Human emotion recognition from EEG-based brain–computer interface using machine learning: a comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_327d155c9da6c74d60bc",
+        "title": "Petabase-scale sequence alignment catalyses viral discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3528a73940285499ffb",
+        "title": "Mathematical discoveries from program search with large language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_395fd8e1964b378051cd",
+        "title": "Deep learning in drug discovery: an integrative review and future challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90d68da49f9839386b1c",
+        "title": "Artificial intelligence for natural product drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eac1404a04093c2f1b88",
+        "title": "ChatGPT: perspectives from human–computer interaction and psychology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1de257a1bd4bca426df6",
+        "title": "Artificial Intelligence and Machine Learning Technology Driven Modern Drug Discovery and Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4144b17aa25e763c44e",
+        "title": "Discovery of antimicrobial peptides in the global microbiome with machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a812119fbff95049a7fd",
+        "title": "Unlocking the value of artificial intelligence in human resource management through AI capability framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_366b8240b602680b4b85",
+        "title": "New insights into protein–protein interaction modulators in drug discovery and therapeutic advance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94d5a2f61dd207d0e3cf",
+        "title": "m6A modification: recent advances, anticancer targeted drug discovery and beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4de51accd5eeb17d5961",
+        "title": "AI agency vs. human agency: understanding human–AI interactions on TikTok and their implications for user engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0dbdbef3653fbcbf17e4",
+        "title": "Modern Approaches in the Discovery and Development of Plant-Based Natural Products and Their Analogues as Potential Therapeutic Agents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15e9f007f89333d587cd",
+        "title": "Integrating Scientific Knowledge with Machine Learning for Engineering and Environmental Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_860ff0a3b893b1cd5da4",
+        "title": "Recent advancements in multimodal human–robot interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe7a158691f709e7186e",
+        "title": "Playing with AI to Investigate Human-Computer Interaction Technology and Improving Critical Thinking Skills to Pursue 21st Century Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_acf865cfa9dad26fce08",
+        "title": "Cancer stem cells: advances in knowledge and implications for cancer therapy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a5844cd933e04797fa8",
+        "title": "Multimodal Human–Robot Interaction for Human‐Centric Smart Manufacturing: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c889f70a34b740a0c283",
+        "title": "Artificial intelligence for drug discovery: Resources, methods, and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_23f3760459dce9225d05",
+        "title": "Building a knowledge graph to enable precision medicine",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9eaee4c4db1fb9e168ab",
+        "title": "A systematic review of human-AI interaction in autonomous ship systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4f00fdee28db63605d7",
+        "title": "Spatially resolved multiomics of human cardiac niches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_45236c0f0c3d1585f149",
+        "title": "Multimodal data fusion for cancer biomarker discovery with deep learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e99296052d7687f2cae",
+        "title": "Machine learning overcomes human bias in the discovery of self-assembling peptides",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_316a195fafaf2589ff1d",
+        "title": "AI in drug discovery and its clinical relevance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bef17993cb0dd6854ae8",
+        "title": "Accelerating the prediction and discovery of peptide hydrogels with human-in-the-loop",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc35a457696301ac4cca",
+        "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de26d5db426619a63779",
+        "title": "The transformational role of GPU computing and deep learning in drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89a869288d886decbf06",
+        "title": "CADD, AI and ML in drug discovery: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_175e6dcf8dbddd8192f1",
+        "title": "Adeno-associated virus as a delivery vector for gene therapy of human diseases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6e2f3ff92fc75e7cbc64",
+        "title": "Deep generative molecular design reshapes drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca12fea90f7de86f50cd",
+        "title": "Benchmarking AlphaFold‐enabled molecular docking predictions for antibiotic discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_30a541d41d5b6192a73c",
+        "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e4e0fa85d3da012b2346",
+        "title": "Revisiting Reflection in HCI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e027e233ae2bbb095c58",
+        "title": "Artificial Intelligence for Drug Discovery: Are We There Yet?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_705a49e7f0b1c5f5d6a6",
+        "title": "Attention is all you need: utilizing attention in AI-enabled drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_327bd97dcfe3b208aac0",
+        "title": "The Human Phenotype Ontology in 2024: phenotypes around the world",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa95d451caeb9c8266e0",
+        "title": "Anticancer Drug Discovery Based on Natural Products: From Computational Approaches to Clinical Studies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85ba980bc90b3a510b14",
+        "title": "The Bioavailability of Drugs—The Current State of Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8a78d3a5a6bdc71ee1f",
+        "title": "Robust mapping of spatiotemporal trajectories and cell–cell interactions in healthy and diseased tissues",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e71f15030b93e968ff9b",
+        "title": "Social interactions in the metaverse: Framework, initial evidence, and research roadmap",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f1084a2eb0097e353413",
+        "title": "XAI Systems Evaluation: A Review of Human and Computer-Centred Methods",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ce70aa26fba6d435bac",
+        "title": "Interpretable machine learning for knowledge generation in heterogeneous catalysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a546318d5e67b594aa02",
+        "title": "Multi-omics approaches for biomarker discovery in early ovarian cancer diagnosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c198b56b7f0612fa1c21",
+        "title": "Antibiotic Discovery and Resistance: The Chase and the Race",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82635ab6ee7212fd9e2c",
+        "title": "A Comprehensive Survey on Automatic Knowledge Graph Construction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5d22082c93d401108b60",
+        "title": "Drug discovery and development: introduction to the general public and patient groups",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_921511541f1f290b0e22",
+        "title": "Robotic Vision for Human-Robot Interaction and Collaboration: A Survey and Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c418798e171f8b570be",
+        "title": "ColabFold: making protein folding accessible to all",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e40ab941f1a1faf4689",
+        "title": "Facial Emotion Expressions in Human–Robot Interaction: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1d1167025186b0288d4",
+        "title": "Glioblastoma remodelling of human neural circuits decreases survival",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ce2257a6f8c7ad0ce659",
+        "title": "The LOTUS initiative for open knowledge management in natural products research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a82dbd3a1daeec4c7cf",
+        "title": "Six Human-Centered Artificial Intelligence Grand Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_269534c77d2bf456c265",
+        "title": "Systematic discovery of protein interaction interfaces using AlphaFold and experimental validation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ddc181f4621e79b2224f",
+        "title": "Semantic projection recovers rich human knowledge of multiple object features from word embeddings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_010462f3f107112facad",
+        "title": "Teaching for Values in Human–Computer Interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6fc9609db08687eb14d",
+        "title": "A Review of Immersive Technologies, Knowledge Representation, and AI for Human-Centered Digital Experiences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34abc033b5b32e004cf1",
+        "title": "Integrating Artificial Intelligence for Drug Discovery in the Context of Revolutionizing Drug Delivery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84df05bdbddb7cb1e8d3",
+        "title": "An Exploration into Human–Computer Interaction: Hand Gesture Recognition Management in a Challenging Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d56037fcf6f59b325fa1",
+        "title": "PROTAC targeted protein degraders: the past is prologue",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bba993b2a4ac45de4ad3",
+        "title": "A Review on Machine Learning Styles in Computer Vision—Techniques and Future Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3555cf31cc2360051fe8",
+        "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32b630e73b6f18e855ad",
+        "title": "Personalized education and Artificial Intelligence in the United States, China, and India: A systematic review using a Human-In-The-Loop model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b038217eaece8526e9d6",
+        "title": "The language network as a natural kind within the broader landscape of the human brain",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_89cbd41e3534d81d89b9",
+        "title": "ChatGPT Utility in Healthcare Education, Research, and Practice: Systematic Review on the Promising Perspectives and Valid Concerns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe56f17223836ab2847d",
+        "title": "\"Help Me Help the AI\": Understanding How Explainability Can Support Human-AI Interaction",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de2c064f03a75d1f964f",
+        "title": "A survey on large language model based autonomous agents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18434ad2ebc559362dac",
+        "title": "Multifunctional nanoparticle-mediated combining therapy for human diseases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67e519f808ee24b1b96e",
+        "title": "A generic noninvasive neuromotor interface for human-computer interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4ad81663c79f010842e7",
+        "title": "Generative artificial intelligence empowers digital twins in drug discovery and clinical trials",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_366e30baddf2b7b6ab49",
+        "title": "Hierarchical graph learning for protein–protein interaction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cdd93647d425bb3b572",
+        "title": "Dispensing with Humans in Human-Computer Interaction Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5f47467298978987cb5",
+        "title": "Deep learning tools for advancing drug discovery and development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e51acc956ba4d41f8551",
+        "title": "ChatGPT outperforms humans in emotional awareness evaluations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21115afc3414481ef841",
+        "title": "Exploring Human Resource Management Digital Transformation in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0206a9ba547317af13bb",
+        "title": "What is Human-Centered about Human-Centered AI? A Map of the Research Landscape",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9b4068a181c39f1c07e7",
+        "title": "Protein–protein interaction prediction with deep learning: A comprehensive review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43f49fd4ee3cf00112b2",
+        "title": "Knowledge Engineering Using Large Language Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_898d987a0d9ea2e9411d",
+        "title": "Game changers: A generative AI prompt protocol to enhance human-AI knowledge co-construction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1829d5fa1233a05e8c30",
+        "title": "G Protein-Coupled Receptors: A Century of Research and Discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bee3a56adc0e9cd31b66",
+        "title": "AI-Driven Drug Discovery: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5a4b25489718434463d",
+        "title": "OpenCap: Human movement dynamics from smartphone videos",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc2c2222c085c870c704",
+        "title": "Transfer learning enables predictions in network biology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_20160133d6ba6c4ef9cb",
+        "title": "Rethinking the entwinement between artificial intelligence and human learning: What capabilities do learners need for a world with AI?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7178cbf7f2cbcd861abe",
+        "title": "Social Robots in Education for Long-Term Human-Robot Interaction : Socially Supportive Behaviour of Robotic Tutor for Creating Robo-Tangible Learning Environment in a Guided Discovery Learning Interaction",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff07213ba1defc2d1c9a",
+        "title": "Knowledge Management Perspective of Generative Artificial Intelligence",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_4b33db8867a97e358e1d",
+        "title": "Multimodal Sentiment Analysis With Image-Text Interaction Network",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97089173b752207d9581",
+        "title": "Microbiota in health and diseases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d50632859f2168bd604",
+        "title": "The JAK-STAT pathway at 30: Much learned, much more to do",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a11a0ee084e4771b6f0",
+        "title": "Augmenting large language models with chemistry tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e1ff79f3f20aef0faf48",
+        "title": "Artificial Intelligence in Pharmaceutical Technology and Drug Delivery Design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a362bae3e9b8f122db5",
+        "title": "Cancer chemotherapy and beyond: Current status, drug candidates, associated risks and progress in targeted therapeutics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a7d065d3f6d27e00bc8",
+        "title": "Non-coding RNAs in disease: from mechanisms to therapeutics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a21e0f8e9fcdbe732c5",
+        "title": "Papers and patents are becoming less disruptive over time",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6217ef7fd294f16bf97",
+        "title": "Chatting about ChatGPT: how may AI and GPT impact academia and libraries?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_088700d2e90e4df83aa1",
+        "title": "Physics-Guided Neural Networks (PGNN): An Application in Lake Temperature Modeling",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ebf59595391d7ec54ab",
+        "title": "The potential impact of ChatGPT in clinical and translational medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3231ac764a65f127798a",
+        "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b448f0d3ce26d0cf8bf6",
+        "title": "Research Methodology: A Step-By-Step Guide For Beginners",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88ee2740d3b1731c2201",
+        "title": "The UNITE database for molecular identification and taxonomic communication of fungi and other eukaryotes: sequences, taxa and classifications reconsidered",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00db1194647f479031a8",
+        "title": "Amyotrophic lateral sclerosis: a neurodegenerative disorder poised for successful therapeutic translation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b8f1dd8dc707f249f69",
+        "title": "Discovering faster matrix multiplication algorithms with reinforcement learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c2d61d8980d26a783e4",
+        "title": "Astrophysics with the Laser Interferometer Space Antenna",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d0e8f5e45a81155327f9",
+        "title": "Alpha-synuclein in Parkinson’s disease and other synucleinopathies: from overt neurodegeneration back to early synaptic dysfunction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd39be08eec10caa026a",
+        "title": "Artificial Intelligence for Remote Sensing Data Analysis: A review of challenges and opportunities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b363d8fbbba7c61be84",
+        "title": "SynLethDB 2.0: a web-based knowledge graph database on synthetic lethality for novel anticancer drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a7518174ebd2dc47563",
+        "title": "KRYSTAL: Knowledge graph-based framework for tactical attack discovery in audit data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ae3b8186f6b90e7dc0b",
+        "title": "A Multi‐Task Self‐Supervised Strategy for Predicting Molecular Properties and FGFR1 Inhibitors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_92d5426b0b443da8f8a2",
+        "title": "Breaking the limitation of polarization multiplexing in optical metasurfaces with engineered noise",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c92d3fdd341beebd4eb",
+        "title": "Empowering biomedical discovery with AI agents",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39a09995a3c1afa099e0",
+        "title": "Inflammatory Responses After Ischemic Stroke",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15800377bd77a8f2de40",
+        "title": "Mechanisms of BCL-2 family proteins in mitochondrial apoptosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db7f3c3ef81c6bae4893",
+        "title": "The STRING database in 2025: protein networks with directionality of regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e7f7e2bce78b248fdce",
+        "title": "AI for life: Trends in artificial intelligence for biotechnology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25a0b2c90f31eaa2abba",
+        "title": "Technology Opportunity Discovery using Deep Learning-based Text Mining and a Knowledge Graph",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4c8475f9a77f00dfe4b1",
+        "title": "Virtual Reality in Education: A Review of Learning Theories, Approaches and Methodologies for the Last Decade",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7afdc824ddbef7ab365b",
+        "title": "Pharmacogenomics: current status and future perspectives",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9c7c613f180bce291dd",
+        "title": "From laboratory innovations to materials manufacturing for lithium-based batteries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6df555a491e1571de071",
+        "title": "Metabolite annotation from knowns to unknowns through knowledge-guided multi-layer metabolic networking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1367e518fd7bbef36904",
+        "title": "Biomedical discovery through the integrative biomedical knowledge hub (iBKH)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a36dadc0fffbc9cdd3a",
+        "title": "Exosomes─Nature’s Lipid Nanoparticles, a Rising Star in Drug Delivery and Diagnostics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8c8e0dab8b967335b6d",
+        "title": "A survey of Bayesian Network structure learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae7cc5f0b24f60325b4b",
+        "title": "Toward Unified AI Drug Discovery with Multimodal Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_33a30a8d8a422d97d253",
+        "title": "AlphaFlow: autonomous discovery and optimization of multi-step chemistry using a self-driven fluidic lab guided by reinforcement learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_511cfa06a920f0f5fc24",
+        "title": "The Centrality of Engagement in Higher Education",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da2f8e6dab146d88125b",
+        "title": "Data-driven federated learning in drug discovery with knowledge distillation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28ce89cea13c40425711",
+        "title": "IMPPAT 2.0: An Enhanced and Expanded Phytochemical Atlas of Indian Medicinal Plants",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d552dd2fdd28e647ad1c",
+        "title": "Advancing the mechanistic understanding of the priming effect on soil organic matter mineralisation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31d3d2bc3d794079419a",
+        "title": "Neutrophil extracellular traps in systemic autoimmune and autoinflammatory diseases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_040dce185d2e93382781",
+        "title": "Remote collaboration fuses fewer breakthrough ideas",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3a7942051dd0b21c5ed",
+        "title": "Exploring a technology ecology for technology opportunity discovery: A link prediction approach using heterogeneous knowledge graphs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_846ed33a5065b395fcdb",
+        "title": "Accelerating scientific discovery with generative knowledge extraction, graph-based representation, and multimodal intelligent graph reasoning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_57ccc1d70177ca4ed76b",
+        "title": "Differentiable modelling to unify machine learning and physical models for geosciences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fff8e3671dbe6792ce57",
+        "title": "Accelerated data-driven materials science with the Materials Project",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ea3e4b67ea73e53261b",
+        "title": "Emerging insights into the complex genetics and pathophysiology of amyotrophic lateral sclerosis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8350b7f87d4cb890518",
+        "title": "Methods and tools for causal discovery and causal inference",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfba354a49a849d2c95b",
+        "title": "Data quantity governance for machine learning in materials science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4aa90d0678b5457a2306",
+        "title": "Microplastics and nanoplastics in the marine-atmosphere environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_26124d4a4829fa018059",
+        "title": "Knowledge integration and decision support for accelerated discovery of antibiotic resistance genes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17db081b6893fabd7425",
+        "title": "MatSciBERT: A materials domain language model for text mining and information extraction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_074bd30c6e2a4d32e03b",
+        "title": "Class-relation Knowledge Distillation for Novel Class Discovery",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db71948b7930ed626a4d",
+        "title": "PROTAC technology: A new drug design for chemical biology with many challenges in drug discovery",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff6251d47796644fe3d7",
+        "title": "Clinical insights into small cell lung cancer: Tumor heterogeneity, diagnosis, therapy, and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db8045a47c107e1e2883",
+        "title": "A knowledge-guided pre-training framework for improving molecular representation learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5043ad90d8869ca6eb4e",
+        "title": "Causal Discovery Based on Observational Data and Process Knowledge in Industrial Processes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5766f61043f9f03dd919",
+        "title": "Amyotrophic lateral sclerosis: translating genetic discoveries into therapies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f951cb608e194a7f308c",
+        "title": "Knowledge mapping of graph neural networks for drug discovery: a bibliometric and visualized analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_413b54f1ba088db87bb5",
+        "title": "Cryptic and abundant marine viruses at the evolutionary origins of Earth’s RNA virome",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bdc2369bb2feb81c8c2",
+        "title": "Knowledge discovery and updating under the evolution of network formal contexts based on three-way decision",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_a763ac63210288b7683a",
+        "title": "From base data to knowledge discovery – A life cycle approach – Using multilayer networks",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 20
+    },
+    "coverage_audit": {
+      "direction_id": "topic_knowledge_discovery",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 324,
+      "deduplicated_count": 29,
+      "hard_gate_pass_count": 29,
+      "eligible_count": 0,
+      "boundary_count": 6,
+      "selected_count": 0,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "knowledge discovery"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "knowledge discovery human-computer interaction"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(knowledge discovery) OR (knowledge discovery in human-computer interaction)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "dblp",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 24
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "knowledge discovery",
+        "raw_count": 100,
+        "hard_gate_pass_count": 3,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "knowledge discovery human-computer interaction",
+        "raw_count": 200,
+        "hard_gate_pass_count": 4,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(knowledge discovery) OR (knowledge discovery in human-computer interaction)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 6,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_a2d05f8e198092e5d009",
+        "incoming_paper_id": "paper_1d77984a7ae847bf210f"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_478ef4ae24822550aab5",
+        "incoming_paper_id": "paper_3e15aafe519bb0c07ade"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b4a71e10ff66e212068",
+        "incoming_paper_id": "paper_7b4a71e10ff66e212068"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0a7f9b46ed01a037e03f",
+        "incoming_paper_id": "paper_0a7f9b46ed01a037e03f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ef2e3a458f7b78afae77",
+        "incoming_paper_id": "paper_ef2e3a458f7b78afae77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d87f2d749151c5f6a4d",
+        "incoming_paper_id": "paper_8d87f2d749151c5f6a4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a21c95a130a3e660572b",
+        "incoming_paper_id": "paper_a21c95a130a3e660572b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_42bcf15fb1f1fa072b27",
+        "incoming_paper_id": "paper_42bcf15fb1f1fa072b27"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_89cbd41e3534d81d89b9",
+        "incoming_paper_id": "paper_89cbd41e3534d81d89b9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_648057668dd5c49ae23c",
+        "incoming_paper_id": "paper_648057668dd5c49ae23c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e4e0fa85d3da012b2346",
+        "incoming_paper_id": "paper_e4e0fa85d3da012b2346"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b4a71e10ff66e212068",
+        "incoming_paper_id": "paper_7b4a71e10ff66e212068"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d71d9b53e123af4bbcaa",
+        "incoming_paper_id": "paper_d71d9b53e123af4bbcaa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bfd7703817938e62f65e",
+        "incoming_paper_id": "paper_bfd7703817938e62f65e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a2d05f8e198092e5d009",
+        "incoming_paper_id": "paper_a2d05f8e198092e5d009"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b1d8832a92db12e89705",
+        "incoming_paper_id": "paper_b1d8832a92db12e89705"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1e8eb75e719b324188a6",
+        "incoming_paper_id": "paper_1e8eb75e719b324188a6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_77f67eaee23c4b50af42",
+        "incoming_paper_id": "paper_77f67eaee23c4b50af42"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_40ce4d659a374112e365",
+        "incoming_paper_id": "paper_40ce4d659a374112e365"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1de257a1bd4bca426df6",
+        "incoming_paper_id": "paper_1de257a1bd4bca426df6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b5dd8aaabe8a6944922b",
+        "incoming_paper_id": "paper_b5dd8aaabe8a6944922b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a9a411e4bff85169c07",
+        "incoming_paper_id": "paper_9a9a411e4bff85169c07"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c356542ee46530ae489f",
+        "incoming_paper_id": "paper_c356542ee46530ae489f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6a1f72d111d18675e89a",
+        "incoming_paper_id": "paper_6a1f72d111d18675e89a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_90e3f79a11322f8e6fd1",
+        "incoming_paper_id": "paper_90e3f79a11322f8e6fd1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2f6583297029df133585",
+        "incoming_paper_id": "paper_2f6583297029df133585"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b525f535d0ea18f6e0e6",
+        "incoming_paper_id": "paper_b525f535d0ea18f6e0e6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_92bb2f9f62db0df836e2",
+        "incoming_paper_id": "paper_92bb2f9f62db0df836e2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_438c5679d8b35fe6c17c",
+        "incoming_paper_id": "paper_438c5679d8b35fe6c17c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_183bf8d049ce8de7798a",
+        "incoming_paper_id": "paper_183bf8d049ce8de7798a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9631c54ae27f3b65b090",
+        "incoming_paper_id": "paper_9631c54ae27f3b65b090"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5b9e35968f4b3cfab20",
+        "incoming_paper_id": "paper_e5b9e35968f4b3cfab20"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5c418798e171f8b570be",
+        "incoming_paper_id": "paper_5c418798e171f8b570be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_478ef4ae24822550aab5",
+        "incoming_paper_id": "paper_478ef4ae24822550aab5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f67fd68188ec2330cc11",
+        "incoming_paper_id": "paper_f67fd68188ec2330cc11"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fdaca80a3fbc28891df0",
+        "incoming_paper_id": "paper_fdaca80a3fbc28891df0"
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_a2d05f8e198092e5d009",
+        "incoming_paper_id": "paper_1d77984a7ae847bf210f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f7410c8a0ec941bee649",
+        "incoming_paper_id": "paper_f7410c8a0ec941bee649"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf6b79fd298a1290abe0",
+        "incoming_paper_id": "paper_bf6b79fd298a1290abe0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_73798b204ee3d394eaff",
+        "incoming_paper_id": "paper_73798b204ee3d394eaff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a5b527448a56bf20dcf4",
+        "incoming_paper_id": "paper_a5b527448a56bf20dcf4"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "quality_gate_too_strict",
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": null,
+    "synthesis_status": "SYNTHESIS_NOT_RUN",
+    "synthesis_message": "论文发现未完成，未运行综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

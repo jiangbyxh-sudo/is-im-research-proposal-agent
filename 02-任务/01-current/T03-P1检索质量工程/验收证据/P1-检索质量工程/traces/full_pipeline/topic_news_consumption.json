@@ -1,0 +1,2759 @@
+{
+  "direction_id": "topic_news_consumption",
+  "labels": {
+    "zh": "新闻消费",
+    "en": "news consumption"
+  },
+  "input": {
+    "selected_direction_id": "topic_news_consumption",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16484.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 316,
+  "hard_gate_pass_count": 18,
+  "eligible_count": 1,
+  "boundary_count": 3,
+  "selected_count": 1,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 19
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "news consumption"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "news consumption digital media"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(news consumption) OR (news consumption in digital media)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 16
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文1/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_news_consumption",
+      "research_direction": "news consumption",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "COMMUNICATION",
+        "HCI",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ]
+    },
+    "local_match": {
+      "label": "news consumption",
+      "aliases": [
+        "news consumption"
+      ],
+      "groups": [
+        "IS × Journalism / Communication / Media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:218"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_news_consumption",
+        "labels": {
+          "zh": "新闻消费",
+          "en": "news consumption"
+        },
+        "group_ids": [
+          "is_communication_media"
+        ],
+        "synonyms": [
+          "新闻消费",
+          "news consumption",
+          "news consumption in digital media"
+        ],
+        "boundaries": {
+          "include": [
+            "news consumption",
+            "digital media",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "news consumption",
+            "\"news consumption\" AND \"digital media\""
+          ],
+          "semantic_scholar": [
+            "news consumption",
+            "news consumption digital media"
+          ],
+          "crossref": [
+            "news consumption",
+            "新闻消费"
+          ],
+          "dblp": [
+            "news consumption online communication"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "news consumption",
+            "digital media",
+            "online communication"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "COMMUNICATION",
+          "HCI",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+          "PKU_CORE_2023_COMMUNICATION"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "news consumption digital media",
+          "(news consumption) OR (news consumption in digital media)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:218"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_386f0342ca3753e26f7a",
+        "title": "Are You What You Tweet? The Impact of Sentiment on Digital News Consumption and Social Media Sharing",
+        "abstract": "This study examines the impact of news content sentiment on digital news readership and social media sharing. Using econometric analyses and models estimated with rich clickstream data on online news readership and social media sharing data collected from Twitter, we find a differential effect of sentiment on news readership and sharing behaviors. Specifically, individuals are likely to read news articles with negative headline sentiment on the news website but tend to share articles with positive article sentiment on Twitter. Upon decomposition of news article sentiment, we find a contrasting positive author sentiment effect and a negative news topic valence effect on news readership. Interestingly, we uncover that an increase in a Twitter user’s followers leads to an increase in the Twitter user’s propensity to share positive-sentiment news articles. Overall, our findings affirm the coopetitive but complementary relationship between news websites and social media platforms. Our results also guide publishers to better craft their news content and manage social media presence to improve audience engagement and readership outcomes while preserving the agenda-setting ability of news media. Importantly, given the dichotomy between news reading and sharing behaviors, predicting individual behaviors based on social media opinions may need to be viewed with prudence.",
+        "authors": [
+          "Hyelim Oh",
+          "Khim Yong Goh",
+          "Tuan Q. Phan"
+        ],
+        "year": 2022,
+        "publication_date": "2022-03-11",
+        "published_date": "2022-03-11",
+        "language": "en",
+        "doi": "10.1287/isre.2022.1112",
+        "url": "https://doi.org/10.1287/isre.2022.1112",
+        "official_url": "https://doi.org/10.1287/isre.2022.1112",
+        "source_title": "Information Systems Research",
+        "journal": "Information Systems Research",
+        "source_issns": [
+          "1047-7047",
+          "1526-5536"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 43,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9994999766349792
+          },
+          {
+            "id": "https://openalex.org/T10557",
+            "name": "Social Media and Politics",
+            "score": 0.9983999729156494
+          },
+          {
+            "id": "https://openalex.org/T13718",
+            "name": "Media Influence and Politics",
+            "score": 0.9944999814033508
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4220758812"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4220758812"
+        ],
+        "journal_id": "journal_023",
+        "journal_ranking": [
+          "FMS_INT_A",
+          "UTD24"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM",
+          "ECON_STRATEGY",
+          "IS_CORE",
+          "ORG_STRATEGY",
+          "SECURITY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 79.4,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 95.0,
+            "lexical_coverage": 80.0,
+            "source_quality": 100.0,
+            "field_year_normalized_impact": 82.0,
+            "recency": 20.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 79.4
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "news consumption",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 289637,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:22.306552+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3438.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "news consumption digital media",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 96512,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:25.775404+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3484.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(news consumption) OR (news consumption in digital media)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 285570,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T21:00:29.305670+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3265.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "news consumption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 2,
+        "accepted_before_dedupe": 2,
+        "queried_at": "2026-08-21T21:00:35.234677+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "news consumption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 8,
+        "accepted_before_dedupe": 8,
+        "queried_at": "2026-08-21T21:00:36.404107+00:00",
+        "duration_ms": 1109.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1109.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "news consumption",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 6,
+        "accepted_before_dedupe": 6,
+        "queried_at": "2026-08-21T21:00:37.525146+00:00",
+        "duration_ms": 1234.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1234.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "新闻消费",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:32.794616+00:00",
+        "duration_ms": 1156.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1156.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "新闻消费",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T21:00:33.961267+00:00",
+        "duration_ms": 1281.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1281.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_c390b12cbf98acb14072",
+        "title": "Negativity drives online news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7052f44479a558c41d90",
+        "title": "Social inequalities in news consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a6319adcfd88dab5a00c",
+        "title": "Mapping Exposure Diversity: The Divergent Effects of Algorithmic Curation on News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc2eed932832dffaac00",
+        "title": "Nudging towards news diversity: A theoretical framework for facilitating diverse news consumption through recommender design",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abe5b22b9959050a25da",
+        "title": "“It’s a matter of age”: Four dimensions of youths’ news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb6d95c4093d4dd2d1ca",
+        "title": "COVID-19 news consumption and distress in young people: A systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0decd2d2c1e65f7f8965",
+        "title": "Understanding the Users of Alternative News Media—Media Epistemologies, News Consumption, and Media Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ed9a2201568f446e312",
+        "title": "Aging in an “infodemic”: The role of analytical reasoning, affect, and news consumption frequency on news veracity detection.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17dcac32b96975846229",
+        "title": "No Reckoning for the Right: How Political Ideology, Protest Tolerance and News Consumption Affect Support Black Lives Matter Protests",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dbf84bfc9adefdd2c8b2",
+        "title": "Caught in a Dangerous World: Problematic News Consumption and Its Relationship to Mental and Physical Ill-Being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5ebd061e89466824e1a",
+        "title": "Examining Assumptions Around How News Avoidance Gets Defined: The Importance of Overall News Consumption, Intention, and Structural Inequalities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58dea98f85bdf3033393",
+        "title": "I Do Not (Want To) Know! The Relationship Between Intentional News Avoidance and Low News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69a4acdb7a0cc46b419e",
+        "title": "Election Campaigns, News Consumption Gaps, and Social Media: Equalizing Political News Use When It Matters?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6b4c9291997113b53e3",
+        "title": "Nudging recommendation algorithms increases news consumption and diversity on YouTube",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8782e65dc19694762ecb",
+        "title": "A Media Repertoires Approach to Selective Exposure: News Consumption and Political Polarization in Eastern Europe",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ff8f27052c7846f18584",
+        "title": "Skeptical Inertia in the Face of Polarization: News Consumption and Misinformation in Turkey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d3b8032b32650c0e762",
+        "title": "Generative AI and deceptive news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc322854a099e11abc5e",
+        "title": "Curiosity in news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60c050ab4f3cbdba6a69",
+        "title": "Comparing the Impact of Social Media Regulations on News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1945477103e3c285163",
+        "title": "News consumption and immigration attitudes: a mixed methods approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ea031a027a84045b6c5",
+        "title": "Wired to seek, comment and share? Examining the relationship between personality, news consumption and misinformation engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f39ff2c17199d6c83a43",
+        "title": "The structures that shape news consumption: Evidence from the early period of the COVID-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9986a10cb29c7048f227",
+        "title": "Social media literacy: fake news consumption and perception of COVID-19 in Nigeria",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a4c22b214922a469577",
+        "title": "News Consumption and Behavior of Young Adults and the Issue of Fake News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_953ad19f77ac8802e552",
+        "title": "The Electoral Misinformation Nexus: How News Consumption, Platform Use, and Trust in News Influence Belief in Electoral Misinformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3684ecf4b5c7248efcf",
+        "title": "Partisan selective exposure in news consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b25a71f2b1eb715d43a4",
+        "title": "Media Diets of Vegetarians. How News Consumption, Social Media Use and Communicating with One’s Social Environment are Associated with a Vegetarian Diet",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3e615c1e21ec83e2ad13",
+        "title": "Article-Level Slant and Polarization of News Consumption on Social Media",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db1755a789195b366d89",
+        "title": "Search engine effects on news consumption: Ranking and representativeness outweigh familiarity in news selection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c4d263ef0b37d8b9dd5",
+        "title": "Generative AI and News Consumption: Design Fictions and Critical Analysis",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75a2e657e1e802787f95",
+        "title": "Priming Privacy: The Effect of Privacy News Consumption on Privacy Attitudes, Beliefs, and Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4771d3872291e8b1360f",
+        "title": "News consumption and green habits on the use of circular packaging in online shopping in Taiwan: An extension of the theory of planned behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b3ff27244d08245496c",
+        "title": "Unsubscribed and undemanding: Partisanship and the minimal effects of a field experiment encouraging local news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d9534777cb6a86b4d91",
+        "title": "Mobile News Consumption and Its Relation to Young Adults’ Knowledge About and Participation in Referendums",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa9377caadc3460ffb1e",
+        "title": "Understanding Saudi Millennials News Consumption in a Digital World",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da8a2c183ea08fc2c8ac",
+        "title": "Young People and Social Networks: News Consumption Habits and Credibility of the News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61d0a6877fcd394121b4",
+        "title": "What audiences do with news: a broader definition of news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3342f637e18968dd724",
+        "title": "Asymmetric ideological segregation in exposure to political news on Facebook",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2786d7db9283b1434046",
+        "title": "Recent Advances in Studies of News Consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ab17d0781ae49cb161a",
+        "title": "Hate, amplified? Social media news consumption and support for anti-Muslim policies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15a9f2dabc7999a8f711",
+        "title": "Measuring the effect of political alignment, platforms, and fake news consumption on voter concern for election processes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_168e7a7726129d48224b",
+        "title": "News consumption repertoires among Finnish adolescents: Moderate digital traditionalists, minimalist social media stumblers, and frequent omnivores",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6efc5bae15f128cb6908",
+        "title": "How Does Consumption Respond to News about Inflation? Field Evidence from a Randomized Control Trial",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e799ff439a56300b817c",
+        "title": "COVID-19-Related News Consumption Linked with Stress and Worry, but Not Sleep Quality, Early in the Pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1337829d398b6bfd16fa",
+        "title": "News avoidance or curation? Explicating the psychological process in news consumption on Facebook",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d2a7a735c807751a1aa",
+        "title": "Predictors of Mobile News Consumption through News Applications (Apps): The Impacts of Audience Characteristics, Media Usage, and Motivations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9f2b7020e064444fafb",
+        "title": "College students’ perspectives of bias in their news consumption habits",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a24cedc2d73562be31fd",
+        "title": "Politicized and Paranoid? Assessing Attitudinal Predictors of Alternative News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_309acfaab0f878dfa1db",
+        "title": "Inside the ‘black box’ of COVID-19 vaccination beliefs: Revealing the relative importance of public confidence and news consumption habits",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c83cf9555f926800dd03",
+        "title": "Role of social media news consumption in cultivating opinion polarization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c472ab4e1bc4c8e5e382",
+        "title": "The Final Word on sports podcasts: Audience perceptions of media engagement and news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c854e8a3a32ff1a8ae9",
+        "title": "Selection, Trust, and the Effects of Cable News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_428f6898fd3e2b2162dd",
+        "title": "The Impact of Social Media News Consumption on Online Political Expression in China: The Role of Netizens’ Political Orientation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a2f55bf49f9ec6fcd7f",
+        "title": "Navigating Social Media News Use: Exploring the Impact of Intentional and Incidental News Consumption on Objective and Subjective Political Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c3717b0f4ea9a6f51a23",
+        "title": "Digital divide or digital opportunities: interrogating online news consumption pattern of Ghanaian tertiary students",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2906ac3b14d942115e4",
+        "title": "HearHere: Mitigating Echo Chambers in News Consumption through an AI-based Web System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ba9416753c8e90777c1",
+        "title": "‘It’s always there’: A study of the sources and motivations for Australian teens’ news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_727313d81684d90d81a4",
+        "title": "“I Hope my Partner Will Keep me up-to-date”: How Couples Navigate News Consumption and Avoidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_826f60cbff448d30f88b",
+        "title": "The ambivalences of visibility: News consumption and public attitudes to same-sex relationships in the context of illiberalism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ca0d8c0d0991335f673",
+        "title": "Patterns of News Consumption in a High-Choice Media Environment",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08ed13df2eead88bb42d",
+        "title": "Nudgit - Reducing Online News Consumption by Digital Nudges",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb23349dde8ea237ea7c",
+        "title": "Incentivizing news consumption on social media platforms using large language models and realistic bot accounts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_823779521e1ee4ae0046",
+        "title": "Beyond time delays: how web scraping distorts measures of online news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e85cdaf9353d946bb8e3",
+        "title": "Online news in India: a quantitative appraisal of the digital news consumption landscape in the world’s largest democracy (2014–2018)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ddb2e406d96eba259fb",
+        "title": "Scrutinising South African media companies’ strategies for Generation Z’s news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f442481eed1b7ef2f88",
+        "title": "Determinant and Consequence of Online News Authorship Verification: Blind News Consumption Creates Press Credibility",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5bf56537cc2bcea55213",
+        "title": "Understanding public perceptions of revolutionary technology: the role of political ideology, knowledge, and news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d8080a4bd5018a515591",
+        "title": "Personality and political news consumption online: A comparison between self-reports and webtracking data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc5dfdc1badaf4370582",
+        "title": "Factors influencing young people’s news consumption in Switzerland during normative transitions: A mixed methods study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f13fe58641895b5987e9",
+        "title": "Understanding the Digital News Consumption Experience During the COVID Pandemic",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7f121b549dc5b47e03b",
+        "title": "Will Time Matter with Cognitive Load and Retention in Online News Consumption?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4880ad6c1eae69d566c",
+        "title": "News consumption patterns during the coronavirus pandemic across time and devices: The Cyprus case",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2c10838f3cdee4219e6",
+        "title": "News Recommendation and Information Cocoons: The Impact of Algorithms on News Consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ada402c43ea79f26d1ea",
+        "title": "Developing the habit: The socialization of U.S. teens into distinct repertoires of news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_737f052eb589d23547ec",
+        "title": "Traditional VS New Media: An examination of news consumption patterns amongst media users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc0cf2396ae2f649c6ae",
+        "title": "DIGITAL NATIVES: MEDIA LITERACY, NEWS CONSUMPTION AND HABITS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6475b29eaa242c0c58f7",
+        "title": "“It’s All Fake News!”: How Perceptions of Misinformation and Disinformation Influence News Consumption Across Traditional Media, Social Media, and AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_352f1113382a492c68b8",
+        "title": "The Influence of News Consumption Habits and Dispositional Traits on Trust in Medical Scientists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0d6527db6a1ed48f39f",
+        "title": "Parents’ News Consumption and COVID Sources in Their Decisions to Vaccinate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13c8468fcf4f93680f23",
+        "title": "Problematic News Consumption and Its Relationship to Mental and Physical Health: A Replication Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3130b500baa6ff93e86e",
+        "title": "Beyond Social Media: The Influence of News Consumption, Populism, and Expert Trust on Belief in COVID-19 Misinformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5bc3890c183cb3d1857a",
+        "title": "Can AI Reduce Motivated Reasoning in News Consumption? Investigating the Role of Attitudes Towards AI and Prior-Opinion in Shaping Trust Perceptions of News",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8d42399be063d2b2585",
+        "title": "Unsubscribed and Undemanding: Partisanship and the Minimal Effects of a Field Experiment Encouraging Local News Consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_521c6159fa7c82aac762",
+        "title": "Living in a (Mediated) Political World: Mindfulness, Problematic News Consumption, and Political Hostility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_390a802b8af0326bc842",
+        "title": "Online news platforms still matter: generational news consumption patterns during the 2020 presidential election",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d68cd0c8efe091582ff1",
+        "title": "Polarisation, News Consumption, and Beliefs in Misinformation and Conspiracy Theories: Early Signs of the Fragmentation of the Public Sphere in Iceland",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cecca3c4a0a911e70e1b",
+        "title": "The Degree of Homogeneity Versus Heterogeneity in Individuals’ Political News Consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_323df4e357232b11e499",
+        "title": "Nudging the Recommendation Algorithm Increases News Consumption and Diversity on YouTube",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74cde6ac777477fbd2c7",
+        "title": "Fake news, disinformation and misinformation in social media: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b464b0a1656a2e7995f8",
+        "title": "The effect of valenced news consumption on affect in situ",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94b2511e975a4fc1475a",
+        "title": "Information practices and emotion regulation in wartime news consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71eab1f15af5301be777",
+        "title": "News consumption, expressive social media activities, political discussions, and political consumerism: examining reciprocal relations with panel data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7edc0a9555088d774fb8",
+        "title": "News Consumption in Time of Conflict: 2021 Palestinian-Israel War as an Example",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cf3f4b56d29f426dc02",
+        "title": "News Consumption in the Wild",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56c882c3ab9acc307480",
+        "title": "Quantifying the “infodemic”: People turned to trustworthy news outlets during the 2020 coronavirus pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bafdd5ca3024512f2372",
+        "title": "News Consumption and Sharing Behaviors of Undergraduate Students in Turkey in the Post-Truth Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8946e43867fffef806c",
+        "title": "News consumption and political participation of young people in new media: A narrative literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_002fa3efe3e11129929e",
+        "title": "Unpacking news consumption and trust decisions through a folk theory approach: A study of Austrian young adults",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59d42902c8974d664f6a",
+        "title": "Patterns of News Consumption during the COVID-19 Pandemic Crisis: A 2.5 Year Longitudinal Study in the Netherlands",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2f9c469906d40008ff66",
+        "title": "Understanding Political News Media Consumption with Digital Trace Data and Natural Language Processing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7f0bab1608216f873cf",
+        "title": "Digital Media Use and Adolescents' Mental Health During the Covid-19 Pandemic: A Systematic Review and Meta-Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35a2041f0c0cf744af1c",
+        "title": "How digital media drive affective polarization through partisan sorting",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfa6f7d8c4abfbb87291",
+        "title": "The Effects of Central Bank Digital Currencies News on Financial Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a28753e01ddfd40d1b0a",
+        "title": "Does media coverage influence firm green innovation? The moderating role of regional environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38d4b9342db4e7855a5e",
+        "title": "Fake news: Why do we believe it?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2b33817f58aba706a89",
+        "title": "Digital technologies: tensions in privacy and data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1a85bc722541d664b78",
+        "title": "Digital-born news media in Europe",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35a51e033b639c33994b",
+        "title": "Whom to trust? Media exposure patterns of citizens with perceptions of misinformation and disinformation related to the news media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d634822cdabfe5a4008b",
+        "title": "Social Drivers and Algorithmic Mechanisms on Digital Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5aff62b376648d8f947a",
+        "title": "A framework of digital technologies for the circular economy: Digital functions and mechanisms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4dcf406a663d3c98e377",
+        "title": "CARIN' about migrants through news? Linking migrant deservingness to traditional and digital media consumption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96839d1a3e6a738870d4",
+        "title": "Exploring fake news awareness and trust in the age of social media among university student TikTok users",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_829eaddc4ef10c7b5892",
+        "title": "Digital future of luxury brands: Metaverse, digital fashion, and non‐fungible tokens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b66f8f55c3f9fe57814",
+        "title": "From the 'Digital Divide' to 'Digital Inequality': Studying Internet Use as Penetration Increases",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21edc69e8b0ed09a16ce",
+        "title": "Government Digital Transformation: Understanding the Role of Government Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_976f529b784fe0f88bb2",
+        "title": "Teachers’ digital competencies in higher education: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_213d4f2803cd7e7b9844",
+        "title": "News recommender systems: a programmatic research review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3bceb0feff05e95c7283",
+        "title": "Social Media and News: Content Bundling and News Quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_112d90bd3c04a63f46ec",
+        "title": "Incidental news exposure in a digital media environment: a scoping review of recent research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12be7cd01c70dc90ea8f",
+        "title": "Applications of Digital Twin across Industries: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b0acb8665197b8fe9b5",
+        "title": "From Newspapers to TikTok: Social Media Journalism as the Fourth Wave of News Production, Diffusion and Consumption",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b38d0c8f630bba7dd451",
+        "title": "Psychological inoculation improves resilience against misinformation on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74ee8234dce39991b2b1",
+        "title": "Digital Trace Data Collection for Social Media Effects Research: APIs, Data Donation, and (Screen) Tracking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c88d986ae87199d8baff",
+        "title": "Sustainability through digital transformation: A systematic literature review for research guidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_87a2790d4e760820c6f8",
+        "title": "The disaster of misinformation: a review of research in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2ea9ffb77b8e6c995140",
+        "title": "Youth Experiences with News Media Consumption: The Pursuit for Newsworthy Information in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc572c60854a08d5c96a",
+        "title": "Digital Competencies for New Journalistic Work in Media Outlets: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79ee3388c4c32667d919",
+        "title": "Journalism, media and technology trends and predictions 2018",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae852a8d6bb0544a74e4",
+        "title": "Trust, Media Credibility, Social Ties, and the Intention to Share towards Information Verification in an Age of Fake News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_559d10754014fa5e11b6",
+        "title": "Social Media and the Digital Structural Transformation of the Public Sphere",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d48befb89b97888f499c",
+        "title": "Digital Islam and Muslim Millennials: How Social Media Influencers Reimagine Religious Authority and Islamic Practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_357d59dae0cf79cb05d8",
+        "title": "A review on sentiment analysis from social media platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fb462d8cd1b38ab48f4f",
+        "title": "Generative Visual AI in News Organizations: Challenges, Opportunities, Perceptions, and Policies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1d6eaf5cb0b44c162fe",
+        "title": "An index of cryptocurrency environmental attention (ICEA)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6f86965a7d359542ec9",
+        "title": "The Evolving Relationship between Digital and Conventional Media: A Study of Media Consumption Habits in the Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a755e0a9376e197e868f",
+        "title": "Flows and Holes in Digital News Consumption: Mapping the Gravity of Media Attention in Germany",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d95f197a78228c6304f",
+        "title": "Uninformed or Misinformed in the Digital News Environment? How Social Media News Use Affects Two Dimensions of Political Knowledge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ad09d28c3306eea6f7e8",
+        "title": "News values in a digital age- Intra-media, inter-media, and extra-media platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d4bc68c7f8ec29a3726",
+        "title": "Social Media News Use and COVID-19 Misinformation Engagement: Survey Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd608719d837c8ff0f99",
+        "title": "Disconnecting from digital news: News avoidance and the ignored role of social class",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0cd78c80e3e949289fa0",
+        "title": "GENERATION Z: MEDIA CONSUMPTION AND MIL",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a571882be4ce159f3c2",
+        "title": "Private sector media and digital news",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61203ae1e4a5738b6c15",
+        "title": "The digital repression of social movements, protest, and activism: A synthetic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e89acec9ac934a3357dd",
+        "title": "Social media literacy: A conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43551cd0710c618f9ab8",
+        "title": "Longitudinal analysis of sentiment and emotion in news media headlines using automated labelling with Transformer language models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49eb6a2a0c4b9b8e043d",
+        "title": "The future of online news video",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e120b60302b0c1f238b",
+        "title": "Negative online news articles are shared more to social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ecb24c203b6aabd832a1",
+        "title": "Digital technologies as enablers of supply chain sustainability in an emerging economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_98305cd3322de11841cf",
+        "title": "Adapting to Affordances and Audiences? A Cross-Platform, Multi-Modal Analysis of the Platformization of News on Facebook, Instagram, TikTok, and Twitter",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d3d927efe03a9359992",
+        "title": "Social media use, stress, and coping",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_489377499c56d870a428",
+        "title": "Comparing Risks to Journalism: Media Criticism in the Digital Hate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65877eea8b4c6079164f",
+        "title": "User perspectives on digital literacy as a response to misinformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3c19fc188ed7cc363db",
+        "title": "Political polarization, misinformation, and media literacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c8903c9866e0c9b0940",
+        "title": "“It’s a Battle You Are Never Going to Win”: Perspectives from Journalists in Four Countries on How Digital Media Platforms Undermine Trust in News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2646de866442171aa8c",
+        "title": "Changes in Media Consumption Patterns and their Implications for People's Cultural Identity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a68f3fc60bd1aa857a7c",
+        "title": "Exploring the influence of social media on sustainable fashion consumption: A systematic literature review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b112b92fcc3005a5a71e",
+        "title": "News Coping and Resistance: An Examination of Entertainment as Self-Care in the Digital Black Press",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_994e8e9a9063600b9d67",
+        "title": "Navigating the Disruption of Digital and Conventional Media in Changing Media Consumption Landscape in Digital Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8069276aa7e85acaae64",
+        "title": "Fake news detection on social media: the predictive role of university students’ critical thinking dispositions and new media literacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d494b820f642d701b2b",
+        "title": "Scientific research in news media: a case study of misrepresentation, sensationalism and harmful recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d572564487b36fe1b6ea",
+        "title": "Blockchain Meets Metaverse and Digital Asset Management: A Comprehensive Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8c5fa8f946069e7a7e41",
+        "title": "Volatility spillovers across NFTs news attention and financial markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b35db484a48f456aa65",
+        "title": "Digital News Business Models in the Age of Industry 4.0: Digital Brazilian News Players Find in Technology New Ways to Bring Revenue and Competitive Advantage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_285c2c0699ad93d9aedc",
+        "title": "How Propaganda Works in the Digital Era: Soft News as a Gateway",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc054d40f30343d4a98b",
+        "title": "Semantic Knowledge Graphs for the News: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ece026bc73ede9fea48",
+        "title": "Assessing the impact of green consumption behavior and green purchase intention among millennials toward sustainable environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b298b79e6752dfc18d9",
+        "title": "Doomscrolling during COVID-19: The negative association between daily social and traditional media consumption and mental health symptoms during the COVID-19 pandemic.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d74936bc6fc41e312d4",
+        "title": "Secondary education students and media literacy in the age of disinformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d480d2ab95d7650a20a",
+        "title": "Trust, disinformation, and digital media: Perceptions and expectations about news in a polarized environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed5ae968f39c64c4941e",
+        "title": "The advantage of the right in social media news sharing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b81db3515176be114cd",
+        "title": "Young Adults’ Use of Different Social Media Platforms for Health Information: Insights From Web-Based Conversations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54d05663081833e953",
+        "title": "Exploring the boundaries of open innovation: Evidence from social media mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e89b3e15a287eb418e32",
+        "title": "Digital Newsroom Transformation: A Systematic Review of the Impact of Artificial Intelligence on Journalistic Practices, News Narratives, and Ethical Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6de57607114fb1b6a9ca",
+        "title": "Exploring the sustainability challenges facing digitalization and internet data centers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d1779145091661ecdaa",
+        "title": "Social sustainability in the age of digitalization: A systematic literature Review on the social implications of industry 4.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da903c4bf5a97c8418a9",
+        "title": "Handbook of Adolescent Digital Media Use and Mental Health",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2744c33563fd1ddb6bb",
+        "title": "Challenges, opportunities, and prospects of adopting and using smart digital technologies in learning environments: An iterative review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3f2248104bd0ff0186d",
+        "title": "The impact of media and information literacy on students’ acquisition of the skills needed to detect fake news",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59b94dfa52bb5ca18199",
+        "title": "Who falls for fake news? Psychological and clinical profiling evidence of fake news consumers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2aecc61881582577496b",
+        "title": "Green purchase and sustainable consumption: A comparative study between European and non-European tourists",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c3055bb3017da7f3958",
+        "title": "Digital transformation and the emergence of the Fintech sector: Systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0adc34560f2a146eeff",
+        "title": "Dealing with Opinion Power in the Platform World: Why We Really Have to Rethink Media Concentration Law",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9df7f8e81c39bd274535",
+        "title": "The penetration of Russian disinformation related to the war in Ukraine: Evidence from Poland, the Czech Republic and Slovakia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7707ac69e248f450e8e9",
+        "title": "The blind spots of measuring online news exposure: a comparison of self-reported and observational data in nine countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94c0ea37650dcd4f58fb",
+        "title": "Journalist-Twitterers as Political Influencers in Brazil: Narratives and Disputes Towards a New Intermediary Model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4dd275ebc7938b7045cc",
+        "title": "How COVID-19 is Revamping Journalism: Newsroom Practices and Innovations in a Crisis Context",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e99320c24048513f2093",
+        "title": "Scroll culture and authoritarian populism: how Turkish and Greek online news aggravate ‘refugee crisis’ tensions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3d0fe456223efacf297",
+        "title": "Paying for Online News as Political Consumption in Hong Kong",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd88dbc2ba7d6322b1ff",
+        "title": "News and misinformation consumption: A temporal comparison across European countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d54740e76d602f987137",
+        "title": "After the Hype: How Hi-Tech Is Reshaping Journalism",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f355a2d0f39a6acb6b6f",
+        "title": "Emotion aided multi-task framework for video embedded misinformation detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3a575b982e206170f720",
+        "title": "How youth define, consume, and evaluate news: Reviewing two decades of research",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_191765e9d40f7226f00e",
+        "title": "Algorithmic agenda-setting: the subtle effects of news recommender systems on political agendas in the Danish 2022 general election",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_338d48a374f6539e5f64",
+        "title": "Political information consumption and electoral turnout during COVID: the case of the 2020 municipal elections",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed38d0b84f95e725bbb3",
+        "title": "Enhancing the Identification of False News using Machine Learning Algorithms: A Comparative Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06fe21ace706e8c92f1e",
+        "title": "Subjectivity and algorithmic imaginaries: the algorithmic other",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d355628b964328ff39c2",
+        "title": "Los medios bajo el prisma de la audiencia española: cuestión de confianza",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fc604c752f126d556751",
+        "title": "Digital youth in Qatar: Negotiating culture and national identity through social media networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_494cc197db178ca29c30",
+        "title": "Usability Of Text-To-Speech Technology in Creating News Podcasts using Portuguese Of Portugal",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ec7f42d8d5431d7837bc",
+        "title": "Perceptions of AI-driven news among contemporary audiences: a study of trust, engagement, and impact",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d1d5e09d22db391fad8",
+        "title": "Media consumption patterns and depressive and anxiety symptoms in the Chinese general population during the COVID-19 outbreak",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2665f712ecb3988f2bb4",
+        "title": "Emotions as Key to Russian GenZs’ Consumption of Political News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_470e41631e64ea30b492",
+        "title": "Factors driving Gen Z's news engagement on TikTok: A hybrid analysis through CB-SEM and PLS-SEM",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_247516894b137ca928cf",
+        "title": "Gen Z’s social media use and global communication",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59d14987b9454265ffc4",
+        "title": "Generación Z y consumo de noticias: el canal de TikTok ac2ality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_faf94ce2f37ed298d74a",
+        "title": "Surfing to the political extremes: Digital media, social media, and policy attitude polarization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27aab30f0e22390d0ab1",
+        "title": "Domain Adaptive Fake News Detection via Reinforcement Learning",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a9fc441271bdc364ce4",
+        "title": "Decoding the News Media Diet of Disinformation Spreaders",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ec382db17341d967560",
+        "title": "From Doom-Scrolling to News Avoidance: Limiting News as a Wellbeing Strategy During COVID Lockdown",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a7a2304bae4a753978c",
+        "title": "Unlocking young people’s engagement with online news: affective or cognitive?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18d5ad91184de089415d",
+        "title": "Understanding the complex links between social media and health behaviour",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8f5ef3acec4baa41227",
+        "title": "Knowledge protects against pollution: The health effects of the cadmium rice event in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1175c014f20569b7f41c",
+        "title": "What They say and What They do ... Young Swedish Citizens’ Strategies for Finding News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37dadaf6b031c7ce0148",
+        "title": "Innovation in Digital Media beyond Technology: The Audience-Centered Approach and Pending Challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66e3203c323f5b80a419",
+        "title": "Theory and Applications of Web 3.0 in the Media Sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_27c55d670632c79d0607",
+        "title": "Ubiquitous News Experienced Alone: Interviews with Americans and their Devices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4e8f4a5769098475a361",
+        "title": "Editors, Users and Post-Publication Gatekeeping: A Study of News Ranking on Chinese Digital Native Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9e8e8ddc443e4d56a933",
+        "title": "Navigating truth and disinformation: A comparative analysis of generational responses to the 6 February 2023 earthquake in digital media in Türkiye",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56bb75c5ca491dde33dd",
+        "title": "Public use and public funding of science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_520f0c10a5fe6eecf2c0",
+        "title": "How News Feels: Anticipated Anxiety as a Factor in News Avoidance and a Barrier to Political Engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "SME Performance Outcomes: The Role of Technological Absorptive Capacity and E-Business Innovation",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 19
+    },
+    "coverage_audit": {
+      "direction_id": "topic_news_consumption",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 316,
+      "deduplicated_count": 18,
+      "hard_gate_pass_count": 18,
+      "eligible_count": 1,
+      "boundary_count": 3,
+      "selected_count": 1,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "news consumption"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "news consumption digital media"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(news consumption) OR (news consumption in digital media)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 16
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "news consumption",
+        "raw_count": 100,
+        "hard_gate_pass_count": 1,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "news consumption digital media",
+        "raw_count": 200,
+        "hard_gate_pass_count": 3,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(news consumption) OR (news consumption in digital media)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 4,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74cde6ac777477fbd2c7",
+        "incoming_paper_id": "paper_74cde6ac777477fbd2c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_386f0342ca3753e26f7a",
+        "incoming_paper_id": "paper_386f0342ca3753e26f7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c390b12cbf98acb14072",
+        "incoming_paper_id": "paper_c390b12cbf98acb14072"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_168e7a7726129d48224b",
+        "incoming_paper_id": "paper_168e7a7726129d48224b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0decd2d2c1e65f7f8965",
+        "incoming_paper_id": "paper_0decd2d2c1e65f7f8965"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cc0cf2396ae2f649c6ae",
+        "incoming_paper_id": "paper_cc0cf2396ae2f649c6ae"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7052f44479a558c41d90",
+        "incoming_paper_id": "paper_7052f44479a558c41d90"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d5ebd061e89466824e1a",
+        "incoming_paper_id": "paper_d5ebd061e89466824e1a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ea031a027a84045b6c5",
+        "incoming_paper_id": "paper_0ea031a027a84045b6c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc2eed932832dffaac00",
+        "incoming_paper_id": "paper_fc2eed932832dffaac00"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa9377caadc3460ffb1e",
+        "incoming_paper_id": "paper_fa9377caadc3460ffb1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ed9a2201568f446e312",
+        "incoming_paper_id": "paper_0ed9a2201568f446e312"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d2a7a735c807751a1aa",
+        "incoming_paper_id": "paper_3d2a7a735c807751a1aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c390b12cbf98acb14072",
+        "incoming_paper_id": "paper_c390b12cbf98acb14072"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_386f0342ca3753e26f7a",
+        "incoming_paper_id": "paper_386f0342ca3753e26f7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7052f44479a558c41d90",
+        "incoming_paper_id": "paper_7052f44479a558c41d90"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a28753e01ddfd40d1b0a",
+        "incoming_paper_id": "paper_a28753e01ddfd40d1b0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0decd2d2c1e65f7f8965",
+        "incoming_paper_id": "paper_0decd2d2c1e65f7f8965"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_38d4b9342db4e7855a5e",
+        "incoming_paper_id": "paper_38d4b9342db4e7855a5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d5ebd061e89466824e1a",
+        "incoming_paper_id": "paper_d5ebd061e89466824e1a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1d6eaf5cb0b44c162fe",
+        "incoming_paper_id": "paper_d1d6eaf5cb0b44c162fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_213d4f2803cd7e7b9844",
+        "incoming_paper_id": "paper_213d4f2803cd7e7b9844"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_96839d1a3e6a738870d4",
+        "incoming_paper_id": "paper_96839d1a3e6a738870d4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1b0acb8665197b8fe9b5",
+        "incoming_paper_id": "paper_1b0acb8665197b8fe9b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ea031a027a84045b6c5",
+        "incoming_paper_id": "paper_0ea031a027a84045b6c5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2f9c469906d40008ff66",
+        "incoming_paper_id": "paper_2f9c469906d40008ff66"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_168e7a7726129d48224b",
+        "incoming_paper_id": "paper_168e7a7726129d48224b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c3342f637e18968dd724",
+        "incoming_paper_id": "paper_c3342f637e18968dd724"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fb462d8cd1b38ab48f4f",
+        "incoming_paper_id": "paper_fb462d8cd1b38ab48f4f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f3c19fc188ed7cc363db",
+        "incoming_paper_id": "paper_f3c19fc188ed7cc363db"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6efc5bae15f128cb6908",
+        "incoming_paper_id": "paper_6efc5bae15f128cb6908"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_49eb6a2a0c4b9b8e043d",
+        "incoming_paper_id": "paper_49eb6a2a0c4b9b8e043d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fc2eed932832dffaac00",
+        "incoming_paper_id": "paper_fc2eed932832dffaac00"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c0adc34560f2a146eeff",
+        "incoming_paper_id": "paper_c0adc34560f2a146eeff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_65877eea8b4c6079164f",
+        "incoming_paper_id": "paper_65877eea8b4c6079164f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a6319adcfd88dab5a00c",
+        "incoming_paper_id": "paper_a6319adcfd88dab5a00c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9d9534777cb6a86b4d91",
+        "incoming_paper_id": "paper_9d9534777cb6a86b4d91"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cc0cf2396ae2f649c6ae",
+        "incoming_paper_id": "paper_cc0cf2396ae2f649c6ae"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_35a51e033b639c33994b",
+        "incoming_paper_id": "paper_35a51e033b639c33994b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d95f197a78228c6304f",
+        "incoming_paper_id": "paper_8d95f197a78228c6304f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b112b92fcc3005a5a71e",
+        "incoming_paper_id": "paper_b112b92fcc3005a5a71e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fa9377caadc3460ffb1e",
+        "incoming_paper_id": "paper_fa9377caadc3460ffb1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3d2a7a735c807751a1aa",
+        "incoming_paper_id": "paper_3d2a7a735c807751a1aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_59b94dfa52bb5ca18199",
+        "incoming_paper_id": "paper_59b94dfa52bb5ca18199"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ed9a2201568f446e312",
+        "incoming_paper_id": "paper_0ed9a2201568f446e312"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4dcf406a663d3c98e377",
+        "incoming_paper_id": "paper_4dcf406a663d3c98e377"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dc572c60854a08d5c96a",
+        "incoming_paper_id": "paper_dc572c60854a08d5c96a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_abe5b22b9959050a25da",
+        "incoming_paper_id": "paper_abe5b22b9959050a25da"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7d74936bc6fc41e312d4",
+        "incoming_paper_id": "paper_7d74936bc6fc41e312d4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0cd78c80e3e949289fa0",
+        "incoming_paper_id": "paper_0cd78c80e3e949289fa0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eb6d95c4093d4dd2d1ca",
+        "incoming_paper_id": "paper_eb6d95c4093d4dd2d1ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_56c882c3ab9acc307480",
+        "incoming_paper_id": "paper_56c882c3ab9acc307480"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e85cdaf9353d946bb8e3",
+        "incoming_paper_id": "paper_e85cdaf9353d946bb8e3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ad09d28c3306eea6f7e8",
+        "incoming_paper_id": "paper_ad09d28c3306eea6f7e8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1ddb2e406d96eba259fb",
+        "incoming_paper_id": "paper_1ddb2e406d96eba259fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_58dea98f85bdf3033393",
+        "incoming_paper_id": "paper_58dea98f85bdf3033393"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17dcac32b96975846229",
+        "incoming_paper_id": "paper_17dcac32b96975846229"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ff8f27052c7846f18584",
+        "incoming_paper_id": "paper_ff8f27052c7846f18584"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2ea9ffb77b8e6c995140",
+        "incoming_paper_id": "paper_2ea9ffb77b8e6c995140"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7d3b8032b32650c0e762",
+        "incoming_paper_id": "paper_7d3b8032b32650c0e762"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dbf84bfc9adefdd2c8b2",
+        "incoming_paper_id": "paper_dbf84bfc9adefdd2c8b2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ba9416753c8e90777c1",
+        "incoming_paper_id": "paper_5ba9416753c8e90777c1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dc054d40f30343d4a98b",
+        "incoming_paper_id": "paper_dc054d40f30343d4a98b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6b4c9291997113b53e3",
+        "incoming_paper_id": "paper_f6b4c9291997113b53e3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69a4acdb7a0cc46b419e",
+        "incoming_paper_id": "paper_69a4acdb7a0cc46b419e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_08ed13df2eead88bb42d",
+        "incoming_paper_id": "paper_08ed13df2eead88bb42d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8782e65dc19694762ecb",
+        "incoming_paper_id": "paper_8782e65dc19694762ecb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bc322854a099e11abc5e",
+        "incoming_paper_id": "paper_bc322854a099e11abc5e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8d4bc68c7f8ec29a3726",
+        "incoming_paper_id": "paper_8d4bc68c7f8ec29a3726"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_953ad19f77ac8802e552",
+        "incoming_paper_id": "paper_953ad19f77ac8802e552"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6f86965a7d359542ec9",
+        "incoming_paper_id": "paper_f6f86965a7d359542ec9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f39ff2c17199d6c83a43",
+        "incoming_paper_id": "paper_f39ff2c17199d6c83a43"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1945477103e3c285163",
+        "incoming_paper_id": "paper_d1945477103e3c285163"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d480d2ab95d7650a20a",
+        "incoming_paper_id": "paper_2d480d2ab95d7650a20a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60c050ab4f3cbdba6a69",
+        "incoming_paper_id": "paper_60c050ab4f3cbdba6a69"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "23f34aed3e28435c87cb3b893b423e37",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

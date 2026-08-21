@@ -1,0 +1,3318 @@
+{
+  "direction_id": "social_media",
+  "labels": {
+    "zh": "社交媒体",
+    "en": "social media"
+  },
+  "input": {
+    "selected_direction_id": "social_media",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 17500.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 35,
+  "eligible_count": 6,
+  "boundary_count": 22,
+  "selected_count": 6,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 14
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "social media"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "social media information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(social media) OR (social media in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文6/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "social_media",
+      "research_direction": "社交媒体",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "COMMUNICATION",
+        "HCI",
+        "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+        "PKU_CORE_2023_COMMUNICATION"
+      ]
+    },
+    "local_match": {
+      "label": "社交媒体",
+      "aliases": [
+        "social media",
+        "社交媒体"
+      ],
+      "groups": [
+        "IS",
+        "IS × Journalism / Communication / Media"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:56",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:215"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "social_media",
+        "labels": {
+          "zh": "社交媒体",
+          "en": "social media"
+        },
+        "group_ids": [
+          "is",
+          "is_communication_media"
+        ],
+        "synonyms": [
+          "社交媒体",
+          "social media",
+          "social media in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "social media",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "social media",
+            "\"social media\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "social media",
+            "social media information systems"
+          ],
+          "crossref": [
+            "social media",
+            "社交媒体"
+          ],
+          "dblp": [
+            "social media digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "social media",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+          "COMMUNICATION",
+          "HCI",
+          "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+          "PKU_CORE_2023_COMMUNICATION"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "social media information systems",
+          "(social media) OR (social media in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:56",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:215"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_7c0f54d8d71152030ecc",
+        "title": "Social media trust: Fighting misinformation in the time of crisis",
+        "abstract": "During crises, the proliferation of misinformation, often termed \"infodemics,\" can severely compromise Shared Situational Awareness (SSA) and impede effective response. With the advent of technology, social media platforms have become crucial tools for response agencies to counteract misinformation and promote SSA. Yet, the intricate dynamics between information dissemination, communication strategies, and trust, especially in the digital realm, remain underexplored. This research looks at the utilisation of technology, specifically social media platforms like Facebook, by response agencies to navigate the challenges of infodemics. Drawing from Seppänen et al. (2013) SSA model, we identified potential risks in digital crisis communication strategies that might undermine public trust and SSA. We used a netnographic analysis of the response agencies’ social media pages, supplemented by field interviews with agency representatives. Our findings contribute to the fields of Information Systems (IS) and communication by 1) highlighting the potential of technology, particularly social media, in crisis communication and misinformation mitigation, 2) identifying the risks and pitfalls of leveraging digital platforms during crises, and 3) underlying the consequences of diminishing public trust in official digital information channels, offering insights into mitigating misinformation and improving crisis response.",
+        "authors": [
+          "Maryam Shahbazi",
+          "Deborah Bunker"
+        ],
+        "year": 2024,
+        "publication_date": "2024-03-20",
+        "published_date": "2024-03-20",
+        "language": "en",
+        "doi": "10.1016/j.ijinfomgt.2024.102780",
+        "url": "https://doi.org/10.1016/j.ijinfomgt.2024.102780",
+        "official_url": "https://doi.org/10.1016/j.ijinfomgt.2024.102780",
+        "source_title": "International Journal of Information Management",
+        "journal": "International Journal of Information Management",
+        "source_issns": [
+          "0268-4012",
+          "1873-4707"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 115,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11147",
+            "name": "Misinformation and Its Impacts",
+            "score": 0.9983000159263611
+          },
+          {
+            "id": "https://openalex.org/T11045",
+            "name": "Privacy, Security, and Data Protection",
+            "score": 0.9668999910354614
+          },
+          {
+            "id": "https://openalex.org/T11121",
+            "name": "Public Relations and Crisis Communication",
+            "score": 0.9448000192642212
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4392978142"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://doi.org/10.1016/j.ijinfomgt.2024.102780",
+        "provider_payload_refs": [
+          "https://openalex.org/W4392978142"
+        ],
+        "journal_id": "journal_028",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE1",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE1",
+          "DIGITAL_PLATFORM",
+          "PUBLIC_ADMIN"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 83.51,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 100.0,
+            "recency": 60.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 83.51
+      },
+      {
+        "paper_id": "paper_c4f7a99ec61cb9065989",
+        "title": "Towards a model of social commerce: improving the effectiveness of e-commerce through leveraging social media tools based on consumers’ dual roles",
+        "abstract": "Social media has been integrated into traditional e-commerce, creating an innovative technology-based approach to changing business practice and service, yet few researchers have attempted to provide an understanding of how this approach is changing consumer decision-making and purchase behaviours. Combining the expectation-confirmation theory and the expectation-confirmation model and information systems continuance, we propose a model for social commerce, illustrating how social media is utilised in online shopping as a three-fold process (pre-purchase, purchase, and post-purchase stages) from a consumer perspective. The model consists of three phases: social commerce motivation, social commerce adoption, and e-commerce effectiveness. Using two rounds of surveys, we find that (1) autonomous motivation and controlled motivation have positive effects on social commerce information seeking and sharing, and (2) social commerce information seeking formulates consumers’ pre-purchase decisions, thus affecting their actual purchase outcomes, repurchase intentions, and social commerce information-sharing intentions in the post-purchase stage. In addition, our study indicates that consumers may play dual roles in social commerce: as information seekers in the pre-purchase stage and as information providers in the post-purchase stage. Our findings have important implications for literature and practice.",
+        "authors": [
+          "Xiaolin Lin",
+          "Xuequn Wang"
+        ],
+        "year": 2022,
+        "publication_date": "2022-04-27",
+        "published_date": "2022-04-27",
+        "language": "en",
+        "doi": "10.1080/0960085x.2022.2057363",
+        "url": "https://doi.org/10.1080/0960085x.2022.2057363",
+        "official_url": "https://doi.org/10.1080/0960085x.2022.2057363",
+        "source_title": "European Journal of Information Systems",
+        "journal": "European Journal of Information Systems",
+        "source_issns": [
+          "0960-085X",
+          "1476-9344"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 60,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9998000264167786
+          },
+          {
+            "id": "https://openalex.org/T10068",
+            "name": "Technology Adoption and User Behaviour",
+            "score": 0.9983000159263611
+          },
+          {
+            "id": "https://openalex.org/T12392",
+            "name": "Sharing Economy and Platforms",
+            "score": 0.9933000206947327
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4225150472"
+        },
+        "providers": [
+          "openalex",
+          "crossref"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex",
+            "crossref"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex",
+            "crossref"
+          ],
+          "year": [
+            "openalex",
+            "crossref"
+          ],
+          "doi": [
+            "openalex",
+            "crossref"
+          ],
+          "source_title": [
+            "openalex",
+            "crossref"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex",
+            "crossref"
+          ],
+          "published_date": [
+            "openalex",
+            "crossref"
+          ],
+          "url": [
+            "openalex",
+            "crossref"
+          ],
+          "official_url": [
+            "openalex",
+            "crossref"
+          ],
+          "journal": [
+            "openalex",
+            "crossref"
+          ],
+          "document_type": [
+            "openalex",
+            "crossref"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://figshare.com/articles/journal_contribution/Towards_a_model_of_social_commerce_improving_the_effectiveness_of_e-commerce_through_leveraging_social_media_tools_based_on_consumers_dual_roles/24161156",
+        "provider_payload_refs": [
+          "https://openalex.org/W4225150472"
+        ],
+        "journal_id": "journal_014",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 77.24,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 89.07,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 67.5
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 77.24
+      },
+      {
+        "paper_id": "paper_ab4cc23b1c6c133953ce",
+        "title": "Information exchange on interorganizational information systems and public social media: different impacts on conflict and joint action",
+        "abstract": "Purpose This research examines how information and communication technology (ICT)-enabled interactions influence conflict, joint action, and thus cooperative performance in supply chains. Design/methodology/approach We adopt a mixed-methods approach that uses both qualitative and quantitative methods. We conduct a grounded theory study of 18 interviews to identify two predominant platforms for ICT-enabled interactions among contemporary firms: interorganizational information systems (IOSs) and public social media (PSM). We then develop a research model and test six hypotheses with field survey data from 520 manufacturing firms. Findings ICT-enabled interactions reduce conflict and promote joint action in supply chains. More importantly, whereas IOS-enabled interaction is more effective in promoting joint action, PSM-enabled interaction is more effective in mitigating conflict. In addition, conflict and joint action fully mediate the effect of IOS-enabled interaction on cooperative performance, but only partially mediate the impact of PSM-enabled interaction. Research limitations/implications This research is an essential investigation of the impacts of the concurrent use of IOSs and PSM as interaction platforms, showing a new mechanism through which ICT-enabled interactions improve performance. Originality/value This research highlights the different effects of ICT-enabled interactions and provides practical insights for managers to deploy and leverage different ICT platforms in supply chains.",
+        "authors": [
+          "Tingyu Lu",
+          "Xubing Zhang",
+          "Guijun Zhuang"
+        ],
+        "year": 2025,
+        "publication_date": "2025-06-22",
+        "published_date": "2025-06-22",
+        "language": "en",
+        "doi": "10.1108/intr-02-2024-0166",
+        "url": "https://doi.org/10.1108/intr-02-2024-0166",
+        "official_url": "https://doi.org/10.1108/intr-02-2024-0166",
+        "source_title": "Internet Research",
+        "journal": "Internet Research",
+        "source_issns": [
+          "1066-2243",
+          "2054-5657"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 3,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9979000091552734
+          },
+          {
+            "id": "https://openalex.org/T10068",
+            "name": "Technology Adoption and User Behaviour",
+            "score": 0.9955999851226807
+          },
+          {
+            "id": "https://openalex.org/T10154",
+            "name": "Customer Service Quality and Loyalty",
+            "score": 0.9947999715805054
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4411524210"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [
+          "https://openalex.org/W4411524210"
+        ],
+        "journal_id": "journal_029",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 75.72,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 30.04,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 75.72
+      },
+      {
+        "paper_id": "paper_e2d9d035d44e87ee6fe5",
+        "title": "Social Media Sustainability Communication: An Analysis of Firm Behaviour and Stakeholder Responses",
+        "abstract": "Abstract Social media communication, and its impact on individuals and firms, is becoming increasingly important in today’s age. Firms are utilizing social media channels for communicating their sustainability-related initiatives. The role of social media as a mode for sustainability-related communication by firms has not been widely analyzed in the extant information systems literature. Given the increasingly important role of social media for information diffusion as well as increasing awareness for sustainability practices, this is a critical area of research. In this paper, we use an analytic model to theorize, coupled with empirical analysis to test the impact of firms’ sustainability practices. We have validated our proposed hypotheses using an empirical model based on panel data of firms’ sustainability performance and their Twitter communication over a 3-year period. Through our unique mixed-method study, we add additional methodological rigour to extant social media-based research in the information systems domain. Our research has significant theoretical and managerial significance as we identify how firms utilize social media for sustainability-related communication and its corresponding impact on customer response. Our research provides actionable insights for policymakers, firms as well as investors and consumers on understanding and managing sustainability-related communications on social media.",
+        "authors": [
+          "Ashish Kumar Jha",
+          "Nishant Kumar Verma"
+        ],
+        "year": 2022,
+        "publication_date": "2022-03-02",
+        "published_date": "2022-03-02",
+        "language": "en",
+        "doi": "10.1007/s10796-022-10257-6",
+        "url": "https://doi.org/10.1007/s10796-022-10257-6",
+        "official_url": "https://doi.org/10.1007/s10796-022-10257-6",
+        "source_title": "Information Systems Frontiers",
+        "journal": "Information Systems Frontiers",
+        "source_issns": [
+          "1387-3326",
+          "1572-9419"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 44,
+        "topics": [
+          {
+            "id": "https://openalex.org/T10880",
+            "name": "Environmental Sustainability in Business",
+            "score": 0.9972000122070312
+          },
+          {
+            "id": "https://openalex.org/T10609",
+            "name": "Digital Marketing and Social Media",
+            "score": 0.9897000193595886
+          },
+          {
+            "id": "https://openalex.org/T10115",
+            "name": "Corporate Social Responsibility Reporting",
+            "score": 0.9821000099182129
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4214825447"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://link.springer.com/content/pdf/10.1007/s10796-022-10257-6.pdf",
+        "provider_payload_refs": [
+          "https://openalex.org/W4214825447"
+        ],
+        "journal_id": "journal_021",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PUBLIC_ADMIN"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 74.96,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 82.48,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 74.96
+      },
+      {
+        "paper_id": "paper_0169caf2ebe6dd6dc76c",
+        "title": "Modeling User Characteristics Associated with Interdependent Privacy Perceptions on Social Media",
+        "abstract": "“Interdependent” privacy violations occur when users share private photos and information about other people in social media without permission. This research investigated user characteristics associated with interdependent privacy perceptions, by asking social media users to rate photo-based memes depicting strangers on the degree to which they were too private to share. Users also completed questionnaires measuring social media usage and personality. Separate groups rated the memes on shareability, valence, and entertainment value. Users were less likely to share memes that were rated as private, except when the meme was entertaining or when users exhibited dark triad characteristics. Users with dark triad characteristics demonstrated a heightened awareness of interdependent privacy and increased sharing of others’ photos. A model is introduced that highlights user types and characteristics that correspond to different privacy preferences: privacy preservers, ignorers, and violators. We discuss how interventions to support interdependent privacy must effectively influence diverse users.",
+        "authors": [
+          "Mary Jean Amon",
+          "Aaron Necaise",
+          "Nika Kartvelishvili",
+          "Aneka Williams",
+          "Yan Solihin",
+          "Apu Kapadia"
+        ],
+        "year": 2023,
+        "publication_date": "2023-06-30",
+        "published_date": "2023-06-30",
+        "language": "en",
+        "doi": "10.1145/3577014",
+        "url": "https://doi.org/10.1145/3577014",
+        "official_url": "https://doi.org/10.1145/3577014",
+        "source_title": "ACM Transactions on Computer-Human Interaction",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "source_issns": [
+          "1073-0516",
+          "1557-7325"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 18,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_001",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "HCI"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 72.29,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 63.8,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 72.29
+      },
+      {
+        "paper_id": "paper_2cf01de84cc2a3f281a8",
+        "title": "Deterrence effects of social media interventions on health misinformation dissemination by bots and humans",
+        "abstract": null,
+        "authors": [
+          "Amir Karami",
+          "Nima Kordzadeh",
+          "Serena Harn"
+        ],
+        "year": 2026,
+        "publication_date": "2026-07-04",
+        "published_date": "2026-07-04",
+        "language": "en",
+        "doi": "10.1080/0960085x.2026.2620412",
+        "url": "https://doi.org/10.1080/0960085x.2026.2620412",
+        "official_url": "https://doi.org/10.1080/0960085x.2026.2620412",
+        "source_title": "European Journal of Information Systems",
+        "journal": "European Journal of Information Systems",
+        "source_issns": [
+          "0960-085X",
+          "1476-9344"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 1,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "title_only",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_014",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 71.51,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 15.02,
+            "recency": 100.0,
+            "evidence_completeness": 25.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 71.51
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social media",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2460916,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:26.850032+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3938.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social media information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1264776,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:30.800486+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3453.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(social media) OR (social media in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2432032,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:34.282460+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3500.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "ACM Transactions on Computer-Human Interaction",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1073-0516",
+        "query": "social media",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:40.379866+00:00",
+        "duration_ms": 1328.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1328.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "social media",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:41.712039+00:00",
+        "duration_ms": 1281.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1281.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "social media",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:42.987866+00:00",
+        "duration_ms": 1328.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1328.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "社交媒体",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:55:37.971947+00:00",
+        "duration_ms": 1172.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1172.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "社交媒体",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:55:39.137815+00:00",
+        "duration_ms": 1235.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1235.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_d836a0d4430cba54ffc2",
+        "title": "Comparing Physician and Artificial Intelligence Chatbot Responses to Patient Questions Posted to a Public Social Media Forum",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_755ad3dae71102647c1d",
+        "title": "Social Media and Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74cde6ac777477fbd2c7",
+        "title": "Fake news, disinformation and misinformation in social media: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_780fa9ea48242e97d6d0",
+        "title": "The Use of Social Media in Children and Adolescents: Scoping Review on the Potential Risks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3ec92d16a1a527bfbec4",
+        "title": "Windows of developmental sensitivity to social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_87a2790d4e760820c6f8",
+        "title": "The disaster of misinformation: a review of research in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dad5437d485d855c1215",
+        "title": "Customer engagement and social media: Revisiting the past to inform the future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_642cd4e83ed7c10fdd27",
+        "title": "Problematic Social Media Use in Adolescents and Young Adults: Systematic Review and Meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b38d0c8f630bba7dd451",
+        "title": "Psychological inoculation improves resilience against misinformation on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2fd85c34536c74d62cd8",
+        "title": "Defining affordances in social media research: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84814af17cbd7f71c4d1",
+        "title": "Misinformation About COVID-19 Vaccines on Social Media: Rapid Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17b8354d428f4ec7da02",
+        "title": "Cyberbullying via social media and well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df071438a7671fb17aa5",
+        "title": "Social Media and Society",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6894412f0c6f9bb5dc09",
+        "title": "Transforming consumers' intention to purchase green products: Role of social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e89acec9ac934a3357dd",
+        "title": "Social media literacy: A conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_271efa227e37e37dfa78",
+        "title": "Social media influencer marketing: foundations, trends, and ways forward",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51cbfccda718a5624a1e",
+        "title": "Virtual Influencers in Online Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8cda68f13a9992383b92",
+        "title": "Why’s Everyone on TikTok Now? The Algorithmized Self and the Future of Self-Making on Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d3d927efe03a9359992",
+        "title": "Social media use, stress, and coping",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e5bdb1658cdd9db0dd5f",
+        "title": "The social media diet: A scoping review to investigate the association between social media, body image and eating disorders amongst young people",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_85ac243e735b5f95c5e1",
+        "title": "Growing polarization around climate change on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d46843b1fd056b4d38df",
+        "title": "Social media and attitudes towards a COVID-19 vaccination: A systematic review of the literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_357d59dae0cf79cb05d8",
+        "title": "A review on sentiment analysis from social media platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7ada5d1c7486fb35eff9",
+        "title": "A Deadly Infodemic: Social Media and the Power of COVID-19 Misinformation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_157d5cc57cbfe1c993b0",
+        "title": "Social media and young adults",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_672836599dd073eeb11a",
+        "title": "Parasocial relationships, social media, & well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_888ff4929cb5e8633991",
+        "title": "A Meta-Analysis of the Effects of Brands’ Owned Social Media on Social Media Engagement and Sales",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_825596c365da0800e44e",
+        "title": "TikTok and Attention-Deficit/Hyperactivity Disorder: A Cross-Sectional Study of Social Media Content Quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97a2bb04e2fac3c31323",
+        "title": "Research trends in social media addiction and problematic social media use: A bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4bace3ca614334d8137",
+        "title": "Platform governance at the margins: Social media creators’ experiences with algorithmic (in)visibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6bbd99f78f364800ae1f",
+        "title": "Linking social media usage and SME's sustainable performance: The role of digital leadership and innovation capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8287384fbc87fa33fccb",
+        "title": "Impact of Social Media Influencers on Customer Engagement and Purchase Intention: A Meta-Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_597be3a82e6a7fcc9f3c",
+        "title": "The Impact of Social Media on the Mental Health of Adolescents and Young Adults: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb14d740dca238f7302d",
+        "title": "Social media influencers: An effective marketing approach?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb345a1fbdc5e11d9ca0",
+        "title": "Impact of social media marketing features on consumer's purchase decision in the fast-food industry: Brand trust as a mediator",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bf54d05663081833e953",
+        "title": "Exploring the boundaries of open innovation: Evidence from social media mining",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd90c1725244b4d7a67c",
+        "title": "Social Media Role and Its Impact on Public Health: A Narrative Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_409cb7b2ff97e08f06e4",
+        "title": "Social Media and SMEs’ Performance in Developing Countries: Effects of Technological-Organizational-Environmental Factors on the Adoption of Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2787d8541eff6924cb78",
+        "title": "From social media diet to public riot? Engagement with “greenfluencers” and young social media users' environmental activism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b954adfaae5628b19f0c",
+        "title": "Social Media Use for Research Participant Recruitment: Integrative Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_46900d0088acca1484c3",
+        "title": "Social comparison and envy on social media: A critical review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8be4abf18d21311db932",
+        "title": "Meta‐analysis of social media influencer impact: Key antecedents and theoretical foundations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edd6db4c3d787af448c3",
+        "title": "Problematic social media use in childhood and adolescence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29aef896900416c9ce56",
+        "title": "The impact of digital technology, social media, and artificial intelligence on cognitive functions: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31d5d9a2fd6b7e2ecfdb",
+        "title": "Role of Social Media Marketing Activities in Influencing Customer Intentions: A Perspective of a New Emerging Era",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5eb3e717eeea0142d754",
+        "title": "Social media and self-esteem",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e51e5c87ef9226504595",
+        "title": "Association Between Exposure to Tobacco Content on Social Media and Tobacco Use",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6b81db3515176be114cd",
+        "title": "Young Adults’ Use of Different Social Media Platforms for Health Information: Insights From Web-Based Conversations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3dd282e486a137433d07",
+        "title": "Social Media and Morality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1d857a7eab717adc40d",
+        "title": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_80428fa4d2320ca46670",
+        "title": "Finding Goldilocks Influencers: How Follower Count Drives Social Media Engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9ff7aacf6f2e504075a",
+        "title": "Spread of misinformation on social media: What contributes to it and how to combat it",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_377654bade8ef1f37e52",
+        "title": "Mechanisms linking social media use to adolescent mental health vulnerability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9a95dab88e1369a3c3a8",
+        "title": "Bibliometrix analysis of information sharing in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4d1e7c88eb881ac02b4",
+        "title": "Social media use, social displacement, and well-being",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7dba9c2736d2d785ead7",
+        "title": "A systematic review of social media-based sentiment analysis: Emerging trends and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96a8c4817b36c57465c9",
+        "title": "Breaking the social media prism: how to make our platforms less polarizing",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f5d93578bd8071dcc0a",
+        "title": "“The potential of social media in health promotion beyond creating awareness: an integrative review”",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9392949faac220f1479f",
+        "title": "Social media use in disaster recovery: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a45916d1cd58ca242ce",
+        "title": "Public perceptions of environmental, social, and governance (ESG) based on social media data: Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e9d3871599a49db044b6",
+        "title": "Analytics of social media data – State of characteristics and application",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5fef0784a3a24ed2f3cb",
+        "title": "The Perfect Storm: A Developmental–Sociocultural Framework for the Role of Social Media in Adolescent Girls’ Body Image Concerns and Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2c930bf1e15e8dcd5b2",
+        "title": "Problematic Social Media Use and Its Relationship with Depression or Anxiety: A Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_99aeea7d1e62703a0868",
+        "title": "Conspiracy theories and social media platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b14e93173c957d44588c",
+        "title": "Social Media and Youth Mental Health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_11b898bdd01ab074af52",
+        "title": "E-cigarette brands and social media influencers on Instagram: a social network analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bfbb3caa456db773c7a",
+        "title": "Social media-induced fear of missing out (FoMO) and social media fatigue: The role of narcissism, comparison and disclosure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc06a43e81d9657063c0",
+        "title": "Transformer-based deep learning models for the sentiment analysis of social media data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae2708c08552c20742b9",
+        "title": "Social media and online hate",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0aee6db13dbba933e3f",
+        "title": "Tourist behaviour: The role of digital marketing and social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bf2ba041513df3a4623",
+        "title": "Political Influencers on Social Media: An Introduction",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f0ce53e289b980f3b5d0",
+        "title": "The effect of supply chain management through social media on competitiveness of the private hospitals in Jordan",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7b243235d066a78c98b",
+        "title": "The effect of social media influencers’ characteristics on consumer intention and attitude toward Keto products purchase intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8562221f04561281c309",
+        "title": "Tobacco promotion restriction policies on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_235fa52ffdd7c362f78b",
+        "title": "The impact of social media influencers on health outcomes: Systematic review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19c1bb0ca69438ac123a",
+        "title": "The Role of Social Media in Shaping Public Opinion and Its Influence on Economic Decisions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38f1876d1081c9380bf1",
+        "title": "Mental Health Analysis in Social Media Posts: A Survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_899dd06e3a8fe36fda1a",
+        "title": "Social Media Use and Health and Well-being of Lesbian, Gay, Bisexual, Transgender, and Queer Youth: Systematic Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d39cb0d5bfd31100b82a",
+        "title": "Does Social Media Pressure Induce Corporate Hypocrisy? Evidence of ESG Greenwashing from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dff1504257335566c208",
+        "title": "Associations between social media use and loneliness in a cross-national population: do motives for social media use matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21edc69e8b0ed09a16ce",
+        "title": "Government Digital Transformation: Understanding the Role of Government Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5d7fecb5fbb15254a3a",
+        "title": "“I follow what you post!”: The role of social media influencers’ content characteristics in consumers' online brand-related activities (COBRAs)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88823bdc9ffe94123a3b",
+        "title": "Social media: a digital social mirror for identity development during adolescence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa6cbf2d833c8301ef11",
+        "title": "#GenZ on TikTok: the collective online self-Portrait of the social media generation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37a81d35c30fa0bfc801",
+        "title": "Social media influencers as human brands: an interactive marketing perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd18d87980285e347c7f",
+        "title": "Social media and adolescent well-being in the Global South",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1b51a59fa1e718a502e",
+        "title": "Social Media and Society",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_543e52d3a3ca16ab087c",
+        "title": "Platform affordances and political participation: how social media reshape political engagement",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81aa203b2c1ce68cd43a",
+        "title": "The effect of social media marketing on brand trust, brand equity and brand loyalty",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f2dedb0af267acc8e8ae",
+        "title": "Social media content aesthetic quality and customer engagement: The mediating role of entertainment and impacts on brand love and loyalty",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07289d324cadefcefeaf",
+        "title": "Nudging Social Media toward Accuracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_da0958eedaede5f5acae",
+        "title": "Social Media for Public Health: Framework for Social Media–Based Public Health Campaigns",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_99e3a9cfafcefb8d009a",
+        "title": "Evaluating the benefits and risks of social media for wildlife conservation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_402a9f2b033482c58f55",
+        "title": "Trust in Social Media: Enhancing Social Relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_58e10bea7ecfae6c4342",
+        "title": "The social media context interferes with truth discernment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a31d7b5945e049f4bbf6",
+        "title": "Exploring adolescents’ perspectives on social media and mental health and well-being – A qualitative literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4fe133ad430b51f8a6e2",
+        "title": "The dark at the end of the tunnel: Doomscrolling on social media newsfeeds.",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e29f4f6e5b5c31ac8795",
+        "title": "Social media influencers and consumer engagement: A review and future research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_967f60403d8a7ea3ae92",
+        "title": "Enhancing the government accounting information systems using social media information: An application of text mining and machine learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb4811ff51b8f4b00453",
+        "title": "The moderating influence of perceived government information transparency on COVID-19 pandemic information adoption on social media systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a344e724df04a52ace8d",
+        "title": "The addiction behavior of short-form video app TikTok: The information quality and system quality perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7475282abb7930ed1556",
+        "title": "Too much overload and concerns: Antecedents of social media fatigue and the mediating role of emotional exhaustion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12e89656005461cd5729",
+        "title": "Social media and the spread of misinformation: infectious and a threat to public health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_18ae7b7bae6f1d963e73",
+        "title": "DESIGNING AN ANIMAL ADOPTION AND SOCIAL MEDIA INFORMATION SYSTEM USING THE SDLC WATERFALL METHOD",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2fec4eade70eef86bb3b",
+        "title": "The Application of Blockchain in Social Media: A Systematic Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7fbecd4b721da31a45f",
+        "title": "COVID-19 Misinformation on Social Media: A Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e678f202ab1d59bf7698",
+        "title": "The social determinants of mental health and disorder: evidence, prevention and recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_982a3d39fea3ee154237",
+        "title": "Universality, criticality and complexity of information propagation in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7baf733c3b66a2e3b24",
+        "title": "A Hybrid Linguistic and Knowledge-Based Analysis Approach for Fake News Detection on Social Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24c5ab9dbf821a68dd09",
+        "title": "Edge Technologies for Disaster Management: A Survey of Social Media and Artificial Intelligence Integration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ef4207ceaec002d8fab3",
+        "title": "Social Simulacra: Creating Populated Prototypes for Social Computing Systems",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1251f01fddde39d2c95b",
+        "title": "Risk perception and resilience assessment of flood disasters based on social media big data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0f781f6904fbe1d65a95",
+        "title": "A meta-analysis of social media fatigue: Drivers and a major consequence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_02ad224c4bb2732cc1aa",
+        "title": "Significance of machine learning in healthcare: Features, pillars and applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de7d5be01d226482a99f",
+        "title": "The Investigator’s Dilemma - A Review of Social Media Analytics Research Ethics in Information Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75a02a5c85392a788a62",
+        "title": "Determinants of emissions pathways in the coupled climate–social system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_95e09662dc620988f9ef",
+        "title": "Development of Principles for Health-Related Information on Social Media: Delphi Study",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_029c76d1cbf2bf2f42f4",
+        "title": "Interviews in the social sciences",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d634822cdabfe5a4008b",
+        "title": "Social Drivers and Algorithmic Mechanisms on Digital Media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8001fb0f2334e3532dfa",
+        "title": "Social isolation and social anxiety as drivers of generation Z's willingness to share personal information on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_24d5c3167787be0525af",
+        "title": "Shaping path of trust: the role of information credibility, social support, information sharing and perceived privacy risk in social commerce",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7bb2bd735ccde184fbda",
+        "title": "Fairness in recommender systems: research landscape and future directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d1dfcbe1a41f376743fe",
+        "title": "Social media usage to share information in communication journals: An analysis of social media activity and article citations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_890caf3c77378f072066",
+        "title": "A robust hybrid machine learning model for Bengali cyber bullying detection in social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_477dc5acc03eb887f818",
+        "title": "A Survey of Graph Neural Networks for Social Recommender Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_86c26a7ffb04066dcf68",
+        "title": "Do social media undermine social cohesion? A critical review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0696cc0edcd03ee43559",
+        "title": "TweetNLP: Cutting-Edge Natural Language Processing for Social Media",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de2a2d9ca06573f6d87b",
+        "title": "Social capital I: measurement and associations with economic mobility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c51d430e02f8d3da382",
+        "title": "The Impact of ESG (Environmental, Social, and Governance) Considerations on Corporate Mergers and Acquisitions: Strategies for Value Creation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae852a8d6bb0544a74e4",
+        "title": "Trust, Media Credibility, Social Ties, and the Intention to Share towards Information Verification in an Age of Fake News",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08196d5161b81354bce3",
+        "title": "The Impact of Social Media Information Sharing on the Green Purchase Intention among Generation Z",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dee4e0daec6b8da1aa4d",
+        "title": "Sharing of misinformation is habitual, not just lazy or biased",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c035530956b04fea6ca",
+        "title": "A systematic review and research perspective on recommender systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d01084faf9d8ee87f5c4",
+        "title": "Thematic Analysis as a New Culturomic Tool: The Social Media Coverage on COVID-19 Pandemic in Italy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1188582226ca19e0e2fe",
+        "title": "AI-Based Modeling: Techniques, Applications and Research Issues Towards Automation, Intelligent and Smart Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ca5252c6b969308acde1",
+        "title": "Effects of social media tourism information quality on destination travel intention: Mediation effect of self-congruity and trust",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6dc6a827cae413c47d82",
+        "title": "Social Media Application as a New Paradigm for Business Communication: The Role of COVID-19 Knowledge, Social Distancing, and Preventive Attitudes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9288a7905dde4039615c",
+        "title": "Managing multichannel conflict: the role of interactions enabled by interorganizational information system and public social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_606c5cecba8717c2d419",
+        "title": "A sequential neural recommendation system exploiting BERT and LSTM on social media posts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa6207e454917a60f84e",
+        "title": "Artificial intelligence in the information ecosystem: Affordances for everyday information seeking",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_db4ca62033869f042229",
+        "title": "The Impact of Social Media Use on Social Interaction in Contemporary Society",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cbb125686acc9f3f9738",
+        "title": "Social media applications through the lens of DeLone and McLean’s information system success model: does perceived privacy matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13a9d0714e66bb14abf6",
+        "title": "Understanding social media discontinuance behavior in China: a perspective of social cognitive theory",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c8c2d029310f4053e702",
+        "title": "Social Media Use Among Parents and Women of Childbearing Age in the US",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d99f379975f347e20cbe",
+        "title": "A Survey of Graph Neural Networks for Recommender Systems: Challenges, Methods, and Directions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b3e2bb35b9209eea38bc",
+        "title": "Consumer resource integration and service innovation in social commerce: the role of social media influencers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_42d0659c0a798d6ab52b",
+        "title": "The effects of social isolation stress and discrimination on mental health",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cc2912040538e370bd1e",
+        "title": "Explainable depression detection with multi-aspect features using a hybrid deep learning model on social media",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7197bcf7133a31bfc792",
+        "title": "Sustainable Development Goals (SDGs) as a Framework for Corporate Social Responsibility (CSR)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfc1c1ddbbdc889ceecf",
+        "title": "Social Media as a Bank Run Catalyst",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e79071eb0a484e1a0087",
+        "title": "Effects of greenwashing on financial performance: Moderation through local environmental regulation and media coverage",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a34699d112737fe58df2",
+        "title": "Toward Fairness, Accountability, Transparency, and Ethics in AI for Social Media and Health Care: Scoping Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_252a87d400675538eaed",
+        "title": "The role of social media in building trust, self-perceived creativity and satisfaction for millennial entrepreneurs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c24feb973e06993bdbd1",
+        "title": "Heart Disease and Stroke Statistics—2022 Update: A Report From the American Heart Association",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9db3c2f0ced634864706",
+        "title": "A Topic Modeling Comparison Between LDA, NMF, Top2Vec, and BERTopic to Demystify Twitter Posts",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d98cf74e1856601af490",
+        "title": "A Fine-Tuned BERT-Based Transfer Learning Approach for Text Classification",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2434076765f6e45ca2ec",
+        "title": "Operationalising positive tipping points towards global sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36583d653aa67167b7c5",
+        "title": "A Novel Text Mining Approach for Mental Health Prediction Using Bi-LSTM and BERT Model",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bd7af33ba2843e73cb16",
+        "title": "A survey on sentiment analysis methods, applications, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_05c91058c0a21498ec60",
+        "title": "Strategy and Structure",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_cd055e93993447d0c713",
+        "title": "What if the devil is my guardian angel: ChatGPT as a case study of using chatbots in education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8227663b59bd71a339a8",
+        "title": "A Social Psychology of Protest",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "The Role of Research and Development in Fostering Innovation and Economic Growth in Developing Economies",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 14
+    },
+    "coverage_audit": {
+      "direction_id": "social_media",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 35,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 6,
+      "boundary_count": 22,
+      "selected_count": 6,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "social media"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "social media information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(social media) OR (social media in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "social media",
+        "raw_count": 100,
+        "hard_gate_pass_count": 2,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "social media information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 8,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(social media) OR (social media in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 13,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_755ad3dae71102647c1d",
+          "paper_a31d7b5945e049f4bbf6"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74cde6ac777477fbd2c7",
+        "incoming_paper_id": "paper_74cde6ac777477fbd2c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb14d740dca238f7302d",
+        "incoming_paper_id": "paper_bb14d740dca238f7302d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3ec92d16a1a527bfbec4",
+        "incoming_paper_id": "paper_3ec92d16a1a527bfbec4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b38d0c8f630bba7dd451",
+        "incoming_paper_id": "paper_b38d0c8f630bba7dd451"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_87a2790d4e760820c6f8",
+        "incoming_paper_id": "paper_87a2790d4e760820c6f8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dad5437d485d855c1215",
+        "incoming_paper_id": "paper_dad5437d485d855c1215"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_357d59dae0cf79cb05d8",
+        "incoming_paper_id": "paper_357d59dae0cf79cb05d8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85ac243e735b5f95c5e1",
+        "incoming_paper_id": "paper_85ac243e735b5f95c5e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e9e9590b18e40e11040",
+        "incoming_paper_id": "paper_9e9e9590b18e40e11040"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e89acec9ac934a3357dd",
+        "incoming_paper_id": "paper_e89acec9ac934a3357dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d46843b1fd056b4d38df",
+        "incoming_paper_id": "paper_d46843b1fd056b4d38df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_271efa227e37e37dfa78",
+        "incoming_paper_id": "paper_271efa227e37e37dfa78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6894412f0c6f9bb5dc09",
+        "incoming_paper_id": "paper_6894412f0c6f9bb5dc09"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d3d927efe03a9359992",
+        "incoming_paper_id": "paper_2d3d927efe03a9359992"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5bdb1658cdd9db0dd5f",
+        "incoming_paper_id": "paper_e5bdb1658cdd9db0dd5f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ada5d1c7486fb35eff9",
+        "incoming_paper_id": "paper_7ada5d1c7486fb35eff9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_80428fa4d2320ca46670",
+        "incoming_paper_id": "paper_80428fa4d2320ca46670"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf54d05663081833e953",
+        "incoming_paper_id": "paper_bf54d05663081833e953"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd90c1725244b4d7a67c",
+        "incoming_paper_id": "paper_cd90c1725244b4d7a67c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8287384fbc87fa33fccb",
+        "incoming_paper_id": "paper_8287384fbc87fa33fccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29aef896900416c9ce56",
+        "incoming_paper_id": "paper_29aef896900416c9ce56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7dba9c2736d2d785ead7",
+        "incoming_paper_id": "paper_7dba9c2736d2d785ead7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31d5d9a2fd6b7e2ecfdb",
+        "incoming_paper_id": "paper_31d5d9a2fd6b7e2ecfdb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eb345a1fbdc5e11d9ca0",
+        "incoming_paper_id": "paper_eb345a1fbdc5e11d9ca0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b954adfaae5628b19f0c",
+        "incoming_paper_id": "paper_b954adfaae5628b19f0c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_11b898bdd01ab074af52",
+        "incoming_paper_id": "paper_11b898bdd01ab074af52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5fef0784a3a24ed2f3cb",
+        "incoming_paper_id": "paper_5fef0784a3a24ed2f3cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3dd282e486a137433d07",
+        "incoming_paper_id": "paper_3dd282e486a137433d07"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_19c1bb0ca69438ac123a",
+        "incoming_paper_id": "paper_19c1bb0ca69438ac123a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9d3871599a49db044b6",
+        "incoming_paper_id": "paper_e9d3871599a49db044b6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_38f1876d1081c9380bf1",
+        "incoming_paper_id": "paper_38f1876d1081c9380bf1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_21edc69e8b0ed09a16ce",
+        "incoming_paper_id": "paper_21edc69e8b0ed09a16ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0599563a71d5218540b5",
+        "incoming_paper_id": "paper_0599563a71d5218540b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88823bdc9ffe94123a3b",
+        "incoming_paper_id": "paper_88823bdc9ffe94123a3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f0ce53e289b980f3b5d0",
+        "incoming_paper_id": "paper_f0ce53e289b980f3b5d0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f5d93578bd8071dcc0a",
+        "incoming_paper_id": "paper_3f5d93578bd8071dcc0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_402a9f2b033482c58f55",
+        "incoming_paper_id": "paper_402a9f2b033482c58f55"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_99e3a9cfafcefb8d009a",
+        "incoming_paper_id": "paper_99e3a9cfafcefb8d009a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_543e52d3a3ca16ab087c",
+        "incoming_paper_id": "paper_543e52d3a3ca16ab087c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_58e10bea7ecfae6c4342",
+        "incoming_paper_id": "paper_58e10bea7ecfae6c4342"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d836a0d4430cba54ffc2",
+        "incoming_paper_id": "paper_d836a0d4430cba54ffc2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74cde6ac777477fbd2c7",
+        "incoming_paper_id": "paper_74cde6ac777477fbd2c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_755ad3dae71102647c1d",
+        "incoming_paper_id": "paper_755ad3dae71102647c1d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb14d740dca238f7302d",
+        "incoming_paper_id": "paper_bb14d740dca238f7302d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3ec92d16a1a527bfbec4",
+        "incoming_paper_id": "paper_3ec92d16a1a527bfbec4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_780fa9ea48242e97d6d0",
+        "incoming_paper_id": "paper_780fa9ea48242e97d6d0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b38d0c8f630bba7dd451",
+        "incoming_paper_id": "paper_b38d0c8f630bba7dd451"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7475282abb7930ed1556",
+        "incoming_paper_id": "paper_7475282abb7930ed1556"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_967f60403d8a7ea3ae92",
+        "incoming_paper_id": "paper_967f60403d8a7ea3ae92"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_12e89656005461cd5729",
+        "incoming_paper_id": "paper_12e89656005461cd5729"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_87a2790d4e760820c6f8",
+        "incoming_paper_id": "paper_87a2790d4e760820c6f8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dad5437d485d855c1215",
+        "incoming_paper_id": "paper_dad5437d485d855c1215"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_85ac243e735b5f95c5e1",
+        "incoming_paper_id": "paper_85ac243e735b5f95c5e1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7c0f54d8d71152030ecc",
+        "incoming_paper_id": "paper_7c0f54d8d71152030ecc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_357d59dae0cf79cb05d8",
+        "incoming_paper_id": "paper_357d59dae0cf79cb05d8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9e9e9590b18e40e11040",
+        "incoming_paper_id": "paper_9e9e9590b18e40e11040"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_642cd4e83ed7c10fdd27",
+        "incoming_paper_id": "paper_642cd4e83ed7c10fdd27"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_df071438a7671fb17aa5",
+        "incoming_paper_id": "paper_df071438a7671fb17aa5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_02ad224c4bb2732cc1aa",
+        "incoming_paper_id": "paper_02ad224c4bb2732cc1aa"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fec4eade70eef86bb3b",
+        "incoming_paper_id": "paper_2fec4eade70eef86bb3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_51cbfccda718a5624a1e",
+        "incoming_paper_id": "paper_51cbfccda718a5624a1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8cda68f13a9992383b92",
+        "incoming_paper_id": "paper_8cda68f13a9992383b92"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e89acec9ac934a3357dd",
+        "incoming_paper_id": "paper_e89acec9ac934a3357dd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_17b8354d428f4ec7da02",
+        "incoming_paper_id": "paper_17b8354d428f4ec7da02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d3d927efe03a9359992",
+        "incoming_paper_id": "paper_2d3d927efe03a9359992"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fd85c34536c74d62cd8",
+        "incoming_paper_id": "paper_2fd85c34536c74d62cd8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e7fbecd4b721da31a45f",
+        "incoming_paper_id": "paper_e7fbecd4b721da31a45f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6894412f0c6f9bb5dc09",
+        "incoming_paper_id": "paper_6894412f0c6f9bb5dc09"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_271efa227e37e37dfa78",
+        "incoming_paper_id": "paper_271efa227e37e37dfa78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e5bdb1658cdd9db0dd5f",
+        "incoming_paper_id": "paper_e5bdb1658cdd9db0dd5f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84814af17cbd7f71c4d1",
+        "incoming_paper_id": "paper_84814af17cbd7f71c4d1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_dee4e0daec6b8da1aa4d",
+        "incoming_paper_id": "paper_dee4e0daec6b8da1aa4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a344e724df04a52ace8d",
+        "incoming_paper_id": "paper_a344e724df04a52ace8d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d46843b1fd056b4d38df",
+        "incoming_paper_id": "paper_d46843b1fd056b4d38df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0f781f6904fbe1d65a95",
+        "incoming_paper_id": "paper_0f781f6904fbe1d65a95"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_24c5ab9dbf821a68dd09",
+        "incoming_paper_id": "paper_24c5ab9dbf821a68dd09"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7ada5d1c7486fb35eff9",
+        "incoming_paper_id": "paper_7ada5d1c7486fb35eff9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1251f01fddde39d2c95b",
+        "incoming_paper_id": "paper_1251f01fddde39d2c95b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_672836599dd073eeb11a",
+        "incoming_paper_id": "paper_672836599dd073eeb11a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_157d5cc57cbfe1c993b0",
+        "incoming_paper_id": "paper_157d5cc57cbfe1c993b0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_888ff4929cb5e8633991",
+        "incoming_paper_id": "paper_888ff4929cb5e8633991"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_80428fa4d2320ca46670",
+        "incoming_paper_id": "paper_80428fa4d2320ca46670"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d7baf733c3b66a2e3b24",
+        "incoming_paper_id": "paper_d7baf733c3b66a2e3b24"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d1d857a7eab717adc40d",
+        "incoming_paper_id": "paper_d1d857a7eab717adc40d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_46900d0088acca1484c3",
+        "incoming_paper_id": "paper_46900d0088acca1484c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bf54d05663081833e953",
+        "incoming_paper_id": "paper_bf54d05663081833e953"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_97a2bb04e2fac3c31323",
+        "incoming_paper_id": "paper_97a2bb04e2fac3c31323"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_825596c365da0800e44e",
+        "incoming_paper_id": "paper_825596c365da0800e44e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4bace3ca614334d8137",
+        "incoming_paper_id": "paper_d4bace3ca614334d8137"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8287384fbc87fa33fccb",
+        "incoming_paper_id": "paper_8287384fbc87fa33fccb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29aef896900416c9ce56",
+        "incoming_paper_id": "paper_29aef896900416c9ce56"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_890caf3c77378f072066",
+        "incoming_paper_id": "paper_890caf3c77378f072066"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2787d8541eff6924cb78",
+        "incoming_paper_id": "paper_2787d8541eff6924cb78"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6bbd99f78f364800ae1f",
+        "incoming_paper_id": "paper_6bbd99f78f364800ae1f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cd90c1725244b4d7a67c",
+        "incoming_paper_id": "paper_cd90c1725244b4d7a67c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4d1e7c88eb881ac02b4",
+        "incoming_paper_id": "paper_d4d1e7c88eb881ac02b4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eb345a1fbdc5e11d9ca0",
+        "incoming_paper_id": "paper_eb345a1fbdc5e11d9ca0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_409cb7b2ff97e08f06e4",
+        "incoming_paper_id": "paper_409cb7b2ff97e08f06e4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d634822cdabfe5a4008b",
+        "incoming_paper_id": "paper_d634822cdabfe5a4008b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_11b898bdd01ab074af52",
+        "incoming_paper_id": "paper_11b898bdd01ab074af52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b954adfaae5628b19f0c",
+        "incoming_paper_id": "paper_b954adfaae5628b19f0c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3dd282e486a137433d07",
+        "incoming_paper_id": "paper_3dd282e486a137433d07"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_982a3d39fea3ee154237",
+        "incoming_paper_id": "paper_982a3d39fea3ee154237"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5eb3e717eeea0142d754",
+        "incoming_paper_id": "paper_5eb3e717eeea0142d754"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8a45916d1cd58ca242ce",
+        "incoming_paper_id": "paper_8a45916d1cd58ca242ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_edd6db4c3d787af448c3",
+        "incoming_paper_id": "paper_edd6db4c3d787af448c3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_597be3a82e6a7fcc9f3c",
+        "incoming_paper_id": "paper_597be3a82e6a7fcc9f3c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_31d5d9a2fd6b7e2ecfdb",
+        "incoming_paper_id": "paper_31d5d9a2fd6b7e2ecfdb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7dba9c2736d2d785ead7",
+        "incoming_paper_id": "paper_7dba9c2736d2d785ead7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bc06a43e81d9657063c0",
+        "incoming_paper_id": "paper_bc06a43e81d9657063c0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5fef0784a3a24ed2f3cb",
+        "incoming_paper_id": "paper_5fef0784a3a24ed2f3cb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8be4abf18d21311db932",
+        "incoming_paper_id": "paper_8be4abf18d21311db932"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e51e5c87ef9226504595",
+        "incoming_paper_id": "paper_e51e5c87ef9226504595"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9ff7aacf6f2e504075a",
+        "incoming_paper_id": "paper_e9ff7aacf6f2e504075a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c4f7a99ec61cb9065989",
+        "incoming_paper_id": "paper_c4f7a99ec61cb9065989"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_13a9d0714e66bb14abf6",
+        "incoming_paper_id": "paper_13a9d0714e66bb14abf6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b14e93173c957d44588c",
+        "incoming_paper_id": "paper_b14e93173c957d44588c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a95dab88e1369a3c3a8",
+        "incoming_paper_id": "paper_9a95dab88e1369a3c3a8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e9d3871599a49db044b6",
+        "incoming_paper_id": "paper_e9d3871599a49db044b6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95e09662dc620988f9ef",
+        "incoming_paper_id": "paper_95e09662dc620988f9ef"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7bfbb3caa456db773c7a",
+        "incoming_paper_id": "paper_7bfbb3caa456db773c7a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_377654bade8ef1f37e52",
+        "incoming_paper_id": "paper_377654bade8ef1f37e52"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ae2708c08552c20742b9",
+        "incoming_paper_id": "paper_ae2708c08552c20742b9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88823bdc9ffe94123a3b",
+        "incoming_paper_id": "paper_88823bdc9ffe94123a3b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c0aee6db13dbba933e3f",
+        "incoming_paper_id": "paper_c0aee6db13dbba933e3f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3f5d93578bd8071dcc0a",
+        "incoming_paper_id": "paper_3f5d93578bd8071dcc0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e2d9d035d44e87ee6fe5",
+        "incoming_paper_id": "paper_e2d9d035d44e87ee6fe5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0599563a71d5218540b5",
+        "incoming_paper_id": "paper_0599563a71d5218540b5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6b81db3515176be114cd",
+        "incoming_paper_id": "paper_6b81db3515176be114cd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bf2ba041513df3a4623",
+        "incoming_paper_id": "paper_9bf2ba041513df3a4623"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_99aeea7d1e62703a0868",
+        "incoming_paper_id": "paper_99aeea7d1e62703a0868"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c4f7a99ec61cb9065989",
+        "incoming_paper_id": "paper_c4f7a99ec61cb9065989"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "2f8e032f0b2e4fab9e28a24c0b9b5e7a",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

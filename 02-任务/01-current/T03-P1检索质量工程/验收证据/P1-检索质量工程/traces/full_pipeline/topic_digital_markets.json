@@ -1,0 +1,2927 @@
+{
+  "direction_id": "topic_digital_markets",
+  "labels": {
+    "zh": "数字市场",
+    "en": "digital markets"
+  },
+  "input": {
+    "selected_direction_id": "topic_digital_markets",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 18406.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 330,
+  "hard_gate_pass_count": 35,
+  "eligible_count": 2,
+  "boundary_count": 3,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital markets"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "digital markets information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(digital markets) OR (digital markets in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 30
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_digital_markets",
+      "research_direction": "digital markets",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "digital markets",
+      "aliases": [
+        "digital markets"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:57"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_digital_markets",
+        "labels": {
+          "zh": "数字市场",
+          "en": "digital markets"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "数字市场",
+          "digital markets",
+          "digital markets in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "digital markets",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "digital markets",
+            "\"digital markets\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "digital markets",
+            "digital markets information systems"
+          ],
+          "crossref": [
+            "digital markets",
+            "数字市场"
+          ],
+          "dblp": [
+            "digital markets digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "digital markets",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "digital markets information systems",
+          "(digital markets) OR (digital markets in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:57"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_a392b283ed89624c43bb",
+        "title": "Digital platform regulation: opportunities for information systems research",
+        "abstract": "Purpose Information Systems (IS) research has built up a considerable understanding of digital platform ecosystems, while policymakers worldwide are aiming to introduce platform regulations that seek to erode fundamental mechanisms of digital platforms. This viewpoint article provides an introduction to how platform regulation affects our current understanding of digital platform ecosystems and suggests opportunities for future research. Design/methodology/approach A detailed analysis of the effects of the European Union (EU) Digital Markets Act (DMA) on current findings of organizational, technical and economic IS platform research. Findings Government regulations of digital platforms such as the DMA likely affect the central mode of operation of platforms in the scope of the regulation. The authors preconceive a major impact on platform openness, governance, steering the platform supply-side, modularity, nestedness, network effects, pricing and single-/multi-homing. In addition, the authors present opportunities for future research in each of these IS platform research streams. Originality/value Landmark regulations implemented in the past, such as the General Data Protection Regulation (GDPR), caused paradigm changes that fertilized research opportunities in IS and beyond. This viewpoint article aims to nudge studies that examine the changed mode of operation of platforms following platform regulation.",
+        "authors": [
+          "Vincent Heimburg",
+          "Manuel Wiesche"
+        ],
+        "year": 2023,
+        "publication_date": "2023-04-11",
+        "published_date": "2023-04-11",
+        "language": "en",
+        "doi": "10.1108/intr-05-2022-0321",
+        "url": "https://doi.org/10.1108/intr-05-2022-0321",
+        "official_url": "https://doi.org/10.1108/intr-05-2022-0321",
+        "source_title": "Internet Research",
+        "journal": "Internet Research",
+        "source_issns": [
+          "1066-2243",
+          "2054-5657"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 28,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11437",
+            "name": "Digital Platforms and Economics",
+            "score": 0.9998999834060669
+          },
+          {
+            "id": "https://openalex.org/T12392",
+            "name": "Sharing Economy and Platforms",
+            "score": 0.9800999760627747
+          },
+          {
+            "id": "https://openalex.org/T13402",
+            "name": "Business Strategy and Innovation",
+            "score": 0.9621000289916992
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4365814280"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": "https://www.emerald.com/insight/content/doi/10.1108/INTR-05-2022-0321/full/pdf?title=digital-platform-regulation-opportunities-for-information-systems-research",
+        "provider_payload_refs": [
+          "https://openalex.org/W4365814280"
+        ],
+        "journal_id": "journal_029",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "DIGITAL_PLATFORM"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 73.21,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 72.96,
+            "recency": 40.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 73.21
+      },
+      {
+        "paper_id": "paper_2fbd0fbe16ec6a134168",
+        "title": "Regulation of data-driven market power in the digital economy: Business value creation and competitive advantages from big data",
+        "abstract": "Recent high-profile antitrust cases and policy proposals have put a spotlight on the relationship between firms’ access to big data and sustained competitive advantages in digital markets. In Europe, concerns about data-driven market power have led policymakers to propose far-reaching regulations of information technology (IT) in these markets. Despite the global policy relevance, the regulation of big data and its competitive effects has so far received little attention in information systems (IS) research. This article addresses this research gap by developing an overarching framework for future IS research on the role of IT for the regulation of data-driven market power. The proposed research framework builds upon a three-part analysis: First, we review the academic literature and show that there is extensive, although nuanced, empirical evidence for business value creation from big (user) data. Second, we draw on the resource-based view of the firm and recent policy reports to derive six facilitating factors that enable firms to establish market power based on sustained data-driven competitive advantages. Third, we characterize three regulatory approaches to govern market power and competition in data-driven digital markets: (i) empowering consumers, (ii) data openness, and (iii) limiting data scale. For each of these approaches, we highlight the key role of IT artifacts in mediating the effect of regulatory rules on actual practice.",
+        "authors": [
+          "Victoria Fast",
+          "Daniel Schnurr",
+          "Michael Wohlfarth"
+        ],
+        "year": 2022,
+        "publication_date": "2022-07-04",
+        "published_date": "2022-07-04",
+        "language": "en",
+        "doi": "10.1177/02683962221114394",
+        "url": "https://doi.org/10.1177/02683962221114394",
+        "official_url": "https://doi.org/10.1177/02683962221114394",
+        "source_title": "Journal of Information Technology",
+        "journal": "Journal of Information Technology",
+        "source_issns": [
+          "0268-3962",
+          "1466-4437"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 57,
+        "topics": [
+          {
+            "id": "https://openalex.org/T11437",
+            "name": "Digital Platforms and Economics",
+            "score": 0.9995999932289124
+          },
+          {
+            "id": "https://openalex.org/T10270",
+            "name": "Blockchain Technology Applications and Security",
+            "score": 0.9848999977111816
+          },
+          {
+            "id": "https://openalex.org/T11995",
+            "name": "FinTech, Crowdfunding, Digital Finance",
+            "score": 0.9801999926567078
+          }
+        ],
+        "external_ids": {
+          "openalex": "https://openalex.org/W4283795910"
+        },
+        "providers": [
+          "openalex"
+        ],
+        "metadata_source": "openalex",
+        "field_sources": {
+          "title": [
+            "openalex"
+          ],
+          "abstract": [
+            "openalex"
+          ],
+          "authors": [
+            "openalex"
+          ],
+          "year": [
+            "openalex"
+          ],
+          "doi": [
+            "openalex"
+          ],
+          "source_title": [
+            "openalex"
+          ],
+          "citation_count": [
+            "openalex"
+          ],
+          "publication_date": [
+            "openalex"
+          ],
+          "published_date": [
+            "openalex"
+          ],
+          "url": [
+            "openalex"
+          ],
+          "official_url": [
+            "openalex"
+          ],
+          "journal": [
+            "openalex"
+          ],
+          "document_type": [
+            "openalex"
+          ],
+          "fulltext_url": [
+            "openalex"
+          ]
+        },
+        "integrity_status": "unknown",
+        "is_correction": false,
+        "evidence_level": "fulltext",
+        "fulltext_url": "https://journals.sagepub.com/doi/pdf/10.1177/02683962221114394",
+        "provider_payload_refs": [
+          "https://openalex.org/W4283795910"
+        ],
+        "journal_id": "journal_039",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE",
+          "ORG_STRATEGY"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "openalex"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 72.71,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 74.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 87.98,
+            "recency": 20.0,
+            "evidence_completeness": 100.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 72.71
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital markets",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1045699,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:31.319121+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3547.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital markets information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 727856,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:34.875294+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4484.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(digital markets) OR (digital markets in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1026248,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:39.395237+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3438.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "digital markets",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:45.585601+00:00",
+        "duration_ms": 1562.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1562.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "digital markets",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:47.138902+00:00",
+        "duration_ms": 1282.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1282.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "digital markets",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:55:48.422323+00:00",
+        "duration_ms": 1281.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1281.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "数字市场",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 0,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:55:43.116921+00:00",
+        "duration_ms": 1219.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1219.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "数字市场",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 5,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:55:44.330092+00:00",
+        "duration_ms": 1250.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1250.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_95c25c3f505d26a3a4fd",
+        "title": "Digital transformation and sustainable performance: The moderating role of market turbulence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_75b8aff445b5a5289129",
+        "title": "Understanding the Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b2b1b08a144ad45b0961",
+        "title": "The Digital Markets Act: Regulating the Wild West",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d6ddc3ebd95d52ab24b",
+        "title": "Can digital transformation improve market and ESG performance? Evidence from Chinese SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eced1c75ad133cd3ee87",
+        "title": "Bank Market Power and Central Bank Digital Currency: Theory and Quantitative Assessment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ce66aece4630edc09ae",
+        "title": "Interoperability in Digital Markets",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfa6f7d8c4abfbb87291",
+        "title": "The Effects of Central Bank Digital Currencies News on Financial Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edd78bdc987bbf0af1e5",
+        "title": "Measuring Digital Financial Inclusion in Emerging Market and Developing Economies: A New Index",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e3fa0c5025fbd072271",
+        "title": "Fitting the Digital Markets Act in the existing legal framework: the myth of the “without prejudice” clause",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_43dd81b3d2ad3566c3a6",
+        "title": "Digital sovereignty, economic ideas, and the struggle over the digital markets act: a political-cultural approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_075b71e5977543493638",
+        "title": "Digital Platforms Regulation: An Innovation-Centric View of the EU’s Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_769d4cb8dbed666b7b84",
+        "title": "The role of digital marketing channels on consumer buying decisions through eWOM in the Jordanian markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a17f9d103518dcee4217",
+        "title": "Digital markets and ‘trends towards concentration’",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b5a4407a6f1a6db5068",
+        "title": "Ensuring contestability and fairness in digital markets through regulation: a comparative analysis of the EU, UK and US approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7884c0e20837d21f20f4",
+        "title": "Digital Markets Act (DMA) and Digital Services Act (DSA): New Rules for the EU Digital Environment",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74805bef5a3b2b1aa8a1",
+        "title": "Investigating the Impact of International Markets and New Digital Technologies on Business Innovation in Emerging Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c68d02a9ea7c1535c9b",
+        "title": "Amazon Self-preferencing in the Shadow of the Digital Markets Act",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3f799f23f4fba8b8bb54",
+        "title": "The Digital Markets Act and E.U. Competition Policy: A Critical Ordoliberal Evaluation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d74cc5a9a938ad604ae",
+        "title": "Hypernudging in the changing European regulatory landscape for digital markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_261b6c95ec22f6d69a63",
+        "title": "Self-preferencing and foreclosure in digital markets: Theories of harm for abuse cases",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ba520804e24aea3dbb6",
+        "title": "Enforcing the Digital Markets Act: institutional choices, compliance, and antitrust",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_166322fdd4475e882c73",
+        "title": "Digital markets and the commercialization of healthcare in Africa: the case of Kenya",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_55f348f2fbe86dee31d0",
+        "title": "Digital innovation and entrepreneurship: a review of challenges in competitive markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1674c37db42a7104aca9",
+        "title": "Financial innovation and digitalization promote business growth: The interplay of green technology innovation, product market competition and firm performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b739a26576060703a785",
+        "title": "Digital content marketing in business markets: Activities, consequences, and contingencies along the customer journey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e27144de16cbf8a706ba",
+        "title": "Digital service innovation in B2B markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66cae30d5f7b2c95e387",
+        "title": "Protecting, Transforming, and Projecting the Single Market. Open Strategic Autonomy and Digital Sovereignty in the EU’s Trade and Digital Policies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_503af2b54f5581a54dc2",
+        "title": "Regulating Digital Markets",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c06838e85fb1d439b2a1",
+        "title": "Digital platform capability and organizational agility of emerging market manufacturing SMEs: The mediating role of intellectual capital and the moderating role of environmental dynamism",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_211d74aa42fb884b2835",
+        "title": "Interoperability in Digital Markets: Boon or Bane for Market Contestability?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa56441f7883c4d65085",
+        "title": "Big Tech, the Platform Economy and the European Digital Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c176ebb96847d5213b31",
+        "title": "Coping with digital market re-organization: How the hotel industry strategically responds to digital platform power",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94173a82afd54bb71cf0",
+        "title": "Competitive rivalry in the digital market: an action-configuration perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69fd5557a26ad9f78f7e",
+        "title": "Price determinants of non-fungible tokens in the digital art market",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_22ac4122aa0db22b18ac",
+        "title": "Digital tools and agricultural market transformation in Africa: Why are they not at scale yet, and what will it take to get there?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2a516ad5b43ecd72aad",
+        "title": "Disruptive 6G architecture: Software-centric, AI-driven, and digital market-based mobile networks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_36c40f5ac4222eaf9452",
+        "title": "Building Trust: The Role of Strategic Decision-Making in Digital Market Confidence",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68798bf168ab6943f473",
+        "title": "Disinformation on digital media platforms: A market-shaping approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d34a19ed3f20a4d9d6aa",
+        "title": "From Competition Law to Platform Regulation – Regulatory Choices for the Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81452292de385d429a56",
+        "title": "Regulating online search in the EU: From the android case to the digital markets act and digital services act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a770fac35f8800e1a1fb",
+        "title": "The role of digital business transformation in frugal innovation and SMEs’ resilience in emerging markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d7241727353d9d18de2",
+        "title": "The Effective Use of Economics in the EU Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84502cc9b078c57ed8c7",
+        "title": "Digitalization and sustainable development: How could digital economy development improve green innovation in China?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_efe77344981c052a291c",
+        "title": "Digital markets: formative components, regulation, challenges and insights from the European Union Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13246854bcd349438771",
+        "title": "Nascent entrepreneurs and challenges in the digital market in developing countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_67dd6842e6ecb6a219cd",
+        "title": "Algorithmic Management and the Social Order of Digital Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ae13ae868090d1ba6b8c",
+        "title": "How can entrepreneurs improve digital market segmentation? A comparative analysis of supervised and unsupervised learning algorithms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_817ce29ad23c31782110",
+        "title": "Digital Single Market and the EU Competition Regime: An Explanation of Policy Change",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aafd8eefaf61d4631a07",
+        "title": "Digital Servitization and Business Model Innovation in SMEs: A Model to Escape From Market Disruption",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bde269ed2286da30893",
+        "title": "NFTs – A Game Changer or a Bubble in the Digital Market?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ceb63469cc8aa44a13f",
+        "title": "‘Super-apps’ and the Digital Markets Act",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1d02530c9b34fd94808",
+        "title": "The EU Digital Markets Act (DMA): A Competition Hand in a Regulatory Glove [OLD VERSION]",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7697aa77df565e22be33",
+        "title": "From Market Liberalism to Public Intervention: Digital Sovereignty and Changing European Union Digital Single Market Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f38a782e3da7c56a8ca2",
+        "title": "Digital Markets: Upcoming Changes in Global and Domestic Jurisprudence",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8066e7a417cfee93bbc",
+        "title": "Digital Work in the Planetary Market",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2da2b019a61248e2589c",
+        "title": "Competition Policy in Digital Markets in Africa",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bb544c5947191e5abf2b",
+        "title": "Employability skills: Profiling data scientists in the digital labour market",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97ae6e0f7f57016879b2",
+        "title": "Breakups of Digital Gatekeepers under the Digital Markets Act: Three Strikes and You’re Out?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7daa23b73a35a3f9ab93",
+        "title": "Regulation (EU) 2022/1925 of the European Parliament and of the Council of 14 September 2022 on contestable and fair markets in the digital sector and amending Directives (EU) 2019/1937 and (EU) 2020/1828 (Digital Markets Act)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cdb379471689b03ffc6",
+        "title": "The complementary nature of the Digital Markets Act and the EU antitrust rules",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8af693fceaaa15d0d671",
+        "title": "A strategic IT policy implementation model for enhancing customer satisfaction in digital markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1b3a6dbfdf1b1cd12913",
+        "title": "Article: The Digital Markets Act and the Whack-A-Mole Challenge",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a733bbe76be3d87dc7d6",
+        "title": "Discussing The Legitimacy of Digital Market Surveillance",
+        "reasons": [
+          "missing_source_title",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9737861d2f5da497266c",
+        "title": "Marketization as a Catalyst: Understanding the Impact of Digital Economies on Green Innovation in Mainland China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_19c6be28d3498c56d58a",
+        "title": "Regulating Gatekeeper Artificial Intelligence and Data: Transparency, Access and Fairness under the Digital Markets Act, the General Data Protection Regulation and Beyond",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1cd2bd9f36f59bdcc9f0",
+        "title": "Enhancing international marketing capability and export performance of emerging market SMEs in crises: strategic flexibility and digital technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc055d734466d8fa34ce",
+        "title": "Does digitalization spur global value chain participation? Firm-level evidence from emerging markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a974b90634fda8e7f249",
+        "title": "The challenges for private competition law enforcement concerning anticompetitive conducts in digital markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ae811dfebe1dd57a9ca",
+        "title": "Government Attention, Market Competition and Firm Digital Transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3fb839f344bec139ff82",
+        "title": "The Digital Markets Act: How Does it Compare with Competition Law?",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e53df3de5e2e0b1920a0",
+        "title": "Enforcing the Digital Markets Act: Institutional Choices, Compliance, and Antitrust",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_df0e4a7b723458e16e2f",
+        "title": "Traditional Market Management Model Based on Digital Marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6be0ae3fc944fe557c35",
+        "title": "Drivers and Barriers of Digital Market Integration in East Africa: A Case Study of Rwanda and Tanzania",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_563fd9d0bfb343f44bbf",
+        "title": "Compliance Principles for the Digital Markets Act",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_38a0f0c5d82ddeedbb9b",
+        "title": "Does market orientation promote enterprise digital innovation? Based on the survey data of China's digital core industries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e6ae5bd1ab40a2cd440f",
+        "title": "Digital readiness of small and medium enterprises in emerging markets: The construct, propositions, measurement, and implications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_015048ca494fa2ec5a4a",
+        "title": "Digital Empires",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3d24138eb6590182764",
+        "title": "Nascent entrepreneurs and challenges in the digital market in developing countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_016677299dd8da12d77a",
+        "title": "Tackling the digitalization challenge: how to benefit from digitalization in practice",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e804993c5785ff9ac7c8",
+        "title": "The interplay between the Digital Markets Act and the General Data Protection Regulation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_69c2940f4494f5d3a195",
+        "title": "Competence is power: How digital influencers impact buying decisions in B2B markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79829fe792af8c2f1dd4",
+        "title": "Digital transformation as the driving force for sustainable business performance: A moderated mediation model of market-driven business model innovation and digital leadership capabilities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0694d1b96a3fa7b52ba1",
+        "title": "Is there a Common Digital Market in the European Union? Implications for the European Digitalization Strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c36d6a1f85826dda51ad",
+        "title": "The Regulation of the Digital Markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2cbc44931f5764dd4b2e",
+        "title": "The Push to Regulate Digital Markets and Services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9081a5bd79afebddc2e0",
+        "title": "How digital technology improves the high-quality development of enterprises and capital markets: A liquidity perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7dd538483f8f148d4750",
+        "title": "European artificial intelligence policy as digital single market making",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b28f954abe28f6df02f7",
+        "title": "Digitalizing customer journeys in B2B markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_17610aa020d8117e9414",
+        "title": "Labor Market Soft Skills in the Context of Digitalization of the Economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3b6f73a62ee16472848",
+        "title": "RETRACTED: Determinants of user satisfaction with financial information systems in the digital transformation era: insights from emerging markets",
+        "reasons": [
+          "retraction_or_correction",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39b7479360728b2380ee",
+        "title": "Digital Transformation of SMEs: The Role of Entrepreneurial Persistence and Market Sensing Dynamic Capability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d91156c9717db16024b",
+        "title": "Fostering innovative and sustainable mass-market construction using digital fabrication with concrete",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_212204941b995b766dd0",
+        "title": "The Digital Markets Act and the Whack-A-Mole Challenge",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc707e7c0508c887124a",
+        "title": "Abuse of consumer trust in the digital market and the green market: the case of green washing in the Italian legal system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2e3e2f78d371e61809d9",
+        "title": "Digital transformation of education, the limitations and prospects of introducing the fourth industrial revolution asynchronous online learning in emerging markets",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_25a7ee3ae4d283d64643",
+        "title": "The effects of enterprises' attention to digital economy on innovation and cost control: Evidence from A-stock market of China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ec76623a5452a68feab",
+        "title": "Digitalization capability and sustainable performance in emerging markets: mediating roles of in/out-bound open innovation and coopetition strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_14504d482ae0e32c9b2a",
+        "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6775ba577acc95a8b367",
+        "title": "A typology of agricultural market information systems and its dimensions: Case studies of digital platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a91854de8f181c038594",
+        "title": "Digital Transformation in Healthcare: Technology Acceptance and Its Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a07f7487b458b337e74d",
+        "title": "Digital Twin Technology Challenges and Applications: A Comprehensive Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_700b3b279b9ebce93187",
+        "title": "Mastering digital transformation: The nexus between leadership, agility, and digital strategy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_715a4aa3a266dda44d6a",
+        "title": "System Usability Scale Benchmarking for Digital Health Apps: Meta-analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d2ffbdde1422704daeac",
+        "title": "Digital twins for health: a scoping review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1ba42393a0096cdd8136",
+        "title": "Applications of Explainable Artificial Intelligence in Finance—a systematic review of Finance, Information Systems, and Computer Science literature",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e77b1b091e071677adcd",
+        "title": "Digital innovations for sustainable and resilient agricultural systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_21115afc3414481ef841",
+        "title": "Exploring Human Resource Management Digital Transformation in the Digital Age",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dce9b1d1fcb9eeb81c87",
+        "title": "Digital transformation: A review and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ef7d15ffcbb90a691e1",
+        "title": "Information Systems Research",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2b33817f58aba706a89",
+        "title": "Digital technologies: tensions in privacy and data",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82b73e322bdb15eece27",
+        "title": "Digital Learning and Digital Institution in Higher Education",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2adcbb955fc3677497c0",
+        "title": "Interoperability of heterogeneous health information systems: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07e17f89d39f4d8aa6ef",
+        "title": "The effect of digital marketing capabilities on organizational ambidexterity of the information technology sector",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bbd768f55364c4014042",
+        "title": "Toward the Next Generation of Digitalization in Agriculture Based on Digital Twin Paradigm",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79872c1c8aa32d6f4697",
+        "title": "Digital twin framework for reconfigurable manufacturing systems (RMSs): design and simulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_388e1d970ab5906023dd",
+        "title": "Digital transformation, sustainability, and purpose in the multinational enterprise",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7fe70ece215858b666d",
+        "title": "Enabling flexible manufacturing system (FMS) through the applications of industry 4.0 technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_82a0b5d6757f12b58258",
+        "title": "Digitalization for sustainable buildings: Technologies, applications, potential, and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_50e8350cf3ae157d820d",
+        "title": "Can digital transformation promote enterprise performance? —From the perspective of public policy and innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c745117efea1f20548b9",
+        "title": "Higher Education Future in the Era of Digital Transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0ff06f02c36b073404bb",
+        "title": "Digital twin for smart manufacturing, A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8652935f416ed4901515",
+        "title": "Predictive maintenance using digital twins: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_28ed27907f61176536db",
+        "title": "A systematic review on digital literacy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b66f8f55c3f9fe57814",
+        "title": "From the 'Digital Divide' to 'Digital Inequality': Studying Internet Use as Penetration Increases",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81f478d59ce60defbeb8",
+        "title": "Progress on implementing and using electronic health record systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5685f9ea6c7614e2aa4d",
+        "title": "Impact of supply chain digitalization on supply chain resilience and performance: A multi-mediation model",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9231ff199370da0ff564",
+        "title": "Analysis of Cryptocurrency, Bitcoin and the Future",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2da5ee781b0b9e4d2942",
+        "title": "Perceived risks and vulnerabilities of employing digitalization and digital data in agriculture – Socially robust orientations from a transdisciplinary process",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7e520378c389fe68e370",
+        "title": "Central bank digital currency: Stability and information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c0eb73604b33a9d332b",
+        "title": "Digital Twins: State of the art theory and practice, challenges, and open research questions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a75fb24d02a7007078e0",
+        "title": "Future agricultural systems and the role of digitalization for achieving sustainability goals. A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_829eaddc4ef10c7b5892",
+        "title": "Digital future of luxury brands: Metaverse, digital fashion, and non‐fungible tokens",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3becf71eb27a3dbca849",
+        "title": "Soft skills and their importance in the labour market under the conditions of Industry 5.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5a2b674cc20b5322b868",
+        "title": "A review of Blockchain Technology applications for financial services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_adce32960082c3257b9d",
+        "title": "The impact of EU Digital Services Act and Digital Markets Act on health information systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_540b18adb2ec4792710c",
+        "title": "Resilience in healthcare systems: Cyber security and digital transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12be7cd01c70dc90ea8f",
+        "title": "Applications of Digital Twin across Industries: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_78ba16641119e26ffd79",
+        "title": "Additive manufacturing by digital light processing: a review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4da74ce4f1f2b4f9fa49",
+        "title": "The Metaverse: A new digital frontier for consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c122897bffd96af50bf",
+        "title": "Drivers of Digital Transformation in SMEs",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_200f9565286a96d2a2fa",
+        "title": "Digital Marketing Innovation and the Role of Information Systems in Enhancing MSME Market Expansion",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b1863ff51bac7979f949",
+        "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_15290f4525fb3e6d6442",
+        "title": "Digital workplace and organization performance: Moderating role of digital leadership capability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5623fc80bdbe739d894",
+        "title": "An overview of and recommendations for more accessible digital mental health services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b053fdbbbaa127b3e61",
+        "title": "Digital twin in healthcare: Recent updates and challenges",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c19854685893705447c",
+        "title": "Digital Sustainability in Information Systems Research: Conceptual Foundations and Future Directions",
+        "reasons": [
+          "wrong_document_type"
+        ]
+      },
+      {
+        "paper_id": "paper_6d5a817fd91ae21d6517",
+        "title": "A systematic review of worldwide causal and correlational evidence on digital media and democracy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c548f9ece063146ec615",
+        "title": "Digital transformation, for better or worse: a critical multi‐level research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f8cc70ece9b12a003a23",
+        "title": "Digital orientation, digital maturity, and digital intensity: determinants of financial success in digital transformation settings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06165b9a7c2c1432dca9",
+        "title": "Global Challenges to Public Health Care Systems during the COVID-19 Pandemic: A Review of Pandemic Measures and Problems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ada08915190ee9afc42e",
+        "title": "Role of Digital Transformation for Achieving Sustainability: Mediated Role of Stakeholders, Key Capabilities, and Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a2d50b656527d2608f98",
+        "title": "Enhancing Digital Innovation for the Sustainable Transformation of Manufacturing Industry: A Pressure-State-Response System Framework to Perceptions of Digital Green Innovation and Its Performance for Green and Intelligent Manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a4dc7454272182274bac",
+        "title": "The effect of digital transformation on firm performance: evidence from Swedish listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d26031fc97ec9e983c1",
+        "title": "A Case Study of a Digital Data Platform for the Agricultural Sector: A Valuable Decision Support System for Small Farmers",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d64ed80617fa81e2b81a",
+        "title": "Digital Twins for Managing Health Care Systems: Rapid Literature Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ae6c2fea841144d7d74",
+        "title": "Exploring the effect of digital transformation on Firms’ innovation performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e95d4d6a0562ac7655d0",
+        "title": "Application of digital technologies for ensuring agricultural productivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68bda2dfdc7328431068",
+        "title": "Deploying digital health tools within large, complex health systems: key considerations for adoption and implementation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5c035530956b04fea6ca",
+        "title": "A systematic review and research perspective on recommender systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a8d0b65b6b39556a64cf",
+        "title": "Dynamic digital capabilities and supply chain resilience: The role of government effectiveness",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31dd6823b432a5589189",
+        "title": "Energy System 4.0: Digitalization of the Energy Sector with Inclination towards Sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5f4c7d3a321ca7f48d2",
+        "title": "Digital Twins in the Automotive Industry: The Road toward Physical-Digital Convergence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a974b27371fd9d653c8f",
+        "title": "Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6544bfe8327688969e51",
+        "title": "Digital infrastructure and innovation: Digital divide or digital dividend?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_822657316a2b40ff00b8",
+        "title": "Can Digital Transformation Promote Green Technology Innovation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c88d986ae87199d8baff",
+        "title": "Sustainability through digital transformation: A systematic literature review for research guidance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b67ea7b78a7fc2292b67",
+        "title": "The digital divide in online education: Inequality in digital readiness of students and schools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b020b408b40c7c2b31bd",
+        "title": "The health digital twin to tackle cardiovascular disease—a review of an emerging interdisciplinary field",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_256fba0e2f89cebed81f",
+        "title": "Digital Transformation and Cybersecurity Challenges for Businesses Resilience: Issues and Recommendations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_83ce96878c917aad0e49",
+        "title": "Digital innovation and the effects of artificial intelligence on firms’ research and development – Automation or augmentation, exploration or exploitation?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77eefcea1444e54c852e",
+        "title": "The adoption of urban digital twins",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c39cc05a7ce73c41fece",
+        "title": "Digital twin of electric vehicle battery systems: Comprehensive review of the use cases, requirements, and platforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6423a01435250f3b6cfa",
+        "title": "Patients' perspectives on digital health tools",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_88969c34a0a4023ff18a",
+        "title": "A Review of Mobile Mapping Systems: From Sensors to Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f63b7bd2c98d4702da73",
+        "title": "Embracing supply chain digitalization and unphysicalization to enhance supply chain performance: a conceptual framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9384fc44c1764969262",
+        "title": "Digital twins in medicine",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_678778ecdfad1af24fdc",
+        "title": "Digital Twins in Agriculture: A State-of-the-art review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1bf5ed71c1edbda10fc0",
+        "title": "Internet of Things (IoT), Building Information Modeling (BIM), and Digital Twin (DT) in Construction Industry: A Review, Bibliometric, and Network Analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06c1f04440822e013914",
+        "title": "The Effect of Digital Transformation on the Pharmaceutical Sustainable Supply Chain Performance: The Mediating Role of Information Sharing and Traceability Using Structural Equation Modeling",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f4a686d1122f47c59432",
+        "title": "Managing the Logistic Activities of Agricultural Enterprises under Conditions of Digital Economy",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_770e35ed15c7c740ce8e",
+        "title": "Development and Transformation in Digital Marketing and Branding with Artificial Intelligence and Digital Technologies Dynamics in the Metaverse Universe",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c0886c4cc34e4c926282",
+        "title": "The promise of digital healthcare technologies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c175ed360999a0c42ec3",
+        "title": "Digital Twin for Civil Engineering Systems: An Exploratory Review for Distributed Sensing Updating",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7461dac552cbb3e59fb",
+        "title": "Achieving UN SDGs in Food Supply Chain Using Blockchain Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_09bf104ab34344600a0e",
+        "title": "Technology Roadmap for Flexible Sensors",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06c859975c74ae9a8b04",
+        "title": "Cybersecurity, Data Privacy and Blockchain: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4357ab0f37e32c513e6",
+        "title": "Digitalization, competition strategy and corporate innovation: Evidence from Chinese manufacturing listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_65bbf6e2e6cc1627b260",
+        "title": "Artificial Intelligence Potential in Higher Education Institutions Enhanced Learning Environment in Romania and Serbia",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c755e167a4e77fe87445",
+        "title": "Higher education students’ perceptions of ChatGPT: A global study of early reactions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3daf2175f3f8753584d1",
+        "title": "Digital transformation of peatland eco-innovations (‘Paludiculture’): Enabling a paradigm shift towards the real-time sustainable production of ‘green-friendly’ products and services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fcb0507bf9deaa1cd1eb",
+        "title": "Going digital: implications for firm value and performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_037dc5fedd3ea36f103a",
+        "title": "Fintech, Cryptocurrencies, and CBDC: Financial Structural Transformation in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c3fcbab8ad2881f2173",
+        "title": "Does the digital transformation of enterprises affect stock price crash risk?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9c048462b63a1f63f5e7",
+        "title": "Load Forecasting Models in Smart Grid Using Smart Meter Information: A Review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c30acded5441ebf8b379",
+        "title": "Digital finance and corporate ESG",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bade8e1b5c84e3f5d656",
+        "title": "The cloud, platforms, and digital twins—Enablers of the digital supply chain",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_87bb4a41b1f7baf7c3ed",
+        "title": "How does digital economy affect green total factor productivity? Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_34c891809263d05b84df",
+        "title": "Pricing Game and Blockchain for Electricity Data Trading in Low-Carbon Smart Energy Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c1b39c208388b7692158",
+        "title": "Digitalization transformation and ESG performance: Evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e72e071936870382cda2",
+        "title": "Digital innovation and performance of manufacturing firms: An affordance perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_317c371a5625d375a618",
+        "title": "Harnessing digital innovations for climate action and market access: Opportunities and constraints in the CWANA region",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_abda6a9a8dcf9f6ce59c",
+        "title": "The Age of Surveillance Capitalism",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b9323962767a31f278c8",
+        "title": "The Political Economy of Modern Capitalism",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5ad9242dba0388fb9a8",
+        "title": "The role of digital platforms in e-commerce food supply chain resilience under exogenous disruptions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_12e61c0272ad020a7247",
+        "title": "Exploring the potential of 3D scanning in Industry 4.0: An overview",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_40bebe0991b92d9ae5ca",
+        "title": "P2P energy trading: Blockchain-enabled P2P energy society with multi-scale flexibility services",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7f4b4a168f73c6d4d2d8",
+        "title": "The Role of Digital Technologies in the Transformation of Regional Models of Households’ Financial Behavior in the Conditions of the National Innovative Economy Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a30692985a160de03984",
+        "title": "IoT-BIM and blockchain integration for enhanced data traceability in offsite manufacturing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_37e850a1a9d5cc170b7e",
+        "title": "NFT luxury brand marketing in the metaverse: Leveraging blockchain‐certified NFTs to drive consumer behavior",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_31fba9d4980c68ee613d",
+        "title": "A theory‐driven machine learning system for financial disinformation detection",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7a3340d6bbb361ffc2ef",
+        "title": "Effects of Digital Finance on Green Innovation considering Information Asymmetry: An Empirical Study Based on Chinese Listed Firms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f84cd1b1f72c2f975e2d",
+        "title": "Big data management algorithms in artificial Internet of Things-based fintech",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7b95afe4b636de854ee",
+        "title": "Data Rules",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe35e9447ad2cdd667e6",
+        "title": "Digital new market creation by incumbent firms: A political lens on the effect of formalization on agility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_99a4cd095f9a4f087c7f",
+        "title": "How does digital inclusive finance affect economic resilience: Evidence from 285 cities in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4295e8b913669ce81bca",
+        "title": "Can digital technology promote market participation among smallholder farmers?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6c5fa3bbd4d002d32376",
+        "title": "Omnichannel Business",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_063044de174cfe9a99e4",
+        "title": "Towards the net zero carbon future: A review of blockchain‐enabled peer‐to‐peer carbon trading",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0a8b837ab3bf89791eba",
+        "title": "Does digital finance matter for corporate green investment? Evidence from heavily polluting industries in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c376436980ccb22805b4",
+        "title": "Firms' digitalization and stock price crash risk",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_94ff9598fb125243cc8c",
+        "title": "Marketing Strategies 4.0: Recent Trends and Technologies in Marketing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8a00b3af386d5b4899ed",
+        "title": "The merchants of meta: A research agenda to understand the future of retailing in the metaverse",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_254e1c1920fba3463c00",
+        "title": "Digital technology innovation and corporate resilience",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07c9e68e364f506e930b",
+        "title": "Firms' digitalization in manufacturing and the structure and direction of green innovation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6ada4dcc6b171fe54bc6",
+        "title": "Digitalization, sustainability, and coffee. Opportunities and challenges for agricultural development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fa5ce4c04a1d69d81c89",
+        "title": "The Non-Fungible Token (NFT) Market and Its Relationship with Bitcoin and Ethereum",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9773764972bce387dc9d",
+        "title": "Impact of the COVID-19 pandemic on the environment and socioeconomic viability: a sustainable production chain alternative",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_171029eddecb0c54176e",
+        "title": "Blockchain Technology and Artificial Intelligence Together: A Critical Review on Applications",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c0f70ff7cf41a2c4157",
+        "title": "An adoption-implementation framework of digital green knowledge to improve the performance of digital green innovation practices for industry 5.0",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7773ea2c4b8357b522a9",
+        "title": "Public data openness and corporate total factor productivity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_72eade7661a5497bd31e",
+        "title": "The digital economy, industrial structure upgrading, and carbon emission intensity —— empirical evidence from China's provinces",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edb4e66fa5fdc9cf8c4c",
+        "title": "The effect of digital supply chain on organizational performance: An empirical study in Malaysia manufacturing industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6da59dfc04efbcee56e0",
+        "title": "Designing Digital Market Offerings: How Digital Ventures Navigate the Tension Between Generative Digital Technology and the Current Environment",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "paper_id": "paper_9a07cbbaf20ef86556b2",
+        "title": "Digital technology-enabled dynamic capabilities and their impacts on firm performance: Evidence from the COVID-19 pandemic",
+        "reasons": [
+          "metadata_score_below_55"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Insurance Market Development, ICT Diffusion, and Economic Growth in Sub-Saharan Africa",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "R&amp;D, Innovation, and Firm Outcomes: Market Value and Performance Evidence from the G7",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Digital Infrastructure Development and Economic Growth: Firm-Level Evidence from Investment Efficiency",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Impact of Eco-Innovation, Economic Complexity, and Digitalization on the Circular Economy in Europe",
+        "journal": "科学学研究"
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Assessing the Contribution of Green Finance and Digital Economic Development to Regional Carbon Emission Mitigation",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "topic_digital_markets",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 330,
+      "deduplicated_count": 35,
+      "hard_gate_pass_count": 35,
+      "eligible_count": 2,
+      "boundary_count": 3,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital markets"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "digital markets information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(digital markets) OR (digital markets in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 30
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "digital markets",
+        "raw_count": 100,
+        "hard_gate_pass_count": 2,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "digital markets information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 6,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(digital markets) OR (digital markets in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 8,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_1ce66aece4630edc09ae",
+          "paper_211d74aa42fb884b2835"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "normalized_title_year_first_author",
+        "kept_paper_id": "paper_75b8aff445b5a5289129",
+        "incoming_paper_id": "paper_f59edcc7659676735614"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a3b6f73a62ee16472848",
+        "incoming_paper_id": "paper_a3b6f73a62ee16472848"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_016677299dd8da12d77a",
+        "incoming_paper_id": "paper_016677299dd8da12d77a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_769d4cb8dbed666b7b84",
+        "incoming_paper_id": "paper_769d4cb8dbed666b7b84"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bfa6f7d8c4abfbb87291",
+        "incoming_paper_id": "paper_bfa6f7d8c4abfbb87291"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c06838e85fb1d439b2a1",
+        "incoming_paper_id": "paper_c06838e85fb1d439b2a1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e27144de16cbf8a706ba",
+        "incoming_paper_id": "paper_e27144de16cbf8a706ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_55f348f2fbe86dee31d0",
+        "incoming_paper_id": "paper_55f348f2fbe86dee31d0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b739a26576060703a785",
+        "incoming_paper_id": "paper_b739a26576060703a785"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_6ef7d15ffcbb90a691e1",
+          "paper_2c19854685893705447c"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_66cae30d5f7b2c95e387",
+        "incoming_paper_id": "paper_66cae30d5f7b2c95e387"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fbd0fbe16ec6a134168",
+        "incoming_paper_id": "paper_2fbd0fbe16ec6a134168"
+      },
+      {
+        "action": "review_candidate",
+        "reason": "fuzzy_title_not_auto_merged",
+        "paper_ids": [
+          "paper_6ef7d15ffcbb90a691e1",
+          "paper_a392b283ed89624c43bb"
+        ]
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb544c5947191e5abf2b",
+        "incoming_paper_id": "paper_bb544c5947191e5abf2b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a3b6f73a62ee16472848",
+        "incoming_paper_id": "paper_a3b6f73a62ee16472848"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_95c25c3f505d26a3a4fd",
+        "incoming_paper_id": "paper_95c25c3f505d26a3a4fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9a07cbbaf20ef86556b2",
+        "incoming_paper_id": "paper_9a07cbbaf20ef86556b2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9231ff199370da0ff564",
+        "incoming_paper_id": "paper_9231ff199370da0ff564"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5a2b674cc20b5322b868",
+        "incoming_paper_id": "paper_5a2b674cc20b5322b868"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_eced1c75ad133cd3ee87",
+        "incoming_paper_id": "paper_eced1c75ad133cd3ee87"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2d6ddc3ebd95d52ab24b",
+        "incoming_paper_id": "paper_2d6ddc3ebd95d52ab24b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_769d4cb8dbed666b7b84",
+        "incoming_paper_id": "paper_769d4cb8dbed666b7b84"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1ba42393a0096cdd8136",
+        "incoming_paper_id": "paper_1ba42393a0096cdd8136"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bfa6f7d8c4abfbb87291",
+        "incoming_paper_id": "paper_bfa6f7d8c4abfbb87291"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_84502cc9b078c57ed8c7",
+        "incoming_paper_id": "paper_84502cc9b078c57ed8c7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d7fe70ece215858b666d",
+        "incoming_paper_id": "paper_d7fe70ece215858b666d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6775ba577acc95a8b367",
+        "incoming_paper_id": "paper_6775ba577acc95a8b367"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_82a0b5d6757f12b58258",
+        "incoming_paper_id": "paper_82a0b5d6757f12b58258"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_edd78bdc987bbf0af1e5",
+        "incoming_paper_id": "paper_edd78bdc987bbf0af1e5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_81f478d59ce60defbeb8",
+        "incoming_paper_id": "paper_81f478d59ce60defbeb8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c06838e85fb1d439b2a1",
+        "incoming_paper_id": "paper_c06838e85fb1d439b2a1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2fbd0fbe16ec6a134168",
+        "incoming_paper_id": "paper_2fbd0fbe16ec6a134168"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_74805bef5a3b2b1aa8a1",
+        "incoming_paper_id": "paper_74805bef5a3b2b1aa8a1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a4dc7454272182274bac",
+        "incoming_paper_id": "paper_a4dc7454272182274bac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e27144de16cbf8a706ba",
+        "incoming_paper_id": "paper_e27144de16cbf8a706ba"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_55f348f2fbe86dee31d0",
+        "incoming_paper_id": "paper_55f348f2fbe86dee31d0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b739a26576060703a785",
+        "incoming_paper_id": "paper_b739a26576060703a785"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2da5ee781b0b9e4d2942",
+        "incoming_paper_id": "paper_2da5ee781b0b9e4d2942"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_79872c1c8aa32d6f4697",
+        "incoming_paper_id": "paper_79872c1c8aa32d6f4697"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_66cae30d5f7b2c95e387",
+        "incoming_paper_id": "paper_66cae30d5f7b2c95e387"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_015048ca494fa2ec5a4a",
+        "incoming_paper_id": "paper_015048ca494fa2ec5a4a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_88969c34a0a4023ff18a",
+        "incoming_paper_id": "paper_88969c34a0a4023ff18a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1674c37db42a7104aca9",
+        "incoming_paper_id": "paper_1674c37db42a7104aca9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f4a686d1122f47c59432",
+        "incoming_paper_id": "paper_f4a686d1122f47c59432"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_69fd5557a26ad9f78f7e",
+        "incoming_paper_id": "paper_69fd5557a26ad9f78f7e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bb544c5947191e5abf2b",
+        "incoming_paper_id": "paper_bb544c5947191e5abf2b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_06c1f04440822e013914",
+        "incoming_paper_id": "paper_06c1f04440822e013914"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_4d26031fc97ec9e983c1",
+        "incoming_paper_id": "paper_4d26031fc97ec9e983c1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f63b7bd2c98d4702da73",
+        "incoming_paper_id": "paper_f63b7bd2c98d4702da73"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_22ac4122aa0db22b18ac",
+        "incoming_paper_id": "paper_22ac4122aa0db22b18ac"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a770fac35f8800e1a1fb",
+        "incoming_paper_id": "paper_a770fac35f8800e1a1fb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_aafd8eefaf61d4631a07",
+        "incoming_paper_id": "paper_aafd8eefaf61d4631a07"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f8066e7a417cfee93bbc",
+        "incoming_paper_id": "paper_f8066e7a417cfee93bbc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bc055d734466d8fa34ce",
+        "incoming_paper_id": "paper_bc055d734466d8fa34ce"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7697aa77df565e22be33",
+        "incoming_paper_id": "paper_7697aa77df565e22be33"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0ff06f02c36b073404bb",
+        "incoming_paper_id": "paper_0ff06f02c36b073404bb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c548f9ece063146ec615",
+        "incoming_paper_id": "paper_c548f9ece063146ec615"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_75b8aff445b5a5289129",
+        "incoming_paper_id": "paper_75b8aff445b5a5289129"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68798bf168ab6943f473",
+        "incoming_paper_id": "paper_68798bf168ab6943f473"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_822657316a2b40ff00b8",
+        "incoming_paper_id": "paper_822657316a2b40ff00b8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b28f954abe28f6df02f7",
+        "incoming_paper_id": "paper_b28f954abe28f6df02f7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5ae811dfebe1dd57a9ca",
+        "incoming_paper_id": "paper_5ae811dfebe1dd57a9ca"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1cd2bd9f36f59bdcc9f0",
+        "incoming_paper_id": "paper_1cd2bd9f36f59bdcc9f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_83ce96878c917aad0e49",
+        "incoming_paper_id": "paper_83ce96878c917aad0e49"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_817ce29ad23c31782110",
+        "incoming_paper_id": "paper_817ce29ad23c31782110"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "3f7d9157faf1446e96facac2bd02198d",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}

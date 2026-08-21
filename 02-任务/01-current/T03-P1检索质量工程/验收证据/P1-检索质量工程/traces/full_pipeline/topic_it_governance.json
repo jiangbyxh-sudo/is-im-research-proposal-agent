@@ -1,0 +1,2777 @@
+{
+  "direction_id": "topic_it_governance",
+  "labels": {
+    "zh": "IT治理",
+    "en": "IT governance"
+  },
+  "input": {
+    "selected_direction_id": "topic_it_governance",
+    "fine_grained_question": "",
+    "chinese_count": 10,
+    "english_count": 20,
+    "run_synthesis": false
+  },
+  "duration_ms": 16829.0,
+  "status": "ok",
+  "status_code": "RETRIEVAL_PARTIAL",
+  "state": "PAPERS_DISCOVERED",
+  "raw_count": 318,
+  "hard_gate_pass_count": 23,
+  "eligible_count": 2,
+  "boundary_count": 16,
+  "selected_count": 2,
+  "raw_target_met": true,
+  "eligible_target_met": false,
+  "retracted_in_final": 0,
+  "shortages": {
+    "zh": 10,
+    "en": 18
+  },
+  "provider_statuses": [
+    {
+      "provider": "openalex",
+      "attempt": 1,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "IT governance"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 2,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "IT governance information systems"
+    },
+    {
+      "provider": "openalex",
+      "attempt": 3,
+      "status": "ok",
+      "returned_rows": 100,
+      "query": "(IT governance) OR (IT governance in information systems)"
+    },
+    {
+      "provider": "semantic_scholar",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "core",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "unpaywall",
+      "status": "not_configured",
+      "reason": "optional_provider_opt_in_required"
+    },
+    {
+      "provider": "crossref",
+      "status": "RETRIEVAL_PARTIAL",
+      "returned_rows": 18
+    }
+  ],
+  "provider_rate_limited": false,
+  "cache_hit": false,
+  "zero_result_diagnosis": {
+    "causes": [
+      "language_coverage_gap"
+    ],
+    "evidence": [
+      "post-gate Chinese result count is zero"
+    ]
+  },
+  "score_config_version": "p1-metadata-score-1.0.0",
+  "api_response": {
+    "state": "PAPERS_DISCOVERED",
+    "status_code": "RETRIEVAL_PARTIAL",
+    "message_to_user": "P1多源检索完成：中文0/10篇、英文2/20篇；不足部分保持缺口。评分阈值尚未完成人工校准。",
+    "request": {
+      "selected_direction_id": "topic_it_governance",
+      "research_direction": "IT governance",
+      "fine_grained_question": null,
+      "chinese_count": 10,
+      "english_count": 20,
+      "derived_path": "top_five_subdirections",
+      "derived_path_label": "发现最近五年研究最多的五个小方向",
+      "popularity_window_years": 5,
+      "journal_pool_ids": [
+        "IS_CORE",
+        "DIGITAL_PLATFORM",
+        "ORG_STRATEGY",
+        "ECON_STRATEGY",
+        "SECURITY",
+        "ZH_IS_IM_CORE",
+        "ZH_ORG_INNOVATION",
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ]
+    },
+    "local_match": {
+      "label": "IT governance",
+      "aliases": [
+        "IT governance"
+      ],
+      "groups": [
+        "IS"
+      ],
+      "source_refs": [
+        "02_journals/IS_IM_Journal_Knowledge_Base.md:59"
+      ],
+      "knowledge_policy": "本地规则与写作范式优先精确匹配",
+      "direction_profile": {
+        "profile_version": "1.0.0-p1",
+        "direction_id": "topic_it_governance",
+        "labels": {
+          "zh": "IT治理",
+          "en": "IT governance"
+        },
+        "group_ids": [
+          "is"
+        ],
+        "synonyms": [
+          "IT治理",
+          "IT governance",
+          "IT governance in information systems"
+        ],
+        "boundaries": {
+          "include": [
+            "IT governance",
+            "information systems",
+            "empirical or theoretical research within IS/IM scope"
+          ],
+          "exclude": [
+            "clinical or biomedical-only research",
+            "pure hardware engineering without IS/IM phenomena"
+          ]
+        },
+        "provider_queries": {
+          "openalex": [
+            "IT governance",
+            "\"IT governance\" AND \"information systems\""
+          ],
+          "semantic_scholar": [
+            "IT governance",
+            "IT governance information systems"
+          ],
+          "crossref": [
+            "IT governance",
+            "IT治理"
+          ],
+          "dblp": [
+            "IT governance digital organizations"
+          ]
+        },
+        "topic_routes": {
+          "strategy": "search_then_topic_evidence",
+          "topic_search_terms": [
+            "IT governance",
+            "information systems",
+            "digital organizations"
+          ],
+          "openalex_topic_ids": [],
+          "status": "text_route_active; topic_ids_require_calibration"
+        },
+        "source_routes": {
+          "required": [
+            "openalex",
+            "crossref"
+          ],
+          "optional": [
+            "semantic_scholar",
+            "core",
+            "unpaywall"
+          ],
+          "licensed_optional": [
+            "scopus",
+            "web_of_science",
+            "cnki",
+            "wanfang"
+          ]
+        },
+        "journal_pool_ids": [
+          "IS_CORE",
+          "DIGITAL_PLATFORM",
+          "ORG_STRATEGY",
+          "ECON_STRATEGY",
+          "SECURITY",
+          "ZH_IS_IM_CORE",
+          "ZH_ORG_INNOVATION",
+          "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+          "PKU_CORE_2023_ORG_INNOVATION",
+          "PKU_CORE_2023_MANAGEMENT_DIRECT",
+          "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+        ],
+        "document_types": [
+          "journal-article"
+        ],
+        "fallback_queries": [
+          "IT governance information systems",
+          "(IT governance) OR (IT governance in information systems)"
+        ],
+        "coverage_targets": {
+          "raw_min": 20,
+          "eligible_min": 10,
+          "precision_at_20_min": 0.8
+        },
+        "source_refs": [
+          "02_journals/IS_IM_Journal_Knowledge_Base.md:59"
+        ]
+      }
+    },
+    "stages": [
+      {
+        "id": "catalog",
+        "label": "方向目录匹配",
+        "status": "complete"
+      },
+      {
+        "id": "scope",
+        "label": "IS/IM范围确认",
+        "status": "complete"
+      },
+      {
+        "id": "plan",
+        "label": "检索路径确定",
+        "status": "complete"
+      },
+      {
+        "id": "discovery",
+        "label": "动态论文检索",
+        "status": "complete"
+      },
+      {
+        "id": "synthesis",
+        "label": "五方向与研究空白",
+        "status": "pending"
+      }
+    ],
+    "next_allowed_actions": [
+      "run_synthesis",
+      "reset_request"
+    ],
+    "papers": [
+      {
+        "paper_id": "paper_d182e70576074ea16b4f",
+        "title": "Achieving strategic alignment between business and information technology with information technology governance: the role of commitment to principles and Top Leadership Support",
+        "abstract": null,
+        "authors": [
+          "Michelle René Lowry",
+          "Paul Benjamin Lowry",
+          "Sutirtha (“Suti”) Chatterjee",
+          "Gregory D. Moody",
+          "Vernon J. Richardson"
+        ],
+        "year": 2025,
+        "publication_date": "2025-07-04",
+        "published_date": "2025-07-04",
+        "language": "en",
+        "doi": "10.1080/0960085x.2024.2390998",
+        "url": "https://doi.org/10.1080/0960085x.2024.2390998",
+        "official_url": "https://doi.org/10.1080/0960085x.2024.2390998",
+        "source_title": "European Journal of Information Systems",
+        "journal": "European Journal of Information Systems",
+        "source_issns": [
+          "0960-085X",
+          "1476-9344"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 9,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "title_only",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_014",
+        "journal_ranking": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "CAS_SSCI_2025_ZONE2",
+          "IS_CORE"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 73.0,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 90.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 49.89,
+            "recency": 80.0,
+            "evidence_completeness": 25.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 73.0
+      },
+      {
+        "paper_id": "paper_47d1f82e3fc48ebbe00e",
+        "title": "When Your Thing Won’t Behave: Security Governance in the Internet of Things",
+        "abstract": "Abstract In the Internet of Things (IoT), interconnected smart things enable new products and services in cyber-physical systems. Yet, smart things not only inherit information technology (IT) security risks from their digital components, but they may also aggravate them through the use of technology platforms (TPs). In the context of the IoT, TPs describe a tangible (e.g., hardware) or intangible (e.g., software and standards) general-purpose technology that is shared between different models of smart things. While TPs are evolving rapidly owing to their functional and economic benefits, this is partly to the detriment of security, as several recent IoT security incidents demonstrate. We address this problem by formalizing the situation’s dynamics with an established risk quantification approach from platforms in the automotive industry, namely a Bernoulli mixture model. We outline and discuss the implications of relevant parameters for security risks of TP use in the IoT, i.e., correlation and heterogeneity, vulnerability probability and conformity costs, exploit probability and non-conformity costs, as well as TP connectivity. We argue that these parameters should be considered in IoT governance decisions and delineate prescriptive governance implications, identifying potential counter-measures at the individual, organizational, and regulatory levels.",
+        "authors": [
+          "Martin Brennecke",
+          "Gilbert Fridgen",
+          "Jan Jöhnk",
+          "Sven Radszuwill",
+          "Johannes Sedlmeir"
+        ],
+        "year": 2025,
+        "publication_date": "2025-08-01",
+        "published_date": "2025-08-01",
+        "language": "en",
+        "doi": "10.1007/s10796-024-10511-z",
+        "url": "https://doi.org/10.1007/s10796-024-10511-z",
+        "official_url": "https://doi.org/10.1007/s10796-024-10511-z",
+        "source_title": "Information Systems Frontiers",
+        "journal": "Information Systems Frontiers",
+        "source_issns": [
+          "1387-3326",
+          "1572-9419"
+        ],
+        "document_type": "journal-article",
+        "citation_count": 1,
+        "topics": [],
+        "external_ids": {},
+        "providers": [
+          "crossref"
+        ],
+        "metadata_source": "crossref",
+        "field_sources": {
+          "title": [
+            "crossref"
+          ],
+          "abstract": [
+            "crossref"
+          ],
+          "authors": [
+            "crossref"
+          ],
+          "year": [
+            "crossref"
+          ],
+          "doi": [
+            "crossref"
+          ],
+          "source_title": [
+            "crossref"
+          ],
+          "citation_count": [
+            "crossref"
+          ]
+        },
+        "integrity_status": "clear",
+        "is_correction": false,
+        "evidence_level": "abstract",
+        "fulltext_url": null,
+        "provider_payload_refs": [],
+        "journal_id": "journal_021",
+        "journal_ranking": [
+          "FMS_INT_B"
+        ],
+        "journal_pool_ids": [
+          "IS_CORE",
+          "PUBLIC_ADMIN"
+        ],
+        "source_qualified": true,
+        "verified_by": [
+          "local_journal_whitelist",
+          "crossref"
+        ],
+        "untrusted_text_isolated": true,
+        "checkpoint": {
+          "passed": true,
+          "reasons": [],
+          "version": "p1-hard-gate-1.0.0"
+        },
+        "score": {
+          "config_version": "p1-metadata-score-1.0.0",
+          "total": 71.41,
+          "band": "eligible",
+          "components": {
+            "semantic_relevance": 82.75,
+            "lexical_coverage": 75.0,
+            "source_quality": 85.0,
+            "field_year_normalized_impact": 15.02,
+            "recency": 80.0,
+            "evidence_completeness": 72.0,
+            "cross_source_agreement": 35.0
+          },
+          "weights": {
+            "semantic_relevance": 0.35,
+            "lexical_coverage": 0.15,
+            "source_quality": 0.15,
+            "field_year_normalized_impact": 0.1,
+            "recency": 0.1,
+            "evidence_completeness": 0.1,
+            "cross_source_agreement": 0.05
+          },
+          "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+          "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+          "threshold_calibration_status": "uncalibrated"
+        },
+        "relevance_score": 71.41
+      }
+    ],
+    "search_log": [
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "IT governance",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1458542,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:49.737563+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3094.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "IT governance information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 787776,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:52.855707+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3609.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "(IT governance) OR (IT governance in information systems)",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1458542,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T20:55:56.507390+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3672.0,
+          "authenticated": true,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Decision Support Systems",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "0167-9236",
+        "query": "IT governance",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 2,
+        "accepted_before_dedupe": 2,
+        "queried_at": "2026-08-21T20:56:02.796455+00:00",
+        "duration_ms": 1203.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1203.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "European Journal of Information Systems",
+        "language": "en",
+        "ranking_levels": [
+          "CAS_SSCI_2025_ZONE2",
+          "FMS_INT_B"
+        ],
+        "issn": "0960-085X",
+        "query": "IT governance",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 4,
+        "accepted_before_dedupe": 4,
+        "queried_at": "2026-08-21T20:56:04.008648+00:00",
+        "duration_ms": 1297.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1297.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "Information Systems Frontiers",
+        "language": "en",
+        "ranking_levels": [
+          "FMS_INT_B"
+        ],
+        "issn": "1387-3326",
+        "query": "IT governance",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 10,
+        "accepted_before_dedupe": 10,
+        "queried_at": "2026-08-21T20:56:05.291214+00:00",
+        "duration_ms": 1234.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1234.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "中国软科学",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1005-0566",
+        "query": "IT治理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 2,
+        "accepted_before_dedupe": 2,
+        "queried_at": "2026-08-21T20:56:00.373939+00:00",
+        "duration_ms": 1187.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1187.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      },
+      {
+        "provider": "Crossref",
+        "journal": "科学学研究",
+        "language": "zh",
+        "ranking_levels": [
+          "CSSCI_2025_2026_SOURCE",
+          "FMS_CN_T1",
+          "PKU_CORE_2023"
+        ],
+        "issn": "1003-2053",
+        "query": "IT治理",
+        "from_date": "2022-01-01",
+        "until_date": "2026-08-22",
+        "requested_rows": 10,
+        "returned_rows": 1,
+        "accepted_before_dedupe": 0,
+        "queried_at": "2026-08-21T20:56:01.558203+00:00",
+        "duration_ms": 1235.0,
+        "concurrency_policy": "crossref_public_pool",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 1235.0,
+          "polite_pool": false,
+          "rate_limit": 5.0,
+          "rate_interval_seconds": 1.0,
+          "retry_after_seconds": null
+        }
+      }
+    ],
+    "exclusion_log": [
+      {
+        "paper_id": "paper_cda879dcb23a2f974b9a",
+        "title": "Environmental, Social, and Governance (ESG) disclosure: A literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c51d430e02f8d3da382",
+        "title": "The Impact of ESG (Environmental, Social, and Governance) Considerations on Corporate Mergers and Acquisitions: Strategies for Value Creation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_156239c4be9d07bde8ff",
+        "title": "The impact of digital economy on energy transition across the globe: The mediating role of government governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62c9855763cc1d137db4",
+        "title": "Ethics and governance of trustworthy medical artificial intelligence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2aadea02bce583acf3ed",
+        "title": "Environmental, social, and governance (ESG) performance and financial outcomes: Analyzing the impact of ESG on financial performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cecc29fd9964c747308",
+        "title": "Responsible artificial intelligence governance: A review and research framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_de95a467a245add2853d",
+        "title": "Defining organizational AI governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e742f34a1575b619c9b7",
+        "title": "Democratic governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_542ce747724f32362963",
+        "title": "The influence of the country governance environment on corporate environmental, social and governance (ESG) performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c2aae5adcd07754e761",
+        "title": "Scaling of End-To-End Governance Risk Assessments for AI Systems (Practitioner Track)",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2bef22751fcf18d1a7fe",
+        "title": "Generative AI in healthcare: an implementation science informed translational path on application, integration and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_390fc0862ba2b7ba126a",
+        "title": "Public Management and Governance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_649f822bc74f094ef970",
+        "title": "Digital governance: A conceptual framework and research agenda",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_639d7c999a5394d68ca8",
+        "title": "Citizen participation in the governance of nature‐based solutions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b1b9f015dd8f4f6642e",
+        "title": "AI governance: a systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd331d917a3c272acfaf",
+        "title": "Handbook on Theories of Governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2c835459971ae306262a",
+        "title": "Democratic Governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f6e0eac14df8a1570bf8",
+        "title": "Governance of Nonprofit Organizations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2b34dbac42043962cc02",
+        "title": "Governance of Generative AI",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c29f8e608c9520684483",
+        "title": "Artificial intelligence governance: Ethical considerations and implications for social responsibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e74dc99bdcf7626ce179",
+        "title": "Corporate commitment to climate change: The effect of eco-innovation and climate governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_29b6f313682cd23b3bf6",
+        "title": "Environmental-, social-, and governance-related factors for business investment and sustainability: a scientometric review of global trends",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_832e057b6549884c8409",
+        "title": "Worldwide AI ethics: A review of 200 guidelines and recommendations for AI governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60ffff0e0a301f3a4ca1",
+        "title": "Anticipatory Innovation Governance Model in Finland",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bfba354a49a849d2c95b",
+        "title": "Data quantity governance for machine learning in materials science",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1a15e90a5ca2975cb725",
+        "title": "ESG controversies and corporate performance: The moderating effect of governance mechanisms and ESG practices",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0111bbe8b5c88a0c381b",
+        "title": "The structure and governance of venture-capital organizations",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5773cb33c16dcb489381",
+        "title": "Business environmental innovation and CO2 emissions: The moderating role of environmental governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4bace3ca614334d8137",
+        "title": "Platform governance at the margins: Social media creators’ experiences with algorithmic (in)visibility",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8b624a1b155f7cfd3943",
+        "title": "Does environmental, social, and governance performance move together with corporate green innovation in China?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a06743a5cd2bd597432b",
+        "title": "Critical mineral sustainable supply: Challenges and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d49efc7e3fa47b17cd05",
+        "title": "From environmental governance to governance for sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_800413e493a144e07cb2",
+        "title": "Global Encyclopedia of Public Administration, Public Policy, and Governance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a936fef8841ba262c06d",
+        "title": "The Oxford Handbook of AI Governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_59430dce65e14b6288bc",
+        "title": "Artificial Intelligence Governance For Businesses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd2743573b4f5599caa4",
+        "title": "Blockchain Technology and Smart Contracts in Decentralized Governance Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6eb40a6dccc293a51e77",
+        "title": "Public administration and politics meet turbulence: The search for robust governance responses",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5881f2132ce8b2ea19f0",
+        "title": "ENVIRONMENTAL, SOCIAL, AND GOVERNANCE (ESG) PRACTICE AND FIRM PERFORMANCE: AN INTERNATIONAL EVIDENCE",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1456d3383af3ad6a63fd",
+        "title": "Territory, Politics, Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fd142fd6da6d71fd3c5c",
+        "title": "Introduction: Embedding participatory governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2a429b1c2c02a13874c8",
+        "title": "Health Data Governance for the Digital Age",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_07200ca1a47b9ece7733",
+        "title": "Environmental, social, and governance ratings and financial performance: Evidence from the European food industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e487d02322ee8379f266",
+        "title": "Determinants of environmental social and governance (ESG) performance: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe9df2db55808d2d28bb",
+        "title": "The resource‐based view, stakeholder capitalism, ESG, and sustainable competitive advantage: The firm's embeddedness into ecology, society, and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_695ee1eec04a1ca590ab",
+        "title": "Worldwide Governance Indicators",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47fa8edc2c27b763d889",
+        "title": "UK Corporate Governance Code (2010)",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7c879729fce876e9e293",
+        "title": "Governance of artificial intelligence: A risk and guideline-based integrative framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_35789b773bb536f4d5df",
+        "title": "Digitalization and environment governance: does internet development reduce environmental pollution?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7133b1e9bdd559c16c3b",
+        "title": "Life, the Metaverse and Everything: An Overview of Privacy, Ethics, and Governance in Metaverse",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3307dece1ef504998fb3",
+        "title": "Corporate governance and carbon emissions performance: International evidence on curvilinear relationships",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2917660886196b909029",
+        "title": "The fate of accounting for public governance development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_96d93110fcad6a5af033",
+        "title": "Government environmental attention and carbon emissions governance: Firm-level evidence from China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_00a954153b53f66da8b4",
+        "title": "Renewable Governance: Good for the Environment?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fbfa2de3923fbd66f4ba",
+        "title": "Governing Corporate Social Responsibility Decoupling: The Effect of the Governance Committee on Corporate Social Responsibility Decoupling",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f9307ac5cbb9eccbd20b",
+        "title": "The Role of Blockchain in E-Governance and Decision-Making in Project and Program Management",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a66f22023ed0664d9a60",
+        "title": "The Logic of Governance in China",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be78cd17f6c09aaadaac",
+        "title": "Rethinking China’s urban governance: The role of the state in neighbourhoods, cities and regions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f26e4b7aee24ff561970",
+        "title": "Transforming Biodiversity Governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_edeafbe4573eeba07910",
+        "title": "Digital ecologies: Materialities, encounters, governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71268b12f84f828c41fb",
+        "title": "Artificial intelligence and education governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a0d0f4daab2f32413854",
+        "title": "Citizens, Elites, and the Legitimacy of Global Governance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32867e7c5cba835484db",
+        "title": "ESG controversies and governance: Evidence from the banking industry",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f5288c83207209e98266",
+        "title": "Environmental, social and governance ratings and firm performance: The moderating role of internal control quality",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3af22514cbca93b8be64",
+        "title": "The role of the external auditor in managing environmental, social, and governance (ESG) reputation risk",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9cd25002798fe9f80eeb",
+        "title": "MEWUJUDKAN GOOD GOVERNANCE MELALUI PELAYANAN PUBLIK",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_91007388f8fd92e04c60",
+        "title": "The role of Environmental, Social, and Governance (ESG) in predicting bank financial distress",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b270353c44ce0d840a6e",
+        "title": "Effective governance of circular economies: An international comparison",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b42ce21ae694909ffde6",
+        "title": "The role of environmental social and governance in achieving sustainable development goals: evidence from ASEAN countries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_debcf53805c70a6c3ecd",
+        "title": "The role of green financing in facilitating renewable energy transition in China: Perspectives from energy governance, environmental regulation, and market reforms",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_77f089d4f7f6526156e1",
+        "title": "Public governance, corporate governance and excessive ESG",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_13d003237fa1a2507bd5",
+        "title": "Navigating the Challenges of Environmental, Social, and Governance (ESG) Reporting: The Path to Broader Sustainable Development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8e1cf80ef332b4cf9345",
+        "title": "Environmental governance effects of local environmental protection expenditure in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4b8e275b781c6dfa9113",
+        "title": "Beyond Primacy: A Stakeholder Theory of Corporate Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3824b83912784366b932",
+        "title": "A systematic literature review on blockchain governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d58f5ddf97bb79018a51",
+        "title": "Global and regional governance of One Health and implications for global health security",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_51518c4a4d233a43a81b",
+        "title": "Tourism governance and enabling drivers for intensifying climate action",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2d0898f11d8aba750a61",
+        "title": "Metaverse governance: An empirical analysis of voting within Decentralized Autonomous Organizations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e7d0504e70217b36ac24",
+        "title": "The path to sustainable environment: Do environmental taxes and governance matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8ca75ecdeb82f7e70b1e",
+        "title": "Political governance in China’s state-owned enterprises",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e56c997893cdaa6e6cab",
+        "title": "Cyber governance studies in ensuring cybersecurity: an overview of cybersecurity governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d7c0a21ef6212e00d2ed",
+        "title": "The Worldwide Governance Indicators: Methodology and 2024 Update",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9a1253723e634e716c9",
+        "title": "Dynamics of aquaculture governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8245ea9c694ff7f8eb27",
+        "title": "Integration of Environmental, Social, and Governance (ESG) criteria: their impacts on corporate sustainability performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d598491847127e765528",
+        "title": "Global AI governance: barriers and pathways forward",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e38f3c4710d98e20a4d8",
+        "title": "Artificial intelligence technology, public trust, and effective governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61f02a44b1b346e220a3",
+        "title": "Building blocks of polycentric governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3d20746ce573a064216c",
+        "title": "The shadow banning controversy: perceived governance and algorithmic folklore",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_91cf96e65b2ab7cfe3d9",
+        "title": "Health data and governance developments in relation to COVID-19",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_faf380d72250066a357c",
+        "title": "Digital transformation, financing constraints, and corporate environmental, social, and governance performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6fc71a123b110efb0370",
+        "title": "Reinforcing green business strategies with Industry 4.0 and governance towards sustainability: Natural‐resource‐based view and dynamic capability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3400eb6ab0c442a2ade",
+        "title": "Corporate governance and financial reporting quality during the COVID-19 pandemic",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_652d6b5882051ad168f8",
+        "title": "AI and Global Governance: Modalities, Rationales, Tensions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_63a1d3a3bf655e7d116a",
+        "title": "Technologies Empowered Environmental, Social, and Governance (ESG): An Industry 4.0 Landscape",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_eb88b563059954a70564",
+        "title": "Sustainable board governance and environmental performance: European evidence",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f3e3ad697a115d48e8f7",
+        "title": "Von Government zu Governance",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_978a825ee3b6d28d9f51",
+        "title": "Corporate Social Responsibility and High-quality Development: Do Green Innovation, Environmental Investment and Corporate Governance Matter?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5587bbad2464a4adf4d9",
+        "title": "Does better environmental, social, and governance induce better corporate green innovation: The mediating role of financing constraints",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_68f1cb9ead122c469950",
+        "title": "Conceptualizing accountability as an integrated system of relationships, governance, and information",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_480929d639c8955492da",
+        "title": "Perceiving IT affordances through the lens of multi-identity goals in rural governance information system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_60e5fb434f515311de2d",
+        "title": "Analysing Groundwater Governance in Uzbekistan through the Lenses of Social-Ecological Systems and Informational Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_66e2de9e3320e98f5cd9",
+        "title": "Factors Influencing the Effectiveness of Information System Governance in Higher Education Institutions (HEIs) through a Partial Least Squares Structural Equation Modeling (PLS-SEM) Approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7b2564563d44c037fece",
+        "title": "Safe and just Earth system boundaries",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_bc81d5f862254cea8e91",
+        "title": "Information Systems Quality and Corporate Sustainability: Unpacking the Interplay of Financial Reporting, Artificial Intelligence, and Green Corporate Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d2bcc3acd31dc2fad0a",
+        "title": "A Review of the Role of Artificial Intelligence in Healthcare",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c5c0ff78be201967df21",
+        "title": "Data governance in healthcare information systems: A systematic literature review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e09a9033b22c5b92b8be",
+        "title": "AI explainability and governance in smart energy systems: A review",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b73b74ced6f37b36718b",
+        "title": "One country with two systems: The characteristics and development of higher education in the Guangdong–Hong Kong–Macau Greater Bay Area",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_74603c183a95293d2609",
+        "title": "Information system governance, FinTech maturity, and business continuity: A panel data study from EU Firms emerging economies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0d0d739efab97887e198",
+        "title": "South Africa's oceans and coastal and information management system towards improved ocean access, protection, and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8fea4dfc17a9bc08c8aa",
+        "title": "A multi-country review of the governance of hospital information systems interoperability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e0b80a175f3b89b1fc0f",
+        "title": "River Chief Information-Sharing System as a River Information Governance Approach in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_8d270eceb39d38a1d10a",
+        "title": "Enhancing Information Technology Governance in Universities: A Smart Chatbot System based on Information Technology Infrastructure Library",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_7d8499ecc1836a291a80",
+        "title": "Governance Audit Using COBIT 5 in CV. XYZ on Accounting Information System",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_e2cbbe1561b61009fb93",
+        "title": "Development of Energy and Mining Governance System Based on New-Generation Information Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_580c161f63f3ae6fd3f8",
+        "title": "Core model of information technology governance system design in local government",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1677639c0a703b452d80",
+        "title": "Building an Efficient Land Information System in Ghana: Insights from Land Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3c576054ad6ae2442e2d",
+        "title": "Exploration of Corporate Governance Challenges in Public Sector Information Systems- An Auditor General Perspective",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_86c71b19ab5259717c4a",
+        "title": "Exploring the Mediating Role of Information Security Culture in Enhancing Sustainable Practices Through Integrated Systems Infrastructure",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_be7265f632a2b5b3fe4d",
+        "title": "G20/OECD Principles of Corporate Governance 2023",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_08aa6f48cc73468a9aa6",
+        "title": "Evaluation of Governance in Information Systems Security to Minimize Information Technology Risks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a9e4e68f604bebf40271",
+        "title": "Information Systems Governance and Green Information Technologies",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c2b9d2ed87f31f8b2924",
+        "title": "Governance models of health information systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_71c468e89b0522ee808a",
+        "title": "Design of a framework of military defense system for governance of geoinformation",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3d277b94e153ee31512",
+        "title": "Development of sectorial and territorial information system to monitor GHG emissions as local and regional climate governance tool: Case study in Valencia (Spain)",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_53ec20ba717037ab5069",
+        "title": "Design Science Research towards ECHO Governance and Management Information System",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_81f478d59ce60defbeb8",
+        "title": "Progress on implementing and using electronic health record systems",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_47d048508c4d6a551943",
+        "title": "Use of the Delphi method to assess the potential role of enhanced information systems in Mediterranean groundwater management and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0166cf4a3de944a04ed5",
+        "title": "Hotspots and trends of environmental, social and governance (ESG) research: a bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_6a76e3b1225dd1dcdad5",
+        "title": "Critical transitions in the Amazon forest system",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_609b1e7412cf407ac38f",
+        "title": "From government to governance",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_489acec106588c3385a1",
+        "title": "Research on Risk Analysis and Governance Measures of Open-source Components of Information System in Transportation Industry",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90d6ccc4fb1a5cc10149",
+        "title": "Ethical and Governance Challenges of AI in Information Systems: Toward Responsible Adoption in Enterprise Systems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fe5f27db56a9c2548fad",
+        "title": "Capital structure and speed of adjustment: the impact of environmental, social and governance (ESG) performance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4468256ec291edfb79a9",
+        "title": "The Influence Of Accounting Information Systems, Internal Control Systems And The Implementation Of Good Corporate Governance In Efforts To Prevent FRAUD",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a974b27371fd9d653c8f",
+        "title": "Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9bbd14eb5705610488b7",
+        "title": "Greenwashing prevention in environmental, social, and governance (ESG) disclosures: A bibliometric analysis",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b0532533bdaf295e6090",
+        "title": "Corporate Governance, Sustainability, and Information Systems in the Aviation Sector, Volume I",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_b5aa2ee6ff63b3c3cf15",
+        "title": "Accounting information systems governance in a digital landscape: A comprehensive analysis of key factors and sectoral dynamics",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1e7fa749dd309537499a",
+        "title": "Does public participation promote environmental efficiency? Evidence from a quasi-natural experiment of environmental information disclosure in China",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_84d40ded38a5b85b89f0",
+        "title": "A Methodology for Evaluating and Improving Digital Governance Systems Based on Information Systems Success Models and Public Value Theory",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4d65e6437cc0aff5a9e1",
+        "title": "Transparency of AI in Healthcare as a Multilayered System of Accountabilities: Between Legal Requirements and Technical Limitations",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_fdecb59b411336ac8522",
+        "title": "A need for assurance: Do internal control systems integrate environmental, social, and governance factors?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3cf5cc16763dc80cb4d5",
+        "title": "FinTech governance and information systems audit: A bibliometric analysis of global research on ESG, risk management, and sustainable development",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_06165b9a7c2c1432dca9",
+        "title": "Global Challenges to Public Health Care Systems during the COVID-19 Pandemic: A Review of Pandemic Measures and Problems",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_c4a754875dd44261fabe",
+        "title": "Policy-Aware Secure Data Governance in Distributed Information Systems Using Explainable AI Models",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d5882e131730465d0c51",
+        "title": "The impacts of corporate governance on firms’ performance: from theories and approaches to empirical findings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_49e89bf724ae2665a0ac",
+        "title": "Evaluating the Implementation of Information Technology Audit Systems Within Tax Administration: A Risk Governance Perspective for Enhancing Digital Fiscal Integrity",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_ed06453b1d3d0d3888b3",
+        "title": "How does multi‐agent govern corporate greenwashing? A stakeholder engagement perspective from “common” to “collaborative” governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_39ed4bd5adaa4d99025a",
+        "title": "Ten facts about land systems for sustainability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_0c67864c642747a82195",
+        "title": "Resilience and coastal governance: knowledge and navigation between stability and transformation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d4336dc8f0bcb3950040",
+        "title": "Governance and sustainability of distributed continuum systems: a big data approach",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3b7d80197e1019367c12",
+        "title": "IT-supported accountability for sustainability in connected city societies: the interplay of integrated information systems and public corporate governance codes",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_97e90ecc95b1d2874b4a",
+        "title": "Surveillance Capitalism or Democracy? The Death Match of Institutional Orders and the Politics of Knowledge in Our Information Civilization",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5f95e9676433ce4f9044",
+        "title": "Ethical governance of artificial intelligence: An integrated analytical framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_848dae12570bc474dbb9",
+        "title": "Connecting the dots in trustworthy Artificial Intelligence: From AI principles, ethics, and key requirements to responsible AI systems and regulation",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_890622a5c3c300086f51",
+        "title": "Governance of Information Security and Its Role In Reducing the Risk of Electronic Accounting Information System",
+        "reasons": [
+          "missing_source_title",
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_324aa5f828e9fb878990",
+        "title": "Circular supply chain governance for sustainable fresh agricultural products: Minimizing food loss and utilizing agricultural waste",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_32093590b45912a13d23",
+        "title": "Corporate sustainability and analysts' earnings forecast accuracy: Evidence from environmental, social and governance ratings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d59e3a22621011a5a23d",
+        "title": "Governance Through Electronic-based Information System by Papua Provincial Government",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d845dd8a8a4bf0b4ba11",
+        "title": "Managing sustainability—Does the integration of environmental, social and governance key performance indicators in the internal management systems contribute to companies' environmental, social and governance performance?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_dc7bfbb2c3bc9a246423",
+        "title": "The entangled relationships between accounting information systems innovations and corporate governance dynamics: a performative perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_56886b36431d4b611fc8",
+        "title": "The Role of Corporate Governance on the Development of Accounting Information Systems in Jordanian Companies: Organizational Performance as a Moderating",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f31b40e5cc4dbb50cea5",
+        "title": "Aggregate Confusion: The Divergence of ESG Ratings",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_382542490054344491f7",
+        "title": "A comprehensive AI policy education framework for university teaching and learning",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9f3827ce0608acd8b912",
+        "title": "Federated learning for smart cities: A comprehensive survey",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d04558717f1f2d7c5f7a",
+        "title": "Impact of ESG performance on firm value and profitability",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_90a5086f8de1e1ca0037",
+        "title": "A review on barriers, drivers, and stakeholders towards the circular economy: The construction sector perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_61c158e85ed268c20e58",
+        "title": "Implementing Data-Driven Smart City Applications for Future Cities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_79077420e4e77812d7d5",
+        "title": "ESG and systemic risk",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_115efeac2c66843168b7",
+        "title": "Urban Digital Twin Challenges: A Systematic Review and Perspectives for Sustainable Smart Cities",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_967048332f7861d51dfd",
+        "title": "An update on the global disparities in kidney disease burden and care across world countries and regions",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_3260db02bb65e98a2d32",
+        "title": "Analysing the Water-Energy-Food Nexus From a Polycentric Governance Perspective: Conceptual and Methodological Framework",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa1646faf6c069db5f35",
+        "title": "Environmental, social and governance performance, corporate transparency, and credit rating: Some evidence from Chinese A-share listed companies",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_1233b59c4493eed8c60f",
+        "title": "Energy transition: Connotations, mechanisms and effects",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_4468153f26f806ec007d",
+        "title": "The impact of environmental disclosure and the quality of financial disclosure and IT adoption on firm performance: Does corporate governance ensure sustainability?",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_5ed44e1bbcffc4ad766c",
+        "title": "Digital technology-driven smart society governance mechanism and practice exploration",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_73e3028e27d5112e98dc",
+        "title": "What about investors? ESG analyses as tools for ethics-based AI auditing",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_f7461dac552cbb3e59fb",
+        "title": "Achieving UN SDGs in Food Supply Chain Using Blockchain Technology",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_93a7408cf3b989098cde",
+        "title": "Constructing a smart destination framework: A destination marketing organization perspective",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a3aeb41197ebd8d66e7f",
+        "title": "Environmental, social, and governance performance and corporate innovation novelty",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_62c1ff35505e95b255cd",
+        "title": "Operationalising Indigenous data sovereignty in environmental research and governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_d9b3554b8cbffca0f193",
+        "title": "Big Data-Driven Public Policy Decisions: Transformation Toward Smart Governance",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_aa0dae6959f9a5b27d7d",
+        "title": "Evaluating Environmental, Social, and Governance Criteria and Green Finance Investment Strategies Using Fuzzy AHP and Fuzzy WASPAS",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9d5cafad56b4ea9a07cc",
+        "title": "Delivering for youth: How governments can put young people at the centre of the recovery",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_9ac814550d91bddad4ef",
+        "title": "Building a Secure Platform for Digital Governance Interoperability and Data Exchange Using Blockchain and Deep Learning-Based Frameworks",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_2fb5c9f6ed5cd455490b",
+        "title": "Trust in Fintech: Risk, Governance, and Continuance Intention",
+        "reasons": [
+          "source_not_qualified"
+        ]
+      },
+      {
+        "paper_id": "paper_a5c706cb9d58d83ec266",
+        "title": "Building Trust and Reinforcing Democracy",
+        "reasons": [
+          "wrong_document_type",
+          "source_not_qualified"
+        ]
+      },
+      {
+        "reason": "relevance_below_threshold",
+        "title": "Can Generative AI Improve Corporate Values, Employee Perceptions, and Organizational Practices? A Human-Centric Case Study of Project Management SMEs in Indonesia",
+        "journal": "科学学研究"
+      }
+    ],
+    "shortages": {
+      "zh": 10,
+      "en": 18
+    },
+    "coverage_audit": {
+      "direction_id": "topic_it_governance",
+      "profile_version": "1.0.0-p1",
+      "raw_count": 318,
+      "deduplicated_count": 23,
+      "hard_gate_pass_count": 23,
+      "eligible_count": 2,
+      "boundary_count": 16,
+      "selected_count": 2,
+      "retracted_in_final": 0,
+      "targets": {
+        "raw_min": 20,
+        "eligible_min": 10,
+        "precision_at_20_min": 0.8
+      }
+    },
+    "provider_statuses": [
+      {
+        "provider": "openalex",
+        "attempt": 1,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "IT governance"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 2,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "IT governance information systems"
+      },
+      {
+        "provider": "openalex",
+        "attempt": 3,
+        "status": "ok",
+        "returned_rows": 100,
+        "query": "(IT governance) OR (IT governance in information systems)"
+      },
+      {
+        "provider": "semantic_scholar",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "core",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "unpaywall",
+        "status": "not_configured",
+        "reason": "optional_provider_opt_in_required"
+      },
+      {
+        "provider": "crossref",
+        "status": "RETRIEVAL_PARTIAL",
+        "returned_rows": 18
+      }
+    ],
+    "expansion_log": [
+      {
+        "attempt": 1,
+        "provider": "openalex",
+        "query": "IT governance",
+        "raw_count": 100,
+        "hard_gate_pass_count": 3,
+        "trigger": "initial"
+      },
+      {
+        "attempt": 2,
+        "provider": "openalex",
+        "query": "IT governance information systems",
+        "raw_count": 200,
+        "hard_gate_pass_count": 8,
+        "trigger": "coverage_below_target"
+      },
+      {
+        "attempt": 3,
+        "provider": "openalex",
+        "query": "(IT governance) OR (IT governance in information systems)",
+        "raw_count": 300,
+        "hard_gate_pass_count": 11,
+        "trigger": "coverage_below_target"
+      }
+    ],
+    "dedupe_log": [
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de95a467a245add2853d",
+        "incoming_paper_id": "paper_de95a467a245add2853d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3c51d430e02f8d3da382",
+        "incoming_paper_id": "paper_3c51d430e02f8d3da382"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62c9855763cc1d137db4",
+        "incoming_paper_id": "paper_62c9855763cc1d137db4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2a429b1c2c02a13874c8",
+        "incoming_paper_id": "paper_2a429b1c2c02a13874c8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6eb40a6dccc293a51e77",
+        "incoming_paper_id": "paper_6eb40a6dccc293a51e77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_91cf96e65b2ab7cfe3d9",
+        "incoming_paper_id": "paper_91cf96e65b2ab7cfe3d9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd2743573b4f5599caa4",
+        "incoming_paper_id": "paper_fd2743573b4f5599caa4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_639d7c999a5394d68ca8",
+        "incoming_paper_id": "paper_639d7c999a5394d68ca8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e38f3c4710d98e20a4d8",
+        "incoming_paper_id": "paper_e38f3c4710d98e20a4d8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b1b9f015dd8f4f6642e",
+        "incoming_paper_id": "paper_7b1b9f015dd8f4f6642e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c29f8e608c9520684483",
+        "incoming_paper_id": "paper_c29f8e608c9520684483"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_649f822bc74f094ef970",
+        "incoming_paper_id": "paper_649f822bc74f094ef970"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c813490689fa4027865e",
+        "incoming_paper_id": "paper_c813490689fa4027865e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2b34dbac42043962cc02",
+        "incoming_paper_id": "paper_2b34dbac42043962cc02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_800413e493a144e07cb2",
+        "incoming_paper_id": "paper_800413e493a144e07cb2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e487d02322ee8379f266",
+        "incoming_paper_id": "paper_e487d02322ee8379f266"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e74dc99bdcf7626ce179",
+        "incoming_paper_id": "paper_e74dc99bdcf7626ce179"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29b6f313682cd23b3bf6",
+        "incoming_paper_id": "paper_29b6f313682cd23b3bf6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bfba354a49a849d2c95b",
+        "incoming_paper_id": "paper_bfba354a49a849d2c95b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe9df2db55808d2d28bb",
+        "incoming_paper_id": "paper_fe9df2db55808d2d28bb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1a15e90a5ca2975cb725",
+        "incoming_paper_id": "paper_1a15e90a5ca2975cb725"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07200ca1a47b9ece7733",
+        "incoming_paper_id": "paper_07200ca1a47b9ece7733"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5773cb33c16dcb489381",
+        "incoming_paper_id": "paper_5773cb33c16dcb489381"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_13d003237fa1a2507bd5",
+        "incoming_paper_id": "paper_13d003237fa1a2507bd5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3307dece1ef504998fb3",
+        "incoming_paper_id": "paper_3307dece1ef504998fb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f26e4b7aee24ff561970",
+        "incoming_paper_id": "paper_f26e4b7aee24ff561970"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f9307ac5cbb9eccbd20b",
+        "incoming_paper_id": "paper_f9307ac5cbb9eccbd20b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00a954153b53f66da8b4",
+        "incoming_paper_id": "paper_00a954153b53f66da8b4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca377659765cceb1fca1",
+        "incoming_paper_id": "paper_ca377659765cceb1fca1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2917660886196b909029",
+        "incoming_paper_id": "paper_2917660886196b909029"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8ca75ecdeb82f7e70b1e",
+        "incoming_paper_id": "paper_8ca75ecdeb82f7e70b1e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_de95a467a245add2853d",
+        "incoming_paper_id": "paper_de95a467a245add2853d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9d2bcc3acd31dc2fad0a",
+        "incoming_paper_id": "paper_9d2bcc3acd31dc2fad0a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_cda879dcb23a2f974b9a",
+        "incoming_paper_id": "paper_cda879dcb23a2f974b9a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3c51d430e02f8d3da382",
+        "incoming_paper_id": "paper_3c51d430e02f8d3da382"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2a429b1c2c02a13874c8",
+        "incoming_paper_id": "paper_2a429b1c2c02a13874c8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_6eb40a6dccc293a51e77",
+        "incoming_paper_id": "paper_6eb40a6dccc293a51e77"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_62c9855763cc1d137db4",
+        "incoming_paper_id": "paper_62c9855763cc1d137db4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e38f3c4710d98e20a4d8",
+        "incoming_paper_id": "paper_e38f3c4710d98e20a4d8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_91cf96e65b2ab7cfe3d9",
+        "incoming_paper_id": "paper_91cf96e65b2ab7cfe3d9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e742f34a1575b619c9b7",
+        "incoming_paper_id": "paper_e742f34a1575b619c9b7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2aadea02bce583acf3ed",
+        "incoming_paper_id": "paper_2aadea02bce583acf3ed"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_156239c4be9d07bde8ff",
+        "incoming_paper_id": "paper_156239c4be9d07bde8ff"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_b73b74ced6f37b36718b",
+        "incoming_paper_id": "paper_b73b74ced6f37b36718b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_639d7c999a5394d68ca8",
+        "incoming_paper_id": "paper_639d7c999a5394d68ca8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_390fc0862ba2b7ba126a",
+        "incoming_paper_id": "paper_390fc0862ba2b7ba126a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2bef22751fcf18d1a7fe",
+        "incoming_paper_id": "paper_2bef22751fcf18d1a7fe"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_be7265f632a2b5b3fe4d",
+        "incoming_paper_id": "paper_be7265f632a2b5b3fe4d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9cecc29fd9964c747308",
+        "incoming_paper_id": "paper_9cecc29fd9964c747308"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e09a9033b22c5b92b8be",
+        "incoming_paper_id": "paper_e09a9033b22c5b92b8be"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_542ce747724f32362963",
+        "incoming_paper_id": "paper_542ce747724f32362963"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2c835459971ae306262a",
+        "incoming_paper_id": "paper_2c835459971ae306262a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_609b1e7412cf407ac38f",
+        "incoming_paper_id": "paper_609b1e7412cf407ac38f"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0166cf4a3de944a04ed5",
+        "incoming_paper_id": "paper_0166cf4a3de944a04ed5"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ed06453b1d3d0d3888b3",
+        "incoming_paper_id": "paper_ed06453b1d3d0d3888b3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_68f1cb9ead122c469950",
+        "incoming_paper_id": "paper_68f1cb9ead122c469950"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3c2aae5adcd07754e761",
+        "incoming_paper_id": "paper_3c2aae5adcd07754e761"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_649f822bc74f094ef970",
+        "incoming_paper_id": "paper_649f822bc74f094ef970"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0111bbe8b5c88a0c381b",
+        "incoming_paper_id": "paper_0111bbe8b5c88a0c381b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_800413e493a144e07cb2",
+        "incoming_paper_id": "paper_800413e493a144e07cb2"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9bbd14eb5705610488b7",
+        "incoming_paper_id": "paper_9bbd14eb5705610488b7"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd59157bacd29596ebc9",
+        "incoming_paper_id": "paper_fd59157bacd29596ebc9"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_7b1b9f015dd8f4f6642e",
+        "incoming_paper_id": "paper_7b1b9f015dd8f4f6642e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c813490689fa4027865e",
+        "incoming_paper_id": "paper_c813490689fa4027865e"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe5f27db56a9c2548fad",
+        "incoming_paper_id": "paper_fe5f27db56a9c2548fad"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e487d02322ee8379f266",
+        "incoming_paper_id": "paper_e487d02322ee8379f266"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_2b34dbac42043962cc02",
+        "incoming_paper_id": "paper_2b34dbac42043962cc02"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_324aa5f828e9fb878990",
+        "incoming_paper_id": "paper_324aa5f828e9fb878990"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd331d917a3c272acfaf",
+        "incoming_paper_id": "paper_fd331d917a3c272acfaf"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_53347828224055a1b955",
+        "incoming_paper_id": "paper_53347828224055a1b955"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_c29f8e608c9520684483",
+        "incoming_paper_id": "paper_c29f8e608c9520684483"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_f6e0eac14df8a1570bf8",
+        "incoming_paper_id": "paper_f6e0eac14df8a1570bf8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_0c67864c642747a82195",
+        "incoming_paper_id": "paper_0c67864c642747a82195"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5f95e9676433ce4f9044",
+        "incoming_paper_id": "paper_5f95e9676433ce4f9044"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1e7fa749dd309537499a",
+        "incoming_paper_id": "paper_1e7fa749dd309537499a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_832e057b6549884c8409",
+        "incoming_paper_id": "paper_832e057b6549884c8409"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_e74dc99bdcf7626ce179",
+        "incoming_paper_id": "paper_e74dc99bdcf7626ce179"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_695ee1eec04a1ca590ab",
+        "incoming_paper_id": "paper_695ee1eec04a1ca590ab"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_29b6f313682cd23b3bf6",
+        "incoming_paper_id": "paper_29b6f313682cd23b3bf6"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_bfba354a49a849d2c95b",
+        "incoming_paper_id": "paper_bfba354a49a849d2c95b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_32093590b45912a13d23",
+        "incoming_paper_id": "paper_32093590b45912a13d23"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d5882e131730465d0c51",
+        "incoming_paper_id": "paper_d5882e131730465d0c51"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60ffff0e0a301f3a4ca1",
+        "incoming_paper_id": "paper_60ffff0e0a301f3a4ca1"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_81f478d59ce60defbeb8",
+        "incoming_paper_id": "paper_81f478d59ce60defbeb8"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_71c468e89b0522ee808a",
+        "incoming_paper_id": "paper_71c468e89b0522ee808a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a06743a5cd2bd597432b",
+        "incoming_paper_id": "paper_a06743a5cd2bd597432b"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_97e90ecc95b1d2874b4a",
+        "incoming_paper_id": "paper_97e90ecc95b1d2874b4a"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d4bace3ca614334d8137",
+        "incoming_paper_id": "paper_d4bace3ca614334d8137"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_07200ca1a47b9ece7733",
+        "incoming_paper_id": "paper_07200ca1a47b9ece7733"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1a15e90a5ca2975cb725",
+        "incoming_paper_id": "paper_1a15e90a5ca2975cb725"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_8b624a1b155f7cfd3943",
+        "incoming_paper_id": "paper_8b624a1b155f7cfd3943"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_d49efc7e3fa47b17cd05",
+        "incoming_paper_id": "paper_d49efc7e3fa47b17cd05"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd2743573b4f5599caa4",
+        "incoming_paper_id": "paper_fd2743573b4f5599caa4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5773cb33c16dcb489381",
+        "incoming_paper_id": "paper_5773cb33c16dcb489381"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fd142fd6da6d71fd3c5c",
+        "incoming_paper_id": "paper_fd142fd6da6d71fd3c5c"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_3307dece1ef504998fb3",
+        "incoming_paper_id": "paper_3307dece1ef504998fb3"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_00a954153b53f66da8b4",
+        "incoming_paper_id": "paper_00a954153b53f66da8b4"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_59430dce65e14b6288bc",
+        "incoming_paper_id": "paper_59430dce65e14b6288bc"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_a936fef8841ba262c06d",
+        "incoming_paper_id": "paper_a936fef8841ba262c06d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_35789b773bb536f4d5df",
+        "incoming_paper_id": "paper_35789b773bb536f4d5df"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_9cd25002798fe9f80eeb",
+        "incoming_paper_id": "paper_9cd25002798fe9f80eeb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_fe9df2db55808d2d28bb",
+        "incoming_paper_id": "paper_fe9df2db55808d2d28bb"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_1456d3383af3ad6a63fd",
+        "incoming_paper_id": "paper_1456d3383af3ad6a63fd"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_60e5fb434f515311de2d",
+        "incoming_paper_id": "paper_60e5fb434f515311de2d"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_5881f2132ce8b2ea19f0",
+        "incoming_paper_id": "paper_5881f2132ce8b2ea19f0"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_47fa8edc2c27b763d889",
+        "incoming_paper_id": "paper_47fa8edc2c27b763d889"
+      },
+      {
+        "action": "merged",
+        "reason": "doi",
+        "kept_paper_id": "paper_ca377659765cceb1fca1",
+        "incoming_paper_id": "paper_ca377659765cceb1fca1"
+      }
+    ],
+    "zero_result_diagnosis": {
+      "causes": [
+        "language_coverage_gap"
+      ],
+      "evidence": [
+        "post-gate Chinese result count is zero"
+      ]
+    },
+    "score_config_version": "p1-metadata-score-1.0.0",
+    "synthesis_job_id": "daeb80751dda45039a11197fa391810a",
+    "synthesis_status": "SYNTHESIS_QUEUED",
+    "synthesis_message": "论文已返回，五方向与研究空白将在下一阶段单独综合。",
+    "top_subdirections": [],
+    "gap_candidates": [],
+    "synthesis_limitations": [],
+    "synthesis_audit": {}
+  }
+}
