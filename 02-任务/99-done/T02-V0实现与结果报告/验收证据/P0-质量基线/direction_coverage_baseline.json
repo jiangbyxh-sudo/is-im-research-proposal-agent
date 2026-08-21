@@ -20,7 +20,7 @@
     {
       "case_id": "FIX-COVERAGE-001",
       "trace_id": "trace_6e6f13d8a30d4c18a965d28e353d6829",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-001.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-001.json",
       "direction_id": "technology_adoption",
       "label": "技术与AI采纳",
       "query": "技术与AI采纳",
@@ -37,7 +37,7 @@
     {
       "case_id": "FIX-COVERAGE-002",
       "trace_id": "trace_a0a7132db46142b397b6e9bb9f398371",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-002.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-002.json",
       "direction_id": "human_ai_interaction",
       "label": "人机交互",
       "query": "人机交互",
@@ -54,7 +54,7 @@
     {
       "case_id": "FIX-COVERAGE-003",
       "trace_id": "trace_79eb096787894308a6b3924aafbfe3c3",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-003.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-003.json",
       "direction_id": "platform_governance",
       "label": "平台治理",
       "query": "平台治理",
@@ -71,7 +71,7 @@
     {
       "case_id": "FIX-COVERAGE-004",
       "trace_id": "trace_e9dd5b4ba88f4affb0f9085db41cbdc1",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-004.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-004.json",
       "direction_id": "topic_digital_transformation",
       "label": "digital transformation",
       "query": "digital transformation",
@@ -88,7 +88,7 @@
     {
       "case_id": "FIX-COVERAGE-005",
       "trace_id": "trace_2d60d3a9cafa4ae5b245e0423815ec49",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-005.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-005.json",
       "direction_id": "topic_algorithmic_management",
       "label": "algorithmic management",
       "query": "algorithmic management",
@@ -105,7 +105,7 @@
     {
       "case_id": "FIX-COVERAGE-006",
       "trace_id": "trace_87119b633ce9414188b6400fd7b43adc",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-006.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-006.json",
       "direction_id": "social_media",
       "label": "社交媒体",
       "query": "社交媒体",
@@ -122,7 +122,7 @@
     {
       "case_id": "FIX-COVERAGE-007",
       "trace_id": "trace_9305a89b648749fc95e88895b8f34319",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-007.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-007.json",
       "direction_id": "topic_digital_markets",
       "label": "digital markets",
       "query": "digital markets",
@@ -139,7 +139,7 @@
     {
       "case_id": "FIX-COVERAGE-008",
       "trace_id": "trace_a59f43885e6b4d2cbc2b43326ea56413",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-008.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-008.json",
       "direction_id": "topic_privacy_security",
       "label": "privacy / security",
       "query": "privacy / security",
@@ -156,7 +156,7 @@
     {
       "case_id": "FIX-COVERAGE-009",
       "trace_id": "trace_8c30f00d160941b1902a32888b7bedf7",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-009.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-009.json",
       "direction_id": "topic_it_governance",
       "label": "IT governance",
       "query": "IT governance",
@@ -173,7 +173,7 @@
     {
       "case_id": "FIX-COVERAGE-010",
       "trace_id": "trace_ae95b83764714c1295dccd1bf4f990bb",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-010.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-010.json",
       "direction_id": "topic_digital_innovation",
       "label": "digital innovation",
       "query": "digital innovation",
@@ -190,7 +190,7 @@
     {
       "case_id": "FIX-COVERAGE-011",
       "trace_id": "trace_c684200d17ca4a0f9ce113b910e5fce8",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-011.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-011.json",
       "direction_id": "topic_technology_use",
       "label": "technology use",
       "query": "technology use",
@@ -207,7 +207,7 @@
     {
       "case_id": "FIX-COVERAGE-012",
       "trace_id": "trace_3d60be46d86c4cc38d17827697e6cda5",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-012.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-012.json",
       "direction_id": "topic_digital_strategy",
       "label": "digital strategy",
       "query": "digital strategy",
@@ -224,7 +224,7 @@
     {
       "case_id": "FIX-COVERAGE-013",
       "trace_id": "trace_c23b5b53ec954f3d9ec67be3973cb385",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-013.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-013.json",
       "direction_id": "topic_平台经济",
       "label": "平台经济",
       "query": "平台经济",
@@ -241,7 +241,7 @@
     {
       "case_id": "FIX-COVERAGE-014",
       "trace_id": "trace_57876560873b4dbbbddec348e95833a9",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-014.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-014.json",
       "direction_id": "recommender_systems",
       "label": "推荐系统与推荐算法",
       "query": "推荐系统与推荐算法",
@@ -258,7 +258,7 @@
     {
       "case_id": "FIX-COVERAGE-015",
       "trace_id": "trace_9fca7d58c2714ac3ae56361d0d6c514f",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-015.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-015.json",
       "direction_id": "topic_电商",
       "label": "电商",
       "query": "电商",
@@ -275,7 +275,7 @@
     {
       "case_id": "FIX-COVERAGE-016",
       "trace_id": "trace_5ecea5493f89400d82766f6c8109484a",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-016.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-016.json",
       "direction_id": "topic_数字广告",
       "label": "数字广告",
       "query": "数字广告",
@@ -292,7 +292,7 @@
     {
       "case_id": "FIX-COVERAGE-017",
       "trace_id": "trace_303384db73d44086b3757995069338fb",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-017.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-017.json",
       "direction_id": "topic_在线行为",
       "label": "在线行为",
       "query": "在线行为",
@@ -309,7 +309,7 @@
     {
       "case_id": "FIX-COVERAGE-018",
       "trace_id": "trace_3d9cf49824af4db8bf1c08fe1dedc60e",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-018.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-018.json",
       "direction_id": "topic_算法机制",
       "label": "算法机制",
       "query": "算法机制",
@@ -326,7 +326,7 @@
     {
       "case_id": "FIX-COVERAGE-019",
       "trace_id": "trace_a5d7dac97511402d8c5df7f70dd061b2",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-019.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-019.json",
       "direction_id": "topic_hci",
       "label": "HCI",
       "query": "HCI",
@@ -343,7 +343,7 @@
     {
       "case_id": "FIX-COVERAGE-020",
       "trace_id": "trace_53909c5272da40ba978caa21195c249c",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-020.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-020.json",
       "direction_id": "information_retrieval",
       "label": "信息检索",
       "query": "信息检索",
@@ -360,7 +360,7 @@
     {
       "case_id": "FIX-COVERAGE-021",
       "trace_id": "trace_973666abed03439fb51d89ae64418ec3",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-021.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-021.json",
       "direction_id": "topic_machine_learning",
       "label": "machine learning",
       "query": "machine learning",
@@ -377,7 +377,7 @@
     {
       "case_id": "FIX-COVERAGE-022",
       "trace_id": "trace_4f99a336a9be4f8ca2ed3147518dbe8d",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-022.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-022.json",
       "direction_id": "topic_data_mining",
       "label": "data mining",
       "query": "data mining",
@@ -394,7 +394,7 @@
     {
       "case_id": "FIX-COVERAGE-023",
       "trace_id": "trace_4af7873733ff4367b7b2e9990272c88d",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-023.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-023.json",
       "direction_id": "topic_software_system_design",
       "label": "software / system design",
       "query": "software / system design",
@@ -411,7 +411,7 @@
     {
       "case_id": "FIX-COVERAGE-024",
       "trace_id": "trace_92e521dac6ab4ff3b98afefc050e6021",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-024.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-024.json",
       "direction_id": "topic_knowledge_discovery",
       "label": "knowledge discovery",
       "query": "knowledge discovery",
@@ -428,7 +428,7 @@
     {
       "case_id": "FIX-COVERAGE-025",
       "trace_id": "trace_49371b58d4c9421387d0459b20159888",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-025.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-025.json",
       "direction_id": "topic_ai_enabled_information_systems",
       "label": "AI-enabled information systems",
       "query": "AI-enabled information systems",
@@ -445,7 +445,7 @@
     {
       "case_id": "FIX-COVERAGE-026",
       "trace_id": "trace_21eae7cf1032430a9b56acc04b5f88c7",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-026.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-026.json",
       "direction_id": "topic_digital_artifact_design",
       "label": "digital artifact design",
       "query": "digital artifact design",
@@ -462,7 +462,7 @@
     {
       "case_id": "FIX-COVERAGE-027",
       "trace_id": "trace_a1db105a0f9b49c9afbcd44142b0820b",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-027.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-027.json",
       "direction_id": "topic_ai_trust",
       "label": "AI trust",
       "query": "AI trust",
@@ -479,7 +479,7 @@
     {
       "case_id": "FIX-COVERAGE-028",
       "trace_id": "trace_4225580d31924b0492661845ade50599",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-028.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-028.json",
       "direction_id": "topic_algorithm_aversion_appreciation",
       "label": "algorithm aversion / appreciation",
       "query": "algorithm aversion / appreciation",
@@ -496,7 +496,7 @@
     {
       "case_id": "FIX-COVERAGE-029",
       "trace_id": "trace_29d97b4c77d1431889f2d846357657a6",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-029.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-029.json",
       "direction_id": "topic_anthropomorphism",
       "label": "anthropomorphism",
       "query": "anthropomorphism",
@@ -513,7 +513,7 @@
     {
       "case_id": "FIX-COVERAGE-030",
       "trace_id": "trace_21aae4e7f4c34d9eb38adf8db5bec391",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-030.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-030.json",
       "direction_id": "topic_cognitive_load",
       "label": "cognitive load",
       "query": "cognitive load",
@@ -530,7 +530,7 @@
     {
       "case_id": "FIX-COVERAGE-031",
       "trace_id": "trace_0e32251cc1744eeebe8902b6fa2cf6c9",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-031.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-031.json",
       "direction_id": "topic_information_overload",
       "label": "information overload",
       "query": "information overload",
@@ -547,7 +547,7 @@
     {
       "case_id": "FIX-COVERAGE-032",
       "trace_id": "trace_b053e84324264536bb0e177b9dfe6e53",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-032.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-032.json",
       "direction_id": "topic_social_influence",
       "label": "social influence",
       "query": "social influence",
@@ -564,7 +564,7 @@
     {
       "case_id": "FIX-COVERAGE-033",
       "trace_id": "trace_0fda0fc61a73475aa6521a6316274fea",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-033.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-033.json",
       "direction_id": "topic_privacy_concern",
       "label": "privacy concern",
       "query": "privacy concern",
@@ -581,7 +581,7 @@
     {
       "case_id": "FIX-COVERAGE-034",
       "trace_id": "trace_5c967117934740998b17cf1e6bb886f4",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-034.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-034.json",
       "direction_id": "topic_technostress",
       "label": "technostress",
       "query": "technostress",
@@ -598,7 +598,7 @@
     {
       "case_id": "FIX-COVERAGE-035",
       "trace_id": "trace_390f1008e21243799d9296d87a209254",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-035.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-035.json",
       "direction_id": "topic_human_ai_teams",
       "label": "human-AI teams",
       "query": "human-AI teams",
@@ -615,7 +615,7 @@
     {
       "case_id": "FIX-COVERAGE-036",
       "trace_id": "trace_32c94b9fe4e54777a6a0394358c915c5",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-036.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-036.json",
       "direction_id": "topic_identity",
       "label": "identity",
       "query": "identity",
@@ -632,7 +632,7 @@
     {
       "case_id": "FIX-COVERAGE-037",
       "trace_id": "trace_e8cef6151d48490c93cd68d6c81c468a",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-037.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-037.json",
       "direction_id": "topic_emotion",
       "label": "emotion",
       "query": "emotion",
@@ -649,7 +649,7 @@
     {
       "case_id": "FIX-COVERAGE-038",
       "trace_id": "trace_b51a05c5dac541a79f8680c4f2dd8fef",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-038.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-038.json",
       "direction_id": "topic_attention",
       "label": "attention",
       "query": "attention",
@@ -666,7 +666,7 @@
     {
       "case_id": "FIX-COVERAGE-039",
       "trace_id": "trace_9c8148e0ec1b493a9d9448ff2e576545",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-039.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-039.json",
       "direction_id": "topic_judgment_decision_making",
       "label": "judgment / decision making",
       "query": "judgment / decision making",
@@ -683,7 +683,7 @@
     {
       "case_id": "FIX-COVERAGE-040",
       "trace_id": "trace_f17ce99db8bd4b3190a1f6be507dd0c3",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-040.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-040.json",
       "direction_id": "topic_misinformation",
       "label": "misinformation",
       "query": "misinformation",
@@ -700,7 +700,7 @@
     {
       "case_id": "FIX-COVERAGE-041",
       "trace_id": "trace_661068f07d1f48febce8dcf5c5c06b00",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-041.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-041.json",
       "direction_id": "topic_news_consumption",
       "label": "news consumption",
       "query": "news consumption",
@@ -717,7 +717,7 @@
     {
       "case_id": "FIX-COVERAGE-042",
       "trace_id": "trace_ce861a17641f4256bd9d2009e7887b08",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-042.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-042.json",
       "direction_id": "topic_content_moderation",
       "label": "content moderation",
       "query": "content moderation",
@@ -734,7 +734,7 @@
     {
       "case_id": "FIX-COVERAGE-043",
       "trace_id": "trace_45084e9cd06c43aaa018efb7a3bef499",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-043.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-043.json",
       "direction_id": "topic_influencers",
       "label": "influencers",
       "query": "influencers",
@@ -751,7 +751,7 @@
     {
       "case_id": "FIX-COVERAGE-044",
       "trace_id": "trace_a3deffcbcaf846fb8ac1dd7575ec557e",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-044.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-044.json",
       "direction_id": "topic_generative_ai",
       "label": "generative AI",
       "query": "generative AI",
@@ -768,7 +768,7 @@
     {
       "case_id": "FIX-COVERAGE-045",
       "trace_id": "trace_c72def8e4df445fb9f8f86b6d7a52c36",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-045.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-045.json",
       "direction_id": "topic_human_ai_communication",
       "label": "human-AI communication",
       "query": "human-AI communication",
@@ -785,7 +785,7 @@
     {
       "case_id": "FIX-COVERAGE-046",
       "trace_id": "trace_6123f9b447824486ad7f7230ead266e2",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-046.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-046.json",
       "direction_id": "topic_political_communication",
       "label": "political communication",
       "query": "political communication",
@@ -802,7 +802,7 @@
     {
       "case_id": "FIX-COVERAGE-047",
       "trace_id": "trace_78658eeb0bab4507aa33875e46f1ebfe",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-047.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-047.json",
       "direction_id": "topic_algorithmic_news",
       "label": "algorithmic news",
       "query": "algorithmic news",
@@ -819,7 +819,7 @@
     {
       "case_id": "FIX-COVERAGE-048",
       "trace_id": "trace_1d3893b00fce43129009b611fe60fef3",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-048.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-048.json",
       "direction_id": "topic_information_science",
       "label": "Information Science",
       "query": "Information Science",
@@ -836,7 +836,7 @@
     {
       "case_id": "FIX-COVERAGE-049",
       "trace_id": "trace_8b058a6e37cd4420b7a0fcdeb5ea2ef1",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-049.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-049.json",
       "direction_id": "information_behavior",
       "label": "信息行为",
       "query": "信息行为",
@@ -853,7 +853,7 @@
     {
       "case_id": "FIX-COVERAGE-050",
       "trace_id": "trace_2500b49aa24940e1bef543703463748d",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-050.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-050.json",
       "direction_id": "knowledge_management",
       "label": "知识管理",
       "query": "知识管理",
@@ -870,7 +870,7 @@
     {
       "case_id": "FIX-COVERAGE-051",
       "trace_id": "trace_44476a26875a46a8be90d6b924718854",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-051.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-051.json",
       "direction_id": "topic_data_management",
       "label": "Data Management",
       "query": "Data Management",
@@ -887,7 +887,7 @@
     {
       "case_id": "FIX-COVERAGE-052",
       "trace_id": "trace_4a30306062a4413b93b65b4353baa225",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-052.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-052.json",
       "direction_id": "topic_data_governance",
       "label": "Data Governance",
       "query": "Data Governance",
@@ -904,7 +904,7 @@
     {
       "case_id": "FIX-COVERAGE-053",
       "trace_id": "trace_a99130f4c7bc4d03b28100dd14fd1541",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-053.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-053.json",
       "direction_id": "scientometrics",
       "label": "科学计量与文献计量",
       "query": "科学计量与文献计量",
@@ -921,7 +921,7 @@
     {
       "case_id": "FIX-COVERAGE-054",
       "trace_id": "trace_9a65da84245c4145b40f239178ea3a11",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-054.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-054.json",
       "direction_id": "topic_knowledge_graph",
       "label": "Knowledge Graph",
       "query": "Knowledge Graph",
@@ -938,7 +938,7 @@
     {
       "case_id": "FIX-COVERAGE-055",
       "trace_id": "trace_3ec568f340154477a1d574d42ebfbcc7",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-055.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-055.json",
       "direction_id": "topic_decision_support",
       "label": "Decision Support",
       "query": "Decision Support",
@@ -955,7 +955,7 @@
     {
       "case_id": "FIX-COVERAGE-056",
       "trace_id": "trace_bd5beb904d634a40af63b5045b9a5b17",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-056.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-056.json",
       "direction_id": "ai_nlp_information_processing",
       "label": "AI与NLP信息处理",
       "query": "AI与NLP信息处理",
@@ -972,7 +972,7 @@
     {
       "case_id": "FIX-COVERAGE-057",
       "trace_id": "trace_02280576bc0246c0b653316fce025ae6",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-057.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-057.json",
       "direction_id": "topic_scholarly_communication",
       "label": "scholarly communication",
       "query": "scholarly communication",
@@ -989,7 +989,7 @@
     {
       "case_id": "FIX-COVERAGE-058",
       "trace_id": "trace_482b82150f6f4c02bced3b0337c46478",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-058.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-058.json",
       "direction_id": "topic_data_knowledge",
       "label": "Data / Knowledge",
       "query": "Data / Knowledge",
@@ -1006,7 +1006,7 @@
     {
       "case_id": "FIX-COVERAGE-059",
       "trace_id": "trace_c862afce0e074df89ace2e944096aa5b",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-059.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-059.json",
       "direction_id": "topic_decision_intelligence",
       "label": "Decision Intelligence",
       "query": "Decision Intelligence",
@@ -1023,7 +1023,7 @@
     {
       "case_id": "FIX-COVERAGE-060",
       "trace_id": "trace_bf3e30a1630b4be3b803dfa226f38846",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-060.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-060.json",
       "direction_id": "topic_organizational_information",
       "label": "Organizational Information",
       "query": "Organizational Information",
@@ -1040,7 +1040,7 @@
     {
       "case_id": "FIX-COVERAGE-061",
       "trace_id": "trace_21649638fa9f4eee8d217aaac25d0009",
-      "trace_path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-061.json",
+      "trace_path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/traces/coverage/FIX-COVERAGE-061.json",
       "direction_id": "topic_digital_information_environment",
       "label": "Digital Information Environment",
       "query": "Digital Information Environment",

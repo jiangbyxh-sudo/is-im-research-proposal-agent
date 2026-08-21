@@ -23,7 +23,7 @@ from research_synthesis_provider import SynthesisRequest
 IMPLEMENTATION_DIR = Path(__file__).resolve().parent.parent
 KB_ROOT = IMPLEMENTATION_DIR.parent
 WORKSPACE = KB_ROOT.parents[2]
-DEFAULT_REPORT_ROOT = WORKSPACE / "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线"
+DEFAULT_REPORT_ROOT = WORKSPACE / "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线"
 
 
 def _hash(value) -> str:

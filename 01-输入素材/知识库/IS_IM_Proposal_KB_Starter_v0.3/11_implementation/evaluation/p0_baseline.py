@@ -19,7 +19,7 @@ IMPLEMENTATION_DIR = EVALUATION_DIR.parent
 KB_ROOT = IMPLEMENTATION_DIR.parent
 WORKSPACE = KB_ROOT.parents[2]
 APP_ROOT = WORKSPACE / "03-交付物/01-Demo/01-current"
-DEFAULT_REPORT_ROOT = WORKSPACE / "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线"
+DEFAULT_REPORT_ROOT = WORKSPACE / "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线"
 CATALOG_PATH = KB_ROOT / "01_taxonomy/generated/research_direction_catalog.json"
 REGISTRY_PATH = KB_ROOT / "02_journals/generated/journal_registry.json"
 

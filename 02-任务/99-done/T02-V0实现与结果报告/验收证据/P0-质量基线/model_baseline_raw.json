@@ -2,7 +2,7 @@
   "baseline_version": "p0-model-baseline-1.0.0",
   "stage": "P0_BASELINE_NOT_A_FIX",
   "snapshot": {
-    "path": "02-任务/01-current/T02-V0实现与结果报告/验收证据/P0-质量基线/fixed_corpus_snapshot.json",
+    "path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/fixed_corpus_snapshot.json",
     "corpus_hash": "b591cf693b9b0555db8256613bbeb123f680151fbc8221f15e9c3ec7fc14813e",
     "paper_count": 27
   },

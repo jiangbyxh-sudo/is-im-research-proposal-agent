@@ -68,7 +68,7 @@ def evaluate(profile: dict, registry_index: dict, provider: OpenAlexPaperProvide
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=2)
-    parser.add_argument("--output-dir", type=Path, default=WORKSPACE / "02-任务/01-current/T02-V0实现与结果报告/验收证据/P1-检索质量工程")
+    parser.add_argument("--output-dir", type=Path, default=WORKSPACE / "02-任务/01-current/T03-P1检索质量工程/验收证据/P1-检索质量工程")
     args = parser.parse_args()
     profiles_payload = json.loads((KB_ROOT / "01_taxonomy/generated/direction_profiles.json").read_text(encoding="utf-8"))
     registry = json.loads((KB_ROOT / "02_journals/generated/journal_registry.json").read_text(encoding="utf-8"))
