@@ -71,6 +71,17 @@ class FakeReadyProvider:
         )
 
 
+class JsonVersionClient(GrobidHttpClient):
+    def __init__(self):
+        super().__init__("http://127.0.0.1:8070")
+        self.accept = ""
+
+    def _get(self, path, accept):
+        self.accept = accept
+        self.path = path
+        return b'{"version":"0.9.0","revision":"0.9.0"}'
+
+
 class FulltextEvidenceTests(unittest.TestCase):
     def test_tei_sentences_become_fulltext_spans_with_anchors(self):
         matrix = parse_grobid_tei(TEI_FIXTURE, "P1", "a" * 64)
@@ -147,6 +158,20 @@ class FulltextEvidenceTests(unittest.TestCase):
         self.assertIn(b'name="teiCoordinates"\r\n\r\ns', body)
         self.assertIn(b'name="input"; filename="paper_name.pdf"', body)
         self.assertIn(b"%PDF-fixture", body)
+
+    def test_version_endpoint_uses_json_contract(self):
+        client = JsonVersionClient()
+        self.assertEqual("0.9.0", client.version())
+        self.assertEqual("/api/version", client.path)
+        self.assertEqual("application/json", client.accept)
+
+    def test_compose_file_pins_digest_and_loopback_port(self):
+        compose = (
+            IMPLEMENTATION / "research_skills/sidecars/grobid/compose.yaml"
+        ).read_text(encoding="utf-8")
+        self.assertIn("lfoppiano/grobid@sha256:24ba90eb1c959f65d812bcdb2cf79c677fa5fd7b95235de616b8bc9fa1317849", compose)
+        self.assertIn('127.0.0.1:8070:8070', compose)
+        self.assertNotIn(":latest", compose)
 
     def test_registry_maps_fulltext_status_without_emitting_path(self):
         registry = build_default_registry(fulltext_provider=FakeReadyProvider())

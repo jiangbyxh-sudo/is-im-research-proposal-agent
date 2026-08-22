@@ -5,12 +5,14 @@
 ## 当前运行状态
 
 - 客户端、TEI解析器、Evidence Matrix转换和离线测试已实现；
-- 当前开发机未检测到Docker，因此未拉取、安装或启动GROBID容器；
-- 未完成真实容器健康检查和真实PDF解析前，只能标记“客户端链路完成”，不能标记“全文服务已部署”。
+- 2026-08-23已在当前开发机完成Docker Desktop、WSL2和GROBID 0.9.0运行时验收；
+- 镜像以digest锁定，端口只绑定`127.0.0.1:8070`；
+- 健康检查12个模型加载、0失败；真实PDF提取126条全文span并通过Claim Store绑定；
+- 可机读验收记录见`runtime-validation-2026-08-23.json`。
 
 ## 受控启用
 
-服务由运维人员独立部署。正式启用前必须锁定镜像digest，记录许可证与升级审计；不要使用浮动`latest`标签。主进程只读取以下环境变量：
+服务由运维人员独立部署。正式启用前必须锁定镜像digest，记录许可证与升级审计；不要使用浮动`latest`标签。当前可复现配置位于`compose.yaml`，固定GROBID 0.9.0 CRF镜像digest并只绑定本机回环地址。主进程只读取以下环境变量：
 
 ```text
 PROPOSAL_ENABLE_GROBID=1
@@ -31,6 +33,8 @@ GROBID_TIMEOUT=120
 5. 真实PDF结果至少含一个正文句级span，并可被`ClaimStore`校验。
 
 503、超时、坏PDF、无正文句或非法TEI都必须返回显式阻断/失败状态。任何情况下都不得把题名、文件名或未解析PDF标成fulltext证据。
+
+GROBID 0.9.0的`/api/version`响应为JSON；客户端必须以`application/json`读取，不能请求`text/plain`。该兼容性已由真实服务验收和回归测试覆盖。
 
 ## 数据边界
 

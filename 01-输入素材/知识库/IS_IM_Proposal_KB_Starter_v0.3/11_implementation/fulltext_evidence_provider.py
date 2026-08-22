@@ -158,7 +158,11 @@ class GrobidHttpClient:
         return json.loads(payload.decode("utf-8"))
 
     def version(self) -> str:
-        return self._get("/api/version", "text/plain").decode("utf-8").strip()
+        raw = self._get("/api/version", "application/json").decode("utf-8").strip()
+        payload = json.loads(raw)
+        if not isinstance(payload, dict) or not _clean(payload.get("version")):
+            raise ValueError("invalid_grobid_version_response")
+        return _clean(payload["version"])
 
     @staticmethod
     def multipart_payload(pdf_bytes: bytes, filename: str) -> tuple[bytes, str]:
