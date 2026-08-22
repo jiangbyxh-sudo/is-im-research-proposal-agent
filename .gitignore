@@ -20,3 +20,6 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Large generated API traces stay local; publish summaries and review artifacts.
+02-任务/**/验收证据/**/traces/

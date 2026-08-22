@@ -34,6 +34,7 @@ PROPOSAL_CONTEXT_LIMIT = 20
 PROPOSAL_CONTEXTS: dict[str, tuple[float, SynthesisRequest, object]] = {}
 PROPOSAL_CONTEXTS_LOCK = Lock()
 _DYNAMIC_PROVIDER_INSTANCE = None
+_DYNAMIC_PROVIDER_SIGNATURE = None
 _DYNAMIC_PROVIDER_LOCK = Lock()
 
 if str(PROVIDER_DIR) not in sys.path:
@@ -113,12 +114,27 @@ def provider_name() -> str:
     return os.getenv("PROPOSAL_DYNAMIC_PROVIDER", "multi_source").strip().lower()
 
 
+def openalex_transport_settings() -> dict[str, int]:
+    return {
+        "timeout": int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "45")),
+        "retries": int(os.getenv("PROPOSAL_RETRIEVAL_RETRIES", "5")),
+    }
+
+
+def dynamic_provider_signature() -> tuple[int, int]:
+    return (
+        DIRECTION_PROFILE_PATH.stat().st_mtime_ns,
+        JOURNAL_REGISTRY_PATH.stat().st_mtime_ns,
+    )
+
+
 def build_dynamic_provider():
-    global _DYNAMIC_PROVIDER_INSTANCE
+    global _DYNAMIC_PROVIDER_INSTANCE, _DYNAMIC_PROVIDER_SIGNATURE
     if provider_name() in {"disabled", "off", "unconfigured"}:
         return UnconfiguredPaperDiscoveryProvider()
+    signature = dynamic_provider_signature()
     with _DYNAMIC_PROVIDER_LOCK:
-        if _DYNAMIC_PROVIDER_INSTANCE is not None:
+        if _DYNAMIC_PROVIDER_INSTANCE is not None and _DYNAMIC_PROVIDER_SIGNATURE == signature:
             return _DYNAMIC_PROVIDER_INSTANCE
     enable_chinese = os.getenv("PROPOSAL_ENABLE_CHINESE_RETRIEVAL", "1").strip().lower() in {"1", "true", "yes", "on"}
     if provider_name() in {"multi_source", "p1", "openalex"}:
@@ -133,15 +149,14 @@ def build_dynamic_provider():
             max_journals_per_language=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_JOURNALS", "3")),
             rows_per_journal=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_ROWS", "10")),
         )
-        openalex = OpenAlexPaperProvider(OpenAlexTransport(
-            timeout=int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "12")), retries=1,
-        ))
+        openalex = OpenAlexPaperProvider(OpenAlexTransport(**openalex_transport_settings()))
         instance = MultiSourcePaperDiscoveryProvider(DIRECTION_PROFILE_PATH, JOURNAL_REGISTRY_PATH, openalex=openalex, crossref=crossref)
     else:
         instance = CrossrefPaperDiscoveryProvider(JOURNAL_REGISTRY_PATH, enable_chinese=enable_chinese)
     with _DYNAMIC_PROVIDER_LOCK:
-        if _DYNAMIC_PROVIDER_INSTANCE is None:
+        if _DYNAMIC_PROVIDER_INSTANCE is None or _DYNAMIC_PROVIDER_SIGNATURE != signature:
             _DYNAMIC_PROVIDER_INSTANCE = instance
+            _DYNAMIC_PROVIDER_SIGNATURE = signature
         return _DYNAMIC_PROVIDER_INSTANCE
 
 

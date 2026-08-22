@@ -3,9 +3,14 @@ from __future__ import annotations
 import json
 import sys
 import unittest
+from copy import deepcopy
 from datetime import date
+from http.client import IncompleteRead
+from io import BytesIO
 from pathlib import Path
 from urllib.error import HTTPError
+from urllib.parse import parse_qs, urlparse
+from unittest.mock import patch
 
 
 IMPLEMENTATION = Path(__file__).resolve().parents[1]
@@ -15,7 +20,7 @@ if str(IMPLEMENTATION) not in sys.path:
 
 from candidate_ledger import build_candidate_trace, evaluate_candidate, ledger_summary
 from multi_source_discovery_provider import MultiSourcePaperDiscoveryProvider
-from openalex_provider import OpenAlexPaperProvider
+from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport
 from paper_discovery_provider import DiscoveryRequest, DiscoveryResult
 from paper_quality import build_journal_index, evaluate_boundary, normalize_record, qualify_source, score_record
 from retrieval_query_plan import OpenAlexQueryPlan, build_direction_query_plans, compile_openalex_filter
@@ -98,6 +103,45 @@ class P1RetrievalTests(unittest.TestCase):
             self.assertTrue(profile["source_policy"]["tier_a_pool_ids"])
             self.assertTrue(profile["queries"]["zh_precise"])
 
+    def test_chinese_named_directions_have_english_retrieval_aliases(self):
+        expected = {
+            "topic_平台经济": "platform economy",
+            "topic_电商": "electronic commerce",
+            "topic_数字广告": "digital advertising",
+            "topic_在线行为": "online behavior",
+            "topic_算法机制": "algorithmic mechanisms",
+        }
+        for direction_id, english_label in expected.items():
+            profile = self.profiles[direction_id]
+            self.assertEqual(english_label, profile["labels"]["en"])
+            self.assertTrue(any(value.isascii() for value in profile["queries"]["en_precise"]))
+
+    def test_reviewed_chinese_source_pool_is_direction_qualified(self):
+        profile = self.profiles["topic_平台经济"]
+        zh_pools = set(profile["source_policy"]["zh_pool_ids"])
+        journal = next(
+            item for item in self.registry["journals"]
+            if item["language"] == "zh" and item.get("issns") and zh_pools.intersection(item["pool_ids"])
+        )
+        record = normalize_record({
+            "title": "数字平台生态中的平台经济治理",
+            "abstract": "研究数字平台、平台市场与在线用户",
+            "authors": ["甲"],
+            "year": date.today().year,
+            "language": "zh",
+            "source_title": journal["canonical_title"],
+            "source_issns": journal["issns"],
+            "document_type": "journal-article",
+        }, "openalex")
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        self.assertEqual("B", record["source_tier"])
+        decision = evaluate_candidate(
+            record, profile, self.journal_index,
+            date.today().year - 4, date.today().year,
+            {"query": profile["labels"]["en"]},
+        )
+        self.assertEqual("eligible", decision.terminal_status)
+
     def test_group_context_is_not_a_core_synonym(self):
         profile = self.profiles["topic_ai_enabled_information_systems"]
         self.assertNotIn("human-computer interaction", profile["facets"]["core_phenomena"])
@@ -120,6 +164,37 @@ class P1RetrievalTests(unittest.TestCase):
         self.assertEqual("*", transport.params[0]["cursor"])
         self.assertEqual("next", transport.params[1]["cursor"])
         self.assertEqual("provider_exhausted", log["stop_reason"])
+        self.assertIn("abstract_inverted_index", transport.params[0]["select"])
+
+    def test_query_plan_uses_bounded_openalex_page_size(self):
+        profile = self.profiles["platform_governance"]
+        plans = build_direction_query_plans(profile, "2022-01-01", "2026-12-31")
+        self.assertTrue(plans)
+        self.assertTrue(all(plan.per_page == 50 for plan in plans))
+
+    def test_openalex_transport_downshifts_page_size_after_incomplete_read(self):
+        requested_page_sizes = []
+
+        class JsonResponse(BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, traceback):
+                self.close()
+
+        def fake_urlopen(request, timeout):
+            requested_page_sizes.append(int(parse_qs(urlparse(request.full_url).query)["per_page"][0]))
+            if len(requested_page_sizes) < 3:
+                raise IncompleteRead(b"{}", 100)
+            return JsonResponse(b'{"meta":{"count":0},"results":[]}')
+
+        transport = OpenAlexTransport(timeout=1, retries=3)
+        with patch("openalex_provider.urlopen", side_effect=fake_urlopen):
+            _, telemetry = transport.get("https://api.openalex.org/works", {"per_page": 50, "cursor": "*"})
+
+        self.assertEqual([50, 25, 12], requested_page_sizes)
+        self.assertEqual(12, telemetry["effective_per_page"])
+        self.assertEqual(["IncompleteRead", "IncompleteRead"], telemetry["retry_errors"])
 
     def test_stop_condition_uses_post_boundary_count(self):
         profile = self.profiles["platform_governance"]
@@ -169,6 +244,21 @@ class P1RetrievalTests(unittest.TestCase):
         tokens = multilingual_tokens("平台治理与算法机制")
         self.assertIn("平台", tokens)
         self.assertIn("治理", tokens)
+
+    def test_bilingual_facets_do_not_penalize_english_record(self):
+        profile = deepcopy(self.profiles["platform_governance"])
+        record = self._record(
+            profile,
+            "Platform governance in digital ecosystems",
+            "Platform governance rules shape digital platform ecosystems and online marketplaces",
+        )
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        baseline = score_record(record, profile, "platform governance", date.today().year - 4, date.today().year)
+        profile["facets"]["core_phenomena"].extend(["平台治理", "平台规则"])
+        profile["facets"]["required_context_any"].extend(["数字平台", "平台生态"])
+        bilingual = score_record(record, profile, "platform governance", date.today().year - 4, date.today().year)
+        self.assertEqual(baseline["total"], bilingual["total"])
+        self.assertEqual(baseline["components"]["facet_coverage"], bilingual["components"]["facet_coverage"])
 
     def test_doi_landing_page_is_not_fulltext(self):
         record = normalize_record({"title": "X", "doi": "10.1/x", "fulltext_url": "https://doi.org/10.1/x"}, "crossref")

@@ -207,6 +207,7 @@ def qualify_source(record: dict, journal_index: dict, allowed_pools: set[str], p
     tier_a = set(policy.get("tier_a_pool_ids", []))
     tier_b = set(policy.get("tier_b_pool_ids", []))
     adjacent = set(policy.get("adjacent_pool_ids", []))
+    zh_pools = set(policy.get("zh_pool_ids", []))
     if journal and matched_pools:
         record["journal_id"] = journal["journal_id"]
         record["source_title"] = journal["canonical_title"]
@@ -216,6 +217,11 @@ def qualify_source(record: dict, journal_index: dict, allowed_pools: set[str], p
         if matched_pools.intersection(tier_a):
             source_tier = "A"
         elif matched_pools.intersection(tier_b):
+            source_tier = "B"
+        # The Chinese lane has its own reviewed high-quality journal pools.
+        # Treat those pools as direction-qualified Tier B instead of UNKNOWN;
+        # content relevance and language quota remain independent checks.
+        elif matched_pools.intersection(zh_pools):
             source_tier = "B"
         elif matched_pools.intersection(adjacent) or not policy:
             source_tier = "ADJACENT"

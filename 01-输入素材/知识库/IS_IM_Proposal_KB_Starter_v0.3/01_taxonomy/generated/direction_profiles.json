@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0-p1-retrieval",
+  "version": "1.1.6-p1-retrieval",
   "generated_on": "2026-08-22",
   "generated_from": [
     "01_taxonomy/generated/research_direction_catalog.json",
@@ -17,7 +17,7 @@
   },
   "profiles": [
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "technology_adoption",
       "labels": {
         "zh": "技术与AI采纳",
@@ -45,9 +45,18 @@
           "digital work",
           "platform",
           "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户",
           "technology user",
           "human-AI interaction",
-          "digital behavior"
+          "digital behavior",
+          "技术用户",
+          "人机交互",
+          "数字行为"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -233,7 +242,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "human_ai_interaction",
       "labels": {
         "zh": "人机交互",
@@ -447,7 +456,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "platform_governance",
       "labels": {
         "zh": "平台治理",
@@ -677,7 +686,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_transformation",
       "labels": {
         "zh": "digital transformation",
@@ -691,16 +700,19 @@
       ],
       "facets": {
         "core_phenomena": [
-          "digital transformation"
+          "digital transformation",
+          "digitalization",
+          "digital business transformation"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
           "organization",
           "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "business model",
+          "information systems",
+          "strategy",
+          "capability",
+          "industry"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -718,18 +730,20 @@
       },
       "queries": {
         "en_precise": [
-          "digital transformation"
+          "digital transformation",
+          "digital business transformation"
         ],
         "en_recall": [
-          "digital transformation information systems",
-          "digital transformation organization"
+          "organizational digitalization strategy",
+          "digital transformation capability"
         ],
         "zh_precise": [
-          "digital transformation"
+          "数字化转型",
+          "数字转型"
         ],
         "zh_recall": [
-          "digital transformation 信息系统",
-          "digital transformation 信息管理"
+          "企业数字化 战略",
+          "数字化转型 能力"
         ]
       },
       "source_policy": {
@@ -1005,7 +1019,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_algorithmic_management",
       "labels": {
         "zh": "algorithmic management",
@@ -1019,16 +1033,20 @@
       ],
       "facets": {
         "core_phenomena": [
-          "algorithmic management"
+          "algorithmic management",
+          "algorithmic control",
+          "algorithmic work allocation",
+          "platform labor"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
+          "workplace",
+          "worker",
           "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "gig work",
+          "digital labor platform",
+          "human resource management",
+          "platform work"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -1046,18 +1064,20 @@
       },
       "queries": {
         "en_precise": [
-          "algorithmic management"
+          "algorithmic management",
+          "algorithmic control workers"
         ],
         "en_recall": [
-          "algorithmic management information systems",
-          "algorithmic management organization"
+          "digital labor platform management",
+          "algorithmic work allocation"
         ],
         "zh_precise": [
-          "algorithmic management"
+          "算法管理",
+          "算法控制"
         ],
         "zh_recall": [
-          "algorithmic management 信息系统",
-          "algorithmic management 信息管理"
+          "平台劳动 管理",
+          "算法 工作分配"
         ]
       },
       "source_policy": {
@@ -1340,7 +1360,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "social_media",
       "labels": {
         "zh": "社交媒体",
@@ -1367,11 +1387,22 @@
           "digital work",
           "platform",
           "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户",
           "digital media",
           "social media",
           "online communication",
           "news",
-          "audience"
+          "audience",
+          "数字媒体",
+          "社交媒体",
+          "在线传播",
+          "新闻",
+          "受众"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -1701,7 +1732,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_markets",
       "labels": {
         "zh": "digital markets",
@@ -1724,7 +1755,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -2029,7 +2066,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_privacy_security",
       "labels": {
         "zh": "privacy / security",
@@ -2052,7 +2089,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -2346,7 +2389,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_it_governance",
       "labels": {
         "zh": "IT governance",
@@ -2369,7 +2412,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -2658,7 +2707,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_innovation",
       "labels": {
         "zh": "digital innovation",
@@ -2681,7 +2730,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -2987,7 +3042,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_technology_use",
       "labels": {
         "zh": "technology use",
@@ -3010,7 +3065,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -3316,7 +3377,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_strategy",
       "labels": {
         "zh": "digital strategy",
@@ -3339,7 +3400,13 @@
           "enterprise",
           "digital work",
           "platform",
-          "online user"
+          "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -3655,30 +3722,44 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_平台经济",
       "labels": {
         "zh": "平台经济",
-        "en": "平台经济"
+        "en": "platform economy"
       },
       "group_ids": [
         "is"
       ],
       "aliases": [
-        "平台经济"
+        "platform economy",
+        "digital platform economy",
+        "平台经济",
+        "数字平台经济"
       ],
       "facets": {
         "core_phenomena": [
-          "平台经济"
+          "platform economy",
+          "digital platform economy",
+          "two-sided platform",
+          "multi-sided platform",
+          "平台经济",
+          "数字平台",
+          "双边平台",
+          "多边平台"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
-          "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "digital platform",
+          "platform ecosystem",
+          "platform market",
+          "online marketplace",
+          "platform business model",
+          "数字平台",
+          "平台生态",
+          "平台市场",
+          "在线市场",
+          "平台商业模式"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -3696,18 +3777,20 @@
       },
       "queries": {
         "en_precise": [
-          "平台经济"
+          "platform economy",
+          "digital platform economy"
         ],
         "en_recall": [
-          "平台经济 information systems",
-          "平台经济 organization"
+          "two-sided digital platform market",
+          "multi-sided platform ecosystem"
         ],
         "zh_precise": [
-          "平台经济"
+          "平台经济",
+          "数字平台经济"
         ],
         "zh_recall": [
-          "平台经济 信息系统",
-          "平台经济 信息管理"
+          "双边平台 市场",
+          "数字平台 生态"
         ]
       },
       "source_policy": {
@@ -3839,7 +3922,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "recommender_systems",
       "labels": {
         "zh": "推荐系统与推荐算法",
@@ -3870,14 +3953,28 @@
           "digital work",
           "platform",
           "online user",
+          "信息系统",
+          "组织",
+          "企业",
+          "数字化工作",
+          "平台",
+          "在线用户",
           "human-computer interaction",
           "user",
           "sociotechnical system",
+          "人机交互",
+          "用户",
+          "社会技术系统",
           "digital media",
           "social media",
           "online communication",
           "news",
-          "audience"
+          "audience",
+          "数字媒体",
+          "社交媒体",
+          "在线传播",
+          "新闻",
+          "受众"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -4115,30 +4212,46 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_电商",
       "labels": {
         "zh": "电商",
-        "en": "电商"
+        "en": "electronic commerce"
       },
       "group_ids": [
         "is"
       ],
       "aliases": [
-        "电商"
+        "electronic commerce",
+        "e-commerce",
+        "online retail",
+        "电商",
+        "电子商务",
+        "网络零售"
       ],
       "facets": {
         "core_phenomena": [
-          "电商"
+          "electronic commerce",
+          "e-commerce",
+          "online retail",
+          "online shopping",
+          "电商",
+          "电子商务",
+          "网络零售",
+          "在线购物"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
-          "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "online marketplace",
+          "digital platform",
+          "online consumer",
+          "seller",
+          "retail platform",
+          "在线市场",
+          "数字平台",
+          "在线消费者",
+          "商家",
+          "零售平台"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -4156,18 +4269,20 @@
       },
       "queries": {
         "en_precise": [
-          "电商"
+          "electronic commerce",
+          "e-commerce online retail"
         ],
         "en_recall": [
-          "电商 information systems",
-          "电商 organization"
+          "online shopping digital platform",
+          "online marketplace consumer"
         ],
         "zh_precise": [
+          "电子商务",
           "电商"
         ],
         "zh_recall": [
-          "电商 信息系统",
-          "电商 信息管理"
+          "网络零售 平台",
+          "在线购物 消费者"
         ]
       },
       "source_policy": {
@@ -4299,30 +4414,46 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_数字广告",
       "labels": {
         "zh": "数字广告",
-        "en": "数字广告"
+        "en": "digital advertising"
       },
       "group_ids": [
         "is"
       ],
       "aliases": [
-        "数字广告"
+        "digital advertising",
+        "online advertising",
+        "targeted advertising",
+        "数字广告",
+        "在线广告",
+        "定向广告"
       ],
       "facets": {
         "core_phenomena": [
-          "数字广告"
+          "digital advertising",
+          "online advertising",
+          "targeted advertising",
+          "computational advertising",
+          "数字广告",
+          "在线广告",
+          "定向广告",
+          "计算广告"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
-          "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "digital platform",
+          "social media",
+          "online consumer",
+          "ad targeting",
+          "advertising market",
+          "数字平台",
+          "社交媒体",
+          "在线消费者",
+          "广告投放",
+          "广告市场"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -4340,18 +4471,20 @@
       },
       "queries": {
         "en_precise": [
-          "数字广告"
+          "digital advertising",
+          "online targeted advertising"
         ],
         "en_recall": [
-          "数字广告 information systems",
-          "数字广告 organization"
+          "advertising social media platform",
+          "computational advertising consumer"
         ],
         "zh_precise": [
-          "数字广告"
+          "数字广告",
+          "在线广告"
         ],
         "zh_recall": [
-          "数字广告 信息系统",
-          "数字广告 信息管理"
+          "定向广告 平台",
+          "计算广告 消费者"
         ]
       },
       "source_policy": {
@@ -4483,30 +4616,46 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_在线行为",
       "labels": {
         "zh": "在线行为",
-        "en": "在线行为"
+        "en": "online behavior"
       },
       "group_ids": [
         "is"
       ],
       "aliases": [
-        "在线行为"
+        "online behavior",
+        "digital behavior",
+        "online user behavior",
+        "在线行为",
+        "数字行为",
+        "网络用户行为"
       ],
       "facets": {
         "core_phenomena": [
-          "在线行为"
+          "online behavior",
+          "digital behavior",
+          "online user behavior",
+          "online engagement",
+          "在线行为",
+          "数字行为",
+          "网络用户行为",
+          "在线参与"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
-          "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "online user",
+          "digital platform",
+          "social media",
+          "e-commerce",
+          "online community",
+          "在线用户",
+          "数字平台",
+          "社交媒体",
+          "电子商务",
+          "在线社区"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -4524,18 +4673,20 @@
       },
       "queries": {
         "en_precise": [
-          "在线行为"
+          "online user behavior",
+          "digital behavior"
         ],
         "en_recall": [
-          "在线行为 information systems",
-          "在线行为 organization"
+          "online engagement digital platform",
+          "user behavior social media"
         ],
         "zh_precise": [
-          "在线行为"
+          "在线行为",
+          "网络用户行为"
         ],
         "zh_recall": [
-          "在线行为 信息系统",
-          "在线行为 信息管理"
+          "在线参与 平台",
+          "用户行为 社交媒体"
         ]
       },
       "source_policy": {
@@ -4667,30 +4818,46 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_算法机制",
       "labels": {
         "zh": "算法机制",
-        "en": "算法机制"
+        "en": "algorithmic mechanisms"
       },
       "group_ids": [
         "is"
       ],
       "aliases": [
-        "算法机制"
+        "algorithmic mechanisms",
+        "algorithmic decision making",
+        "algorithmic mediation",
+        "算法机制",
+        "算法决策",
+        "算法中介"
       ],
       "facets": {
         "core_phenomena": [
-          "算法机制"
+          "algorithmic mechanisms",
+          "algorithmic decision making",
+          "algorithmic mediation",
+          "algorithmic curation",
+          "算法机制",
+          "算法决策",
+          "算法中介",
+          "算法策展"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information systems",
+          "digital platform",
+          "online user",
           "organization",
-          "enterprise",
-          "digital work",
-          "platform",
-          "online user"
+          "platform governance",
+          "recommender system",
+          "数字平台",
+          "在线用户",
+          "组织",
+          "平台治理",
+          "推荐系统"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -4708,18 +4875,20 @@
       },
       "queries": {
         "en_precise": [
-          "算法机制"
+          "algorithmic decision making digital platforms",
+          "algorithmic mechanisms platform"
         ],
         "en_recall": [
-          "算法机制 information systems",
-          "算法机制 organization"
+          "algorithmic mediation online users",
+          "algorithmic curation platform governance"
         ],
         "zh_precise": [
-          "算法机制"
+          "算法机制",
+          "算法决策"
         ],
         "zh_recall": [
-          "算法机制 信息系统",
-          "算法机制 信息管理"
+          "算法中介 平台",
+          "算法治理 用户"
         ]
       },
       "source_policy": {
@@ -4851,7 +5020,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_hci",
       "labels": {
         "zh": "HCI",
@@ -5063,7 +5232,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "information_retrieval",
       "labels": {
         "zh": "信息检索",
@@ -5090,14 +5259,28 @@
           "organization",
           "sociotechnical system",
           "digital work",
+          "信息系统",
+          "人机交互",
+          "用户",
+          "组织",
+          "社会技术系统",
+          "数字化工作",
           "information science",
           "information management",
           "information behavior",
           "knowledge organization",
           "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播",
           "knowledge management",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "知识管理",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -5418,7 +5601,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_machine_learning",
       "labels": {
         "zh": "machine learning",
@@ -5433,15 +5616,32 @@
       "facets": {
         "core_phenomena": [
           "machine learning application",
-          "machine learning enabled information processing"
+          "machine learning enabled information processing",
+          "interpretable machine learning",
+          "human-centered machine learning",
+          "machine learning system",
+          "machine learning for recommender systems",
+          "machine learning for text analytics"
         ],
         "technology_terms": [],
         "required_context_any": [
           "information systems",
           "organization",
           "information management",
-          "user",
-          "decision support"
+          "data management",
+          "knowledge discovery",
+          "business analytics",
+          "predictive analytics",
+          "decision support",
+          "planning",
+          "privacy",
+          "fairness",
+          "interpretability",
+          "recommender system",
+          "text analytics",
+          "online information",
+          "social media",
+          "user"
         ],
         "negative_contexts": [
           "pure algorithm benchmark",
@@ -5457,18 +5657,23 @@
       },
       "queries": {
         "en_precise": [
-          "machine learning"
+          "machine learning information systems",
+          "machine learning data management"
         ],
         "en_recall": [
-          "machine learning information systems",
-          "machine learning human-computer interaction"
+          "machine learning business analytics",
+          "privacy preserving machine learning",
+          "interpretable machine learning decision support",
+          "human-centered machine learning",
+          "machine learning recommender systems"
         ],
         "zh_precise": [
-          "machine learning"
+          "机器学习 信息系统",
+          "机器学习 数据管理"
         ],
         "zh_recall": [
-          "machine learning 信息系统",
-          "machine learning 信息管理"
+          "机器学习 商业分析",
+          "可解释机器学习 决策支持"
         ]
       },
       "source_policy": {
@@ -5750,7 +5955,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_data_mining",
       "labels": {
         "zh": "data mining",
@@ -5764,14 +5969,18 @@
       ],
       "facets": {
         "core_phenomena": [
-          "data mining application",
-          "knowledge discovery from data"
+          "data mining",
+          "knowledge discovery",
+          "predictive analytics",
+          "data mining application"
         ],
         "technology_terms": [],
         "required_context_any": [
+          "business analytics",
+          "decision support",
           "information systems",
-          "organization",
           "information management",
+          "organization",
           "online behavior"
         ],
         "negative_contexts": [
@@ -5788,18 +5997,20 @@
       },
       "queries": {
         "en_precise": [
-          "data mining"
+          "data mining information systems",
+          "predictive analytics decision support"
         ],
         "en_recall": [
-          "data mining information systems",
-          "data mining human-computer interaction"
+          "knowledge discovery business analytics",
+          "data mining online behavior"
         ],
         "zh_precise": [
-          "data mining"
+          "数据挖掘",
+          "知识发现"
         ],
         "zh_recall": [
-          "data mining 信息系统",
-          "data mining 信息管理"
+          "预测分析 决策支持",
+          "数据挖掘 在线行为"
         ]
       },
       "source_policy": {
@@ -6064,7 +6275,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_software_system_design",
       "labels": {
         "zh": "software / system design",
@@ -6087,7 +6298,13 @@
           "user",
           "organization",
           "sociotechnical system",
-          "digital work"
+          "digital work",
+          "信息系统",
+          "人机交互",
+          "用户",
+          "组织",
+          "社会技术系统",
+          "数字化工作"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -6326,7 +6543,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_knowledge_discovery",
       "labels": {
         "zh": "knowledge discovery",
@@ -6340,16 +6557,19 @@
       ],
       "facets": {
         "core_phenomena": [
-          "knowledge discovery"
+          "knowledge discovery",
+          "knowledge extraction",
+          "knowledge discovery in databases",
+          "data-driven knowledge discovery"
         ],
         "technology_terms": [],
         "required_context_any": [
+          "data mining",
           "information systems",
-          "human-computer interaction",
-          "user",
+          "information management",
+          "knowledge management",
           "organization",
-          "sociotechnical system",
-          "digital work"
+          "decision support"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -6367,18 +6587,20 @@
       },
       "queries": {
         "en_precise": [
-          "knowledge discovery"
+          "knowledge discovery in databases",
+          "data-driven knowledge discovery"
         ],
         "en_recall": [
-          "knowledge discovery information systems",
-          "knowledge discovery human-computer interaction"
+          "knowledge extraction information management",
+          "knowledge discovery decision support"
         ],
         "zh_precise": [
-          "knowledge discovery"
+          "知识发现",
+          "数据知识发现"
         ],
         "zh_recall": [
-          "knowledge discovery 信息系统",
-          "knowledge discovery 信息管理"
+          "知识抽取 信息管理",
+          "知识发现 决策支持"
         ]
       },
       "source_policy": {
@@ -6582,7 +6804,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_ai_enabled_information_systems",
       "labels": {
         "zh": "AI-enabled information systems",
@@ -6767,7 +6989,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_artifact_design",
       "labels": {
         "zh": "digital artifact design",
@@ -6777,20 +6999,51 @@
         "is_cs_hci"
       ],
       "aliases": [
-        "digital artifact design"
+        "digital artifact design",
+        "digital artifact",
+        "IT artifact",
+        "information systems artifact",
+        "design science research",
+        "digital design artifact",
+        "数字化人工制品设计",
+        "数字化人工制品",
+        "信息系统人工制品",
+        "设计科学研究"
       ],
       "facets": {
         "core_phenomena": [
-          "digital artifact design"
+          "digital artifact design",
+          "digital artifact",
+          "IT artifact",
+          "information systems artifact",
+          "design science research",
+          "design science",
+          "digital design artifact",
+          "sociotechnical design",
+          "数字化人工制品设计",
+          "数字化人工制品",
+          "信息系统人工制品",
+          "设计科学研究",
+          "社会技术设计"
         ],
         "technology_terms": [],
         "required_context_any": [
           "information systems",
           "human-computer interaction",
+          "design research",
+          "design theory",
           "user",
           "organization",
           "sociotechnical system",
-          "digital work"
+          "digital work",
+          "信息系统",
+          "人机交互",
+          "设计研究",
+          "设计理论",
+          "用户",
+          "组织",
+          "社会技术系统",
+          "数字化工作"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -6808,18 +7061,20 @@
       },
       "queries": {
         "en_precise": [
-          "digital artifact design"
+          "digital artifact design",
+          "information systems artifact design"
         ],
         "en_recall": [
-          "digital artifact design information systems",
-          "digital artifact design human-computer interaction"
+          "design science research digital artifact",
+          "sociotechnical design information systems"
         ],
         "zh_precise": [
-          "digital artifact design"
+          "数字化人工制品设计",
+          "信息系统人工制品"
         ],
         "zh_recall": [
-          "digital artifact design 信息系统",
-          "digital artifact design 信息管理"
+          "设计科学研究 数字化人工制品",
+          "社会技术设计 信息系统"
         ]
       },
       "source_policy": {
@@ -6945,7 +7200,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_ai_trust",
       "labels": {
         "zh": "AI trust",
@@ -6967,7 +7222,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7103,7 +7363,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_algorithm_aversion_appreciation",
       "labels": {
         "zh": "algorithm aversion / appreciation",
@@ -7117,14 +7377,18 @@
       ],
       "facets": {
         "core_phenomena": [
-          "algorithm aversion / appreciation"
+          "algorithm aversion",
+          "algorithm appreciation",
+          "algorithmic advice",
+          "advice taking from algorithms"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "technology user",
-          "online user",
+          "decision making",
+          "user",
+          "consumer",
           "human-AI interaction",
-          "digital behavior",
+          "online platform",
           "organization"
         ],
         "negative_contexts": [
@@ -7143,18 +7407,20 @@
       },
       "queries": {
         "en_precise": [
-          "algorithm aversion / appreciation"
+          "algorithm aversion",
+          "algorithm appreciation"
         ],
         "en_recall": [
-          "algorithm aversion / appreciation technology user",
-          "algorithm aversion / appreciation online user"
+          "algorithmic advice decision making",
+          "advice taking from algorithms"
         ],
         "zh_precise": [
-          "algorithm aversion / appreciation"
+          "算法厌恶",
+          "算法欣赏"
         ],
         "zh_recall": [
-          "algorithm aversion / appreciation 信息系统",
-          "algorithm aversion / appreciation 信息管理"
+          "算法建议 决策",
+          "算法采纳 用户"
         ]
       },
       "source_policy": {
@@ -7261,7 +7527,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_anthropomorphism",
       "labels": {
         "zh": "anthropomorphism",
@@ -7283,7 +7549,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7453,7 +7724,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_cognitive_load",
       "labels": {
         "zh": "cognitive load",
@@ -7475,7 +7746,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7700,7 +7976,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_information_overload",
       "labels": {
         "zh": "information overload",
@@ -7722,7 +7998,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7892,7 +8173,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_social_influence",
       "labels": {
         "zh": "social influence",
@@ -7914,7 +8195,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -8189,7 +8475,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_privacy_concern",
       "labels": {
         "zh": "privacy concern",
@@ -8199,19 +8485,52 @@
         "is_psychology"
       ],
       "aliases": [
-        "privacy concern"
+        "privacy concern",
+        "privacy concerns",
+        "information privacy concern",
+        "information privacy concerns",
+        "privacy calculus",
+        "privacy paradox",
+        "隐私担忧",
+        "信息隐私担忧",
+        "隐私计算",
+        "隐私悖论"
       ],
       "facets": {
         "core_phenomena": [
-          "privacy concern"
+          "privacy concern",
+          "privacy concerns",
+          "information privacy concern",
+          "information privacy concerns",
+          "privacy calculus",
+          "privacy paradox",
+          "privacy disclosure",
+          "隐私担忧",
+          "信息隐私担忧",
+          "隐私计算",
+          "隐私悖论",
+          "隐私披露"
         ],
         "technology_terms": [],
         "required_context_any": [
           "technology user",
           "online user",
-          "human-AI interaction",
+          "information systems",
+          "digital platform",
+          "social media",
+          "online service",
+          "data disclosure",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "信息系统",
+          "数字平台",
+          "社交媒体",
+          "在线服务",
+          "数据披露",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -8229,18 +8548,20 @@
       },
       "queries": {
         "en_precise": [
-          "privacy concern"
+          "information privacy concerns",
+          "privacy calculus online users"
         ],
         "en_recall": [
-          "privacy concern technology user",
-          "privacy concern online user"
+          "privacy paradox digital platform",
+          "privacy disclosure information systems"
         ],
         "zh_precise": [
-          "privacy concern"
+          "信息隐私担忧",
+          "隐私计算"
         ],
         "zh_recall": [
-          "privacy concern 信息系统",
-          "privacy concern 信息管理"
+          "隐私悖论 数字平台",
+          "隐私披露 信息系统"
         ]
       },
       "source_policy": {
@@ -8469,7 +8790,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_technostress",
       "labels": {
         "zh": "technostress",
@@ -8491,7 +8812,12 @@
           "online user",
           "human-AI interaction",
           "digital behavior",
-          "organization"
+          "organization",
+          "技术用户",
+          "在线用户",
+          "人机交互",
+          "数字行为",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -8661,7 +8987,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_human_ai_teams",
       "labels": {
         "zh": "human-AI teams",
@@ -8671,19 +8997,52 @@
         "is_psychology"
       ],
       "aliases": [
-        "human-AI teams"
+        "human-AI teams",
+        "human-AI collaboration",
+        "human-AI cooperation",
+        "human-AI co-creation",
+        "human-AI delegation",
+        "人机团队",
+        "人机协作",
+        "人机合作",
+        "人机共创"
       ],
       "facets": {
         "core_phenomena": [
-          "human-AI teams"
+          "human-AI teams",
+          "human-AI collaboration",
+          "human-AI cooperation",
+          "human-AI co-creation",
+          "human-AI delegation",
+          "human-AI teaming",
+          "人机团队",
+          "人机协作",
+          "人机合作",
+          "人机共创",
+          "人机委派"
         ],
         "technology_terms": [],
         "required_context_any": [
+          "team",
+          "teamwork",
+          "worker",
+          "workplace",
+          "organization",
+          "decision making",
+          "knowledge work",
+          "task allocation",
           "technology user",
-          "online user",
           "human-AI interaction",
-          "digital behavior",
-          "organization"
+          "团队",
+          "协作",
+          "工作者",
+          "工作场所",
+          "组织",
+          "决策",
+          "知识工作",
+          "任务分配",
+          "技术用户",
+          "人机交互"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -8701,18 +9060,20 @@
       },
       "queries": {
         "en_precise": [
+          "human-AI collaboration",
           "human-AI teams"
         ],
         "en_recall": [
-          "human-AI teams technology user",
-          "human-AI teams online user"
+          "human-AI cooperation workplace",
+          "human-AI co-creation knowledge work"
         ],
         "zh_precise": [
-          "human-AI teams"
+          "人机协作",
+          "人机团队"
         ],
         "zh_recall": [
-          "human-AI teams 信息系统",
-          "human-AI teams 信息管理"
+          "人机合作 工作场所",
+          "人机共创 知识工作"
         ]
       },
       "source_policy": {
@@ -8819,7 +9180,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_identity",
       "labels": {
         "zh": "identity",
@@ -9127,7 +9488,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_emotion",
       "labels": {
         "zh": "emotion",
@@ -9143,13 +9504,18 @@
         "core_phenomena": [
           "emotion in technology use",
           "digital emotion",
-          "affective response"
+          "affective response",
+          "emotional response",
+          "affect"
         ],
         "technology_terms": [],
         "required_context_any": [
+          "technology use",
           "online user",
+          "online consumer",
           "human-computer interaction",
           "social media",
+          "digital platform",
           "information systems"
         ],
         "negative_contexts": [
@@ -9165,18 +9531,20 @@
       },
       "queries": {
         "en_precise": [
-          "emotion"
+          "emotion technology use",
+          "affective response digital technology"
         ],
         "en_recall": [
-          "emotion technology user",
-          "emotion online user"
+          "emotional response online user",
+          "affect social media platform"
         ],
         "zh_precise": [
-          "emotion"
+          "技术使用 情绪",
+          "数字情绪"
         ],
         "zh_recall": [
-          "emotion 信息系统",
-          "emotion 信息管理"
+          "情感反应 在线用户",
+          "情绪 社交媒体"
         ]
       },
       "source_policy": {
@@ -9411,7 +9779,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_attention",
       "labels": {
         "zh": "attention",
@@ -9717,7 +10085,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_judgment_decision_making",
       "labels": {
         "zh": "judgment / decision making",
@@ -9731,15 +10099,19 @@
       ],
       "facets": {
         "core_phenomena": [
-          "judgment / decision making"
+          "judgment and decision making",
+          "decision-making",
+          "decision support",
+          "human judgment"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "technology user",
-          "online user",
-          "human-AI interaction",
-          "digital behavior",
-          "organization"
+          "technology use",
+          "information systems",
+          "online decision",
+          "consumer",
+          "organization",
+          "human-AI interaction"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -9757,18 +10129,20 @@
       },
       "queries": {
         "en_precise": [
-          "judgment / decision making"
+          "judgment and decision making technology",
+          "human judgment decision support"
         ],
         "en_recall": [
-          "judgment / decision making technology user",
-          "judgment / decision making online user"
+          "online decision making consumer",
+          "human-AI decision making"
         ],
         "zh_precise": [
-          "judgment / decision making"
+          "判断与决策",
+          "决策行为"
         ],
         "zh_recall": [
-          "judgment / decision making 信息系统",
-          "judgment / decision making 信息管理"
+          "人机决策",
+          "在线决策 用户"
         ]
       },
       "source_policy": {
@@ -9909,7 +10283,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_misinformation",
       "labels": {
         "zh": "misinformation",
@@ -9932,7 +10306,13 @@
           "online communication",
           "platform",
           "news",
-          "audience"
+          "audience",
+          "数字媒体",
+          "社交媒体",
+          "在线传播",
+          "平台",
+          "新闻",
+          "受众"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -10115,7 +10495,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_news_consumption",
       "labels": {
         "zh": "news consumption",
@@ -10129,16 +10509,20 @@
       ],
       "facets": {
         "core_phenomena": [
-          "news consumption"
+          "news consumption",
+          "news use",
+          "news exposure",
+          "digital news consumption",
+          "news engagement"
         ],
         "technology_terms": [],
         "required_context_any": [
           "digital media",
           "social media",
-          "online communication",
-          "platform",
-          "news",
-          "audience"
+          "online news",
+          "audience",
+          "news platform",
+          "information behavior"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -10156,18 +10540,20 @@
       },
       "queries": {
         "en_precise": [
-          "news consumption"
+          "news consumption",
+          "digital news consumption"
         ],
         "en_recall": [
-          "news consumption digital media",
-          "news consumption social media"
+          "news exposure social media",
+          "news engagement audience"
         ],
         "zh_precise": [
-          "news consumption"
+          "新闻消费",
+          "数字新闻使用"
         ],
         "zh_recall": [
-          "news consumption 信息系统",
-          "news consumption 信息管理"
+          "新闻接触 社交媒体",
+          "新闻参与 受众"
         ]
       },
       "source_policy": {
@@ -10321,7 +10707,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_content_moderation",
       "labels": {
         "zh": "content moderation",
@@ -10344,7 +10730,13 @@
           "online communication",
           "platform",
           "news",
-          "audience"
+          "audience",
+          "数字媒体",
+          "社交媒体",
+          "在线传播",
+          "平台",
+          "新闻",
+          "受众"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -10493,7 +10885,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_influencers",
       "labels": {
         "zh": "influencers",
@@ -10516,7 +10908,13 @@
           "online communication",
           "platform",
           "news",
-          "audience"
+          "audience",
+          "数字媒体",
+          "社交媒体",
+          "在线传播",
+          "平台",
+          "新闻",
+          "受众"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -10810,7 +11208,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_generative_ai",
       "labels": {
         "zh": "generative AI",
@@ -10824,23 +11222,47 @@
       ],
       "facets": {
         "core_phenomena": [
-          "generative AI"
+          "generative AI",
+          "generative artificial intelligence",
+          "large language model",
+          "ChatGPT",
+          "foundation model"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "digital media",
-          "social media",
-          "online communication",
-          "platform",
-          "news",
-          "audience"
+          "information systems",
+          "information management",
+          "organization",
+          "workplace",
+          "employee",
+          "knowledge work",
+          "innovation",
+          "creativity",
+          "design work",
+          "research practice",
+          "scholarly communication",
+          "digital platform",
+          "human-AI interaction",
+          "agency",
+          "信息系统",
+          "信息管理",
+          "组织",
+          "工作场所",
+          "员工",
+          "知识工作",
+          "创新",
+          "创造力",
+          "设计工作",
+          "研究实践",
+          "学术传播",
+          "数字平台",
+          "人机交互",
+          "能动性"
         ],
         "negative_contexts": [
-          "clinical diagnosis only",
-          "medical imaging only",
-          "pure algorithm benchmark",
-          "pure hardware engineering",
-          "chemistry or materials experiment only"
+          "image synthesis benchmark only",
+          "molecular generation only",
+          "medical diagnosis only"
         ]
       },
       "boundary_policy": {
@@ -10851,18 +11273,21 @@
       },
       "queries": {
         "en_precise": [
-          "generative AI"
+          "generative AI information systems",
+          "generative AI organization"
         ],
         "en_recall": [
-          "generative AI digital media",
-          "generative AI social media"
+          "generative AI workplace innovation",
+          "generative AI design work",
+          "generative AI scholarly communication"
         ],
         "zh_precise": [
-          "generative AI"
+          "生成式人工智能 信息系统",
+          "生成式人工智能 组织"
         ],
         "zh_recall": [
-          "generative AI 信息系统",
-          "generative AI 信息管理"
+          "生成式人工智能 工作场所",
+          "生成式人工智能 创新"
         ]
       },
       "source_policy": {
@@ -10982,7 +11407,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_human_ai_communication",
       "labels": {
         "zh": "human-AI communication",
@@ -10992,20 +11417,63 @@
         "is_communication_media"
       ],
       "aliases": [
-        "human-AI communication"
+        "human-AI communication",
+        "human-machine communication",
+        "AI-mediated communication",
+        "communication with AI",
+        "communication with conversational agents",
+        "人机传播",
+        "人机沟通",
+        "人工智能媒介传播"
       ],
       "facets": {
         "core_phenomena": [
-          "human-AI communication"
+          "human-AI communication",
+          "human-machine communication",
+          "AI-mediated communication",
+          "communication with AI",
+          "communication with conversational agents",
+          "conversational agent communication",
+          "chatbot communication",
+          "social interaction with AI",
+          "AI explanation to users",
+          "explainable AI communication",
+          "transparency in human-AI interaction",
+          "人机传播",
+          "人机沟通",
+          "人工智能媒介传播",
+          "与人工智能沟通",
+          "对话智能体沟通",
+          "面向用户的人工智能解释",
+          "人机透明度沟通"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "digital media",
-          "social media",
-          "online communication",
-          "platform",
-          "news",
-          "audience"
+          "user interaction",
+          "end user",
+          "human-computer interaction",
+          "human-AI interaction",
+          "social interaction",
+          "digital communication",
+          "mediated communication",
+          "explanation",
+          "transparency",
+          "online user",
+          "conversational agent",
+          "chatbot",
+          "organization",
+          "用户互动",
+          "最终用户",
+          "人机交互",
+          "社会互动",
+          "数字传播",
+          "媒介传播",
+          "解释",
+          "透明度",
+          "在线用户",
+          "对话智能体",
+          "聊天机器人",
+          "组织"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -11023,18 +11491,27 @@
       },
       "queries": {
         "en_precise": [
-          "human-AI communication"
+          "human-AI communication",
+          "human-machine communication",
+          "AI-mediated communication"
         ],
         "en_recall": [
-          "human-AI communication digital media",
-          "human-AI communication social media"
+          "communication with AI chatbot",
+          "communication with conversational agents",
+          "social interaction with AI",
+          "explain AI systems to end users",
+          "transparency in human-AI interaction"
         ],
         "zh_precise": [
-          "human-AI communication"
+          "人机传播",
+          "人机沟通",
+          "人工智能媒介传播"
         ],
         "zh_recall": [
-          "human-AI communication 信息系统",
-          "human-AI communication 信息管理"
+          "对话智能体 沟通",
+          "人工智能 社会互动",
+          "人工智能解释 最终用户",
+          "人机交互 透明度"
         ]
       },
       "source_policy": {
@@ -11154,7 +11631,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_political_communication",
       "labels": {
         "zh": "political communication",
@@ -11168,16 +11645,19 @@
       ],
       "facets": {
         "core_phenomena": [
-          "political communication"
+          "political communication",
+          "digital political communication",
+          "online political discourse",
+          "political information"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "digital media",
           "social media",
-          "online communication",
-          "platform",
+          "digital media",
+          "online platform",
           "news",
-          "audience"
+          "audience",
+          "public opinion"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -11195,18 +11675,20 @@
       },
       "queries": {
         "en_precise": [
-          "political communication"
+          "political communication social media",
+          "digital political communication"
         ],
         "en_recall": [
-          "political communication digital media",
-          "political communication social media"
+          "online political discourse platform",
+          "political information news audience"
         ],
         "zh_precise": [
-          "political communication"
+          "政治传播",
+          "数字政治传播"
         ],
         "zh_recall": [
-          "political communication 信息系统",
-          "political communication 信息管理"
+          "在线政治话语 平台",
+          "政治信息 社交媒体"
         ]
       },
       "source_policy": {
@@ -11471,7 +11953,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_algorithmic_news",
       "labels": {
         "zh": "algorithmic news",
@@ -11485,16 +11967,20 @@
       ],
       "facets": {
         "core_phenomena": [
-          "algorithmic news"
+          "algorithmic news",
+          "algorithmic journalism",
+          "news recommender",
+          "automated journalism",
+          "algorithmic curation"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "digital media",
+          "news consumption",
+          "digital journalism",
+          "news platform",
           "social media",
-          "online communication",
-          "platform",
-          "news",
-          "audience"
+          "audience",
+          "online news"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -11512,18 +11998,20 @@
       },
       "queries": {
         "en_precise": [
-          "algorithmic news"
+          "algorithmic news",
+          "algorithmic journalism"
         ],
         "en_recall": [
-          "algorithmic news digital media",
-          "algorithmic news social media"
+          "news recommender audience",
+          "algorithmic curation online news"
         ],
         "zh_precise": [
-          "algorithmic news"
+          "算法新闻",
+          "算法新闻业"
         ],
         "zh_recall": [
-          "algorithmic news 信息系统",
-          "algorithmic news 信息管理"
+          "新闻推荐 受众",
+          "算法策展 新闻平台"
         ]
       },
       "source_policy": {
@@ -11643,7 +12131,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_information_science",
       "labels": {
         "zh": "Information Science",
@@ -11665,7 +12153,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -11930,7 +12423,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "information_behavior",
       "labels": {
         "zh": "信息行为",
@@ -11955,10 +12448,19 @@
           "information behavior",
           "knowledge organization",
           "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播",
           "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "知识管理",
+          "组织",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -12260,7 +12762,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "knowledge_management",
       "labels": {
         "zh": "知识管理",
@@ -12285,10 +12787,19 @@
           "information behavior",
           "knowledge organization",
           "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播",
           "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "知识管理",
+          "组织",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -12585,7 +13096,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_data_management",
       "labels": {
         "zh": "Data Management",
@@ -12607,7 +13118,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -12883,7 +13399,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_data_governance",
       "labels": {
         "zh": "Data Governance",
@@ -12905,7 +13421,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -13186,7 +13707,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "scientometrics",
       "labels": {
         "zh": "科学计量与文献计量",
@@ -13213,10 +13734,19 @@
           "information behavior",
           "knowledge organization",
           "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播",
           "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "知识管理",
+          "组织",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -13420,7 +13950,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_knowledge_graph",
       "labels": {
         "zh": "Knowledge Graph",
@@ -13442,7 +13972,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -13668,7 +14203,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_decision_support",
       "labels": {
         "zh": "Decision Support",
@@ -13690,7 +14225,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -13971,7 +14511,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "ai_nlp_information_processing",
       "labels": {
         "zh": "AI与NLP信息处理",
@@ -13987,21 +14527,20 @@
       ],
       "facets": {
         "core_phenomena": [
-          "AI / NLP for information processing",
-          "AI与NLP信息处理",
-          "AI / NLP"
+          "natural language processing",
+          "NLP",
+          "text mining",
+          "language model",
+          "information extraction"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information science",
+          "information processing",
+          "information retrieval",
           "information management",
-          "information behavior",
-          "knowledge organization",
-          "scholarly communication",
           "knowledge management",
-          "organization",
-          "decision support",
-          "information retrieval"
+          "information systems",
+          "decision support"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -14019,19 +14558,20 @@
       },
       "queries": {
         "en_precise": [
-          "AI / NLP for information processing",
-          "AI / NLP"
+          "natural language processing information processing",
+          "text mining information management"
         ],
         "en_recall": [
-          "AI / NLP for information processing information science",
-          "AI / NLP for information processing information management"
+          "language model information retrieval",
+          "information extraction knowledge management"
         ],
         "zh_precise": [
-          "AI与NLP信息处理"
+          "自然语言处理 信息处理",
+          "文本挖掘"
         ],
         "zh_recall": [
-          "AI与NLP信息处理 信息系统",
-          "AI与NLP信息处理 信息管理"
+          "语言模型 信息检索",
+          "信息抽取 知识管理"
         ]
       },
       "source_policy": {
@@ -14171,7 +14711,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_scholarly_communication",
       "labels": {
         "zh": "scholarly communication",
@@ -14193,7 +14733,12 @@
           "information management",
           "information behavior",
           "knowledge organization",
-          "scholarly communication"
+          "scholarly communication",
+          "信息科学",
+          "信息管理",
+          "信息行为",
+          "知识组织",
+          "学术传播"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -14447,7 +14992,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_data_knowledge",
       "labels": {
         "zh": "Data / Knowledge",
@@ -14470,7 +15015,13 @@
           "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "信息科学",
+          "信息管理",
+          "知识管理",
+          "组织",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -14761,7 +15312,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_decision_intelligence",
       "labels": {
         "zh": "Decision Intelligence",
@@ -14775,16 +15326,19 @@
       ],
       "facets": {
         "core_phenomena": [
-          "Decision Intelligence"
+          "decision intelligence",
+          "business intelligence",
+          "AI-assisted decision making",
+          "analytics-enabled decision making"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information science",
-          "information management",
-          "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "business analytics",
+          "information systems",
+          "management",
+          "enterprise"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -14802,18 +15356,20 @@
       },
       "queries": {
         "en_precise": [
-          "Decision Intelligence"
+          "decision intelligence",
+          "analytics-enabled decision making"
         ],
         "en_recall": [
-          "Decision Intelligence information science",
-          "Decision Intelligence information management"
+          "business intelligence decision support",
+          "AI-assisted organizational decision making"
         ],
         "zh_precise": [
-          "Decision Intelligence"
+          "决策智能",
+          "智能决策"
         ],
         "zh_recall": [
-          "Decision Intelligence 信息系统",
-          "Decision Intelligence 信息管理"
+          "商业智能 决策支持",
+          "人工智能 组织决策"
         ]
       },
       "source_policy": {
@@ -15069,7 +15625,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_organizational_information",
       "labels": {
         "zh": "Organizational Information",
@@ -15092,7 +15648,13 @@
           "knowledge management",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "信息科学",
+          "信息管理",
+          "知识管理",
+          "组织",
+          "决策支持",
+          "信息检索"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -15377,7 +15939,7 @@
       ]
     },
     {
-      "profile_version": "1.1.0-p1-retrieval",
+      "profile_version": "1.1.6-p1-retrieval",
       "direction_id": "topic_digital_information_environment",
       "labels": {
         "zh": "Digital Information Environment",
@@ -15387,20 +15949,48 @@
         "im_data_ai_knowledge"
       ],
       "aliases": [
-        "Digital Information Environment"
+        "digital information environment",
+        "digital information ecosystem",
+        "digital information space",
+        "digital information practices",
+        "数字信息环境",
+        "数字信息生态",
+        "数字信息空间",
+        "数字信息实践"
       ],
       "facets": {
         "core_phenomena": [
-          "Digital Information Environment"
+          "digital information environment",
+          "digital information ecosystem",
+          "digital information space",
+          "digital information practices",
+          "digital information infrastructure",
+          "数字信息环境",
+          "数字信息生态",
+          "数字信息空间",
+          "数字信息实践",
+          "数字信息基础设施"
         ],
         "technology_terms": [],
         "required_context_any": [
           "information science",
           "information management",
           "knowledge management",
+          "information behavior",
+          "information access",
           "organization",
           "decision support",
-          "information retrieval"
+          "information retrieval",
+          "information systems",
+          "信息科学",
+          "信息管理",
+          "知识管理",
+          "信息行为",
+          "信息获取",
+          "组织",
+          "决策支持",
+          "信息检索",
+          "信息系统"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -15418,18 +16008,20 @@
       },
       "queries": {
         "en_precise": [
-          "Digital Information Environment"
+          "digital information environment",
+          "digital information ecosystem"
         ],
         "en_recall": [
-          "Digital Information Environment information science",
-          "Digital Information Environment information management"
+          "digital information practices information management",
+          "digital information space information access"
         ],
         "zh_precise": [
-          "Digital Information Environment"
+          "数字信息环境",
+          "数字信息生态"
         ],
         "zh_recall": [
-          "Digital Information Environment 信息系统",
-          "Digital Information Environment 信息管理"
+          "数字信息实践 信息管理",
+          "数字信息空间 信息获取"
         ]
       },
       "source_policy": {

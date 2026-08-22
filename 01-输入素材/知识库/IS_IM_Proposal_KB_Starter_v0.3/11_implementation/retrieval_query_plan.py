@@ -82,7 +82,7 @@ def build_direction_query_plans(
     from_date: str,
     to_date: str,
     fine_grained_question: str | None = None,
-    per_page: int = 100,
+    per_page: int = 50,
 ) -> list[OpenAlexQueryPlan]:
     """Build ordered precision-to-recall lanes from one compiled profile."""
     routes = profile.get("openalex_routes", {})

@@ -266,7 +266,11 @@ class MultiSourcePaperDiscoveryProvider:
                 "licensed_cnki_or_wanfang_configured": False,
             },
         )
-        if self.cache_ttl_seconds:
+        cacheable = not any(
+            item.get("status") in {"failed", "rate_limited"}
+            for item in provider_statuses
+        )
+        if self.cache_ttl_seconds and cacheable:
             with self._cache_lock:
                 self._cache[cache_key] = (time.monotonic(), deepcopy(result))
         return result

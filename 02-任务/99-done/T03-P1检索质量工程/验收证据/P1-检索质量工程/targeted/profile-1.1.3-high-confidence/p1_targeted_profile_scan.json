@@ -1,0 +1,364 @@
+{
+  "evaluation": "P1 targeted direction profile check",
+  "generated_at": "2026-08-22T12:11:28.362238+00:00",
+  "base_url": "http://127.0.0.1:8769",
+  "profile_version": "1.1.3-p1-retrieval",
+  "requested_direction_ids": [
+    "topic_privacy_concern",
+    "topic_human_ai_teams",
+    "topic_digital_artifact_design",
+    "topic_digital_information_environment"
+  ],
+  "directions": 4,
+  "raw_target_met": 4,
+  "eligible_target_met": 4,
+  "fatal_api_or_runner_failures": 0,
+  "provider_lane_failure_events": 0,
+  "rate_limited_directions": 0,
+  "trace_conserved_directions": 4,
+  "all_selected_gates_passed": true,
+  "results": [
+    {
+      "direction_id": "topic_privacy_concern",
+      "labels": {
+        "zh": "privacy concern",
+        "en": "privacy concern"
+      },
+      "input": {
+        "selected_direction_id": "topic_privacy_concern",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 130266.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 243,
+      "hard_gate_pass_count": 215,
+      "eligible_count": 20,
+      "boundary_count": 48,
+      "selected_count": 20,
+      "raw_target_met": true,
+      "eligible_target_met": true,
+      "retracted_in_final": 0,
+      "trace_count_conserved": true,
+      "candidate_trace_count": 215,
+      "deduplicated_count": 215,
+      "shortages": {
+        "zh": 10,
+        "en": 0
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_1",
+          "status": "ok",
+          "returned_rows": 75
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_2",
+          "status": "ok",
+          "returned_rows": 56
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "C_facet_recall",
+          "status": "ok",
+          "returned_rows": 100
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "E_zh_precise_1",
+          "status": "ok",
+          "returned_rows": 1
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 11,
+          "lane_id": "crossref_fallback"
+        }
+      ],
+      "provider_rate_limited": false,
+      "provider_lane_failure_count": 0,
+      "provider_lane_failures": [],
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "Chinese quota is independent; English records were not used to fill it"
+        ]
+      },
+      "score_config_version": "p1-hybrid-reranker-1.0.1"
+    },
+    {
+      "direction_id": "topic_human_ai_teams",
+      "labels": {
+        "zh": "human-AI teams",
+        "en": "human-AI teams"
+      },
+      "input": {
+        "selected_direction_id": "topic_human_ai_teams",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 89766.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 379,
+      "hard_gate_pass_count": 331,
+      "eligible_count": 45,
+      "boundary_count": 78,
+      "selected_count": 20,
+      "raw_target_met": true,
+      "eligible_target_met": true,
+      "retracted_in_final": 0,
+      "trace_count_conserved": true,
+      "candidate_trace_count": 331,
+      "deduplicated_count": 331,
+      "shortages": {
+        "zh": 10,
+        "en": 0
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_1",
+          "status": "ok",
+          "returned_rows": 100
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_2",
+          "status": "ok",
+          "returned_rows": 100
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "C_facet_recall",
+          "status": "ok",
+          "returned_rows": 100
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "E_zh_precise_1",
+          "status": "ok",
+          "returned_rows": 49
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30,
+          "lane_id": "crossref_fallback"
+        }
+      ],
+      "provider_rate_limited": false,
+      "provider_lane_failure_count": 0,
+      "provider_lane_failures": [],
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "Chinese quota is independent; English records were not used to fill it"
+        ]
+      },
+      "score_config_version": "p1-hybrid-reranker-1.0.1"
+    },
+    {
+      "direction_id": "topic_digital_artifact_design",
+      "labels": {
+        "zh": "digital artifact design",
+        "en": "digital artifact design"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_artifact_design",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 124078.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 255,
+      "hard_gate_pass_count": 225,
+      "eligible_count": 28,
+      "boundary_count": 42,
+      "selected_count": 20,
+      "raw_target_met": true,
+      "eligible_target_met": true,
+      "retracted_in_final": 0,
+      "trace_count_conserved": true,
+      "candidate_trace_count": 225,
+      "deduplicated_count": 225,
+      "shortages": {
+        "zh": 10,
+        "en": 0
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_1",
+          "status": "ok",
+          "returned_rows": 50
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_2",
+          "status": "ok",
+          "returned_rows": 75
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "C_facet_recall",
+          "status": "ok",
+          "returned_rows": 100
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "E_zh_precise_1",
+          "status": "ok",
+          "returned_rows": 0
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30,
+          "lane_id": "crossref_fallback"
+        }
+      ],
+      "provider_rate_limited": false,
+      "provider_lane_failure_count": 0,
+      "provider_lane_failures": [],
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "Chinese quota is independent; English records were not used to fill it"
+        ]
+      },
+      "score_config_version": "p1-hybrid-reranker-1.0.1"
+    },
+    {
+      "direction_id": "topic_digital_information_environment",
+      "labels": {
+        "zh": "Digital Information Environment",
+        "en": "Digital Information Environment"
+      },
+      "input": {
+        "selected_direction_id": "topic_digital_information_environment",
+        "fine_grained_question": "",
+        "chinese_count": 10,
+        "english_count": 20,
+        "run_synthesis": false
+      },
+      "duration_ms": 197141.0,
+      "status": "ok",
+      "status_code": "RETRIEVAL_PARTIAL",
+      "state": "PAPERS_DISCOVERED",
+      "raw_count": 200,
+      "hard_gate_pass_count": 185,
+      "eligible_count": 20,
+      "boundary_count": 48,
+      "selected_count": 20,
+      "raw_target_met": true,
+      "eligible_target_met": true,
+      "retracted_in_final": 0,
+      "trace_count_conserved": true,
+      "candidate_trace_count": 186,
+      "deduplicated_count": 186,
+      "shortages": {
+        "zh": 10,
+        "en": 0
+      },
+      "provider_statuses": [
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_1",
+          "status": "ok",
+          "returned_rows": 20
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "B_precise_2",
+          "status": "ok",
+          "returned_rows": 75
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "C_facet_recall",
+          "status": "ok",
+          "returned_rows": 75
+        },
+        {
+          "provider": "openalex",
+          "lane_id": "E_zh_precise_1",
+          "status": "ok",
+          "returned_rows": 0
+        },
+        {
+          "provider": "semantic_scholar",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "dblp",
+          "status": "not_configured",
+          "reason": "optional_provider_opt_in_required"
+        },
+        {
+          "provider": "crossref",
+          "status": "RETRIEVAL_PARTIAL",
+          "returned_rows": 30,
+          "lane_id": "crossref_fallback"
+        }
+      ],
+      "provider_rate_limited": false,
+      "provider_lane_failure_count": 0,
+      "provider_lane_failures": [],
+      "cache_hit": false,
+      "zero_result_diagnosis": {
+        "causes": [
+          "language_coverage_gap"
+        ],
+        "evidence": [
+          "Chinese quota is independent; English records were not used to fill it"
+        ]
+      },
+      "score_config_version": "p1-hybrid-reranker-1.0.1"
+    }
+  ]
+}

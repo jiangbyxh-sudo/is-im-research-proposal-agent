@@ -13,6 +13,21 @@ SPEC.loader.exec_module(server)
 
 
 class ServerTests(unittest.TestCase):
+    def test_openalex_transport_uses_stability_defaults(self):
+        keys = ("PROPOSAL_RETRIEVAL_TIMEOUT", "PROPOSAL_RETRIEVAL_RETRIES")
+        previous = {key: os.environ.pop(key, None) for key in keys}
+        try:
+            self.assertEqual({"timeout": 45, "retries": 5}, server.openalex_transport_settings())
+        finally:
+            for key, value in previous.items():
+                if value is not None:
+                    os.environ[key] = value
+
+    def test_dynamic_provider_signature_tracks_local_knowledge_files(self):
+        signature = server.dynamic_provider_signature()
+        self.assertEqual(2, len(signature))
+        self.assertTrue(all(isinstance(value, int) and value > 0 for value in signature))
+
     def test_catalog_is_complete(self):
         catalog = server.load_catalog()
         self.assertEqual(catalog["raw_topic_count"], 75)

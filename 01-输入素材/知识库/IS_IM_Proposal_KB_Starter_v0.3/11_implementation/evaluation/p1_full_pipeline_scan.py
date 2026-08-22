@@ -56,6 +56,7 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
         elapsed_ms = round((time.monotonic() - started) * 1000, 2)
         coverage = response.get("coverage_audit") or {}
         providers = response.get("provider_statuses") or []
+        lane_failures = [item for item in providers if item.get("status") == "failed"]
         raw_count = int(coverage.get("raw_count") or 0)
         eligible_count = int(coverage.get("eligible_count") or 0)
         post_boundary_target = int(profile["coverage_targets"].get("post_boundary_min", profile["coverage_targets"].get("eligible_min", 10)))
@@ -81,6 +82,8 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
             "shortages": response.get("shortages") or {},
             "provider_statuses": providers,
             "provider_rate_limited": any(item.get("status") == "rate_limited" for item in providers),
+            "provider_lane_failure_count": len(lane_failures),
+            "provider_lane_failures": lane_failures,
             "cache_hit": any(item.get("provider") == "local_memory_cache" and item.get("status") == "hit" for item in providers),
             "zero_result_diagnosis": response.get("zero_result_diagnosis") or {},
             "score_config_version": response.get("score_config_version"),
@@ -107,6 +110,8 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
             "candidate_trace_count": 0,
             "deduplicated_count": 0,
             "provider_rate_limited": False,
+            "provider_lane_failure_count": 0,
+            "provider_lane_failures": [],
             "cache_hit": False,
         }
 
@@ -117,12 +122,37 @@ def write_trace(trace_dir: Path, result: dict) -> None:
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def reusable_trace(result: dict, profile: dict) -> bool:
+    """Return true only when an existing trace already satisfies strict P1 gates."""
+    return (
+        result.get("direction_id") == profile.get("direction_id")
+        and result.get("status") == "ok"
+        and bool(result.get("raw_target_met"))
+        and bool(result.get("eligible_target_met"))
+        and not bool(result.get("provider_rate_limited"))
+        and int(result.get("provider_lane_failure_count") or 0) == 0
+        and int(result.get("retracted_in_final") or 0) == 0
+        and bool(result.get("trace_count_conserved"))
+        and int(result.get("candidate_trace_count") or 0) == int(result.get("deduplicated_count") or 0)
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default="http://127.0.0.1:8766")
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=240)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--reuse-valid-traces",
+        action="store_true",
+        help="Reuse existing per-direction traces only when every strict P1 trace gate already passes.",
+    )
+    parser.add_argument(
+        "--rerun-direction-ids",
+        default="",
+        help="Comma-separated direction ids to replace while preserving every other existing trace.",
+    )
     args = parser.parse_args()
     base_url = args.base_url.rstrip("/")
 
@@ -143,10 +173,45 @@ def main() -> int:
 
     trace_dir = args.output_dir / "traces/full_pipeline"
     results: list[dict] = []
+    profiles_to_run: list[dict] = []
+    reused_ids: list[str] = []
+    forced_ids = {item.strip() for item in args.rerun_direction_ids.split(",") if item.strip()}
+    known_ids = {profile["direction_id"] for profile in profiles}
+    unknown_forced_ids = forced_ids - known_ids
+    if unknown_forced_ids:
+        raise SystemExit(f"Unknown --rerun-direction-ids: {', '.join(sorted(unknown_forced_ids))}")
+    for profile in profiles:
+        target = trace_dir / f"{profile['direction_id']}.json"
+        if forced_ids and profile["direction_id"] not in forced_ids:
+            if not target.exists():
+                raise SystemExit(f"Missing preserved trace for {profile['direction_id']}: {target}")
+            try:
+                existing = json.loads(target.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as exc:
+                raise SystemExit(f"Invalid preserved trace for {profile['direction_id']}: {exc}") from exc
+            if existing.get("direction_id") != profile["direction_id"]:
+                raise SystemExit(f"Preserved trace direction mismatch: {target}")
+            results.append(existing)
+            reused_ids.append(profile["direction_id"])
+            continue
+        if args.reuse_valid_traces and target.exists():
+            try:
+                existing = json.loads(target.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                existing = {}
+            if reusable_trace(existing, profile):
+                results.append(existing)
+                reused_ids.append(profile["direction_id"])
+                continue
+        profiles_to_run.append(profile)
+    print(
+        f"resume reusable={len(reused_ids)} run={len(profiles_to_run)} total={len(profiles)}",
+        flush=True,
+    )
     with ThreadPoolExecutor(max_workers=max(1, min(args.workers, 3))) as executor:
         futures = {
             executor.submit(evaluate_direction, base_url, profile, args.timeout): profile
-            for profile in profiles
+            for profile in profiles_to_run
         }
         for future in as_completed(futures):
             result = future.result()
@@ -163,7 +228,9 @@ def main() -> int:
     total = len(results)
     raw_met = sum(item["raw_target_met"] for item in results)
     eligible_met = sum(item["eligible_target_met"] for item in results)
-    failures = sum(item["status"] != "ok" for item in results)
+    fatal_failures = sum(item["status"] != "ok" for item in results)
+    lane_failure_directions = sum(item["provider_lane_failure_count"] > 0 for item in results)
+    lane_failure_events = sum(item["provider_lane_failure_count"] for item in results)
     rate_limited = sum(item["provider_rate_limited"] for item in results)
     retracted = sum(item["retracted_in_final"] for item in results)
     trace_conserved = sum(item["trace_count_conserved"] and item["candidate_trace_count"] == item["deduplicated_count"] for item in results)
@@ -176,7 +243,8 @@ def main() -> int:
     )
     coverage_gates_pass = (
         total == 61
-        and failures == 0
+        and fatal_failures == 0
+        and rate_limited == 0
         and raw_met >= raw_required
         and eligible_met >= eligible_required
         and retracted == 0
@@ -189,6 +257,9 @@ def main() -> int:
         "base_url": base_url,
         "health": health,
         "profile_version": profiles_payload["version"],
+        "reused_trace_count": len(reused_ids),
+        "reused_direction_ids": reused_ids,
+        "executed_direction_count": len(profiles_to_run),
         "directions": total,
         "raw_ge_20": raw_met,
         "raw_ge_20_rate": round(raw_met / total, 4),
@@ -196,7 +267,12 @@ def main() -> int:
         "eligible_ge_10": eligible_met,
         "eligible_ge_10_rate": round(eligible_met / total, 4),
         "eligible_gate_required": eligible_required,
-        "provider_or_runner_failures": failures,
+        # Backward-compatible field: fatal API/runner failures only.  Recoverable
+        # provider-lane failures are reported separately and never hidden.
+        "provider_or_runner_failures": fatal_failures,
+        "fatal_api_or_runner_failures": fatal_failures,
+        "provider_lane_failure_directions": lane_failure_directions,
+        "provider_lane_failure_events": lane_failure_events,
         "rate_limited_directions": rate_limited,
         "retracted_in_final": retracted,
         "trace_conserved_directions": trace_conserved,
@@ -221,7 +297,8 @@ def main() -> int:
         f"- DirectionProfile：{summary['profile_version']}",
         f"- 原始候选≥20：{raw_met}/61（门槛至少{raw_required}/61）",
         f"- 合格候选≥10：{eligible_met}/61（门槛至少{eligible_required}/61）",
-        f"- Provider/Runner失败：{failures}/61；发生限流的方向：{rate_limited}/61",
+        f"- 致命API/Runner失败：{fatal_failures}/61；发生限流的方向：{rate_limited}/61",
+        f"- 可回退Provider Lane失败：{lane_failure_directions}/61个方向、{lane_failure_events}次；逐次错误保留在方向Trace。",
         f"- 正式结果中的撤稿记录：{retracted}",
         f"- Trace计数守恒：{trace_conserved}/61。",
         "- Sampled Precision@10：未测，仍需六分组小规模人工抽检。",
@@ -242,7 +319,9 @@ def main() -> int:
         "directions": total,
         "raw_ge_20": raw_met,
         "eligible_ge_10": eligible_met,
-        "provider_or_runner_failures": failures,
+        "provider_or_runner_failures": fatal_failures,
+        "provider_lane_failure_directions": lane_failure_directions,
+        "provider_lane_failure_events": lane_failure_events,
         "rate_limited_directions": rate_limited,
         "retracted_in_final": retracted,
         "trace_conserved_directions": trace_conserved,

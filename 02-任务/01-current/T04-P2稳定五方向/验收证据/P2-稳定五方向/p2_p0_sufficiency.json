@@ -1,0 +1,21 @@
+{
+  "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+  "can_output_five_directions": false,
+  "paper_count": 27,
+  "abstract_count": 0,
+  "max_clusters_by_size": 9,
+  "reasons": [
+    "paper_count_below_30",
+    "abstract_count_below_20"
+  ],
+  "config": {
+    "version": "p2-cluster-config-1.0.0",
+    "requested_clusters": 5,
+    "min_papers": 30,
+    "min_abstracts": 20,
+    "min_cluster_size": 3,
+    "random_seed": 20260822
+  },
+  "corpus_hash": "9441e4d32f8f149b8b3f90311afe108d9aefd7fe658a2d677ee14fc97858d2c5",
+  "p1_precision_gate_passed": false
+}

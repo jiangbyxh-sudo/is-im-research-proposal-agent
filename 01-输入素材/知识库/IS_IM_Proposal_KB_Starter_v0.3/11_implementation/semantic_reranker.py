@@ -11,7 +11,7 @@ import re
 from collections import Counter
 
 
-RERANK_VERSION = "p1-hybrid-reranker-1.0.0"
+RERANK_VERSION = "p1-hybrid-reranker-1.0.1"
 RERANK_WEIGHTS = {
     "topic_route_match": 0.30,
     "multilingual_semantic_similarity": 0.30,
@@ -69,6 +69,18 @@ def _facet_match(facet: str, text: str) -> bool:
     return meaningful >= 1 and score >= 67.0
 
 
+def _facets_for_document(facets: list[str], text: str) -> list[str]:
+    """Use one script's aliases without penalizing bilingual profiles twice."""
+    cjk_chars = len(re.findall(r"[\u4e00-\u9fff]", text))
+    latin_tokens = len(re.findall(r"[a-z]{2,}", text.casefold()))
+    prefer_cjk = cjk_chars >= 4 and cjk_chars >= latin_tokens
+    if prefer_cjk:
+        selected = [facet for facet in facets if re.search(r"[\u4e00-\u9fff]", str(facet))]
+    else:
+        selected = [facet for facet in facets if re.search(r"[a-z]", str(facet).casefold())]
+    return selected or list(facets)
+
+
 def _topic_route_score(record: dict, profile: dict) -> float:
     routes = profile.get("openalex_routes", {})
     approved = {
@@ -116,8 +128,8 @@ def _normalized_impact(record: dict) -> tuple[float, str]:
 def hybrid_rerank_score(record: dict, profile: dict, query: str, from_year: int, to_year: int) -> dict:
     text = " ".join(filter(None, [record.get("title"), record.get("abstract")])).casefold()
     facets = profile.get("facets", {})
-    core = facets.get("core_phenomena", [])
-    contexts = facets.get("required_context_any", [])
+    core = _facets_for_document(facets.get("core_phenomena", []), text)
+    contexts = _facets_for_document(facets.get("required_context_any", []), text)
     facet_values = [*core, *contexts]
     facet_hits = [facet for facet in facet_values if _facet_match(facet, text)]
     facet_coverage = 100.0 * len(facet_hits) / max(1, len(facet_values))

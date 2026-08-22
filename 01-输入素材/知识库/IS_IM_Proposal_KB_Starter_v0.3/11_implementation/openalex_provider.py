@@ -5,8 +5,9 @@ import json
 import os
 import time
 from datetime import datetime, timezone
+from http.client import IncompleteRead, RemoteDisconnected
 from threading import Lock
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -14,7 +15,7 @@ from retrieval_query_plan import OpenAlexQueryPlan, compile_openalex_filter
 
 
 class OpenAlexTransport:
-    def __init__(self, timeout: int = 18, retries: int = 2):
+    def __init__(self, timeout: int = 45, retries: int = 3):
         self.timeout = timeout
         self.retries = retries
         self._lock = Lock()
@@ -25,19 +26,21 @@ class OpenAlexTransport:
             wait = max(0.0, self._next_request_at - time.monotonic())
             if wait:
                 time.sleep(wait)
-            self._next_request_at = time.monotonic() + 0.12
+            self._next_request_at = time.monotonic() + 0.20
 
     def get(self, endpoint: str, params: dict) -> tuple[dict, dict]:
-        target = f"{endpoint}?{urlencode(params)}"
+        request_params = dict(params)
         headers = {"Accept": "application/json", "User-Agent": "ProposalCompass/0.6"}
         api_key = os.getenv("OPENALEX_API_KEY", "").strip()
         if api_key:
             headers["Authorization"] = f"Bearer {api_key}"
         started = time.monotonic()
         last_error: Exception | None = None
+        retry_errors: list[str] = []
         for attempt in range(self.retries + 1):
             try:
                 self._pace()
+                target = f"{endpoint}?{urlencode(request_params)}"
                 with urlopen(Request(target, headers=headers), timeout=self.timeout) as response:
                     payload = json.load(response)
                 return payload, {
@@ -45,6 +48,8 @@ class OpenAlexTransport:
                     "duration_ms": round((time.monotonic() - started) * 1000, 2),
                     "authenticated": bool(api_key),
                     "http_status": 200,
+                    "effective_per_page": request_params.get("per_page"),
+                    "retry_errors": retry_errors,
                 }
             except HTTPError as exc:
                 last_error = exc
@@ -52,13 +57,18 @@ class OpenAlexTransport:
                     break
                 retry_after = exc.headers.get("Retry-After")
                 try:
-                    delay = float(retry_after) if retry_after else 0.5 * (2 ** attempt)
+                    delay = float(retry_after) if retry_after else (2.0 if exc.code == 429 else 0.5) * (2 ** attempt)
                 except ValueError:
-                    delay = 0.5 * (2 ** attempt)
-                time.sleep(min(max(delay, 0.1), 30.0))
+                    delay = (2.0 if exc.code == 429 else 0.5) * (2 ** attempt)
+                time.sleep(min(max(delay, 0.1), 60.0))
             except Exception as exc:
                 last_error = exc
+                retry_errors.append(type(exc).__name__)
                 if attempt < self.retries:
+                    if isinstance(exc, (IncompleteRead, RemoteDisconnected, TimeoutError, ConnectionResetError, URLError, json.JSONDecodeError)):
+                        current_page_size = int(request_params.get("per_page") or 0)
+                        if current_page_size > 10:
+                            request_params["per_page"] = max(10, current_page_size // 2)
                     time.sleep(0.5 * (2 ** attempt))
         assert last_error
         raise last_error
@@ -93,7 +103,10 @@ class OpenAlexPaperProvider:
     endpoint = "https://api.openalex.org/works"
 
     def __init__(self, transport: OpenAlexTransport | None = None, per_page: int = 100):
-        self.transport = transport or OpenAlexTransport(timeout=int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "18")))
+        self.transport = transport or OpenAlexTransport(
+            timeout=int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "45")),
+            retries=int(os.getenv("PROPOSAL_RETRIEVAL_RETRIES", "3")),
+        )
         self.per_page = max(1, min(per_page, 100))
 
     @staticmethod
@@ -160,7 +173,20 @@ class OpenAlexPaperProvider:
         if not isinstance(plan, OpenAlexQueryPlan):
             raise TypeError("OpenAlexPaperProvider.search requires OpenAlexQueryPlan")
         per_page = max(1, min(int(plan.per_page or self.per_page), 100))
-        params = {"per_page": per_page, "cursor": "*"}
+        params = {
+            "per_page": per_page,
+            "cursor": "*",
+            # Avoid multi-megabyte work payloads that caused repeated
+            # IncompleteRead failures.  Every selected field is consumed by
+            # normalization, source qualification, boundary checks or rerank.
+            "select": ",".join((
+                "id", "display_name", "abstract_inverted_index", "authorships",
+                "publication_year", "publication_date", "language", "doi",
+                "primary_location", "best_oa_location", "type", "cited_by_count",
+                "citation_normalized_percentile", "fwci", "primary_topic",
+                "topics", "keywords", "is_retracted",
+            )),
+        }
         if plan.search:
             params["search"] = plan.search
         compiled_filter = compile_openalex_filter(plan.filters)
