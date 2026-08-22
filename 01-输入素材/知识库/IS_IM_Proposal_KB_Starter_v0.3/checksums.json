@@ -433,7 +433,7 @@
   "11_implementation/p1_retrieval_architecture.md": "077daca0a94e0d4d8add3730cd06be3d1fe0a4dbf26761fbc1fb20e286ec29ea",
   "11_implementation/paper_discovery_provider.py": "b1f98425b148fa42deb0efc5998c69d5cce1b909e6f43e7dbb39ddf0f711b047",
   "11_implementation/paper_quality.py": "740a59851e73684d03f9e1f5d586ecbf8b5a590844b796197ad331ae2b52ad74",
-  "11_implementation/proposal_generation_provider.py": "5176fdeaf095d322ef0c591662428c4bd4ac8a75d3f64b4b295fdf869460f654",
+  "11_implementation/proposal_generation_provider.py": "79641ad54b18ab633fe5255dd6f78a7d8a5b6ebe7377767c28cdf347f2da9652",
   "11_implementation/refresh_localization_status.py": "d135c1475a4fb411077827aa162c70c4707ba86dc0d790e16ce45920420891fa",
   "11_implementation/research_gap_provider.py": "b9e8c3f23f80074ab33172ae9b81da3a6a56943c733de9f403ce028f506414df",
   "11_implementation/research_synthesis_provider.py": "c85e53bbc274194e39560df8e9ce33dca8da98df92f26cd5e5f9f0d8c90af19c",
