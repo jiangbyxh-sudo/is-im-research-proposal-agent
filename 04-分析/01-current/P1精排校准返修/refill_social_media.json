@@ -1,0 +1,96 @@
+{
+ "status": "RETRIEVAL_PARTIAL",
+ "count": 20,
+ "top10": [
+  {
+   "title": "Are You What You Tweet? The Impact of Sentiment on Digital News Consumption and Social Media Sharing",
+   "abstract": "This study examines the impact of news content sentiment on digital news readership and social media sharing. Using econometric analyses and models estimated with rich clickstream data on online news readership and social media sharing data collected from Twitter, we find a differential effect of sentiment on news readership and sharing behaviors. Specifically, individuals are likely to read news articles with negative headline sentiment on the news website but tend to share articles with positive article sentiment on Twitter. Upon decomposition of news article sentiment, we find a contrasting positive author sentiment effect and a negative news topic valence effect on news readership. Interestingly, we uncover that an increase in a Twitter user’s followers leads to an increase in the Twitter user’s propensity to share positive-sentiment news articles. Overall, our findings affirm the coopetitive but complementary relationship between news websites and social media platforms. Our results also guide publishers to better craft their news content and manage social media presence to improve audience engagement and readership outcomes while preserving the agenda-setting ability of news media. Importantly, given the dichotomy between news reading and sharing behaviors, predicting individual behaviors based on social media opinions may need to be viewed with prudence.",
+   "source_title": "Information Systems Research",
+   "year": 2023,
+   "paper_id": "paper_386f0342ca3753e26f7a"
+  },
+  {
+   "title": "Strategic Content Generation and Monetization in Financial Social Media",
+   "abstract": "Strategic Content Generation and Monetization in Financial Social Media Abstract Financial social media, which relies on social media analysts (SMAs) to contribute content to investors, is a crucial channel for investors to gain financial information and for SMAs to monetize their content. The interactive nature of financial social media has given SMAs the opportunity to gain access to the investor preferences of their own audience base for financial content. Our study documents that SMAs would exploit this opportunity to strategically generate and monetize content by catering to investor preferences. Specifically, SMAs would increase the (negative) sentiment of the content if paid subscribers’ preferences for (negative) sentiment grow. Additionally, an SMA is more likely to produce paid content when the expected free readership increases and is less likely to do so when the expected paid subscriptions increase. Our findings suggest that the sentiment of financial social media content is not a mere reflection or prediction of stock market movements but also a result of SMAs’ reaction to investor preferences. We thus illustrate an approach to identify the SMAs who may amplify the investors’ confirmation biases because of such catering behaviors so that platform managers and regulators alike can utilize this method to improve the content quality of financial social media.",
+   "source_title": "Information Systems Research",
+   "year": 2025,
+   "paper_id": "paper_1310795ccaaab33fc852"
+  },
+  {
+   "title": "Speak with One Voice? Examining Content Coordination and Social Media Engagement During Disasters",
+   "abstract": "Speak with One Voice? Examining Content Coordination and Social Media Engagement During Disasters Practice- and policy-oriented abstract: Disaster relief organizations (DROs) use social media to share information rapidly and broadly. Many DROs maintain multiple accounts on the same social media platform. Each account represents a different operational entity of a DRO, such as its national headquarters or a local branch. An important problem that DROs with multiple accounts face is how to coordinate the production of social media content across these accounts. One strategy is to have all accounts within the same DRO match their decisions about how content is created and designed (e.g., audience, topic). An alternate strategy is to mismatch these decisions. Using Twitter data collected in partnership with the Canadian Red Cross, we analyze which coordination strategy is best for social media engagement. Our results suggest that, during the immediate aftermath of a disaster, accounts within the same DRO should produce content with similar characteristics by matching their content creation decisions. This leads to a 4.3% lift in engagement. However, when DROs start working on helping impacted communities recover from disasters, engagement is 29.6% higher when their accounts mismatch their content creation decisions and post distinctive content.",
+   "source_title": "Information Systems Research",
+   "year": 2024,
+   "paper_id": "paper_8c7c207fa1a39692f552"
+  },
+  {
+   "title": "Seeing Is Believing? How Including a Video in Fake News Influences Users’ Reporting of Fake News to Social Media Platforms",
+   "abstract": "Social media platforms, such as Facebook, Instagram, and Twitter, are combating the spread of fake news by developing systems that allow their users to report fake news. However, it remains unclear whether these reporting systems that harness the “wisdom of the crowd” are effective. Notably, concerns have been raised that the popularity of videos may hamper users’ reporting of fake news. The persuasive power of videos may render fake news more deceptive and less likely to be reported in practice. However, this is neither theoretically nor empirically straightforward, as videos not only affect users’ ability to detect fake news, but also impact their willingness to report and their engagement (i.e., likes, shares, and comments) which would further spread fake news. Using a unique dataset from a leading social media platform, we empirically examine how including a video in a fake news post affects the number of users reporting the post to the platform. Our results indicate that including a video significantly increases the number of users reporting the fake news post to the social media platform. Additionally, we find that the sentiment intensity of the fake news text content, especially when the sentiment is positive, attenuates the effect of including a video. Randomized experiments and a set of mediation analyses are included to uncover the underlying mechanisms. We contribute to the information systems literature by examining how social media platforms can leverage their users to report fake news, and how different formats (e.g., videos and text) of fake news interact to influence users’ reporting behavior. Social media platforms that seek to leverage the “wisdom of the crowd” to combat the proliferation of fake news should consider both the popularity of videos and the role of text sentiment in fake news to adjust their strategies.",
+   "source_title": "MIS Quarterly",
+   "year": 2022,
+   "paper_id": "paper_be165805f0f76999a3be"
+  },
+  {
+   "title": "Content and Style of Firm-Generated Posts on Social Media: A Study of User Engagement on Hedonic and Utilitarian Product Pages on Facebook",
+   "abstract": "Social media platforms are increasingly crucial in corporate engagement, but there is limited research delineating how page characteristics influence firm behavior on these platforms. This paper examines the relationship between firm-generated content and user engagement on product pages and whether a page’s characteristics and content motivations moderate this relationship. Analyzing a sample of 29,267 posts on 85 Facebook product pages of 49 Fortune 1000 firms, we studied the relationship between the content (i.e., informational vs. emotional) and style (i.e., formal vs. informal) of a given post and the level of user engagement. The key finding is that in the content dimension, “incongruous” posts, i.e., content not traditionally expected for a product page of a given type, generate more favorable engagement. Also, informal style posts achieve more favorable engagement irrespective of the product page characteristics. The secondary discovery is attributable to Facebook’s function as a social media network where acquaintances engage with one another. The platform’s unwritten protocol of communication largely emphasizes informality, which is likely the driver of this observation. These findings contribute to the burgeoning social media strategy literature illustrating how product page characteristics moderate effective social media content strategies.",
+   "source_title": "Journal of the Association for Information Systems",
+   "year": 2024,
+   "paper_id": "paper_eac601c35450b264463e"
+  },
+  {
+   "title": "Social Media Platforms and User Engagement: A Multi-Platform Study on One-way Firm Sustainability Communication",
+   "abstract": "Abstract There have been multiple research studies in recent days that have analyzed the growing role of social media in firms’ communication strategy as well as the role of social media in shaping a firm’s reputation. However, most of these studies focus on one of the multiple social media platforms that firms use. In this study, we argue that there are nuances in firms’ social media communication strategies depending on the platforms. Given the rising importance of sustainability, we focus on firms’ sustainability-related communication. We analyze the impact of firms’ one-way sustainability communication over Twitter and Facebook on the respective platforms’ user engagement. The engagement has been computed as likes and shares (likes and retweets) over the firm generated one-way sustainability communication-related posts. Using a panel dataset of a 3-year period for S&P 500 firms having active social media profiles on both platforms, we demonstrate the difference in the firms’ sustainability communication on the two platforms. We also find evidence that users on both platforms have different preferences, such as messaging from firms. Using a differential metric in our analysis helps us counter the firm-level fixed effects. We find evidence suggesting that firms would do well by having different strategies for different platforms. Firms would benefit by focusing on sustainability relevant and bite-sized content on Twitter, but more positive and engaging content on Facebook.",
+   "source_title": "Information Systems Frontiers",
+   "year": 2024,
+   "paper_id": "paper_377781cbae785acc2550"
+  },
+  {
+   "title": "How Ephemerality Features Affect User Engagement with Social Media Platforms",
+   "abstract": "User engagement, a key factor in the success of social media platforms, has long been based on permanent content. A recent paradigm shift in platform design has led large social media providers to implement ephemerality features that by default make shared content disappear after a certain amount of time. However, very little is known about how ephemerality features affect user engagement and behavior in social media. Drawing upon the technology affordance perspective, we conducted a qualitative multimethod study involving individual interviews and focus groups. Our findings show that the affordances arising from features with varying degrees of ephemerality (i.e., snaps and stories) differ from those of permanent content features in terms of self-presentation, browsing others’ content, and communication. Adopting a multidimensional conceptualization of user engagement, we show the positive (e.g., more content sharing) and negative (e.g., cognitive burden from context loss) effects for snaps and stories that should be cautiously considered by social media platforms aiming to introduce such features. Finally, we reveal new user behaviors that relate to sharing snapshots of fleeting value as snaps or experiences of transient value as stories.",
+   "source_title": "MIS Quarterly",
+   "year": 2023,
+   "paper_id": "paper_0f43747d13b79d22757e"
+  },
+  {
+   "title": "Signaling Quality to Consumers: The Role of Social Media Marketing",
+   "abstract": "Firms are increasingly turning to social media marketing to boost product visibility and spread consumer-generated content, which often reveals valuable information about product quality. However, our research shows that this dual role can backfire; heavy spending on social media marketing may no longer help high-quality firms stand out. Instead of investing heavily to reach a broad audience, high-quality firms may do better by cutting back and focusing on targeted niche markets. Furthermore, as consumers become more capable of discerning product quality through social media content, low- and medium-quality firms benefit less from mimicking one another. This creates stronger incentives for lower-quality firms to mimic the high-quality firm, which increases consumer confusion and weakens the quality signal conveyed through investment in social media marketing. These findings help explain the variation in firms’ social media marketing strategies and offer practical guidance on allocating social media budgets more effectively.",
+   "source_title": "Information Systems Research",
+   "year": 2026,
+   "paper_id": "paper_40154d8455344ac76b7c"
+  },
+  {
+   "title": "Content is King, Affect is Queen: An Affective Model of Social Media Content Propagation",
+   "abstract": "Social media’s dominant economic model relies on curating content that appeals to users’ emotions to capture and hold their attention, resulting in experiences that are primarily affective. User behavior drives content propagation, which is the core process underlying major social media phenomena—both beneficial and harmful. While IS research recognizes the importance of affective factors in content propagation, this research is marked by diverse theoretical foundations, a focus on content-level factors, and a complex landscape of findings. To unpack the affective factors underlying user behavior in content propagation and integrate insights from prior research, we develop an affective model of social media content propagation grounded in the affective response model (ARM) and extend ARM’s propositions to the omnibus context of social media. We examine two highly relevant, theoretically nuanced, and countervailing affective forces—humor and politics—by developing testable hypotheses in the discrete context of humorous and political memes. Specifically, we consider the role of human factors (mood, ideology), affective dispositions (sense of humor, affinity for political humor), content factors (political nature), and induced affective states (mirth) to predict propagation intentions. We test the model using an online experiment involving 289 participants, balanced across gender and political orientation, and 48 memes, balanced across presence and partisan leaning of political content. Using cross-classified mixed-effects regression, we find general support for our hypotheses and uncover interesting differences in politically relevant factors. The broader proposed model, supported by the study’s findings, offers a general multilevel framework to illuminate the role of affective processes in social media’s promise and peril, situate prior IS research, and support future studies of social media user behavior. We contribute to the broader social media literature by identifying emotionality as a contextual stimulus, and to ARM by explicating its multilevel nature, unpacking indirect effects, and contextualizing it to social media content propagation.",
+   "source_title": "MIS Quarterly",
+   "year": 2026,
+   "paper_id": "paper_db234d05e0d0df822072"
+  },
+  {
+   "title": "Integrating truth bias and elaboration likelihood to understand how political polarisation impacts disinformation engagement on social media",
+   "abstract": "Abstract Political polarisation has become an increasingly alarming issue in society, exacerbated by the widespread use of social media and the development of filter bubbles among social media users. This environment has left users susceptible to disinformation, especially those with whom a user is politically aligned. In this research, we integrate truth bias, elaboration likelihood model and new media literacy into a model for explaining social media engagement (with both disinformation and factual information) and analysing how political polarisation (operationalised as political alignment between users) influences perceptions and behaviours. Using an experimental design, we analyse the model separately for posts containing disinformation and factual information, highlighting key differences. Political alignment positively moderates truth bias's effect on engagement with disinformation. For both disinformation and factual information, political alignment moderates the effect of generalised communicative suspicion (GCS) on truth bias, such that GCS's effect on truth bias flips from negative to positive as political alignment increases. Issue involvement and political alignment appear to be the primary drivers of disinformation engagement, with critical consuming media literacy failing to mitigate engagement. Our findings contribute to the understanding of persuasion, conviction, amplification, polarisation and aversion related to fake news on social media.",
+   "source_title": "Information Systems Journal",
+   "year": 2024,
+   "paper_id": "paper_0e48eecd753ac8f883fa"
+  }
+ ],
+ "provider_statuses": [
+  {
+   "provider": "openalex",
+   "status": "rate_limited",
+   "lane_id": "B_precise_1",
+   "error_type": "HTTPError",
+   "http_status": 429
+  },
+  {
+   "provider": "semantic_scholar",
+   "status": "not_configured",
+   "reason": "optional_provider_opt_in_required"
+  },
+  {
+   "provider": "crossref",
+   "status": "RETRIEVAL_PARTIAL",
+   "returned_rows": 120,
+   "lane_id": "crossref_fallback"
+  }
+ ]
+}

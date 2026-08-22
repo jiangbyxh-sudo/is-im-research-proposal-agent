@@ -1,0 +1,101 @@
+{
+ "status": "RETRIEVAL_PARTIAL",
+ "count": 17,
+ "top10": [
+  {
+   "title": "The Double-Edged Roles of Generative AI in the Creative Process: Experiments on Design Work",
+   "abstract": "Generative AI (GenAI) promises to revolutionize creative work, but its value is not universal. Using controlled lab settings with students and real-world tests with professional designers, our research shows that GenAI is a double-edged tool. In the initial brainstorming (ideation) stage, GenAI reliably boosts creativity for all users. However, in the execution (implementation) stage, whereas novice designers continue to benefit from GenAI’s assistance, expert designers encounter inefficiencies—spending significantly more time without improving creativity, because GenAI’s methods conflict with experts’ well-established routines. For firms, this means adoption strategies must be nuanced. GenAI delivers the greatest value when applied to brainstorming, early concept development, and work by less-experienced employees. In contrast, deploying GenAI in later-stage production tasks, especially with seasoned professionals, may reduce efficiency. Managers and tool designers should avoid blanket promotion of GenAI across all tasks and instead develop targeted adoption strategies that align with employees’ expertise and the stage of the creative process. By tailoring GenAI use, organizations can harness its creative potential while minimizing risks of counterproductive outcomes.",
+   "source_title": "Information Systems Research",
+   "year": 2025,
+   "paper_id": "paper_b5e9c15d7369bbc3d9be"
+  },
+  {
+   "title": "Generative AI Implementation in Enterprises: Lessons From a Case Study of Enhanced IT Service Management",
+   "abstract": "ABSTRACT The recent rise of Generative Artificial Intelligence (GenAI) is fundamentally changing the way businesses operate, with many now investing heavily in this technology. However, businesses are still exploring ways to extract value from GenAI and develop organisational capabilities. In this practitioner paper, we describe how Apollo Tyres Limited (ATL), a traditional tyre manufacturer in India, utilised GenAI to transform its IT service desk operations as a pilot project for enterprise‐wide adoption and the tangible results it achieved from this integration. We identify the following four capabilities that ATL developed using GenAI: (i) enhanced management of customer interactions, such as overcoming delays due to multi‐lingual conversations; (ii) proactive resolution of incidents, such as faster categorisation based on their textual descriptions; (iii) proactive management of IT assets , such as dynamic prediction of potential failures and system inefficiencies; and (iv) strategic analysis of operational data, such as a GenAI‐driven frequently asked questions system. In addition, we illustrate ATL's actions to facilitate GenAI implementation in two broad categories: (i) building a foundation for GenAI implementation and (ii) realising GenAI‐enabled capabilities . Seven lessons learnt are consequently generated to guide other enterprises in similar efforts to implement GenAI at IT service function as well as to scale GenAI initiatives across the organisation.",
+   "source_title": "Information Systems Journal",
+   "year": 2026,
+   "paper_id": "paper_c56a3e4dae226217ca5a"
+  },
+  {
+   "title": "Integrating Generative AI Into Enterprise Platforms: Insights From Salesforce",
+   "abstract": "ABSTRACT The widespread applications of generative AI (GenAI) have sparked significant interest, with many organisations eager to leverage its transformative potential. Rather than focusing on individual organisations, this study examines GenAI integration within enterprise platforms, which are extensively adopted by many organisations and thus amplify both the benefits and risks of GenAI. We offer targeted recommendations for enterprise platform owners and their complementors, addressing challenges they face when integrating GenAI into these platforms. Drawing on a case study of Salesforce's experience, we recommend actions in three foundational areas – platform capability, architecture and governance – ensuring that our guidance is broadly applicable across enterprise platforms. In platform capability, we advise developing a unified GenAI stack built on existing platform services, offering generic and industry‐specific GenAI use cases to accelerate customer adoption and providing tools for customisation and creation of new use cases to enhance GenAI's transformational impact. For platform architecture, we recommend adding new layers for accommodating diverse GenAI foundation models and creating a trusted environment for secure data access, privacy and content monitoring. We also recommend implementing a prompt architecture to improve content relevance and accuracy. In platform governance, we recommend establishing new mechanisms to mitigate GenAI risks. Partnerships with GenAI providers and proactive investments in GenAI are essential to retain critical GenAI technologies. Personalised consultancy and training along with joint design and implementation with platform customers are also recommended. These combined actions, pursued in parallel across capability, architecture and governance, form a sustainable roadmap for GenAI integration in enterprise platforms.",
+   "source_title": "Information Systems Journal",
+   "year": 2025,
+   "paper_id": "paper_6e440d1866b1632c3b72"
+  },
+  {
+   "title": "What is the Creative Value of AI Hallucinations? Insights from Generative AI use in Educational Contexts",
+   "abstract": "Abstract As generative artificial intelligence (GenAI) systems become increasingly incorporated into creative processes, they present both opportunities and challenges in terms of redefining creativity. This article provides a perspective on the dual nature of AI hallucinations from a divergent thinking perspective where GenAI creates something unexpected when given a prompt, and examines its role as both a facilitator and an inhibitor of the creative process. Although AI hallucinations can yield new ideas and break from established patterns of thinking to generate creativity, they can also create a dependency which could result in the stalling of creative output. This study uses a qualitative research approach based on the experiences of master’s students who incorporate GenAI and engage with it in their creative work. The findings from the study reveal a relationship between divergent thinking and AI-generated responses, showing GenAI can work both as a collaborator and a disruptor in the creative context. In addressing the duality of hallucinations produced by AI, this research contributes to the larger dialogue surrounding the changing relationship between AI and creativity, highlighting ways in which AI might both promote and disrupt human creativity.",
+   "source_title": "Information Systems Frontiers",
+   "year": 2026,
+   "paper_id": "paper_6205bc857da6f9c1f88b"
+  },
+  {
+   "title": "The Indirect Disclosure Effect: How Disclosing Generative AI Use Impacts Human Creative Collaboration with AI",
+   "abstract": "Regulators increasingly mandate transparency regarding generative AI (GenAI) use in creative work, aiming to protect audiences from deception while preserving creators' self-expression. One way of achieving this transparency is through disclosure labels that directly inform audiences about GenAI use. Yet, prior research focused almost exclusively on how such labels affect audience evaluations and paid surprisingly little attention to whether mandatory disclosure affects creators, too. We refer to this as the indirect disclosure effect. Drawing on Goffman's account of impression management, we theorize that creators who anticipate disclosure fear that audiences will not recognize their human creative agency, threatening their validation as a creative self, which leads them to adjust their collaboration with GenAI. To investigate this mechanism, we employ two nested mixed-methods experiments in which participants collaborate with a text-to-image GenAI tool under different disclosure conditions. We empirically establish the indirect disclosure effect: when disclosure is anticipated, the majority of creators withdraw from the creative process, leaving image generation to GenAI. We provide evidence that this withdrawal is driven by creators’ fears that audiences will not recognize their creative agency. Hence, the produced artifacts predominantly reflect computational rather than human creativity, which is also recognized and evaluated by the audience regardless of the direct disclosure label. Overall, our study reveals a fundamental tension at the heart of transparency regulation: by disclosing GenAI use through a simple label, regulators may inadvertently diminish the very human creative agency they aim to protect, and they do so before audiences ever see the label.",
+   "source_title": "Information Systems Research",
+   "year": 2026,
+   "paper_id": "paper_726dabb6ad93d33f6044"
+  },
+  {
+   "title": "Generative AI and Price Discrimination in the Housing Market",
+   "abstract": "Housing price discrimination remains a persistent challenge for fair housing and affordability, with homes in white-dominant neighborhoods priced higher than similar homes in minority-dominant areas. Because pricing decisions increasingly become supported by generative AI (GenAI), this study examines whether GenAI-generated housing prices reinforce or reduce these disparities in the U.S. housing market. Using data on 284,749 U.S. property listings, we compare listed asking prices with prices generated by GenAI. We find that, although GenAI prices are not discrimination free, they reduce the pricing gap between white-dominant and minority-dominant neighborhoods. Further analyses suggest that this reduction is not simply driven by GenAI producing average-like prices or reproducing patterns in numerical housing data. Instead, GenAI pricing appears to reflect broader online content about housing discrimination, which may shape how these models generate housing prices. For real estate professionals, these findings suggest that carefully monitored GenAI tools may help support fairer pricing practices when used to complement, rather than replace, human judgment. For policymakers, the study provides forward-looking evidence to inform how GenAI use in housing-related decision making should be governed to promote fair housing practices.",
+   "source_title": "Information Systems Research",
+   "year": 2026,
+   "paper_id": "paper_6637493cd501fe9a6e55"
+  },
+  {
+   "title": "Organizational Capabilities for AI Implementation—Coping with Inscrutability and Data Dependency in AI",
+   "abstract": "Abstract Artificial Intelligence (AI) implementation incorporates challenges that are unique to the context of AI, such as dealing with probabilistic outputs. To address these challenges, recent research suggests that organizations should develop specific capabilities for AI implementation. Currently, we lack a thorough understanding of how certain capabilities facilitate AI implementation. It remains unclear how they help organizations to cope with AI’s unique characteristics. To address this research gap, we employ a qualitative research approach and conduct 25 explorative interviews with experts on AI implementation. We derive four organizational capabilities for AI implementation: AI Project Planning and Co-Development help to cope with the inscrutability in AI, which complicates the planning of AI projects and communication between different stakeholders. Data Management and AI Model Lifecycle Management help to cope with the data dependency in AI, which challenges organizations to provide the proper data foundation and continuously adjust AI systems as the data evolves. We contribute to our understanding of the sociotechnical implications of AI’s characteristics and further develop the concept of organizational capabilities as an important success factor for AI implementation. For practice, we provide actionable recommendations to develop organizational capabilities for AI implementation.",
+   "source_title": "Information Systems Frontiers",
+   "year": 2023,
+   "paper_id": "paper_a5396392109201648b41"
+  },
+  {
+   "title": "Logic hybridization in enterprise platforms: Reconfiguring architecture and governance for generative AI",
+   "abstract": "Enterprise platforms have historically relied on a logic of determinacy to ensure predictable, reproducible, and auditable system behavior through mutually reinforcing architecture and governance mechanisms. However, generative AI (GenAI) introduces a conflicting logic of probabilistic inference that destabilizes these mechanisms by generating variable, context-dependent, and non-deterministic outputs. As platform owners increasingly integrate GenAI into enterprise platforms, this study draws on assemblage theory and an in-depth case study of Salesforce to examine how enterprise platform owners reconfigure architecture and governance to manage the coexistence of deterministic and probabilistic logics. We develop a process model of logic hybridization that explains how platform owners restore system-level stability while accommodating and regulating probabilistic components. Specifically, we identify four complementary mediation mechanisms, that is, dependency mediation, service mediation, interaction-centric control, and dynamic certification and monitoring, through which platform owners reconfigure architectural and governance arrangements. We further theorize that logic hybridization gives rise to a hybrid platform logic characterized by three emergent properties: boundary fluidity, trust mediation, and expanded generativity. This study contributes to research on enterprise platforms and enterprise system evolution by identifying incompatible system behavior as a new source of platform destabilization, extending theories of platform evolution beyond structural change, and theorizing how deterministic and probabilistic logics coexist under mediated conditions in enterprise platforms.",
+   "source_title": "Journal of Information Technology",
+   "year": 2026,
+   "paper_id": "paper_5a04dfcc382c2a4141cc"
+  },
+  {
+   "title": "Examining the Impact of Generative AI on Users’ Voluntary Knowledge Contribution: Evidence from a Natural Experiment on Stack Overflow",
+   "abstract": "Practice and policy abstract Generative artificial intelligence (AI) is reshaping online knowledge-sharing, but its effects on voluntary user contributions remain uncertain. This study examines how the usage of ChatGPT influences users’ answering behavior on Stack Overflow, one of the world’s largest question-and-answer platforms. Using a natural experiment, we find that access to generative AI increases the number of answers users provide, whereas those answers are typically shorter and easier to read. These patterns suggest that users are learning from AI outputs, enabling them to share knowledge more efficiently. However, intensive reliance on AI introduces cognitive strain, which can reduce contribution levels. For practice, our findings underscore the importance for platform owners and managers to strike a balance between AI integration and user support. Encouraging AI-assisted learning can expand participation and improve the accessibility of content, but safeguards are necessary to prevent cognitive overload and ensure the quality of answers. From a policy perspective, our study highlights the importance of establishing clear guidelines for the responsible use of AI in community-driven platforms. By designing thoughtful integration strategies, organizations can harness the benefits of AI—enhancing efficiency and readability—while sustaining authentic, high-quality knowledge contributions.",
+   "source_title": "Information Systems Research",
+   "year": 2026,
+   "paper_id": "paper_bcd9a3a4ad50859ec22f"
+  },
+  {
+   "title": "Agency Configurations in Generative AI Ideation: How Textual and Visual Idea Concretizations Shape Idea Creativity and Ideator Effort",
+   "abstract": "People turn to generative artificial intelligence (AI) to make ideation less effortful. Turning a vague idea into a mature concept is hard work, and offloading it to AI is tempting. However, our research shows that this strategy can backfire; the lower-effort form of AI support often produced less creative ideas. In an online experiment, 276 people refined ideas for an innovation challenge working alone or with AI-generated text or images. Image-based generative AI had a double-edged effect; it significantly reduced effort compared with working alone or using text-based support. However, ideas from image-based support were also 18% less creative than those from the more effortful text-based support. The reason lies in what each format leaves for the human to do. Images specify all details of an idea, leaving less creative room for humans, but text leaves gaps that humans can complete with their imagination—a process that is effortful yet stimulates creativity. Crucially, the effect also depends on how far the idea is developed. Text-based input helps most when the idea is already well developed because humans can then make the most of it. The major takeaway is do not use AI just to save effort but use it where the effort pays off.",
+   "source_title": "Information Systems Research",
+   "year": 2026,
+   "paper_id": "paper_1b6c25706e61edca7c59"
+  }
+ ],
+ "provider_statuses": [
+  {
+   "provider": "openalex",
+   "status": "rate_limited",
+   "lane_id": "B_precise_1",
+   "error_type": "HTTPError",
+   "http_status": 429
+  },
+  {
+   "provider": "semantic_scholar",
+   "status": "not_configured",
+   "reason": "optional_provider_opt_in_required"
+  },
+  {
+   "provider": "dblp",
+   "status": "not_configured",
+   "reason": "optional_provider_opt_in_required"
+  },
+  {
+   "provider": "crossref",
+   "status": "RETRIEVAL_PARTIAL",
+   "returned_rows": 120,
+   "lane_id": "crossref_fallback"
+  }
+ ]
+}
