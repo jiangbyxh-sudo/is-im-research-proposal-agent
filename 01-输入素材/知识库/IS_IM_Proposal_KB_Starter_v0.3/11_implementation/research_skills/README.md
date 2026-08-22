@@ -25,6 +25,15 @@ Phase C 提供：
 
 反证裁决返回降级或收窄建议，不自动改写原始Gap或Claim Store。
 
+Phase D-1 提供：
+
+- `p3.fulltext_evidence_extraction`：通过可选GROBID sidecar把合法PDF转换为句级全文Evidence Matrix；
+- GROBID只负责结构化、章节/页码定位和句子切分，不决定论文相关性、研究空白或Claim；
+- 未配置、服务不可用、解析为空和解析失败均保留明确状态，不回退为题名级正式证据；
+- Provider不复制原PDF、不持久化原始TEI，也不在Skill结果中返回本地文件路径。
+
+运行配置和容器边界见`sidecars/grobid/README.md`。未传入`fulltext_provider`时，Registry不注册该可选Skill。
+
 ## 使用示例
 
 ```python

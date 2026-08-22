@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict
+from pathlib import Path
 from typing import Any, Mapping
 
 from citation_graph_provider import CitationExpansionRequest
@@ -10,6 +11,7 @@ from gap_falsification import (
     GapFalsificationRequest,
     build_gap_falsification_query_plan,
 )
+from fulltext_evidence_provider import FulltextExtractionRequest
 from multi_perspective_search_plan import build_multi_perspective_search_plan
 from paper_discovery_provider import DiscoveryRequest
 from proposal_generation_provider import ProposalRequest
@@ -303,6 +305,60 @@ class P3EvidenceGapSkillAdapter:
         )
 
 
+class P3FulltextEvidenceExtractionSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p3.fulltext_evidence_extraction",
+        version="1.0.0",
+        stage="P3",
+        description="Extract sentence-level full-text evidence through an optional GROBID sidecar.",
+        deterministic=False,
+        external_network=True,
+    )
+
+    def __init__(self, provider) -> None:
+        self.provider = provider
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        pdf_path = payload.get("pdf_path")
+        paper_id = str(payload.get("paper_id") or "").strip()
+        if not isinstance(pdf_path, str) or not pdf_path.strip():
+            raise SkillInputError("pdf_path_must_be_nonempty_string")
+        if not paper_id:
+            raise SkillInputError("paper_id_required")
+        result = self.provider.extract(FulltextExtractionRequest(
+            pdf_path=Path(pdf_path),
+            paper_id=paper_id,
+            title=str(payload.get("title") or ""),
+            max_pdf_bytes=_positive_int(payload, "max_pdf_bytes", 50 * 1024 * 1024),
+        ))
+        if result.status == "FULLTEXT_EVIDENCE_READY":
+            status = SkillRunStatus.COMPLETE
+        elif result.status in {
+            "FULLTEXT_SERVICE_NOT_CONFIGURED",
+            "FULLTEXT_SERVICE_UNAVAILABLE",
+            "FULLTEXT_EXTRACTION_EMPTY",
+        }:
+            status = SkillRunStatus.BLOCKED
+        else:
+            status = SkillRunStatus.FAILED
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result.status,
+            output=asdict(result),
+            limitations=list(result.limitations),
+            provenance={
+                "provider": "grobid",
+                "matrix_hash": result.evidence_matrix.get("matrix_hash"),
+            },
+            audit={
+                **result.audit,
+                "title_level_fallback_used": False,
+                "source_path_emitted": False,
+            },
+            cacheable=False,
+        )
+
+
 class P3GapFalsificationPlanSkillAdapter:
     descriptor = ResearchSkillDescriptor(
         skill_id="p3.gap_falsification_plan",
@@ -425,6 +481,7 @@ def build_default_registry(
     p4_provider=None,
     citation_graph_provider=None,
     citation_verifier=None,
+    fulltext_provider=None,
 ) -> ResearchSkillRegistry:
     registry = ResearchSkillRegistry()
     registry.register(P1MultiPerspectiveSearchPlanAdapter())
@@ -437,6 +494,8 @@ def build_default_registry(
         registry.register(P1CitationVerificationSkillAdapter(citation_verifier))
     if p2_provider is not None:
         registry.register(P2ClusteringSkillAdapter(p2_provider))
+    if fulltext_provider is not None:
+        registry.register(P3FulltextEvidenceExtractionSkillAdapter(fulltext_provider))
     registry.register(P3EvidenceGapSkillAdapter(p3_provider))
     registry.register(P3GapFalsificationPlanSkillAdapter())
     registry.register(P3GapFalsificationEvaluationSkillAdapter())

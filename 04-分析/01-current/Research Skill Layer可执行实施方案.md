@@ -116,7 +116,23 @@ Research Skill Layer 不拥有以下决定权：
 
 ### Phase D：全文证据 Sidecar
 
-先接 GROBID，再接 PaperQA2。主服务没有配置 sidecar 时必须返回明确的未配置或降级状态，不回退到题名级正式证据。
+状态：D-1客户端与解析层已完成（2026-08-23）；真实容器部署验证待具备Docker或外部GROBID服务后执行。
+
+先接 GROBID，再接 PaperQA2。主服务没有配置 sidecar 时必须返回明确的未配置或阻断状态，不回退到题名级正式证据。
+
+D-1已交付：
+
+- 可选GROBID健康、版本和`processFulltextDocument`客户端；
+- PDF类型、大小和签名校验；
+- TEI句子、章节、页码与坐标解析；
+- 全文span转换为Evidence Matrix并通过Claim Store校验；
+- 原PDF、原始TEI和本地路径不进入Skill输出；
+- 未配置、服务不可用、空结果和失败状态不被包装成成功；
+- 10项离线专项测试。
+
+D-1未完成项：真实GROBID容器/服务健康检查、真实论文PDF解析和镜像digest锁定。完成这些运行时验收前，不得声称全文Sidecar已部署。
+
+D-2（PaperQA2）继续保持待执行，必须在D-1真实运行时验收后再开始。
 
 ### Phase E：受控开题和界面
 
