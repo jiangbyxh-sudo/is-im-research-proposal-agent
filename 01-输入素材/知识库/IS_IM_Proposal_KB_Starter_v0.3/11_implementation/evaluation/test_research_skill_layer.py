@@ -213,7 +213,7 @@ class ResearchSkillLayerTests(unittest.TestCase):
         self.assertEqual(2, len(result.output["formal_gaps"][0]["supporting_paper_ids"]))
         self.assertFalse(result.audit["formal_gap_minimum_changed"])
 
-    def test_lock_file_keeps_every_external_project_disabled_or_deferred(self):
+    def test_lock_file_has_no_unreviewed_enabled_external_project(self):
         text = (IMPLEMENTATION / "research_skills/third_party_skills.lock.yaml").read_text(encoding="utf-8")
         self.assertNotIn("status: enabled", text)
         self.assertEqual(6, text.count("    repository: https://github.com/"))

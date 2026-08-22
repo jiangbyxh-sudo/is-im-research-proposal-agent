@@ -34,6 +34,16 @@ Phase D-1 提供：
 
 运行配置和容器边界见`sidecars/grobid/README.md`。未传入`fulltext_provider`时，Registry不注册该可选Skill。
 
+Phase D-2 提供：
+
+- `p3.question_evidence_retrieval`：只在P1 direct论文的摘要/全文span中做问题相关排序；
+- PaperQA2固定为`v2026.08.12`隔离Python 3.12运行时，仅调用`sparse` embedding与`Docs.retrieve_texts`；
+- worker不接收API Key，不调用PDF解析、外部论文搜索、LLM、agent、答案生成或元数据服务；
+- 返回项只是`EVIDENCE_CANDIDATE_ONLY`，必须重新绑定Claim Store；
+- 主进程拒绝任何未知、重复、非allowlist或非正式证据span。
+
+运行边界、依赖冻结和验收记录见`sidecars/paperqa2/`。
+
 ## 使用示例
 
 ```python

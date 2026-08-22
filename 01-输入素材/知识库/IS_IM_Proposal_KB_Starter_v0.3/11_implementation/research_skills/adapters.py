@@ -15,6 +15,7 @@ from fulltext_evidence_provider import FulltextExtractionRequest
 from multi_perspective_search_plan import build_multi_perspective_search_plan
 from paper_discovery_provider import DiscoveryRequest
 from proposal_generation_provider import ProposalRequest
+from question_evidence_retrieval import QuestionEvidenceRequest
 from research_gap_provider import EvidenceBoundResearchGapProvider, ResearchGapRequest
 from research_synthesis_provider import SynthesisRequest
 from retrieval_saturation import SaturationConfig, evaluate_retrieval_saturation
@@ -359,6 +360,58 @@ class P3FulltextEvidenceExtractionSkillAdapter:
         )
 
 
+class P3QuestionEvidenceRetrievalSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p3.question_evidence_retrieval",
+        version="1.0.0",
+        stage="P3",
+        description="Retrieve question-specific candidates from direct-paper formal evidence spans only.",
+        deterministic=True,
+        external_network=False,
+    )
+
+    def __init__(self, provider) -> None:
+        self.provider = provider
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        matrix = payload.get("evidence_matrix")
+        paper_ids = payload.get("eligible_direct_paper_ids")
+        if not isinstance(matrix, dict):
+            raise SkillInputError("evidence_matrix_must_be_object")
+        if not isinstance(paper_ids, (list, tuple)) or not all(isinstance(item, str) for item in paper_ids):
+            raise SkillInputError("eligible_direct_paper_ids_must_be_list_of_strings")
+        result = self.provider.retrieve(QuestionEvidenceRequest(
+            query=str(payload.get("query") or ""),
+            evidence_matrix=matrix,
+            eligible_direct_paper_ids=tuple(paper_ids),
+            top_k=_positive_int(payload, "top_k", 10),
+        ))
+        if result.status == "QUESTION_EVIDENCE_READY":
+            status = SkillRunStatus.COMPLETE
+        elif result.status == "QUESTION_EVIDENCE_EMPTY":
+            status = SkillRunStatus.PARTIAL
+        elif result.status in {"QUESTION_EVIDENCE_BLOCKED", "PAPERQA2_NOT_CONFIGURED"}:
+            status = SkillRunStatus.BLOCKED
+        else:
+            status = SkillRunStatus.FAILED
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result.status,
+            output=asdict(result),
+            limitations=list(result.limitations),
+            provenance={
+                "matrix_hash": matrix.get("matrix_hash"),
+                "backend_version": result.audit.get("backend_version"),
+            },
+            audit={
+                **result.audit,
+                "formal_relevance_decision_allowed": False,
+                "claim_store_bypass_allowed": False,
+            },
+            cacheable=True,
+        )
+
+
 class P3GapFalsificationPlanSkillAdapter:
     descriptor = ResearchSkillDescriptor(
         skill_id="p3.gap_falsification_plan",
@@ -482,6 +535,7 @@ def build_default_registry(
     citation_graph_provider=None,
     citation_verifier=None,
     fulltext_provider=None,
+    evidence_retrieval_provider=None,
 ) -> ResearchSkillRegistry:
     registry = ResearchSkillRegistry()
     registry.register(P1MultiPerspectiveSearchPlanAdapter())
@@ -496,6 +550,8 @@ def build_default_registry(
         registry.register(P2ClusteringSkillAdapter(p2_provider))
     if fulltext_provider is not None:
         registry.register(P3FulltextEvidenceExtractionSkillAdapter(fulltext_provider))
+    if evidence_retrieval_provider is not None:
+        registry.register(P3QuestionEvidenceRetrievalSkillAdapter(evidence_retrieval_provider))
     registry.register(P3EvidenceGapSkillAdapter(p3_provider))
     registry.register(P3GapFalsificationPlanSkillAdapter())
     registry.register(P3GapFalsificationEvaluationSkillAdapter())

@@ -134,7 +134,9 @@ D-1已交付：
 
 D-1运行时结果：GROBID 12个模型加载、0失败；真实PDF产生126条全文证据句、7个章节锚点和126个页码锚点，Claim Store绑定有效；未持久化原PDF/原始TEI，未发生题名降级。
 
-D-2（PaperQA2）现在可以进入独立可行性与边界设计，但仍不得接管direct判定、研究空白裁决或Claim Store门禁。
+D-2（PaperQA2）已完成（2026-08-23）：固定`v2026.08.12`/Apache-2.0，在隔离Python 3.12环境中只调用`sparse` embedding与`Docs.retrieve_texts`。输入仅限P1 direct allowlist中的摘要/全文span；输出仅为`EVIDENCE_CANDIDATE_ONLY`，未知或越权span由主进程拒绝。worker不继承API Key，不允许PDF解析、外部论文搜索、LLM/agent、答案生成、Claim生成或研究空白裁决。
+
+D-2真实联合验收：GROBID产生的126条全文span进入PaperQA2受控检索，返回5条候选；首条候选成功绑定Claim Store。运行时77个依赖已冻结并记录SHA-256，未持久化检索文件。
 
 ### Phase E：受控开题和界面
 
