@@ -86,9 +86,12 @@ class MultiSourcePaperDiscoveryProvider:
             for record in deduped
         ]
         traces = [build_candidate_trace(record, decision) for record, decision in zip(deduped, decisions)]
-        eligible = [record for record in deduped if record["terminal_status"] == "eligible"]
-        eligible.sort(key=lambda item: (item["relevance_score"], item.get("year") or 0), reverse=True)
-        return deduped, eligible, traces, dedupe_log
+        direct = [record for record in deduped if record.get("relevance_tier") == "direct" and record["terminal_status"] == "eligible"]
+        adjacent = [record for record in deduped if record.get("relevance_tier") == "adjacent"]
+        rank_key = lambda item: (item.get("focality_score") or 0.0, item["relevance_score"], item.get("year") or 0, item["paper_id"])
+        direct.sort(key=rank_key, reverse=True)
+        adjacent.sort(key=rank_key, reverse=True)
+        return deduped, direct, adjacent, traces, dedupe_log
 
     def discover(self, request: DiscoveryRequest) -> DiscoveryResult:
         try:
@@ -127,6 +130,7 @@ class MultiSourcePaperDiscoveryProvider:
         provider_statuses: list[dict] = []
         final_records: list[dict] = []
         eligible: list[dict] = []
+        adjacent: list[dict] = []
         candidate_traces: list[dict] = []
         dedupe_log: list[dict] = []
 
@@ -140,7 +144,7 @@ class MultiSourcePaperDiscoveryProvider:
                 failure = self._provider_error("openalex", plan.lane_id, exc)
                 provider_statuses.append(failure)
                 search_log.append(failure)
-            final_records, eligible, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
+            final_records, eligible, adjacent, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
             en_count = sum(record["language"] == "en" for record in eligible)
             zh_count = sum(record["language"] == "zh" for record in eligible)
             expansion_log.append({
@@ -177,7 +181,7 @@ class MultiSourcePaperDiscoveryProvider:
             for name in profile["source_routes"]["optional"]:
                 provider_statuses.append({"provider": name, "status": "not_configured", "reason": "optional_provider_opt_in_required"})
 
-        final_records, eligible, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
+        final_records, eligible, adjacent, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
         zh = [record for record in eligible if record["language"] == "zh"][:request.chinese_count]
         en = [record for record in eligible if record["language"] == "en"][:request.english_count]
 
@@ -203,7 +207,7 @@ class MultiSourcePaperDiscoveryProvider:
             raw_records.extend({"_provider": "crossref", "query_lane_ids": ["crossref_fallback"], **item} for item in crossref_raw)
             provider_statuses.append({"provider": "crossref", "status": crossref_result.status, "returned_rows": len(crossref_raw), "lane_id": "crossref_fallback"})
             search_log.extend(crossref_result.search_log)
-            final_records, eligible, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
+            final_records, eligible, adjacent, candidate_traces, dedupe_log = self._evaluate_all(raw_records, profile, registry, from_year, today.year, score_query)
             zh = [record for record in eligible if record["language"] == "zh"][:request.chinese_count]
             en = [record for record in eligible if record["language"] == "en"][:request.english_count]
             expansion_log.append({
@@ -222,6 +226,7 @@ class MultiSourcePaperDiscoveryProvider:
             "raw_count": len(raw_records),
             "hard_gate_pass_count": len(final_records) - ledger["gate_reject_count"],
             "eligible_count": ledger["eligible_count"],
+            "adjacent_count": len(adjacent),
             "boundary_count": ledger["boundary_count"],
             "selected_count": len(selected),
             "selected_zh_count": len(zh),
@@ -230,12 +235,15 @@ class MultiSourcePaperDiscoveryProvider:
             **ledger,
         }
         zero = self._diagnosis(profile, provider_statuses, coverage, request)
-        if not selected:
+        if not selected and raw_records:
+            status = "RETRIEVAL_PARTIAL"
+            message = "P1检索仅得到 adjacent、manual 或 reject 候选；正式 direct 结果保持为空，未凑数。"
+        elif not selected:
             status = "DYNAMIC_RETRIEVAL_UNAVAILABLE"
-            message = "多路检索已运行，但没有论文同时通过完整性闸门、方向边界和相关性底线；候选账本与诊断已保留。"
+            message = "多路检索未返回可评估候选；提供方状态与诊断已保留。"
         elif any(shortages.values()):
             status = "RETRIEVAL_PARTIAL"
-            message = f"P1多路检索完成：中文{len(zh)}/{request.chinese_count}篇、英文{len(en)}/{request.english_count}篇；不足部分保持缺口，未用其他语言或低相关论文补数。"
+            message = f"P1多路检索完成：direct 中文{len(zh)}/{request.chinese_count}篇、英文{len(en)}/{request.english_count}篇；不足部分保持缺口，未用 adjacent 或其他语言补数。"
         else:
             status = "RETRIEVAL_COMPLETE"
             message = f"P1多路检索完成：中文{len(zh)}篇、英文{len(en)}篇；均通过方向边界并进入混合精排。"
@@ -243,6 +251,7 @@ class MultiSourcePaperDiscoveryProvider:
             status=status,
             papers=selected,
             analysis_papers=eligible[:120],
+            adjacent_papers=adjacent[:120],
             search_log=search_log,
             exclusion_log=[
                 {"paper_id": trace["paper_id"], "title": trace["title"], "reasons": trace["terminal_reasons"], "terminal_status": trace["terminal_status"]}

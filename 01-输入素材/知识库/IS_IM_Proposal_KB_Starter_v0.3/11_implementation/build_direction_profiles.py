@@ -54,6 +54,27 @@ def phrase_queries(zh: str, en: str, aliases: list[str], contexts: list[str]) ->
     }
 
 
+def default_precision_policy() -> dict:
+    """Content-first directness rules shared by every compiled direction."""
+    return {
+        "relevance_tiers": ["direct", "adjacent", "reject", "manual"],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": False,
+        "direct": {
+            "min_textual_core_matches": 1,
+            "require_context_match": True,
+            "min_focality_score": 45.0,
+        },
+        "adjacent": {"returned_separately": True, "can_fill_formal_top10": False},
+        "c_recall": {
+            "require_approved_source_filter": True,
+            "require_abstract": True,
+            "min_focality_score": 60.0,
+        },
+    }
+
+
 def source_ids_for_pools(source_registry: dict, pool_ids: list[str], language: str | None = None) -> list[str]:
     result = []
     pools = set(pool_ids)
@@ -80,6 +101,11 @@ def validate_profile(profile: dict) -> list[str]:
             errors.append(f"missing:{parent}.{child}")
     if any("empirical or theoretical research" in value for value in profile.get("facets", {}).get("core_phenomena", [])):
         errors.append("generic_group_context_used_as_core")
+    precision = profile.get("precision_policy", {})
+    if precision.get("relevance_tiers") != ["direct", "adjacent", "reject", "manual"]:
+        errors.append("invalid_relevance_tiers")
+    if precision.get("topic_or_keyword_can_produce_direct") is not False:
+        errors.append("metadata_must_not_produce_direct")
     topic_statuses = profile.get("openalex_routes", {}).get("topic_resolution", [])
     if any(item.get("review_status") not in {"approved", "pending_review", "rejected"} for item in topic_statuses):
         errors.append("invalid_topic_review_status")
@@ -128,6 +154,7 @@ def compile_profiles() -> tuple[dict, dict]:
                 "negative_contexts": unique(defaults["generic_negative_contexts"]),
             },
             "boundary_policy": deepcopy(defaults["boundary_policy"]),
+            "precision_policy": default_precision_policy(),
             "queries": phrase_queries(zh, en, aliases, contexts),
             "source_policy": {
                 "tier_a_pool_ids": tier_a,
@@ -180,6 +207,8 @@ def compile_profiles() -> tuple[dict, dict]:
             "generic_group_context_is_not_synonym": True,
             "topic_candidates_require_review": True,
             "fixed_70_threshold_removed": True,
+            "formal_papers_are_direct_only": True,
+            "adjacent_never_fills_top10": True,
         },
         "profiles": profiles,
     }

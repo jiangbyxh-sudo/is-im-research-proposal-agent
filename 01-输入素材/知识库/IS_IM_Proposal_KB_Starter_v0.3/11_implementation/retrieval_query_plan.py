@@ -27,6 +27,7 @@ class OpenAlexQueryPlan:
     language_target: str | None = None
     evidence_mode: str = "abstract_preferred"
     stop_target: int = 10
+    directness_policy: str = "standard"
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -131,21 +132,34 @@ def build_direction_query_plans(
         plans.append(OpenAlexQueryPlan(
             lane_id="C_topic_recall",
             search=en_recall[0] if en_recall else None,
-            filters={**common, **topic_filters},
+            filters={
+                **common,
+                **topic_filters,
+                "approved_source_ids": list(dict.fromkeys([*tier_a_sources, *tier_b_sources])),
+                "has_abstract": True,
+            },
             sort="relevance_score:desc",
             per_page=per_page,
             max_pages=2,
             language_target="en",
+            evidence_mode="abstract_required",
+            directness_policy="recall_strict",
         ))
     else:
         plans.append(OpenAlexQueryPlan(
             lane_id="C_facet_recall",
             search=en_recall[0],
-            filters=common,
+            filters={
+                **common,
+                "approved_source_ids": list(dict.fromkeys([*tier_a_sources, *tier_b_sources])),
+                "has_abstract": True,
+            },
             sort="relevance_score:desc",
             per_page=per_page,
             max_pages=2,
             language_target="en",
+            evidence_mode="abstract_required",
+            directness_policy="recall_strict",
         ))
 
     for index, query in enumerate((queries.get("zh_precise") or [])[:1]):

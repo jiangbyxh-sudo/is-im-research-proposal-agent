@@ -1,5 +1,52 @@
 version: 1.1.6-p1-retrieval
 profiles:
+  information_behavior:
+    facets:
+      core_phenomena: [information behavior, information seeking, information search, information use, information practices, information needs, information flow, information sphere, information spheres, information avoidance, human information behavior, search costs, 信息行为, 信息寻求, 信息搜索, 信息使用, 信息实践, 信息需求, 信息流, 信息空间, 搜索成本]
+      required_context_any: [user, consumer, community, patient, citizen, scholar, individual, people, organization, online platform, online community, information environment, information science, 用户, 消费者, 社区, 患者, 公民, 学者, 个人, 人群, 组织, 在线平台, 在线社区, 信息环境, 信息科学]
+    queries:
+      en_precise: [information behavior, information seeking and use]
+      en_recall: [information practices users, information search consumer decision]
+      zh_precise: [信息行为, 信息寻求]
+      zh_recall: [信息实践 用户, 信息搜索 消费决策]
+    precision_policy:
+      direct:
+        min_textual_core_matches: 1
+        require_context_match: true
+        require_title_core: true
+        min_focality_score: 45.0
+        exclude_any: [techno-invasion, personal information management, order cancellation behavior, information management literature review]
+      adjacent:
+        returned_separately: true
+        can_fill_formal_top10: false
+        signals_any: [techno-invasion, employee behavior, technology use behavior, personal information management, order cancellation behavior, consumer behavior, information management]
+      c_recall:
+        require_approved_source_filter: true
+        require_abstract: true
+        min_focality_score: 65.0
+  topic_decision_support:
+    facets:
+      core_phenomena: [decision support, decision-support system, decision support system, decision aid, decision aiding, AI-augmented decision making, analytics-enabled decision making, personalized recommendation, consumer decisions, recommendation, recommendations, 决策支持, 决策支持系统, 决策辅助, 消费者决策, 推荐, 智能决策]
+      required_context_any: [information system, organization, enterprise, management, business, user, consumer, risk management, healthcare decision, knowledge graph, 信息系统, 组织, 企业, 管理, 商业, 用户, 消费者, 风险管理, 医疗决策, 知识图谱]
+    queries:
+      en_precise: [decision support system, decision support]
+      en_recall: [decision aid information systems, augmented decision making organization]
+      zh_precise: [决策支持, 决策支持系统]
+      zh_recall: [决策辅助 信息系统, 智能决策 组织]
+    precision_policy:
+      direct:
+        min_textual_core_matches: 1
+        require_context_match: true
+        min_focality_score: 45.0
+        exclude_any: [bibliometric analysis, classificatory decision-making, distributed decision-making, ERP adoption]
+      adjacent:
+        returned_separately: true
+        can_fill_formal_top10: false
+        signals_any: [decision-making, decision process, decision outcome, bibliometric analysis, ERP adoption]
+      c_recall:
+        require_approved_source_filter: true
+        require_abstract: true
+        min_focality_score: 65.0
   topic_平台经济:
     labels: {zh: 平台经济, en: platform economy}
     aliases: [platform economy, digital platform economy, 平台经济, 数字平台经济]

@@ -6,7 +6,8 @@ from dataclasses import asdict, dataclass
 from paper_quality import evaluate_boundary, qualify_source, quality_gate, score_record
 
 
-TERMINAL_STATUSES = {"gate_reject", "rank_reject", "boundary", "eligible", "manual_review"}
+RELEVANCE_TIERS = {"direct", "adjacent", "reject", "manual"}
+TERMINAL_STATUSES = {"gate_reject", "rank_reject", "boundary", "eligible", "adjacent", "manual_review"}
 
 
 @dataclass(frozen=True)
@@ -18,6 +19,7 @@ class CandidateDecision:
     retrieval_score: dict | None
     boundary_evidence: dict
     source_tier: str
+    relevance_tier: str
 
     def as_dict(self) -> dict:
         payload = asdict(self)
@@ -40,15 +42,18 @@ def evaluate_candidate(
     boundary = evaluate_boundary(record, profile)
     score = None
     reasons = list(gate_reasons)
+    relevance_tier = boundary.relevance_tier
     if not passed:
         terminal = "gate_reject"
+        relevance_tier = "reject"
     elif record.get("source_tier") == "UNKNOWN":
         terminal = "manual_review"
+        relevance_tier = "manual"
         reasons.append("unknown_source_requires_review")
-    elif boundary.decision == "manual_review":
+    elif boundary.relevance_tier == "manual":
         terminal = "manual_review"
         reasons.extend(boundary.missing_required_facets)
-    elif boundary.decision == "reject":
+    elif boundary.relevance_tier == "reject":
         terminal = "boundary"
         reasons.extend(boundary.missing_required_facets or ("excluded_context",))
     else:
@@ -59,12 +64,13 @@ def evaluate_candidate(
             from_year,
             to_year,
         )
-        # This is a relevance floor, not the former fixed 70 eligibility quota.
-        if score["label"] in {"irrelevant", "peripheral"}:
-            terminal = "rank_reject"
-            reasons.append("hybrid_relevance_floor")
-        else:
+        if boundary.relevance_tier == "direct":
             terminal = "eligible"
+        else:
+            terminal = "adjacent"
+            reasons.append("adjacent_not_formal_paper")
+    if relevance_tier not in RELEVANCE_TIERS:
+        raise AssertionError(f"unknown relevance tier: {relevance_tier}")
     if terminal not in TERMINAL_STATUSES:
         raise AssertionError(f"unknown terminal status: {terminal}")
     record["checkpoint"] = checkpoint
@@ -72,6 +78,8 @@ def evaluate_candidate(
     record["retrieval_score"] = score
     record["score"] = score
     record["relevance_score"] = score["total"] if score else 0.0
+    record["focality_score"] = boundary.focality_score
+    record["relevance_tier"] = relevance_tier
     record["terminal_status"] = terminal
     record["terminal_reasons"] = list(dict.fromkeys(reasons))
     return CandidateDecision(
@@ -82,6 +90,7 @@ def evaluate_candidate(
         retrieval_score=score,
         boundary_evidence=boundary.as_dict(),
         source_tier=record.get("source_tier", "UNKNOWN"),
+        relevance_tier=relevance_tier,
     )
 
 
@@ -113,6 +122,8 @@ def build_candidate_trace(record: dict, decision: CandidateDecision) -> dict:
         "source_quality": record.get("source_quality"),
         "source_direction_fit": record.get("source_direction_fit"),
         "content_relevance": (decision.retrieval_score or {}).get("total"),
+        "focality_score": record.get("focality_score"),
+        "relevance_tier": decision.relevance_tier,
         "checkpoint": decision.checkpoint,
         "retrieval_score": decision.retrieval_score,
         "rerank": decision.retrieval_score,
@@ -146,6 +157,10 @@ def ledger_summary(records: list[dict], selected: list[dict]) -> dict:
         "count_conserved": terminal_total == len(records),
         "selected_is_eligible_subset": selected_ids.issubset(eligible_ids),
         "retracted_in_selected": sum(record.get("integrity_status") == "retracted" for record in selected),
+        "direct_count": sum(record.get("relevance_tier") == "direct" for record in records),
+        "adjacent_relevance_count": sum(record.get("relevance_tier") == "adjacent" for record in records),
+        "manual_relevance_count": sum(record.get("relevance_tier") == "manual" for record in records),
+        "reject_relevance_count": sum(record.get("relevance_tier") == "reject" for record in records),
     }
     if not summary["count_conserved"] or not summary["selected_is_eligible_subset"]:
         raise AssertionError(f"candidate ledger conservation failed: {summary}")

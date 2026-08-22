@@ -35,6 +35,7 @@ class DiscoveryResult:
     status: str
     papers: list[dict] = field(default_factory=list)
     analysis_papers: list[dict] = field(default_factory=list)
+    adjacent_papers: list[dict] = field(default_factory=list)
     search_log: list[dict] = field(default_factory=list)
     exclusion_log: list[dict] = field(default_factory=list)
     shortages: dict[str, int] = field(default_factory=dict)

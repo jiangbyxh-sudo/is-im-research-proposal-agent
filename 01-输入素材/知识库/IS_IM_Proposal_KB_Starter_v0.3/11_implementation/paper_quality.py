@@ -9,7 +9,13 @@ import unicodedata
 from copy import deepcopy
 from dataclasses import asdict, dataclass
 
-from semantic_reranker import RERANK_VERSION, RERANK_WEIGHTS, hybrid_rerank_score
+from semantic_reranker import (
+    RERANK_VERSION,
+    RERANK_WEIGHTS,
+    focality_score,
+    hybrid_rerank_score,
+    phrase_match_detail,
+)
 
 
 SCORE_CONFIG_VERSION = RERANK_VERSION
@@ -261,12 +267,15 @@ def quality_gate(record: dict, profile: dict, from_year: int, to_year: int) -> t
 @dataclass(frozen=True)
 class BoundaryResult:
     decision: str
+    relevance_tier: str
     matched_core_facets: tuple[str, ...]
     matched_context_facets: tuple[str, ...]
     matched_negative_facets: tuple[str, ...]
     topic_matches: tuple[str, ...]
+    keyword_matches: tuple[str, ...]
     missing_required_facets: tuple[str, ...]
     evidence: tuple[str, ...]
+    focality_score: float
 
     def as_dict(self) -> dict:
         payload = asdict(self)
@@ -274,14 +283,11 @@ class BoundaryResult:
 
 
 def _facet_match(facet: str, text: str) -> bool:
-    facet = clean_text(facet).casefold()
-    if not facet:
-        return False
-    if facet in text:
-        return True
-    tokens = [token for token in re.findall(r"[a-z0-9]+|[\u4e00-\u9fff]{2,}", facet) if token not in {"and", "or", "the", "of", "in", "only"}]
-    hits = sum(token in text for token in tokens)
-    return bool(tokens) and hits / len(tokens) >= 0.67
+    return bool(phrase_match_detail(clean_text(facet), text)["matched"])
+
+
+def _matched_phrases(values: list[str] | tuple[str, ...], text: str) -> tuple[str, ...]:
+    return tuple(value for value in values if _facet_match(value, text))
 
 
 def evaluate_boundary(record: dict, profile: dict) -> BoundaryResult:
@@ -294,11 +300,13 @@ def evaluate_boundary(record: dict, profile: dict) -> BoundaryResult:
         for topic in [record.get("primary_topic") or {}, *(record.get("topics") or [])]
         if topic.get("name")
     )
-    keyword_names = [clean_text(item.get("name")) for item in record.get("keywords", []) if item.get("name")]
-    text = " ".join(filter(None, [record.get("title"), record.get("abstract"), *topic_names, *keyword_names])).casefold()
-    matched_core = tuple(facet for facet in core if _facet_match(facet, text))
-    matched_context = tuple(facet for facet in contexts if _facet_match(facet, text))
-    matched_negative = tuple(facet for facet in negatives if _facet_match(facet, text))
+    keyword_names = tuple(clean_text(item.get("name")) for item in record.get("keywords", []) if item.get("name"))
+    textual_evidence = " ".join(filter(None, [record.get("title"), record.get("abstract")])).casefold()
+    metadata_evidence = " ".join([*topic_names, *keyword_names]).casefold()
+    matched_core = _matched_phrases(core, textual_evidence)
+    title_core_matches = _matched_phrases(core, clean_text(record.get("title")).casefold())
+    matched_context = _matched_phrases(contexts, textual_evidence)
+    matched_negative = _matched_phrases(negatives, textual_evidence)
     approved = {
         str(value).rstrip("/").rsplit("/", 1)[-1]
         for key in ("approved_topic_ids", "approved_primary_topic_ids")
@@ -309,24 +317,77 @@ def evaluate_boundary(record: dict, profile: dict) -> BoundaryResult:
         for topic in [record.get("primary_topic") or {}, *(record.get("topics") or [])]
         if topic.get("id") and str(topic.get("id")).rstrip("/").rsplit("/", 1)[-1] in approved
     )
+    keyword_matches = _matched_phrases(core, metadata_evidence)
     policy = profile.get("boundary_policy", {})
+    precision = profile.get("precision_policy", {})
+    direct_policy = precision.get("direct", {})
+    adjacent_policy = precision.get("adjacent", {})
     missing: list[str] = []
-    if policy.get("require_core_phenomenon", True) and not (matched_core or topic_matches):
+    if policy.get("require_core_phenomenon", True) and not matched_core:
         missing.append("core_phenomenon")
     if policy.get("require_context_any", True) and not matched_context:
         missing.append("required_context")
+    focality, _ = focality_score(record, profile)
+    direct_required = tuple(direct_policy.get("required_any", []))
+    direct_required_hits = _matched_phrases(direct_required, textual_evidence)
+    adjacent_signals = tuple(adjacent_policy.get("signals_any", []))
+    adjacent_hits = _matched_phrases(adjacent_signals, textual_evidence)
+    direct_exclusions = tuple(direct_policy.get("exclude_any", []))
+    direct_exclusion_hits = _matched_phrases(direct_exclusions, textual_evidence)
+    recall_only = bool(record.get("query_lane_ids")) and all(
+        str(lane).startswith("C_") for lane in record.get("query_lane_ids", [])
+    )
+    minimum_focality = float(direct_policy.get("min_focality_score", 45.0))
+    if recall_only:
+        minimum_focality = max(
+            minimum_focality,
+            float(precision.get("c_recall", {}).get("min_focality_score", minimum_focality)),
+        )
     evidence = tuple(filter(None, [
         "title+abstract" if record.get("abstract") else "title_only",
-        "approved_topic" if topic_matches else "",
+        "textual_core_phrase" if matched_core else "",
+        "approved_topic_support_only" if topic_matches else "",
+        "keyword_support_only" if keyword_matches else "",
+        "recall_lane_strict" if recall_only else "",
         "negative_context" if matched_negative else "",
     ]))
-    if matched_negative and not (len(matched_core) >= 1 and len(matched_context) >= 1):
-        decision = "reject"
+    metadata_only = not matched_core and bool(topic_matches or keyword_matches)
+    has_direct_text = (
+        len(matched_core) >= int(direct_policy.get("min_textual_core_matches", 1))
+        and (not direct_policy.get("require_title_core", False) or bool(title_core_matches))
+        and (not direct_policy.get("require_context_match", True) or bool(matched_context))
+        and (not direct_required or bool(direct_required_hits))
+        and not direct_exclusion_hits
+        and focality >= minimum_focality
+    )
+    if matched_negative and not has_direct_text:
+        decision = relevance_tier = "reject"
+    elif not record.get("abstract") and precision.get("title_only_action", "manual") == "manual":
+        decision = relevance_tier = "manual"
+    elif metadata_only:
+        # OpenAlex Topic and keyword evidence may support a textual decision, but
+        # neither is sufficient to produce a direct paper.
+        decision = relevance_tier = precision.get("metadata_only_action", "manual")
+    elif has_direct_text:
+        decision = relevance_tier = "direct"
+    elif matched_core or matched_context or adjacent_hits or topic_matches or keyword_matches:
+        decision = relevance_tier = "adjacent"
     elif missing:
-        decision = "manual_review" if not record.get("abstract") and policy.get("insufficient_metadata_action", "manual_review") == "manual_review" else "reject"
+        decision = relevance_tier = "reject"
     else:
-        decision = "pass"
-    return BoundaryResult(decision, matched_core, matched_context, matched_negative, topic_matches, tuple(missing), evidence)
+        decision = relevance_tier = "reject"
+    return BoundaryResult(
+        decision,
+        relevance_tier,
+        matched_core,
+        matched_context,
+        matched_negative,
+        topic_matches,
+        keyword_matches,
+        tuple(missing),
+        evidence,
+        round(focality, 2),
+    )
 
 
 def _tokens(profile: dict, query: str) -> set[str]:

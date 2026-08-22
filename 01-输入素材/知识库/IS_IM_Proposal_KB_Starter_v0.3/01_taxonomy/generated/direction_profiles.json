@@ -1,6 +1,6 @@
 {
   "version": "1.1.6-p1-retrieval",
-  "generated_on": "2026-08-22",
+  "generated_on": "2026-08-23",
   "generated_from": [
     "01_taxonomy/generated/research_direction_catalog.json",
     "01_taxonomy/direction_profile_base.yaml",
@@ -13,7 +13,9 @@
     "local_profile_first": true,
     "generic_group_context_is_not_synonym": true,
     "topic_candidates_require_review": true,
-    "fixed_70_threshold_removed": true
+    "fixed_70_threshold_removed": true,
+    "formal_papers_are_direct_only": true,
+    "adjacent_never_fills_top10": true
   },
   "profiles": [
     {
@@ -71,6 +73,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -283,6 +310,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "human-AI interaction"
@@ -492,6 +544,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -727,6 +804,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -1061,6 +1163,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -1417,6 +1544,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -1777,6 +1929,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "digital markets"
@@ -2111,6 +2288,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "privacy / security"
@@ -2434,6 +2636,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "IT governance"
@@ -2751,6 +2978,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -3087,6 +3339,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "technology use"
@@ -3421,6 +3698,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -3775,6 +4077,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "platform economy",
@@ -3989,6 +4316,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -4267,6 +4619,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "electronic commerce",
@@ -4468,6 +4845,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -4671,6 +5073,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "online user behavior",
@@ -4873,6 +5300,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "algorithmic decision making digital platforms",
@@ -5058,6 +5510,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -5295,6 +5772,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -5655,6 +6157,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "machine learning information systems",
@@ -5995,6 +6522,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "data mining information systems",
@@ -6320,6 +6872,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "software / system design"
@@ -6585,6 +7162,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "knowledge discovery in databases",
@@ -6848,6 +7450,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "AI-enabled information systems",
@@ -7059,6 +7686,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "digital artifact design",
@@ -7243,6 +7895,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "AI trust"
@@ -7404,6 +8081,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -7569,6 +8271,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -7766,6 +8493,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -8019,6 +8771,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "information overload"
@@ -8215,6 +8992,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -8546,6 +9348,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "information privacy concerns",
@@ -8833,6 +9660,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "technostress"
@@ -9058,6 +9910,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "human-AI collaboration",
@@ -9216,6 +10093,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -9529,6 +10431,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "emotion technology use",
@@ -9814,6 +10741,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -10127,6 +11079,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "judgment and decision making technology",
@@ -10327,6 +11304,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -10537,6 +11539,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -10752,6 +11779,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "content moderation"
@@ -10929,6 +11981,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -11271,6 +12348,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "generative AI information systems",
@@ -11489,6 +12591,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "human-AI communication",
@@ -11672,6 +12799,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -11996,6 +13148,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "algorithmic news",
@@ -12173,6 +13350,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -12438,29 +13640,56 @@
       ],
       "facets": {
         "core_phenomena": [
-          "Information Behavior",
-          "信息行为"
+          "information behavior",
+          "information seeking",
+          "information search",
+          "information use",
+          "information practices",
+          "information needs",
+          "information flow",
+          "information sphere",
+          "information spheres",
+          "information avoidance",
+          "human information behavior",
+          "search costs",
+          "信息行为",
+          "信息寻求",
+          "信息搜索",
+          "信息使用",
+          "信息实践",
+          "信息需求",
+          "信息流",
+          "信息空间",
+          "搜索成本"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information science",
-          "information management",
-          "information behavior",
-          "knowledge organization",
-          "scholarly communication",
-          "信息科学",
-          "信息管理",
-          "信息行为",
-          "知识组织",
-          "学术传播",
-          "knowledge management",
+          "user",
+          "consumer",
+          "community",
+          "patient",
+          "citizen",
+          "scholar",
+          "individual",
+          "people",
           "organization",
-          "decision support",
-          "information retrieval",
-          "知识管理",
+          "online platform",
+          "online community",
+          "information environment",
+          "information science",
+          "用户",
+          "消费者",
+          "社区",
+          "患者",
+          "公民",
+          "学者",
+          "个人",
+          "人群",
           "组织",
-          "决策支持",
-          "信息检索"
+          "在线平台",
+          "在线社区",
+          "信息环境",
+          "信息科学"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -12476,20 +13705,63 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0,
+          "require_title_core": true,
+          "exclude_any": [
+            "techno-invasion",
+            "personal information management",
+            "order cancellation behavior",
+            "information management literature review"
+          ]
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false,
+          "signals_any": [
+            "techno-invasion",
+            "employee behavior",
+            "technology use behavior",
+            "personal information management",
+            "order cancellation behavior",
+            "consumer behavior",
+            "information management"
+          ]
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 65.0
+        }
+      },
       "queries": {
         "en_precise": [
-          "Information Behavior"
+          "information behavior",
+          "information seeking and use"
         ],
         "en_recall": [
-          "Information Behavior information science",
-          "Information Behavior information management"
+          "information practices users",
+          "information search consumer decision"
         ],
         "zh_precise": [
-          "信息行为"
+          "信息行为",
+          "信息寻求"
         ],
         "zh_recall": [
-          "信息行为 信息系统",
-          "信息行为 信息管理"
+          "信息实践 用户",
+          "信息搜索 消费决策"
         ]
       },
       "source_policy": {
@@ -12815,6 +14087,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "Knowledge Management"
@@ -13139,6 +14436,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "Data Management"
@@ -13441,6 +14763,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -13762,6 +15109,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "Bibliometrics / Scientometrics",
@@ -13993,6 +15365,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "Knowledge Graph"
@@ -14217,20 +15614,46 @@
       ],
       "facets": {
         "core_phenomena": [
-          "Decision Support"
+          "decision support",
+          "decision-support system",
+          "decision support system",
+          "decision aid",
+          "decision aiding",
+          "AI-augmented decision making",
+          "analytics-enabled decision making",
+          "personalized recommendation",
+          "consumer decisions",
+          "recommendation",
+          "recommendations",
+          "决策支持",
+          "决策支持系统",
+          "决策辅助",
+          "消费者决策",
+          "推荐",
+          "智能决策"
         ],
         "technology_terms": [],
         "required_context_any": [
-          "information science",
-          "information management",
-          "information behavior",
-          "knowledge organization",
-          "scholarly communication",
-          "信息科学",
-          "信息管理",
-          "信息行为",
-          "知识组织",
-          "学术传播"
+          "information system",
+          "organization",
+          "enterprise",
+          "management",
+          "business",
+          "user",
+          "consumer",
+          "risk management",
+          "healthcare decision",
+          "knowledge graph",
+          "信息系统",
+          "组织",
+          "企业",
+          "管理",
+          "商业",
+          "用户",
+          "消费者",
+          "风险管理",
+          "医疗决策",
+          "知识图谱"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -14246,20 +15669,60 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0,
+          "exclude_any": [
+            "bibliometric analysis",
+            "classificatory decision-making",
+            "distributed decision-making",
+            "ERP adoption"
+          ]
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false,
+          "signals_any": [
+            "decision-making",
+            "decision process",
+            "decision outcome",
+            "bibliometric analysis",
+            "ERP adoption"
+          ]
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 65.0
+        }
+      },
       "queries": {
         "en_precise": [
-          "Decision Support"
+          "decision support system",
+          "decision support"
         ],
         "en_recall": [
-          "Decision Support information science",
-          "Decision Support information management"
+          "decision aid information systems",
+          "augmented decision making organization"
         ],
         "zh_precise": [
-          "Decision Support"
+          "决策支持",
+          "决策支持系统"
         ],
         "zh_recall": [
-          "Decision Support 信息系统",
-          "Decision Support 信息管理"
+          "决策辅助 信息系统",
+          "智能决策 组织"
         ]
       },
       "source_policy": {
@@ -14556,6 +16019,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "natural language processing information processing",
@@ -14753,6 +16241,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -15036,6 +16549,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -15354,6 +16892,31 @@
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
+      },
       "queries": {
         "en_precise": [
           "decision intelligence",
@@ -15669,6 +17232,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [
@@ -16005,6 +17593,31 @@
         "require_context_any": true,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
+      },
+      "precision_policy": {
+        "relevance_tiers": [
+          "direct",
+          "adjacent",
+          "reject",
+          "manual"
+        ],
+        "title_only_action": "manual",
+        "metadata_only_action": "manual",
+        "topic_or_keyword_can_produce_direct": false,
+        "direct": {
+          "min_textual_core_matches": 1,
+          "require_context_match": true,
+          "min_focality_score": 45.0
+        },
+        "adjacent": {
+          "returned_separately": true,
+          "can_fill_formal_top10": false
+        },
+        "c_recall": {
+          "require_approved_source_filter": true,
+          "require_abstract": true,
+          "min_focality_score": 60.0
+        }
       },
       "queries": {
         "en_precise": [

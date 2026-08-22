@@ -24,7 +24,15 @@ from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport
 from paper_discovery_provider import DiscoveryRequest, DiscoveryResult
 from paper_quality import build_journal_index, evaluate_boundary, normalize_record, qualify_source, score_record
 from retrieval_query_plan import OpenAlexQueryPlan, build_direction_query_plans, compile_openalex_filter
-from semantic_reranker import multilingual_tokens
+from semantic_reranker import RERANK_WEIGHTS, multilingual_tokens, phrase_match_detail
+
+
+WORKSPACE_ROOT = KB_ROOT.parents[2]
+REVIEWED_PRECISION_PACKAGE = (
+    WORKSPACE_ROOT
+    / "02-任务/99-done/T03-P1检索质量工程/验收证据/P1-检索质量工程"
+    / "certification/profile-1.1.3-high-confidence/p1_sampled_precision_package_reviewed.json"
+)
 
 
 class EmptyCrossref:
@@ -102,6 +110,8 @@ class P1RetrievalTests(unittest.TestCase):
             self.assertTrue(profile["facets"]["negative_contexts"])
             self.assertTrue(profile["source_policy"]["tier_a_pool_ids"])
             self.assertTrue(profile["queries"]["zh_precise"])
+            self.assertEqual(["direct", "adjacent", "reject", "manual"], profile["precision_policy"]["relevance_tiers"])
+            self.assertFalse(profile["precision_policy"]["topic_or_keyword_can_produce_direct"])
 
     def test_chinese_named_directions_have_english_retrieval_aliases(self):
         expected = {
@@ -200,6 +210,116 @@ class P1RetrievalTests(unittest.TestCase):
         profile = self.profiles["platform_governance"]
         plans = build_direction_query_plans(profile, "2022-01-01", "2026-12-31")
         self.assertTrue(all(plan.stop_target == 10 for plan in plans))
+
+    def test_c_recall_lane_requires_source_abstract_and_strict_directness(self):
+        profile = self.profiles["information_behavior"]
+        recall = next(plan for plan in build_direction_query_plans(profile, "2022-01-01", "2026-12-31") if plan.lane_id.startswith("C_"))
+        self.assertTrue(recall.filters["approved_source_ids"])
+        self.assertTrue(recall.filters["has_abstract"])
+        self.assertEqual("abstract_required", recall.evidence_mode)
+        self.assertEqual("recall_strict", recall.directness_policy)
+
+    def test_multiword_core_requires_ordered_phrase_or_proximity(self):
+        self.assertFalse(phrase_match_detail("decision support", "support tools improve enterprise decision quality")["matched"])
+        self.assertTrue(phrase_match_detail("decision support", "decision analytics support for managers")["matched"])
+
+    def test_source_quality_is_only_a_small_prior(self):
+        self.assertLessEqual(RERANK_WEIGHTS["source_direction_fit"] + RERANK_WEIGHTS["source_quality_prior"], 0.05)
+
+    def test_topic_and_keyword_metadata_alone_never_produce_direct(self):
+        profile = deepcopy(self.profiles["platform_governance"])
+        topic_id = "T_TEST_PLATFORM_GOVERNANCE"
+        profile["openalex_routes"]["approved_topic_ids"] = [topic_id]
+        record = self._record(
+            profile,
+            "Rules in online markets",
+            "This study examines users and organizations in a digital platform ecosystem.",
+            primary_topic={"id": topic_id, "name": "Platform governance"},
+            keywords=[{"name": "platform governance"}],
+        )
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": "platform governance"})
+        self.assertEqual("manual", decision.relevance_tier)
+        self.assertNotEqual("eligible", decision.terminal_status)
+
+    def test_reviewed_eight_adjacent_samples_stay_adjacent_without_title_blacklist(self):
+        reviewed = json.loads(REVIEWED_PRECISION_PACKAGE.read_text(encoding="utf-8"))["samples"]
+        samples = [
+            item for item in reviewed
+            if item["direction_id"] in {"information_behavior", "topic_decision_support"} and item["label"] == "邻近"
+        ]
+        self.assertEqual(8, len(samples))
+        for sample in samples:
+            profile = self.profiles[sample["direction_id"]]
+            record = self._record(profile, sample["title"], sample["abstract"])
+            decision = evaluate_candidate(
+                record, profile, self.journal_index,
+                date.today().year - 5, date.today().year,
+                {"query": profile["labels"]["en"]},
+            )
+            self.assertEqual("adjacent", decision.relevance_tier, sample["title"])
+            self.assertEqual("adjacent", decision.terminal_status, sample["title"])
+
+    def test_reviewed_direct_samples_remain_eligible(self):
+        reviewed = json.loads(REVIEWED_PRECISION_PACKAGE.read_text(encoding="utf-8"))["samples"]
+        samples = [
+            sample for sample in reviewed
+            if sample["direction_id"] in {"information_behavior", "topic_decision_support"} and sample["label"] == "相关"
+        ]
+        self.assertEqual(12, len(samples))
+        for sample in samples:
+            profile = self.profiles[sample["direction_id"]]
+            record = self._record(profile, sample["title"], sample["abstract"])
+            decision = evaluate_candidate(
+                record, profile, self.journal_index,
+                date.today().year - 5, date.today().year,
+                {"query": profile["labels"]["en"]},
+            )
+            self.assertEqual("direct", decision.relevance_tier, sample["title"])
+            self.assertEqual("eligible", decision.terminal_status, sample["title"])
+
+    def test_zero_direct_candidates_return_partial_without_filling(self):
+        profile = self.profiles["information_behavior"]
+        journal = self._journal(profile)
+        adjacent = {
+            "external_id": "W-adjacent-only", "title": "Does techno-invasion affect employee behavior?",
+            "abstract": "Technology use after work affects employee behavior and organizational outcomes.",
+            "authors": ["B"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        provider = MultiSourcePaperDiscoveryProvider(
+            KB_ROOT / "01_taxonomy/generated/direction_profiles.json",
+            KB_ROOT / "02_journals/generated/journal_registry.json",
+            openalex=FakeOpenAlex([adjacent]), crossref=EmptyCrossref(), enable_optional=False,
+        )
+        result = provider.discover(DiscoveryRequest("information_behavior", "信息行为", None, 0, 1, 5))
+        self.assertEqual("RETRIEVAL_PARTIAL", result.status)
+        self.assertEqual([], result.papers)
+        self.assertEqual(1, len(result.adjacent_papers))
+
+    def test_adjacent_is_returned_separately_and_never_fills_formal_top10(self):
+        profile = self.profiles["information_behavior"]
+        journal = self._journal(profile)
+        direct = {
+            "external_id": "W-direct", "title": "Health information behavior during life transition",
+            "abstract": "Patients use information seeking and information behavior practices in an information environment.",
+            "authors": ["A"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        adjacent = {
+            "external_id": "W-adjacent", "title": "Does techno-invasion lead to employees' deviant behaviors?",
+            "abstract": "Technology use after work affects employee behavior and organizational outcomes.",
+            "authors": ["B"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        provider = MultiSourcePaperDiscoveryProvider(
+            KB_ROOT / "01_taxonomy/generated/direction_profiles.json",
+            KB_ROOT / "02_journals/generated/journal_registry.json",
+            openalex=FakeOpenAlex([direct, adjacent]), crossref=EmptyCrossref(), enable_optional=False,
+        )
+        result = provider.discover(DiscoveryRequest("information_behavior", "信息行为", None, 0, 2, 5))
+        self.assertEqual("RETRIEVAL_PARTIAL", result.status)
+        self.assertEqual(["W-direct"], [item["external_ids"]["openalex"] for item in result.papers])
+        self.assertEqual(["W-adjacent"], [item["external_ids"]["openalex"] for item in result.adjacent_papers])
 
     def test_profile_boundaries_are_executed(self):
         profile = self.profiles["topic_ai_enabled_information_systems"]
