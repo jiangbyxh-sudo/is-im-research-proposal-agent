@@ -154,13 +154,17 @@ class ServerTests(unittest.TestCase):
             "gap_id": "g1",
             "gap_statement": "待验证空白",
             "innovation_candidates": ["创新点A"],
-        }])
+            "formal": True,
+        }], claim_store={"claims": []}, status="RESEARCH_GAPS_READY", audit={})
         context_id = server.store_proposal_context(request, synthesis)
 
         class FakeProposal:
+            received = None
+
             def generate(self, proposal_request):
+                self.received = proposal_request
                 return SimpleNamespace(
-                    status="PROPOSAL_DRAFT_READY",
+                    status="READY_FOR_HUMAN_REVIEW",
                     proposal={"working_title": "Title"},
                     writing_guidance={"paradigm_id": "experiment"},
                     proposal_context={"gate_passed": True},
@@ -169,19 +173,56 @@ class ServerTests(unittest.TestCase):
                     message_to_user="ready",
                 )
 
+        fake = FakeProposal()
         result = server.generate_proposal({
             "proposal_context_id": context_id,
             "selected_gap_id": "g1",
             "selected_innovation_id": "g1_innovation_1",
-        }, FakeProposal())
+            "user_constraints": {"degree_level": "硕士"},
+        }, fake)
         self.assertEqual(result["state"], "PROPOSAL_READY")
         self.assertEqual(result["proposal_context"]["session_id"], context_id)
+        self.assertEqual({"claims": []}, fake.received.claim_store)
+        self.assertEqual("硕士", fake.received.user_constraints["degree_level"])
+        self.assertIn("skill", result["workflow_panels"])
+        self.assertIn("audit", result["workflow_panels"])
         with self.assertRaises(server.RequestError):
             server.generate_proposal({
                 "proposal_context_id": context_id,
                 "selected_gap_id": "g1",
                 "selected_innovation_id": "g1_innovation_99",
             }, FakeProposal())
+
+    def test_nonformal_gap_cannot_enter_proposal(self):
+        request = server.SynthesisRequest(
+            research_direction="AI", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=({"title": "Paper"},),
+        )
+        synthesis = SimpleNamespace(gap_candidates=[{
+            "gap_id": "g1", "innovation_candidates": ["i1"], "formal": False,
+        }])
+        context_id = server.store_proposal_context(request, synthesis)
+        with self.assertRaisesRegex(server.RequestError, "P3正式证据门禁"):
+            server.generate_proposal({
+                "proposal_context_id": context_id,
+                "selected_gap_id": "g1",
+                "selected_innovation_id": "g1_innovation_1",
+            }, SimpleNamespace())
+
+    def test_phase_e_ui_exposes_all_confirmations_and_audit_panels(self):
+        static = SERVER_PATH.parent / "static"
+        html = (static / "index.html").read_text(encoding="utf-8")
+        script = (static / "app.js").read_text(encoding="utf-8")
+        for element_id in (
+            "proposal-constraints-form", "confirm-proposal-constraints",
+            "proposal-plan-review", "confirm-proposal-plan",
+            "skill-panel", "evidence-panel", "saturation-panel", "audit-panel",
+            "proposal-task-cards",
+        ):
+            self.assertIn(f'id="{element_id}"', html)
+        self.assertIn("USER_CONSTRAINT_CONFIRMATION_REQUIRED", script)
+        self.assertIn("PROPOSAL_PLAN_CONFIRMATION_REQUIRED", script)
+        self.assertIn("READY_FOR_HUMAN_REVIEW", script)
 
     def test_invalid_count_stops(self):
         with self.assertRaises(server.RequestError):

@@ -312,6 +312,42 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
 .proposal-loading h3, .proposal-loading p { margin: 0; }
 .proposal-loading h3 { font-size: 16px; }
 .proposal-loading p { margin-top: 4px; color: var(--secondary); font-size: 11px; }
+.proposal-workflow { display: grid; gap: 16px; margin-bottom: 18px; }
+.proposal-stepper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.proposal-stepper span { padding: 10px 12px; border: 1px solid var(--border); border-radius: 11px; background: #fff; color: var(--muted); font-size: 10px; font-weight: 700; text-align: center; }
+.proposal-stepper span.active { border-color: #e7a783; background: #fff4ec; color: var(--brand); }
+.proposal-stepper span.complete { border-color: #b9dacb; background: #f1faf6; color: #267054; }
+.checkpoint-message { margin: 0; padding: 11px 14px; border-left: 3px solid var(--brand); background: #fff8f3; color: var(--secondary); font-size: 11px; line-height: 1.6; }
+.constraint-card, .plan-card { padding: 23px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
+.constraint-grid { margin: 14px 0 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.constraint-grid label { display: grid; gap: 6px; color: var(--secondary); font-size: 10px; font-weight: 700; }
+.constraint-grid label.wide { grid-column: 1 / -1; }
+.constraint-grid input, .constraint-grid select, .constraint-grid textarea { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid var(--border); border-radius: 9px; background: #fff; color: var(--text); font: inherit; font-weight: 400; }
+.constraint-grid textarea { min-height: 72px; resize: vertical; }
+.constraint-review-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; margin: 12px 0 18px; }
+.constraint-review-list div { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.constraint-review-list dt { color: var(--muted); font-size: 9px; font-weight: 800; }
+.constraint-review-list dd { margin: 4px 0 0; color: var(--secondary); font-size: 11px; line-height: 1.55; }
+.blueprint-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 13px 0; }
+.blueprint-summary div { padding: 12px; border-radius: 10px; background: var(--surface-warm); }
+.blueprint-summary strong, .blueprint-summary span { display: block; }
+.blueprint-summary strong { margin-bottom: 4px; color: var(--muted); font-size: 9px; }
+.blueprint-summary span { color: var(--secondary); font-size: 11px; line-height: 1.55; }
+.outline-review { margin: 12px 0 18px; display: grid; gap: 7px; }
+.outline-row { padding: 10px 12px; display: grid; grid-template-columns: 30px 1fr auto; gap: 9px; align-items: center; border: 1px solid var(--border); border-radius: 10px; font-size: 10px; }
+.outline-row span:first-child { color: var(--brand); font-weight: 800; }
+.outline-row small { color: var(--muted); }
+.workflow-panel-grid { margin: 18px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
+.workflow-panel-grid article { min-height: 140px; padding: 16px; border: 1px solid var(--border); border-radius: 13px; background: #fff; box-shadow: var(--shadow); }
+.workflow-panel-grid h3 { margin: 0 0 9px; color: var(--brand); font-size: 12px; }
+.workflow-panel-grid p { margin: 5px 0; color: var(--secondary); font-size: 9px; line-height: 1.5; }
+.workflow-panel-grid .pass { color: #267054; font-weight: 700; }
+.workflow-panel-grid .blocked { color: #a64a38; font-weight: 700; }
+.task-card-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.task-card-row:last-child { border-bottom: 0; }
+.task-card-row strong, .task-card-row span { display: block; }
+.task-card-row strong { color: var(--text); font-size: 10px; }
+.task-card-row span { margin-top: 3px; color: var(--muted); font-size: 9px; }
 .proposal-hero { margin-bottom: 18px; padding: 25px; display: flex; align-items: center; justify-content: space-between; gap: 26px; border: 1px solid #efdcd0; border-radius: var(--radius); background: linear-gradient(135deg, #fff8f3, #fff1e8); box-shadow: var(--shadow); }
 .proposal-hero h3 { margin: 0; font-size: 23px; line-height: 1.45; }
 .proposal-hero > div:first-child > p:last-child { margin: 7px 0 0; color: var(--secondary); font-size: 12px; }
@@ -452,6 +488,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
   .proposal-layout { grid-template-columns: 1fr; }
   .writing-panel { position: static; }
   .proposal-section-body { padding-left: 16px; }
+  .proposal-stepper, .workflow-panel-grid, .constraint-grid, .constraint-review-list, .blueprint-summary { grid-template-columns: 1fr; }
+  .constraint-grid label.wide { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

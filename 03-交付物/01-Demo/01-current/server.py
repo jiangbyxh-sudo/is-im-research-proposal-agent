@@ -282,6 +282,71 @@ def store_proposal_context(request: SynthesisRequest, synthesis) -> str:
     return context_id
 
 
+def _strict_payload_flag(payload: dict, key: str) -> bool:
+    value = payload.get(key, False)
+    if not isinstance(value, bool):
+        raise RequestError(f"{key}必须是布尔值")
+    return value
+
+
+def _proposal_gaps(synthesis) -> list[dict]:
+    formal_gaps = getattr(synthesis, "formal_gaps", None)
+    if isinstance(formal_gaps, (list, tuple)) and formal_gaps:
+        return formal_gaps
+    return list(getattr(synthesis, "gap_candidates", []) or [])
+
+
+def build_workflow_panels(synthesis_request: SynthesisRequest, synthesis, proposal_result) -> dict:
+    audit = proposal_result.audit if isinstance(getattr(proposal_result, "audit", None), dict) else {}
+    claim_audit = audit.get("claim_audit") or {}
+    citation_audit = audit.get("citation_audit") or {}
+    consistency = audit.get("cross_section_consistency_matrix") or {}
+    task_card_audit = audit.get("task_card_audit") or {}
+    claim_store = getattr(synthesis, "claim_store", {}) or {}
+    claims = claim_store.get("claims", []) if isinstance(claim_store, dict) else []
+    bindings = [binding for claim in claims for binding in claim.get("bindings", [])]
+    evidence_levels: dict[str, int] = {}
+    for binding in bindings:
+        level = str((binding.get("evidence_span") or {}).get("evidence_level") or "unknown")
+        evidence_levels[level] = evidence_levels.get(level, 0) + 1
+    synthesis_audit = getattr(synthesis, "audit", {}) or {}
+    saturation = synthesis_audit.get("saturation") or {}
+    return {
+        "skill": {
+            "title": "Skill",
+            "items": [
+                {"id": "p1", "label": "P1 direct语料", "status": "PASS" if synthesis_request.p1_precision_gate_passed else "EXEMPTION_OR_BLOCKED"},
+                {"id": "p2", "label": "P2确定性五方向", "status": str(getattr(synthesis, "status", "UNKNOWN"))},
+                {"id": "p3", "label": "P3 Evidence/Claim门禁", "status": "PASS" if claim_audit.get("valid") else "BLOCKED"},
+                {"id": "p4", "label": "P4受控开题", "status": str(getattr(proposal_result, "status", "UNKNOWN"))},
+            ],
+        },
+        "evidence": {
+            "title": "Evidence",
+            "claim_count": len(claims),
+            "binding_count": len(bindings),
+            "evidence_levels": evidence_levels,
+            "formal_only": bool(evidence_levels) and all(
+                level in {"abstract", "fulltext"} for level in evidence_levels
+            ),
+        },
+        "saturation": {
+            "title": "Saturation",
+            "status": saturation.get("status", "NOT_AVAILABLE"),
+            "advisory_only": True,
+            "metrics": saturation,
+        },
+        "audit": {
+            "title": "Audit",
+            "claim_valid": bool(claim_audit.get("valid")),
+            "citation_valid": bool(citation_audit.get("valid")),
+            "consistency_valid": bool(consistency.get("valid")),
+            "task_cards_valid": bool(task_card_audit.get("valid")),
+            "release_ceiling": "READY_FOR_HUMAN_REVIEW",
+        },
+    }
+
+
 def generate_proposal(payload: dict, proposal_provider=None) -> dict:
     context_id = str(payload.get("proposal_context_id") or "").strip()
     selected_gap_id = str(payload.get("selected_gap_id") or "").strip()
@@ -297,15 +362,26 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
         with PROPOSAL_CONTEXTS_LOCK:
             PROPOSAL_CONTEXTS.pop(context_id, None)
         raise RequestError("开题上下文已超过60分钟，请重新运行论文检索与方向综合")
-    gap = next((item for item in synthesis.gap_candidates if item.get("gap_id") == selected_gap_id), None)
+    gap = next((item for item in _proposal_gaps(synthesis) if item.get("gap_id") == selected_gap_id), None)
     if not gap:
         raise RequestError("选择的研究空白不属于本次核验结果")
+    if gap.get("formal") is not True:
+        raise RequestError("所选研究空白尚未通过P3正式证据门禁")
     innovation_map = {
         f"{selected_gap_id}_innovation_{index + 1}": str(value)
         for index, value in enumerate(gap.get("innovation_candidates", []))
     }
     if selected_innovation_id not in innovation_map:
         raise RequestError("选择的创新点不属于该研究空白")
+    user_constraints = payload.get("user_constraints") or {}
+    if not isinstance(user_constraints, dict):
+        raise RequestError("user_constraints必须是JSON对象")
+    blueprint = payload.get("research_design_blueprint")
+    outline = payload.get("proposal_outline")
+    if blueprint is not None and not isinstance(blueprint, dict):
+        raise RequestError("research_design_blueprint必须是JSON对象")
+    if outline is not None and not isinstance(outline, dict):
+        raise RequestError("proposal_outline必须是JSON对象")
     result = (proposal_provider or build_proposal_generation_provider(KB_ROOT)).generate(
         ProposalRequest(
             research_direction=synthesis_request.research_direction,
@@ -314,11 +390,25 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
             selected_innovation_id=selected_innovation_id,
             selected_innovation=innovation_map[selected_innovation_id],
             papers=synthesis_request.papers,
+            claim_store=dict(getattr(synthesis, "claim_store", {}) or {}),
+            user_constraints=user_constraints,
+            constraints_confirmed=_strict_payload_flag(payload, "constraints_confirmed"),
+            research_design_blueprint=blueprint,
+            blueprint_confirmed=_strict_payload_flag(payload, "blueprint_confirmed"),
+            proposal_outline=outline,
+            outline_confirmed=_strict_payload_flag(payload, "outline_confirmed"),
         )
     )
     result.proposal_context["session_id"] = context_id
+    state_by_status = {
+        "READY_FOR_HUMAN_REVIEW": "PROPOSAL_READY",
+        "PROPOSAL_CONTROLLED_PARTIAL": "PROPOSAL_PARTIAL",
+        "PROPOSAL_NEEDS_USER_INPUT": "PROPOSAL_CHECKPOINT",
+        "USER_CONSTRAINT_CONFIRMATION_REQUIRED": "PROPOSAL_CHECKPOINT",
+        "PROPOSAL_PLAN_CONFIRMATION_REQUIRED": "PROPOSAL_CHECKPOINT",
+    }
     return {
-        "state": "PROPOSAL_READY" if result.status in {"PROPOSAL_DRAFT_READY", "PROPOSAL_DRAFT_PARTIAL"} else "GAP_SELECTED",
+        "state": state_by_status.get(result.status, "GAP_SELECTED"),
         "proposal_status": result.status,
         "proposal_message": result.message_to_user,
         "proposal": result.proposal,
@@ -326,6 +416,7 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
         "proposal_context": result.proposal_context,
         "proposal_limitations": result.limitations,
         "proposal_audit": result.audit,
+        "workflow_panels": build_workflow_panels(synthesis_request, synthesis, result),
     }
 
 

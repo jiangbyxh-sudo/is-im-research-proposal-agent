@@ -16,7 +16,9 @@ class Handler(BaseHTTPRequestHandler):
         envelope = json.loads(self.rfile.read(length).decode("utf-8"))
         messages = envelope.get("messages", [])
         system_prompt = str(messages[0].get("content", "")) if messages else ""
-        if "开题报告与写作指导生成器" in system_prompt:
+        if "受控开题报告逐节生成器" in system_prompt:
+            content = self.controlled_section_content(messages)
+        elif "开题报告与写作指导生成器" in system_prompt:
             content = self.proposal_content()
         else:
             content = self.synthesis_content()
@@ -30,6 +32,27 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    @staticmethod
+    def controlled_section_content(messages):
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        spec = payload.get("section_spec") or {}
+        blueprint = payload.get("research_design_blueprint") or {}
+        outline = payload.get("proposal_outline") or {}
+        allowed = list(payload.get("allowed_claim_ids") or [])
+        return json.dumps({"section": {
+            "section_id": spec.get("section_id"),
+            "content": f"{spec.get('title')}的受控测试内容，仅用于界面验收，不构成研究结论。",
+            "claim_ids": allowed[:2],
+            "assumptions": ["受控夹具内容，须人工复核"],
+            "blueprint_refs": {
+                "blueprint_id": blueprint.get("blueprint_id"),
+                "research_question": blueprint.get("research_question"),
+                "design": blueprint.get("design"),
+                "outline_id": outline.get("outline_id"),
+                "constraint_hash": blueprint.get("constraint_hash"),
+            },
+        }}, ensure_ascii=False)
 
     @staticmethod
     def synthesis_content():

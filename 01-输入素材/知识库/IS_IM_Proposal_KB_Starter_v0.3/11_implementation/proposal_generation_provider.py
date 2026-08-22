@@ -10,6 +10,12 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Protocol
 
+from proposal_workflow_controls import (
+    build_execution_task_cards,
+    build_proposal_outline,
+    evaluate_user_constraints,
+    proposal_outline_matches,
+)
 from research_synthesis_provider import DeepSeekJsonClient
 
 
@@ -54,6 +60,16 @@ class ResearchDesignBlueprint:
     data: str
     analysis: str
     section_ids: tuple[str, ...]
+    constraint_hash: str
+    degree_level: str
+    institution_template: str
+    output_language: str
+    target_word_count: int
+    deadline: str
+    data_access: str
+    method_constraints: str
+    ethics_privacy: str
+    tool_capabilities: str
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -68,8 +84,12 @@ class ProposalRequest:
     selected_innovation: str
     papers: tuple[dict, ...]
     claim_store: dict = field(default_factory=dict)
+    user_constraints: dict = field(default_factory=dict)
+    constraints_confirmed: bool = False
     research_design_blueprint: dict | None = None
     blueprint_confirmed: bool = False
+    proposal_outline: dict | None = None
+    outline_confirmed: bool = False
 
 
 @dataclass
@@ -177,7 +197,12 @@ def _title_level_dominates(papers: tuple[dict, ...]) -> bool:
     return title_only > len(papers) / 2
 
 
-def build_research_design_blueprint(request: ProposalRequest, paradigm_id: str) -> ResearchDesignBlueprint:
+def build_research_design_blueprint(
+    request: ProposalRequest,
+    paradigm_id: str,
+    normalized_constraints: dict,
+    constraint_hash: str,
+) -> ResearchDesignBlueprint:
     method = request.selected_gap.get("feasible_method") or {}
     claim_ids = [request.selected_gap.get("support_claim_id"), *request.selected_gap.get("counterevidence_claim_ids", [])]
     claim_ids = tuple(dict.fromkeys(str(value) for value in claim_ids if value))
@@ -187,12 +212,22 @@ def build_research_design_blueprint(request: ProposalRequest, paradigm_id: str) 
         "research_question": str(request.selected_gap.get("research_question") or request.fine_grained_question or "").strip(),
         "claim_ids": claim_ids,
         "paradigm_id": paradigm_id,
-        "unit_of_analysis": str(method.get("unit_of_analysis") or "to_be_confirmed").strip(),
-        "context": str(method.get("context") or request.research_direction).strip(),
+        "unit_of_analysis": str(method.get("unit_of_analysis") or normalized_constraints["research_context"]).strip(),
+        "context": str(method.get("context") or normalized_constraints["research_context"]).strip(),
         "design": str(method.get("design") or "").strip(),
         "data": str(method.get("data") or "").strip(),
         "analysis": str(method.get("analysis") or "").strip(),
         "section_ids": tuple(section_id for section_id, _ in SECTION_SPECS),
+        "constraint_hash": constraint_hash,
+        "degree_level": normalized_constraints["degree_level"],
+        "institution_template": normalized_constraints["institution_template"],
+        "output_language": normalized_constraints["output_language"],
+        "target_word_count": normalized_constraints["target_word_count"],
+        "deadline": normalized_constraints["deadline"],
+        "data_access": normalized_constraints["data_access"],
+        "method_constraints": normalized_constraints["method_constraints"],
+        "ethics_privacy": normalized_constraints["ethics_privacy"],
+        "tool_capabilities": normalized_constraints["tool_capabilities"],
     }
     digest = hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:20]
     return ResearchDesignBlueprint(blueprint_id=f"blueprint_{digest}", **payload)
@@ -215,17 +250,30 @@ class DeepSeekProposalGenerationProvider:
     @staticmethod
     def _section_system_prompt() -> str:
         return """你是受控开题报告逐节生成器。只输出JSON对象：
-{"section":{"section_id":"background","content":"...","claim_ids":["claim_x"],"assumptions":[],"blueprint_refs":{"blueprint_id":"...","research_question":"...","design":"..."}}}
+{"section":{"section_id":"background","content":"...","claim_ids":["claim_x"],"assumptions":[],"blueprint_refs":{"blueprint_id":"...","research_question":"...","design":"...","outline_id":"...","constraint_hash":"..."}}}
 本节唯一事实来源是用户消息中的Claim Store；不得使用外部知识、原始论文列表或自造引用。
-所有事实性论断必须由claim_ids支持。不得改变ResearchDesignBlueprint。"""
+所有事实性论断必须由claim_ids支持。不得改变ResearchDesignBlueprint、已确认用户约束或提纲。"""
 
-    def _generate_section(self, section_id: str, title: str, blueprint: ResearchDesignBlueprint, claims: dict[str, dict]) -> tuple[dict, dict]:
+    def _generate_section(
+        self,
+        section_spec: dict,
+        blueprint: ResearchDesignBlueprint,
+        outline: dict,
+        claims: dict[str, dict],
+    ) -> tuple[dict, dict]:
+        section_id = section_spec["section_id"]
+        title = section_spec["title"]
+        allowed_claim_ids = [claim_id for claim_id in section_spec["allowed_claim_ids"] if claim_id in claims]
         payload = {
             "task": "仅生成一个开题报告章节",
-            "section_spec": {"section_id": section_id, "title": title},
+            "section_spec": section_spec,
             "research_design_blueprint": blueprint.as_dict(),
-            "claim_store": {"claims": [claims[claim_id] for claim_id in blueprint.claim_ids]},
-            "allowed_claim_ids": list(blueprint.claim_ids),
+            "proposal_outline": {
+                "outline_id": outline["outline_id"],
+                "constraint_hash": outline["constraint_hash"],
+            },
+            "claim_store": {"claims": [claims[claim_id] for claim_id in allowed_claim_ids]},
+            "allowed_claim_ids": allowed_claim_ids,
         }
         raw, model_audit = self.client.complete(self._section_system_prompt(), json.dumps(payload, ensure_ascii=False))
         item = raw.get("section", {}) if isinstance(raw, dict) else {}
@@ -233,13 +281,15 @@ class DeepSeekProposalGenerationProvider:
             raise ValueError("section_id_mismatch")
         content = str(item.get("content") or "").strip()
         claim_ids = list(dict.fromkeys(str(value) for value in item.get("claim_ids", []) if value))
-        if not content or not claim_ids or not set(claim_ids).issubset(claims):
+        if not content or not claim_ids or not set(claim_ids).issubset(set(allowed_claim_ids)):
             raise ValueError("section_requires_content_and_allowed_claims")
         refs = item.get("blueprint_refs") or {}
         expected_refs = {
             "blueprint_id": blueprint.blueprint_id,
             "research_question": blueprint.research_question,
             "design": blueprint.design,
+            "outline_id": outline["outline_id"],
+            "constraint_hash": blueprint.constraint_hash,
         }
         if refs != expected_refs:
             raise ValueError("section_blueprint_inconsistency")
@@ -273,7 +323,8 @@ class DeepSeekProposalGenerationProvider:
 
     def generate(self, request: ProposalRequest) -> ProposalResult:
         claim_audit = audit_claim_store(request.claim_store)
-        if _title_level_dominates(request.papers) or not claim_audit["valid"]:
+        title_level_dominates = _title_level_dominates(request.papers)
+        if title_level_dominates or not claim_audit["valid"]:
             return ProposalResult(
                 status="RESEARCH_SKETCH_ONLY",
                 proposal={
@@ -282,39 +333,103 @@ class DeepSeekProposalGenerationProvider:
                     "sketch_status": "formal_generation_blocked_by_evidence",
                 },
                 limitations=["题名级证据占主导或Claim Store无有效L1/L2绑定，不能生成正式开题。"],
-                audit={"claim_audit": claim_audit, "title_level_evidence_dominates": _title_level_dominates(request.papers)},
+                audit={"claim_audit": claim_audit, "title_level_evidence_dominates": title_level_dominates},
                 message_to_user="当前只能生成研究构想草图；补足摘要/全文证据后再进入正式开题。",
+            )
+        constraint_gate = evaluate_user_constraints(request.user_constraints)
+        if not constraint_gate.complete:
+            return ProposalResult(
+                status="PROPOSAL_NEEDS_USER_INPUT",
+                proposal={"user_constraints": constraint_gate.normalized, "sections": []},
+                proposal_context={
+                    "checkpoint": "USER_CONSTRAINTS",
+                    "missing_field": constraint_gate.missing_field,
+                    "next_question": constraint_gate.next_question,
+                    "gate_passed": False,
+                },
+                limitations=[constraint_gate.error or f"missing_user_constraint:{constraint_gate.missing_field}"],
+                audit={"claim_audit": claim_audit, "model_calls": 0, "constraint_gate_passed": False},
+                message_to_user=constraint_gate.next_question or "需要补充会改变研究设计的用户约束。",
+            )
+        if not request.constraints_confirmed:
+            return ProposalResult(
+                status="USER_CONSTRAINT_CONFIRMATION_REQUIRED",
+                proposal={"user_constraints": constraint_gate.normalized, "sections": []},
+                proposal_context={
+                    "checkpoint": "USER_CONSTRAINT_CONFIRMATION",
+                    "constraint_hash": constraint_gate.constraint_hash,
+                    "gate_passed": False,
+                },
+                audit={"claim_audit": claim_audit, "model_calls": 0, "constraint_gate_passed": True},
+                message_to_user="用户约束已完整记录；确认后才会生成研究设计蓝图与提纲。",
             )
         cards = load_paradigm_cards(self.kb_root)
         paradigm_id = recommend_paradigm(request, cards)
         paradigm = cards.get(paradigm_id)
         if not paradigm:
             return ProposalResult(status="PROPOSAL_PARADIGM_MISSING", limitations=["缺少可用研究范式卡。"])
-        blueprint = build_research_design_blueprint(request, paradigm_id)
+        blueprint = build_research_design_blueprint(
+            request,
+            paradigm_id,
+            constraint_gate.normalized,
+            constraint_gate.constraint_hash,
+        )
         claims = _claim_index(request.claim_store)
         if not blueprint.claim_ids or not set(blueprint.claim_ids).issubset(claims):
             return ProposalResult(status="RESEARCH_SKETCH_ONLY", limitations=["研究空白没有绑定完整Claim Store论断。"])
-        if not request.blueprint_confirmed:
+        outline = build_proposal_outline(blueprint.as_dict(), SECTION_SPECS)
+        task_cards = build_execution_task_cards(blueprint.as_dict(), outline, request.claim_store)
+        plan_payload = {
+            "user_constraints": constraint_gate.normalized,
+            "research_design_blueprint": blueprint.as_dict(),
+            "proposal_outline": outline,
+            "execution_task_cards": task_cards,
+            "sections": [],
+        }
+        if not request.blueprint_confirmed or not request.outline_confirmed:
             return ProposalResult(
-                status="BLUEPRINT_CONFIRMATION_REQUIRED",
-                proposal={"research_design_blueprint": blueprint.as_dict(), "sections": []},
-                proposal_context={"blueprint_id": blueprint.blueprint_id, "gate_passed": False},
-                audit={"claim_audit": claim_audit, "model_calls": 0},
-                message_to_user="ResearchDesignBlueprint已生成；确认蓝图后才会逐节生成。",
+                status="PROPOSAL_PLAN_CONFIRMATION_REQUIRED",
+                proposal=plan_payload,
+                writing_guidance=self._controlled_guidance(paradigm),
+                proposal_context={
+                    "checkpoint": "BLUEPRINT_AND_OUTLINE_CONFIRMATION",
+                    "constraint_hash": constraint_gate.constraint_hash,
+                    "blueprint_id": blueprint.blueprint_id,
+                    "outline_id": outline["outline_id"],
+                    "gate_passed": False,
+                },
+                audit={
+                    "claim_audit": claim_audit,
+                    "constraint_gate_passed": True,
+                    "task_card_audit": task_cards["audit"],
+                    "model_calls": 0,
+                },
+                message_to_user="研究设计蓝图、逐节提纲和执行任务卡已生成；确认计划后才会逐节生成。",
             )
-        if not _blueprint_matches(blueprint, request.research_design_blueprint):
+        if (
+            not _blueprint_matches(blueprint, request.research_design_blueprint)
+            or not proposal_outline_matches(outline, request.proposal_outline)
+        ):
             return ProposalResult(
-                status="BLUEPRINT_INVALID",
-                proposal={"research_design_blueprint": blueprint.as_dict(), "sections": []},
-                limitations=["已确认蓝图与当前证据、研究问题或方法不一致。"],
-                audit={"claim_audit": claim_audit, "model_calls": 0},
+                status="PROPOSAL_PLAN_INVALID",
+                proposal=plan_payload,
+                limitations=["已确认蓝图或提纲与当前证据、用户约束、研究问题或方法不一致。"],
+                audit={
+                    "claim_audit": claim_audit,
+                    "constraint_gate_passed": True,
+                    "task_card_audit": task_cards["audit"],
+                    "model_calls": 0,
+                },
             )
 
         sections, model_audits, generation_errors = [], [], []
         started = time.monotonic()
-        for section_id, title in SECTION_SPECS:
+        task_card_by_section = {item["section_id"]: item for item in task_cards["cards"]}
+        for section_spec in outline["sections"]:
+            section_id = section_spec["section_id"]
             try:
-                section, model_audit = self._generate_section(section_id, title, blueprint, claims)
+                section, model_audit = self._generate_section(section_spec, blueprint, outline, claims)
+                section["task_card_id"] = task_card_by_section[section_id]["task_card_id"]
                 sections.append(section)
                 model_audits.append({"section_id": section_id, **model_audit})
             except Exception as exc:
@@ -327,8 +442,16 @@ class DeepSeekProposalGenerationProvider:
             for citation in section["citations"]:
                 if not citation.get("claim_id") or not citation.get("paper_id") or not citation.get("evidence_span"):
                     citation_errors.append(f"{section['section_id']}:invalid_citation_binding")
+                elif citation["claim_id"] not in section["claim_ids"]:
+                    citation_errors.append(f"{section['section_id']}:citation_claim_not_declared")
         consistency_rows = []
-        expected_refs = {"blueprint_id": blueprint.blueprint_id, "research_question": blueprint.research_question, "design": blueprint.design}
+        expected_refs = {
+            "blueprint_id": blueprint.blueprint_id,
+            "research_question": blueprint.research_question,
+            "design": blueprint.design,
+            "outline_id": outline["outline_id"],
+            "constraint_hash": blueprint.constraint_hash,
+        }
         for section in sections:
             consistency_rows.append({
                 "section_id": section["section_id"], "expected": expected_refs,
@@ -337,24 +460,36 @@ class DeepSeekProposalGenerationProvider:
         consistency_valid = len(consistency_rows) == len(SECTION_SPECS) and all(row["consistent"] for row in consistency_rows)
         citation_audit = {"valid": not citation_errors and len(sections) == len(SECTION_SPECS), "errors": citation_errors}
         consistency_matrix = {"valid": consistency_valid, "rows": consistency_rows}
-        all_gates = claim_audit["valid"] and citation_audit["valid"] and consistency_matrix["valid"] and not generation_errors
+        all_gates = (
+            claim_audit["valid"]
+            and citation_audit["valid"]
+            and consistency_matrix["valid"]
+            and task_cards["audit"]["valid"]
+            and not generation_errors
+        )
         status = "READY_FOR_HUMAN_REVIEW" if all_gates else "PROPOSAL_CONTROLLED_PARTIAL"
         return ProposalResult(
             status=status,
             proposal={
-                "research_design_blueprint": blueprint.as_dict(), "sections": sections,
+                **plan_payload,
+                "sections": sections,
                 "selected_gap": request.selected_gap, "selected_innovation_id": request.selected_innovation_id,
                 "selected_innovation": request.selected_innovation, "draft_status": "human_review_required",
             },
             writing_guidance=self._controlled_guidance(paradigm),
             proposal_context={
                 "scope_label": "IS_IM", "claim_ids": list(blueprint.claim_ids), "blueprint_id": blueprint.blueprint_id,
-                "gate_passed": all_gates, "release_ceiling": "READY_FOR_HUMAN_REVIEW",
+                "outline_id": outline["outline_id"], "constraint_hash": blueprint.constraint_hash,
+                "checkpoint": "HUMAN_REVIEW", "gate_passed": all_gates,
+                "release_ceiling": "READY_FOR_HUMAN_REVIEW",
             },
             limitations=["本状态仅表示通过自动门禁，仍须人工审阅，不能视为最终开题。"],
             audit={
                 "version": PROPOSAL_CONTROL_VERSION, "claim_audit": claim_audit, "citation_audit": citation_audit,
                 "cross_section_consistency_matrix": consistency_matrix, "generation_errors": generation_errors,
+                "constraint_gate_passed": True, "constraints_confirmed": True,
+                "blueprint_confirmed": True, "outline_confirmed": True,
+                "task_card_audit": task_cards["audit"],
                 "model_calls": len(model_audits), "models": model_audits,
                 "duration_ms": round((time.monotonic() - started) * 1000, 2),
             },

@@ -481,7 +481,7 @@ class P3GapFalsificationEvaluationSkillAdapter:
 class P4ControlledProposalSkillAdapter:
     descriptor = ResearchSkillDescriptor(
         skill_id="p4.controlled_proposal",
-        version="1.0.0",
+        version="1.1.0",
         stage="P4",
         description="Run the existing blueprint-confirmed, Claim-Store-only proposal workflow.",
         deterministic=False,
@@ -500,18 +500,27 @@ class P4ControlledProposalSkillAdapter:
             selected_innovation=str(payload.get("selected_innovation") or ""),
             papers=_tuple_dicts(payload.get("papers")),
             claim_store=dict(payload.get("claim_store") or {}),
+            user_constraints=dict(payload.get("user_constraints") or {}),
+            constraints_confirmed=_strict_bool(payload, "constraints_confirmed"),
             research_design_blueprint=payload.get("research_design_blueprint"),
             blueprint_confirmed=_strict_bool(payload, "blueprint_confirmed"),
+            proposal_outline=payload.get("proposal_outline"),
+            outline_confirmed=_strict_bool(payload, "outline_confirmed"),
         )
         upstream = self.provider.generate(request)
         data = asdict(upstream)
         if upstream.status == "READY_FOR_HUMAN_REVIEW":
             status = SkillRunStatus.COMPLETE
         elif upstream.status in {
-            "RESEARCH_SKETCH_ONLY", "BLUEPRINT_CONFIRMATION_REQUIRED", "PROPOSAL_CONTROLLED_PARTIAL",
+            "RESEARCH_SKETCH_ONLY", "PROPOSAL_NEEDS_USER_INPUT",
+            "USER_CONSTRAINT_CONFIRMATION_REQUIRED", "PROPOSAL_PLAN_CONFIRMATION_REQUIRED",
+            "BLUEPRINT_CONFIRMATION_REQUIRED", "PROPOSAL_CONTROLLED_PARTIAL",
         }:
             status = SkillRunStatus.PARTIAL
-        elif upstream.status in {"PROPOSAL_NOT_CONFIGURED", "PROPOSAL_PARADIGM_MISSING", "BLUEPRINT_INVALID"}:
+        elif upstream.status in {
+            "PROPOSAL_NOT_CONFIGURED", "PROPOSAL_PARADIGM_MISSING",
+            "BLUEPRINT_INVALID", "PROPOSAL_PLAN_INVALID",
+        }:
             status = SkillRunStatus.BLOCKED
         else:
             status = SkillRunStatus.FAILED
@@ -520,7 +529,11 @@ class P4ControlledProposalSkillAdapter:
             upstream_status=upstream.status,
             output=data,
             limitations=list(upstream.limitations),
-            provenance={"blueprint_id": upstream.proposal_context.get("research_design_blueprint", {}).get("blueprint_id")},
+            provenance={
+                "blueprint_id": upstream.proposal_context.get("blueprint_id"),
+                "outline_id": upstream.proposal_context.get("outline_id"),
+                "constraint_hash": upstream.proposal_context.get("constraint_hash"),
+            },
             audit={**upstream.audit, "ready_state_ceiling": "READY_FOR_HUMAN_REVIEW"},
             cacheable=False,
         )

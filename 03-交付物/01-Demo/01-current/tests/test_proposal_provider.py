@@ -34,6 +34,8 @@ class SectionClient:
                     "blueprint_id": blueprint["blueprint_id"],
                     "research_question": blueprint["research_question"],
                     "design": blueprint["design"],
+                    "outline_id": payload["proposal_outline"]["outline_id"],
+                    "constraint_hash": blueprint["constraint_hash"],
                 },
             }
         }, {"model": "fake-section-model"}
@@ -73,8 +75,23 @@ def controlled_context():
     return papers, gaps.formal_gaps[0], gaps.claim_store
 
 
+def confirmed_constraints():
+    return {
+        "degree_level": "硕士",
+        "institution_template": "无指定模板",
+        "output_language": "中文",
+        "target_word_count": 12000,
+        "deadline": "2026-12-31",
+        "data_access": "可招募在线实验参与者，不访问敏感组织数据",
+        "method_constraints": "采用可预注册的在线实验",
+        "research_context": "AI辅助决策",
+        "ethics_privacy": "知情同意、匿名化并在招募前完成伦理审查",
+        "tool_capabilities": "Python、R和在线实验平台",
+    }
+
+
 class ProposalProviderTests(unittest.TestCase):
-    def test_blueprint_must_be_confirmed_before_section_generation(self):
+    def test_constraints_and_plan_must_be_confirmed_before_section_generation(self):
         papers, gap, claim_store = controlled_context()
         client = SectionClient()
         engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT)
@@ -84,17 +101,35 @@ class ProposalProviderTests(unittest.TestCase):
             selected_innovation="通过随机实验检验界面干预", papers=papers, claim_store=claim_store,
         )
         first = engine.generate(request)
-        self.assertEqual("BLUEPRINT_CONFIRMATION_REQUIRED", first.status)
+        self.assertEqual("PROPOSAL_NEEDS_USER_INPUT", first.status)
+        self.assertEqual("degree_level", first.proposal_context["missing_field"])
         self.assertEqual(0, len(client.calls))
-        blueprint = first.proposal["research_design_blueprint"]
-        second = engine.generate(replace(request, research_design_blueprint=blueprint, blueprint_confirmed=True))
-        self.assertEqual("READY_FOR_HUMAN_REVIEW", second.status)
-        self.assertEqual(len(provider_module.SECTION_SPECS), len(second.proposal["sections"]))
+        second = engine.generate(replace(request, user_constraints=confirmed_constraints()))
+        self.assertEqual("USER_CONSTRAINT_CONFIRMATION_REQUIRED", second.status)
+        plan = engine.generate(replace(
+            request, user_constraints=confirmed_constraints(), constraints_confirmed=True,
+        ))
+        self.assertEqual("PROPOSAL_PLAN_CONFIRMATION_REQUIRED", plan.status)
+        self.assertTrue(plan.proposal["execution_task_cards"]["audit"]["valid"])
+        self.assertEqual(0, len(client.calls))
+        final = engine.generate(replace(
+            request,
+            user_constraints=confirmed_constraints(),
+            constraints_confirmed=True,
+            research_design_blueprint=plan.proposal["research_design_blueprint"],
+            blueprint_confirmed=True,
+            proposal_outline=plan.proposal["proposal_outline"],
+            outline_confirmed=True,
+        ))
+        self.assertEqual("READY_FOR_HUMAN_REVIEW", final.status)
+        self.assertEqual(len(provider_module.SECTION_SPECS), len(final.proposal["sections"]))
         self.assertEqual(len(provider_module.SECTION_SPECS), len(client.calls))
-        self.assertTrue(second.audit["claim_audit"]["valid"])
-        self.assertTrue(second.audit["citation_audit"]["valid"])
-        self.assertTrue(second.audit["cross_section_consistency_matrix"]["valid"])
-        self.assertTrue(second.proposal_context["gate_passed"])
+        self.assertTrue(final.audit["claim_audit"]["valid"])
+        self.assertTrue(final.audit["citation_audit"]["valid"])
+        self.assertTrue(final.audit["cross_section_consistency_matrix"]["valid"])
+        self.assertTrue(final.audit["task_card_audit"]["valid"])
+        self.assertTrue(final.proposal_context["gate_passed"])
+        self.assertTrue(all(section["task_card_id"] for section in final.proposal["sections"]))
         self.assertTrue(all('"papers"' not in prompt for _, prompt in client.calls))
 
     def test_title_level_evidence_dominance_can_only_return_sketch(self):
@@ -109,7 +144,8 @@ class ProposalProviderTests(unittest.TestCase):
             provider_module.ProposalRequest(
                 research_direction="AI", fine_grained_question=None, selected_gap=gap,
                 selected_innovation_id="i1", selected_innovation="innovation", papers=dominated,
-                claim_store=claim_store, blueprint_confirmed=True,
+                claim_store=claim_store, user_constraints=confirmed_constraints(),
+                constraints_confirmed=True, blueprint_confirmed=True, outline_confirmed=True,
             )
         )
         self.assertEqual("RESEARCH_SKETCH_ONLY", result.status)
@@ -121,12 +157,39 @@ class ProposalProviderTests(unittest.TestCase):
         engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT)
         request = provider_module.ProposalRequest(
             research_direction="AI", fine_grained_question=None, selected_gap=gap,
-            selected_innovation_id="i1", selected_innovation="innovation", papers=papers, claim_store=claim_store,
+            selected_innovation_id="i1", selected_innovation="innovation", papers=papers,
+            claim_store=claim_store, user_constraints=confirmed_constraints(), constraints_confirmed=True,
         )
-        blueprint = engine.generate(request).proposal["research_design_blueprint"]
-        result = engine.generate(replace(request, research_design_blueprint=blueprint, blueprint_confirmed=True))
+        plan = engine.generate(request).proposal
+        result = engine.generate(replace(
+            request,
+            research_design_blueprint=plan["research_design_blueprint"],
+            blueprint_confirmed=True,
+            proposal_outline=plan["proposal_outline"],
+            outline_confirmed=True,
+        ))
         self.assertEqual("PROPOSAL_CONTROLLED_PARTIAL", result.status)
         self.assertFalse(result.proposal_context["gate_passed"])
+
+    def test_tampered_outline_is_rejected_without_model_call(self):
+        papers, gap, claim_store = controlled_context()
+        client = SectionClient()
+        engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT)
+        request = provider_module.ProposalRequest(
+            research_direction="AI", fine_grained_question=None, selected_gap=gap,
+            selected_innovation_id="i1", selected_innovation="innovation", papers=papers,
+            claim_store=claim_store, user_constraints=confirmed_constraints(), constraints_confirmed=True,
+        )
+        plan = engine.generate(request).proposal
+        tampered = json.loads(json.dumps(plan["proposal_outline"], ensure_ascii=False))
+        tampered["sections"][0]["title"] = "绕过确认的标题"
+        result = engine.generate(replace(
+            request,
+            research_design_blueprint=plan["research_design_blueprint"], blueprint_confirmed=True,
+            proposal_outline=tampered, outline_confirmed=True,
+        ))
+        self.assertEqual("PROPOSAL_PLAN_INVALID", result.status)
+        self.assertEqual(0, len(client.calls))
 
     def test_unconfigured_provider_stops_without_placeholder_report(self):
         result = provider_module.UnconfiguredProposalGenerationProvider().generate(

@@ -142,6 +142,10 @@ D-2真实联合验收：GROBID产生的126条全文span进入PaperQA2受控检�
 
 补用户约束确认、提纲确认、项目执行任务卡，最后增加 Skill、Evidence、Saturation 和 Audit 面板。
 
+Phase E已完成（2026-08-23）：确定性约束层落地为`proposal_workflow_controls.py`（10字段规范化+`constraint_hash`、按权重分配字数的提纲、含前置依赖与done_when的执行任务卡）；服务端`/api/proposal`只放行`formal=true`的P3正式空白并把Claim Store与三项确认标志传入P4 Provider；前端改为约束表单→约束确认→蓝图/提纲确认→逐节生成→人工复核的工作流并新增四审计面板。全量自动回归：知识库115项、Demo回归29项、JS语法通过。
+
+Phase E本地界面验收（受控夹具，`tests/browser_acceptance_harness.py`）：夹具synthesis通过真实`build_evidence_matrix`+`EvidenceBoundResearchGapProvider`在显式标注的夹具论文上生成正式空白与Claim Store，P2→gap_candidates桥接仅存在于夹具，生产代码未改动；P4 Provider为真实代码并调用本地`fake_deepseek_server`（已补受控逐节生成分支）。浏览器实测通过：空表单被必填校验拦截；四道检查点依次呈现`PROPOSAL_NEEDS_USER_INPUT`→`USER_CONSTRAINT_CONFIRMATION_REQUIRED`（10项约束回显）→`PROPOSAL_PLAN_CONFIRMATION_REQUIRED`（蓝图8项+11节提纲合计12000字+11张任务卡）→`READY_FOR_HUMAN_REVIEW`（11节生成、Claim/引用/跨节一致性/任务卡审计全过、每节展示Claim·论文·证据层级绑定）；四面板桌面4列、390px窄屏单列且无横向溢出；「新建研究」重置清空工作流。验收中发现并修复重置后状态徽标残留「待人工复核」的前端偏差，修复后复跑全流程通过。未覆盖：真实P2链路（仍被P1门禁阻断，P3服务端整合属T05）与浏览器控制台错误计数（自动化不可读，以无失败请求与无错误UI代证）。全部夹具内容显式标注「受控测试/界面验收」，不得作为研究结论引用。
+
 ## 5. 第三方治理规则
 
 1. 所有外部项目必须绑定准确仓库和 commit SHA；

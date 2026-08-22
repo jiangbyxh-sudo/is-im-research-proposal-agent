@@ -91,16 +91,24 @@ class EvidenceBoundResearchGapProvider:
                 formal_gaps.append({
                     "gap_id": gap_id,
                     "cluster_id": request.cluster_id,
+                    "subdirection_id": str(candidate.get("subdirection_id") or request.cluster_id),
                     "gap_statement": statement,
                     "support_claim_id": support_claim["claim_id"],
                     "supporting_paper_ids": sorted({item["paper_id"] for item in support_bindings}),
                     "counterevidence_claim_ids": [claim["claim_id"] for claim in counter_claims],
                     "alternative_explanations": alternatives,
                     "research_question": research_question,
+                    "why_it_matters": str(candidate.get("why_it_matters") or "").strip(),
+                    "innovation_candidates": [
+                        str(value).strip() for value in candidate.get("innovation_candidates", [])
+                        if str(value).strip()
+                    ],
                     "feasible_method": {
                         "design": str(method["design"]).strip(),
                         "data": str(method["data"]).strip(),
                         "analysis": str(method["analysis"]).strip(),
+                        "unit_of_analysis": str(method.get("unit_of_analysis") or "").strip(),
+                        "context": str(method.get("context") or "").strip(),
                         "feasibility_constraints": [
                             str(value).strip() for value in method.get("feasibility_constraints", []) if str(value).strip()
                         ],
