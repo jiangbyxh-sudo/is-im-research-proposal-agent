@@ -1,5 +1,5 @@
 {
-  "version": "1.1.6-p1-retrieval",
+  "version": "1.2.0-p1-retrieval",
   "generated_on": "2026-08-23",
   "generated_from": [
     "01_taxonomy/generated/research_direction_catalog.json",
@@ -19,7 +19,7 @@
   },
   "profiles": [
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "technology_adoption",
       "labels": {
         "zh": "技术与AI采纳",
@@ -269,7 +269,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "human_ai_interaction",
       "labels": {
         "zh": "人机交互",
@@ -508,7 +508,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "platform_governance",
       "labels": {
         "zh": "平台治理",
@@ -526,14 +526,39 @@
         "core_phenomena": [
           "platform governance",
           "digital platform governance",
-          "platform rules"
+          "platform rules",
+          "ecosystem governance",
+          "digital ecosystem governance",
+          "platform regulatory",
+          "governance of digital platforms",
+          "platform govern",
+          "平台治理",
+          "数字平台治理",
+          "生态治理"
         ],
         "technology_terms": [],
         "required_context_any": [
           "digital platform",
+          "platform",
           "platform ecosystem",
           "online marketplace",
-          "social media platform"
+          "social media platform",
+          "two-sided market",
+          "digital ecosystem",
+          "complementor",
+          "app developer",
+          "platform owner",
+          "platform provider",
+          "marketplace",
+          "governance",
+          "regulation",
+          "regulator",
+          "openness",
+          "平台",
+          "生态",
+          "双边市场",
+          "监管",
+          "治理"
         ],
         "negative_contexts": [
           "government platform slogan only"
@@ -763,7 +788,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_transformation",
       "labels": {
         "zh": "digital transformation",
@@ -1121,7 +1146,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_algorithmic_management",
       "labels": {
         "zh": "algorithmic management",
@@ -1487,7 +1512,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "social_media",
       "labels": {
         "zh": "社交媒体",
@@ -1884,7 +1909,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_markets",
       "labels": {
         "zh": "digital markets",
@@ -2243,7 +2268,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_privacy_security",
       "labels": {
         "zh": "privacy / security",
@@ -2591,7 +2616,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_it_governance",
       "labels": {
         "zh": "IT governance",
@@ -2934,7 +2959,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_innovation",
       "labels": {
         "zh": "digital innovation",
@@ -3294,7 +3319,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_technology_use",
       "labels": {
         "zh": "technology use",
@@ -3654,7 +3679,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_strategy",
       "labels": {
         "zh": "digital strategy",
@@ -4024,7 +4049,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_平台经济",
       "labels": {
         "zh": "平台经济",
@@ -4249,7 +4274,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "recommender_systems",
       "labels": {
         "zh": "推荐系统与推荐算法",
@@ -4564,7 +4589,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_电商",
       "labels": {
         "zh": "电商",
@@ -4791,7 +4816,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_数字广告",
       "labels": {
         "zh": "数字广告",
@@ -5018,7 +5043,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_在线行为",
       "labels": {
         "zh": "在线行为",
@@ -5245,7 +5270,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_算法机制",
       "labels": {
         "zh": "算法机制",
@@ -5472,7 +5497,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_hci",
       "labels": {
         "zh": "HCI",
@@ -5709,7 +5734,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "information_retrieval",
       "labels": {
         "zh": "信息检索",
@@ -6103,7 +6128,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_machine_learning",
       "labels": {
         "zh": "machine learning",
@@ -6482,7 +6507,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_data_mining",
       "labels": {
         "zh": "data mining",
@@ -6827,7 +6852,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_software_system_design",
       "labels": {
         "zh": "software / system design",
@@ -7120,7 +7145,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_knowledge_discovery",
       "labels": {
         "zh": "knowledge discovery",
@@ -7406,7 +7431,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_ai_enabled_information_systems",
       "labels": {
         "zh": "AI-enabled information systems",
@@ -7423,7 +7448,11 @@
           "AI-enabled information systems",
           "generative AI in information systems",
           "generative artificial intelligence",
-          "AI-enabled digital work"
+          "AI-enabled digital work",
+          "AI implementation",
+          "AI adoption in organizations",
+          "generative AI",
+          "GenAI"
         ],
         "technology_terms": [
           "artificial intelligence",
@@ -7431,11 +7460,30 @@
           "machine learning enabled"
         ],
         "required_context_any": [
+          "information systems",
           "information systems research",
           "organization",
           "enterprise",
           "digital work",
-          "sociotechnical system"
+          "sociotechnical system",
+          "digital platform",
+          "platform",
+          "work",
+          "worker",
+          "employee",
+          "firm",
+          "business",
+          "management",
+          "market",
+          "user",
+          "technology use",
+          "organizations",
+          "platforms",
+          "users",
+          "workers",
+          "firms",
+          "society",
+          "customers"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7463,7 +7511,11 @@
         "direct": {
           "min_textual_core_matches": 1,
           "require_context_match": true,
-          "min_focality_score": 45.0
+          "min_focality_score": 45.0,
+          "exclude_scope": "title",
+          "exclude_any": [
+            "metaverse"
+          ]
         },
         "adjacent": {
           "returned_separately": true,
@@ -7616,7 +7668,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_artifact_design",
       "labels": {
         "zh": "digital artifact design",
@@ -7852,7 +7904,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_ai_trust",
       "labels": {
         "zh": "AI trust",
@@ -7866,7 +7918,28 @@
       ],
       "facets": {
         "core_phenomena": [
-          "AI trust"
+          "AI trust",
+          "trust in AI",
+          "trusting AI",
+          "trust in artificial intelligence",
+          "trust in generative AI",
+          "trust in GenAI",
+          "trust in algorithms",
+          "algorithmic trust",
+          "trust in intelligent systems",
+          "trust in autonomous systems",
+          "trust in automation",
+          "human-AI trust",
+          "calibrated trust in AI",
+          "user trust",
+          "users trust",
+          "human trust",
+          "trust calibration",
+          "consumer trust",
+          "对人工智能的信任",
+          "人工智能信任",
+          "算法信任",
+          "人机信任"
         ],
         "technology_terms": [],
         "required_context_any": [
@@ -7875,11 +7948,28 @@
           "human-AI interaction",
           "digital behavior",
           "organization",
+          "user",
+          "consumer",
+          "individual",
+          "employee",
+          "people",
+          "team",
+          "automation",
+          "algorithm",
+          "robot",
+          "chatbot",
+          "conversational agent",
+          "machine",
+          "interaction",
           "技术用户",
           "在线用户",
           "人机交互",
           "数字行为",
-          "组织"
+          "组织",
+          "用户",
+          "消费者",
+          "机器人",
+          "聊天机器人"
         ],
         "negative_contexts": [
           "clinical diagnosis only",
@@ -7891,7 +7981,7 @@
       },
       "boundary_policy": {
         "require_core_phenomenon": true,
-        "require_context_any": true,
+        "require_context_any": false,
         "excluded_only_action": "reject",
         "insufficient_metadata_action": "manual_review"
       },
@@ -7907,12 +7997,42 @@
         "topic_or_keyword_can_produce_direct": false,
         "direct": {
           "min_textual_core_matches": 1,
-          "require_context_match": true,
-          "min_focality_score": 45.0
+          "require_context_match": false,
+          "min_focality_score": 45.0,
+          "exclude_scope": "title",
+          "exclude_any": [
+            "trust in information technology"
+          ],
+          "required_any": [
+            "artificial intelligence",
+            "AI",
+            "algorithm",
+            "automation",
+            "autonomous",
+            "robot",
+            "chatbot",
+            "conversational agent",
+            "conversational AI",
+            "machine learning",
+            "deep learning",
+            "generative AI",
+            "GenAI",
+            "optimisation",
+            "optimization",
+            "intelligent system",
+            "automated decision",
+            "AI system",
+            "AI-based"
+          ]
         },
         "adjacent": {
           "returned_separately": true,
-          "can_fill_formal_top10": false
+          "can_fill_formal_top10": false,
+          "signals_any": [
+            "trust in information technology",
+            "trust in IT",
+            "interpersonal trust"
+          ]
         },
         "c_recall": {
           "require_approved_source_filter": true,
@@ -8040,7 +8160,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_algorithm_aversion_appreciation",
       "labels": {
         "zh": "algorithm aversion / appreciation",
@@ -8229,7 +8349,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_anthropomorphism",
       "labels": {
         "zh": "anthropomorphism",
@@ -8451,7 +8571,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_cognitive_load",
       "labels": {
         "zh": "cognitive load",
@@ -8728,7 +8848,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_information_overload",
       "labels": {
         "zh": "information overload",
@@ -8950,7 +9070,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_social_influence",
       "labels": {
         "zh": "social influence",
@@ -9277,7 +9397,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_privacy_concern",
       "labels": {
         "zh": "privacy concern",
@@ -9617,7 +9737,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_technostress",
       "labels": {
         "zh": "technostress",
@@ -9839,7 +9959,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_human_ai_teams",
       "labels": {
         "zh": "human-AI teams",
@@ -10057,7 +10177,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_identity",
       "labels": {
         "zh": "identity",
@@ -10390,7 +10510,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_emotion",
       "labels": {
         "zh": "emotion",
@@ -10706,7 +10826,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_attention",
       "labels": {
         "zh": "attention",
@@ -11037,7 +11157,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_judgment_decision_making",
       "labels": {
         "zh": "judgment / decision making",
@@ -11260,7 +11380,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_misinformation",
       "labels": {
         "zh": "misinformation",
@@ -11497,7 +11617,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_news_consumption",
       "labels": {
         "zh": "news consumption",
@@ -11734,7 +11854,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_content_moderation",
       "labels": {
         "zh": "content moderation",
@@ -11937,7 +12057,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_influencers",
       "labels": {
         "zh": "influencers",
@@ -12285,7 +12405,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_generative_ai",
       "labels": {
         "zh": "generative AI",
@@ -12509,7 +12629,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_human_ai_communication",
       "labels": {
         "zh": "human-AI communication",
@@ -12758,7 +12878,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_political_communication",
       "labels": {
         "zh": "political communication",
@@ -13105,7 +13225,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_algorithmic_news",
       "labels": {
         "zh": "algorithmic news",
@@ -13308,7 +13428,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_information_science",
       "labels": {
         "zh": "Information Science",
@@ -13625,7 +13745,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "information_behavior",
       "labels": {
         "zh": "信息行为",
@@ -14034,7 +14154,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "knowledge_management",
       "labels": {
         "zh": "知识管理",
@@ -14393,7 +14513,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_data_management",
       "labels": {
         "zh": "Data Management",
@@ -14721,7 +14841,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_data_governance",
       "labels": {
         "zh": "Data Governance",
@@ -15054,7 +15174,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "scientometrics",
       "labels": {
         "zh": "科学计量与文献计量",
@@ -15322,7 +15442,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_knowledge_graph",
       "labels": {
         "zh": "Knowledge Graph",
@@ -15600,7 +15720,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_decision_support",
       "labels": {
         "zh": "Decision Support",
@@ -15974,7 +16094,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "ai_nlp_information_processing",
       "labels": {
         "zh": "AI与NLP信息处理",
@@ -16199,7 +16319,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_scholarly_communication",
       "labels": {
         "zh": "scholarly communication",
@@ -16505,7 +16625,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_data_knowledge",
       "labels": {
         "zh": "Data / Knowledge",
@@ -16850,7 +16970,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_decision_intelligence",
       "labels": {
         "zh": "Decision Intelligence",
@@ -17188,7 +17308,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_organizational_information",
       "labels": {
         "zh": "Organizational Information",
@@ -17527,7 +17647,7 @@
       ]
     },
     {
-      "profile_version": "1.1.6-p1-retrieval",
+      "profile_version": "1.2.0-p1-retrieval",
       "direction_id": "topic_digital_information_environment",
       "labels": {
         "zh": "Digital Information Environment",

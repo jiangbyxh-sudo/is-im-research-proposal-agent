@@ -11,7 +11,20 @@ import re
 from collections import Counter
 
 
-RERANK_VERSION = "p1-directness-reranker-2.0.0"
+RERANK_VERSION = "p1-directness-reranker-2.1.0"
+# Conservative, label-safe title patterns for review/meta-science demotion.
+# Deliberately excludes "bibliometric": a human-labeled relevant paper uses it
+# in its title, so type alone cannot demote a bibliometric study of the
+# direction's own phenomenon.
+REVIEW_TITLE_PATTERNS = (
+    "literature review",
+    "systematic review",
+    "meta-analysis",
+    "review of the literature",
+    "evolving landscape",
+    "research landscape",
+    "research agenda",
+)
 RERANK_WEIGHTS = {
     "focality": 0.30,
     "multilingual_semantic_similarity": 0.22,
@@ -107,6 +120,12 @@ def phrase_match_detail(phrase: str, text: str, max_gap: int = 3) -> dict:
         return {"matched": matched, "method": "exact_cjk_phrase" if matched else "none", "gap": 0 if matched else None}
     matched, method, gap = _ordered_latin_match(normalized_phrase, normalized_text, max_gap=max_gap)
     return {"matched": matched, "method": method, "gap": gap}
+
+
+def review_title_signal(record: dict) -> bool:
+    """Title-only meta-science signal; false for empirical studies by construction."""
+    title = str(record.get("title") or "").casefold()
+    return any(pattern in title for pattern in REVIEW_TITLE_PATTERNS)
 
 
 def _facet_match(facet: str, text: str) -> bool:

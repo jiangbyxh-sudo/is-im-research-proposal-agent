@@ -1,5 +1,27 @@
-version: 1.1.6-p1-retrieval
+version: 1.2.0-p1-retrieval
 profiles:
+  topic_ai_trust:
+    facets:
+      core_phenomena: [AI trust, trust in AI, trusting AI, trust in artificial intelligence, trust in generative AI, trust in GenAI, trust in algorithms, algorithmic trust, trust in intelligent systems, trust in autonomous systems, trust in automation, human-AI trust, calibrated trust in AI, user trust, users trust, human trust, trust calibration, consumer trust, 对人工智能的信任, 人工智能信任, 算法信任, 人机信任]
+      required_context_any: [technology user, online user, human-AI interaction, digital behavior, organization, user, consumer, individual, employee, people, team, automation, algorithm, robot, chatbot, conversational agent, machine, interaction, 技术用户, 在线用户, 人机交互, 数字行为, 组织, 用户, 消费者, 机器人, 聊天机器人]
+    boundary_policy:
+      require_context_any: false
+    precision_policy:
+      direct:
+        min_textual_core_matches: 1
+        require_context_match: false
+        min_focality_score: 45.0
+        exclude_scope: title
+        exclude_any: [trust in information technology]
+        required_any: [artificial intelligence, AI, algorithm, automation, autonomous, robot, chatbot, conversational agent, conversational AI, machine learning, deep learning, generative AI, GenAI, optimisation, optimization, intelligent system, automated decision, AI system, AI-based]
+      adjacent:
+        returned_separately: true
+        can_fill_formal_top10: false
+        signals_any: [trust in information technology, trust in IT, interpersonal trust]
+      c_recall:
+        require_approved_source_filter: true
+        require_abstract: true
+        min_focality_score: 60.0
   information_behavior:
     facets:
       core_phenomena: [information behavior, information seeking, information search, information use, information practices, information needs, information flow, information sphere, information spheres, information avoidance, human information behavior, search costs, 信息行为, 信息寻求, 信息搜索, 信息使用, 信息实践, 信息需求, 信息流, 信息空间, 搜索成本]
@@ -104,10 +126,20 @@ profiles:
       zh_recall: [算法中介 平台, 算法治理 用户]
   topic_ai_enabled_information_systems:
     facets:
-      core_phenomena: [AI-enabled information systems, generative AI in information systems, generative artificial intelligence, AI-enabled digital work]
+      core_phenomena: [AI-enabled information systems, generative AI in information systems, generative artificial intelligence, AI-enabled digital work, AI implementation, AI adoption in organizations, generative AI, GenAI]
       technology_terms: [artificial intelligence, generative AI, machine learning enabled]
-      required_context_any: [information systems research, organization, enterprise, digital work, sociotechnical system]
+      required_context_any: [information systems, information systems research, organization, enterprise, digital work, sociotechnical system, digital platform, platform, work, worker, employee, firm, business, management, market, user, technology use, organizations, platforms, users, workers, firms, society, customers]
       negative_contexts: [clinical diagnosis only, medical imaging only, pure algorithm benchmark, pure hardware engineering]
+    precision_policy:
+      direct:
+        min_textual_core_matches: 1
+        require_context_match: true
+        min_focality_score: 45.0
+        exclude_scope: title
+        exclude_any: [metaverse]
+      adjacent:
+        returned_separately: true
+        can_fill_formal_top10: false
     queries:
       en_precise: [AI-enabled information systems, generative AI information systems research]
       en_recall: [artificial intelligence digital work organization, AI sociotechnical information systems]
@@ -313,6 +345,6 @@ profiles:
       required_context_any: [user, digital artifact, interaction design, information systems]
   platform_governance:
     facets:
-      core_phenomena: [platform governance, digital platform governance, platform rules]
-      required_context_any: [digital platform, platform ecosystem, online marketplace, social media platform]
+      core_phenomena: [platform governance, digital platform governance, platform rules, ecosystem governance, digital ecosystem governance, platform regulatory, governance of digital platforms, platform govern, 平台治理, 数字平台治理, 生态治理]
+      required_context_any: [digital platform, platform, platform ecosystem, online marketplace, social media platform, two-sided market, digital ecosystem, complementor, app developer, platform owner, platform provider, marketplace, governance, regulation, regulator, openness, 平台, 生态, 双边市场, 监管, 治理]
       negative_contexts: [government platform slogan only]

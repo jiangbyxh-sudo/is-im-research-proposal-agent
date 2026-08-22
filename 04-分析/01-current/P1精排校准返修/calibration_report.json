@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-08-22T21:39:41.331268+00:00",
+  "score_config_version": "p1-directness-reranker-2.1.0",
+  "groups": {
+    "is": {
+      "pool_size": 20,
+      "direct_count": 20,
+      "top10_size": 10,
+      "labeled_relevant_in_direct": 10,
+      "labeled_adjacent_or_off_in_direct": 1,
+      "unlabeled_in_top10": 3,
+      "overlap_with_old_top10": 6
+    },
+    "is_cs_hci": {
+      "pool_size": 8,
+      "direct_count": 8,
+      "top10_size": 8,
+      "labeled_relevant_in_direct": 7,
+      "labeled_adjacent_or_off_in_direct": 0,
+      "unlabeled_in_top10": 1,
+      "overlap_with_old_top10": 7
+    },
+    "is_psychology": {
+      "pool_size": 11,
+      "direct_count": 11,
+      "top10_size": 10,
+      "labeled_relevant_in_direct": 8,
+      "labeled_adjacent_or_off_in_direct": 1,
+      "unlabeled_in_top10": 2,
+      "overlap_with_old_top10": 8
+    },
+    "is_communication_media": {
+      "pool_size": 7,
+      "direct_count": 7,
+      "top10_size": 7,
+      "labeled_relevant_in_direct": 7,
+      "labeled_adjacent_or_off_in_direct": 0,
+      "unlabeled_in_top10": 0,
+      "overlap_with_old_top10": 7
+    },
+    "im": {
+      "pool_size": 10,
+      "direct_count": 10,
+      "top10_size": 10,
+      "labeled_relevant_in_direct": 6,
+      "labeled_adjacent_or_off_in_direct": 0,
+      "unlabeled_in_top10": 4,
+      "overlap_with_old_top10": 5
+    },
+    "im_data_ai_knowledge": {
+      "pool_size": 12,
+      "direct_count": 12,
+      "top10_size": 10,
+      "labeled_relevant_in_direct": 6,
+      "labeled_adjacent_or_off_in_direct": 0,
+      "unlabeled_in_top10": 4,
+      "overlap_with_old_top10": 6
+    }
+  },
+  "in_sample_caveat": "facets were enriched after reading these labels; optimistic",
+  "totals": {
+    "relevant_direct": 44,
+    "failures_direct": 2
+  },
+  "labeled_direct_precision": 0.9565
+}

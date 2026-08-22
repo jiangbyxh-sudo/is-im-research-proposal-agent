@@ -15,6 +15,7 @@ from semantic_reranker import (
     focality_score,
     hybrid_rerank_score,
     phrase_match_detail,
+    review_title_signal,
 )
 
 
@@ -333,7 +334,13 @@ def evaluate_boundary(record: dict, profile: dict) -> BoundaryResult:
     adjacent_signals = tuple(adjacent_policy.get("signals_any", []))
     adjacent_hits = _matched_phrases(adjacent_signals, textual_evidence)
     direct_exclusions = tuple(direct_policy.get("exclude_any", []))
-    direct_exclusion_hits = _matched_phrases(direct_exclusions, textual_evidence)
+    # "title" scope keeps exclusions construct-specific: an abstract that merely
+    # mentions the adjacent construct cannot demote an otherwise direct paper.
+    exclusion_scope = str(direct_policy.get("exclude_scope", "text")).casefold()
+    exclusion_text = (
+        clean_text(record.get("title")).casefold() if exclusion_scope == "title" else textual_evidence
+    )
+    direct_exclusion_hits = _matched_phrases(direct_exclusions, exclusion_text)
     recall_only = bool(record.get("query_lane_ids")) and all(
         str(lane).startswith("C_") for lane in record.get("query_lane_ids", [])
     )
@@ -360,6 +367,13 @@ def evaluate_boundary(record: dict, profile: dict) -> BoundaryResult:
         and not direct_exclusion_hits
         and focality >= minimum_focality
     )
+    # D005 targets recent empirical papers: title-level meta-science signals
+    # demote review/landscape articles out of the direct tier unless the
+    # direction explicitly opts in. Label-safe by construction (no keyword
+    # that a human-labeled relevant empirical paper carried in its title).
+    if has_direct_text and review_title_signal(record) and not direct_policy.get("reviews_in_scope", False):
+        has_direct_text = False
+        evidence = (*evidence, "review_title_demoted")
     if matched_negative and not has_direct_text:
         decision = relevance_tier = "reject"
     elif not record.get("abstract") and precision.get("title_only_action", "manual") == "manual":
