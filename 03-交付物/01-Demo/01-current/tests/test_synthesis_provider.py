@@ -1,3 +1,4 @@
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -13,68 +14,66 @@ from research_synthesis_provider import (  # noqa: E402
 )
 
 
-class StaticClient:
+class StaticNamingClient:
+    def __init__(self):
+        self.calls = []
+
     def complete(self, system_prompt, user_prompt):
-        directions = []
-        for index in range(5):
-            first = (index * 2) + 1
-            ids = [f"P{first:03d}", f"P{first + 1:03d}"]
-            evidence = ids + (["P999"] if index == 0 else [])
-            gaps = [{
-                "gap_type": "empirical",
-                "gap_statement": f"方向{index + 1}在跨情境稳健性方面仍是待验证候选。",
-                "why_it_matters": "可界定适用边界。",
-                "evidence_basis": evidence,
-                "alternative_explanations": ["题名无法呈现全文边界"],
-                "innovation_candidates": ["开展跨情境比较"],
-                "confidence": "emerging",
-            }]
-            if index == 0:
-                gaps.append({
-                    "gap_type": "theoretical",
-                    "gap_statement": "未知DOI 10.9999/fabricated 暗示理论空白。",
-                    "why_it_matters": "invalid",
-                    "evidence_basis": ids,
-                })
-            directions.append({
-                "name_zh": f"方向{index + 1}", "name_en": f"Direction {index + 1}",
-                "description": "互斥主题", "paper_ids": ids, "gaps": gaps,
-            })
-        return {"subdirections": directions, "limitations": ["仅有元数据"]}, {"model": "test-model"}
+        self.calls.append((system_prompt, user_prompt))
+        clusters = json.loads(user_prompt)["clusters"]
+        return {
+            "names": [
+                {
+                    "cluster_id": cluster["cluster_id"],
+                    "name_zh": f"方向{index}",
+                    "name_en": f"Direction {index}",
+                    "description": "固定聚类的边界描述",
+                }
+                for index, cluster in enumerate(clusters, start=1)
+            ]
+        }, {"model": "test-model"}
 
 
 class SynthesisProviderTests(unittest.TestCase):
     def setUp(self):
+        topics = ["trust", "governance", "adoption", "collaboration", "decision"]
         self.papers = tuple({
-            "title": f"Verified paper {index}", "authors": ["A"], "year": 2026,
-            "journal": "MIS Quarterly", "doi": f"10.1000/{index}",
-            "citation_count": index, "journal_ranking": ["UTD24"],
-        } for index in range(1, 13))
+            "paper_id": f"P{index:03d}",
+            "title": f"{topics[(index - 1) % 5]} in AI-enabled information systems {index}",
+            "abstract": f"{topics[(index - 1) % 5]} evidence in organizations and digital work",
+            "authors": ["A"], "year": 2026, "journal": "MIS Quarterly", "doi": f"10.1000/{index}",
+            "topics": [{"name": topics[(index - 1) % 5]}], "keywords": [{"name": "AI organization"}],
+            "relevance_tier": "direct",
+        } for index in range(1, 31))
 
-    def test_five_directions_are_counted_and_references_are_validated(self):
-        provider = DeepSeekResearchSynthesisProvider(StaticClient())
+    def test_five_fixed_directions_are_named_without_gap_generation(self):
+        client = StaticNamingClient()
+        provider = DeepSeekResearchSynthesisProvider(client)
         result = provider.synthesize(SynthesisRequest(
-            research_direction="AI-enabled information systems",
-            fine_grained_question=None,
-            derived_path="top_five_subdirections",
-            papers=self.papers,
+            research_direction="AI-enabled information systems", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=self.papers, p1_precision_gate_passed=True,
         ))
-        self.assertEqual(result.status, "SYNTHESIS_COMPLETE")
-        self.assertEqual(len(result.top_subdirections), 5)
-        self.assertTrue(all(item["paper_count"] == 2 for item in result.top_subdirections))
-        self.assertEqual(len(result.gap_candidates), 5)
-        self.assertGreaterEqual(result.audit["invalid_reference_count"], 2)
-        self.assertTrue(all(gap["verification_status"].endswith("pending_fulltext") for gap in result.gap_candidates))
-        known = {f"P{index:03d}" for index in range(1, 13)}
-        self.assertTrue(all(set(gap["evidence_basis"]).issubset(known) for gap in result.gap_candidates))
+        self.assertEqual("SYNTHESIS_COMPLETE", result.status)
+        self.assertEqual(5, len(result.top_subdirections))
+        self.assertTrue(all(item["paper_count"] >= 3 for item in result.top_subdirections))
+        self.assertEqual([], result.gap_candidates)
+        self.assertFalse(result.audit["research_gap_generation_in_p2"])
+        self.assertEqual(1, len(client.calls))
 
-    def test_unconfigured_provider_never_generates_gaps(self):
-        result = UnconfiguredResearchSynthesisProvider().synthesize(SynthesisRequest(
+    def test_p1_gate_blocks_by_default(self):
+        result = DeepSeekResearchSynthesisProvider(StaticNamingClient()).synthesize(SynthesisRequest(
             research_direction="AI", fine_grained_question=None,
             derived_path="top_five_subdirections", papers=self.papers,
         ))
-        self.assertEqual(result.status, "SYNTHESIS_NOT_CONFIGURED")
-        self.assertEqual(result.gap_candidates, [])
+        self.assertEqual("P2_BLOCKED_BY_P1_PRECISION", result.status)
+
+    def test_unconfigured_provider_never_generates_directions(self):
+        result = UnconfiguredResearchSynthesisProvider().synthesize(SynthesisRequest(
+            research_direction="AI", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=self.papers, p1_precision_gate_passed=True,
+        ))
+        self.assertEqual("SYNTHESIS_NOT_CONFIGURED", result.status)
+        self.assertEqual([], result.top_subdirections)
 
 
 if __name__ == "__main__":
