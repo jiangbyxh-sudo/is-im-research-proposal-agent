@@ -100,6 +100,8 @@ Research Skill Layer 不拥有以下决定权：
 
 ### Phase B：Discovery Loop
 
+状态：第一版已完成（2026-08-23）。
+
 交付：五视角 SearchPlan、稳定标识去重、引文图谱候选、引用校验和饱和度报告。
 
 约束：图谱扩展只扩大 Discovery Space；所有候选重新进入现有 P1 Selection Space。

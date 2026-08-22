@@ -9,6 +9,15 @@
 - `adapters.py`：P1–P4 薄适配器；
 - `third_party_skills.lock.yaml`：外部项目版本和允许边界，默认不启用。
 
+Phase B 的 P1 Discovery Space 还提供：
+
+- `p1.multi_perspective_search_plan`：现象、理论、机制、情境、方法五视角查询；
+- `p1.citation_graph_expansion`：引文前向/后向候选；
+- `p1.citation_verification`：稳定标识与规范元数据核验；
+- `p1.retrieval_saturation`：重复率与新增 direct 产出的建议性饱和度。
+
+这些技能不输出正式 `papers`。引文候选统一标记为 `P1_REEVALUATION_REQUIRED`。
+
 ## 使用示例
 
 ```python

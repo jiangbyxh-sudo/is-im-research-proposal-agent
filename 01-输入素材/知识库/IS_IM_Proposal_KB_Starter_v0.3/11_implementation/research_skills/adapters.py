@@ -2,13 +2,15 @@
 from __future__ import annotations
 
 from dataclasses import asdict
-from pathlib import Path
 from typing import Any, Mapping
 
+from citation_graph_provider import CitationExpansionRequest
+from multi_perspective_search_plan import build_multi_perspective_search_plan
 from paper_discovery_provider import DiscoveryRequest
 from proposal_generation_provider import ProposalRequest
 from research_gap_provider import EvidenceBoundResearchGapProvider, ResearchGapRequest
 from research_synthesis_provider import SynthesisRequest
+from retrieval_saturation import SaturationConfig, evaluate_retrieval_saturation
 
 from .contracts import (
     AdapterExecution,
@@ -33,6 +35,19 @@ def _strict_bool(payload: Mapping[str, Any], key: str, default: bool = False) ->
     if not isinstance(value, bool):
         raise SkillInputError(f"{key}_must_be_boolean")
     return value
+
+
+def _positive_int(payload: Mapping[str, Any], key: str, default: int) -> int:
+    value = payload.get(key, default)
+    if isinstance(value, bool):
+        raise SkillInputError(f"{key}_must_be_positive_integer")
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError) as exc:
+        raise SkillInputError(f"{key}_must_be_positive_integer") from exc
+    if parsed < 1:
+        raise SkillInputError(f"{key}_must_be_positive_integer")
+    return parsed
 
 
 class P1DiscoverySkillAdapter:
@@ -81,6 +96,128 @@ class P1DiscoverySkillAdapter:
                 "upstream_score_config_version": upstream.score_config_version,
             },
             cacheable=False,
+        )
+
+
+class P1MultiPerspectiveSearchPlanAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p1.multi_perspective_search_plan",
+        version="1.0.0",
+        stage="P1",
+        description="Build deterministic phenomenon/theory/mechanism/context/method discovery queries.",
+        deterministic=True,
+        external_network=False,
+    )
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        profile = payload.get("profile")
+        if not isinstance(profile, dict):
+            raise SkillInputError("profile_must_be_object")
+        plan = build_multi_perspective_search_plan(profile, payload.get("fine_grained_question"))
+        status = SkillRunStatus.COMPLETE if not plan["missing_perspectives"] else SkillRunStatus.PARTIAL
+        return AdapterExecution(
+            result_status=status,
+            upstream_status="SEARCH_PLAN_READY" if status == SkillRunStatus.COMPLETE else "SEARCH_PLAN_PARTIAL",
+            output=plan,
+            limitations=[f"missing_perspective:{item}" for item in plan["missing_perspectives"]],
+            provenance={"profile_version": plan["profile_version"], "plan_hash": plan["plan_hash"]},
+            audit={"discovery_only": True, "changes_p1_thresholds": False},
+        )
+
+
+class P1CitationExpansionSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p1.citation_graph_expansion",
+        version="1.0.0",
+        stage="P1",
+        description="Expand bounded citation neighbors as P1 re-evaluation candidates.",
+        deterministic=False,
+        external_network=True,
+    )
+
+    def __init__(self, provider) -> None:
+        self.provider = provider
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        result = self.provider.expand(CitationExpansionRequest(
+            seed_papers=_tuple_dicts(payload.get("seed_papers")),
+            direction=str(payload.get("direction") or "both"),
+            max_seeds=_positive_int(payload, "max_seeds", 5),
+            max_neighbors_per_seed=_positive_int(payload, "max_neighbors_per_seed", 25),
+        ))
+        if result.status == "CITATION_EXPANSION_COMPLETE":
+            status = SkillRunStatus.COMPLETE
+        elif result.status == "CITATION_EXPANSION_PARTIAL":
+            status = SkillRunStatus.PARTIAL
+        else:
+            status = SkillRunStatus.BLOCKED
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result.status,
+            output=asdict(result),
+            limitations=list(result.limitations),
+            provenance={"provider_log": result.provider_log},
+            audit=result.audit,
+            cacheable=False,
+        )
+
+
+class P1CitationVerificationSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p1.citation_verification",
+        version="1.0.0",
+        stage="P1",
+        description="Verify candidate identifiers and canonical metadata without deciding relevance.",
+        deterministic=False,
+        external_network=True,
+    )
+
+    def __init__(self, verifier) -> None:
+        self.verifier = verifier
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        result = self.verifier.verify(list(_tuple_dicts(payload.get("candidates"))))
+        status = SkillRunStatus.PARTIAL if result.status == "CITATION_VERIFICATION_PARTIAL" else SkillRunStatus.COMPLETE
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result.status,
+            output=asdict(result),
+            provenance={"provider_log": result.provider_log},
+            audit=result.audit,
+            cacheable=False,
+        )
+
+
+class P1RetrievalSaturationSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p1.retrieval_saturation",
+        version="1.0.0",
+        stage="P1",
+        description="Compute advisory repeat and new-direct yield across discovery rounds.",
+        deterministic=True,
+        external_network=False,
+    )
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        rounds = payload.get("rounds")
+        if not isinstance(rounds, list) or not all(isinstance(item, dict) for item in rounds):
+            raise SkillInputError("rounds_must_be_list_of_objects")
+        config_payload = payload.get("config") or {}
+        if not isinstance(config_payload, dict):
+            raise SkillInputError("config_must_be_object")
+        try:
+            config = SaturationConfig(**config_payload)
+        except TypeError as exc:
+            raise SkillInputError("invalid_saturation_config") from exc
+        if config.window_rounds < 1 or config.max_new_direct_per_round < 0 or not 0.0 <= config.min_repeat_ratio <= 1.0:
+            raise SkillInputError("invalid_saturation_config")
+        result = evaluate_retrieval_saturation(rounds, config)
+        status = SkillRunStatus.PARTIAL if result["status"] == "SATURATION_INSUFFICIENT_ROUNDS" else SkillRunStatus.COMPLETE
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result["status"],
+            output=result,
+            audit={"advisory_only": True, "changes_p1_thresholds": False},
         )
 
 
@@ -215,10 +352,18 @@ def build_default_registry(
     p2_provider=None,
     p3_provider=None,
     p4_provider=None,
+    citation_graph_provider=None,
+    citation_verifier=None,
 ) -> ResearchSkillRegistry:
     registry = ResearchSkillRegistry()
+    registry.register(P1MultiPerspectiveSearchPlanAdapter())
+    registry.register(P1RetrievalSaturationSkillAdapter())
     if p1_provider is not None:
         registry.register(P1DiscoverySkillAdapter(p1_provider))
+    if citation_graph_provider is not None:
+        registry.register(P1CitationExpansionSkillAdapter(citation_graph_provider))
+    if citation_verifier is not None:
+        registry.register(P1CitationVerificationSkillAdapter(citation_verifier))
     if p2_provider is not None:
         registry.register(P2ClusteringSkillAdapter(p2_provider))
     registry.register(P3EvidenceGapSkillAdapter(p3_provider))
