@@ -308,8 +308,10 @@ function renderQualityAudit(data) {
     `原始 ${audit.raw_count ?? 0}`,
     `去重 ${audit.deduplicated_count ?? 0}`,
     `硬闸门通过 ${audit.hard_gate_pass_count ?? 0}`,
-    `≥70分候选 ${audit.eligible_count ?? 0}`,
-    `边界候选 ${audit.boundary_count ?? 0}`,
+    `进入精排 ${audit.eligible_count ?? 0}`,
+    `边界淘汰 ${audit.boundary_count ?? 0}`,
+    `人工复核 ${audit.manual_review_count ?? 0}`,
+    `Trace守恒 ${audit.count_conserved ? '是' : '否'}`,
   ].join(' · ');
   const providerList = $('#provider-status-list');
   providerList.innerHTML = '';
@@ -322,13 +324,13 @@ function renderQualityAudit(data) {
   expansionList.innerHTML = '';
   (data.expansion_log || []).forEach((item) => {
     const row = document.createElement('li');
-    row.textContent = `第 ${item.attempt} 次 · ${item.query} · 原始 ${item.raw_count} / 闸门通过 ${item.hard_gate_pass_count}`;
+    row.textContent = `${item.lane_id || item.provider || '检索Lane'} · 原始 ${item.raw_count ?? item.returned_rows ?? 0} / 边界后 ${item.post_boundary_eligible_count ?? 0}${item.stop_reason ? ` · ${item.stop_reason}` : ''}`;
     expansionList.appendChild(row);
   });
   const causes = (data.zero_result_diagnosis?.causes || []).map((value) => diagnosisLabels[value] || value);
   $('#zero-diagnosis').textContent = causes.length ? `诊断：${causes.join('；')}` : '本次没有零结果诊断项。';
   $('#score-version').textContent = data.score_config_version
-    ? `评分 ${data.score_config_version} · 阈值尚未人工校准`
+    ? `精排 ${data.score_config_version} · 固定70分准入阈值已移除`
     : '旧版检索结果未提供 P1 评分拆解';
 }
 
@@ -387,7 +389,7 @@ function renderDiscovery(data) {
   $('#paper-results').hidden = !papers.length;
   $('#retrieval-audit').textContent = `中文 ${zhFound} 篇 · 英文 ${enFound} 篇 · 外部请求 ${data.search_log?.length || 0} 次`;
   $('#result-footnote').textContent = papers.length
-    ? '论文元数据已通过本地期刊白名单校验；研究空白仍需在选择后获取全文复核。'
+    ? '论文已通过完整性闸门、方向边界与来源分层；研究空白仍需在选择后获取全文复核。'
     : '没有获得可核验论文时，系统不会生成模拟论文、研究方向或空白。';
   renderJournalAudit(data);
   renderQualityAudit(data);

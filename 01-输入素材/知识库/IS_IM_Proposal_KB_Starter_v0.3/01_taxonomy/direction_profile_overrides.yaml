@@ -1,0 +1,51 @@
+version: 1.1.0-p1-retrieval
+profiles:
+  topic_ai_enabled_information_systems:
+    facets:
+      core_phenomena: [AI-enabled information systems, generative AI in information systems, generative artificial intelligence, AI-enabled digital work]
+      technology_terms: [artificial intelligence, generative AI, machine learning enabled]
+      required_context_any: [information systems research, organization, enterprise, digital work, sociotechnical system]
+      negative_contexts: [clinical diagnosis only, medical imaging only, pure algorithm benchmark, pure hardware engineering]
+    queries:
+      en_precise: [AI-enabled information systems, generative AI information systems research]
+      en_recall: [artificial intelligence digital work organization, AI sociotechnical information systems]
+      zh_precise: [AI赋能信息系统, 生成式人工智能 信息系统]
+      zh_recall: [人工智能 数字化工作 组织, 人工智能 社会技术系统]
+  topic_attention:
+    facets:
+      core_phenomena: [attention allocation, digital attention, attentional processes]
+      required_context_any: [online user, digital media, information systems, human-computer interaction]
+      negative_contexts: [clinical attention disorder only, neuroscience imaging only]
+  topic_identity:
+    facets:
+      core_phenomena: [digital identity, identity work, online identity, technology identity]
+      required_context_any: [online community, organization, social media, information systems]
+      negative_contexts: [molecular identity only, biometric recognition algorithm only]
+  topic_emotion:
+    facets:
+      core_phenomena: [emotion in technology use, digital emotion, affective response]
+      required_context_any: [online user, human-computer interaction, social media, information systems]
+      negative_contexts: [clinical psychiatry only, animal emotion only]
+  topic_machine_learning:
+    facets:
+      core_phenomena: [machine learning application, machine learning enabled information processing]
+      required_context_any: [information systems, organization, information management, user, decision support]
+      negative_contexts: [pure algorithm benchmark, medical imaging only, hardware acceleration only]
+  topic_data_mining:
+    facets:
+      core_phenomena: [data mining application, knowledge discovery from data]
+      required_context_any: [information systems, organization, information management, online behavior]
+      negative_contexts: [pure algorithm benchmark, genomic mining only, materials discovery only]
+  human_ai_interaction:
+    facets:
+      core_phenomena: [human-AI interaction, human-AI collaboration, interaction with artificial intelligence]
+      required_context_any: [user, work, organization, information systems, human-computer interaction]
+  topic_hci:
+    facets:
+      core_phenomena: [human-computer interaction, interactive systems, user experience]
+      required_context_any: [user, digital artifact, interaction design, information systems]
+  platform_governance:
+    facets:
+      core_phenomena: [platform governance, digital platform governance, platform rules]
+      required_context_any: [digital platform, platform ecosystem, online marketplace, social media platform]
+      negative_contexts: [government platform slogan only]

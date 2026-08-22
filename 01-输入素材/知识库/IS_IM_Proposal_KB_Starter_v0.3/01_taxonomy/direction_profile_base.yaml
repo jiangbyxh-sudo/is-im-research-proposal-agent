@@ -1,0 +1,59 @@
+version: 1.1.0-p1-retrieval
+defaults:
+  boundary_policy:
+    require_core_phenomenon: true
+    require_context_any: true
+    excluded_only_action: reject
+    insufficient_metadata_action: manual_review
+  document_types: [journal-article]
+  coverage_targets:
+    raw_min: 20
+    post_boundary_min: 10
+    precision_at_10_min: 0.80
+  generic_negative_contexts:
+    - clinical diagnosis only
+    - medical imaging only
+    - pure algorithm benchmark
+    - pure hardware engineering
+    - chemistry or materials experiment only
+
+group_defaults:
+  is:
+    required_context_any: [information systems, organization, enterprise, digital work, platform, online user]
+    tier_a_pool_ids: [IS_CORE]
+    tier_b_pool_ids: [DIGITAL_PLATFORM, ORG_STRATEGY, ECON_STRATEGY, SECURITY]
+    adjacent_pool_ids: [HCI, COMMUNICATION, PSYCHOLOGY]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_ORG_INNOVATION, CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT, PKU_CORE_2023_MANAGEMENT_DIRECT]
+  is_cs_hci:
+    required_context_any: [information systems, human-computer interaction, user, organization, sociotechnical system, digital work]
+    tier_a_pool_ids: [IS_CORE, HCI]
+    tier_b_pool_ids: [CS_AI, CS_IR, CS_DATA]
+    adjacent_pool_ids: [PSYCHOLOGY, COMMUNICATION]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_METHODS_ANALYTICS, CSSCI_2025_2026_INFORMATION_RESOURCE_FULL, PKU_CORE_2023_INFORMATION_RESOURCE]
+    allow_proceedings: true
+  is_psychology:
+    required_context_any: [technology user, online user, human-AI interaction, digital behavior, organization]
+    tier_a_pool_ids: [IS_CORE, PSYCHOLOGY]
+    tier_b_pool_ids: [HCI]
+    adjacent_pool_ids: [COMMUNICATION]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_PSYCHOLOGY, CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT, PKU_CORE_2023_PSYCHOLOGY]
+  is_communication_media:
+    required_context_any: [digital media, social media, online communication, platform, news, audience]
+    tier_a_pool_ids: [COMMUNICATION, IS_CORE]
+    tier_b_pool_ids: [HCI, DIGITAL_PLATFORM]
+    adjacent_pool_ids: [PSYCHOLOGY]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_ORG_INNOVATION, CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT, PKU_CORE_2023_COMMUNICATION]
+  im:
+    required_context_any: [information science, information management, information behavior, knowledge organization, scholarly communication]
+    tier_a_pool_ids: [IM_CORE]
+    tier_b_pool_ids: [SCIENTOMETRICS, IS_CORE]
+    adjacent_pool_ids: [CS_IR, CS_DATA]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_METHODS_ANALYTICS, CSSCI_2025_2026_INFORMATION_RESOURCE_FULL, PKU_CORE_2023_INFORMATION_RESOURCE]
+  im_data_ai_knowledge:
+    required_context_any: [information science, information management, knowledge management, organization, decision support, information retrieval]
+    tier_a_pool_ids: [IM_CORE, IS_CORE]
+    tier_b_pool_ids: [CS_AI, CS_IR, CS_DATA]
+    adjacent_pool_ids: [HCI, SCIENTOMETRICS]
+    zh_pool_ids: [ZH_IS_IM_CORE, ZH_METHODS_ANALYTICS, CSSCI_2025_2026_INFORMATION_RESOURCE_FULL, PKU_CORE_2023_INFORMATION_RESOURCE]
+    allow_proceedings: true
+

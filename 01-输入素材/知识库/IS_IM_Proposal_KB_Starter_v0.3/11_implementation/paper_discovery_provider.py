@@ -27,6 +27,7 @@ class DiscoveryRequest:
     popularity_window_years: int = 5
     journal_pool_ids: tuple[str, ...] = ()
     query_by_language: dict[str, str] = field(default_factory=dict)
+    source_tier_pool_ids: dict[str, tuple[str, ...]] = field(default_factory=dict)
 
 
 @dataclass
@@ -44,6 +45,9 @@ class DiscoveryResult:
     dedupe_log: list[dict] = field(default_factory=list)
     zero_result_diagnosis: dict = field(default_factory=dict)
     score_config_version: str = ""
+    candidate_traces: list[dict] = field(default_factory=list)
+    lane_funnels: list[dict] = field(default_factory=list)
+    chinese_coverage: dict = field(default_factory=dict)
 
 
 class PaperDiscoveryProvider(Protocol):
@@ -264,16 +268,11 @@ class CrossrefPaperDiscoveryProvider:
             if not title:
                 continue
             lower_title = title.casefold()
-            if item.get("update-to") or re.match(r"^(retracted\b|retraction\b|retraction notice\b|correction\b|corrigendum\b|erratum\b)", lower_title):
-                exclusions.append({"reason": "retraction_or_correction", "title": title, "journal": journal["canonical_title"]})
-                continue
+            is_correction = bool(item.get("update-to") or re.match(r"^(retracted\b|retraction\b|retraction notice\b|correction\b|corrigendum\b|erratum\b)", lower_title))
             year, published_date = self._published_parts(item)
             abstract = self._strip_markup(item.get("abstract", ""))
             doi = str(item.get("DOI") or "").strip().lower() or None
             relevance = self._relevance_score(query, title, abstract)
-            if relevance < 1.0:
-                exclusions.append({"reason": "relevance_below_threshold", "title": title, "journal": journal["canonical_title"]})
-                continue
             papers.append({
                 "title": title,
                 "abstract": abstract or None,
@@ -295,6 +294,7 @@ class CrossrefPaperDiscoveryProvider:
                 "provider": "crossref",
                 "document_type": "journal-article",
                 "integrity_status": "clear",
+                "is_correction": is_correction,
                 "evidence_level": "abstract" if abstract else "title_only",
             })
         return papers, {
@@ -343,8 +343,18 @@ class CrossrefPaperDiscoveryProvider:
         until_date = date.today().isoformat()
         selected = []
         enabled_languages = ("zh", "en") if self.enable_chinese else ("en",)
+        tier_order = {tier: index for index, tier in enumerate(("A", "B", "ADJACENT"))}
+        pool_tiers = {
+            pool_id: tier
+            for tier, pool_ids in request.source_tier_pool_ids.items()
+            for pool_id in pool_ids
+        }
         for language in enabled_languages:
             candidates = [item for item in journals if item["language"] == language]
+            candidates.sort(key=lambda item: (
+                min((tier_order.get(pool_tiers.get(pool), 99) for pool in item.get("pool_ids", [])), default=99),
+                item["canonical_title"].casefold(),
+            ))
             selected.extend(candidates[: self.max_journals_per_language])
 
         papers: list[dict] = []
@@ -407,6 +417,8 @@ class CrossrefPaperDiscoveryProvider:
         return DiscoveryResult(
             status=status,
             papers=selected_papers,
+            # Crossref returns raw normalized metadata only.  The multi-source
+            # orchestrator owns boundary, source-tier and final qualification.
             analysis_papers=deduped[:120],
             search_log=sorted(logs, key=lambda item: (item["journal"], item["issn"])),
             exclusion_log=exclusions,

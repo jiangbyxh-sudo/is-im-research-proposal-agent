@@ -1,13 +1,13 @@
 # P1 动态论文检索架构与配置边界
 
-版本：`1.0.0-p1`  
+版本：`1.1.0-p1-retrieval`
 范围：仅检索、规范化、去重、质量闸门、候选评分与可解释审计；不包含五方向聚类和开题 Prompt。
 
 ## 1. 本地优先路由
 
-`01_taxonomy/generated/direction_profiles.json` 为 61 个方向提供版本化双语画像。每个画像包含中英文标签、近义表达、纳入/排除边界、Provider 查询、Topic 路由状态、期刊池、文献类型、回退查询和覆盖目标。生成源为 `11_implementation/build_direction_profiles.py`。
+`01_taxonomy/generated/direction_profiles.json` 为61个方向提供版本化双语画像。生成源不再把业务规则写死在脚本中，而是由 `direction_profile_base.yaml`、`direction_profile_overrides.yaml`、Topic/Source注册表和方向目录编译。每个画像包含核心现象、必要情境、负面边界、中英文精确/召回查询、方向级来源分层、已审核OpenAlex路由、文献类型和覆盖目标。
 
-当前 OpenAlex Topic ID 没有经过人工校准，因此保留空数组并明确标注 `text_route_active; topic_ids_require_calibration`，不可伪造 Topic ID。
+Topic搜索候选保存名称、描述、Field/Subfield、样例论文和审核状态。未经审核的候选保持 `pending_review`，不进入Provider filter；禁止自动采用第一条。Source只在ISSN唯一解析时自动批准，歧义项保持待复核。
 
 ## 2. Provider 状态
 
@@ -35,14 +35,16 @@
 
 ## 3. 数据与质量流水线
 
-1. Provider 原始记录先转为统一 `PaperRecord P1`，外部题名、摘要和元数据一律作为不可信数据隔离，不能作为指令执行。
-2. 去重优先级为 DOI、Provider 外部 ID、规范化题名+年份+第一作者。模糊题名仅生成 `review_candidate`，不自动合并。
-3. 字段冲突保留 `field_sources`；合并记录保留全部 `providers`。任何来源给出撤稿或关注表达时，完整性状态向风险侧提升。
-4. 硬闸门检查撤稿/更正、题名/年份/来源缺失、时间窗、文献类型和本地合格期刊池。
-5. `MetadataScore` 固定权重为语义相关 35%、词汇覆盖 15%、来源质量 15%、影响 10%、时效 10%、证据完整 10%、跨来源一致 5%。当前语义与影响分量仍是确定性代理，所有返回均标记 `uncalibrated`。
-6. `<55` 拒绝、`55–69` 边界、`70–84` 候选、`≥85` 高候选。阈值完成人工 Precision@20 校准前不得宣称已验证。
+1. DirectionProfile先编译为可重放QueryPlan，按A Topic+Tier A、B精确短语+Tier A/B、C Topic/facet扩召、D可选Seed扩展、E中文专用Lane执行；日期、文献类型和已审核Topic/Source进入OpenAlex filter，支持cursor分页。
+2. Provider原始记录转为统一 `PaperRecord P1`，外部题名、摘要和元数据一律作为不可信数据隔离，不能作为指令执行。
+3. 去重优先级为DOI、Provider外部ID、规范化题名+年份+第一作者。模糊题名仅生成 `review_candidate`，不自动合并。
+4. 所有来源经同一候选决策函数得到且只得到一个终态：`gate_reject / rank_reject / boundary / eligible / manual_review`；去重数必须等于五终态之和。
+5. 完整性闸门、方向边界、来源质量、来源方向适配和内容相关性分开判断。Unknown来源不得自动进入正式候选。
+6. Hybrid Reranker权重为Topic路线30%、透明多语种相似30%、facet覆盖15%、来源方向适配12%、证据5%、时效4%、归一影响4%。无embedding时明确标记为确定性加权重合，不冒充embedding。
+7. 固定55/70/85准入阈值已移除；Checkpoint决定是否可排序，Reranker决定Top-K，最低相关性底线决定宁缺毋滥。引用量不主导相关性。
+8. DOI/OA landing page与PDF/全文分开；只有核验到PDF URL时才标记 `verified_fulltext_available`。
 
-Athlete A/B 检索与盲评 Judge 尚未实现，因此当前没有 `PaperMatchScore = 0.70 JudgeSemanticScore + 0.30 MetadataScore` 的产品能力声明。
+Athlete/Judge只保留为Top-N低置信边界的可选精排接口，不是P1主链路和强制依赖。当前未启用，因此不得声明已有多模型裁判能力。
 
 ## 4. 缓存与失败策略
 
@@ -50,4 +52,3 @@ Athlete A/B 检索与盲评 Judge 尚未实现，因此当前没有 `PaperMatchS
 - OpenAlex 遇到 429 后停止继续扩展，避免把三条回退查询都打到限流来源。
 - Crossref 回退有界，确保匿名来源故障时仍能在前端超时前返回诊断。
 - 零结果原因限定为：`route_missing`、`provider_empty`、`rate_limited`、`quality_gate_too_strict`、`language_coverage_gap`、`query_too_narrow`。
-

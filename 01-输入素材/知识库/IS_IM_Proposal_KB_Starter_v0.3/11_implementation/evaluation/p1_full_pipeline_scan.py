@@ -58,6 +58,7 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
         providers = response.get("provider_statuses") or []
         raw_count = int(coverage.get("raw_count") or 0)
         eligible_count = int(coverage.get("eligible_count") or 0)
+        post_boundary_target = int(profile["coverage_targets"].get("post_boundary_min", profile["coverage_targets"].get("eligible_min", 10)))
         return {
             "direction_id": profile["direction_id"],
             "labels": profile["labels"],
@@ -72,8 +73,11 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
             "boundary_count": int(coverage.get("boundary_count") or 0),
             "selected_count": int(coverage.get("selected_count") or len(response.get("papers") or [])),
             "raw_target_met": raw_count >= int(profile["coverage_targets"]["raw_min"]),
-            "eligible_target_met": eligible_count >= int(profile["coverage_targets"]["eligible_min"]),
-            "retracted_in_final": int(coverage.get("retracted_in_final") or 0),
+            "eligible_target_met": eligible_count >= post_boundary_target,
+            "retracted_in_final": int(coverage.get("retracted_in_selected") or coverage.get("retracted_in_final") or 0),
+            "trace_count_conserved": bool(coverage.get("count_conserved")),
+            "candidate_trace_count": int(coverage.get("candidate_trace_count") or 0),
+            "deduplicated_count": int(coverage.get("deduplicated_count") or 0),
             "shortages": response.get("shortages") or {},
             "provider_statuses": providers,
             "provider_rate_limited": any(item.get("status") == "rate_limited" for item in providers),
@@ -99,6 +103,9 @@ def evaluate_direction(base_url: str, profile: dict, timeout: int) -> dict:
             "raw_target_met": False,
             "eligible_target_met": False,
             "retracted_in_final": 0,
+            "trace_count_conserved": False,
+            "candidate_trace_count": 0,
+            "deduplicated_count": 0,
             "provider_rate_limited": False,
             "cache_hit": False,
         }
@@ -159,6 +166,7 @@ def main() -> int:
     failures = sum(item["status"] != "ok" for item in results)
     rate_limited = sum(item["provider_rate_limited"] for item in results)
     retracted = sum(item["retracted_in_final"] for item in results)
+    trace_conserved = sum(item["trace_count_conserved"] and item["candidate_trace_count"] == item["deduplicated_count"] for item in results)
     raw_required = math.ceil(total * 0.95)
     eligible_required = math.ceil(total * 0.90)
     reason_counts = Counter(
@@ -172,8 +180,9 @@ def main() -> int:
         and raw_met >= raw_required
         and eligible_met >= eligible_required
         and retracted == 0
+        and trace_conserved == 61
     )
-    acceptance = "BLOCKED_PENDING_PRECISION_AT_20" if coverage_gates_pass else "NOT_ACCEPTED"
+    acceptance = "BLOCKED_PENDING_SAMPLED_PRECISION_AT_10" if coverage_gates_pass else "NOT_ACCEPTED"
     summary = {
         "evaluation": "P1 complete discovery pipeline coverage",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -190,13 +199,14 @@ def main() -> int:
         "provider_or_runner_failures": failures,
         "rate_limited_directions": rate_limited,
         "retracted_in_final": retracted,
+        "trace_conserved_directions": trace_conserved,
         "cache_hit_directions": sum(item["cache_hit"] for item in results),
         "zero_diagnosis_counts": dict(reason_counts),
-        "precision_at_20": None,
-        "precision_status": "not_measured_requires_blind_human_labels",
+        "sampled_precision_at_10": None,
+        "precision_status": "not_measured_requires_small_human_sample",
         "coverage_gates_passed": coverage_gates_pass,
         "p1_acceptance_status": acceptance,
-        "acceptance_note": "P1 cannot pass until blind human Precision@20 is measured at or above 0.80.",
+        "acceptance_note": "P1 cannot pass until six-group sampled Precision@10 is measured at or above the configured gates.",
         "results": [{key: value for key, value in item.items() if key != "api_response"} for item in results],
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -213,7 +223,8 @@ def main() -> int:
         f"- 合格候选≥10：{eligible_met}/61（门槛至少{eligible_required}/61）",
         f"- Provider/Runner失败：{failures}/61；发生限流的方向：{rate_limited}/61",
         f"- 正式结果中的撤稿记录：{retracted}",
-        "- Precision@20：未测，仍需人工盲标。",
+        f"- Trace计数守恒：{trace_conserved}/61。",
+        "- Sampled Precision@10：未测，仍需六分组小规模人工抽检。",
         f"- 当前结论：{acceptance}。", "",
         "| Direction | Raw | Hard gate | Eligible | Selected | Retracted | Status |",
         "|---|---:|---:|---:|---:|---:|---|",
@@ -234,6 +245,7 @@ def main() -> int:
         "provider_or_runner_failures": failures,
         "rate_limited_directions": rate_limited,
         "retracted_in_final": retracted,
+        "trace_conserved_directions": trace_conserved,
         "p1_acceptance_status": acceptance,
     }, ensure_ascii=False))
     return 0
