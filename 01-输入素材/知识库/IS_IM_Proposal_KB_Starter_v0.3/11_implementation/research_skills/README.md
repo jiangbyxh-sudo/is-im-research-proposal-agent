@@ -18,6 +18,13 @@ Phase B 的 P1 Discovery Space 还提供：
 
 这些技能不输出正式 `papers`。引文候选统一标记为 `P1_REEVALUATION_REQUIRED`。
 
+Phase C 提供：
+
+- `p3.gap_falsification_plan`：生成直接解决、矛盾结果、替代解释和边界条件查询；
+- `p3.gap_falsification_evaluation`：只接受P1 direct且绑定摘要/全文span的反证发现。
+
+反证裁决返回降级或收窄建议，不自动改写原始Gap或Claim Store。
+
 ## 使用示例
 
 ```python

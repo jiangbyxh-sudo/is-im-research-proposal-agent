@@ -8,7 +8,10 @@ from evidence_matrix import validate_formal_span
 
 
 CLAIM_STORE_VERSION = "p3-claim-store-1.0.0"
-FORMAL_CLAIM_ROLES = {"support", "counterevidence", "boundary", "method_basis"}
+FORMAL_CLAIM_ROLES = {
+    "support", "counterevidence", "boundary", "method_basis",
+    "alternative_explanation", "falsification",
+}
 
 
 class ClaimStore:

@@ -5,6 +5,11 @@ from dataclasses import asdict
 from typing import Any, Mapping
 
 from citation_graph_provider import CitationExpansionRequest
+from gap_falsification import (
+    EvidenceBoundGapFalsificationProvider,
+    GapFalsificationRequest,
+    build_gap_falsification_query_plan,
+)
 from multi_perspective_search_plan import build_multi_perspective_search_plan
 from paper_discovery_provider import DiscoveryRequest
 from proposal_generation_provider import ProposalRequest
@@ -298,6 +303,72 @@ class P3EvidenceGapSkillAdapter:
         )
 
 
+class P3GapFalsificationPlanSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p3.gap_falsification_plan",
+        version="1.0.0",
+        stage="P3",
+        description="Build deterministic direct-solution, contradiction, alternative and boundary searches.",
+        deterministic=True,
+        external_network=False,
+    )
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        gap = payload.get("gap")
+        profile = payload.get("direction_profile") or {}
+        if not isinstance(gap, dict) or not isinstance(profile, dict):
+            raise SkillInputError("gap_and_direction_profile_must_be_objects")
+        plan = build_gap_falsification_query_plan(gap, profile)
+        return AdapterExecution(
+            result_status=SkillRunStatus.COMPLETE,
+            upstream_status="GAP_FALSIFICATION_PLAN_READY",
+            output=plan,
+            provenance={"gap_id": plan["gap_id"], "plan_hash": plan["plan_hash"]},
+            audit={"discovery_only": True, "p1_direct_required": True, "changes_p1_thresholds": False},
+        )
+
+
+class P3GapFalsificationEvaluationSkillAdapter:
+    descriptor = ResearchSkillDescriptor(
+        skill_id="p3.gap_falsification_evaluation",
+        version="1.0.0",
+        stage="P3",
+        description="Evaluate P1-direct falsification findings bound to abstract/fulltext spans.",
+        deterministic=True,
+        external_network=False,
+    )
+
+    def __init__(self, provider=None) -> None:
+        self.provider = provider or EvidenceBoundGapFalsificationProvider()
+
+    def execute(self, payload: Mapping[str, Any], context: ResearchSkillContext) -> AdapterExecution:
+        gap = payload.get("gap")
+        matrix = payload.get("evidence_matrix")
+        if not isinstance(gap, dict) or not isinstance(matrix, dict):
+            raise SkillInputError("gap_and_evidence_matrix_must_be_objects")
+        result = self.provider.evaluate(GapFalsificationRequest(
+            gap=gap,
+            findings=_tuple_dicts(payload.get("findings")),
+            evidence_matrix=matrix,
+            search_status=str(payload.get("search_status") or "COMPLETE"),
+            search_audit=dict(payload.get("search_audit") or {}),
+        ))
+        if result.status == "GAP_FALSIFICATION_BLOCKED":
+            status = SkillRunStatus.BLOCKED
+        elif result.status == "GAP_FALSIFICATION_PARTIAL":
+            status = SkillRunStatus.PARTIAL
+        else:
+            status = SkillRunStatus.COMPLETE
+        return AdapterExecution(
+            result_status=status,
+            upstream_status=result.status,
+            output=asdict(result),
+            limitations=list(result.limitations),
+            provenance={"gap_id": result.gap_id},
+            audit=result.audit,
+        )
+
+
 class P4ControlledProposalSkillAdapter:
     descriptor = ResearchSkillDescriptor(
         skill_id="p4.controlled_proposal",
@@ -367,6 +438,8 @@ def build_default_registry(
     if p2_provider is not None:
         registry.register(P2ClusteringSkillAdapter(p2_provider))
     registry.register(P3EvidenceGapSkillAdapter(p3_provider))
+    registry.register(P3GapFalsificationPlanSkillAdapter())
+    registry.register(P3GapFalsificationEvaluationSkillAdapter())
     if p4_provider is not None:
         registry.register(P4ControlledProposalSkillAdapter(p4_provider))
     return registry
