@@ -1,6 +1,6 @@
 {
-  "overall_precision_at_10": 0.8518518518518519,
-  "obvious_false_positive_rate": 0.018518518518518517,
+  "overall_precision_at_10": 0.8813559322033898,
+  "obvious_false_positive_rate": 0.01694915254237288,
   "groups": {
     "is": {
       "n": 10,
@@ -8,23 +8,11 @@
       "precision_at_10": 0.8,
       "obvious_false_positive_rate": 0.0
     },
-    "is_cs_hci": {
-      "n": 8,
-      "decided_n": 8,
-      "precision_at_10": 0.875,
-      "obvious_false_positive_rate": 0.0
-    },
     "is_psychology": {
       "n": 10,
       "decided_n": 9,
       "precision_at_10": 0.7777777777777778,
       "obvious_false_positive_rate": 0.1111111111111111
-    },
-    "is_communication_media": {
-      "n": 7,
-      "decided_n": 7,
-      "precision_at_10": 1.0,
-      "obvious_false_positive_rate": 0.0
     },
     "im": {
       "n": 10,
@@ -37,6 +25,18 @@
       "decided_n": 10,
       "precision_at_10": 0.9,
       "obvious_false_positive_rate": 0.0
+    },
+    "is_communication_media": {
+      "n": 10,
+      "decided_n": 10,
+      "precision_at_10": 1.0,
+      "obvious_false_positive_rate": 0.0
+    },
+    "is_cs_hci": {
+      "n": 10,
+      "decided_n": 10,
+      "precision_at_10": 1.0,
+      "obvious_false_positive_rate": 0.0
     }
   },
   "invalid_or_missing_labels": [],
@@ -44,7 +44,7 @@
     "overall_precision_ge_0_80": true,
     "every_group_ge_0_70": true,
     "obvious_false_positive_rate_le_0_10": true,
-    "all_60_labeled": false
+    "all_60_labeled": true
   },
-  "passed": false
+  "passed": true
 }
