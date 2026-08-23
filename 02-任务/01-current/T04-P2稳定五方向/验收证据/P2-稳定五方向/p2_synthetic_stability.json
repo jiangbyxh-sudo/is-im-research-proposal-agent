@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-23T04:20:22.085838+00:00",
+  "snapshot_path": "..\\synthetic_p2_snapshot.json",
+  "cluster_config_version": "p2-tfidf-average-linkage-2.0.0",
+  "snapshot_corpus_hash": "fd0c9dd852d25e8fdcd08586d00420cba20f8d9ef115209c235e6d14e4a607d7",
+  "paper_count": 32,
+  "abstract_count": 24,
+  "statuses": [
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE"
+  ],
+  "blocked": false,
+  "runs": 5,
+  "exact_output_consistency": true,
+  "mean_ari": 1.0,
+  "mean_representative_jaccard": 1.0,
+  "cluster_counts": [
+    5
+  ],
+  "gates": {
+    "consistency_100pct": true,
+    "ari_ge_0_85": true,
+    "jaccard_ge_0_80": true
+  }
+}
