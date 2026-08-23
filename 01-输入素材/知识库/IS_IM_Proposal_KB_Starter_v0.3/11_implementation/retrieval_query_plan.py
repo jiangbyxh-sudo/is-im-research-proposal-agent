@@ -15,6 +15,8 @@ OPENALEX_TYPE_MAP = {
     "proceedings-article": "proceedings-article",
 }
 
+QUERY_PLAN_VERSION = "p1-query-plan-1.0.0"
+
 
 @dataclass(frozen=True)
 class OpenAlexQueryPlan:

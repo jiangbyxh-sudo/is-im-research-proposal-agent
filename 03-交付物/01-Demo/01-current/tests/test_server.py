@@ -110,6 +110,38 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(result["next_allowed_actions"][0], "select_gap")
         self.assertEqual(result["synthesis_audit"]["input_paper_count"], 12)
 
+    def test_synthesis_request_carries_p2_version_and_cutoff_metadata(self):
+        papers = [{"title": f"Paper {index}"} for index in range(12)]
+        captured = {}
+
+        class FakeProvider:
+            def discover(self, request):
+                return SimpleNamespace(
+                    status="RETRIEVAL_COMPLETE", message_to_user="ready",
+                    papers=papers[:5], analysis_papers=papers,
+                    search_log=[], exclusion_log=[], shortages={"zh": 0, "en": 0},
+                    score_config_version="p1-directness-reranker-2.1.0",
+                )
+
+        class FakeSynthesis:
+            def synthesize(self, request):
+                captured["request"] = request
+                return SimpleNamespace(
+                    status="SYNTHESIS_COMPLETE", top_subdirections=[], gap_candidates=[],
+                    limitations=[], audit={}, message_to_user="ready",
+                )
+
+        server.build_research_response({
+            "selected_direction_id": "platform_governance",
+            "chinese_count": 10, "english_count": 20,
+        }, provider=FakeProvider(), synthesis_provider=FakeSynthesis())
+        request = captured["request"]
+        self.assertTrue(request.p1_precision_gate_passed)
+        self.assertEqual("1.2.0-p1-retrieval", request.direction_profile_version)
+        self.assertEqual("p1-query-plan-1.0.0", request.retrieval_version)
+        self.assertEqual("p1-directness-reranker-2.1.0", request.score_version)
+        self.assertRegex(request.data_cutoff_date, r"^\d{4}-\d{2}-\d{2}$")
+
     def test_discovery_can_return_before_synthesis_and_resume_by_job_id(self):
         papers = [{"title": f"Paper {index}"} for index in range(8)]
 

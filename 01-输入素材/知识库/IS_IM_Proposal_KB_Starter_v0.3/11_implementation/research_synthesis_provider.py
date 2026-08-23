@@ -11,8 +11,16 @@ from typing import Protocol
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from cluster_naming_provider import ClusterNamingRequest, LLMClusterNamingProvider
-from stable_subdirection_clustering import P2ClusterConfig, build_corpus_snapshot, deterministic_average_linkage
+from cluster_naming_provider import (
+    AthleteJudgeClusterNamingProvider,
+    ClusterNamingRequest,
+    DeterministicClusterNamingProvider,
+)
+from stable_subdirection_clustering import (
+    P2ClusterConfig,
+    build_corpus_snapshot,
+    deterministic_average_linkage,
+)
 
 
 @dataclass(frozen=True)
@@ -111,12 +119,43 @@ class DeepSeekJsonClient:
 
 
 class DeepSeekResearchSynthesisProvider:
-    def __init__(self, client: DeepSeekJsonClient, max_corpus_size: int = 120, config: P2ClusterConfig | None = None, naming_provider=None):
+    def __init__(
+        self,
+        client: DeepSeekJsonClient,
+        max_corpus_size: int = 120,
+        config: P2ClusterConfig | None = None,
+        naming_provider=None,
+        fallback_naming_provider=None,
+        stability_self_check_runs: int = 2,
+    ):
         self.client = client
         self.max_corpus_size = max(10, max_corpus_size)
         self.config = config or P2ClusterConfig()
-        self.naming_provider = naming_provider or LLMClusterNamingProvider(client)
+        self.naming_provider = naming_provider or AthleteJudgeClusterNamingProvider(client)
+        self.fallback_naming_provider = fallback_naming_provider or DeterministicClusterNamingProvider()
+        self.stability_self_check_runs = max(1, stability_self_check_runs)
         self._cache: dict[str, SynthesisResult] = {}
+
+    def _snapshot_audit(self, snapshot: dict, clustering: dict) -> dict:
+        return {
+            "corpus_hash": snapshot["corpus_hash"],
+            "cluster_config_version": self.config.version,
+            "cache_key": clustering.get("cache_key"),
+            "input_paper_count": snapshot["input_paper_count"],
+            "direct_paper_count": snapshot["paper_count"],
+            "abstract_count": snapshot["abstract_count"],
+            "data_cutoff_date": snapshot.get("data_cutoff_date"),
+            "direction_profile_version": snapshot.get("direction_profile_version"),
+            "retrieval_version": snapshot.get("retrieval_version"),
+            "score_version": snapshot.get("score_version"),
+            "language_counts": clustering.get("language_counts", {}),
+            "honest_target": clustering.get("honest_target"),
+            "requested_clusters": self.config.requested_clusters,
+            "degradation_reasons": list(clustering.get("degradation_reasons") or clustering.get("reasons") or []),
+            "degradation_reasons_text": list(clustering.get("degradation_reasons_text") or clustering.get("reasons_text") or []),
+            "p1_precision_gate_passed": bool(snapshot.get("p1_precision_gate_passed")),
+            "p1_precision_summary": snapshot.get("p1_precision_summary") or {},
+        }
 
     def synthesize(self, request: SynthesisRequest) -> SynthesisResult:
         snapshot = build_corpus_snapshot(
@@ -130,42 +169,66 @@ class DeepSeekResearchSynthesisProvider:
             p1_precision_summary=request.p1_precision_summary,
         )
         clustering = deterministic_average_linkage(snapshot, self.config)
-        if clustering["status"] != "P2_CLUSTERING_COMPLETE":
+        if clustering["status"] not in {"P2_CLUSTERING_COMPLETE", "P2_CLUSTERING_DEGRADED"}:
             return SynthesisResult(
-                status=clustering["status"], limitations=list(clustering.get("reasons", [])),
-                audit={
-                    "corpus_hash": snapshot["corpus_hash"], "cluster_config_version": self.config.version,
-                    "cache_key": clustering["cache_key"], "input_paper_count": snapshot["input_paper_count"],
-                    "direct_paper_count": snapshot["paper_count"],
-                    "excluded_non_direct_count": snapshot["excluded_non_direct_count"],
-                },
-                message_to_user="P2门禁或语料充分性未满足，未生成五方向。",
+                status=clustering["status"],
+                limitations=list(clustering.get("reasons_text") or clustering.get("reasons", [])),
+                audit=self._snapshot_audit(snapshot, clustering),
+                message_to_user="P2门禁或语料充分性未满足，未生成方向；系统不会硬凑五方向。",
             )
         cache_key = clustering["cache_key"]
         if cache_key in self._cache:
             result = deepcopy(self._cache[cache_key])
             result.audit["cache_hit"] = True
             return result
+
+        canonical = json.dumps(clustering, ensure_ascii=False, sort_keys=True)
+        stability_self_check = {"runs": self.stability_self_check_runs, "exact_match": True, "method": "byte_identical_full_output"}
+        for _ in range(self.stability_self_check_runs - 1):
+            repeat = deterministic_average_linkage(snapshot, self.config)
+            if json.dumps(repeat, ensure_ascii=False, sort_keys=True) != canonical:
+                stability_self_check["exact_match"] = False
+
+        naming_fallback_reason = ""
         try:
             named, naming_audit = self.naming_provider.name_clusters(ClusterNamingRequest(
                 research_direction=request.research_direction, clusters=tuple(clustering["clusters"]),
                 corpus_hash=snapshot["corpus_hash"], cluster_config_version=self.config.version,
             ))
         except Exception as exc:
-            return SynthesisResult(
-                status="SYNTHESIS_FAILED", limitations=[f"固定簇命名失败：{type(exc).__name__}"],
-                audit={"cache_key": cache_key, "corpus_hash": snapshot["corpus_hash"]},
-                message_to_user="确定性聚类已完成，但固定簇命名失败；论文归属未被修改。",
-            )
+            named, naming_audit = self.fallback_naming_provider.name_clusters(ClusterNamingRequest(
+                research_direction=request.research_direction, clusters=tuple(clustering["clusters"]),
+                corpus_hash=snapshot["corpus_hash"], cluster_config_version=self.config.version,
+            ))
+            naming_fallback_reason = f"{type(exc).__name__}: {exc}"
+
+        degraded = clustering["status"] == "P2_CLUSTERING_DEGRADED"
+        target = int(clustering["honest_target"])
+        limitations = list(clustering.get("degradation_reasons_text") or [])
+        if naming_fallback_reason:
+            limitations.append("固定簇命名模型调用失败，已回退确定性特征命名；论文归属未被修改。")
+        status = "SYNTHESIS_PARTIAL" if degraded else "SYNTHESIS_COMPLETE"
+        message = (
+            f"语料仅支撑{target}个方向，已按证据诚实输出{target}个方向，未硬凑五方向。"
+            if degraded else
+            "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。"
+        )
+        audit = {
+            **self._snapshot_audit(snapshot, clustering),
+            "cache_hit": False,
+            "feature_method": clustering["feature_method"],
+            "linkage": clustering["linkage"],
+            "tie_break": clustering["tie_break"],
+            "heat_method": clustering.get("heat_method"),
+            "stability_self_check": stability_self_check,
+            "naming": naming_audit,
+            "naming_prompt_version": naming_audit.get("prompt_version"),
+            "naming_fallback_reason": naming_fallback_reason,
+            "research_gap_generation_in_p2": False,
+        }
         result = SynthesisResult(
-            status="SYNTHESIS_COMPLETE", top_subdirections=named, gap_candidates=[], limitations=[],
-            audit={
-                "corpus_hash": snapshot["corpus_hash"], "cluster_config_version": self.config.version,
-                "cache_key": cache_key, "cache_hit": False, "feature_method": clustering["feature_method"],
-                "linkage": clustering["linkage"], "tie_break": clustering["tie_break"],
-                "naming": naming_audit, "research_gap_generation_in_p2": False,
-            },
-            message_to_user="已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+            status=status, top_subdirections=named, gap_candidates=[], limitations=limitations,
+            audit=audit, message_to_user=message,
         )
         self._cache[cache_key] = deepcopy(result)
         return result

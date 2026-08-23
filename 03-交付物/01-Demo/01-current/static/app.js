@@ -431,6 +431,131 @@ function setSynthesisNotice(message, ready = false, error = false) {
   notice.appendChild(text);
 }
 
+function qualityItem(label, value, tone) {
+  const item = document.createElement('div');
+  item.className = 'quality-item';
+  const name = document.createElement('span');
+  name.className = 'quality-item-name';
+  name.textContent = label;
+  const detail = document.createElement('strong');
+  detail.className = 'quality-item-value';
+  if (tone) detail.dataset.tone = tone;
+  detail.textContent = value;
+  item.append(name, detail);
+  return item;
+}
+
+function renderSynthesisQuality(data) {
+  const panel = $('#synthesis-quality');
+  const audit = data.synthesis_audit || {};
+  if (audit.direct_paper_count === undefined) {
+    panel.hidden = true;
+    panel.innerHTML = '';
+    return;
+  }
+  panel.hidden = false;
+  panel.innerHTML = '';
+
+  const heading = document.createElement('div');
+  heading.className = 'synthesis-quality-head';
+  const title = document.createElement('strong');
+  title.textContent = '方向质量信息';
+  const note = document.createElement('small');
+  note.textContent = '聚类由确定性代码完成，模型仅命名固定簇';
+  heading.append(title, note);
+  panel.appendChild(heading);
+
+  const grid = document.createElement('div');
+  grid.className = 'synthesis-quality-grid';
+
+  const corpus = document.createElement('div');
+  corpus.className = 'quality-card';
+  const corpusTitle = document.createElement('strong');
+  corpusTitle.textContent = '语料';
+  corpus.appendChild(corpusTitle);
+  corpus.appendChild(qualityItem('输入论文', `${audit.input_paper_count ?? 0} 篇`));
+  corpus.appendChild(qualityItem('direct 论文', `${audit.direct_paper_count} 篇`));
+  corpus.appendChild(qualityItem('带摘要', `${audit.abstract_count} 篇`));
+  const languages = audit.language_counts || {};
+  const zhCount = languages.zh || 0;
+  const enCount = languages.en || 0;
+  const languageText = zhCount === 0
+    ? `中文 0 篇（缺口，不用英文补数） · 英文 ${enCount} 篇`
+    : `中文 ${zhCount} 篇 · 英文 ${enCount} 篇`;
+  corpus.appendChild(qualityItem('语言分布', languageText, zhCount === 0 ? 'warn' : ''));
+  grid.appendChild(corpus);
+
+  const stability = document.createElement('div');
+  stability.className = 'quality-card';
+  const stabilityTitle = document.createElement('strong');
+  stabilityTitle.textContent = '稳定性';
+  stability.appendChild(stabilityTitle);
+  stability.appendChild(qualityItem('数据截止日', audit.data_cutoff_date || '未记录'));
+  const selfCheck = audit.stability_self_check;
+  const selfCheckText = selfCheck
+    ? `${selfCheck.runs} 次运行逐字节一致 ${selfCheck.exact_match ? '✓' : '✗'}`
+    : '未记录';
+  stability.appendChild(qualityItem('确定性自检', selfCheckText, selfCheck && selfCheck.exact_match ? 'ok' : 'warn'));
+  grid.appendChild(stability);
+
+  const versions = document.createElement('div');
+  versions.className = 'quality-card';
+  const versionsTitle = document.createElement('strong');
+  versionsTitle.textContent = '版本';
+  versions.appendChild(versionsTitle);
+  versions.appendChild(qualityItem('方向画像', audit.direction_profile_version || '未知'));
+  versions.appendChild(qualityItem('检索', audit.retrieval_version || '未知'));
+  versions.appendChild(qualityItem('评分', audit.score_version || '未知'));
+  versions.appendChild(qualityItem('聚类', audit.cluster_config_version || '未知'));
+  versions.appendChild(qualityItem('命名', audit.naming_prompt_version || '未知'));
+  grid.appendChild(versions);
+
+  const confidence = document.createElement('div');
+  confidence.className = 'quality-card';
+  const confidenceTitle = document.createElement('strong');
+  confidenceTitle.textContent = '置信度';
+  confidence.appendChild(confidenceTitle);
+  const target = audit.honest_target;
+  const requested = audit.requested_clusters || 5;
+  const directionCount = (data.top_subdirections || []).length;
+  const directionText = directionCount === 0
+    ? '证据不足：已诚实停止，未生成方向'
+    : target !== undefined && target < requested
+      ? `诚实降级：证据支撑 ${target} 个方向`
+      : `五方向完整（${directionCount} 个方向）`;
+  confidence.appendChild(qualityItem('方向结论', directionText, directionCount === 0 || (target !== undefined && target < requested) ? 'warn' : 'ok'));
+  const heats = (data.top_subdirections || []).map((item) => item.heat).filter((value) => typeof value === 'number');
+  if (heats.length) {
+    confidence.appendChild(qualityItem('热度区间', `${Math.min(...heats).toFixed(2)} – ${Math.max(...heats).toFixed(2)}`));
+  }
+  const namingProvider = (audit.naming && audit.naming.provider) || '未知';
+  const namingText = audit.naming_fallback_reason
+    ? `模型失败，已回退确定性命名`
+    : namingProvider === 'athlete_judge_arena' ? 'Athlete A/B + 盲评Judge' : namingProvider;
+  confidence.appendChild(qualityItem('命名来源', namingText, audit.naming_fallback_reason ? 'warn' : ''));
+  const p1Status = audit.p1_precision_gate_passed ? '已解锁（RERANK_CALIBRATED）' : '未通过，P2阻断';
+  confidence.appendChild(qualityItem('P1精度门禁', p1Status, audit.p1_precision_gate_passed ? 'ok' : 'warn'));
+  grid.appendChild(confidence);
+  panel.appendChild(grid);
+
+  const reasons = audit.degradation_reasons_text || [];
+  if (reasons.length) {
+    const block = document.createElement('div');
+    block.className = 'quality-degradation';
+    const blockTitle = document.createElement('strong');
+    blockTitle.textContent = '不足与诚实停止原因';
+    block.appendChild(blockTitle);
+    const list = document.createElement('ul');
+    reasons.forEach((value) => {
+      const item = document.createElement('li');
+      item.textContent = value;
+      list.appendChild(item);
+    });
+    block.appendChild(list);
+    panel.appendChild(block);
+  }
+}
+
 function renderSynthesis(data) {
   $('#gaps-empty').hidden = true;
   $('#synthesis-results').hidden = false;
@@ -444,9 +569,10 @@ function renderSynthesis(data) {
   setSynthesisNotice(data.synthesis_message || '尚未得到可用综合结果。', ready, !ready && data.synthesis_status !== 'SYNTHESIS_QUEUED');
   const audit = data.synthesis_audit || {};
   $('#synthesis-audit').textContent = audit.input_paper_count
-    ? `输入 ${audit.input_paper_count} 篇 · 归类 ${audit.assigned_paper_count || 0} 篇`
+    ? `输入 ${audit.input_paper_count} 篇 · direct ${audit.direct_paper_count ?? 0} 篇`
     : ready ? '综合完成' : '综合处理中';
   $('#synthesis-audit').classList.toggle('ready', ready);
+  renderSynthesisQuality(data);
 
   (data.top_subdirections || []).forEach((direction, index) => {
     const card = document.createElement('article');
@@ -463,7 +589,8 @@ function renderSynthesis(data) {
     const strong = document.createElement('strong');
     strong.textContent = direction.name_zh;
     const english = document.createElement('small');
-    english.textContent = `${direction.name_en || ''} · ${direction.paper_count || 0} 篇`;
+    const heatText = typeof direction.heat === 'number' ? ` · 热度 ${direction.heat.toFixed(2)}` : '';
+    english.textContent = `${direction.name_en || ''} · ${direction.paper_count || 0} 篇${heatText}`;
     title.append(strong, english);
     const arrow = document.createElement('span');
     arrow.className = 'direction-arrow';

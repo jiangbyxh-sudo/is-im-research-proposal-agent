@@ -15,23 +15,38 @@ from research_synthesis_provider import (  # noqa: E402
 
 
 class StaticNamingClient:
+    """Answers athlete A/B prompts and the blind judge prompt."""
+
     def __init__(self):
         self.calls = []
 
     def complete(self, system_prompt, user_prompt):
         self.calls.append((system_prompt, user_prompt))
         clusters = json.loads(user_prompt)["clusters"]
+        if "命名裁判" in system_prompt:
+            return {
+                "selections": [
+                    {"cluster_id": cluster["cluster_id"], "winner": "candidate_1", "reason": "更贴近簇内容"}
+                    for cluster in clusters
+                ]
+            }, {"model": "test-judge"}
+        athlete = "B" if "选手B" in system_prompt else "A"
         return {
             "names": [
                 {
                     "cluster_id": cluster["cluster_id"],
-                    "name_zh": f"方向{index}",
-                    "name_en": f"Direction {index}",
+                    "name_zh": f"选手{athlete}方向{index}",
+                    "name_en": f"Athlete {athlete} Direction {index}",
                     "description": "固定聚类的边界描述",
                 }
                 for index, cluster in enumerate(clusters, start=1)
             ]
         }, {"model": "test-model"}
+
+
+class FailingNamingClient:
+    def complete(self, system_prompt, user_prompt):
+        raise RuntimeError("naming model unavailable")
 
 
 class SynthesisProviderTests(unittest.TestCase):
@@ -58,7 +73,35 @@ class SynthesisProviderTests(unittest.TestCase):
         self.assertTrue(all(item["paper_count"] >= 3 for item in result.top_subdirections))
         self.assertEqual([], result.gap_candidates)
         self.assertFalse(result.audit["research_gap_generation_in_p2"])
-        self.assertEqual(1, len(client.calls))
+        self.assertEqual("athlete_judge_arena", result.audit["naming"]["provider"])
+        self.assertTrue(all("heat" in item for item in result.top_subdirections))
+        self.assertTrue(result.audit["stability_self_check"]["exact_match"])
+        self.assertEqual(3, len(client.calls))
+        prompt = " ".join(client.calls[0])
+        self.assertNotIn("gap_statement", prompt)
+        self.assertNotIn("研究空白", prompt)
+
+    def test_arena_failure_falls_back_to_deterministic_naming(self):
+        provider = DeepSeekResearchSynthesisProvider(FailingNamingClient())
+        result = provider.synthesize(SynthesisRequest(
+            research_direction="AI-enabled information systems", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=self.papers, p1_precision_gate_passed=True,
+        ))
+        self.assertEqual("SYNTHESIS_COMPLETE", result.status)
+        self.assertEqual(5, len(result.top_subdirections))
+        self.assertEqual("deterministic_feature_terms", result.audit["naming"]["provider"])
+        self.assertTrue(result.audit["naming_fallback_reason"])
+
+    def test_insufficient_corpus_degrades_honestly_instead_of_five(self):
+        provider = DeepSeekResearchSynthesisProvider(StaticNamingClient())
+        result = provider.synthesize(SynthesisRequest(
+            research_direction="AI-enabled information systems", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=self.papers[:21], p1_precision_gate_passed=True,
+        ))
+        self.assertEqual("SYNTHESIS_PARTIAL", result.status)
+        self.assertEqual(3, len(result.top_subdirections))
+        self.assertEqual(3, result.audit["honest_target"])
+        self.assertIn("未硬凑五方向", result.message_to_user)
 
     def test_p1_gate_blocks_by_default(self):
         result = DeepSeekResearchSynthesisProvider(StaticNamingClient()).synthesize(SynthesisRequest(

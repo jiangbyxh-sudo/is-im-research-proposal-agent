@@ -1,0 +1,339 @@
+{
+  "synthesis_status": "SYNTHESIS_COMPLETE",
+  "synthesis_message": "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+  "synthesis_audit": {
+    "corpus_hash": "e0e4e34882c4677384595f853131444d4502d3964fb85a0f00097d693b332054",
+    "cluster_config_version": "p2-tfidf-average-linkage-2.1.0",
+    "cache_key": "2b3501c241a810772e8570dbacd0c1e79f40d6ec2a6c0c2a4e6d2bbe28a36d9f",
+    "input_paper_count": 36,
+    "direct_paper_count": 36,
+    "abstract_count": 36,
+    "data_cutoff_date": "2026-08-23",
+    "direction_profile_version": "1.2.0-p1-retrieval",
+    "retrieval_version": "p1-query-plan-1.0.0",
+    "score_version": "p1-directness-reranker-2.1.0",
+    "language_counts": {
+      "en": 36
+    },
+    "honest_target": 5,
+    "requested_clusters": 5,
+    "degradation_reasons": [],
+    "degradation_reasons_text": [],
+    "p1_precision_gate_passed": true,
+    "p1_precision_summary": {
+      "status": "RERANK_CALIBRATED",
+      "calibrated_on": "2026-08-23",
+      "overall_precision_at_10": 0.8814,
+      "weakest_group_precision": 0.7778,
+      "obvious_false_positive_rate": 0.0169,
+      "labeled_rows": 60,
+      "reranker_version": "p1-directness-reranker-2.1.0",
+      "profile_version": "1.2.0-p1-retrieval",
+      "evidence": "04-分析/01-current/P1精排校准返修/p1_sampled_precision_result.json",
+      "decision": "D039"
+    },
+    "cache_hit": false,
+    "feature_method": "tfidf_text_plus_topic_keyword",
+    "linkage": "average",
+    "tie_break": "lexicographic_paper_ids",
+    "heat_method": "weighted_share_recent_citation_match_source",
+    "stability_self_check": {
+      "runs": 2,
+      "exact_match": true,
+      "method": "byte_identical_full_output"
+    },
+    "naming": {
+      "provider": "athlete_judge_arena",
+      "prompt_version": "p2-athlete-judge-naming-2.0.0",
+      "membership_hash": "adc2c8dc4b799218cddc1bfe438f3c7066096f1c54dd9e1dae783adcf8e4d6fc",
+      "athlete_a": {
+        "model": "deepseek-v4-pro",
+        "usage": {
+          "prompt_tokens": 861,
+          "completion_tokens": 321,
+          "total_tokens": 1182,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 861
+        },
+        "finish_reason": "stop",
+        "attempts": 1,
+        "duration_ms": 14157.0
+      },
+      "athlete_b": {
+        "model": "deepseek-v4-pro",
+        "usage": {
+          "prompt_tokens": 859,
+          "completion_tokens": 421,
+          "total_tokens": 1280,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 859
+        },
+        "finish_reason": "stop",
+        "attempts": 1,
+        "duration_ms": 13140.0
+      },
+      "judge": {
+        "model": "deepseek-v4-pro",
+        "usage": {
+          "prompt_tokens": 1493,
+          "completion_tokens": 249,
+          "total_tokens": 1742,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 1493
+        },
+        "finish_reason": "stop",
+        "attempts": 1,
+        "duration_ms": 11063.0
+      },
+      "winners": {
+        "cluster_001": "athlete_a",
+        "cluster_002": "athlete_a",
+        "cluster_003": "athlete_a",
+        "cluster_004": "athlete_a",
+        "cluster_005": "athlete_a"
+      },
+      "athlete_win_counts": {
+        "athlete_a": 5,
+        "athlete_b": 0
+      },
+      "membership_invariant": true
+    },
+    "naming_prompt_version": "p2-athlete-judge-naming-2.0.0",
+    "naming_fallback_reason": "",
+    "research_gap_generation_in_p2": false
+  },
+  "top_subdirections": [
+    {
+      "cluster_id": "cluster_001",
+      "paper_ids": [
+        "paper_036387f91076df46a121",
+        "paper_2005eb8b7f62511477f8",
+        "paper_4146ec045086e125b0a6",
+        "paper_5b975bc153b00d649c0a",
+        "paper_5c78078eaf1ee0641dad",
+        "paper_6d723db4391e2218f90d",
+        "paper_6e440d1866b1632c3b72",
+        "paper_8b102dfad988ac7867ac",
+        "paper_8ce882589a6d17b0b87d",
+        "paper_919a39f9aacfa11148c1",
+        "paper_968796153955451a9404",
+        "paper_b13d374f9aec5a7f90e9",
+        "paper_b71bbd050bbdef68d4b1",
+        "paper_cde19672d3fe6a0365b5",
+        "paper_d174fe23e9cfa78cab6e",
+        "paper_d430a8bc1332ee832515",
+        "paper_e292e33b875dc8533d33",
+        "paper_f2484f1ed559c228f8ab",
+        "paper_f84580038c569402ee81"
+      ],
+      "paper_count": 19,
+      "feature_terms": [
+        "platform",
+        "complementors",
+        "governance",
+        "that",
+        "digital",
+        "how",
+        "platforms",
+        "complementor",
+        "ecosystem",
+        "genai"
+      ],
+      "sample_titles": [
+        "Digital intermediaries and transparency reports as strategic communications",
+        "Customer Complaint Avoidance: A Randomized Field Experiment of Platform Governance Based on Value Co-Creation and Appropriation",
+        "Sustaining complementor engagement in digital platform ecosystems: Antecedents, behaviours and engagement trajectories",
+        "Self-Organization and Governance in Digital Platform Ecosystems: An Information Ecology Approach",
+        "Responding to platform owner moves: A 14‐year qualitative study of four enterprise software complementors"
+      ],
+      "heat": 0.644,
+      "heat_components": {
+        "paper_share": 0.5278,
+        "recent_growth": 0.6316,
+        "citation_velocity": 0.8089,
+        "match_score": 0.4978,
+        "source_quality": 0.9132
+      },
+      "name_zh": "数字平台生态系统治理",
+      "name_en": "Digital Platform Ecosystem Governance",
+      "description": "聚焦数字平台生态系统中平台所有者与互补者之间的治理机制、互动关系与价值共创。",
+      "selected_from": "athlete_a",
+      "judge_reason": "候选一更简洁地概括了平台生态系统治理的核心主题，边界清晰。"
+    },
+    {
+      "cluster_id": "cluster_002",
+      "paper_ids": [
+        "paper_23ac6297b95e02138528",
+        "paper_9d9fe94ec83444cf4131",
+        "paper_c342fc4a3e318956a4a3",
+        "paper_c770d348ddfdcba5d96d",
+        "paper_c93d6804405a40720e6f",
+        "paper_dadd31d9e1dede3c0799"
+      ],
+      "paper_count": 6,
+      "feature_terms": [
+        "keyword::world wide web",
+        "data",
+        "their",
+        "principles",
+        "design",
+        "platform",
+        "meta",
+        "have",
+        "platforms",
+        "approach"
+      ],
+      "sample_titles": [
+        "Shaping Platform Governance Principles to Manage Interorganizational Data Exchange",
+        "Engaging with deepfakes: a meta-synthesis from the perspective of social shaping of technology theory",
+        "Identifying the patterns: Towards a systematic approach to digital platform regulation",
+        "Designing Digital Platforms for Social Justice: Empowering End Users Through the Dataswyft Platform",
+        "Throwing Good Money After Bad: Risk Mitigation Strategies in the P2P Lending Platforms"
+      ],
+      "heat": 0.4529,
+      "heat_components": {
+        "paper_share": 0.1667,
+        "recent_growth": 0.5,
+        "citation_velocity": 0.6356,
+        "match_score": 0.4054,
+        "source_quality": 0.9
+      },
+      "name_zh": "平台治理原则与数据交换",
+      "name_en": "Platform Governance Principles and Data Exchange",
+      "description": "探讨平台治理原则的设计、数据交换的治理以及平台监管的系统方法。",
+      "selected_from": "athlete_a",
+      "judge_reason": "候选一更准确地聚焦于治理原则与数据交换，避免了候选二中的冗余表述。"
+    },
+    {
+      "cluster_id": "cluster_003",
+      "paper_ids": [
+        "paper_a392b283ed89624c43bb",
+        "paper_a7e8850aefd2913d91b1",
+        "paper_d0cfea98e699c9b274e6",
+        "paper_e4e2e7aeddb9607c4b44",
+        "paper_ec388272b727ba120e03"
+      ],
+      "paper_count": 5,
+      "feature_terms": [
+        "government",
+        "platform",
+        "digital",
+        "development",
+        "governance",
+        "authors",
+        "collaborative",
+        "current",
+        "regulation",
+        "technical"
+      ],
+      "sample_titles": [
+        "Digital platform regulation: opportunities for information systems research",
+        "Research on the platform multi-party collaborative governance mechanism based on two-stage evolutionary game theory",
+        "From governmental regulation to multifunctional adaptation",
+        "The dark side of digitalization and social media platform governance: a citizen engagement study",
+        "Open government, civic tech and digital platforms in Latin America: A governance study of Montevideo's urban app ‘Por Mi Barrio’"
+      ],
+      "heat": 0.3889,
+      "heat_components": {
+        "paper_share": 0.1389,
+        "recent_growth": 0.4,
+        "citation_velocity": 0.45,
+        "match_score": 0.4812,
+        "source_quality": 0.85
+      },
+      "name_zh": "平台监管与多方协同治理",
+      "name_en": "Platform Regulation and Multi-party Collaborative Governance",
+      "description": "研究数字平台的政府监管、多方协同治理机制以及公民参与。",
+      "selected_from": "athlete_a",
+      "judge_reason": "候选一更简洁地涵盖了平台监管与多方协同治理，边界清晰。"
+    },
+    {
+      "cluster_id": "cluster_004",
+      "paper_ids": [
+        "paper_408882879ee832926e11",
+        "paper_4f6f00acfcafa976fb55",
+        "paper_78f6d9dc11fd7a672f86"
+      ],
+      "paper_count": 3,
+      "feature_terms": [
+        "algorithmic",
+        "stakeholder",
+        "information",
+        "management",
+        "transparency",
+        "scenarios",
+        "users",
+        "consumer",
+        "reward",
+        "topic::fintech, crowdfunding, digital finance"
+      ],
+      "sample_titles": [
+        "Strategic Friction in Reward Portfolios: A Game-Theoretic Analysis of Platform Governance under Hyper-Transparency",
+        "Transparency And Visibility In Algorithmic Management: Configuring Coordination And Control In Platform Governance",
+        "Algorithmic Stakeholder Governance on Content Platforms: A Lead Role Perspective"
+      ],
+      "heat": 0.4658,
+      "heat_components": {
+        "paper_share": 0.0833,
+        "recent_growth": 1.0,
+        "citation_velocity": 0.0833,
+        "match_score": 0.4942,
+        "source_quality": 1.0
+      },
+      "name_zh": "算法治理与利益相关者管理",
+      "name_en": "Algorithmic Governance and Stakeholder Management",
+      "description": "关注平台中的算法管理、透明度以及利益相关者治理策略。",
+      "selected_from": "athlete_a",
+      "judge_reason": "候选一更简洁地概括了算法治理与利益相关者管理，避免了候选二中的冗余。"
+    },
+    {
+      "cluster_id": "cluster_005",
+      "paper_ids": [
+        "paper_71bee12b989988784833",
+        "paper_97cf2d51caa7f093eb29",
+        "paper_ac3cebc5ab485bcf16ed"
+      ],
+      "paper_count": 3,
+      "feature_terms": [
+        "orchestration",
+        "evolution",
+        "regulatory",
+        "firms",
+        "externalities",
+        "governance",
+        "platform",
+        "keyword::context (archaeology)",
+        "keyword::information governance",
+        "legitimacy"
+      ],
+      "sample_titles": [
+        "From Open Banking Regulation to Platform Orchestration: The Evolution of Digital Platform Governance",
+        "Platform governance in the face of negative network externalities: a moral and regulatory legitimacy perspective",
+        "How platforms drive the evolution of governance mechanisms"
+      ],
+      "heat": 0.4591,
+      "heat_components": {
+        "paper_share": 0.0833,
+        "recent_growth": 1.0,
+        "citation_velocity": 0.0667,
+        "match_score": 0.5716,
+        "source_quality": 0.85
+      },
+      "name_zh": "平台治理演化与编排",
+      "name_en": "Platform Governance Evolution and Orchestration",
+      "description": "分析平台治理机制的演化、编排以及应对负网络外部性的策略。",
+      "selected_from": "athlete_a",
+      "judge_reason": "候选一更简洁地概括了平台治理的演化与编排，边界清晰。"
+    }
+  ],
+  "synthesis_limitations": []
+}

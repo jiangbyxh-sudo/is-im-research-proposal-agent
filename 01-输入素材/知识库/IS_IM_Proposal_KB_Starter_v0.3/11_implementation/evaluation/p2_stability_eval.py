@@ -21,7 +21,7 @@ from pathlib import Path
 IMPLEMENTATION = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(IMPLEMENTATION))
 
-from stable_subdirection_clustering import deterministic_average_linkage  # noqa: E402
+from stable_subdirection_clustering import P2ClusterConfig, deterministic_average_linkage  # noqa: E402
 
 KB_ROOT = IMPLEMENTATION.parent
 WORKSPACE = KB_ROOT.parents[2]
@@ -86,7 +86,9 @@ def evaluate_stability(snapshot: dict, runs: int = 5) -> dict:
             assignments.append(assignment)
             representatives.append(representative_papers(result["clusters"]))
 
-    blocked = not statuses or not all(status == "P2_CLUSTERING_COMPLETE" for status in statuses)
+    blocked = not statuses or not all(
+        status in {"P2_CLUSTERING_COMPLETE", "P2_CLUSTERING_DEGRADED"} for status in statuses
+    )
     if blocked:
         return {
             "snapshot_corpus_hash": snapshot.get("corpus_hash"),
@@ -118,6 +120,7 @@ def evaluate_stability(snapshot: dict, runs: int = 5) -> dict:
         "abstract_count": snapshot.get("abstract_count"),
         "statuses": statuses,
         "blocked": False,
+        "degraded": any(status == "P2_CLUSTERING_DEGRADED" for status in statuses),
         "runs": len(assignments),
         "exact_output_consistency": exact_consistency,
         "mean_ari": round(sum(pair_ari) / max(1, len(pair_ari)), 4),
@@ -142,7 +145,7 @@ def main() -> int:
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "snapshot_path": str(args.snapshot),
-        "cluster_config_version": "p2-tfidf-average-linkage-2.0.0",
+        "cluster_config_version": P2ClusterConfig().version,
         **evaluate_stability(snapshot, runs=args.runs),
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)

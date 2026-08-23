@@ -16,17 +16,37 @@ from typing import Iterable
 
 SNAPSHOT_VERSION = "p2-direct-corpus-snapshot-2.0.0"
 
+DEGRADATION_REASON_TEXT = {
+    "p1_precision_gate_not_passed": "P1人工Precision门禁未通过，P2默认阻断",
+    "paper_count_below_30": "direct论文不足30篇，无法支撑五个方向",
+    "abstract_count_below_20": "带摘要论文不足20篇，文本特征不足",
+    "insufficient_rows_for_minimum_cluster_sizes": "论文数不足以保证每簇至少3篇",
+    "evidence_supports_fewer_than_three_directions": "证据仅支撑少于3个方向，已诚实停止",
+}
+
+
+def degradation_reasons_text(reasons: list[str]) -> list[str]:
+    return [DEGRADATION_REASON_TEXT.get(reason, reason) for reason in reasons]
+
 
 @dataclass(frozen=True)
 class P2ClusterConfig:
-    version: str = "p2-tfidf-average-linkage-2.0.0"
+    version: str = "p2-tfidf-average-linkage-2.1.0"
     requested_clusters: int = 5
     min_papers: int = 30
     min_abstracts: int = 20
     min_cluster_size: int = 3
+    # 五方向门槛按比例换算：30篇/5方向=6篇每方向，20摘要/5方向=4摘要每方向。
+    papers_per_direction: int = 6
+    abstracts_per_direction: int = 4
+    min_degraded_directions: int = 3
     text_weight: float = 1.0
     topic_weight: float = 1.35
     keyword_weight: float = 1.15
+    recent_window_years: int = 3
+    # 热度权重：论文占比/近期增长/引文速度/匹配分/来源质量。
+    heat_weights: tuple[float, float, float, float, float] = (0.30, 0.25, 0.20, 0.15, 0.10)
+    max_citations_per_year_for_heat: float = 10.0
 
 
 def _clean_text(value: object) -> str:
@@ -120,18 +140,32 @@ def assess_corpus_sufficiency(snapshot: dict, config: P2ClusterConfig | None = N
         reasons.append("abstract_count_below_20")
     if paper_count < config.requested_clusters * config.min_cluster_size:
         reasons.append("insufficient_rows_for_minimum_cluster_sizes")
-    status = "P2_CORPUS_READY"
+    # 诚实目标簇数：按五方向门槛的每方向论文/摘要密度等比换算，只降不升。
+    honest_target = min(
+        config.requested_clusters,
+        paper_count // config.papers_per_direction,
+        abstract_count // config.abstracts_per_direction,
+    )
+    if honest_target < config.min_degraded_directions:
+        reasons.append("evidence_supports_fewer_than_three_directions")
     if "p1_precision_gate_not_passed" in reasons:
         status = "P2_BLOCKED_BY_P1_PRECISION"
-    elif reasons:
+    elif honest_target >= config.requested_clusters:
+        status = "P2_CORPUS_READY"
+    elif honest_target >= config.min_degraded_directions:
+        status = "P2_CORPUS_DEGRADED"
+    else:
         status = "SYNTHESIS_INSUFFICIENT_EVIDENCE"
     return {
         "status": status,
-        "can_output_five_directions": not reasons,
+        "can_output_five_directions": status == "P2_CORPUS_READY",
+        "honest_target": honest_target,
+        "degraded": status == "P2_CORPUS_DEGRADED",
         "paper_count": paper_count,
         "abstract_count": abstract_count,
         "max_clusters_by_size": paper_count // config.min_cluster_size,
         "reasons": reasons,
+        "reasons_text": degradation_reasons_text(reasons),
         "config": asdict(config),
         "corpus_hash": snapshot.get("corpus_hash"),
         "p1_precision_gate_passed": bool(snapshot.get("p1_precision_gate_passed")),
@@ -218,15 +252,81 @@ def _merge(clusters: list[tuple[str, ...]], left_index: int, right_index: int) -
     )
 
 
+def _percentage(value: object) -> float:
+    if isinstance(value, dict):
+        value = value.get("total")
+    try:
+        return max(0.0, min(100.0, float(value)))  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def compute_cluster_heat(
+    clusters: list[dict], papers: list[dict], config: P2ClusterConfig, data_cutoff_date: str
+) -> list[dict]:
+    """Deterministic heat score: share / recent growth / citation velocity / match / source."""
+    cutoff_year = int(str(data_cutoff_date or "0000")[:4] or 0)
+    paper_map = {paper["paper_id"]: paper for paper in papers}
+    total_papers = max(1, len(papers))
+    weights = config.heat_weights
+    for cluster in clusters:
+        members = [paper_map[paper_id] for paper_id in cluster["paper_ids"]]
+        count = max(1, len(members))
+        share = len(members) / total_papers
+        recent = sum(
+            1 for item in members
+            if cutoff_year and item["year"] and 0 <= cutoff_year - item["year"] < config.recent_window_years
+        ) / count
+        velocities = []
+        for item in members:
+            age = (cutoff_year - item["year"] + 1) if (cutoff_year and item["year"]) else 1
+            velocities.append(item["citation_count"] / max(1, age))
+        citation = min(1.0, (sum(velocities) / count) / config.max_citations_per_year_for_heat)
+        match = sum(_percentage(item.get("p1_match_score")) for item in members) / count / 100.0
+        source = sum(_percentage(item.get("source_quality")) for item in members) / count / 100.0
+        heat = (
+            weights[0] * share + weights[1] * recent + weights[2] * citation
+            + weights[3] * match + weights[4] * source
+        )
+        cluster["heat"] = round(heat, 4)
+        cluster["heat_components"] = {
+            "paper_share": round(share, 4),
+            "recent_growth": round(recent, 4),
+            "citation_velocity": round(citation, 4),
+            "match_score": round(match, 4),
+            "source_quality": round(source, 4),
+        }
+    return clusters
+
+
+def _language_counts(papers: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for paper in papers:
+        language = paper.get("language") or "unknown"
+        counts[language] = counts.get(language, 0) + 1
+    return dict(sorted(counts.items()))
+
+
 def deterministic_average_linkage(snapshot: dict, config: P2ClusterConfig | None = None) -> dict:
     """Create fixed-membership clusters; model calls are intentionally absent."""
     config = config or P2ClusterConfig()
     gate = assess_corpus_sufficiency(snapshot, config)
     cache_key = hashlib.sha256(
-        f"{snapshot.get('corpus_hash')}|{config.version}".encode("utf-8")
+        "|".join([
+            str(snapshot.get("corpus_hash")),
+            config.version,
+            str(snapshot.get("direction_profile_version")),
+            str(snapshot.get("retrieval_version")),
+            str(snapshot.get("score_version")),
+            str(snapshot.get("data_cutoff_date")),
+        ]).encode("utf-8")
     ).hexdigest()
-    if gate["status"] != "P2_CORPUS_READY":
-        return {**gate, "clusters": [], "cache_key": cache_key, "cluster_config_version": config.version}
+    if gate["status"] not in {"P2_CORPUS_READY", "P2_CORPUS_DEGRADED"}:
+        return {
+            **gate, "clusters": [], "cache_key": cache_key, "cluster_config_version": config.version,
+            "language_counts": _language_counts(list(snapshot.get("papers") or [])),
+        }
+    target = int(gate["honest_target"])
     papers = list(snapshot.get("papers") or [])
     if any(paper.get("relevance_tier") != "direct" for paper in papers):
         raise AssertionError("P2 corpus contains non-direct paper")
@@ -250,17 +350,19 @@ def deterministic_average_linkage(snapshot: dict, config: P2ClusterConfig | None
         left, right = _best_pair(clusters, vectors, candidates)
         clusters = _merge(clusters, left, right)
 
-    if len(clusters) < config.requested_clusters:
+    if len(clusters) < target:
         return {
             **gate,
             "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
             "can_output_five_directions": False,
             "reasons": [*gate["reasons"], "minimum_size_partition_has_too_few_clusters"],
+            "reasons_text": degradation_reasons_text([*gate["reasons"], "minimum_size_partition_has_too_few_clusters"]),
             "clusters": [],
             "cache_key": cache_key,
             "cluster_config_version": config.version,
+            "language_counts": _language_counts(papers),
         }
-    while len(clusters) > config.requested_clusters:
+    while len(clusters) > target:
         candidates = [(left, right) for left in range(len(clusters)) for right in range(left + 1, len(clusters))]
         left, right = _best_pair(clusters, vectors, candidates)
         clusters = _merge(clusters, left, right)
@@ -279,14 +381,22 @@ def deterministic_average_linkage(snapshot: dict, config: P2ClusterConfig | None
             "feature_terms": feature_terms,
             "sample_titles": [paper_map[paper_id]["title"] for paper_id in cluster[:5]],
         })
+    output_clusters = compute_cluster_heat(output_clusters, papers, config, str(snapshot.get("data_cutoff_date") or ""))
+    status = "P2_CLUSTERING_COMPLETE" if target >= config.requested_clusters else "P2_CLUSTERING_DEGRADED"
     return {
-        "status": "P2_CLUSTERING_COMPLETE",
-        "can_output_five_directions": True,
+        "status": status,
+        "can_output_five_directions": target >= config.requested_clusters,
+        "honest_target": target,
+        "requested_clusters": config.requested_clusters,
+        "degradation_reasons": gate["reasons"],
+        "degradation_reasons_text": gate["reasons_text"],
         "corpus_hash": snapshot["corpus_hash"],
         "cluster_config_version": config.version,
         "cache_key": cache_key,
         "linkage": "average",
         "tie_break": "lexicographic_paper_ids",
         "feature_method": "tfidf_text_plus_topic_keyword",
+        "heat_method": "weighted_share_recent_citation_match_source",
+        "language_counts": _language_counts(papers),
         "clusters": output_clusters,
     }

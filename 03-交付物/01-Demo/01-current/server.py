@@ -8,6 +8,7 @@ import mimetypes
 import os
 import sys
 import time
+from datetime import date
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -65,6 +66,7 @@ from paper_discovery_provider import (  # noqa: E402
 )
 from multi_source_discovery_provider import MultiSourcePaperDiscoveryProvider  # noqa: E402
 from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport  # noqa: E402
+from retrieval_query_plan import QUERY_PLAN_VERSION  # noqa: E402
 from research_synthesis_provider import (  # noqa: E402
     SynthesisRequest,
     build_research_synthesis_provider,
@@ -182,6 +184,12 @@ def load_direction_profiles() -> dict[str, dict]:
         return {}
     payload = json.loads(DIRECTION_PROFILE_PATH.read_text(encoding="utf-8"))
     return {item["direction_id"]: item for item in payload.get("profiles", [])}
+
+
+def direction_profile_version() -> str:
+    if not DIRECTION_PROFILE_PATH.is_file():
+        return "unknown"
+    return str(json.loads(DIRECTION_PROFILE_PATH.read_text(encoding="utf-8")).get("version") or "unknown")
 
 
 def synthesis_provider_name() -> str:
@@ -477,6 +485,10 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
             papers=tuple(corpus),
             p1_precision_gate_passed=P1_PRECISION_GATE["passed"],
             p1_precision_summary=dict(P1_PRECISION_GATE["summary"]),
+            data_cutoff_date=date.today().isoformat(),
+            direction_profile_version=direction_profile_version(),
+            retrieval_version=QUERY_PLAN_VERSION,
+            score_version=getattr(discovery, "score_config_version", "") or "unknown",
         )
         if run_synthesis:
             synthesis = (synthesis_provider or build_research_synthesis_provider()).synthesize(synthesis_request)

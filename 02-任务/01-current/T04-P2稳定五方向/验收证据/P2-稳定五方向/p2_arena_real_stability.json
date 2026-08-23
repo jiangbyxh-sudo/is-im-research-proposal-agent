@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-08-23T12:20:09.901251+00:00",
+  "snapshot_path": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\p2_arena_real_corpus_snapshot.json",
+  "cluster_config_version": "p2-tfidf-average-linkage-2.1.0",
+  "snapshot_corpus_hash": "e0e4e34882c4677384595f853131444d4502d3964fb85a0f00097d693b332054",
+  "paper_count": 36,
+  "abstract_count": 36,
+  "statuses": [
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE",
+    "P2_CLUSTERING_COMPLETE"
+  ],
+  "blocked": false,
+  "degraded": false,
+  "runs": 5,
+  "exact_output_consistency": true,
+  "mean_ari": 1.0,
+  "mean_representative_jaccard": 1.0,
+  "cluster_counts": [
+    5
+  ],
+  "gates": {
+    "consistency_100pct": true,
+    "ari_ge_0_85": true,
+    "jaccard_ge_0_80": true
+  }
+}

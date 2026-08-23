@@ -16,7 +16,13 @@ class Handler(BaseHTTPRequestHandler):
         envelope = json.loads(self.rfile.read(length).decode("utf-8"))
         messages = envelope.get("messages", [])
         system_prompt = str(messages[0].get("content", "")) if messages else ""
-        if "受控开题报告逐节生成器" in system_prompt:
+        if "研究簇命名选手A" in system_prompt:
+            content = self.athlete_a_content(messages)
+        elif "研究簇命名选手B" in system_prompt:
+            content = self.athlete_b_content(messages)
+        elif "研究簇命名裁判" in system_prompt:
+            content = self.judge_content(messages)
+        elif "受控开题报告逐节生成器" in system_prompt:
             content = self.controlled_section_content(messages)
         elif "开题报告与写作指导生成器" in system_prompt:
             content = self.proposal_content()
@@ -32,6 +38,43 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    @staticmethod
+    def _cluster_ids(messages):
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        return [str(item.get("cluster_id")) for item in payload.get("clusters", [])]
+
+    @classmethod
+    def athlete_a_content(cls, messages):
+        # 受控命名选手A：简洁学术化风格，全部标注受控测试，不构成研究结论。
+        names = [{
+            "cluster_id": cluster_id,
+            "name_zh": f"受控测试簇名A{index + 1}（界面验收）",
+            "name_en": f"Controlled fixture name A{index + 1}",
+            "description": "受控选手A命名：仅用于界面验收，不代表真实研究方向命名。",
+        } for index, cluster_id in enumerate(cls._cluster_ids(messages))]
+        return json.dumps({"names": names}, ensure_ascii=False)
+
+    @classmethod
+    def athlete_b_content(cls, messages):
+        # 受控命名选手B：具体组合风格，全部标注受控测试，不构成研究结论。
+        names = [{
+            "cluster_id": cluster_id,
+            "name_zh": f"受控测试簇名B{index + 1}：机制×情境组合（界面验收）",
+            "name_en": f"Controlled fixture name B{index + 1}: mechanism x context",
+            "description": "受控选手B命名：仅用于界面验收，不代表真实研究方向命名。",
+        } for index, cluster_id in enumerate(cls._cluster_ids(messages))]
+        return json.dumps({"names": names}, ensure_ascii=False)
+
+    @classmethod
+    def judge_content(cls, messages):
+        # 受控裁判：交替选择两个匿名候选，验证两种胜出路径都能渲染。
+        selections = [{
+            "cluster_id": cluster_id,
+            "winner": "candidate_1" if index % 2 == 0 else "candidate_2",
+            "reason": "受控裁判理由：仅用于界面验收。",
+        } for index, cluster_id in enumerate(cls._cluster_ids(messages))]
+        return json.dumps({"selections": selections}, ensure_ascii=False)
 
     @staticmethod
     def controlled_section_content(messages):
