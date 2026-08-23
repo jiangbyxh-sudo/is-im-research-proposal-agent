@@ -62,8 +62,12 @@ class SynthesisProviderTests(unittest.TestCase):
         } for index in range(1, 31))
 
     def test_five_fixed_directions_are_named_without_gap_generation(self):
+        class StubGapProvider:
+            def propose(self, request):
+                return [], {"provider": "stub"}
+
         client = StaticNamingClient()
-        provider = DeepSeekResearchSynthesisProvider(client)
+        provider = DeepSeekResearchSynthesisProvider(client, gap_candidate_provider=StubGapProvider())
         result = provider.synthesize(SynthesisRequest(
             research_direction="AI-enabled information systems", fine_grained_question=None,
             derived_path="top_five_subdirections", papers=self.papers, p1_precision_gate_passed=True,
@@ -72,7 +76,7 @@ class SynthesisProviderTests(unittest.TestCase):
         self.assertEqual(5, len(result.top_subdirections))
         self.assertTrue(all(item["paper_count"] >= 3 for item in result.top_subdirections))
         self.assertEqual([], result.gap_candidates)
-        self.assertFalse(result.audit["research_gap_generation_in_p2"])
+        self.assertEqual("p3-athlete-judge-gap-candidates-1.0.0", result.audit["gap_generation_pipeline"])
         self.assertEqual("athlete_judge_arena", result.audit["naming"]["provider"])
         self.assertTrue(all("heat" in item for item in result.top_subdirections))
         self.assertTrue(result.audit["stability_self_check"]["exact_match"])

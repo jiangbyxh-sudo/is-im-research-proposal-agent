@@ -16,6 +16,17 @@ from cluster_naming_provider import (
     ClusterNamingRequest,
     DeterministicClusterNamingProvider,
 )
+from evidence_matrix import build_evidence_matrix, evidence_indexes
+from gap_candidate_provider import (
+    GAP_CANDIDATE_VERSION,
+    GapCandidateRequest,
+    LLMGapCandidateProvider,
+)
+from gap_falsification import build_gap_falsification_query_plan
+from research_gap_provider import (
+    EvidenceBoundResearchGapProvider,
+    ResearchGapRequest,
+)
 from stable_subdirection_clustering import (
     P2ClusterConfig,
     build_corpus_snapshot,
@@ -45,6 +56,8 @@ class SynthesisResult:
     limitations: list[str] = field(default_factory=list)
     audit: dict = field(default_factory=dict)
     message_to_user: str = ""
+    formal_gaps: list[dict] = field(default_factory=list)
+    claim_store: dict = field(default_factory=dict)
 
 
 class ResearchSynthesisProvider(Protocol):
@@ -127,6 +140,8 @@ class DeepSeekResearchSynthesisProvider:
         naming_provider=None,
         fallback_naming_provider=None,
         stability_self_check_runs: int = 2,
+        gap_candidate_provider=None,
+        gap_formalization_provider=None,
     ):
         self.client = client
         self.max_corpus_size = max(10, max_corpus_size)
@@ -134,7 +149,71 @@ class DeepSeekResearchSynthesisProvider:
         self.naming_provider = naming_provider or AthleteJudgeClusterNamingProvider(client)
         self.fallback_naming_provider = fallback_naming_provider or DeterministicClusterNamingProvider()
         self.stability_self_check_runs = max(1, stability_self_check_runs)
+        self.gap_candidate_provider = gap_candidate_provider or LLMGapCandidateProvider(client)
+        self.gap_formalization_provider = gap_formalization_provider or EvidenceBoundResearchGapProvider()
         self._cache: dict[str, SynthesisResult] = {}
+
+    def _generate_formal_gaps(self, request: SynthesisRequest, snapshot: dict, named: list[dict]) -> tuple[list[dict], dict, dict]:
+        """Athlete/Judge proposals per cluster, then one deterministic formalization."""
+        papers = list(snapshot.get("papers") or [])
+        paper_map = {paper["paper_id"]: paper for paper in papers}
+        matrix = build_evidence_matrix(papers)
+        _, span_index = evidence_indexes(matrix)
+        spans_by_paper: dict[str, list[dict]] = {}
+        for span in span_index.values():
+            spans_by_paper.setdefault(span["paper_id"], []).append(span)
+        selected_candidates: list[dict] = []
+        gap_audit: dict = {"version": GAP_CANDIDATE_VERSION, "clusters": {}}
+        for cluster in named:
+            cluster_id = cluster["cluster_id"]
+            cluster_papers = [paper_map[paper_id] for paper_id in cluster.get("paper_ids", []) if paper_id in paper_map]
+            cluster_spans = [span for paper_id in cluster.get("paper_ids", []) for span in spans_by_paper.get(paper_id, [])]
+            if not cluster_papers or not cluster_spans:
+                gap_audit["clusters"][cluster_id] = {"selected": 0, "note": "no_formal_evidence_spans"}
+                continue
+            try:
+                selected, audit = self.gap_candidate_provider.propose(GapCandidateRequest(
+                    research_direction=request.research_direction,
+                    cluster_id=cluster_id,
+                    cluster_name=str(cluster.get("name_zh") or cluster_id),
+                    feature_terms=tuple(cluster.get("feature_terms", [])),
+                    papers=tuple(cluster_papers),
+                    spans=tuple(cluster_spans),
+                ))
+            except Exception as exc:
+                gap_audit["clusters"][cluster_id] = {"selected": 0, "note": f"proposal_failed:{type(exc).__name__}"}
+                continue
+            gap_audit["clusters"][cluster_id] = audit
+            for candidate in selected:
+                candidate["subdirection_id"] = cluster_id
+                selected_candidates.append(candidate)
+        claim_store: dict = {}
+        formal_gaps: list[dict] = []
+        rejected: list[dict] = []
+        if selected_candidates:
+            gap_result = self.gap_formalization_provider.formalize(ResearchGapRequest(
+                cluster_id="multi_cluster",
+                gap_candidates=tuple(selected_candidates),
+                evidence_matrix=matrix,
+            ))
+            formal_gaps = list(gap_result.formal_gaps)
+            claim_store = dict(gap_result.claim_store)
+            rejected = list(gap_result.rejected_candidates)
+            for gap in formal_gaps:
+                gap["falsification_plan"] = build_gap_falsification_query_plan(gap)
+        gap_audit["formalization"] = {
+            "candidate_count": len(selected_candidates),
+            "formal_gap_count": len(formal_gaps),
+            "rejected_count": len(rejected),
+            "rejected": rejected,
+        }
+        gap_audit["evidence_matrix"] = {
+            "matrix_hash": matrix.get("matrix_hash"),
+            "paper_count": matrix.get("paper_count"),
+            "formal_evidence_paper_count": matrix.get("formal_evidence_paper_count"),
+            "span_count": matrix.get("span_count"),
+        }
+        return formal_gaps, claim_store, gap_audit
 
     def _snapshot_audit(self, snapshot: dict, clustering: dict) -> dict:
         return {
@@ -224,11 +303,26 @@ class DeepSeekResearchSynthesisProvider:
             "naming": naming_audit,
             "naming_prompt_version": naming_audit.get("prompt_version"),
             "naming_fallback_reason": naming_fallback_reason,
-            "research_gap_generation_in_p2": False,
+            "gap_generation_pipeline": GAP_CANDIDATE_VERSION,
         }
+        formal_gaps: list[dict] = []
+        claim_store: dict = {}
+        gap_failure = ""
+        try:
+            formal_gaps, claim_store, gap_audit_detail = self._generate_formal_gaps(request, snapshot, named)
+            audit["gap_candidates"] = gap_audit_detail
+        except Exception as exc:
+            gap_failure = f"{type(exc).__name__}: {exc}"
+            audit["gap_candidates"] = {"version": GAP_CANDIDATE_VERSION, "error": gap_failure}
+        if gap_failure:
+            limitations.append("研究空白候选流水线执行失败，本次未产出正式空白；论文归属与方向命名不受影响。")
+        elif not formal_gaps:
+            limitations.append("本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。")
+        named = [{**cluster, "subdirection_id": cluster["cluster_id"]} for cluster in named]
         result = SynthesisResult(
-            status=status, top_subdirections=named, gap_candidates=[], limitations=limitations,
+            status=status, top_subdirections=named, gap_candidates=formal_gaps, limitations=limitations,
             audit=audit, message_to_user=message,
+            formal_gaps=formal_gaps, claim_store=claim_store,
         )
         self._cache[cache_key] = deepcopy(result)
         return result

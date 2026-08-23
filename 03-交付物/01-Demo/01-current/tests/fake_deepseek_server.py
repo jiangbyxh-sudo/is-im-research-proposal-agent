@@ -22,6 +22,12 @@ class Handler(BaseHTTPRequestHandler):
             content = self.athlete_b_content(messages)
         elif "研究簇命名裁判" in system_prompt:
             content = self.judge_content(messages)
+        elif "研究空白候选选手A" in system_prompt:
+            content = self.gap_candidate_content(messages)
+        elif "研究空白候选选手B" in system_prompt:
+            content = self.gap_candidate_content(messages)
+        elif "研究空白候选裁判" in system_prompt:
+            content = self.gap_judge_content(messages)
         elif "受控开题报告逐节生成器" in system_prompt:
             content = self.controlled_section_content(messages)
         elif "开题报告与写作指导生成器" in system_prompt:
@@ -96,6 +102,40 @@ class Handler(BaseHTTPRequestHandler):
                 "constraint_hash": blueprint.get("constraint_hash"),
             },
         }}, ensure_ascii=False)
+
+    @staticmethod
+    def gap_candidate_content(messages):
+        # 受控空白候选选手：回显输入中的真实span_id，模型侧不得编造锚点。
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        spans = payload.get("evidence_spans") or []
+        papers = sorted({span.get("paper_id") for span in spans})
+        if len(papers) < 2:
+            return json.dumps({"candidates": []}, ensure_ascii=False)
+        support = [spans[0]["span_id"], next(s["span_id"] for s in spans if s["paper_id"] != papers[0])]
+        counter = [next(s["span_id"] for s in spans if s["paper_id"] == papers[-1])]
+        return json.dumps({"candidates": [{
+            "gap_statement": f"受控空白：{payload.get('cluster', {}).get('name', '')}中的未解释差异（仅供界面验收）",
+            "why_it_matters": "受控夹具说明，不构成研究结论。",
+            "evidence_span_ids": support,
+            "alternative_explanations": ["受控替代解释"],
+            "research_question": "受控研究问题：夹具关系如何成立？",
+            "feasible_method": {
+                "design": "受控实验设计", "data": "夹具样本", "analysis": "方差分析",
+                "unit_of_analysis": "夹具用户", "context": "受控情境",
+            },
+            "counterevidence": [{"statement": "受控反证：夹具存在不一致结果", "evidence_span_ids": counter}],
+            "innovation_candidates": ["受控创新点A", "受控创新点B"],
+        }]}, ensure_ascii=False)
+
+    @staticmethod
+    def gap_judge_content(messages):
+        # 受控空白裁判：盲选第一个匿名候选，仅用于界面验收。
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        candidates = payload.get("candidates") or []
+        return json.dumps({"selections": [
+            {"selection_id": item["selection_id"], "reason": "受控裁判理由，仅供界面验收"}
+            for item in candidates[:1]
+        ]}, ensure_ascii=False)
 
     @staticmethod
     def synthesis_content():

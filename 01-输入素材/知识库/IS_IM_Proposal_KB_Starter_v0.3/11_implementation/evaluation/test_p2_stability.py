@@ -196,6 +196,13 @@ class P2SnapshotTests(unittest.TestCase):
         self.assertEqual(base["corpus_hash"], bumped_profile["corpus_hash"])
 
 
+class StubGapCandidateProvider:
+    """离线空白候选桩：不发起模型调用，返回零候选。"""
+
+    def propose(self, request):
+        return [], {"provider": "stub", "note": "offline_stub"}
+
+
 class ArenaClient:
     """Stub DeepSeek client that answers athlete A/B and judge prompts."""
 
@@ -323,14 +330,16 @@ class P2SynthesisTests(unittest.TestCase):
 
     def test_synthesis_names_fixed_clusters_via_arena_and_uses_cache(self):
         client = ArenaClient()
-        provider = DeepSeekResearchSynthesisProvider(client)
+        # T05起synthesis内联P3空白流水线；本测试聚焦命名竞技场与缓存，
+        # 注入空白桩使其与空白流水线测试（test_p3_gap_pipeline）解耦。
+        provider = DeepSeekResearchSynthesisProvider(client, gap_candidate_provider=StubGapCandidateProvider())
         request = self.request([paper(index) for index in range(1, 31)])
         first = provider.synthesize(request)
         second = provider.synthesize(request)
         self.assertEqual("SYNTHESIS_COMPLETE", first.status)
         self.assertEqual(5, len(first.top_subdirections))
         self.assertEqual([], first.gap_candidates)
-        self.assertFalse(first.audit["research_gap_generation_in_p2"])
+        self.assertEqual("p3-athlete-judge-gap-candidates-1.0.0", first.audit["gap_generation_pipeline"])
         self.assertTrue(first.audit["stability_self_check"]["exact_match"])
         self.assertEqual(2, first.audit["stability_self_check"]["runs"])
         self.assertEqual("athlete_judge_arena", first.audit["naming"]["provider"])
