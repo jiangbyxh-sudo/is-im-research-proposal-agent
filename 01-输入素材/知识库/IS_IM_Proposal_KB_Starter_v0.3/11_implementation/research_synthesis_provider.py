@@ -7,6 +7,7 @@ import time
 from copy import deepcopy
 from dataclasses import dataclass, field
 from datetime import date
+from http.client import IncompleteRead
 from typing import Protocol
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -123,7 +124,7 @@ class DeepSeekJsonClient:
                 last_error = RuntimeError(f"deepseek_http_{exc.code}")
                 if exc.code not in {429, 500, 502, 503, 504}:
                     break
-            except (OSError, ValueError, json.JSONDecodeError) as exc:
+            except (OSError, ValueError, json.JSONDecodeError, IncompleteRead) as exc:
                 last_error = exc
             if attempt < self.retries:
                 time.sleep(1.0 * (2 ** attempt))
