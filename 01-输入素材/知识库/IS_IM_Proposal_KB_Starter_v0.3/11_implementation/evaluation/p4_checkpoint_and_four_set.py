@@ -83,10 +83,13 @@ class SectionClient:
         allowed = payload["allowed_claim_ids"]
         if self.mode == "bad_section" and section_id == "research_questions":
             return {"section": {"section_id": section_id, "content": "无效内容", "claim_ids": ["claim_forged"], "assumptions": [], "blueprint_refs": {}}}, {}
+        target = int(payload["section_spec"].get("target_words") or 0)
+        base = f"{section_id}的受控内容，仅依据Claim Store。"
+        content = base if target < 100 else "".join(f"{base}（第{index}段）" for index in range(max(1, int(target * 0.62) // len(base) + 1)))
         return {
             "section": {
                 "section_id": section_id,
-                "content": f"{section_id}的受控内容，仅依据Claim Store。",
+                "content": content,
                 "claim_ids": allowed[:2],
                 "assumptions": [],
                 "blueprint_refs": {
@@ -133,6 +136,7 @@ def run_flow(mode: str = "honest") -> dict:
     mark("citation_audit", audit.get("citation_audit", {}).get("valid"))
     mark("consistency_audit", audit.get("cross_section_consistency_matrix", {}).get("valid"))
     mark("task_card_audit", audit.get("task_card_audit", {}).get("valid"))
+    mark("constraint_alignment_audit", audit.get("constraint_alignment_audit", {}).get("valid"))
     arena = audit.get("arena_review", {})
     if mode == "arena_smuggle":
         mark("arena_smuggle_rejected", bool(arena.get("error")) and "rewrite" in str(arena.get("error")))

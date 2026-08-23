@@ -93,9 +93,12 @@ class Handler(BaseHTTPRequestHandler):
         blueprint = payload.get("research_design_blueprint") or {}
         outline = payload.get("proposal_outline") or {}
         allowed = list(payload.get("allowed_claim_ids") or [])
+        target = int(spec.get("target_words") or 0)
+        base = f"{spec.get('title')}的受控测试内容，仅用于界面验收，不构成研究结论。"
+        content = base if target < 100 else "".join(f"{base}（第{index}段）" for index in range(max(1, int(target * 0.62) // len(base) + 1)))
         return json.dumps({"section": {
             "section_id": spec.get("section_id"),
-            "content": f"{spec.get('title')}的受控测试内容，仅用于界面验收，不构成研究结论。",
+            "content": content,
             "claim_ids": allowed[:2],
             "assumptions": ["受控夹具内容，须人工复核"],
             "blueprint_refs": {

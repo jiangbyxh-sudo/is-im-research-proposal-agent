@@ -180,3 +180,105 @@ def build_execution_task_cards(blueprint: dict, outline: dict, claim_store: dict
             "claim_store_only": True,
         },
     }
+
+
+CONSTRAINT_ALIGNMENT_VERSION = "phase-e-constraint-alignment-1.1.0"
+MIN_SECTION_WORD_RATIO = 0.4
+MIN_CHECKABLE_TARGET_WORDS = 100
+REPETITION_NGRAM = 8
+REPETITION_FLAG_THRESHOLD = 0.10
+
+_HUMAN_SUBJECT_TERMS = ("访谈", "采访", "被试", "interview", "焦点小组", "问卷发放")
+
+
+def audit_constraint_alignment(
+    user_constraints: dict,
+    outline: dict,
+    sections: list[dict],
+    today: str = "",
+) -> dict:
+    """Deterministic post-generation check of the rubric's hard findings.
+
+    Catches what structural audits cannot: timeline beyond the confirmed
+    deadline, ignored per-section word budgets, and data-scope statements that
+    contradict the confirmed ethics/data constraints.
+    """
+    from datetime import date as _date
+
+    errors: list[str] = []
+    section_map = {str(s.get("section_id") or ""): s for s in sections}
+    deadline = str(user_constraints.get("deadline") or "")
+    today_value = _date.fromisoformat(today) if today else _date.today()
+
+    # 1a) timeline 终点不得晚于确认截止日：显式年份与时长双查。
+    timeline_text = str(section_map.get("timeline", {}).get("content") or "")
+    if deadline:
+        try:
+            deadline_year = int(deadline[:4])
+        except ValueError:
+            deadline_year = None
+        if deadline_year is not None:
+            for year in {int(v) for v in __import__("re").findall(r"(20\d{2})", timeline_text)}:
+                if year > deadline_year:
+                    errors.append(f"timeline_year_{year}_beyond_deadline_{deadline_year}")
+            months_left = max(0, (_date.fromisoformat(deadline) - today_value).days // 30)
+            for months in (int(v) for v in __import__("re").findall(r"(?<!年)(\d{1,2})\s*个月", timeline_text)):
+                if months_left <= 24 and months > months_left:
+                    errors.append(f"timeline_duration_{months}m_exceeds_{months_left}m_to_deadline")
+
+    # 1b) 各节字数不低于提纲分配的 MIN_SECTION_WORD_RATIO。
+    for spec in outline.get("sections", []):
+        target = int(spec.get("target_words") or 0)
+        if target < MIN_CHECKABLE_TARGET_WORDS:
+            continue
+        content = str(section_map.get(spec.get("section_id"), {}).get("content") or "")
+        if len(content) < target * MIN_SECTION_WORD_RATIO:
+            errors.append(f"{spec.get('section_id')}:words_{len(content)}_below_{int(target * MIN_SECTION_WORD_RATIO)}")
+
+    # 1c) 数据口径：约束声明纯公开/二手且不含人类被试时，正文不得出现访谈类表述。
+    data_scope = f"{user_constraints.get('data_access', '')}{user_constraints.get('ethics_privacy', '')}"
+    scope_declares_public_only = ("公开" in data_scope or "二手" in data_scope) and ("不涉及人类被试" in data_scope or "不涉及" in data_scope)
+    scope_allows_interview = "访谈" in data_scope or "interview" in data_scope.lower()
+    if scope_declares_public_only and not scope_allows_interview:
+        for section_id, section in section_map.items():
+            content = str(section.get("content") or "")
+            if any(term in content for term in _HUMAN_SUBJECT_TERMS):
+                errors.append(f"{section_id}:human_subject_term_contradicts_public_only_scope")
+
+    return {
+        "version": CONSTRAINT_ALIGNMENT_VERSION,
+        "valid": not errors,
+        "errors": errors,
+        "checks": ["timeline_vs_deadline", "section_words_vs_outline", "data_scope_consistency"],
+    }
+
+
+def cross_section_repetition(sections: list[dict]) -> dict:
+    """Advisory duplication metric: shared 8-gram occurrence rate across sections."""
+    import re as _re
+
+    from collections import Counter
+
+    section_grams: dict[str, Counter] = {}
+    total = 0
+    for section in sections:
+        text = str(section.get("content") or "")
+        grams = ["".join(tokens) for tokens in _re.findall(r"([\u4e00-\u9fff]|[a-z0-9]+)", text.casefold())]
+        ngrams = Counter(tuple(grams[i:i + REPETITION_NGRAM]) for i in range(max(0, len(grams) - REPETITION_NGRAM + 1)))
+        section_grams[str(section.get("section_id") or "")] = ngrams
+        total += sum(ngrams.values())
+    if total == 0:
+        return {"rate": 0.0, "flagged": False, "threshold": REPETITION_FLAG_THRESHOLD}
+    owner: dict[tuple, set] = {}
+    for section_id, ngrams in section_grams.items():
+        for gram in ngrams:
+            owner.setdefault(gram, set()).add(section_id)
+    shared = {gram for gram, ids in owner.items() if len(ids) > 1}
+    shared_occurrences = sum(ngrams[gram] for ngrams in section_grams.values() for gram in shared if gram in ngrams)
+    rate = round(shared_occurrences / total, 4)
+    return {
+        "rate": rate,
+        "flagged": rate > REPETITION_FLAG_THRESHOLD,
+        "threshold": REPETITION_FLAG_THRESHOLD,
+        "method": f"shared_{REPETITION_NGRAM}gram_occurrence_rate",
+    }

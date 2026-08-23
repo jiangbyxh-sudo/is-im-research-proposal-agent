@@ -24,10 +24,13 @@ class SectionClient:
         blueprint = payload["research_design_blueprint"]
         section_id = payload["section_spec"]["section_id"]
         claim_ids = ["claim_unknown"] if self.invalid_claim else payload["allowed_claim_ids"]
+        target = int(payload["section_spec"].get("target_words") or 0)
+        base = f"{section_id}仅依据Claim Store形成的受控内容。"
+        content = base if target < 100 else "".join(f"{base}（第{index}段）" for index in range(max(1, int(target * 0.62) // len(base) + 1)))
         return {
             "section": {
                 "section_id": section_id,
-                "content": f"{section_id}仅依据Claim Store形成的受控内容。",
+                "content": content,
                 "claim_ids": claim_ids,
                 "assumptions": ["仍需人工审阅"],
                 "blueprint_refs": {

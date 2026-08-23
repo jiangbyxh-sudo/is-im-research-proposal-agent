@@ -12,8 +12,10 @@ from typing import Protocol
 
 from proposal_arena_review import ProposalArenaReviewer
 from proposal_workflow_controls import (
+    audit_constraint_alignment,
     build_execution_task_cards,
     build_proposal_outline,
+    cross_section_repetition,
     evaluate_user_constraints,
     proposal_outline_matches,
 )
@@ -44,7 +46,7 @@ PARADIGM_LABELS = {
     "computational_text_network": "计算文本、机器学习与网络分析", "analytical_modeling": "分析建模、博弈论与机制设计",
     "design_science": "设计科学",
 }
-PROPOSAL_CONTROL_VERSION = "p4-controlled-proposal-1.0.0"
+PROPOSAL_CONTROL_VERSION = "p4-controlled-proposal-1.1.0"
 
 
 @dataclass(frozen=True)
@@ -254,7 +256,13 @@ class DeepSeekProposalGenerationProvider:
         return """你是受控开题报告逐节生成器。只输出JSON对象：
 {"section":{"section_id":"background","content":"...","claim_ids":["claim_x"],"assumptions":[],"blueprint_refs":{"blueprint_id":"...","research_question":"...","design":"...","outline_id":"...","constraint_hash":"..."}}}
 本节唯一事实来源是用户消息中的Claim Store；不得使用外部知识、原始论文列表或自造引用。
-所有事实性论断必须由claim_ids支持。不得改变ResearchDesignBlueprint、已确认用户约束或提纲。"""
+所有事实性论断必须由claim_ids支持。不得改变ResearchDesignBlueprint、已确认用户约束或提纲。
+硬性规则（违反即拒）：
+1. 字数：本节content长度必须达到section_spec.target_words的六成以上；
+2. 约束：一切时间计划必须落在已确认截止时间之前；数据与伦理表述必须与用户约束原文一致，不得出现与约束冲突的口径（如约束为纯公开/二手数据时不得写访谈、被试或问卷发放），可行性/伦理表述不得比约束原文更强（如不得写"伦理风险极低"）；
+3. 外推：超出claim_ids直接支持范围的命题、假设或机制推演，必须在assumptions中列出或显式标注为"理论推演（待验证）"；同一claim不得被用于支撑方向相反的结论；
+4. 方法：凡声称DID、实验或任何因果识别，content必须明确处理组与对照组、处理时点、结果变量和识别假设关注点；数据结构不支持时降低其核心地位；
+5. 重复：不得复用其他节已有的成段表述或句式，各节信息应有分工。"""
 
     def _generate_section(
         self,
@@ -262,12 +270,24 @@ class DeepSeekProposalGenerationProvider:
         blueprint: ResearchDesignBlueprint,
         outline: dict,
         claims: dict[str, dict],
+        user_constraints: dict | None = None,
     ) -> tuple[dict, dict]:
         section_id = section_spec["section_id"]
         title = section_spec["title"]
         allowed_claim_ids = [claim_id for claim_id in section_spec["allowed_claim_ids"] if claim_id in claims]
+        constraints_digest = {
+            key: (user_constraints or {}).get(key)
+            for key in ("deadline", "target_word_count", "data_access", "ethics_privacy", "method_constraints")
+            if (user_constraints or {}).get(key)
+        }
+        timeline_rule = (
+            "本节是研究计划：所有阶段必须全部落在截止时间之前完成，写出具体月份区间；字数按target_words执行。"
+            if section_id == "timeline" else ""
+        )
         payload = {
             "task": "仅生成一个开题报告章节",
+            "confirmed_user_constraints": constraints_digest,
+            "timeline_rule": timeline_rule,
             "section_spec": section_spec,
             "research_design_blueprint": blueprint.as_dict(),
             "proposal_outline": {
@@ -430,7 +450,7 @@ class DeepSeekProposalGenerationProvider:
         for section_spec in outline["sections"]:
             section_id = section_spec["section_id"]
             try:
-                section, model_audit = self._generate_section(section_spec, blueprint, outline, claims)
+                section, model_audit = self._generate_section(section_spec, blueprint, outline, claims, request.user_constraints)
                 section["task_card_id"] = task_card_by_section[section_id]["task_card_id"]
                 sections.append(section)
                 model_audits.append({"section_id": section_id, **model_audit})
@@ -462,11 +482,14 @@ class DeepSeekProposalGenerationProvider:
         consistency_valid = len(consistency_rows) == len(SECTION_SPECS) and all(row["consistent"] for row in consistency_rows)
         citation_audit = {"valid": not citation_errors and len(sections) == len(SECTION_SPECS), "errors": citation_errors}
         consistency_matrix = {"valid": consistency_valid, "rows": consistency_rows}
+        constraint_alignment = audit_constraint_alignment(request.user_constraints, outline, sections)
+        repetition = cross_section_repetition(sections)
         all_gates = (
             claim_audit["valid"]
             and citation_audit["valid"]
             and consistency_matrix["valid"]
             and task_cards["audit"]["valid"]
+            and constraint_alignment["valid"]
             and not generation_errors
         )
         status = "READY_FOR_HUMAN_REVIEW" if all_gates else "PROPOSAL_CONTROLLED_PARTIAL"
@@ -481,6 +504,10 @@ class DeepSeekProposalGenerationProvider:
             if arena_review.get("revise_section_ids"):
                 arena_note = "竞技场评审建议修订以下章节：" + "、".join(arena_review["revise_section_ids"]) + "；裁决供人工复核参考，不自动改稿。"
         limitations = ["本状态仅表示通过自动门禁，仍须人工审阅，不能视为最终开题。"]
+        if not constraint_alignment["valid"]:
+            limitations.append("约束对齐审计未通过：" + "；".join(constraint_alignment["errors"][:5]))
+        if repetition.get("flagged"):
+            limitations.append(f"跨节重复度偏高（{repetition.get('rate')}），建议人工压缩复用表述。")
         if arena_note:
             limitations.append(arena_note)
         return ProposalResult(
@@ -506,6 +533,8 @@ class DeepSeekProposalGenerationProvider:
                 "constraint_gate_passed": True, "constraints_confirmed": True,
                 "blueprint_confirmed": True, "outline_confirmed": True,
                 "task_card_audit": task_cards["audit"],
+                "constraint_alignment_audit": constraint_alignment,
+                "cross_section_repetition": repetition,
                 "arena_review": arena_review,
                 "model_calls": len(model_audits), "models": model_audits,
                 "duration_ms": round((time.monotonic() - started) * 1000, 2),

@@ -8,21 +8,25 @@ from __future__ import annotations
 
 import json
 
-PROPOSAL_ARENA_VERSION = "p4-athlete-judge-review-1.0.0"
+PROPOSAL_ARENA_VERSION = "p4-athlete-judge-review-1.1.0"
 BASE_HIGH_RISK_SECTIONS = ("literature_status", "theoretical_framework", "research_design")
 MIN_CITATIONS_BEFORE_RISK = 2
 SCORE_MIN, SCORE_MAX = 0, 10
 
 REVIEWER_A_SYSTEM = """你是开题报告评审员A（证据锚定视角）。针对给出的章节内容与引用信息，只评估：
 1) 事实性论断是否都有Claim支持（evidence_grounding）；
-2) 是否引入了证据边界之外的断言（overreach）。
+2) 是否引入了证据边界之外的断言（overreach）；
+3) 同一Claim是否被用于支撑方向相反或明显不同的结论（claim_overstretch）；
+4) 可行性/伦理表述是否比确认约束原文更强更满（overconfident_claims，如"伦理风险极低"）；未显式标注"理论推演/待验证"的超出证据命题计入issues。
 输出JSON对象，格式为：
 {"reviews":[{"section_id":"research_design","score":0到10整数,"issues":["具体问题"]}],"overall":{"score":0到10整数,"summary":"一句话总评"}}
 硬性规则：只评审给出的章节；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""
 
 REVIEWER_B_SYSTEM = """你是开题报告评审员B（逻辑与设计视角）。针对给出的章节内容与研究设计蓝图，只评估：
 1) 章节之间与蓝图的一致性（coherence）；
-2) 研究问题—理论—方法—数据链条是否闭合（design_soundness）。
+2) 研究问题—理论—方法—数据链条是否闭合（design_soundness）；
+3) 因果识别策略是否闭合（identification_closure：凡声称DID/实验等，必须有处理组、对照组、时点、结果变量与识别假设，否则计入issues）；
+4) 超出已确认蓝图的理论与变量是否显式标注为扩展假设（theory_drift，未标注计入issues）。
 输出JSON对象，格式为：
 {"reviews":[{"section_id":"research_design","score":0到10整数,"issues":["具体问题"]}],"overall":{"score":0到10整数,"summary":"一句话总评"}}
 硬性规则：只评审给出的章节；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""

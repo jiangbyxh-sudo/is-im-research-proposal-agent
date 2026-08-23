@@ -68,7 +68,7 @@ class HighRiskSelectionTests(unittest.TestCase):
 class ArenaReviewTests(unittest.TestCase):
     def test_honest_review_passes_and_records_verdicts(self):
         review = ProposalArenaReviewer(ArenaClient()).review("RQ?", SECTIONS)
-        self.assertEqual("p4-athlete-judge-review-1.0.0", review["version"])
+        self.assertEqual("p4-athlete-judge-review-1.1.0", review["version"])
         self.assertEqual([], review["revise_section_ids"])
         self.assertEqual("pass", review["overall_verdict"])
         self.assertTrue(review["scope"])
