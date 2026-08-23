@@ -90,11 +90,27 @@ def confirmed_constraints():
     }
 
 
+class StubArenaReviewer:
+    """离线竞技场评审桩：不发起模型调用，返回全部通过的受控评审。"""
+
+    def review(self, blueprint_rq, sections):
+        scope = [s["section_id"] for s in sections if s.get("section_id") in ("literature_status", "theoretical_framework", "research_design")]
+        return {
+            "version": "p4-athlete-judge-review-1.0.0",
+            "scope": scope,
+            "reviewer_a": {**{sid: {"score": 9, "issues": []} for sid in scope}, "__overall__": {"score": 9, "summary": "受控评审"}},
+            "reviewer_b": {**{sid: {"score": 9, "issues": []} for sid in scope}, "__overall__": {"score": 9, "summary": "受控评审"}},
+            "judge": {**{sid: {"verdict": "pass", "final_score": 9, "reason": "受控"} for sid in scope}, "__overall__": {"verdict": "pass", "score": 9, "reason": "受控"}},
+            "revise_section_ids": [],
+            "overall_verdict": "pass",
+        }
+
+
 class ProposalProviderTests(unittest.TestCase):
     def test_constraints_and_plan_must_be_confirmed_before_section_generation(self):
         papers, gap, claim_store = controlled_context()
         client = SectionClient()
-        engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT)
+        engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT, arena_reviewer=StubArenaReviewer())
         request = provider_module.ProposalRequest(
             research_direction="AI-enabled information systems", fine_grained_question=None,
             selected_gap=gap, selected_innovation_id="innovation_1",

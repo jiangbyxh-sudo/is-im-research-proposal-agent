@@ -10,6 +10,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Protocol
 
+from proposal_arena_review import ProposalArenaReviewer
 from proposal_workflow_controls import (
     build_execution_task_cards,
     build_proposal_outline,
@@ -243,9 +244,10 @@ def _blueprint_matches(expected: ResearchDesignBlueprint, supplied: dict | None)
 
 
 class DeepSeekProposalGenerationProvider:
-    def __init__(self, client: DeepSeekJsonClient, kb_root: Path):
+    def __init__(self, client: DeepSeekJsonClient, kb_root: Path, arena_reviewer=None):
         self.client = client
         self.kb_root = kb_root
+        self.arena_reviewer = arena_reviewer or ProposalArenaReviewer(client)
 
     @staticmethod
     def _section_system_prompt() -> str:
@@ -468,6 +470,19 @@ class DeepSeekProposalGenerationProvider:
             and not generation_errors
         )
         status = "READY_FOR_HUMAN_REVIEW" if all_gates else "PROPOSAL_CONTROLLED_PARTIAL"
+        arena_review: dict = {}
+        arena_note = ""
+        if sections:
+            try:
+                arena_review = self.arena_reviewer.review(blueprint.research_question, sections)
+            except Exception as exc:
+                arena_review = {"version": "p4-athlete-judge-review-1.0.0", "error": f"{type(exc).__name__}: {exc}"}
+                arena_note = "高风险章节竞技场评审失败，不影响既定审计结论；建议人工复核时补评。"
+            if arena_review.get("revise_section_ids"):
+                arena_note = "竞技场评审建议修订以下章节：" + "、".join(arena_review["revise_section_ids"]) + "；裁决供人工复核参考，不自动改稿。"
+        limitations = ["本状态仅表示通过自动门禁，仍须人工审阅，不能视为最终开题。"]
+        if arena_note:
+            limitations.append(arena_note)
         return ProposalResult(
             status=status,
             proposal={
@@ -482,14 +497,16 @@ class DeepSeekProposalGenerationProvider:
                 "outline_id": outline["outline_id"], "constraint_hash": blueprint.constraint_hash,
                 "checkpoint": "HUMAN_REVIEW", "gate_passed": all_gates,
                 "release_ceiling": "READY_FOR_HUMAN_REVIEW",
+                "arena_overall_verdict": arena_review.get("overall_verdict", ""),
             },
-            limitations=["本状态仅表示通过自动门禁，仍须人工审阅，不能视为最终开题。"],
+            limitations=limitations,
             audit={
                 "version": PROPOSAL_CONTROL_VERSION, "claim_audit": claim_audit, "citation_audit": citation_audit,
                 "cross_section_consistency_matrix": consistency_matrix, "generation_errors": generation_errors,
                 "constraint_gate_passed": True, "constraints_confirmed": True,
                 "blueprint_confirmed": True, "outline_confirmed": True,
                 "task_card_audit": task_cards["audit"],
+                "arena_review": arena_review,
                 "model_calls": len(model_audits), "models": model_audits,
                 "duration_ms": round((time.monotonic() - started) * 1000, 2),
             },

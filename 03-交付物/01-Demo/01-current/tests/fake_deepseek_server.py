@@ -28,6 +28,10 @@ class Handler(BaseHTTPRequestHandler):
             content = self.gap_candidate_content(messages)
         elif "研究空白候选裁判" in system_prompt:
             content = self.gap_judge_content(messages)
+        elif "开题报告评审员A" in system_prompt or "开题报告评审员B" in system_prompt:
+            content = self.arena_reviewer_content(messages)
+        elif "开题报告评审裁判" in system_prompt:
+            content = self.arena_judge_content(messages)
         elif "受控开题报告逐节生成器" in system_prompt:
             content = self.controlled_section_content(messages)
         elif "开题报告与写作指导生成器" in system_prompt:
@@ -136,6 +140,26 @@ class Handler(BaseHTTPRequestHandler):
             {"selection_id": item["selection_id"], "reason": "受控裁判理由，仅供界面验收"}
             for item in candidates[:1]
         ]}, ensure_ascii=False)
+
+    @staticmethod
+    def arena_reviewer_content(messages):
+        # 受控评审员：对给出章节打分，不改写内容。
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        scope = [row["section_id"] for row in payload.get("sections", [])]
+        return json.dumps({
+            "reviews": [{"section_id": sid, "score": 8, "issues": []} for sid in scope],
+            "overall": {"score": 8, "summary": "受控评审，仅供界面验收。"},
+        }, ensure_ascii=False)
+
+    @staticmethod
+    def arena_judge_content(messages):
+        # 受控评审裁判：全部pass，仅用于界面验收。
+        payload = json.loads(messages[1]["content"]) if len(messages) > 1 else {}
+        scope = [row["section_id"] for row in payload.get("sections", [])]
+        return json.dumps({
+            "verdicts": [{"section_id": sid, "verdict": "pass", "final_score": 8, "reason": "受控裁决"} for sid in scope],
+            "overall": {"verdict": "pass", "score": 8, "reason": "受控裁决，仅供界面验收。"},
+        }, ensure_ascii=False)
 
     @staticmethod
     def synthesis_content():
