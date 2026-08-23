@@ -25,6 +25,23 @@ JOURNAL_REGISTRY_PATH = KB_ROOT / "02_journals/generated/journal_registry.json"
 PROVIDER_DIR = KB_ROOT / "11_implementation"
 STATIC_DIR = APP_DIR / "static"
 KB_VERSION = "0.4.1"
+# D039：P1生产标志解锁依据=v3盲审四门禁全过（2026-08-23）。历史NOT ACCEPTED不改写；
+# 依据文件变更或复测失败时，本标志必须回退为False并更新证据引用。
+P1_PRECISION_GATE = {
+    "passed": True,
+    "summary": {
+        "status": "RERANK_CALIBRATED",
+        "calibrated_on": "2026-08-23",
+        "overall_precision_at_10": 0.8814,
+        "weakest_group_precision": 0.7778,
+        "obvious_false_positive_rate": 0.0169,
+        "labeled_rows": 60,
+        "reranker_version": "p1-directness-reranker-2.1.0",
+        "profile_version": "1.2.0-p1-retrieval",
+        "evidence": "04-分析/01-current/P1精排校准返修/p1_sampled_precision_result.json",
+        "decision": "D039",
+    },
+}
 SYNTHESIS_JOB_TTL_SECONDS = 30 * 60
 SYNTHESIS_JOB_LIMIT = 20
 SYNTHESIS_JOBS: dict[str, tuple[float, SynthesisRequest]] = {}
@@ -458,6 +475,8 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
             fine_grained_question=fine_question,
             derived_path=derived_path,
             papers=tuple(corpus),
+            p1_precision_gate_passed=P1_PRECISION_GATE["passed"],
+            p1_precision_summary=dict(P1_PRECISION_GATE["summary"]),
         )
         if run_synthesis:
             synthesis = (synthesis_provider or build_research_synthesis_provider()).synthesize(synthesis_request)

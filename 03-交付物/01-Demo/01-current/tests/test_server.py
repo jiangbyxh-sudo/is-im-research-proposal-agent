@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import os
 import unittest
 from pathlib import Path
@@ -208,6 +209,22 @@ class ServerTests(unittest.TestCase):
                 "selected_gap_id": "g1",
                 "selected_innovation_id": "g1_innovation_1",
             }, SimpleNamespace())
+
+    def test_p1_gate_unlock_references_real_v3_evidence(self):
+        gate = server.P1_PRECISION_GATE
+        self.assertTrue(gate["passed"])
+        summary = gate["summary"]
+        # 解锁必须锚定D039与v3盲审实测值；证据文件必须真实存在。
+        self.assertEqual("D039", summary["decision"])
+        self.assertGreaterEqual(summary["overall_precision_at_10"], 0.80)
+        self.assertGreaterEqual(summary["weakest_group_precision"], 0.70)
+        self.assertLessEqual(summary["obvious_false_positive_rate"], 0.10)
+        self.assertEqual(60, summary["labeled_rows"])
+        evidence = server.WORKSPACE / summary["evidence"]
+        self.assertTrue(evidence.exists(), f"missing evidence file: {evidence}")
+        result = json.loads(evidence.read_text(encoding="utf-8"))
+        self.assertTrue(result["passed"])
+        self.assertAlmostEqual(summary["overall_precision_at_10"], result["overall_precision_at_10"], places=4)
 
     def test_phase_e_ui_exposes_all_confirmations_and_audit_panels(self):
         static = SERVER_PATH.parent / "static"
