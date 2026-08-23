@@ -1,0 +1,27 @@
+[
+  {
+    "case": "fixed_qualified_35",
+    "mode": "honest",
+    "status": "SYNTHESIS_COMPLETE",
+    "paper_count": 35,
+    "subdirection_count": 5,
+    "formal_gap_count": 5,
+    "claim_count": 10,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [],
+    "gap_audit": {
+      "candidate_count": 5,
+      "formal_gap_count": 5,
+      "rejected_count": 0,
+      "rejected": []
+    },
+    "matrix": {
+      "matrix_hash": "87d1adfb9d5876e8ca87383a7d0846ddcc253287d00c882b1904ce9adfac83cd",
+      "paper_count": 35,
+      "formal_evidence_paper_count": 35,
+      "span_count": 35
+    },
+    "model_calls": 18
+  }
+]

@@ -37,15 +37,22 @@ FIXTURE_PORT = int(os.getenv("ACCEPTANCE_FIXTURE_PORT", "18765"))
 APP_PORT = int(os.getenv("ACCEPTANCE_APP_PORT", "8791"))
 
 # 受控夹具论文：标题与摘要均声明为界面验收数据，不得作为真实检索结果引用。
+# 35篇、5个语义组、全摘要——满足P2语料门禁，使真实synthesis链路可在浏览器内运行。
+_FIXTURE_GROUPS = [
+    "platform governance regulation openness",
+    "algorithm recommendation personalization consumer",
+    "trust artificial intelligence transparency human",
+    "knowledge sharing community collaboration wiki",
+    "privacy disclosure concern personal data",
+]
 FIXTURE_PAPERS = [
     {
         "paper_id": f"P{index:03d}",
-        "title": f"Controlled fixture paper {index} for browser acceptance only",
+        "title": f"Controlled fixture {group.split()[0]} study {index} for browser acceptance only",
         "abstract": (
-            "This abstract is controlled fixture text for interface acceptance. "
-            f"Fixture sentence {index}a describes an observed pattern in fixture data. "
-            f"Fixture sentence {index}b reports a measured effect in fixture data. "
-            "No claim here may be cited as a research finding."
+            f"We examine {group} in context {index} with measurable findings. "
+            "This abstract is controlled fixture text for interface acceptance; "
+            "no claim here may be cited as a research finding."
         ),
         "journal": "Controlled Fixture Journal",
         "year": 2025,
@@ -55,7 +62,8 @@ FIXTURE_PAPERS = [
         "terminal_status": "eligible",
         "relevance_score": 80,
     }
-    for index in range(1, 7)
+    for index in range(1, 36)
+    for group in [_FIXTURE_GROUPS[(index - 1) // 7]]
 ]
 
 
@@ -145,6 +153,15 @@ class FixtureSynthesisProvider:
         )
 
 
+class FixtureSynthesisProvider:
+    """Deprecated D037 bridge; retained only as documentation of the old path.
+
+    The harness now runs the REAL synthesis provider (deterministic clustering
+    + arena naming + athlete/judge gap candidates) against the controlled
+    fake DeepSeek server, so the browser exercises production code end to end.
+    """
+
+
 def main() -> None:
     os.environ["DEEPSEEK_API_KEY"] = "controlled-fixture-key"
     os.environ["DEEPSEEK_BASE_URL"] = f"http://127.0.0.1:{FIXTURE_PORT}"
@@ -155,7 +172,7 @@ def main() -> None:
     assert spec.loader
     spec.loader.exec_module(server)
     server.build_dynamic_provider = lambda: FixtureDiscoveryProvider()
-    server.build_research_synthesis_provider = lambda: FixtureSynthesisProvider()
+    # synthesis 不再打补丁：真实 provider + 受控fake服务器（T05起主链自带空白流水线）。
 
     fake_spec = importlib.util.spec_from_file_location("fake_deepseek_server", TESTS_DIR / "fake_deepseek_server.py")
     fake_server = importlib.util.module_from_spec(fake_spec)

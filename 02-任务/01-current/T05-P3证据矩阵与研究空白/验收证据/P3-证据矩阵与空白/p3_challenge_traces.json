@@ -1,0 +1,131 @@
+[
+  {
+    "case": "challenge_forged_support_span",
+    "mode": "forge_span",
+    "status": "SYNTHESIS_COMPLETE",
+    "paper_count": 35,
+    "subdirection_count": 5,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。"
+    ],
+    "gap_audit": {
+      "candidate_count": 0,
+      "formal_gap_count": 0,
+      "rejected_count": 0,
+      "rejected": []
+    },
+    "matrix": {
+      "matrix_hash": "87d1adfb9d5876e8ca87383a7d0846ddcc253287d00c882b1904ce9adfac83cd",
+      "paper_count": 35,
+      "formal_evidence_paper_count": 35,
+      "span_count": 35
+    },
+    "model_calls": 13
+  },
+  {
+    "case": "challenge_single_paper_support",
+    "mode": "single_paper_support",
+    "status": "SYNTHESIS_COMPLETE",
+    "paper_count": 35,
+    "subdirection_count": 5,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。"
+    ],
+    "gap_audit": {
+      "candidate_count": 5,
+      "formal_gap_count": 0,
+      "rejected_count": 5,
+      "rejected": [
+        {
+          "candidate_id": "candidate_001",
+          "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+        },
+        {
+          "candidate_id": "candidate_002",
+          "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+        },
+        {
+          "candidate_id": "candidate_003",
+          "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+        },
+        {
+          "candidate_id": "candidate_004",
+          "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+        },
+        {
+          "candidate_id": "candidate_005",
+          "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+        }
+      ]
+    },
+    "matrix": {
+      "matrix_hash": "87d1adfb9d5876e8ca87383a7d0846ddcc253287d00c882b1904ce9adfac83cd",
+      "paper_count": 35,
+      "formal_evidence_paper_count": 35,
+      "span_count": 35
+    },
+    "model_calls": 18
+  },
+  {
+    "case": "challenge_judge_selects_none",
+    "mode": "judge_none",
+    "status": "SYNTHESIS_COMPLETE",
+    "paper_count": 35,
+    "subdirection_count": 5,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。"
+    ],
+    "gap_audit": {
+      "candidate_count": 0,
+      "formal_gap_count": 0,
+      "rejected_count": 0,
+      "rejected": []
+    },
+    "matrix": {
+      "matrix_hash": "87d1adfb9d5876e8ca87383a7d0846ddcc253287d00c882b1904ce9adfac83cd",
+      "paper_count": 35,
+      "formal_evidence_paper_count": 35,
+      "span_count": 35
+    },
+    "model_calls": 18
+  },
+  {
+    "case": "challenge_fabricated_counterevidence_span",
+    "mode": "fabricated_paper",
+    "status": "SYNTHESIS_COMPLETE",
+    "paper_count": 35,
+    "subdirection_count": 5,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。"
+    ],
+    "gap_audit": {
+      "candidate_count": 0,
+      "formal_gap_count": 0,
+      "rejected_count": 0,
+      "rejected": []
+    },
+    "matrix": {
+      "matrix_hash": "87d1adfb9d5876e8ca87383a7d0846ddcc253287d00c882b1904ce9adfac83cd",
+      "paper_count": 35,
+      "formal_evidence_paper_count": 35,
+      "span_count": 35
+    },
+    "model_calls": 13
+  }
+]
