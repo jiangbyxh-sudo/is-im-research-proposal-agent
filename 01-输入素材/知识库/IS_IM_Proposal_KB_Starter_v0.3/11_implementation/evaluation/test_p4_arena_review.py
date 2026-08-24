@@ -58,17 +58,36 @@ class HighRiskSelectionTests(unittest.TestCase):
         self.assertEqual(first, again)  # 同输入同序
         reversed_set = set(select_high_risk_sections(list(reversed(SECTIONS))))
         self.assertEqual(set(first), reversed_set)  # 集合与输入顺序无关
-        # 固定高风险节 + 带假设的节 + 引用<2的节
-        for expected in ("literature_status", "theoretical_framework", "research_design", "working_title", "background", "timeline"):
-            self.assertIn(expected, first)
+        # 固定高风险节优先入选；范围确定性截断至5节
+        self.assertEqual(
+            ["literature_status", "theoretical_framework", "research_design", "working_title", "background"],
+            first,
+        )
         # 引用≥2、无假设、非固定高风险的节不入选
-        self.assertNotEqual(set(first), {s["section_id"] for s in SECTIONS})
+        self.assertNotIn("concepts", first)
+        # 截断后超出名额的风险节（timeline）被移出范围
+        self.assertNotIn("timeline", first)
+
+    def test_scope_is_capped_when_all_sections_are_risky(self):
+        # 真实运行回归：11节全带假设/引用充足时范围曾被扩到10节导致评审员覆盖不全
+        sections = [
+            {"section_id": sid, "title": sid, "content": "内容", "citations": [{"c": i} for i in range(5)], "assumptions": [f"a{i}" for i in range(3)]}
+            for sid in ("working_title", "background", "concepts", "literature_status", "selected_gap",
+                        "research_questions", "theoretical_framework", "research_design", "contributions",
+                        "feasibility_ethics", "timeline")
+        ]
+        scope = select_high_risk_sections(sections)
+        self.assertLessEqual(len(scope), 5)
+        self.assertEqual(["literature_status", "theoretical_framework", "research_design"], scope[:3])
+        # 同风险度时按section_id字典序截断，且与输入顺序无关
+        self.assertEqual(["background", "concepts"], scope[3:])
+        self.assertEqual(scope, select_high_risk_sections(list(reversed(sections))))
 
 
 class ArenaReviewTests(unittest.TestCase):
     def test_honest_review_passes_and_records_verdicts(self):
         review = ProposalArenaReviewer(ArenaClient()).review("RQ?", SECTIONS)
-        self.assertEqual("p4-athlete-judge-review-1.1.0", review["version"])
+        self.assertEqual("p4-athlete-judge-review-1.2.0", review["version"])
         self.assertEqual([], review["revise_section_ids"])
         self.assertEqual("pass", review["overall_verdict"])
         self.assertTrue(review["scope"])

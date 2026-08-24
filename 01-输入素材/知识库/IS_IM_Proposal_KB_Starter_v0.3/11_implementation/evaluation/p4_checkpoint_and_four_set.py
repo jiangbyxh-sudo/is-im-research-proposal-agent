@@ -11,7 +11,7 @@ IMPLEMENTATION = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(IMPLEMENTATION))
 
 import proposal_generation_provider as pgp  # noqa: E402
-from proposal_arena_review import ProposalArenaReviewer  # noqa: E402
+from proposal_arena_review import PROPOSAL_ARENA_VERSION, ProposalArenaReviewer  # noqa: E402
 from evidence_matrix import build_evidence_matrix  # noqa: E402
 from research_gap_provider import EvidenceBoundResearchGapProvider, ResearchGapRequest  # noqa: E402
 
@@ -173,7 +173,7 @@ def main() -> int:
     }
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "arena_version": "p4-athlete-judge-review-1.0.0",
+        "arena_version": PROPOSAL_ARENA_VERSION,
         "runs": {run["mode"]: {k: v for k, v in run.items() if k != "checkpoints"} for run in (fixed, holdout, challenge_bad, challenge_smuggle)},
         "checkpoint_definitions": "empty_constraints_blocked / constraint_confirmation_gate / plan_confirmation_gate / section:<11节> / claim / citation / consistency / task_card / arena",
         "gates": gates,

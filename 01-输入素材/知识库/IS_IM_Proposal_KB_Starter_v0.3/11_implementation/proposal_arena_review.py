@@ -8,9 +8,10 @@ from __future__ import annotations
 
 import json
 
-PROPOSAL_ARENA_VERSION = "p4-athlete-judge-review-1.1.0"
+PROPOSAL_ARENA_VERSION = "p4-athlete-judge-review-1.2.0"
 BASE_HIGH_RISK_SECTIONS = ("literature_status", "theoretical_framework", "research_design")
 MIN_CITATIONS_BEFORE_RISK = 2
+MAX_ARENA_SCOPE_SECTIONS = 5
 SCORE_MIN, SCORE_MAX = 0, 10
 
 REVIEWER_A_SYSTEM = """你是开题报告评审员A（证据锚定视角）。针对给出的章节内容与引用信息，只评估：
@@ -20,7 +21,7 @@ REVIEWER_A_SYSTEM = """你是开题报告评审员A（证据锚定视角）。�
 4) 可行性/伦理表述是否比确认约束原文更强更满（overconfident_claims，如"伦理风险极低"）；未显式标注"理论推演/待验证"的超出证据命题计入issues。
 输出JSON对象，格式为：
 {"reviews":[{"section_id":"research_design","score":0到10整数,"issues":["具体问题"]}],"overall":{"score":0到10整数,"summary":"一句话总评"}}
-硬性规则：只评审给出的章节；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""
+硬性规则：只评审给出的章节；reviews数组必须逐一覆盖传入的每一个section_id、每个恰好出现一次，不得遗漏或重复；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""
 
 REVIEWER_B_SYSTEM = """你是开题报告评审员B（逻辑与设计视角）。针对给出的章节内容与研究设计蓝图，只评估：
 1) 章节之间与蓝图的一致性（coherence）；
@@ -29,29 +30,40 @@ REVIEWER_B_SYSTEM = """你是开题报告评审员B（逻辑与设计视角）�
 4) 超出已确认蓝图的理论与变量是否显式标注为扩展假设（theory_drift，未标注计入issues）。
 输出JSON对象，格式为：
 {"reviews":[{"section_id":"research_design","score":0到10整数,"issues":["具体问题"]}],"overall":{"score":0到10整数,"summary":"一句话总评"}}
-硬性规则：只评审给出的章节；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""
+硬性规则：只评审给出的章节；reviews数组必须逐一覆盖传入的每一个section_id、每个恰好出现一次，不得遗漏或重复；不得输出改写文本、建议正文或paper_ids；score必须是0到10的整数。"""
 
 JUDGE_SYSTEM = """你是开题报告评审裁判。依据章节内容与两份匿名评审（candidate_1与candidate_2，来源未知），对每个高风险章节和总体给出最终裁决。
 输出JSON对象，格式为：
 {"verdicts":[{"section_id":"research_design","verdict":"pass或revise","final_score":0到10整数,"reason":"一句话理由"}],"overall":{"verdict":"pass或revise","score":0到10整数,"reason":"一句话理由"}}
-硬性规则：verdict只能是pass或revise；不得改写评审或正文；不得输出paper_ids；final_score必须是0到10的整数。"""
+硬性规则：verdict只能是pass或revise；verdicts数组必须逐一覆盖传入的每一个section_id、每个恰好出现一次；不得改写评审或正文；不得输出paper_ids；final_score必须是0到10的整数。"""
 
 
 def select_high_risk_sections(sections: list[dict]) -> list[str]:
-    """Deterministic scope: fixed high-stakes sections + assumption/citation risk."""
-    selected: list[str] = []
+    """Deterministic scope: fixed high-stakes sections + assumption/citation risk.
+
+    Scope is capped at MAX_ARENA_SCOPE_SECTIONS so reviewers can cover every
+    scoped section exactly once. Priority: BASE sections in fixed order first,
+    then remaining risky sections by (fewest citations, most assumptions,
+    section_id). Selection is invariant to input ordering.
+    """
+    risky: list[tuple[int, int, str]] = []
     for section in sections:
         section_id = str(section.get("section_id") or "")
         citations = section.get("citations") or []
         assumptions = section.get("assumptions") or []
-        risky = (
+        is_risky = (
             section_id in BASE_HIGH_RISK_SECTIONS
             or bool(assumptions)
             or len(citations) < MIN_CITATIONS_BEFORE_RISK
         )
-        if section_id and risky:
-            selected.append(section_id)
-    return list(dict.fromkeys(selected))
+        if section_id and is_risky:
+            risky.append((len(citations), -len(assumptions), section_id))
+    selected = [sid for sid in BASE_HIGH_RISK_SECTIONS if any(row[2] == sid for row in risky)]
+    for _, _, section_id in sorted(row for row in risky if row[2] not in selected):
+        if len(selected) >= MAX_ARENA_SCOPE_SECTIONS:
+            break
+        selected.append(section_id)
+    return selected[:MAX_ARENA_SCOPE_SECTIONS]
 
 
 def _valid_score(value: object) -> bool:

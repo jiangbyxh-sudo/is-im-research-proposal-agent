@@ -182,13 +182,37 @@ def build_execution_task_cards(blueprint: dict, outline: dict, claim_store: dict
     }
 
 
-CONSTRAINT_ALIGNMENT_VERSION = "phase-e-constraint-alignment-1.1.0"
+CONSTRAINT_ALIGNMENT_VERSION = "phase-e-constraint-alignment-1.2.0"
 MIN_SECTION_WORD_RATIO = 0.4
 MIN_CHECKABLE_TARGET_WORDS = 100
 REPETITION_NGRAM = 8
 REPETITION_FLAG_THRESHOLD = 0.10
 
 _HUMAN_SUBJECT_TERMS = ("访谈", "采访", "被试", "interview", "焦点小组", "问卷发放")
+_NEGATION_MARKERS = ("不", "未", "无", "没有", "无需", "并非", "不得", "排除", "避免")
+_SECONDARY_SCOPE_QUALIFIERS = ("二手", "已发表", "公开报道", "secondary")
+_SENTENCE_SPLIT = "。！？\n"
+
+
+def _sentence_has_affirmative_human_subject_term(sentence: str) -> bool:
+    """True when a human-subject term appears outside negation/secondary scope.
+
+    否定句（如"不涉及人类被试"）与同句明确限定为二手来源的表述（如"访谈仅
+    作为二手资料的可能来源"）不构成口径矛盾；只有未被否定且无二手限定的
+    肯定式提及才算违约。
+    """
+    qualified = any(marker in sentence for marker in _SECONDARY_SCOPE_QUALIFIERS)
+    for term in _HUMAN_SUBJECT_TERMS:
+        start = 0
+        while True:
+            index = sentence.find(term, start)
+            if index < 0:
+                break
+            window = sentence[max(0, index - 8):index]
+            if not any(marker in window for marker in _NEGATION_MARKERS) and not qualified:
+                return True
+            start = index + len(term)
+    return False
 
 
 def audit_constraint_alignment(
@@ -200,10 +224,11 @@ def audit_constraint_alignment(
     """Deterministic post-generation check of the rubric's hard findings.
 
     Catches what structural audits cannot: timeline beyond the confirmed
-    deadline, ignored per-section word budgets, and data-scope statements that
-    contradict the confirmed ethics/data constraints.
+    deadline or backdated before today, ignored per-section word budgets, and
+    data-scope statements that contradict the confirmed ethics/data constraints.
     """
     from datetime import date as _date
+    import re as _re
 
     errors: list[str] = []
     section_map = {str(s.get("section_id") or ""): s for s in sections}
@@ -218,13 +243,24 @@ def audit_constraint_alignment(
         except ValueError:
             deadline_year = None
         if deadline_year is not None:
-            for year in {int(v) for v in __import__("re").findall(r"(20\d{2})", timeline_text)}:
+            for year in {int(v) for v in _re.findall(r"(20\d{2})", timeline_text)}:
                 if year > deadline_year:
                     errors.append(f"timeline_year_{year}_beyond_deadline_{deadline_year}")
             months_left = max(0, (_date.fromisoformat(deadline) - today_value).days // 30)
-            for months in (int(v) for v in __import__("re").findall(r"(?<!年)(\d{1,2})\s*个月", timeline_text)):
+            for months in (int(v) for v in _re.findall(r"(?<!年)(\d{1,2})\s*个月", timeline_text)):
                 if months_left <= 24 and months > months_left:
                     errors.append(f"timeline_duration_{months}m_exceeds_{months_left}m_to_deadline")
+
+    # 1a-2) timeline 起点不得回溯到今天之前：防止模型把启动日期写进过去来
+    # 拉长总周期（如"自2025年1月启动"绕过剩余时长检查）。
+    for match in _re.finditer(r"(20\d{2})年(\d{1,2})月", timeline_text):
+        start_year, start_month = int(match.group(1)), int(match.group(2))
+        if (start_year, start_month) < (today_value.year, today_value.month):
+            errors.append(
+                f"timeline_start_{start_year}-{start_month:02d}_before_today_"
+                f"{today_value.year}-{today_value.month:02d}"
+            )
+            break
 
     # 1b) 各节字数不低于提纲分配的 MIN_SECTION_WORD_RATIO。
     for spec in outline.get("sections", []):
@@ -235,21 +271,23 @@ def audit_constraint_alignment(
         if len(content) < target * MIN_SECTION_WORD_RATIO:
             errors.append(f"{spec.get('section_id')}:words_{len(content)}_below_{int(target * MIN_SECTION_WORD_RATIO)}")
 
-    # 1c) 数据口径：约束声明纯公开/二手且不含人类被试时，正文不得出现访谈类表述。
+    # 1c) 数据口径：约束声明纯公开/二手且不含人类被试时，正文不得出现未被
+    # 否定且无二手限定的访谈类肯定式表述（否定句不计入违约）。
     data_scope = f"{user_constraints.get('data_access', '')}{user_constraints.get('ethics_privacy', '')}"
     scope_declares_public_only = ("公开" in data_scope or "二手" in data_scope) and ("不涉及人类被试" in data_scope or "不涉及" in data_scope)
     scope_allows_interview = "访谈" in data_scope or "interview" in data_scope.lower()
     if scope_declares_public_only and not scope_allows_interview:
         for section_id, section in section_map.items():
             content = str(section.get("content") or "")
-            if any(term in content for term in _HUMAN_SUBJECT_TERMS):
+            sentences = [s for s in _re.split(f"[{_re.escape(_SENTENCE_SPLIT)}]", content) if s]
+            if any(_sentence_has_affirmative_human_subject_term(s) for s in sentences):
                 errors.append(f"{section_id}:human_subject_term_contradicts_public_only_scope")
 
     return {
         "version": CONSTRAINT_ALIGNMENT_VERSION,
         "valid": not errors,
         "errors": errors,
-        "checks": ["timeline_vs_deadline", "section_words_vs_outline", "data_scope_consistency"],
+        "checks": ["timeline_vs_deadline", "timeline_start_not_before_today", "section_words_vs_outline", "data_scope_consistency"],
     }
 
 

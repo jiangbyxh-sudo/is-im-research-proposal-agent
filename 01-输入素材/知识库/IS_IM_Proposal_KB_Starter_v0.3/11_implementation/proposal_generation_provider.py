@@ -7,11 +7,14 @@ import os
 import re
 import time
 from dataclasses import asdict, dataclass, field
+from datetime import date
 from pathlib import Path
 from typing import Protocol
 
-from proposal_arena_review import ProposalArenaReviewer
+from proposal_arena_review import PROPOSAL_ARENA_VERSION, ProposalArenaReviewer
 from proposal_workflow_controls import (
+    MIN_CHECKABLE_TARGET_WORDS,
+    MIN_SECTION_WORD_RATIO,
     audit_constraint_alignment,
     build_execution_task_cards,
     build_proposal_outline,
@@ -46,7 +49,7 @@ PARADIGM_LABELS = {
     "computational_text_network": "计算文本、机器学习与网络分析", "analytical_modeling": "分析建模、博弈论与机制设计",
     "design_science": "设计科学",
 }
-PROPOSAL_CONTROL_VERSION = "p4-controlled-proposal-1.1.0"
+PROPOSAL_CONTROL_VERSION = "p4-controlled-proposal-1.3.0"
 
 
 @dataclass(frozen=True)
@@ -258,11 +261,18 @@ class DeepSeekProposalGenerationProvider:
 本节唯一事实来源是用户消息中的Claim Store；不得使用外部知识、原始论文列表或自造引用。
 所有事实性论断必须由claim_ids支持。不得改变ResearchDesignBlueprint、已确认用户约束或提纲。
 硬性规则（违反即拒）：
-1. 字数：本节content长度必须达到section_spec.target_words的六成以上；
+1. 字数：本节content长度必须达到length_rule给出的硬性下限，并以target_words为目标；若收到length_feedback，说明上一版字数不足，必须扩写达标；
 2. 约束：一切时间计划必须落在已确认截止时间之前；数据与伦理表述必须与用户约束原文一致，不得出现与约束冲突的口径（如约束为纯公开/二手数据时不得写访谈、被试或问卷发放），可行性/伦理表述不得比约束原文更强（如不得写"伦理风险极低"）；
 3. 外推：超出claim_ids直接支持范围的命题、假设或机制推演，必须在assumptions中列出或显式标注为"理论推演（待验证）"；同一claim不得被用于支撑方向相反的结论；
 4. 方法：凡声称DID、实验或任何因果识别，content必须明确处理组与对照组、处理时点、结果变量和识别假设关注点；数据结构不支持时降低其核心地位；
 5. 重复：不得复用其他节已有的成段表述或句式，各节信息应有分工。"""
+
+    @staticmethod
+    def _section_length_floor(section_spec: dict) -> int:
+        target = int(section_spec.get("target_words") or 0)
+        if target < MIN_CHECKABLE_TARGET_WORDS:
+            return 0
+        return int(target * MIN_SECTION_WORD_RATIO)
 
     def _generate_section(
         self,
@@ -271,6 +281,7 @@ class DeepSeekProposalGenerationProvider:
         outline: dict,
         claims: dict[str, dict],
         user_constraints: dict | None = None,
+        length_feedback: str = "",
     ) -> tuple[dict, dict]:
         section_id = section_spec["section_id"]
         title = section_spec["title"]
@@ -281,13 +292,23 @@ class DeepSeekProposalGenerationProvider:
             if (user_constraints or {}).get(key)
         }
         timeline_rule = (
-            "本节是研究计划：所有阶段必须全部落在截止时间之前完成，写出具体月份区间；字数按target_words执行。"
+            f"本节是研究计划：今天是{date.today().isoformat()}；所有阶段必须从今天之后开始，"
+            "严禁把启动日期回溯到过去的任何年月（如自2025年启动属于违规）；"
+            "全部阶段必须落在截止时间之前完成并写出具体月份区间；字数按target_words执行。"
             if section_id == "timeline" else ""
+        )
+        floor = self._section_length_floor(section_spec)
+        length_rule = (
+            f"字数硬性要求：本节content长度不得低于{floor}字符，目标{section_spec.get('target_words')}字符；"
+            f"低于{floor}字符即拒。"
+            if floor else ""
         )
         payload = {
             "task": "仅生成一个开题报告章节",
             "confirmed_user_constraints": constraints_digest,
             "timeline_rule": timeline_rule,
+            "length_rule": length_rule,
+            "length_feedback": length_feedback,
             "section_spec": section_spec,
             "research_design_blueprint": blueprint.as_dict(),
             "proposal_outline": {
@@ -451,6 +472,25 @@ class DeepSeekProposalGenerationProvider:
             section_id = section_spec["section_id"]
             try:
                 section, model_audit = self._generate_section(section_spec, blueprint, outline, claims, request.user_constraints)
+                floor = self._section_length_floor(section_spec)
+                if floor and len(section["content"]) < floor:
+                    feedback = (
+                        f"你上一版content长度为{len(section['content'])}字符，低于硬性下限{floor}字符，被审计拒绝。"
+                        f"请扩写本节至至少{floor}字符（目标{section_spec.get('target_words')}字符），"
+                        "只补充与claim_ids相关的内容，不得改变蓝图、约束与引用结构。"
+                    )
+                    retried, retry_audit = self._generate_section(
+                        section_spec, blueprint, outline, claims, request.user_constraints, length_feedback=feedback,
+                    )
+                    model_audit["length_retry"] = {
+                        "first_length": len(section["content"]),
+                        "floor": floor,
+                        "retried_length": len(retried["content"]),
+                        "passed": len(retried["content"]) >= floor,
+                        "retry_attempts": retry_audit.get("attempts"),
+                        "retry_duration_ms": retry_audit.get("duration_ms"),
+                    }
+                    section = retried if len(retried["content"]) > len(section["content"]) else section
                 section["task_card_id"] = task_card_by_section[section_id]["task_card_id"]
                 sections.append(section)
                 model_audits.append({"section_id": section_id, **model_audit})
@@ -499,7 +539,7 @@ class DeepSeekProposalGenerationProvider:
             try:
                 arena_review = self.arena_reviewer.review(blueprint.research_question, sections)
             except Exception as exc:
-                arena_review = {"version": "p4-athlete-judge-review-1.0.0", "error": f"{type(exc).__name__}: {exc}"}
+                arena_review = {"version": PROPOSAL_ARENA_VERSION, "error": f"{type(exc).__name__}: {exc}"}
                 arena_note = "高风险章节竞技场评审失败，不影响既定审计结论；建议人工复核时补评。"
             if arena_review.get("revise_section_ids"):
                 arena_note = "竞技场评审建议修订以下章节：" + "、".join(arena_review["revise_section_ids"]) + "；裁决供人工复核参考，不自动改稿。"

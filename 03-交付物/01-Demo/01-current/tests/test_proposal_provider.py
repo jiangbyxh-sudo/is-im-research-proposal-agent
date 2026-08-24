@@ -99,7 +99,7 @@ class StubArenaReviewer:
     def review(self, blueprint_rq, sections):
         scope = [s["section_id"] for s in sections if s.get("section_id") in ("literature_status", "theoretical_framework", "research_design")]
         return {
-            "version": "p4-athlete-judge-review-1.0.0",
+            "version": "p4-athlete-judge-review-1.2.0",
             "scope": scope,
             "reviewer_a": {**{sid: {"score": 9, "issues": []} for sid in scope}, "__overall__": {"score": 9, "summary": "受控评审"}},
             "reviewer_b": {**{sid: {"score": 9, "issues": []} for sid in scope}, "__overall__": {"score": 9, "summary": "受控评审"}},
@@ -107,6 +107,37 @@ class StubArenaReviewer:
             "revise_section_ids": [],
             "overall_verdict": "pass",
         }
+
+
+class ShortFirstSectionClient(SectionClient):
+    """首次生成background字数不足，收到length_feedback后扩写达标。"""
+
+    def __init__(self, short_section="background"):
+        super().__init__()
+        self.short_section = short_section
+
+    def complete(self, system_prompt, user_prompt):
+        payload = json.loads(user_prompt)
+        section_id = payload["section_spec"]["section_id"]
+        if section_id == self.short_section and not payload.get("length_feedback"):
+            self.calls.append((system_prompt, user_prompt))
+            blueprint = payload["research_design_blueprint"]
+            return {
+                "section": {
+                    "section_id": section_id,
+                    "content": "过短内容。",
+                    "claim_ids": payload["allowed_claim_ids"],
+                    "assumptions": [],
+                    "blueprint_refs": {
+                        "blueprint_id": blueprint["blueprint_id"],
+                        "research_question": blueprint["research_question"],
+                        "design": blueprint["design"],
+                        "outline_id": payload["proposal_outline"]["outline_id"],
+                        "constraint_hash": blueprint["constraint_hash"],
+                    },
+                }
+            }, {"model": "fake-short-model", "attempts": 1, "duration_ms": 1.0}
+        return super().complete(system_prompt, user_prompt)
 
 
 class ProposalProviderTests(unittest.TestCase):
@@ -150,6 +181,37 @@ class ProposalProviderTests(unittest.TestCase):
         self.assertTrue(final.proposal_context["gate_passed"])
         self.assertTrue(all(section["task_card_id"] for section in final.proposal["sections"]))
         self.assertTrue(all('"papers"' not in prompt for _, prompt in client.calls))
+
+    def test_under_length_section_is_regenerated_once_with_feedback(self):
+        papers, gap, claim_store = controlled_context()
+        client = ShortFirstSectionClient()
+        engine = provider_module.DeepSeekProposalGenerationProvider(client, KB_ROOT, arena_reviewer=StubArenaReviewer())
+        request = provider_module.ProposalRequest(
+            research_direction="AI-enabled information systems", fine_grained_question=None,
+            selected_gap=gap, selected_innovation_id="innovation_1",
+            selected_innovation="通过随机实验检验界面干预", papers=papers, claim_store=claim_store,
+            user_constraints=confirmed_constraints(), constraints_confirmed=True,
+        )
+        plan = engine.generate(request).proposal
+        final = engine.generate(replace(
+            request,
+            research_design_blueprint=plan["research_design_blueprint"], blueprint_confirmed=True,
+            proposal_outline=plan["proposal_outline"], outline_confirmed=True,
+        ))
+        self.assertEqual("READY_FOR_HUMAN_REVIEW", final.status)
+        self.assertEqual(len(provider_module.SECTION_SPECS) + 1, len(client.calls))
+        retry_payloads = [json.loads(prompt) for _, prompt in client.calls if json.loads(prompt).get("length_feedback")]
+        self.assertEqual(1, len(retry_payloads))
+        self.assertIn("低于硬性下限", retry_payloads[0]["length_feedback"])
+        self.assertIn("不得低于624字符", retry_payloads[0]["length_rule"])
+        background_audit = next(m for m in final.audit["models"] if m["section_id"] == "background")
+        self.assertLess(background_audit["length_retry"]["first_length"], background_audit["length_retry"]["floor"])
+        self.assertGreaterEqual(
+            background_audit["length_retry"]["retried_length"], background_audit["length_retry"]["floor"]
+        )
+        background = next(s for s in final.proposal["sections"] if s["section_id"] == "background")
+        self.assertGreaterEqual(len(background["content"]), background_audit["length_retry"]["floor"])
+        self.assertTrue(final.audit["constraint_alignment_audit"]["valid"])
 
     def test_title_level_evidence_dominance_can_only_return_sketch(self):
         papers, gap, claim_store = controlled_context()
