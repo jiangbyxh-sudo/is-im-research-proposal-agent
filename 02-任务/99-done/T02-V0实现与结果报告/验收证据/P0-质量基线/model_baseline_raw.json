@@ -1,0 +1,2145 @@
+{
+  "baseline_version": "p0-model-baseline-1.0.0",
+  "stage": "P0_BASELINE_NOT_A_FIX",
+  "snapshot": {
+    "path": "02-任务/99-done/T02-V0实现与结果报告/验收证据/P0-质量基线/fixed_corpus_snapshot.json",
+    "corpus_hash": "b591cf693b9b0555db8256613bbeb123f680151fbc8221f15e9c3ec7fc14813e",
+    "paper_count": 27
+  },
+  "stability": {
+    "case_id": "FIX-STABILITY-001",
+    "requested_runs": 5,
+    "completed_runs": 5,
+    "valid_runs": 5,
+    "exact_output_consistency": 0.2,
+    "ari_against_first": [
+      0.5038,
+      0.5856,
+      0.3464,
+      0.7949
+    ],
+    "mean_ari": 0.5577,
+    "representative_jaccard_against_first": [
+      0.5016,
+      0.56,
+      0.3723,
+      0.705
+    ],
+    "mean_representative_jaccard": 0.5347,
+    "direction_counts": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "gap_counts": [
+      9,
+      5,
+      10,
+      3,
+      7
+    ],
+    "trace_ids": [
+      "trace_7ac415bbf1fe4fdca7d447f5a4a97a1d",
+      "trace_0695d58fce9749108e28fb020f650241",
+      "trace_0bbbbbe2276343838bdd9653752f282d",
+      "trace_387680f5cf9d4129a008ee02eb7ae47a",
+      "trace_2d3b671ff0a943d5b6ed80f2a90dede4"
+    ],
+    "assessment": "BASELINE_ONLY_NOT_FIXED"
+  },
+  "proposal_trace_id": "trace_05c9e0e7611f442b96216986759be3cf",
+  "proposal_generated": true,
+  "proposal_output": {
+    "duration_ms": 52813.0,
+    "status": "PROPOSAL_DRAFT_READY",
+    "proposal": {
+      "working_title": "AI道德缺陷的跨文化感知差异及其对用户信任的长期影响：一项基于问卷与SEM的实证研究",
+      "research_question": "不同文化背景下的用户如何感知AI道德缺陷，以及这种感知如何影响他们对AI系统的信任？",
+      "selected_gap": {
+        "gap_id": "subdirection_1_gap_1",
+        "subdirection_id": "subdirection_1",
+        "gap_type": "empirical",
+        "gap_statement": "AI道德缺陷的跨文化差异及其对用户信任的长期影响尚未得到充分验证。",
+        "why_it_matters": "理解文化背景如何调节AI道德缺陷的感知，有助于设计更具文化适应性的AI系统。",
+        "evidence_basis": [
+          "P001",
+          "P002"
+        ],
+        "evidence_papers": [
+          {
+            "paper_id": "P001",
+            "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+            "authors": [
+              "Xiaoyong HU",
+              "Mufeng LI",
+              "Yue LI",
+              "Kai LI",
+              "Feng YU"
+            ],
+            "year": 2026,
+            "journal": "心理学报",
+            "doi": "10.3724/sp.j.1041.2026.0074",
+            "citation_count": 1,
+            "journal_ranking": [
+              "CSSCI_2025_2026_SOURCE",
+              "FMS_CN_T1",
+              "PKU_CORE_2023"
+            ]
+          },
+          {
+            "paper_id": "P002",
+            "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+            "authors": [
+              "Xunxuan CUI",
+              "Ziteng QIAO",
+              "Ning LIU"
+            ],
+            "year": 2026,
+            "journal": "心理学报",
+            "doi": "10.3724/sp.j.1041.2026.1254",
+            "citation_count": 0,
+            "journal_ranking": [
+              "CSSCI_2025_2026_SOURCE",
+              "FMS_CN_T1",
+              "PKU_CORE_2023"
+            ]
+          }
+        ],
+        "alternative_explanations": [
+          "道德缺陷感知可能受个体道德基础差异影响，而非文化差异"
+        ],
+        "innovation_candidates": [
+          "开展跨文化比较研究，测量不同文化背景下用户对AI道德缺陷的容忍度"
+        ],
+        "confidence": "emerging",
+        "verification_status": "title_metadata_only_pending_fulltext"
+      },
+      "selected_innovation_id": "subdirection_1_gap_1_innovation_1",
+      "selected_innovation": "开展跨文化比较研究，测量不同文化背景下用户对AI道德缺陷的容忍度",
+      "sections": [
+        {
+          "section_id": "working_title",
+          "title": "暂定题目",
+          "content": "AI道德缺陷的跨文化感知差异及其对用户信任的长期影响：一项基于问卷与SEM的实证研究",
+          "paper_ids": [],
+          "evidence_papers": [],
+          "assumptions": [
+            "题目需在后续研究中根据实际数据与理论框架进一步精炼。"
+          ]
+        },
+        {
+          "section_id": "background",
+          "title": "研究背景与问题重要性",
+          "content": "随着AI系统在决策中的广泛应用，其道德缺陷（如偏见、不公平、缺乏透明度）日益受到关注。现有研究提示，AI道德缺陷可能削弱用户信任，但文化背景如何调节这一过程尚不明确。理解文化差异有助于设计更具文化适应性的AI系统，提升全球用户接受度。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "P001和P002提供了AI道德缺陷与拟人化对用户感知影响的初步证据，但未涉及跨文化比较。",
+            "文化差异对AI道德缺陷感知的影响是本研究拟验证的核心假设。"
+          ]
+        },
+        {
+          "section_id": "concepts",
+          "title": "概念界定",
+          "content": "AI道德缺陷：AI系统在决策中表现出的违背道德原则的行为或结果，如偏见、歧视、不透明等。用户信任：用户对AI系统能力、善意和正直的信念及依赖意愿。文化背景：个体所属文化群体在价值观、规范等方面的特征，可用个人主义-集体主义、权力距离等维度衡量。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "构念定义基于现有文献，需在后续研究中进一步操作化。",
+            "文化背景的测量将采用成熟量表（如Hofstede维度）。"
+          ]
+        },
+        {
+          "section_id": "literature_status",
+          "title": "国内外研究现状",
+          "content": "现有研究主要关注AI道德缺陷的机制与缓解策略（P001），以及拟人化对用户感知的影响（P002），但缺乏跨文化视角。国际文献中虽有关于AI信任的研究，但多基于西方样本，跨文化比较有限。国内研究开始关注AI道德问题，但实证研究较少。",
+          "paper_ids": [
+            "P001",
+            "P002",
+            "P003",
+            "P004",
+            "P005",
+            "P006",
+            "P007",
+            "P008",
+            "P009",
+            "P010",
+            "P011",
+            "P012",
+            "P013",
+            "P014",
+            "P015",
+            "P016",
+            "P017",
+            "P018",
+            "P019",
+            "P020",
+            "P021",
+            "P022",
+            "P023",
+            "P024",
+            "P025",
+            "P026",
+            "P027"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P003",
+              "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+              "authors": [],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0381",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0381",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P004",
+              "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+              "authors": [
+                "Tobias Rieger",
+                "Hanna Schindler",
+                "Katharina Koch",
+                "Linda Onnasch"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3817603",
+              "url": "https://doi.org/10.1145/3817603",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P005",
+              "title": "Passing the Buck to AI: How Individuals’ Decision-Making Patterns Affect Reliance on AI",
+              "authors": [
+                "Katelyn Xiaoying Mei",
+                "Rock Yuren Pang",
+                "Alex Lyford",
+                "Lucy Lu Wang",
+                "Katharina Reinecke"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3786326",
+              "url": "https://doi.org/10.1145/3786326",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P006",
+              "title": "Cognitive Spillover in Human–AI Teams",
+              "authors": [
+                "Christoph Riedl",
+                "Saiph Savage",
+                "Josie Zvelebilova"
+              ],
+              "year": 2026,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3805039",
+              "url": "https://doi.org/10.1145/3805039",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P007",
+              "title": "Recommender AI Agent: Integrating Large Language Models for Interactive Recommendations",
+              "authors": [
+                "Xu Huang",
+                "Jianxun Lian",
+                "Yuxuan Lei",
+                "Jing Yao",
+                "Defu Lian",
+                "Xing Xie"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3731446",
+              "url": "https://doi.org/10.1145/3731446",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P008",
+              "title": "Proactive Conversational AI: A Comprehensive Survey of Advancements and Opportunities",
+              "authors": [
+                "Yang Deng",
+                "Lizi Liao",
+                "Wenqiang Lei",
+                "Grace Hui Yang",
+                "Wai Lam",
+                "Tat-Seng Chua"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Information Systems",
+              "doi": "10.1145/3715097",
+              "url": "https://doi.org/10.1145/3715097",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P009",
+              "title": "“AI is Soulless”: Hollywood Film Workers’ Strike and Emerging Perceptions of Generative Cinema",
+              "authors": [
+                "Brett A. Halperin",
+                "Daniela K. Rosner"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3716135",
+              "url": "https://doi.org/10.1145/3716135",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P010",
+              "title": "Towards Clinically Useful AI: From Radiology Practices in Global South and North to Visions of AI Support",
+              "authors": [
+                "Hubert D. Zając",
+                "Tariq O. Andersen",
+                "Elijah Kwasa",
+                "Ruth Wanjohi",
+                "Mary K. Onyinkwa",
+                "Edward K. Mwaniki"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3715115",
+              "url": "https://doi.org/10.1145/3715115",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P011",
+              "title": "Self-help AI psychological counseling system based on large language models and its effectiveness evaluation",
+              "authors": [
+                "Feng HUANG",
+                "Huimin DING",
+                "Sijia LI",
+                "Nuo HAN",
+                "Yazheng DI",
+                "Xiaoqian LIU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.2022",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.2022",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P012",
+              "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+              "authors": [
+                "Karina Cortiñas-Lorenzo",
+                "Wanling Cai",
+                "Gavin Doherty"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3769678",
+              "url": "https://doi.org/10.1145/3769678",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P013",
+              "title": "Reading AI and Reading the World: Using an Interactive AI System to Promote Children’s Understanding of AI Bias",
+              "authors": [
+                "Aayushi Dangol",
+                "Robert Wolfe",
+                "Akeiylah Dewitt",
+                "Ben Chickadel",
+                "Julie Kientz",
+                "Sayamindu Dasgupta"
+              ],
+              "year": 2025,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3762807",
+              "url": "https://doi.org/10.1145/3762807",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P014",
+              "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+              "authors": [
+                "Liying JIAO",
+                "Chang-Jin LI",
+                "Zhen CHEN",
+                "Hengbin XU",
+                "Yan XU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.0929",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.0929",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P015",
+              "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+              "authors": [
+                "Xiaowei GENG",
+                "Chao LIU",
+                "Li SU",
+                "Bingxue HAN",
+                "Qiaoming ZHANG",
+                "Mingzheng WU"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1885",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.1885",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P016",
+              "title": "A comparative study on human or AI delivering negative performance feedback influencing employees’ motivation to improve performance",
+              "authors": [
+                "Guoxuan WANG",
+                "Lirong LONG",
+                "Shaolong LI",
+                "Fang SUN",
+                "Jiaqing WANG",
+                "Shiyingzi HUANG"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.0298",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.0298",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P017",
+              "title": "When design meets AI: The impact of AI design products on consumers’ response patterns",
+              "authors": [
+                "Bin LI",
+                "Jianxi RUI",
+                "Weinan YU",
+                "Aimei LI",
+                "Maolin YE"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1914",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.1914",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P018",
+              "title": "Safety trust in intelligent domestic robots: Human and AI perspectives on trust and relevant influencing factors",
+              "authors": [
+                "Shanshan YOU",
+                "Yue QI",
+                "JunTing CHEN",
+                "Lei LUO",
+                "Kan ZHANG"
+              ],
+              "year": 2025,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2025.1951",
+              "url": "https://doi.org/10.3724/sp.j.1041.2025.1951",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P019",
+              "title": "The AI Ghostwriter Effect: When Users do not Perceive Ownership of AI-Generated Text but Self-Declare as Authors",
+              "authors": [
+                "Fiona Draxler",
+                "Anna Werner",
+                "Florian Lehmann",
+                "Matthias Hoppe",
+                "Albrecht Schmidt",
+                "Daniel Buschek"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3637875",
+              "url": "https://doi.org/10.1145/3637875",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P020",
+              "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+              "authors": [
+                "Anne Arzberger",
+                "Maria Luce Lupetti",
+                "Elisa Giaccardi"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3689042",
+              "url": "https://doi.org/10.1145/3689042",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P021",
+              "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+              "authors": [
+                "Helena Vasconcelos",
+                "Gagan Bansal",
+                "Adam Fourney",
+                "Q. Vera Liao",
+                "Jennifer Wortman Vaughan"
+              ],
+              "year": 2024,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3702320",
+              "url": "https://doi.org/10.1145/3702320",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P022",
+              "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+              "authors": [
+                "Jeba Rezwana",
+                "Mary Lou Maher"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3519026",
+              "url": "https://doi.org/10.1145/3519026",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P023",
+              "title": "Holding AI to Account: Challenges for the Delivery of Trustworthy AI in Healthcare",
+              "authors": [
+                "Rob Procter",
+                "Peter Tolmie",
+                "Mark Rouncefield"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3577009",
+              "url": "https://doi.org/10.1145/3577009",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P024",
+              "title": "Batman and Robin in Healthcare Knowledge Work: Human-AI Collaboration by Clinical Documentation Integrity Specialists",
+              "authors": [
+                "Claus Bossen",
+                "Kathleen H. Pine"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3569892",
+              "url": "https://doi.org/10.1145/3569892",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P025",
+              "title": "Assessing Human-AI Interaction Early through Factorial Surveys: A Study on the Guidelines for Human-AI Interaction",
+              "authors": [
+                "Tianyi Li",
+                "Mihaela Vorvoreanu",
+                "Derek Debellis",
+                "Saleema Amershi"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3511605",
+              "url": "https://doi.org/10.1145/3511605",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P026",
+              "title": "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support",
+              "authors": [
+                "Niels van Berkel",
+                "Maura Bellio",
+                "Mikael B. Skov",
+                "Ann Blandford"
+              ],
+              "year": 2023,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3571815",
+              "url": "https://doi.org/10.1145/3571815",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            },
+            {
+              "paper_id": "P027",
+              "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+              "authors": [
+                "Andrea Papenmeier",
+                "Dagmar Kern",
+                "Gwenn Englebienne",
+                "Christin Seifert"
+              ],
+              "year": 2022,
+              "journal": "ACM Transactions on Computer-Human Interaction",
+              "doi": "10.1145/3495013",
+              "url": "https://doi.org/10.1145/3495013",
+              "journal_ranking": [
+                "FMS_INT_B"
+              ]
+            }
+          ],
+          "assumptions": [
+            "文献综述基于题名级元数据，具体内容需在全文获取后核实。",
+            "现有研究未系统探讨文化差异对AI道德缺陷感知的影响。"
+          ]
+        },
+        {
+          "section_id": "selected_gap",
+          "title": "已选研究空白及证据",
+          "content": "已选研究空白：AI道德缺陷的跨文化差异及其对用户信任的长期影响尚未得到充分验证。证据基础：P001和P002提示AI道德缺陷和拟人化影响用户感知，但均未涉及文化调节。该空白的重要性在于，文化背景可能改变用户对AI道德缺陷的容忍度和信任修复过程。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "P001和P002的研究结果可推广至跨文化情境，但需验证。",
+            "文化差异是影响AI道德缺陷感知的关键调节变量。"
+          ]
+        },
+        {
+          "section_id": "research_questions",
+          "title": "研究问题、假设或命题",
+          "content": "RQ1：不同文化背景下的用户对AI道德缺陷的感知是否存在显著差异？RQ2：AI道德缺陷感知如何影响用户对AI的信任？RQ3：文化背景是否调节AI道德缺陷感知与用户信任之间的关系？假设：H1：集体主义文化背景下的用户对AI道德缺陷的容忍度低于个人主义文化背景下的用户。H2：AI道德缺陷感知负向影响用户信任。H3：文化背景调节AI道德缺陷感知与用户信任之间的关系，具体而言，在集体主义文化中，道德缺陷感知对信任的负向影响更强。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "假设基于理论推导，需通过实证数据检验。",
+            "文化背景的测量将采用个体层面的文化价值观量表。"
+          ]
+        },
+        {
+          "section_id": "theoretical_framework",
+          "title": "理论框架与作用机制",
+          "content": "本研究整合信任理论（如Mayer等，1995）和文化维度理论（如Hofstede，1980）。AI道德缺陷感知作为信任的前因，文化背景作为调节变量。机制上，道德缺陷可能通过降低感知善意和正直影响信任，而文化价值观影响这些感知的权重。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "信任理论和文化维度理论适用于AI情境。",
+            "道德缺陷感知通过感知善意和正直的中介作用影响信任。"
+          ]
+        },
+        {
+          "section_id": "research_design",
+          "title": "研究设计、数据、测量与分析",
+          "content": "采用横截面问卷设计，通过在线平台招募来自不同文化背景（如中国、美国）的参与者。测量工具：AI道德缺陷感知量表（基于P001改编）、用户信任量表（成熟量表）、文化价值观量表（如Hofstede维度）。数据分析：首先进行CFA检验测量模型，然后使用SEM检验结构模型，包括中介和调节效应。样本量根据功效分析确定，预计不少于300。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "量表需进行翻译、回译和预测试以确保跨文化等值性。",
+            "样本具有文化代表性，且能检测到中等效应量。"
+          ]
+        },
+        {
+          "section_id": "contributions",
+          "title": "预期理论、方法与实践贡献",
+          "content": "理论贡献：将文化维度引入AI道德缺陷与信任关系，拓展信任理论在AI情境下的适用性。方法贡献：提供跨文化量表验证和测量不变性检验。实践贡献：为设计文化适应性AI系统提供依据，帮助企业在不同市场制定信任修复策略。",
+          "paper_ids": [
+            "P001",
+            "P002"
+          ],
+          "evidence_papers": [
+            {
+              "paper_id": "P001",
+              "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+              "authors": [
+                "Xiaoyong HU",
+                "Mufeng LI",
+                "Yue LI",
+                "Kai LI",
+                "Feng YU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.0074",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            },
+            {
+              "paper_id": "P002",
+              "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+              "authors": [
+                "Xunxuan CUI",
+                "Ziteng QIAO",
+                "Ning LIU"
+              ],
+              "year": 2026,
+              "journal": "心理学报",
+              "doi": "10.3724/sp.j.1041.2026.1254",
+              "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+              "journal_ranking": [
+                "CSSCI_2025_2026_SOURCE",
+                "FMS_CN_T1",
+                "PKU_CORE_2023"
+              ]
+            }
+          ],
+          "assumptions": [
+            "研究结果能推广到其他AI应用场景。",
+            "文化差异的发现对实践具有指导意义。"
+          ]
+        },
+        {
+          "section_id": "feasibility_ethics",
+          "title": "可行性、伦理、风险与替代方案",
+          "content": "可行性：在线问卷成本低，可接触多国样本；量表有现成来源。伦理：需获得伦理审查批准，确保知情同意和数据匿名。风险：文化样本代表性不足、共同方法偏差。替代方案：若跨文化数据收集困难，可先进行单文化研究或使用二手数据。",
+          "paper_ids": [],
+          "evidence_papers": [],
+          "assumptions": [
+            "能够获得足够的跨文化样本。",
+            "伦理审查能够通过。"
+          ]
+        },
+        {
+          "section_id": "timeline",
+          "title": "研究计划",
+          "content": "第1-2月：文献综述与理论框架完善；第3-4月：量表翻译与预测试；第5-6月：数据收集；第7-8月：数据分析；第9-10月：论文撰写与修改。",
+          "paper_ids": [],
+          "evidence_papers": [],
+          "assumptions": [
+            "各阶段按计划推进，无重大延误。"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "paper_id": "P001",
+          "title": "Moral deficiency in AI decision-making: Underlying mechanisms and mitigation strategies",
+          "authors": [
+            "Xiaoyong HU",
+            "Mufeng LI",
+            "Yue LI",
+            "Kai LI",
+            "Feng YU"
+          ],
+          "year": 2026,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2026.0074",
+          "url": "https://doi.org/10.3724/sp.j.1041.2026.0074",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P002",
+          "title": "The impact of anthropomorphism on perceived warmth-competence of AI and human-AI cooperation intention",
+          "authors": [
+            "Xunxuan CUI",
+            "Ziteng QIAO",
+            "Ning LIU"
+          ],
+          "year": 2026,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2026.1254",
+          "url": "https://doi.org/10.3724/sp.j.1041.2026.1254",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P003",
+          "title": "From overt deterrence to covert internalization: Moral effects of AI regulation and the moderating role of personality traits",
+          "authors": [],
+          "year": 2026,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2026.0381",
+          "url": "https://doi.org/10.3724/sp.j.1041.2026.0381",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P004",
+          "title": "AI Error Difficulty Modulates the Effectiveness of Explainability in Decision Support Systems",
+          "authors": [
+            "Tobias Rieger",
+            "Hanna Schindler",
+            "Katharina Koch",
+            "Linda Onnasch"
+          ],
+          "year": 2026,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3817603",
+          "url": "https://doi.org/10.1145/3817603",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P005",
+          "title": "Passing the Buck to AI: How Individuals’ Decision-Making Patterns Affect Reliance on AI",
+          "authors": [
+            "Katelyn Xiaoying Mei",
+            "Rock Yuren Pang",
+            "Alex Lyford",
+            "Lucy Lu Wang",
+            "Katharina Reinecke"
+          ],
+          "year": 2026,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3786326",
+          "url": "https://doi.org/10.1145/3786326",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P006",
+          "title": "Cognitive Spillover in Human–AI Teams",
+          "authors": [
+            "Christoph Riedl",
+            "Saiph Savage",
+            "Josie Zvelebilova"
+          ],
+          "year": 2026,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3805039",
+          "url": "https://doi.org/10.1145/3805039",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P007",
+          "title": "Recommender AI Agent: Integrating Large Language Models for Interactive Recommendations",
+          "authors": [
+            "Xu Huang",
+            "Jianxun Lian",
+            "Yuxuan Lei",
+            "Jing Yao",
+            "Defu Lian",
+            "Xing Xie"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Information Systems",
+          "doi": "10.1145/3731446",
+          "url": "https://doi.org/10.1145/3731446",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P008",
+          "title": "Proactive Conversational AI: A Comprehensive Survey of Advancements and Opportunities",
+          "authors": [
+            "Yang Deng",
+            "Lizi Liao",
+            "Wenqiang Lei",
+            "Grace Hui Yang",
+            "Wai Lam",
+            "Tat-Seng Chua"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Information Systems",
+          "doi": "10.1145/3715097",
+          "url": "https://doi.org/10.1145/3715097",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P009",
+          "title": "“AI is Soulless”: Hollywood Film Workers’ Strike and Emerging Perceptions of Generative Cinema",
+          "authors": [
+            "Brett A. Halperin",
+            "Daniela K. Rosner"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3716135",
+          "url": "https://doi.org/10.1145/3716135",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P010",
+          "title": "Towards Clinically Useful AI: From Radiology Practices in Global South and North to Visions of AI Support",
+          "authors": [
+            "Hubert D. Zając",
+            "Tariq O. Andersen",
+            "Elijah Kwasa",
+            "Ruth Wanjohi",
+            "Mary K. Onyinkwa",
+            "Edward K. Mwaniki"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3715115",
+          "url": "https://doi.org/10.1145/3715115",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P011",
+          "title": "Self-help AI psychological counseling system based on large language models and its effectiveness evaluation",
+          "authors": [
+            "Feng HUANG",
+            "Huimin DING",
+            "Sijia LI",
+            "Nuo HAN",
+            "Yazheng DI",
+            "Xiaoqian LIU"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.2022",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.2022",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P012",
+          "title": "Designing, Implementing, and Evaluating AI Explanations: A Scoping Review of Explainable AI Frameworks",
+          "authors": [
+            "Karina Cortiñas-Lorenzo",
+            "Wanling Cai",
+            "Gavin Doherty"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3769678",
+          "url": "https://doi.org/10.1145/3769678",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P013",
+          "title": "Reading AI and Reading the World: Using an Interactive AI System to Promote Children’s Understanding of AI Bias",
+          "authors": [
+            "Aayushi Dangol",
+            "Robert Wolfe",
+            "Akeiylah Dewitt",
+            "Ben Chickadel",
+            "Julie Kientz",
+            "Sayamindu Dasgupta"
+          ],
+          "year": 2025,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3762807",
+          "url": "https://doi.org/10.1145/3762807",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P014",
+          "title": "When AI “possesses” personality: Roles of good and evil personalities influence moral judgment in large language models",
+          "authors": [
+            "Liying JIAO",
+            "Chang-Jin LI",
+            "Zhen CHEN",
+            "Hengbin XU",
+            "Yan XU"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.0929",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.0929",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P015",
+          "title": "Human-AI cooperation makes individuals more risk seeking: The mediating role of perceived agentic responsibility",
+          "authors": [
+            "Xiaowei GENG",
+            "Chao LIU",
+            "Li SU",
+            "Bingxue HAN",
+            "Qiaoming ZHANG",
+            "Mingzheng WU"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.1885",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.1885",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P016",
+          "title": "A comparative study on human or AI delivering negative performance feedback influencing employees’ motivation to improve performance",
+          "authors": [
+            "Guoxuan WANG",
+            "Lirong LONG",
+            "Shaolong LI",
+            "Fang SUN",
+            "Jiaqing WANG",
+            "Shiyingzi HUANG"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.0298",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.0298",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P017",
+          "title": "When design meets AI: The impact of AI design products on consumers’ response patterns",
+          "authors": [
+            "Bin LI",
+            "Jianxi RUI",
+            "Weinan YU",
+            "Aimei LI",
+            "Maolin YE"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.1914",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.1914",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P018",
+          "title": "Safety trust in intelligent domestic robots: Human and AI perspectives on trust and relevant influencing factors",
+          "authors": [
+            "Shanshan YOU",
+            "Yue QI",
+            "JunTing CHEN",
+            "Lei LUO",
+            "Kan ZHANG"
+          ],
+          "year": 2025,
+          "journal": "心理学报",
+          "doi": "10.3724/sp.j.1041.2025.1951",
+          "url": "https://doi.org/10.3724/sp.j.1041.2025.1951",
+          "journal_ranking": [
+            "CSSCI_2025_2026_SOURCE",
+            "FMS_CN_T1",
+            "PKU_CORE_2023"
+          ]
+        },
+        {
+          "paper_id": "P019",
+          "title": "The AI Ghostwriter Effect: When Users do not Perceive Ownership of AI-Generated Text but Self-Declare as Authors",
+          "authors": [
+            "Fiona Draxler",
+            "Anna Werner",
+            "Florian Lehmann",
+            "Matthias Hoppe",
+            "Albrecht Schmidt",
+            "Daniel Buschek"
+          ],
+          "year": 2024,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3637875",
+          "url": "https://doi.org/10.1145/3637875",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P020",
+          "title": "Reflexive Data Curation: Opportunities and Challenges for Embracing Uncertainty in Human–AI Collaboration",
+          "authors": [
+            "Anne Arzberger",
+            "Maria Luce Lupetti",
+            "Elisa Giaccardi"
+          ],
+          "year": 2024,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3689042",
+          "url": "https://doi.org/10.1145/3689042",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P021",
+          "title": "Generation Probabilities Are Not Enough: Uncertainty Highlighting in AI Code Completions",
+          "authors": [
+            "Helena Vasconcelos",
+            "Gagan Bansal",
+            "Adam Fourney",
+            "Q. Vera Liao",
+            "Jennifer Wortman Vaughan"
+          ],
+          "year": 2024,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3702320",
+          "url": "https://doi.org/10.1145/3702320",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P022",
+          "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+          "authors": [
+            "Jeba Rezwana",
+            "Mary Lou Maher"
+          ],
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3519026",
+          "url": "https://doi.org/10.1145/3519026",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P023",
+          "title": "Holding AI to Account: Challenges for the Delivery of Trustworthy AI in Healthcare",
+          "authors": [
+            "Rob Procter",
+            "Peter Tolmie",
+            "Mark Rouncefield"
+          ],
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3577009",
+          "url": "https://doi.org/10.1145/3577009",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P024",
+          "title": "Batman and Robin in Healthcare Knowledge Work: Human-AI Collaboration by Clinical Documentation Integrity Specialists",
+          "authors": [
+            "Claus Bossen",
+            "Kathleen H. Pine"
+          ],
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3569892",
+          "url": "https://doi.org/10.1145/3569892",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P025",
+          "title": "Assessing Human-AI Interaction Early through Factorial Surveys: A Study on the Guidelines for Human-AI Interaction",
+          "authors": [
+            "Tianyi Li",
+            "Mihaela Vorvoreanu",
+            "Derek Debellis",
+            "Saleema Amershi"
+          ],
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3511605",
+          "url": "https://doi.org/10.1145/3511605",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P026",
+          "title": "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support",
+          "authors": [
+            "Niels van Berkel",
+            "Maura Bellio",
+            "Mikael B. Skov",
+            "Ann Blandford"
+          ],
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3571815",
+          "url": "https://doi.org/10.1145/3571815",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        },
+        {
+          "paper_id": "P027",
+          "title": "It’s Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI",
+          "authors": [
+            "Andrea Papenmeier",
+            "Dagmar Kern",
+            "Gwenn Englebienne",
+            "Christin Seifert"
+          ],
+          "year": 2022,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3495013",
+          "url": "https://doi.org/10.1145/3495013",
+          "journal_ranking": [
+            "FMS_INT_B"
+          ]
+        }
+      ],
+      "draft_status": "pending_fulltext_verification"
+    },
+    "writing_guidance": {
+      "paradigm_id": "survey_sem",
+      "paradigm_label": "问卷、测量与CFA/SEM",
+      "paradigm_status": "seeded",
+      "source_ids": [
+        "WRITE-CRESWELL-6E",
+        "METHOD-LAVAAN",
+        "WRITE-APA-JARS"
+      ],
+      "local_path": "04_paradigms/survey_sem.md",
+      "stages": [
+        {
+          "stage_id": "topic",
+          "title": "选题",
+          "purpose": "确定研究主题，明确研究问题、创新点和可行性。",
+          "recommended_moves": [
+            "从文献中识别研究空白，结合个人兴趣和资源确定选题。",
+            "将选题细化为可操作的研究问题。",
+            "评估选题的理论和实践意义。"
+          ],
+          "evidence_required": [
+            "文献综述中相关研究的不足。",
+            "研究问题的明确表述。",
+            "初步的理论框架。"
+          ],
+          "common_failures": [
+            "选题过于宽泛，缺乏聚焦。",
+            "研究问题不可检验。",
+            "忽视现有文献，重复研究。"
+          ],
+          "self_check": [
+            "我的研究问题是否清晰、具体？",
+            "我能否用一句话说明研究的贡献？",
+            "我是否已检索并阅读了关键文献？"
+          ]
+        },
+        {
+          "stage_id": "introduction",
+          "title": "引言",
+          "purpose": "介绍研究背景，阐明研究问题的重要性和研究目的。",
+          "recommended_moves": [
+            "从现实问题或理论争议切入，吸引读者兴趣。",
+            "简要回顾相关研究，指出研究空白。",
+            "明确提出研究问题和研究目的。",
+            "概述研究设计和主要贡献。"
+          ],
+          "evidence_required": [
+            "支持研究问题重要性的数据或案例。",
+            "关键文献的引用。",
+            "研究问题的清晰陈述。"
+          ],
+          "common_failures": [
+            "背景介绍冗长，迟迟不进入主题。",
+            "研究问题模糊或与文献脱节。",
+            "夸大研究贡献。"
+          ],
+          "self_check": [
+            "引言是否在开头就吸引了读者？",
+            "研究空白是否明确？",
+            "研究问题是否与研究空白对应？"
+          ]
+        },
+        {
+          "stage_id": "theory",
+          "title": "理论",
+          "purpose": "构建理论框架，提出研究假设。",
+          "recommended_moves": [
+            "回顾相关理论，选择适合的理论基础。",
+            "定义核心构念，明确构念间关系。",
+            "基于理论推导研究假设。",
+            "绘制理论模型图。"
+          ],
+          "evidence_required": [
+            "理论文献的引用。",
+            "构念的操作化定义。",
+            "假设的逻辑推导。"
+          ],
+          "common_failures": [
+            "理论选择不当，与问题不匹配。",
+            "假设缺乏理论支持。",
+            "构念定义模糊。"
+          ],
+          "self_check": [
+            "我选择的理论是否能解释我的研究问题？",
+            "每个假设是否有理论依据？",
+            "模型是否简洁且可检验？"
+          ]
+        },
+        {
+          "stage_id": "method",
+          "title": "方法",
+          "purpose": "详细描述研究设计、样本、测量和分析方法。",
+          "recommended_moves": [
+            "说明研究设计类型（如横截面、纵向）。",
+            "描述样本来源、抽样方法和样本量。",
+            "介绍测量工具及其信效度。",
+            "说明数据分析方法（如CFA、SEM）。"
+          ],
+          "evidence_required": [
+            "样本量计算依据。",
+            "量表来源和改编过程。",
+            "数据分析软件和步骤。"
+          ],
+          "common_failures": [
+            "方法描述不透明，无法复制。",
+            "样本量不足或抽样偏差。",
+            "测量工具信效度未报告。"
+          ],
+          "self_check": [
+            "我的方法部分是否足够详细，他人可复制？",
+            "样本是否具有代表性？",
+            "分析方法是否适合研究问题？"
+          ]
+        },
+        {
+          "stage_id": "results",
+          "title": "结果",
+          "purpose": "报告数据分析结果，检验假设。",
+          "recommended_moves": [
+            "报告描述性统计和相关性。",
+            "报告测量模型检验结果（信度、效度）。",
+            "报告结构模型检验结果（路径系数、显著性）。",
+            "报告中介和调节效应检验结果。"
+          ],
+          "evidence_required": [
+            "统计表格和图表。",
+            "效应量和置信区间。",
+            "模型拟合指标。"
+          ],
+          "common_failures": [
+            "只报告显著性，忽略效应量。",
+            "结果与假设不对应。",
+            "过度解释统计结果。"
+          ],
+          "self_check": [
+            "我是否报告了所有假设的检验结果？",
+            "结果是否清晰呈现？",
+            "我是否避免了因果语言？"
+          ]
+        },
+        {
+          "stage_id": "discussion",
+          "title": "讨论",
+          "purpose": "解释结果，讨论理论和实践意义，指出局限。",
+          "recommended_moves": [
+            "总结主要发现，与假设对比。",
+            "将发现与现有文献联系，讨论理论贡献。",
+            "讨论实践启示。",
+            "承认研究局限，提出未来研究方向。"
+          ],
+          "evidence_required": [
+            "对结果的合理解释。",
+            "与文献的对话。",
+            "局限性的具体说明。"
+          ],
+          "common_failures": [
+            "重复结果部分，缺乏解释。",
+            "忽视与文献的矛盾。",
+            "局限部分过于笼统。"
+          ],
+          "self_check": [
+            "我是否解释了为什么得到这些结果？",
+            "我的讨论是否与理论框架呼应？",
+            "我是否提出了具体的未来研究建议？"
+          ]
+        },
+        {
+          "stage_id": "submission",
+          "title": "投稿",
+          "purpose": "根据目标期刊要求修改格式，准备投稿。",
+          "recommended_moves": [
+            "选择合适的目标期刊。",
+            "根据期刊指南调整格式和风格。",
+            "撰写投稿信，强调研究贡献。",
+            "准备补充材料（如问卷、数据）。"
+          ],
+          "evidence_required": [
+            "目标期刊的作者指南。",
+            "格式符合要求的稿件。",
+            "投稿信。"
+          ],
+          "common_failures": [
+            "忽视期刊范围，投稿不匹配。",
+            "格式错误，被直接退稿。",
+            "投稿信缺乏针对性。"
+          ],
+          "self_check": [
+            "我的论文是否符合期刊的范围？",
+            "我是否仔细阅读并遵循了作者指南？",
+            "投稿信是否突出了研究的创新点？"
+          ]
+        }
+      ],
+      "target_journal_status": "not_selected"
+    },
+    "proposal_context": {
+      "scope_label": "IS_IM",
+      "paper_ids": [
+        "P001",
+        "P002",
+        "P003",
+        "P004",
+        "P005",
+        "P006",
+        "P007",
+        "P008",
+        "P009",
+        "P010",
+        "P011",
+        "P012",
+        "P013",
+        "P014",
+        "P015",
+        "P016",
+        "P017",
+        "P018",
+        "P019",
+        "P020",
+        "P021",
+        "P022",
+        "P023",
+        "P024",
+        "P025",
+        "P026",
+        "P027"
+      ],
+      "claim_ids": [
+        "subdirection_1_gap_1"
+      ],
+      "selected_gap_ids": [
+        "subdirection_1_gap_1"
+      ],
+      "selected_innovation_ids": [
+        "subdirection_1_gap_1_innovation_1"
+      ],
+      "paradigm_ids": [
+        "survey_sem"
+      ],
+      "gate_passed": true
+    },
+    "limitations": [
+      "现有论文仅为题名级元数据，研究现状、空白与机制均基于提示性推断，需在获取全文后核实。",
+      "未指定目标期刊，无法提供具体格式要求，需在选定期刊后核对官方作者指南。",
+      "跨文化数据收集可能面临样本代表性和测量等值性挑战。",
+      "横截面设计无法确立因果关系，需谨慎解释结果。",
+      "研究空白目前主要依据题名级元数据，正式开题前必须获取核心论文全文复核。",
+      "当前未指定目标期刊；投稿格式与特殊要求需在选刊后查询官方作者指南。"
+    ],
+    "audit": {
+      "invalid_reference_count": 0,
+      "proposal_section_count": 11,
+      "guidance_stage_count": 7,
+      "model": {
+        "model": "deepseek-v4-pro",
+        "usage": {
+          "prompt_tokens": 5289,
+          "completion_tokens": 3166,
+          "total_tokens": 8455,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 5289
+        },
+        "finish_reason": "stop",
+        "attempts": 1,
+        "duration_ms": 52813.0
+      },
+      "local_paradigm_path": "04_paradigms/survey_sem.md",
+      "prompt_version": "proposal-current-baseline-0.5",
+      "input_hash": "c7676bf9f8bf7b5787f630834ad591930514354735227020f700c32efc722a4e",
+      "duration_ms": 52813.0,
+      "raw_model_output": {
+        "working_title": "AI道德缺陷的跨文化感知差异及其对用户信任的长期影响：一项基于问卷与SEM的实证研究",
+        "research_question": "不同文化背景下的用户如何感知AI道德缺陷，以及这种感知如何影响他们对AI系统的信任？",
+        "proposal_sections": [
+          {
+            "section_id": "working_title",
+            "content": "AI道德缺陷的跨文化感知差异及其对用户信任的长期影响：一项基于问卷与SEM的实证研究",
+            "paper_ids": [],
+            "assumptions": [
+              "题目需在后续研究中根据实际数据与理论框架进一步精炼。"
+            ]
+          },
+          {
+            "section_id": "background",
+            "content": "随着AI系统在决策中的广泛应用，其道德缺陷（如偏见、不公平、缺乏透明度）日益受到关注。现有研究提示，AI道德缺陷可能削弱用户信任，但文化背景如何调节这一过程尚不明确。理解文化差异有助于设计更具文化适应性的AI系统，提升全球用户接受度。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "P001和P002提供了AI道德缺陷与拟人化对用户感知影响的初步证据，但未涉及跨文化比较。",
+              "文化差异对AI道德缺陷感知的影响是本研究拟验证的核心假设。"
+            ]
+          },
+          {
+            "section_id": "concepts",
+            "content": "AI道德缺陷：AI系统在决策中表现出的违背道德原则的行为或结果，如偏见、歧视、不透明等。用户信任：用户对AI系统能力、善意和正直的信念及依赖意愿。文化背景：个体所属文化群体在价值观、规范等方面的特征，可用个人主义-集体主义、权力距离等维度衡量。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "构念定义基于现有文献，需在后续研究中进一步操作化。",
+              "文化背景的测量将采用成熟量表（如Hofstede维度）。"
+            ]
+          },
+          {
+            "section_id": "literature_status",
+            "content": "现有研究主要关注AI道德缺陷的机制与缓解策略（P001），以及拟人化对用户感知的影响（P002），但缺乏跨文化视角。国际文献中虽有关于AI信任的研究，但多基于西方样本，跨文化比较有限。国内研究开始关注AI道德问题，但实证研究较少。",
+            "paper_ids": [
+              "P001",
+              "P002",
+              "P003",
+              "P004",
+              "P005",
+              "P006",
+              "P007",
+              "P008",
+              "P009",
+              "P010",
+              "P011",
+              "P012",
+              "P013",
+              "P014",
+              "P015",
+              "P016",
+              "P017",
+              "P018",
+              "P019",
+              "P020",
+              "P021",
+              "P022",
+              "P023",
+              "P024",
+              "P025",
+              "P026",
+              "P027"
+            ],
+            "assumptions": [
+              "文献综述基于题名级元数据，具体内容需在全文获取后核实。",
+              "现有研究未系统探讨文化差异对AI道德缺陷感知的影响。"
+            ]
+          },
+          {
+            "section_id": "selected_gap",
+            "content": "已选研究空白：AI道德缺陷的跨文化差异及其对用户信任的长期影响尚未得到充分验证。证据基础：P001和P002提示AI道德缺陷和拟人化影响用户感知，但均未涉及文化调节。该空白的重要性在于，文化背景可能改变用户对AI道德缺陷的容忍度和信任修复过程。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "P001和P002的研究结果可推广至跨文化情境，但需验证。",
+              "文化差异是影响AI道德缺陷感知的关键调节变量。"
+            ]
+          },
+          {
+            "section_id": "research_questions",
+            "content": "RQ1：不同文化背景下的用户对AI道德缺陷的感知是否存在显著差异？RQ2：AI道德缺陷感知如何影响用户对AI的信任？RQ3：文化背景是否调节AI道德缺陷感知与用户信任之间的关系？假设：H1：集体主义文化背景下的用户对AI道德缺陷的容忍度低于个人主义文化背景下的用户。H2：AI道德缺陷感知负向影响用户信任。H3：文化背景调节AI道德缺陷感知与用户信任之间的关系，具体而言，在集体主义文化中，道德缺陷感知对信任的负向影响更强。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "假设基于理论推导，需通过实证数据检验。",
+              "文化背景的测量将采用个体层面的文化价值观量表。"
+            ]
+          },
+          {
+            "section_id": "theoretical_framework",
+            "content": "本研究整合信任理论（如Mayer等，1995）和文化维度理论（如Hofstede，1980）。AI道德缺陷感知作为信任的前因，文化背景作为调节变量。机制上，道德缺陷可能通过降低感知善意和正直影响信任，而文化价值观影响这些感知的权重。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "信任理论和文化维度理论适用于AI情境。",
+              "道德缺陷感知通过感知善意和正直的中介作用影响信任。"
+            ]
+          },
+          {
+            "section_id": "research_design",
+            "content": "采用横截面问卷设计，通过在线平台招募来自不同文化背景（如中国、美国）的参与者。测量工具：AI道德缺陷感知量表（基于P001改编）、用户信任量表（成熟量表）、文化价值观量表（如Hofstede维度）。数据分析：首先进行CFA检验测量模型，然后使用SEM检验结构模型，包括中介和调节效应。样本量根据功效分析确定，预计不少于300。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "量表需进行翻译、回译和预测试以确保跨文化等值性。",
+              "样本具有文化代表性，且能检测到中等效应量。"
+            ]
+          },
+          {
+            "section_id": "contributions",
+            "content": "理论贡献：将文化维度引入AI道德缺陷与信任关系，拓展信任理论在AI情境下的适用性。方法贡献：提供跨文化量表验证和测量不变性检验。实践贡献：为设计文化适应性AI系统提供依据，帮助企业在不同市场制定信任修复策略。",
+            "paper_ids": [
+              "P001",
+              "P002"
+            ],
+            "assumptions": [
+              "研究结果能推广到其他AI应用场景。",
+              "文化差异的发现对实践具有指导意义。"
+            ]
+          },
+          {
+            "section_id": "feasibility_ethics",
+            "content": "可行性：在线问卷成本低，可接触多国样本；量表有现成来源。伦理：需获得伦理审查批准，确保知情同意和数据匿名。风险：文化样本代表性不足、共同方法偏差。替代方案：若跨文化数据收集困难，可先进行单文化研究或使用二手数据。",
+            "paper_ids": [],
+            "assumptions": [
+              "能够获得足够的跨文化样本。",
+              "伦理审查能够通过。"
+            ]
+          },
+          {
+            "section_id": "timeline",
+            "content": "第1-2月：文献综述与理论框架完善；第3-4月：量表翻译与预测试；第5-6月：数据收集；第7-8月：数据分析；第9-10月：论文撰写与修改。",
+            "paper_ids": [],
+            "assumptions": [
+              "各阶段按计划推进，无重大延误。"
+            ]
+          }
+        ],
+        "writing_guidance": [
+          {
+            "stage_id": "topic",
+            "purpose": "确定研究主题，明确研究问题、创新点和可行性。",
+            "recommended_moves": [
+              "从文献中识别研究空白，结合个人兴趣和资源确定选题。",
+              "将选题细化为可操作的研究问题。",
+              "评估选题的理论和实践意义。"
+            ],
+            "evidence_required": [
+              "文献综述中相关研究的不足。",
+              "研究问题的明确表述。",
+              "初步的理论框架。"
+            ],
+            "common_failures": [
+              "选题过于宽泛，缺乏聚焦。",
+              "研究问题不可检验。",
+              "忽视现有文献，重复研究。"
+            ],
+            "self_check": [
+              "我的研究问题是否清晰、具体？",
+              "我能否用一句话说明研究的贡献？",
+              "我是否已检索并阅读了关键文献？"
+            ]
+          },
+          {
+            "stage_id": "introduction",
+            "purpose": "介绍研究背景，阐明研究问题的重要性和研究目的。",
+            "recommended_moves": [
+              "从现实问题或理论争议切入，吸引读者兴趣。",
+              "简要回顾相关研究，指出研究空白。",
+              "明确提出研究问题和研究目的。",
+              "概述研究设计和主要贡献。"
+            ],
+            "evidence_required": [
+              "支持研究问题重要性的数据或案例。",
+              "关键文献的引用。",
+              "研究问题的清晰陈述。"
+            ],
+            "common_failures": [
+              "背景介绍冗长，迟迟不进入主题。",
+              "研究问题模糊或与文献脱节。",
+              "夸大研究贡献。"
+            ],
+            "self_check": [
+              "引言是否在开头就吸引了读者？",
+              "研究空白是否明确？",
+              "研究问题是否与研究空白对应？"
+            ]
+          },
+          {
+            "stage_id": "theory",
+            "purpose": "构建理论框架，提出研究假设。",
+            "recommended_moves": [
+              "回顾相关理论，选择适合的理论基础。",
+              "定义核心构念，明确构念间关系。",
+              "基于理论推导研究假设。",
+              "绘制理论模型图。"
+            ],
+            "evidence_required": [
+              "理论文献的引用。",
+              "构念的操作化定义。",
+              "假设的逻辑推导。"
+            ],
+            "common_failures": [
+              "理论选择不当，与问题不匹配。",
+              "假设缺乏理论支持。",
+              "构念定义模糊。"
+            ],
+            "self_check": [
+              "我选择的理论是否能解释我的研究问题？",
+              "每个假设是否有理论依据？",
+              "模型是否简洁且可检验？"
+            ]
+          },
+          {
+            "stage_id": "method",
+            "purpose": "详细描述研究设计、样本、测量和分析方法。",
+            "recommended_moves": [
+              "说明研究设计类型（如横截面、纵向）。",
+              "描述样本来源、抽样方法和样本量。",
+              "介绍测量工具及其信效度。",
+              "说明数据分析方法（如CFA、SEM）。"
+            ],
+            "evidence_required": [
+              "样本量计算依据。",
+              "量表来源和改编过程。",
+              "数据分析软件和步骤。"
+            ],
+            "common_failures": [
+              "方法描述不透明，无法复制。",
+              "样本量不足或抽样偏差。",
+              "测量工具信效度未报告。"
+            ],
+            "self_check": [
+              "我的方法部分是否足够详细，他人可复制？",
+              "样本是否具有代表性？",
+              "分析方法是否适合研究问题？"
+            ]
+          },
+          {
+            "stage_id": "results",
+            "purpose": "报告数据分析结果，检验假设。",
+            "recommended_moves": [
+              "报告描述性统计和相关性。",
+              "报告测量模型检验结果（信度、效度）。",
+              "报告结构模型检验结果（路径系数、显著性）。",
+              "报告中介和调节效应检验结果。"
+            ],
+            "evidence_required": [
+              "统计表格和图表。",
+              "效应量和置信区间。",
+              "模型拟合指标。"
+            ],
+            "common_failures": [
+              "只报告显著性，忽略效应量。",
+              "结果与假设不对应。",
+              "过度解释统计结果。"
+            ],
+            "self_check": [
+              "我是否报告了所有假设的检验结果？",
+              "结果是否清晰呈现？",
+              "我是否避免了因果语言？"
+            ]
+          },
+          {
+            "stage_id": "discussion",
+            "purpose": "解释结果，讨论理论和实践意义，指出局限。",
+            "recommended_moves": [
+              "总结主要发现，与假设对比。",
+              "将发现与现有文献联系，讨论理论贡献。",
+              "讨论实践启示。",
+              "承认研究局限，提出未来研究方向。"
+            ],
+            "evidence_required": [
+              "对结果的合理解释。",
+              "与文献的对话。",
+              "局限性的具体说明。"
+            ],
+            "common_failures": [
+              "重复结果部分，缺乏解释。",
+              "忽视与文献的矛盾。",
+              "局限部分过于笼统。"
+            ],
+            "self_check": [
+              "我是否解释了为什么得到这些结果？",
+              "我的讨论是否与理论框架呼应？",
+              "我是否提出了具体的未来研究建议？"
+            ]
+          },
+          {
+            "stage_id": "submission",
+            "purpose": "根据目标期刊要求修改格式，准备投稿。",
+            "recommended_moves": [
+              "选择合适的目标期刊。",
+              "根据期刊指南调整格式和风格。",
+              "撰写投稿信，强调研究贡献。",
+              "准备补充材料（如问卷、数据）。"
+            ],
+            "evidence_required": [
+              "目标期刊的作者指南。",
+              "格式符合要求的稿件。",
+              "投稿信。"
+            ],
+            "common_failures": [
+              "忽视期刊范围，投稿不匹配。",
+              "格式错误，被直接退稿。",
+              "投稿信缺乏针对性。"
+            ],
+            "self_check": [
+              "我的论文是否符合期刊的范围？",
+              "我是否仔细阅读并遵循了作者指南？",
+              "投稿信是否突出了研究的创新点？"
+            ]
+          }
+        ],
+        "limitations": [
+          "现有论文仅为题名级元数据，研究现状、空白与机制均基于提示性推断，需在获取全文后核实。",
+          "未指定目标期刊，无法提供具体格式要求，需在选定期刊后核对官方作者指南。",
+          "跨文化数据收集可能面临样本代表性和测量等值性挑战。",
+          "横截面设计无法确立因果关系，需谨慎解释结果。"
+        ]
+      }
+    },
+    "message_to_user": "已基于“问卷、测量与CFA/SEM”范式生成开题报告草案和7阶段写作指导；当前草案保留全文复核门禁。"
+  },
+  "rubric_status": "PENDING_MANUAL_SCORING"
+}

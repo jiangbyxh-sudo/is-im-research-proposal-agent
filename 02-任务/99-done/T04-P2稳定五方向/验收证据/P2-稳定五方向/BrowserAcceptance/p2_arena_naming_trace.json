@@ -1,0 +1,1614 @@
+﻿{
+    "state":  "GAP_CANDIDATES_READY",
+    "status_code":  "RETRIEVAL_COMPLETE",
+    "message_to_user":  "受控P2界面验收：论文来自本地夹具，聚类与命名链路为真实代码，内容不代表任何真实检索结果。",
+    "request":  {
+                    "selected_direction_id":  "platform_governance",
+                    "research_direction":  "平台治理",
+                    "fine_grained_question":  null,
+                    "chinese_count":  10,
+                    "english_count":  20,
+                    "derived_path":  "top_five_subdirections",
+                    "derived_path_label":  "发现最近五年研究最多的五个小方向",
+                    "popularity_window_years":  5,
+                    "journal_pool_ids":  [
+                                             "IS_CORE",
+                                             "COMMUNICATION",
+                                             "DIGITAL_PLATFORM",
+                                             "ORG_STRATEGY",
+                                             "ECON_STRATEGY",
+                                             "SECURITY",
+                                             "HCI",
+                                             "PSYCHOLOGY",
+                                             "ZH_IS_IM_CORE",
+                                             "ZH_ORG_INNOVATION",
+                                             "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+                                             "PKU_CORE_2023_MANAGEMENT_DIRECT",
+                                             "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+                                             "PKU_CORE_2023_COMMUNICATION"
+                                         ]
+                },
+    "local_match":  {
+                        "label":  "平台治理",
+                        "aliases":  [
+                                        "platform governance",
+                                        "平台治理"
+                                    ],
+                        "groups":  [
+                                       "IS",
+                                       "IS × Journalism / Communication / Media"
+                                   ],
+                        "source_refs":  [
+                                            "02_journals/IS_IM_Journal_Knowledge_Base.md:53",
+                                            "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+                                            "02_journals/IS_IM_Journal_Knowledge_Base.md:221"
+                                        ],
+                        "knowledge_policy":  "本地规则与写作范式优先精确匹配",
+                        "direction_profile":  {
+                                                  "profile_version":  "1.2.0-p1-retrieval",
+                                                  "direction_id":  "platform_governance",
+                                                  "labels":  {
+                                                                 "zh":  "平台治理",
+                                                                 "en":  "platform governance"
+                                                             },
+                                                  "group_ids":  [
+                                                                    "is",
+                                                                    "is_communication_media"
+                                                                ],
+                                                  "aliases":  [
+                                                                  "platform governance",
+                                                                  "平台治理"
+                                                              ],
+                                                  "facets":  {
+                                                                 "core_phenomena":  [
+                                                                                        "platform governance",
+                                                                                        "digital platform governance",
+                                                                                        "platform rules",
+                                                                                        "ecosystem governance",
+                                                                                        "digital ecosystem governance",
+                                                                                        "platform regulatory",
+                                                                                        "governance of digital platforms",
+                                                                                        "platform govern",
+                                                                                        "平台治理",
+                                                                                        "数字平台治理",
+                                                                                        "生态治理"
+                                                                                    ],
+                                                                 "technology_terms":  [
+
+                                                                                      ],
+                                                                 "required_context_any":  [
+                                                                                              "digital platform",
+                                                                                              "platform",
+                                                                                              "platform ecosystem",
+                                                                                              "online marketplace",
+                                                                                              "social media platform",
+                                                                                              "two-sided market",
+                                                                                              "digital ecosystem",
+                                                                                              "complementor",
+                                                                                              "app developer",
+                                                                                              "platform owner",
+                                                                                              "platform provider",
+                                                                                              "marketplace",
+                                                                                              "governance",
+                                                                                              "regulation",
+                                                                                              "regulator",
+                                                                                              "openness",
+                                                                                              "平台",
+                                                                                              "生态",
+                                                                                              "双边市场",
+                                                                                              "监管",
+                                                                                              "治理"
+                                                                                          ],
+                                                                 "negative_contexts":  [
+                                                                                           "government platform slogan only"
+                                                                                       ]
+                                                             },
+                                                  "boundary_policy":  {
+                                                                          "require_core_phenomenon":  true,
+                                                                          "require_context_any":  true,
+                                                                          "excluded_only_action":  "reject",
+                                                                          "insufficient_metadata_action":  "manual_review"
+                                                                      },
+                                                  "precision_policy":  {
+                                                                           "relevance_tiers":  [
+                                                                                                   "direct",
+                                                                                                   "adjacent",
+                                                                                                   "reject",
+                                                                                                   "manual"
+                                                                                               ],
+                                                                           "title_only_action":  "manual",
+                                                                           "metadata_only_action":  "manual",
+                                                                           "topic_or_keyword_can_produce_direct":  false,
+                                                                           "direct":  {
+                                                                                          "min_textual_core_matches":  1,
+                                                                                          "require_context_match":  true,
+                                                                                          "min_focality_score":  45.0
+                                                                                      },
+                                                                           "adjacent":  {
+                                                                                            "returned_separately":  true,
+                                                                                            "can_fill_formal_top10":  false
+                                                                                        },
+                                                                           "c_recall":  {
+                                                                                            "require_approved_source_filter":  true,
+                                                                                            "require_abstract":  true,
+                                                                                            "min_focality_score":  60.0
+                                                                                        }
+                                                                       },
+                                                  "queries":  {
+                                                                  "en_precise":  [
+                                                                                     "platform governance"
+                                                                                 ],
+                                                                  "en_recall":  [
+                                                                                    "platform governance information systems",
+                                                                                    "platform governance organization"
+                                                                                ],
+                                                                  "zh_precise":  [
+                                                                                     "平台治理"
+                                                                                 ],
+                                                                  "zh_recall":  [
+                                                                                    "平台治理 信息系统",
+                                                                                    "平台治理 信息管理"
+                                                                                ]
+                                                              },
+                                                  "source_policy":  {
+                                                                        "tier_a_pool_ids":  [
+                                                                                                "IS_CORE",
+                                                                                                "COMMUNICATION"
+                                                                                            ],
+                                                                        "tier_b_pool_ids":  [
+                                                                                                "DIGITAL_PLATFORM",
+                                                                                                "ORG_STRATEGY",
+                                                                                                "ECON_STRATEGY",
+                                                                                                "SECURITY",
+                                                                                                "HCI"
+                                                                                            ],
+                                                                        "adjacent_pool_ids":  [
+                                                                                                  "HCI",
+                                                                                                  "COMMUNICATION",
+                                                                                                  "PSYCHOLOGY"
+                                                                                              ],
+                                                                        "zh_pool_ids":  [
+                                                                                            "ZH_IS_IM_CORE",
+                                                                                            "ZH_ORG_INNOVATION",
+                                                                                            "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+                                                                                            "PKU_CORE_2023_MANAGEMENT_DIRECT",
+                                                                                            "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+                                                                                            "PKU_CORE_2023_COMMUNICATION"
+                                                                                        ],
+                                                                        "unknown_action":  "manual_review"
+                                                                    },
+                                                  "openalex_routes":  {
+                                                                          "approved_topic_ids":  [
+
+                                                                                                 ],
+                                                                          "approved_primary_topic_ids":  [
+
+                                                                                                         ],
+                                                                          "approved_field_ids":  [
+
+                                                                                                 ],
+                                                                          "approved_subfield_ids":  [
+
+                                                                                                    ],
+                                                                          "tier_a_source_ids":  [
+                                                                                                    "S28604305",
+                                                                                                    "S11479521",
+                                                                                                    "S2764497610",
+                                                                                                    "S116712389",
+                                                                                                    "S181659395",
+                                                                                                    "S92260147",
+                                                                                                    "S202812398",
+                                                                                                    "S35363033",
+                                                                                                    "S30594836",
+                                                                                                    "S135086714",
+                                                                                                    "S9954729",
+                                                                                                    "S30879505",
+                                                                                                    "S57293258",
+                                                                                                    "S48312676",
+                                                                                                    "S27211427",
+                                                                                                    "S144363146"
+                                                                                                ],
+                                                                          "tier_b_source_ids":  [
+                                                                                                    "S89276529",
+                                                                                                    "S204030396",
+                                                                                                    "S92260147",
+                                                                                                    "S202812398",
+                                                                                                    "S35363033",
+                                                                                                    "S18436875",
+                                                                                                    "S189354248",
+                                                                                                    "S63576417",
+                                                                                                    "S135086714",
+                                                                                                    "S57293258",
+                                                                                                    "S163534328",
+                                                                                                    "S206124708"
+                                                                                                ],
+                                                                          "adjacent_source_ids":  [
+                                                                                                      "S89276529",
+                                                                                                      "S28604305",
+                                                                                                      "S204030396",
+                                                                                                      "S114020440",
+                                                                                                      "S2764497610",
+                                                                                                      "S166002381",
+                                                                                                      "S61413993",
+                                                                                                      "S30594836",
+                                                                                                      "S163545350",
+                                                                                                      "S79587319",
+                                                                                                      "S12410666",
+                                                                                                      "S87328381",
+                                                                                                      "S29984966",
+                                                                                                      "S64744539",
+                                                                                                      "S84664706",
+                                                                                                      "S27211427",
+                                                                                                      "S75627607",
+                                                                                                      "S58854535"
+                                                                                                  ],
+                                                                          "zh_source_ids":  [
+                                                                                                "S2764438959",
+                                                                                                "S2764508881",
+                                                                                                "S2764993020",
+                                                                                                "S4306510718",
+                                                                                                "S2764613313",
+                                                                                                "S2764457360",
+                                                                                                "S4306529266",
+                                                                                                "S2764834030",
+                                                                                                "S2764989655"
+                                                                                            ],
+                                                                          "topic_resolution":  [
+                                                                                                   {
+                                                                                                       "id":  "T14362",
+                                                                                                       "display_name":  "Diverse Legal and Medical Studies",
+                                                                                                       "description":  "This cluster of papers focuses on competition law, market power, and regulatory frameworks in the European Union. It explores topics such as the Digital Markets Act, EU competition law, consumer protection, antitrust regulation, platform economy, unfair trading practices, and corporate governance. The papers analyze the role of producer organizations, the impact of public payment delays, and the implications of excessive pharmaceutical prices on public health.",
+                                                                                                       "field":  {
+                                                                                                                     "id":  "https://openalex.org/fields/14",
+                                                                                                                     "display_name":  "Business, Management and Accounting"
+                                                                                                                 },
+                                                                                                       "subfield":  {
+                                                                                                                        "id":  "https://openalex.org/subfields/1408",
+                                                                                                                        "display_name":  "Strategy and Management"
+                                                                                                                    },
+                                                                                                       "domain":  {
+                                                                                                                      "id":  "https://openalex.org/domains/2",
+                                                                                                                      "display_name":  "Social Sciences"
+                                                                                                                  },
+                                                                                                       "works_count":  124219,
+                                                                                                       "query":  "platform governance",
+                                                                                                       "review_status":  "pending_review",
+                                                                                                       "sample_papers":  [
+                                                                                                                             {
+                                                                                                                                 "id":  "W2024828917",
+                                                                                                                                 "title":  "Das Reafferenzprinzip",
+                                                                                                                                 "year":  1950
+                                                                                                                             },
+                                                                                                                             {
+                                                                                                                                 "id":  "W1977319909",
+                                                                                                                                 "title":  "Sokal, R. R., and I. J. Rohlf: Biometry. W. H. Freeman and Company, San Francisco 1969, XXI + 776 S., 89 Abb., 56 Tab., Preis 126/—",
+                                                                                                                                 "year":  1970
+                                                                                                                             }
+                                                                                                                         ],
+                                                                                                       "evidence_source":  "OpenAlex topics search and primary-topic sample works"
+                                                                                                   }
+                                                                                               ]
+                                                                      },
+                                                  "source_routes":  {
+                                                                        "required":  [
+                                                                                         "openalex",
+                                                                                         "crossref"
+                                                                                     ],
+                                                                        "optional":  [
+                                                                                         "semantic_scholar"
+                                                                                     ],
+                                                                        "licensed_optional":  [
+                                                                                                  "scopus",
+                                                                                                  "web_of_science",
+                                                                                                  "cnki",
+                                                                                                  "wanfang"
+                                                                                              ]
+                                                                    },
+                                                  "journal_pool_ids":  [
+                                                                           "IS_CORE",
+                                                                           "COMMUNICATION",
+                                                                           "DIGITAL_PLATFORM",
+                                                                           "ORG_STRATEGY",
+                                                                           "ECON_STRATEGY",
+                                                                           "SECURITY",
+                                                                           "HCI",
+                                                                           "PSYCHOLOGY",
+                                                                           "ZH_IS_IM_CORE",
+                                                                           "ZH_ORG_INNOVATION",
+                                                                           "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+                                                                           "PKU_CORE_2023_MANAGEMENT_DIRECT",
+                                                                           "CSSCI_2025_2026_COMMUNICATION_IS_IM_RELEVANT",
+                                                                           "PKU_CORE_2023_COMMUNICATION"
+                                                                       ],
+                                                  "document_types":  [
+                                                                         "journal-article"
+                                                                     ],
+                                                  "coverage_targets":  {
+                                                                           "raw_min":  20,
+                                                                           "post_boundary_min":  10,
+                                                                           "precision_at_10_min":  0.8
+                                                                       },
+                                                  "source_refs":  [
+                                                                      "02_journals/IS_IM_Journal_Knowledge_Base.md:53",
+                                                                      "02_journals/IS_IM_Journal_Knowledge_Base.md:91",
+                                                                      "02_journals/IS_IM_Journal_Knowledge_Base.md:221"
+                                                                  ]
+                                              }
+                    },
+    "stages":  [
+                   {
+                       "id":  "catalog",
+                       "label":  "方向目录匹配",
+                       "status":  "complete"
+                   },
+                   {
+                       "id":  "scope",
+                       "label":  "IS/IM范围确认",
+                       "status":  "complete"
+                   },
+                   {
+                       "id":  "plan",
+                       "label":  "检索路径确定",
+                       "status":  "complete"
+                   },
+                   {
+                       "id":  "discovery",
+                       "label":  "动态论文检索",
+                       "status":  "complete"
+                   },
+                   {
+                       "id":  "synthesis",
+                       "label":  "五方向与研究空白",
+                       "status":  "complete"
+                   }
+               ],
+    "next_allowed_actions":  [
+                                 "select_gap",
+                                 "reset_request"
+                             ],
+    "papers":  [
+                   {
+                       "paper_id":  "P2F001",
+                       "title":  "Controlled fixture paper 1 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Complementor strategies depend on platform rules and ecosystem boundaries. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.1",
+                       "language":  "en",
+                       "citation_count":  7,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  71,
+                       "source_quality":  61
+                   },
+                   {
+                       "paper_id":  "P2F002",
+                       "title":  "Controlled fixture paper 2 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Ecosystem orchestration moderates value creation among platform complementors. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.2",
+                       "language":  "en",
+                       "citation_count":  14,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  72,
+                       "source_quality":  62
+                   },
+                   {
+                       "paper_id":  "P2F003",
+                       "title":  "Controlled fixture paper 3 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Platform governance shapes complementor participation in digital ecosystems. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.3",
+                       "language":  "en",
+                       "citation_count":  21,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  73,
+                       "source_quality":  63
+                   },
+                   {
+                       "paper_id":  "P2F004",
+                       "title":  "Controlled fixture paper 4 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Complementor strategies depend on platform rules and ecosystem boundaries. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.4",
+                       "language":  "en",
+                       "citation_count":  28,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  74,
+                       "source_quality":  64
+                   },
+                   {
+                       "paper_id":  "P2F005",
+                       "title":  "Controlled fixture paper 5 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Ecosystem orchestration moderates value creation among platform complementors. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.5",
+                       "language":  "en",
+                       "citation_count":  35,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  75,
+                       "source_quality":  65
+                   },
+                   {
+                       "paper_id":  "P2F006",
+                       "title":  "Controlled fixture paper 6 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Platform governance shapes complementor participation in digital ecosystems. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.6",
+                       "language":  "en",
+                       "citation_count":  1,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  76,
+                       "source_quality":  66
+                   },
+                   {
+                       "paper_id":  "P2F007",
+                       "title":  "Controlled fixture paper 7 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Complementor strategies depend on platform rules and ecosystem boundaries. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.7",
+                       "language":  "en",
+                       "citation_count":  8,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  77,
+                       "source_quality":  67
+                   },
+                   {
+                       "paper_id":  "P2F008",
+                       "title":  "Controlled fixture paper 8 on Platform ecosystems and complementors (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Ecosystem orchestration moderates value creation among platform complementors. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.8",
+                       "language":  "en",
+                       "citation_count":  15,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/ecosystem",
+                                          "display_name":  "Platform ecosystems and complementors"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "platform governance",
+                                        "complementors",
+                                        "ecosystem"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  78,
+                       "source_quality":  68
+                   },
+                   {
+                       "paper_id":  "P2F009",
+                       "title":  "Controlled fixture paper 9 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Data exchange between organizations requires interoperability standards. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.9",
+                       "language":  "en",
+                       "citation_count":  22,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  79,
+                       "source_quality":  69
+                   },
+                   {
+                       "paper_id":  "P2F010",
+                       "title":  "Controlled fixture paper 10 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Design principles for data sharing platforms balance openness and control. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.10",
+                       "language":  "en",
+                       "citation_count":  29,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  80,
+                       "source_quality":  70
+                   },
+                   {
+                       "paper_id":  "P2F011",
+                       "title":  "Controlled fixture paper 11 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Interoperability governance explains variation in data exchange outcomes. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.11",
+                       "language":  "en",
+                       "citation_count":  36,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  81,
+                       "source_quality":  71
+                   },
+                   {
+                       "paper_id":  "P2F012",
+                       "title":  "Controlled fixture paper 12 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Data exchange between organizations requires interoperability standards. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.12",
+                       "language":  "en",
+                       "citation_count":  2,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  82,
+                       "source_quality":  72
+                   },
+                   {
+                       "paper_id":  "P2F013",
+                       "title":  "Controlled fixture paper 13 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Design principles for data sharing platforms balance openness and control. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.13",
+                       "language":  "en",
+                       "citation_count":  9,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  83,
+                       "source_quality":  73
+                   },
+                   {
+                       "paper_id":  "P2F014",
+                       "title":  "Controlled fixture paper 14 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Interoperability governance explains variation in data exchange outcomes. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.14",
+                       "language":  "en",
+                       "citation_count":  16,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  84,
+                       "source_quality":  74
+                   },
+                   {
+                       "paper_id":  "P2F015",
+                       "title":  "Controlled fixture paper 15 on Data exchange and interoperability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Data exchange between organizations requires interoperability standards. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.15",
+                       "language":  "en",
+                       "citation_count":  23,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/data_exchange",
+                                          "display_name":  "Data exchange and interoperability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "data exchange",
+                                        "interoperability",
+                                        "data sharing"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  85,
+                       "source_quality":  75
+                   },
+                   {
+                       "paper_id":  "P2F016",
+                       "title":  "Controlled fixture paper 16 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Policy instruments for platform oversight differ across jurisdictions. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.16",
+                       "language":  "en",
+                       "citation_count":  30,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  86,
+                       "source_quality":  76
+                   },
+                   {
+                       "paper_id":  "P2F017",
+                       "title":  "Controlled fixture paper 17 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Digital government initiatives reshape regulatory capacity for platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.17",
+                       "language":  "en",
+                       "citation_count":  37,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  87,
+                       "source_quality":  77
+                   },
+                   {
+                       "paper_id":  "P2F018",
+                       "title":  "Controlled fixture paper 18 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Government regulation addresses market power of digital platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.18",
+                       "language":  "en",
+                       "citation_count":  3,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  88,
+                       "source_quality":  78
+                   },
+                   {
+                       "paper_id":  "P2F019",
+                       "title":  "Controlled fixture paper 19 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Policy instruments for platform oversight differ across jurisdictions. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.19",
+                       "language":  "en",
+                       "citation_count":  10,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  89,
+                       "source_quality":  79
+                   },
+                   {
+                       "paper_id":  "P2F020",
+                       "title":  "Controlled fixture paper 20 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Digital government initiatives reshape regulatory capacity for platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.20",
+                       "language":  "en",
+                       "citation_count":  17,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  90,
+                       "source_quality":  80
+                   },
+                   {
+                       "paper_id":  "P2F021",
+                       "title":  "Controlled fixture paper 21 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Government regulation addresses market power of digital platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.21",
+                       "language":  "en",
+                       "citation_count":  24,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  91,
+                       "source_quality":  81
+                   },
+                   {
+                       "paper_id":  "P2F022",
+                       "title":  "Controlled fixture paper 22 on Government regulation of digital platforms (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Policy instruments for platform oversight differ across jurisdictions. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.22",
+                       "language":  "en",
+                       "citation_count":  31,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/regulation",
+                                          "display_name":  "Government regulation of digital platforms"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "government regulation",
+                                        "digital government",
+                                        "policy"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  92,
+                       "source_quality":  82
+                   },
+                   {
+                       "paper_id":  "P2F023",
+                       "title":  "Controlled fixture paper 23 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Accountability mechanisms for algorithmic decisions remain fragmented. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.23",
+                       "language":  "en",
+                       "citation_count":  38,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  93,
+                       "source_quality":  83
+                   },
+                   {
+                       "paper_id":  "P2F024",
+                       "title":  "Controlled fixture paper 24 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Algorithmic transparency requirements create accountability obligations. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.24",
+                       "language":  "en",
+                       "citation_count":  4,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  94,
+                       "source_quality":  84
+                   },
+                   {
+                       "paper_id":  "P2F025",
+                       "title":  "Controlled fixture paper 25 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Stakeholder pressure drives algorithm disclosure on platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.25",
+                       "language":  "en",
+                       "citation_count":  11,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  95,
+                       "source_quality":  85
+                   },
+                   {
+                       "paper_id":  "P2F026",
+                       "title":  "Controlled fixture paper 26 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Accountability mechanisms for algorithmic decisions remain fragmented. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.26",
+                       "language":  "en",
+                       "citation_count":  18,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  70,
+                       "source_quality":  86
+                   },
+                   {
+                       "paper_id":  "P2F027",
+                       "title":  "Controlled fixture paper 27 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Algorithmic transparency requirements create accountability obligations. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.27",
+                       "language":  "en",
+                       "citation_count":  25,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  71,
+                       "source_quality":  87
+                   },
+                   {
+                       "paper_id":  "P2F028",
+                       "title":  "Controlled fixture paper 28 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Stakeholder pressure drives algorithm disclosure on platforms. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.28",
+                       "language":  "en",
+                       "citation_count":  32,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  72,
+                       "source_quality":  88
+                   },
+                   {
+                       "paper_id":  "P2F029",
+                       "title":  "Controlled fixture paper 29 on Algorithmic transparency and accountability (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Accountability mechanisms for algorithmic decisions remain fragmented. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.29",
+                       "language":  "en",
+                       "citation_count":  39,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/algorithmic",
+                                          "display_name":  "Algorithmic transparency and accountability"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "algorithmic transparency",
+                                        "accountability",
+                                        "stakeholder"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  73,
+                       "source_quality":  89
+                   },
+                   {
+                       "paper_id":  "P2F030",
+                       "title":  "Controlled fixture paper 30 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Platform orchestration strategies generate regulatory externalities. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.30",
+                       "language":  "en",
+                       "citation_count":  5,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  74,
+                       "source_quality":  90
+                   },
+                   {
+                       "paper_id":  "P2F031",
+                       "title":  "Controlled fixture paper 31 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Coordination failures among platforms produce spillover effects. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.31",
+                       "language":  "en",
+                       "citation_count":  12,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  75,
+                       "source_quality":  91
+                   },
+                   {
+                       "paper_id":  "P2F032",
+                       "title":  "Controlled fixture paper 32 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. The evolution of orchestration practices tracks regulatory shifts. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.32",
+                       "language":  "en",
+                       "citation_count":  19,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  76,
+                       "source_quality":  92
+                   },
+                   {
+                       "paper_id":  "P2F033",
+                       "title":  "Controlled fixture paper 33 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Platform orchestration strategies generate regulatory externalities. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2024,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.33",
+                       "language":  "en",
+                       "citation_count":  26,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  77,
+                       "source_quality":  93
+                   },
+                   {
+                       "paper_id":  "P2F034",
+                       "title":  "Controlled fixture paper 34 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Coordination failures among platforms produce spillover effects. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2025,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.34",
+                       "language":  "en",
+                       "citation_count":  33,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  78,
+                       "source_quality":  94
+                   },
+                   {
+                       "paper_id":  "P2F035",
+                       "title":  "Controlled fixture paper 35 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. The evolution of orchestration practices tracks regulatory shifts. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2026,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.35",
+                       "language":  "en",
+                       "citation_count":  40,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  79,
+                       "source_quality":  95
+                   },
+                   {
+                       "paper_id":  "P2F036",
+                       "title":  "Controlled fixture paper 36 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                       "abstract":  "This abstract is controlled fixture text for P2 interface acceptance; it is not a research finding. Platform orchestration strategies generate regulatory externalities. Fixture sentence for deterministic clustering vocabulary.",
+                       "year":  2023,
+                       "source_title":  "Controlled Fixture Journal",
+                       "doi":  "10.0000/p2fixture.36",
+                       "language":  "en",
+                       "citation_count":  6,
+                       "topics":  [
+                                      {
+                                          "id":  "fixture/orchestration",
+                                          "display_name":  "Platform orchestration and regulatory externalities"
+                                      }
+                                  ],
+                       "keywords":  [
+                                        "orchestration",
+                                        "externalities",
+                                        "coordination"
+                                    ],
+                       "relevance_tier":  "direct",
+                       "p1_match_score":  80,
+                       "source_quality":  60
+                   }
+               ],
+    "search_log":  [
+                       {
+                           "provider":  "controlled_p2_fixture",
+                           "status":  "ok",
+                           "returned_rows":  36
+                       }
+                   ],
+    "exclusion_log":  [
+
+                      ],
+    "shortages":  {
+
+                  },
+    "coverage_audit":  {
+                           "fixture":  true,
+                           "direction_id":  "platform_governance"
+                       },
+    "provider_statuses":  [
+                              {
+                                  "provider":  "controlled_p2_fixture",
+                                  "status":  "ok",
+                                  "returned_rows":  36
+                              }
+                          ],
+    "expansion_log":  [
+
+                      ],
+    "dedupe_log":  [
+
+                   ],
+    "candidate_traces":  [
+
+                         ],
+    "lane_funnels":  [
+
+                     ],
+    "chinese_coverage":  {
+
+                         },
+    "zero_result_diagnosis":  {
+
+                              },
+    "score_config_version":  "p1-directness-reranker-2.1.0",
+    "synthesis_job_id":  null,
+    "synthesis_status":  "SYNTHESIS_COMPLETE",
+    "synthesis_message":  "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+    "top_subdirections":  [
+                              {
+                                  "cluster_id":  "cluster_001",
+                                  "paper_ids":  [
+                                                    "P2F001",
+                                                    "P2F002",
+                                                    "P2F003",
+                                                    "P2F004",
+                                                    "P2F005",
+                                                    "P2F006",
+                                                    "P2F007",
+                                                    "P2F008"
+                                                ],
+                                  "paper_count":  8,
+                                  "feature_terms":  [
+                                                        "topic::platform ecosystems and complementors",
+                                                        "complementors",
+                                                        "ecosystems",
+                                                        "platform",
+                                                        "keyword::complementors",
+                                                        "keyword::ecosystem",
+                                                        "keyword::platform governance",
+                                                        "fixture",
+                                                        "ecosystem",
+                                                        "complementor"
+                                                    ],
+                                  "sample_titles":  [
+                                                        "Controlled fixture paper 1 on Platform ecosystems and complementors (UI acceptance only)",
+                                                        "Controlled fixture paper 2 on Platform ecosystems and complementors (UI acceptance only)",
+                                                        "Controlled fixture paper 3 on Platform ecosystems and complementors (UI acceptance only)",
+                                                        "Controlled fixture paper 4 on Platform ecosystems and complementors (UI acceptance only)",
+                                                        "Controlled fixture paper 5 on Platform ecosystems and complementors (UI acceptance only)"
+                                                    ],
+                                  "heat":  0.4718,
+                                  "heat_components":  {
+                                                          "paper_share":  0.2222,
+                                                          "recent_growth":  0.75,
+                                                          "citation_velocity":  0.7656,
+                                                          "match_score":  0.0,
+                                                          "source_quality":  0.645
+                                                      },
+                                  "name_zh":  "受控测试簇名A1（界面验收）",
+                                  "name_en":  "Controlled fixture name A1",
+                                  "description":  "受控选手A命名：仅用于界面验收，不代表真实研究方向命名。",
+                                  "selected_from":  "athlete_a",
+                                  "judge_reason":  "受控裁判理由：仅用于界面验收。"
+                              },
+                              {
+                                  "cluster_id":  "cluster_002",
+                                  "paper_ids":  [
+                                                    "P2F009",
+                                                    "P2F010",
+                                                    "P2F011",
+                                                    "P2F012",
+                                                    "P2F013",
+                                                    "P2F014",
+                                                    "P2F015"
+                                                ],
+                                  "paper_count":  7,
+                                  "feature_terms":  [
+                                                        "data",
+                                                        "exchange",
+                                                        "interoperability",
+                                                        "topic::data exchange and interoperability",
+                                                        "keyword::data exchange",
+                                                        "keyword::data sharing",
+                                                        "keyword::interoperability",
+                                                        "fixture",
+                                                        "acceptance",
+                                                        "controlled"
+                                                    ],
+                                  "sample_titles":  [
+                                                        "Controlled fixture paper 9 on Data exchange and interoperability (UI acceptance only)",
+                                                        "Controlled fixture paper 10 on Data exchange and interoperability (UI acceptance only)",
+                                                        "Controlled fixture paper 11 on Data exchange and interoperability (UI acceptance only)",
+                                                        "Controlled fixture paper 12 on Data exchange and interoperability (UI acceptance only)",
+                                                        "Controlled fixture paper 13 on Data exchange and interoperability (UI acceptance only)"
+                                                    ],
+                                  "heat":  0.5446,
+                                  "heat_components":  {
+                                                          "paper_share":  0.1944,
+                                                          "recent_growth":  0.8571,
+                                                          "citation_velocity":  1.0,
+                                                          "match_score":  0.0,
+                                                          "source_quality":  0.72
+                                                      },
+                                  "name_zh":  "受控测试簇名B2：机制×情境组合（界面验收）",
+                                  "name_en":  "Controlled fixture name B2: mechanism x context",
+                                  "description":  "受控选手B命名：仅用于界面验收，不代表真实研究方向命名。",
+                                  "selected_from":  "athlete_b",
+                                  "judge_reason":  "受控裁判理由：仅用于界面验收。"
+                              },
+                              {
+                                  "cluster_id":  "cluster_003",
+                                  "paper_ids":  [
+                                                    "P2F016",
+                                                    "P2F017",
+                                                    "P2F018",
+                                                    "P2F019",
+                                                    "P2F020",
+                                                    "P2F021",
+                                                    "P2F022"
+                                                ],
+                                  "paper_count":  7,
+                                  "feature_terms":  [
+                                                        "government",
+                                                        "topic::government regulation of digital platforms",
+                                                        "digital",
+                                                        "regulation",
+                                                        "keyword::digital government",
+                                                        "keyword::government regulation",
+                                                        "keyword::policy",
+                                                        "platforms",
+                                                        "fixture",
+                                                        "acceptance"
+                                                    ],
+                                  "sample_titles":  [
+                                                        "Controlled fixture paper 16 on Government regulation of digital platforms (UI acceptance only)",
+                                                        "Controlled fixture paper 17 on Government regulation of digital platforms (UI acceptance only)",
+                                                        "Controlled fixture paper 18 on Government regulation of digital platforms (UI acceptance only)",
+                                                        "Controlled fixture paper 19 on Government regulation of digital platforms (UI acceptance only)",
+                                                        "Controlled fixture paper 20 on Government regulation of digital platforms (UI acceptance only)"
+                                                    ],
+                                  "heat":  0.4847,
+                                  "heat_components":  {
+                                                          "paper_share":  0.1944,
+                                                          "recent_growth":  0.7143,
+                                                          "citation_velocity":  0.844,
+                                                          "match_score":  0.0,
+                                                          "source_quality":  0.79
+                                                      },
+                                  "name_zh":  "受控测试簇名A3（界面验收）",
+                                  "name_en":  "Controlled fixture name A3",
+                                  "description":  "受控选手A命名：仅用于界面验收，不代表真实研究方向命名。",
+                                  "selected_from":  "athlete_a",
+                                  "judge_reason":  "受控裁判理由：仅用于界面验收。"
+                              },
+                              {
+                                  "cluster_id":  "cluster_004",
+                                  "paper_ids":  [
+                                                    "P2F023",
+                                                    "P2F024",
+                                                    "P2F025",
+                                                    "P2F026",
+                                                    "P2F027",
+                                                    "P2F028",
+                                                    "P2F029"
+                                                ],
+                                  "paper_count":  7,
+                                  "feature_terms":  [
+                                                        "accountability",
+                                                        "algorithmic",
+                                                        "topic::algorithmic transparency and accountability",
+                                                        "transparency",
+                                                        "keyword::accountability",
+                                                        "keyword::algorithmic transparency",
+                                                        "keyword::stakeholder",
+                                                        "fixture",
+                                                        "acceptance",
+                                                        "controlled"
+                                                    ],
+                                  "sample_titles":  [
+                                                        "Controlled fixture paper 23 on Algorithmic transparency and accountability (UI acceptance only)",
+                                                        "Controlled fixture paper 24 on Algorithmic transparency and accountability (UI acceptance only)",
+                                                        "Controlled fixture paper 25 on Algorithmic transparency and accountability (UI acceptance only)",
+                                                        "Controlled fixture paper 26 on Algorithmic transparency and accountability (UI acceptance only)",
+                                                        "Controlled fixture paper 27 on Algorithmic transparency and accountability (UI acceptance only)"
+                                                    ],
+                                  "heat":  0.5229,
+                                  "heat_components":  {
+                                                          "paper_share":  0.1944,
+                                                          "recent_growth":  0.7143,
+                                                          "citation_velocity":  1.0,
+                                                          "match_score":  0.0,
+                                                          "source_quality":  0.86
+                                                      },
+                                  "name_zh":  "受控测试簇名B4：机制×情境组合（界面验收）",
+                                  "name_en":  "Controlled fixture name B4: mechanism x context",
+                                  "description":  "受控选手B命名：仅用于界面验收，不代表真实研究方向命名。",
+                                  "selected_from":  "athlete_b",
+                                  "judge_reason":  "受控裁判理由：仅用于界面验收。"
+                              },
+                              {
+                                  "cluster_id":  "cluster_005",
+                                  "paper_ids":  [
+                                                    "P2F030",
+                                                    "P2F031",
+                                                    "P2F032",
+                                                    "P2F033",
+                                                    "P2F034",
+                                                    "P2F035",
+                                                    "P2F036"
+                                                ],
+                                  "paper_count":  7,
+                                  "feature_terms":  [
+                                                        "regulatory",
+                                                        "orchestration",
+                                                        "externalities",
+                                                        "topic::platform orchestration and regulatory externalities",
+                                                        "keyword::coordination",
+                                                        "keyword::externalities",
+                                                        "keyword::orchestration",
+                                                        "platform",
+                                                        "fixture",
+                                                        "acceptance"
+                                                    ],
+                                  "sample_titles":  [
+                                                        "Controlled fixture paper 30 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                                                        "Controlled fixture paper 31 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                                                        "Controlled fixture paper 32 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                                                        "Controlled fixture paper 33 on Platform orchestration and regulatory externalities (UI acceptance only)",
+                                                        "Controlled fixture paper 34 on Platform orchestration and regulatory externalities (UI acceptance only)"
+                                                    ],
+                                  "heat":  0.5248,
+                                  "heat_components":  {
+                                                          "paper_share":  0.1944,
+                                                          "recent_growth":  0.7143,
+                                                          "citation_velocity":  1.0,
+                                                          "match_score":  0.0,
+                                                          "source_quality":  0.8786
+                                                      },
+                                  "name_zh":  "受控测试簇名A5（界面验收）",
+                                  "name_en":  "Controlled fixture name A5",
+                                  "description":  "受控选手A命名：仅用于界面验收，不代表真实研究方向命名。",
+                                  "selected_from":  "athlete_a",
+                                  "judge_reason":  "受控裁判理由：仅用于界面验收。"
+                              }
+                          ],
+    "gap_candidates":  [
+
+                       ],
+    "synthesis_limitations":  [
+
+                              ],
+    "synthesis_audit":  {
+                            "corpus_hash":  "e2f40428bacbb067ff18135718dd516e5e01afaad29ae2b82e6ac21af3a511ce",
+                            "cluster_config_version":  "p2-tfidf-average-linkage-2.1.0",
+                            "cache_key":  "6ff2b4f20b7c332f47078d826ecaae16e60d19cdc04c8c7bfac49e136b08eff8",
+                            "input_paper_count":  36,
+                            "direct_paper_count":  36,
+                            "abstract_count":  36,
+                            "data_cutoff_date":  "2026-08-23",
+                            "direction_profile_version":  "1.2.0-p1-retrieval",
+                            "retrieval_version":  "p1-query-plan-1.0.0",
+                            "score_version":  "p1-directness-reranker-2.1.0",
+                            "language_counts":  {
+                                                    "en":  36
+                                                },
+                            "honest_target":  5,
+                            "requested_clusters":  5,
+                            "degradation_reasons":  [
+
+                                                    ],
+                            "degradation_reasons_text":  [
+
+                                                         ],
+                            "p1_precision_gate_passed":  true,
+                            "p1_precision_summary":  {
+                                                         "status":  "RERANK_CALIBRATED",
+                                                         "calibrated_on":  "2026-08-23",
+                                                         "overall_precision_at_10":  0.8814,
+                                                         "weakest_group_precision":  0.7778,
+                                                         "obvious_false_positive_rate":  0.0169,
+                                                         "labeled_rows":  60,
+                                                         "reranker_version":  "p1-directness-reranker-2.1.0",
+                                                         "profile_version":  "1.2.0-p1-retrieval",
+                                                         "evidence":  "04-分析/01-current/P1精排校准返修/p1_sampled_precision_result.json",
+                                                         "decision":  "D039"
+                                                     },
+                            "cache_hit":  false,
+                            "feature_method":  "tfidf_text_plus_topic_keyword",
+                            "linkage":  "average",
+                            "tie_break":  "lexicographic_paper_ids",
+                            "heat_method":  "weighted_share_recent_citation_match_source",
+                            "stability_self_check":  {
+                                                         "runs":  2,
+                                                         "exact_match":  true,
+                                                         "method":  "byte_identical_full_output"
+                                                     },
+                            "naming":  {
+                                           "provider":  "athlete_judge_arena",
+                                           "prompt_version":  "p2-athlete-judge-naming-2.0.0",
+                                           "membership_hash":  "dcc5c4ad9515b09884e44fed9761f09917d820d5c3b0e3724f1269282ce5b031",
+                                           "athlete_a":  {
+                                                             "model":  "controlled-browser-fixture",
+                                                             "usage":  {
+                                                                           "prompt_tokens":  1,
+                                                                           "completion_tokens":  1,
+                                                                           "total_tokens":  2
+                                                                       },
+                                                             "finish_reason":  "stop",
+                                                             "attempts":  1,
+                                                             "duration_ms":  16.0
+                                                         },
+                                           "athlete_b":  {
+                                                             "model":  "controlled-browser-fixture",
+                                                             "usage":  {
+                                                                           "prompt_tokens":  1,
+                                                                           "completion_tokens":  1,
+                                                                           "total_tokens":  2
+                                                                       },
+                                                             "finish_reason":  "stop",
+                                                             "attempts":  1,
+                                                             "duration_ms":  0.0
+                                                         },
+                                           "judge":  {
+                                                         "model":  "controlled-browser-fixture",
+                                                         "usage":  {
+                                                                       "prompt_tokens":  1,
+                                                                       "completion_tokens":  1,
+                                                                       "total_tokens":  2
+                                                                   },
+                                                         "finish_reason":  "stop",
+                                                         "attempts":  1,
+                                                         "duration_ms":  31.0
+                                                     },
+                                           "winners":  {
+                                                           "cluster_001":  "athlete_a",
+                                                           "cluster_002":  "athlete_b",
+                                                           "cluster_003":  "athlete_a",
+                                                           "cluster_004":  "athlete_b",
+                                                           "cluster_005":  "athlete_a"
+                                                       },
+                                           "athlete_win_counts":  {
+                                                                      "athlete_a":  3,
+                                                                      "athlete_b":  2
+                                                                  },
+                                           "membership_invariant":  true
+                                       },
+                            "naming_prompt_version":  "p2-athlete-judge-naming-2.0.0",
+                            "naming_fallback_reason":  "",
+                            "research_gap_generation_in_p2":  false
+                        }
+}

@@ -1,0 +1,2046 @@
+{
+ "state": "PROPOSAL_PARTIAL",
+ "proposal_status": "PROPOSAL_CONTROLLED_PARTIAL",
+ "proposal_message": "逐节生成未通过全部控制门禁。",
+ "proposal": {
+  "user_constraints": {
+   "degree_level": "硕士",
+   "institution_template": "无指定模板",
+   "output_language": "中文",
+   "target_word_count": 12000,
+   "deadline": "2026-12-31",
+   "data_access": "公开平台数据与二手数据",
+   "method_constraints": "无",
+   "research_context": "数字平台生态情境",
+   "ethics_privacy": "不涉及人类被试敏感数据",
+   "tool_capabilities": "Python与统计工具"
+  },
+  "research_design_blueprint": {
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "research_direction": "平台治理",
+   "gap_id": "gap_8954c484edeac0f10ad3",
+   "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+   "claim_ids": [
+    "claim_668fa1f4a91a01a66ecf",
+    "claim_431ba39ee9c713ce6d4e"
+   ],
+   "paradigm_id": "qualitative_case_process",
+   "unit_of_analysis": "平台-互补者二元关系",
+   "context": "交易型平台（如电商、共享经济）与创新型平台（如软件生态）的对比",
+   "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+   "data": "对平台所有者、互补者及用户的半结构化访谈，辅以平台政策文件和互补者行为数据",
+   "analysis": "模糊集定性比较分析（fsQCA）识别权力抵消的必要与充分条件组合",
+   "section_ids": [
+    "working_title",
+    "background",
+    "concepts",
+    "literature_status",
+    "selected_gap",
+    "research_questions",
+    "theoretical_framework",
+    "research_design",
+    "contributions",
+    "feasibility_ethics",
+    "timeline"
+   ],
+   "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+   "degree_level": "硕士",
+   "institution_template": "无指定模板",
+   "output_language": "中文",
+   "target_word_count": 12000,
+   "deadline": "2026-12-31",
+   "data_access": "公开平台数据与二手数据",
+   "method_constraints": "无",
+   "ethics_privacy": "不涉及人类被试敏感数据",
+   "tool_capabilities": "Python与统计工具"
+  },
+  "proposal_outline": {
+   "version": "phase-e-workflow-controls-1.0.0",
+   "outline_id": "outline_ce67d84fffc0a71c83ac",
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+   "target_word_count": 12000,
+   "sections": [
+    {
+     "sequence": 1,
+     "section_id": "working_title",
+     "title": "暂定题目",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“暂定题目”",
+     "target_words": 0,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 2,
+     "section_id": "background",
+     "title": "研究背景与问题重要性",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究背景与问题重要性”",
+     "target_words": 1560,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 3,
+     "section_id": "concepts",
+     "title": "概念界定",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“概念界定”",
+     "target_words": 960,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 4,
+     "section_id": "literature_status",
+     "title": "国内外研究现状",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“国内外研究现状”",
+     "target_words": 1920,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 5,
+     "section_id": "selected_gap",
+     "title": "已选研究空白及证据",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“已选研究空白及证据”",
+     "target_words": 1080,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 6,
+     "section_id": "research_questions",
+     "title": "研究问题、假设或命题",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究问题、假设或命题”",
+     "target_words": 840,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 7,
+     "section_id": "theoretical_framework",
+     "title": "理论框架与作用机制",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“理论框架与作用机制”",
+     "target_words": 1320,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 8,
+     "section_id": "research_design",
+     "title": "研究设计、数据、测量与分析",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究设计、数据、测量与分析”",
+     "target_words": 2040,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 9,
+     "section_id": "contributions",
+     "title": "预期理论、方法与实践贡献",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“预期理论、方法与实践贡献”",
+     "target_words": 960,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 10,
+     "section_id": "feasibility_ethics",
+     "title": "可行性、伦理、风险与替代方案",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“可行性、伦理、风险与替代方案”",
+     "target_words": 840,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 11,
+     "section_id": "timeline",
+     "title": "研究计划",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究计划”",
+     "target_words": 480,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    }
+   ]
+  },
+  "execution_task_cards": {
+   "version": "phase-e-workflow-controls-1.0.0",
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "outline_id": "outline_ce67d84fffc0a71c83ac",
+   "cards": [
+    {
+     "task_card_id": "task_f546b7d2cb80292be088",
+     "sequence": 1,
+     "section_id": "working_title",
+     "title": "暂定题目",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“暂定题目”",
+     "prerequisite_task_card_ids": [],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 0,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_57a490d453c2a9877012",
+     "sequence": 2,
+     "section_id": "background",
+     "title": "研究背景与问题重要性",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究背景与问题重要性”",
+     "prerequisite_task_card_ids": [
+      "task_f546b7d2cb80292be088"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1560,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_746a9c3fef8af7d6b4e8",
+     "sequence": 3,
+     "section_id": "concepts",
+     "title": "概念界定",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“概念界定”",
+     "prerequisite_task_card_ids": [
+      "task_57a490d453c2a9877012"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 960,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_493e63cea26c956c0065",
+     "sequence": 4,
+     "section_id": "literature_status",
+     "title": "国内外研究现状",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“国内外研究现状”",
+     "prerequisite_task_card_ids": [
+      "task_746a9c3fef8af7d6b4e8"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1920,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_56393dd35474a901230b",
+     "sequence": 5,
+     "section_id": "selected_gap",
+     "title": "已选研究空白及证据",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“已选研究空白及证据”",
+     "prerequisite_task_card_ids": [
+      "task_493e63cea26c956c0065"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1080,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_c9f186c0bf5e4de4ee82",
+     "sequence": 6,
+     "section_id": "research_questions",
+     "title": "研究问题、假设或命题",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究问题、假设或命题”",
+     "prerequisite_task_card_ids": [
+      "task_56393dd35474a901230b"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 840,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_3663aa8103bf71346821",
+     "sequence": 7,
+     "section_id": "theoretical_framework",
+     "title": "理论框架与作用机制",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“理论框架与作用机制”",
+     "prerequisite_task_card_ids": [
+      "task_c9f186c0bf5e4de4ee82"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1320,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_b3478567ed8db93c8130",
+     "sequence": 8,
+     "section_id": "research_design",
+     "title": "研究设计、数据、测量与分析",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究设计、数据、测量与分析”",
+     "prerequisite_task_card_ids": [
+      "task_3663aa8103bf71346821"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 2040,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_6e41b72c2486444e811a",
+     "sequence": 9,
+     "section_id": "contributions",
+     "title": "预期理论、方法与实践贡献",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“预期理论、方法与实践贡献”",
+     "prerequisite_task_card_ids": [
+      "task_b3478567ed8db93c8130"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 960,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_54204a8fe54d6d6f56d8",
+     "sequence": 10,
+     "section_id": "feasibility_ethics",
+     "title": "可行性、伦理、风险与替代方案",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“可行性、伦理、风险与替代方案”",
+     "prerequisite_task_card_ids": [
+      "task_6e41b72c2486444e811a"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 840,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_debb41d2c0b5f70f4198",
+     "sequence": 11,
+     "section_id": "timeline",
+     "title": "研究计划",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究计划”",
+     "prerequisite_task_card_ids": [
+      "task_54204a8fe54d6d6f56d8"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 480,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    }
+   ],
+   "audit": {
+    "valid": true,
+    "task_card_count": 11,
+    "errors": [],
+    "claim_store_only": true
+   }
+  },
+  "sections": [
+   {
+    "section_id": "working_title",
+    "title": "暂定题目",
+    "content": "暂定题目：平台治理强度与互补者权力抵消策略——基于多案例比较的条件组态研究",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_f546b7d2cb80292be088"
+   },
+   {
+    "section_id": "background",
+    "title": "研究背景与问题重要性",
+    "content": "平台经济已成为当代经济活动的核心组织形态，平台所有者通过治理机制塑造互补者（complementors）的行为与收益分配。然而，现有研究对平台治理中互补者权力动态的刻画存在矛盾：一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（claim_668fa1f4a91a01a66ecf）；另一方面，互补者能够通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件（claim_668fa1f4a91a01a66ecf）。此外，平台所有者可能通过治理机制设计（如算法调整）重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e）。因此，理解互补者有效运用多归属等策略来抵消平台所有者不对称权力的条件，对于揭示平台生态的动态稳定性与治理有效性至关重要。本研究聚焦于交易型平台与创新型平台的对比，通过多案例比较研究，旨在识别权力抵消的必要与充分条件组合，为平台治理理论提供新的边界条件证据。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_57a490d453c2a9877012"
+   },
+   {
+    "section_id": "concepts",
+    "title": "概念界定",
+    "content": "本节界定研究中的核心概念，包括平台所有者、互补者、平台治理、多归属、权力不对称与权力抵消。概念界定以研究问题“在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？”为导向，并严格限于Claim Store中两个主张所支持的范围。\n\n平台所有者（platform owner）指控制平台核心资源、规则与接口，并能够单方面调整治理机制的行动者。互补者（complementor）指依托平台提供互补产品或服务、从而创造价值的第三方行动者。平台治理（platform governance）指平台所有者用以协调、约束和激励互补者行为的一套正式与非正式机制，包括规则、算法、政策与激励设计。多归属（multi-homing）指互补者同时接入多个平台以分散依赖、扩大市场或规避单一平台控制的策略。权力不对称（power asymmetry）指平台所有者相对于互补者在资源控制、规则制定与执行能力上的结构性优势。权力抵消（power counterbalance）指互补者通过策略性行动削弱或中和平台所有者不对称权力的过程。\n\n现有研究对平台治理中互补者权力动态的刻画存在矛盾：一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（claim_668fa1f4a91a01a66ecf）；另一方面，互补者能够通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件（claim_668fa1f4a91a01a66ecf）。此外，平台所有者可能通过治理机制设计（如算法调整）重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e）。因此，本研究将“权力抵消”操作化为互补者策略（以多归属为核心）在特定治理条件下能否持续降低平台所有者的控制效力，而非一次性规避成功。\n\n需要说明的是，上述概念的操作化定义部分超出了Claim Store直接支持的范围，例如“权力抵消”的持续性维度、边界条件的具体类型（平台类型、互补者规模、技术架构）以及多归属作为核心策略的聚焦，均属于基于研究问题的理论推演（待验证）。这些推演将在后续理论框架与研究设计中进一步细化，并通过多案例比较加以检验。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "“权力抵消”的持续性维度（即互补者策略能否持续降低平台控制效力）是本研究基于研究问题的理论推演，未在Claim Store中直接支持。",
+     "边界条件的具体类型（平台类型、互补者规模、技术架构）是理论推演，未在Claim Store中直接支持。",
+     "将多归属作为互补者权力抵消的核心策略进行聚焦，是理论推演，未在Claim Store中直接支持。"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_746a9c3fef8af7d6b4e8"
+   },
+   {
+    "section_id": "literature_status",
+    "title": "国内外研究现状",
+    "content": "国内外研究现状\n\n平台治理与互补者权力动态是平台经济研究的核心议题。现有文献对平台所有者与互补者之间的权力关系存在两种看似矛盾的经验观察。一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（claim_668fa1f4a91a01a66ecf）。例如，平台所有者通过规则制定、资源分配和算法控制等手段，对互补者施加影响，使其在议价中处于弱势。另一方面，互补者能够通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。互补者可以同时接入多个平台，降低对单一平台的依赖，从而在一定程度上抵消平台所有者的权力。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件（claim_668fa1f4a91a01a66ecf）。\n\n进一步地，平台所有者可能通过治理机制设计（如算法调整）重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e）。这意味着互补者的多归属策略并非总能奏效，平台所有者可以通过动态调整治理机制来应对互补者的规避行为。例如，平台所有者可能改变推荐算法、调整分成比例或引入新的规则，从而削弱互补者多归属带来的优势。这一发现揭示了平台治理的动态性和复杂性：互补者的权力抵消策略与平台所有者的治理反应之间存在持续的博弈。\n\n然而，现有研究在解释互补者权力抵消的条件和机制方面仍存在不足。首先，多数研究聚焦于单一平台或单一类型的互补者，缺乏跨平台、跨类型的比较分析。其次，对于平台治理强度如何影响互补者权力抵消策略的有效性，现有文献尚未形成系统的理论框架。最后，平台所有者的治理反应（如算法调整）如何与互补者的策略相互作用，仍缺乏深入的实证研究。这些不足为本研究提供了切入点：通过多案例比较研究，识别互补者有效运用多归属等策略来抵消平台所有者不对称权力的条件。\n\n综上所述，国内外研究现状揭示了平台治理中互补者权力动态的矛盾性和复杂性，但尚未系统回答“在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力”这一研究问题。本研究将基于现有文献的不足，通过定性比较分析，探索权力抵消的必要与充分条件组合，以填补这一研究空白。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_493e63cea26c956c0065"
+   },
+   {
+    "section_id": "selected_gap",
+    "title": "已选研究空白及证据",
+    "content": "本研究聚焦于平台治理中互补者权力动态的一个关键空白：现有文献对互补者能否有效抵消平台所有者不对称权力存在矛盾证据，且未系统识别其边界条件。具体而言，一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（claim_668fa1f4a91a01a66ecf）；另一方面，互补者能够通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件（claim_668fa1f4a91a01a66ecf）。此外，平台所有者可能通过治理机制设计（如算法调整）重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e），这进一步加剧了权力动态的复杂性。因此，本研究选定这一空白作为核心切入点，旨在通过多案例比较研究，揭示互补者有效运用多归属等策略抵消平台所有者不对称权力的具体条件。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_56393dd35474a901230b"
+   },
+   {
+    "section_id": "research_questions",
+    "title": "研究问题、假设或命题",
+    "content": "本研究旨在回答一个核心研究问题：在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？围绕这一核心问题，结合现有文献中的矛盾发现（claim_668fa1f4a91a01a66ecf）与平台所有者可能通过治理机制重新确立控制的证据（claim_431ba39ee9c713ce6d4e），提出以下具体研究问题与命题。\n\n研究问题1：平台治理强度如何影响互补者采用多归属策略的倾向？\n现有研究表明，互补者能够通过多归属规避平台治理并保持利益（claim_668fa1f4a91a01a66ecf），但平台所有者也可能通过治理机制设计重新确立控制（claim_431ba39ee9c713ce6d4e）。因此，治理强度与多归属倾向之间可能存在非线性关系。命题1：平台治理强度与互补者多归属倾向呈倒U型关系，即中等治理强度下多归属倾向最高，而极低或极高治理强度下多归属倾向较低。\n\n研究问题2：互补者特征（如规模、依赖度）如何调节治理强度与多归属策略有效性之间的关系？\n文献指出，互补者权力与平台治理强度之间的关系可能存在边界条件，如平台类型、互补者规模、技术架构（claim_668fa1f4a91a01a66ecf）。命题2：互补者规模越大、对平台依赖度越低，多归属策略越能有效抵消平台所有者权力；反之，规模小、依赖度高的互补者即使采用多归属，其权力抵消效果也有限。\n\n研究问题3：平台类型（交易型 vs. 创新型）如何影响互补者多归属策略的可行性与效果？\n研究设计聚焦于交易型平台与创新型平台的对比。命题3：在创新型平台（如软件生态）中，由于技术架构的开放性和互补者资产的专用性较低，多归属策略更易实施且效果更强；而在交易型平台（如电商）中，平台所有者对交易规则和用户数据的控制更强，多归属策略的效果可能被削弱。\n\n研究问题4：平台所有者的治理机制调整（如算法变化）如何动态影响互补者多归属策略的持续性？\n平台所有者可能通过治理机制设计重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e）。命题4：当平台所有者调整治理机制（如改变推荐算法或接口规则）时，互补者原有的多归属策略可能失效，但互补者会通过新的策略组合（如跨平台数据整合）重新寻求权力平衡，形成动态博弈。\n\n上述命题均基于现有文献的矛盾发现与反证，但具体条件组合需通过多案例比较与fsQCA分析进行验证。理论推演（待验证）：多归属策略的有效性可能依赖于平台治理的“可规避性”与互补者资源的“可移植性”之间的匹配。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "命题1中倒U型关系为理论推演，需通过案例数据验证。",
+     "命题2中互补者规模与依赖度的调节作用基于文献暗示，但未直接实证。",
+     "命题3中平台类型差异对多归属效果的影响为理论推演，需案例对比支持。",
+     "命题4中动态博弈过程为理论推演，需纵向案例观察。"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_c9f186c0bf5e4de4ee82"
+   },
+   {
+    "section_id": "theoretical_framework",
+    "title": "理论框架与作用机制",
+    "content": "本节构建理论框架，以解释互补者抵消平台所有者不对称权力的条件。核心矛盾在于：平台所有者通过治理机制行使不对称权力，削弱互补者地位（claim_668fa1f4a91a01a66ecf）；但互补者可通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。同时，平台所有者可能通过治理机制设计（如算法调整）重新确立控制，使互补者的规避策略失效（claim_431ba39ee9c713ce6d4e）。这表明权力关系是动态的，互补者权力与平台治理强度之间并非线性关系，而是存在边界条件。\n\n为系统化这一动态，我们引入“权力抵消”概念：互补者通过策略性行动减少平台所有者不对称权力对其自主性和利益的影响。多归属是典型策略，但并非总是有效。其有效性取决于平台类型（交易型 vs. 创新型）、互补者规模、技术架构等条件。这些条件构成理论框架的调节变量。\n\n理论框架包含三个层次：\n1. 基础层：平台所有者与互补者之间的权力不对称，源于平台所有者对治理机制的控制（claim_668fa1f4a91a01a66ecf）。\n2. 策略层：互补者采取多归属等策略以抵消权力不对称（claim_668fa1f4a91a01a66ecf）。\n3. 反制层：平台所有者通过治理机制调整重新确立控制，可能削弱互补者策略效果（claim_431ba39ee9c713ce6d4e）。\n\n作用机制可表述为：互补者策略的有效性取决于平台所有者反制能力与互补者自身资源之间的相对力量。当互补者拥有较高多归属能力且平台所有者反制成本较高时，权力抵消更可能成功；反之则失败。这一机制是理论推演（待验证），需通过案例比较检验。\n\n框架与本研究设计一致：多案例比较研究，选取不同治理强度和互补者特征的平台，通过fsQCA识别权力抵消的必要与充分条件组合。理论框架为案例选择和分析提供指导，但不预设具体条件组合，保持探索性。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "互补者权力抵消的有效性取决于平台类型、互补者规模、技术架构等边界条件，这些条件的具体作用需通过案例比较验证。",
+     "平台所有者反制能力与互补者资源之间的相对力量是决定策略效果的关键机制，此为理论推演，待实证检验。"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_3663aa8103bf71346821"
+   },
+   {
+    "section_id": "research_design",
+    "title": "研究设计、数据、测量与分析",
+    "content": "本研究采用多案例比较设计，以平台-互补者二元关系为分析单元，系统考察互补者运用多归属等策略抵消平台所有者不对称权力的条件。研究问题为：在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？为回答该问题，我们选取交易型平台（如电商、共享经济）与创新型平台（如软件生态）中治理强度不同的多个案例，通过跨案例比较识别权力抵消的必要与充分条件组合。\n\n案例选择遵循理论抽样原则，依据平台治理强度（严格规则 vs. 宽松自治）和互补者特征（规模、依赖度）构建2×2分类框架，每个单元格选取1-2个典型案例，共计划纳入6-8个平台-互补者二元关系。数据来源严格限定为公开平台数据与二手数据，包括平台政策文件、开发者协议、公开的互补者行为数据（如应用商店排名、插件下载量、跨平台发布记录）以及行业报告和新闻报道。不涉及任何人类被试或敏感数据，符合伦理与隐私约束。\n\n测量方面，核心构念包括：平台治理强度（通过政策文件中的规则数量、执行严格度、算法调整频率等指标测量）、互补者多归属策略（通过互补者在多个平台上的活跃度、功能重叠度、资源分配比例等测量）、权力抵消效果（通过互补者在平台生态中的绩效持续性、议价能力变化、生存率等测量）。所有测量均基于公开可获取的二手数据，确保可复制性。\n\n分析策略采用模糊集定性比较分析（fsQCA），以识别导致互补者成功抵消平台权力的条件组合。具体步骤包括：首先，对每个案例进行过程追踪，构建平台-互补者权力动态的时间线；其次，将案例数据校准为模糊集隶属分数；最后，运行fsQCA分析必要条件和充分条件组合。分析中特别关注平台所有者通过治理机制设计（如算法调整）重新确立控制的反向动态（claim_431ba39ee9c713ce6d4e），以及互补者从共生转向偏利共生以规避治理的演化路径（claim_668fa1f4a91a01a66ecf）。\n\n需要说明的是，现有文献对互补者权力动态的刻画存在矛盾：一方面平台所有者不对称行使权力削弱互补者地位，另一方面互补者能通过多归属规避治理（claim_668fa1f4a91a01a66ecf）。这种矛盾提示权力抵消可能依赖于边界条件，但现有研究未系统识别。本研究通过多案例比较和fsQCA旨在填补这一空白。然而，由于数据为公开二手数据，无法直接观测互补者的内部决策过程，因此对策略有效性的因果推断需谨慎。我们假设公开行为数据能够反映互补者的策略选择及其效果，但这一假设需在分析中检验（理论推演，待验证）。此外，平台治理强度的测量可能受政策文件与实际执行差异的影响，我们假设政策文件能代表实际治理强度（理论推演，待验证）。\n\n在分析中，我们将明确处理组与对照组：处理组为成功抵消平台权力的互补者案例，对照组为未能抵消的案例。处理时点为平台实施特定治理机制（如算法调整）的时刻，结果变量为互补者权力抵消效果（如绩效持续性）。识别假设关注点在于：治理机制变化与互补者策略响应之间的时间顺序，以及是否存在同时影响治理强度和互补者策略的混淆因素。由于采用定性比较分析而非统计因果推断，我们主要依赖过程追踪来建立因果链条，并承认fsQCA识别的是条件组合而非平均处理效应。\n\n本研究设计严格遵循已确认约束：截止时间2026-12-31前完成所有数据收集与分析；数据仅使用公开平台数据与二手数据；不涉及人类被试敏感数据；无特定方法约束。所有分析工具为Python与统计工具，确保可重复性。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "公开行为数据能够反映互补者的策略选择及其效果（理论推演，待验证）",
+     "政策文件能代表实际治理强度（理论推演，待验证）"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_b3478567ed8db93c8130"
+   },
+   {
+    "section_id": "contributions",
+    "title": "预期理论、方法与实践贡献",
+    "content": "本研究的预期贡献体现在理论、方法与实践三个层面。\n\n在理论层面，本研究旨在调和平台治理文献中关于互补者权力动态的矛盾发现。现有研究一方面指出平台所有者不对称地行使权力，削弱互补者地位；另一方面又观察到互补者能够通过多归属等策略规避治理并保持利益（claim_668fa1f4a91a01a66ecf）。这种矛盾暗示互补者权力与平台治理强度之间可能存在非线性关系，其边界条件（如平台类型、互补者规模、技术架构）尚未被系统识别。本研究通过多案例比较，提出并验证互补者有效抵消平台所有者不对称权力的条件组态，从而为平台权力动态提供更精细的理论解释。此外，本研究将纳入平台所有者可能通过治理机制设计（如算法调整）重新确立控制的动态视角（claim_431ba39ee9c713ce6d4e），从而超越静态的权力抵消分析，构建一个包含平台所有者与互补者策略互动的过程性理论框架。\n\n在方法层面，本研究采用模糊集定性比较分析（fsQCA）来识别权力抵消的必要与充分条件组合。与传统的回归分析或单案例研究相比，fsQCA能够处理因果复杂性，揭示多种条件组合如何导致同一结果（即互补者有效抵消权力）。这一方法选择与本研究的研究问题高度契合，因为互补者权力动态可能由多种因素共同作用，而非单一线性关系。通过跨案例比较，本研究能够系统比较不同治理强度和互补者特征下的权力抵消模式，从而为平台治理研究提供方法论上的补充。\n\n在实践层面，本研究的发现可为平台互补者提供策略指导。通过识别哪些条件组合（如多归属策略、平台类型、互补者规模）能够有效抵消平台所有者的不对称权力，互补者可以更有针对性地制定应对策略。同时，对于平台所有者而言，理解互补者权力抵消的条件有助于设计更平衡的治理机制，避免过度控制导致互补者流失或规避行为。此外，本研究对平台治理政策制定者也有参考价值，有助于在促进平台创新与维护生态健康之间取得平衡。\n\n需要指出的是，上述理论贡献中的机制推演（如平台所有者与互补者策略互动的过程性框架）部分基于现有文献的逻辑延伸，尚待实证验证，将在后续研究中通过案例数据加以检验。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "平台所有者与互补者策略互动的过程性框架是基于现有文献的逻辑延伸，尚未经过实证验证，属于理论推演（待验证）。"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_6e41b72c2486444e811a"
+   },
+   {
+    "section_id": "feasibility_ethics",
+    "title": "可行性、伦理、风险与替代方案",
+    "content": "本研究在可行性、伦理、风险与替代方案方面，严格遵循已确认的用户约束：截止时间为2026年12月31日，数据来源为公开平台数据与二手数据，不涉及人类被试敏感数据，方法上无特殊限制。以下从数据获取、分析能力、伦理合规、潜在风险及替代方案五个维度展开。\n\n在数据获取方面，本研究依赖公开平台数据与二手数据，包括平台政策文件、互补者行为数据（如多归属行为记录）以及现有文献中的案例证据。这些数据均可通过公开渠道获取，无需与平台所有者或互补者建立直接联系，因此不存在数据访问权限的障碍。根据Claim Store中的证据，现有研究已利用公开数据刻画了平台所有者不对称行使权力（claim_668fa1f4a91a01a66ecf）以及互补者通过多归属规避治理（claim_668fa1f4a91a01a66ecf）的现象，表明此类数据足以支撑对权力动态的分析。此外，平台所有者可能通过治理机制设计重新确立控制（claim_431ba39ee9c713ce6d4e），这一反例证据也来自公开可得的案例材料，进一步验证了数据可行性。\n\n在分析能力方面，本研究采用多案例比较设计，结合模糊集定性比较分析（fsQCA）识别权力抵消的必要与充分条件组合。fsQCA适用于中小样本的案例比较，对数据要求为条件与结果的集合隶属度赋值，这可以基于公开的定性信息（如政策文本、行为记录）进行编码。研究者具备Python与统计工具的使用能力，能够完成fsQCA的计算与稳健性检验。由于不涉及一手数据收集，分析过程主要依赖文本编码与集合运算，时间上可在截止日期前完成。\n\n在伦理合规方面，用户约束明确“不涉及人类被试敏感数据”，本研究完全符合。所有数据均为公开平台数据与二手数据，不包含个人身份信息、隐私内容或敏感行为记录。研究不进行访谈、问卷或实验，因此无需伦理审查委员会的批准。在引用二手数据时，将遵循学术规范，注明来源并避免对原始数据主体的不当推断。\n\n在潜在风险方面，主要风险包括：第一，公开数据的完整性与时效性风险。平台政策可能频繁更新，二手数据可能存在选择性偏差，导致案例比较的偏差。第二，fsQCA的校准主观性风险。集合隶属度的赋值依赖于研究者判断，可能影响结果的稳健性。第三，理论推演风险。本研究旨在识别边界条件，但现有Claim Store仅提供矛盾证据（claim_668fa1f4a91a01a66ecf）和反例（claim_431ba39ee9c713ce6d4e），未直接给出条件组合，因此研究结论可能受限于案例选择。\n\n针对上述风险，替代方案如下：若公开数据不足，可扩展至更多平台类型的二手案例（如学术文献中的详细案例描述），或采用定性比较分析（QCA）的变体（如csQCA）降低校准难度。若fsQCA结果不稳健，可改用过程追踪方法，深入分析单个案例中的机制。若理论推演无法得到充分支持，可将研究问题调整为探索性描述，聚焦于权力动态的类型学而非因果条件。所有替代方案均不违反用户约束，且能在截止日期前实施。\n\n综上所述，本研究在数据、方法、伦理和时间上均具有可行性，风险可控，且备有明确的替代路径。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [
+     "公开平台数据与二手数据足以支撑多案例比较和fsQCA分析，无需一手数据。",
+     "研究者具备从公开文本中可靠编码集合隶属度的能力。",
+     "fsQCA方法适用于本研究的案例数量和复杂性。",
+     "平台政策文件和互补者行为数据能够反映权力动态的关键维度。"
+    ],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_54204a8fe54d6d6f56d8"
+   },
+   {
+    "section_id": "timeline",
+    "title": "研究计划",
+    "content": "本研究计划自2026年9月启动，至2026年12月完成，总周期4个月，严格在截止日期2026-12-31之前结束。第一阶段为研究设计与案例筛选（2026年9月1日至9月30日）：基于研究问题“在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？”，明确多案例比较设计，确定案例选择标准（平台治理强度、互补者规模与依赖度），并完成案例初筛。第二阶段为数据收集（2026年10月1日至11月15日）：仅使用公开平台数据与二手数据，包括平台政策文件、公开的互补者行为数据（如多归属行为记录）及已发表的案例材料；不涉及任何访谈、问卷或人类被试数据，符合“不涉及人类被试敏感数据”的伦理约束。第三阶段为数据分析（2026年11月16日至12月10日）：运用模糊集定性比较分析（fsQCA）对案例进行编码与校准，识别权力抵消的必要与充分条件组合；此阶段将特别关注平台所有者通过治理机制设计（如算法调整）重新确立控制的反例（claim_431ba39ee9c713ce6d4e），以检验互补者规避策略的边界条件。第四阶段为论文撰写与修订（2026年12月11日至12月28日）：整合研究发现，完成开题报告全文，并进行内部一致性检查与格式修订，确保在截止日期前提交。各阶段时间安排均从2026年9月之后开始，无任何回溯性启动，且全部在2026年12月31日前完成。",
+    "claim_ids": [
+     "claim_668fa1f4a91a01a66ecf",
+     "claim_431ba39ee9c713ce6d4e"
+    ],
+    "citations": [
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_919a39f9aacfa11148c1",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 359,
+       "end_char": 495,
+       "text": "Platform owners unevenly exercise power over complementors and consumers, undermining complementors' power position vis-à-vis consumers."
+      }
+     },
+     {
+      "claim_id": "claim_668fa1f4a91a01a66ecf",
+      "paper_id": "paper_cde19672d3fe6a0365b5",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 882,
+       "end_char": 1023,
+       "text": "Then, they shift to commensalism as the relationship evolves, allowing them to avoid YouTube's governance and take advantage of multi‐homing."
+      }
+     },
+     {
+      "claim_id": "claim_431ba39ee9c713ce6d4e",
+      "paper_id": "paper_6d723db4391e2218f90d",
+      "evidence_span": {
+       "evidence_level": "abstract",
+       "source_field": "abstract",
+       "start_char": 618,
+       "end_char": 764,
+       "text": "We find that the platform owner deployed different logics of GenAI integration over time that were enacted through specific governance mechanisms."
+      }
+     }
+    ],
+    "assumptions": [],
+    "blueprint_refs": {
+     "blueprint_id": "blueprint_35c0b055fab35828ea43",
+     "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+     "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+     "outline_id": "outline_ce67d84fffc0a71c83ac",
+     "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+    },
+    "task_card_id": "task_debb41d2c0b5f70f4198"
+   }
+  ],
+  "selected_gap": {
+   "gap_id": "gap_8954c484edeac0f10ad3",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_001",
+   "gap_statement": "现有研究对平台治理中互补者权力动态的刻画存在矛盾：一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（span_38bb5b7fe7a2a4be2637）；另一方面，互补者能够通过多归属等策略规避治理并保持利益（span_40876156a8e2a72182c4）。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件。",
+   "support_claim_id": "claim_668fa1f4a91a01a66ecf",
+   "supporting_paper_ids": [
+    "paper_919a39f9aacfa11148c1",
+    "paper_cde19672d3fe6a0365b5"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_431ba39ee9c713ce6d4e"
+   ],
+   "alternative_explanations": [
+    "互补者权力可能取决于其资源独特性或用户锁定程度，而非治理机制本身",
+    "平台所有者可能策略性地容忍某些互补者的规避行为以维持生态整体活力"
+   ],
+   "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+   "why_it_matters": "理解互补者何时能够有效对抗平台权力，对于设计公平且可持续的平台治理机制至关重要，尤其影响平台生态系统的长期创新与参与者留存。",
+   "innovation_candidates": [
+    "提出互补者权力抵消的条件组态模型，超越单一线性关系",
+    "引入平台治理动态性视角，解释权力平衡的演化过程"
+   ],
+   "feasible_method": {
+    "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+    "data": "对平台所有者、互补者及用户的半结构化访谈，辅以平台政策文件和互补者行为数据",
+    "analysis": "模糊集定性比较分析（fsQCA）识别权力抵消的必要与充分条件组合",
+    "unit_of_analysis": "平台-互补者二元关系",
+    "context": "交易型平台（如电商、共享经济）与创新型平台（如软件生态）的对比",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_8954c484edeac0f10ad3",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "b7b6771981df49e408c0b31bfb93e7f09d09953e70c2ac94d74366af063dbfbd"
+   }
+  },
+  "selected_innovation_id": "gap_8954c484edeac0f10ad3_innovation_1",
+  "selected_innovation": "提出互补者权力抵消的条件组态模型，超越单一线性关系",
+  "draft_status": "human_review_required"
+ },
+ "writing_guidance": {
+  "paradigm_id": "qualitative_case_process",
+  "paradigm_label": "定性案例、归纳理论与过程研究",
+  "paradigm_status": "seeded",
+  "source_ids": [
+   "WRITE-CRESWELL-6E",
+   "METHOD-GIOIA",
+   "METHOD-THEMATIC",
+   "WRITE-APA-JARS"
+  ],
+  "local_path": "04_paradigms/qualitative_case_process.md",
+  "stages": [
+   {
+    "stage_id": "topic",
+    "title": "选题",
+    "purpose": "按已确认蓝图完成选题阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "introduction",
+    "title": "引言",
+    "purpose": "按已确认蓝图完成引言阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "theory",
+    "title": "理论",
+    "purpose": "按已确认蓝图完成理论阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "method",
+    "title": "方法",
+    "purpose": "按已确认蓝图完成方法阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "results",
+    "title": "结果",
+    "purpose": "按已确认蓝图完成结果阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "discussion",
+    "title": "讨论",
+    "purpose": "按已确认蓝图完成讨论阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "submission",
+    "title": "投稿",
+    "purpose": "按已确认蓝图完成投稿阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   }
+  ],
+  "target_journal_status": "not_selected"
+ },
+ "proposal_context": {
+  "scope_label": "IS_IM",
+  "claim_ids": [
+   "claim_668fa1f4a91a01a66ecf",
+   "claim_431ba39ee9c713ce6d4e"
+  ],
+  "blueprint_id": "blueprint_35c0b055fab35828ea43",
+  "outline_id": "outline_ce67d84fffc0a71c83ac",
+  "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+  "checkpoint": "HUMAN_REVIEW",
+  "gate_passed": false,
+  "release_ceiling": "READY_FOR_HUMAN_REVIEW",
+  "arena_overall_verdict": "revise",
+  "session_id": "1b68a72db6a94253a773c3853ea40954"
+ },
+ "proposal_limitations": [
+  "本状态仅表示通过自动门禁，仍须人工审阅，不能视为最终开题。",
+  "约束对齐审计未通过：background:words_504_below_624",
+  "跨节重复度偏高（0.2361），建议人工压缩复用表述。",
+  "竞技场评审建议修订以下章节：theoretical_framework、research_design、research_questions；裁决供人工复核参考，不自动改稿。"
+ ],
+ "proposal_audit": {
+  "version": "p4-controlled-proposal-1.2.0",
+  "claim_audit": {
+   "valid": true,
+   "claim_count": 18,
+   "errors": []
+  },
+  "citation_audit": {
+   "valid": true,
+   "errors": []
+  },
+  "cross_section_consistency_matrix": {
+   "valid": true,
+   "rows": [
+    {
+     "section_id": "working_title",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "background",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "concepts",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "literature_status",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "selected_gap",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "research_questions",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "theoretical_framework",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "research_design",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "contributions",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "feasibility_ethics",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    },
+    {
+     "section_id": "timeline",
+     "expected": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "actual": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+      "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594"
+     },
+     "consistent": true
+    }
+   ]
+  },
+  "generation_errors": [],
+  "constraint_gate_passed": true,
+  "constraints_confirmed": true,
+  "blueprint_confirmed": true,
+  "outline_confirmed": true,
+  "task_card_audit": {
+   "valid": true,
+   "task_card_count": 11,
+   "errors": [],
+   "claim_store_only": true
+  },
+  "constraint_alignment_audit": {
+   "version": "phase-e-constraint-alignment-1.2.0",
+   "valid": false,
+   "errors": [
+    "background:words_504_below_624"
+   ],
+   "checks": [
+    "timeline_vs_deadline",
+    "timeline_start_not_before_today",
+    "section_words_vs_outline",
+    "data_scope_consistency"
+   ]
+  },
+  "cross_section_repetition": {
+   "rate": 0.2361,
+   "flagged": true,
+   "threshold": 0.1,
+   "method": "shared_8gram_occurrence_rate"
+  },
+  "arena_review": {
+   "version": "p4-athlete-judge-review-1.2.0",
+   "scope": [
+    "literature_status",
+    "theoretical_framework",
+    "research_design",
+    "feasibility_ethics",
+    "research_questions"
+   ],
+   "reviewer_a": {
+    "literature_status": {
+     "score": 7,
+     "issues": [
+      "将claim_668fa1f4a91a01a66ecf同时用于支撑'平台所有者削弱互补者'和'互补者能规避治理'两个方向相反的观察，存在claim_overstretch风险，但原文将其表述为'矛盾观察'，未直接用于支撑单一结论，故仅提示。",
+      "未提供证据支持'现有文献未系统识别这些条件'的断言，该断言超出claim_668fa1f4a91a01a66ecf的范围，属于overreach。",
+      "未提供证据支持'平台所有者可能通过治理机制设计重新确立控制'的断言，该断言超出claim_431ba39ee9c713ce6d4e的范围，属于overreach。"
+     ]
+    },
+    "research_questions": {
+     "score": 6,
+     "issues": [
+      "命题1（倒U型关系）未标注为理论推演或待验证，且无直接证据支持，属于overconfident_claims。",
+      "命题2（互补者规模调节作用）未标注为理论推演或待验证，且无直接证据支持，属于overconfident_claims。",
+      "命题3（平台类型影响）未标注为理论推演或待验证，且无直接证据支持，属于overconfident_claims。",
+      "命题4（动态博弈）未标注为理论推演或待验证，且无直接证据支持，属于overconfident_claims。",
+      "将claim_668fa1f4a91a01a66ecf用于支撑'互补者能规避治理'和'平台所有者削弱互补者'两个方向相反的命题，存在claim_overstretch风险。"
+     ]
+    },
+    "theoretical_framework": {
+     "score": 7,
+     "issues": [
+      "将claim_668fa1f4a91a01a66ecf同时用于支撑'平台所有者削弱互补者'和'互补者能规避治理'两个方向相反的论断，存在claim_overstretch风险。",
+      "未提供证据支持'平台所有者可能通过治理机制设计重新确立控制'的断言，该断言超出claim_431ba39ee9c713ce6d4e的范围，属于overreach。",
+      "作用机制（互补者策略有效性取决于相对力量）未标注为理论推演或待验证，且无直接证据支持，属于overconfident_claims。"
+     ]
+    },
+    "research_design": {
+     "score": 8,
+     "issues": [
+      "将claim_668fa1f4a91a01a66ecf用于支撑'互补者从共生转向偏利共生以规避治理的演化路径'，但该claim仅提及多归属策略，未涉及共生演化，属于overreach。",
+      "将claim_431ba39ee9c713ce6d4e用于支撑'平台所有者通过治理机制设计重新确立控制的反向动态'，但该claim仅提及算法调整，未涉及其他治理机制，属于overreach。",
+      "假设'公开行为数据能够反映互补者的策略选择及其效果'和'政策文件能代表实际治理强度'已标注为理论推演待验证，符合要求。"
+     ]
+    },
+    "feasibility_ethics": {
+     "score": 8,
+     "issues": [
+      "将claim_668fa1f4a91a01a66ecf同时用于支撑'平台所有者不对称行使权力'和'互补者通过多归属规避治理'两个方向相反的论断，存在claim_overstretch风险。",
+      "将claim_431ba39ee9c713ce6d4e用于支撑'平台所有者可能通过治理机制设计重新确立控制'，但该claim仅提及算法调整，未涉及其他治理机制，属于overreach。",
+      "未提供证据支持'此类数据足以支撑对权力动态的分析'的断言，该断言超出claim_668fa1f4a91a01a66ecf的范围，属于overreach。"
+     ]
+    },
+    "__overall__": {
+     "score": 7,
+     "summary": "各章节在证据锚定上总体合格，但存在多处claim_overstretch和overreach，部分命题未标注为理论推演，需加强证据边界意识。"
+    }
+   },
+   "reviewer_b": {
+    "literature_status": {
+     "score": 8,
+     "issues": [
+      "文献综述与蓝图一致性良好，但未明确标注哪些是扩展假设。",
+      "对平台治理强度与互补者权力抵消之间关系的边界条件描述较笼统，未具体化到可操作变量。"
+     ]
+    },
+    "research_questions": {
+     "score": 7,
+     "issues": [
+      "命题1提出倒U型关系，但未在文献综述中充分铺垫，属于理论漂移，未标注为扩展假设。",
+      "命题3引入平台类型（交易型 vs. 创新型）作为调节变量，但文献综述未系统讨论该变量，属于理论漂移。",
+      "命题4涉及动态博弈，但研究设计未明确如何捕捉动态过程，存在设计缺口。"
+     ]
+    },
+    "theoretical_framework": {
+     "score": 7,
+     "issues": [
+      "框架引入“权力抵消”概念，但未与现有理论（如资源依赖理论、平台治理理论）明确关联，理论根基不足。",
+      "作用机制描述较抽象，未具体说明各变量间的关系路径，难以指导实证分析。",
+      "框架中“反制层”的引入基于单一反例，未充分论证其普遍性，可能过度扩展。"
+     ]
+    },
+    "research_design": {
+     "score": 6,
+     "issues": [
+      "声称采用处理组与对照组，但未明确处理组和对照组的定义标准，且未说明如何识别“成功抵消”与“未能抵消”。",
+      "处理时点定义为“平台实施特定治理机制的时刻”，但未说明如何确定该时点，且不同案例时点可能不一致，影响可比性。",
+      "结果变量“权力抵消效果”的测量指标（绩效持续性、议价能力变化、生存率）未给出具体操作化定义，且二手数据可能无法直接观测议价能力。",
+      "识别假设仅泛泛提及时间顺序和混淆因素，未具体说明如何通过过程追踪排除替代解释。",
+      "fsQCA与因果推断的衔接不清晰：fsQCA识别条件组合，但无法直接建立因果效应，设计未充分说明如何结合过程追踪进行因果推断。"
+     ]
+    },
+    "feasibility_ethics": {
+     "score": 8,
+     "issues": [
+      "可行性分析较全面，但未具体说明如何获取互补者行为数据（如多归属行为记录），可能低估数据获取难度。",
+      "对fsQCA校准主观性风险有提及，但未提出具体的校准标准或敏感性分析方案。",
+      "替代方案中提及改用过程追踪，但未说明如何与现有设计衔接。"
+     ]
+    },
+    "__overall__": {
+     "score": 7,
+     "summary": "研究设计整体逻辑较清晰，但存在理论漂移、因果识别不闭合及测量操作化不足等问题，需进一步强化设计与理论的一致性。"
+    }
+   },
+   "judge": {
+    "literature_status": {
+     "verdict": "pass",
+     "final_score": 7,
+     "reason": "文献综述基本合格，但存在证据过度延伸和未标注扩展假设的问题。"
+    },
+    "research_questions": {
+     "verdict": "revise",
+     "final_score": 6,
+     "reason": "命题缺乏证据支持且未标注为理论推演，存在理论漂移。"
+    },
+    "theoretical_framework": {
+     "verdict": "revise",
+     "final_score": 7,
+     "reason": "框架理论根基不足，作用机制抽象，部分论断过度自信。"
+    },
+    "research_design": {
+     "verdict": "revise",
+     "final_score": 6,
+     "reason": "因果识别不闭合，测量操作化不足，处理组定义模糊。"
+    },
+    "feasibility_ethics": {
+     "verdict": "pass",
+     "final_score": 8,
+     "reason": "可行性分析全面，风险可控，但数据获取细节需补充。"
+    },
+    "__overall__": {
+     "verdict": "revise",
+     "score": 7,
+     "reason": "整体逻辑清晰，但需加强证据边界意识、理论一致性和因果识别设计。"
+    }
+   },
+   "revise_section_ids": [
+    "theoretical_framework",
+    "research_design",
+    "research_questions"
+   ],
+   "overall_verdict": "revise"
+  },
+  "model_calls": 11,
+  "models": [
+   {
+    "section_id": "working_title",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2013,
+     "completion_tokens": 256,
+     "total_tokens": 2269,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1629
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 3500.0
+   },
+   {
+    "section_id": "background",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2017,
+     "completion_tokens": 512,
+     "total_tokens": 2529,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1633
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 7125.0
+   },
+   {
+    "section_id": "concepts",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2011,
+     "completion_tokens": 867,
+     "total_tokens": 2878,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1627
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 12766.0
+   },
+   {
+    "section_id": "literature_status",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2015,
+     "completion_tokens": 770,
+     "total_tokens": 2785,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1631
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 11422.0
+   },
+   {
+    "section_id": "selected_gap",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2021,
+     "completion_tokens": 486,
+     "total_tokens": 2507,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1637
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 6687.0
+   },
+   {
+    "section_id": "research_questions",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2020,
+     "completion_tokens": 967,
+     "total_tokens": 2987,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1636
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 15422.0
+   },
+   {
+    "section_id": "theoretical_framework",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2020,
+     "completion_tokens": 776,
+     "total_tokens": 2796,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1636
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 12141.0
+   },
+   {
+    "section_id": "research_design",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2023,
+     "completion_tokens": 1117,
+     "total_tokens": 3140,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1639
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 20031.0
+   },
+   {
+    "section_id": "contributions",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2019,
+     "completion_tokens": 767,
+     "total_tokens": 2786,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1635
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 12750.0
+   },
+   {
+    "section_id": "feasibility_ethics",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2026,
+     "completion_tokens": 1061,
+     "total_tokens": 3087,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1642
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 19156.0
+   },
+   {
+    "section_id": "timeline",
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 2072,
+     "completion_tokens": 589,
+     "total_tokens": 2661,
+     "prompt_tokens_details": {
+      "cached_tokens": 384
+     },
+     "prompt_cache_hit_tokens": 384,
+     "prompt_cache_miss_tokens": 1688
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 8797.0
+   }
+  ],
+  "duration_ms": 159875.0
+ },
+ "workflow_panels": {
+  "skill": {
+   "title": "Skill",
+   "items": [
+    {
+     "id": "p1",
+     "label": "P1 direct语料",
+     "status": "PASS"
+    },
+    {
+     "id": "p2",
+     "label": "P2确定性五方向",
+     "status": "SYNTHESIS_COMPLETE"
+    },
+    {
+     "id": "p3",
+     "label": "P3 Evidence/Claim门禁",
+     "status": "PASS"
+    },
+    {
+     "id": "p4",
+     "label": "P4受控开题",
+     "status": "PROPOSAL_CONTROLLED_PARTIAL"
+    }
+   ]
+  },
+  "evidence": {
+   "title": "Evidence",
+   "claim_count": 18,
+   "binding_count": 39,
+   "evidence_levels": {
+    "abstract": 39
+   },
+   "formal_only": true
+  },
+  "saturation": {
+   "title": "Saturation",
+   "status": "NOT_AVAILABLE",
+   "advisory_only": true,
+   "metrics": {}
+  },
+  "audit": {
+   "title": "Audit",
+   "claim_valid": true,
+   "citation_valid": true,
+   "consistency_valid": true,
+   "task_cards_valid": true,
+   "release_ceiling": "READY_FOR_HUMAN_REVIEW"
+  }
+ }
+}

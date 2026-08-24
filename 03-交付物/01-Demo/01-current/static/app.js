@@ -14,6 +14,9 @@ const configureApiButton = $('#configure-api');
 const clearApiButton = $('#clear-api');
 const apiState = $('#api-state');
 const apiMessage = $('#api-message');
+const retrievalApiKeyInput = $('#openalex-api-key');
+const configureRetrievalButton = $('#configure-retrieval-api');
+const clearRetrievalButton = $('#clear-retrieval-api');
 const DEFAULT_DIRECTION = 'topic_ai_enabled_information_systems';
 const PAGE_SIZE = 8;
 
@@ -24,6 +27,9 @@ const state = {
   visiblePapers: PAGE_SIZE,
   retrievalController: null,
   loadingTimer: null,
+  proposalSelection: null,
+  proposalConstraints: null,
+  proposalPlan: null,
 };
 
 const viewTitles = {
@@ -101,8 +107,58 @@ async function refreshApiState() {
   if (!response.ok) throw new Error('无法读取服务状态');
   const health = await response.json();
   setApiState(health.synthesis_provider === 'deepseek');
+  setRetrievalApiState(health.openalex_authenticated);
   $('#service-status span').textContent = '本地服务已就绪';
   $('#service-status').classList.add('ready');
+}
+
+function setRetrievalApiState(configured, message) {
+  $('#retrieval-api-state').textContent = configured ? '已认证' : '匿名额度';
+  $('#retrieval-api-state').classList.toggle('ready', configured);
+  retrievalApiKeyInput.hidden = configured;
+  configureRetrievalButton.hidden = configured;
+  clearRetrievalButton.hidden = !configured;
+  $('#retrieval-api-message').textContent = message || (configured
+    ? '当前服务进程使用认证额度；服务重启后自动失效。'
+    : '可进行少量匿名检索；61方向批量评测需要OpenAlex免费API key。');
+}
+
+async function configureRetrievalApi() {
+  const apiKey = retrievalApiKeyInput.value.trim();
+  retrievalApiKeyInput.value = '';
+  if (!apiKey) {
+    $('#retrieval-api-message').textContent = '请输入 OpenAlex API Key。';
+    retrievalApiKeyInput.focus();
+    return;
+  }
+  configureRetrievalButton.disabled = true;
+  try {
+    const response = await fetch('/api/configure/retrieval', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ openalex_api_key: apiKey }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.message_to_user || '配置失败');
+    setRetrievalApiState(true, data.message_to_user);
+  } catch (error) {
+    setRetrievalApiState(false, error.message);
+  } finally {
+    configureRetrievalButton.disabled = false;
+  }
+}
+
+async function clearRetrievalApi() {
+  clearRetrievalButton.disabled = true;
+  try {
+    const response = await fetch('/api/configure/retrieval/clear', { method: 'POST' });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.message_to_user || '清除失败');
+    setRetrievalApiState(false, data.message_to_user);
+  } catch (error) {
+    $('#retrieval-api-message').textContent = error.message;
+  } finally {
+    clearRetrievalButton.disabled = false;
+  }
 }
 
 async function configureApi() {
@@ -184,6 +240,15 @@ function paperMeta(paper) {
   return `${authors} · ${paper.journal || '期刊信息缺失'} · ${paper.year || '日期缺失'}`;
 }
 
+const diagnosisLabels = {
+  route_missing: '方向路由缺失',
+  provider_empty: '来源返回为空',
+  rate_limited: '外部来源限流',
+  quality_gate_too_strict: '质量闸门或候选阈值过严',
+  language_coverage_gap: '语言覆盖不足',
+  query_too_narrow: '查询表达过窄',
+};
+
 function visiblePaperSet() {
   const papers = state.data?.papers || [];
   return state.paperFilter === 'all'
@@ -214,7 +279,15 @@ function renderPaperList() {
     meta.textContent = paperMeta(paper);
     const tags = document.createElement('div');
     tags.className = 'paper-tags';
-    [paper.language === 'zh' ? '中文' : '英文', ...(paper.journal_ranking || []), 'Crossref'].forEach((value) => {
+    const score = paper.score?.total;
+    const evidence = { fulltext: '全文证据', abstract: '摘要证据', title_only: '仅题名' }[paper.evidence_level] || paper.evidence_level;
+    [
+      paper.language === 'zh' ? '中文' : '英文',
+      ...(paper.journal_ranking || []),
+      ...(paper.providers || [paper.metadata_source || '来源未标注']),
+      evidence,
+      Number.isFinite(score) ? `匹配分 ${score}` : null,
+    ].filter(Boolean).forEach((value) => {
       const tag = document.createElement('span');
       tag.textContent = value;
       tags.appendChild(tag);
@@ -230,6 +303,38 @@ function renderPaperList() {
     empty.textContent = '当前筛选下没有论文，换一个语言范围看看。';
     paperList.appendChild(empty);
   }
+}
+
+function renderQualityAudit(data) {
+  const audit = data.coverage_audit || {};
+  $('#quality-counts').textContent = [
+    `原始 ${audit.raw_count ?? 0}`,
+    `去重 ${audit.deduplicated_count ?? 0}`,
+    `硬闸门通过 ${audit.hard_gate_pass_count ?? 0}`,
+    `进入精排 ${audit.eligible_count ?? 0}`,
+    `边界淘汰 ${audit.boundary_count ?? 0}`,
+    `人工复核 ${audit.manual_review_count ?? 0}`,
+    `Trace守恒 ${audit.count_conserved ? '是' : '否'}`,
+  ].join(' · ');
+  const providerList = $('#provider-status-list');
+  providerList.innerHTML = '';
+  (data.provider_statuses || []).forEach((item) => {
+    const row = document.createElement('li');
+    row.textContent = `${item.provider} · ${item.status} · ${item.returned_rows ?? 0} 条${item.reason ? ` · ${item.reason}` : ''}`;
+    providerList.appendChild(row);
+  });
+  const expansionList = $('#expansion-list');
+  expansionList.innerHTML = '';
+  (data.expansion_log || []).forEach((item) => {
+    const row = document.createElement('li');
+    row.textContent = `${item.lane_id || item.provider || '检索Lane'} · 原始 ${item.raw_count ?? item.returned_rows ?? 0} / 边界后 ${item.post_boundary_eligible_count ?? 0}${item.stop_reason ? ` · ${item.stop_reason}` : ''}`;
+    expansionList.appendChild(row);
+  });
+  const causes = (data.zero_result_diagnosis?.causes || []).map((value) => diagnosisLabels[value] || value);
+  $('#zero-diagnosis').textContent = causes.length ? `诊断：${causes.join('；')}` : '本次没有零结果诊断项。';
+  $('#score-version').textContent = data.score_config_version
+    ? `精排 ${data.score_config_version} · 固定70分准入阈值已移除`
+    : '旧版检索结果未提供 P1 评分拆解';
 }
 
 function renderJournalAudit(data) {
@@ -285,11 +390,12 @@ function renderDiscovery(data) {
   renderPipeline(data.stages);
 
   $('#paper-results').hidden = !papers.length;
-  $('#retrieval-audit').textContent = `中文 ${zhFound} 篇 · 英文 ${enFound} 篇 · 实际查询 ${data.search_log?.length || 0} 本期刊`;
+  $('#retrieval-audit').textContent = `中文 ${zhFound} 篇 · 英文 ${enFound} 篇 · 外部请求 ${data.search_log?.length || 0} 次`;
   $('#result-footnote').textContent = papers.length
-    ? '论文元数据已通过本地期刊白名单校验；研究空白仍需在选择后获取全文复核。'
+    ? '论文已通过完整性闸门、方向边界与来源分层；研究空白仍需在选择后获取全文复核。'
     : '没有获得可核验论文时，系统不会生成模拟论文、研究方向或空白。';
   renderJournalAudit(data);
+  renderQualityAudit(data);
   renderPaperList();
 
   const badge = $('#paper-nav-count');
@@ -325,6 +431,131 @@ function setSynthesisNotice(message, ready = false, error = false) {
   notice.appendChild(text);
 }
 
+function qualityItem(label, value, tone) {
+  const item = document.createElement('div');
+  item.className = 'quality-item';
+  const name = document.createElement('span');
+  name.className = 'quality-item-name';
+  name.textContent = label;
+  const detail = document.createElement('strong');
+  detail.className = 'quality-item-value';
+  if (tone) detail.dataset.tone = tone;
+  detail.textContent = value;
+  item.append(name, detail);
+  return item;
+}
+
+function renderSynthesisQuality(data) {
+  const panel = $('#synthesis-quality');
+  const audit = data.synthesis_audit || {};
+  if (audit.direct_paper_count === undefined) {
+    panel.hidden = true;
+    panel.innerHTML = '';
+    return;
+  }
+  panel.hidden = false;
+  panel.innerHTML = '';
+
+  const heading = document.createElement('div');
+  heading.className = 'synthesis-quality-head';
+  const title = document.createElement('strong');
+  title.textContent = '方向质量信息';
+  const note = document.createElement('small');
+  note.textContent = '聚类由确定性代码完成，模型仅命名固定簇';
+  heading.append(title, note);
+  panel.appendChild(heading);
+
+  const grid = document.createElement('div');
+  grid.className = 'synthesis-quality-grid';
+
+  const corpus = document.createElement('div');
+  corpus.className = 'quality-card';
+  const corpusTitle = document.createElement('strong');
+  corpusTitle.textContent = '语料';
+  corpus.appendChild(corpusTitle);
+  corpus.appendChild(qualityItem('输入论文', `${audit.input_paper_count ?? 0} 篇`));
+  corpus.appendChild(qualityItem('direct 论文', `${audit.direct_paper_count} 篇`));
+  corpus.appendChild(qualityItem('带摘要', `${audit.abstract_count} 篇`));
+  const languages = audit.language_counts || {};
+  const zhCount = languages.zh || 0;
+  const enCount = languages.en || 0;
+  const languageText = zhCount === 0
+    ? `中文 0 篇（缺口，不用英文补数） · 英文 ${enCount} 篇`
+    : `中文 ${zhCount} 篇 · 英文 ${enCount} 篇`;
+  corpus.appendChild(qualityItem('语言分布', languageText, zhCount === 0 ? 'warn' : ''));
+  grid.appendChild(corpus);
+
+  const stability = document.createElement('div');
+  stability.className = 'quality-card';
+  const stabilityTitle = document.createElement('strong');
+  stabilityTitle.textContent = '稳定性';
+  stability.appendChild(stabilityTitle);
+  stability.appendChild(qualityItem('数据截止日', audit.data_cutoff_date || '未记录'));
+  const selfCheck = audit.stability_self_check;
+  const selfCheckText = selfCheck
+    ? `${selfCheck.runs} 次运行逐字节一致 ${selfCheck.exact_match ? '✓' : '✗'}`
+    : '未记录';
+  stability.appendChild(qualityItem('确定性自检', selfCheckText, selfCheck && selfCheck.exact_match ? 'ok' : 'warn'));
+  grid.appendChild(stability);
+
+  const versions = document.createElement('div');
+  versions.className = 'quality-card';
+  const versionsTitle = document.createElement('strong');
+  versionsTitle.textContent = '版本';
+  versions.appendChild(versionsTitle);
+  versions.appendChild(qualityItem('方向画像', audit.direction_profile_version || '未知'));
+  versions.appendChild(qualityItem('检索', audit.retrieval_version || '未知'));
+  versions.appendChild(qualityItem('评分', audit.score_version || '未知'));
+  versions.appendChild(qualityItem('聚类', audit.cluster_config_version || '未知'));
+  versions.appendChild(qualityItem('命名', audit.naming_prompt_version || '未知'));
+  grid.appendChild(versions);
+
+  const confidence = document.createElement('div');
+  confidence.className = 'quality-card';
+  const confidenceTitle = document.createElement('strong');
+  confidenceTitle.textContent = '置信度';
+  confidence.appendChild(confidenceTitle);
+  const target = audit.honest_target;
+  const requested = audit.requested_clusters || 5;
+  const directionCount = (data.top_subdirections || []).length;
+  const directionText = directionCount === 0
+    ? '证据不足：已诚实停止，未生成方向'
+    : target !== undefined && target < requested
+      ? `诚实降级：证据支撑 ${target} 个方向`
+      : `五方向完整（${directionCount} 个方向）`;
+  confidence.appendChild(qualityItem('方向结论', directionText, directionCount === 0 || (target !== undefined && target < requested) ? 'warn' : 'ok'));
+  const heats = (data.top_subdirections || []).map((item) => item.heat).filter((value) => typeof value === 'number');
+  if (heats.length) {
+    confidence.appendChild(qualityItem('热度区间', `${Math.min(...heats).toFixed(2)} – ${Math.max(...heats).toFixed(2)}`));
+  }
+  const namingProvider = (audit.naming && audit.naming.provider) || '未知';
+  const namingText = audit.naming_fallback_reason
+    ? `模型失败，已回退确定性命名`
+    : namingProvider === 'athlete_judge_arena' ? 'Athlete A/B + 盲评Judge' : namingProvider;
+  confidence.appendChild(qualityItem('命名来源', namingText, audit.naming_fallback_reason ? 'warn' : ''));
+  const p1Status = audit.p1_precision_gate_passed ? '已解锁（RERANK_CALIBRATED）' : '未通过，P2阻断';
+  confidence.appendChild(qualityItem('P1精度门禁', p1Status, audit.p1_precision_gate_passed ? 'ok' : 'warn'));
+  grid.appendChild(confidence);
+  panel.appendChild(grid);
+
+  const reasons = audit.degradation_reasons_text || [];
+  if (reasons.length) {
+    const block = document.createElement('div');
+    block.className = 'quality-degradation';
+    const blockTitle = document.createElement('strong');
+    blockTitle.textContent = '不足与诚实停止原因';
+    block.appendChild(blockTitle);
+    const list = document.createElement('ul');
+    reasons.forEach((value) => {
+      const item = document.createElement('li');
+      item.textContent = value;
+      list.appendChild(item);
+    });
+    block.appendChild(list);
+    panel.appendChild(block);
+  }
+}
+
 function renderSynthesis(data) {
   $('#gaps-empty').hidden = true;
   $('#synthesis-results').hidden = false;
@@ -338,9 +569,10 @@ function renderSynthesis(data) {
   setSynthesisNotice(data.synthesis_message || '尚未得到可用综合结果。', ready, !ready && data.synthesis_status !== 'SYNTHESIS_QUEUED');
   const audit = data.synthesis_audit || {};
   $('#synthesis-audit').textContent = audit.input_paper_count
-    ? `输入 ${audit.input_paper_count} 篇 · 归类 ${audit.assigned_paper_count || 0} 篇`
+    ? `输入 ${audit.input_paper_count} 篇 · direct ${audit.direct_paper_count ?? 0} 篇`
     : ready ? '综合完成' : '综合处理中';
   $('#synthesis-audit').classList.toggle('ready', ready);
+  renderSynthesisQuality(data);
 
   (data.top_subdirections || []).forEach((direction, index) => {
     const card = document.createElement('article');
@@ -357,7 +589,8 @@ function renderSynthesis(data) {
     const strong = document.createElement('strong');
     strong.textContent = direction.name_zh;
     const english = document.createElement('small');
-    english.textContent = `${direction.name_en || ''} · ${direction.paper_count || 0} 篇`;
+    const heatText = typeof direction.heat === 'number' ? ` · 热度 ${direction.heat.toFixed(2)}` : '';
+    english.textContent = `${direction.name_en || ''} · ${direction.paper_count || 0} 篇${heatText}`;
     title.append(strong, english);
     const arrow = document.createElement('span');
     arrow.className = 'direction-arrow';
@@ -458,6 +691,7 @@ function renderSynthesis(data) {
 
 function renderProposalUnavailable(message, needsSettings = false) {
   $('#proposal-loading').hidden = true;
+  $('#proposal-workflow').hidden = true;
   $('#proposal-content').hidden = true;
   const empty = $('#proposal-empty');
   empty.hidden = false;
@@ -470,32 +704,155 @@ function renderProposalUnavailable(message, needsSettings = false) {
   $('#proposal-status').classList.remove('ready');
 }
 
-function renderProposal(result) {
-  const ready = ['PROPOSAL_DRAFT_READY', 'PROPOSAL_DRAFT_PARTIAL'].includes(result.proposal_status);
-  if (!ready) {
-    renderProposalUnavailable(
-      result.proposal_message || '当前没有可展示的开题报告。',
-      result.proposal_status === 'PROPOSAL_NOT_CONFIGURED',
-    );
-    return;
-  }
-  const proposal = result.proposal || {};
-  const guidance = result.writing_guidance || {};
+function setProposalStep(active, completed = []) {
+  $$('[data-proposal-step]').forEach((node) => {
+    node.classList.toggle('active', node.dataset.proposalStep === active);
+    node.classList.toggle('complete', completed.includes(node.dataset.proposalStep));
+  });
+}
+
+function panelLine(container, label, value, passed = null) {
+  const line = document.createElement('p');
+  line.textContent = `${label}：${value}`;
+  if (passed === true) line.className = 'pass';
+  if (passed === false) line.className = 'blocked';
+  container.appendChild(line);
+}
+
+function renderWorkflowPanels(panels = {}) {
+  const grid = $('#workflow-panel-grid');
+  grid.hidden = false;
+  const skill = $('#skill-panel');
+  const evidence = $('#evidence-panel');
+  const saturation = $('#saturation-panel');
+  const audit = $('#audit-panel');
+  [skill, evidence, saturation, audit].forEach((node) => { node.innerHTML = ''; });
+  (panels.skill?.items || []).forEach((item) => {
+    const passed = item.status === 'PASS' || item.status === 'READY_FOR_HUMAN_REVIEW';
+    panelLine(skill, item.label, item.status, passed ? true : null);
+  });
+  panelLine(evidence, 'Claim', panels.evidence?.claim_count ?? 0, (panels.evidence?.claim_count ?? 0) > 0);
+  panelLine(evidence, '证据绑定', panels.evidence?.binding_count ?? 0, (panels.evidence?.binding_count ?? 0) > 0);
+  panelLine(evidence, '证据层级', JSON.stringify(panels.evidence?.evidence_levels || {}));
+  panelLine(evidence, '仅正式证据', panels.evidence?.formal_only ? '是' : '否', Boolean(panels.evidence?.formal_only));
+  panelLine(saturation, '状态', panels.saturation?.status || 'NOT_AVAILABLE');
+  panelLine(saturation, '门禁权', panels.saturation?.advisory_only ? '仅建议，不改门槛' : '异常');
+  panelLine(audit, 'Claim Audit', panels.audit?.claim_valid ? '通过' : '待通过', Boolean(panels.audit?.claim_valid));
+  panelLine(audit, 'Citation Audit', panels.audit?.citation_valid ? '通过' : '待生成');
+  panelLine(audit, '跨节一致性', panels.audit?.consistency_valid ? '通过' : '待生成');
+  panelLine(audit, '任务卡', panels.audit?.task_cards_valid ? '通过' : '待确认');
+  panelLine(audit, '状态上限', panels.audit?.release_ceiling || 'READY_FOR_HUMAN_REVIEW');
+}
+
+const constraintLabels = {
+  degree_level: '学位与培养层次', institution_template: '学校模板要求', output_language: '写作语言',
+  target_word_count: '目标字数', deadline: '截止时间', data_access: '数据权限',
+  method_constraints: '方法限制', research_context: '研究情境', ethics_privacy: '伦理与隐私',
+  tool_capabilities: '工具能力',
+};
+
+function renderConstraintReview(result) {
+  const constraints = result.proposal?.user_constraints || {};
+  state.proposalConstraints = constraints;
   $('#proposal-loading').hidden = true;
   $('#proposal-empty').hidden = true;
+  $('#proposal-workflow').hidden = false;
+  $('#proposal-content').hidden = true;
+  $('#proposal-constraints-form').hidden = true;
+  $('#proposal-plan-review').hidden = true;
+  $('#proposal-constraint-review').hidden = false;
+  $('#proposal-checkpoint-message').textContent = result.proposal_message || '请确认用户约束。';
+  $('#proposal-status').textContent = '待确认用户约束';
+  setProposalStep('constraints');
+  const list = $('#constraint-review-list');
+  list.innerHTML = '';
+  Object.entries(constraintLabels).forEach(([key, label]) => {
+    const row = document.createElement('div');
+    const term = document.createElement('dt');
+    const value = document.createElement('dd');
+    term.textContent = label;
+    value.textContent = String(constraints[key] ?? '—');
+    row.append(term, value);
+    list.appendChild(row);
+  });
+}
+
+function renderPlanReview(result) {
+  const proposal = result.proposal || {};
+  state.proposalPlan = {
+    research_design_blueprint: proposal.research_design_blueprint,
+    proposal_outline: proposal.proposal_outline,
+  };
+  $('#proposal-loading').hidden = true;
+  $('#proposal-empty').hidden = true;
+  $('#proposal-workflow').hidden = false;
+  $('#proposal-content').hidden = true;
+  $('#proposal-constraints-form').hidden = true;
+  $('#proposal-constraint-review').hidden = true;
+  $('#proposal-plan-review').hidden = false;
+  $('#proposal-checkpoint-message').textContent = result.proposal_message || '请确认蓝图和提纲。';
+  $('#proposal-status').textContent = '待确认蓝图与提纲';
+  setProposalStep('plan', ['constraints']);
+  const blueprint = proposal.research_design_blueprint || {};
+  const summary = $('#proposal-blueprint-summary');
+  summary.innerHTML = '';
+  [
+    ['研究问题', blueprint.research_question], ['研究范式', blueprint.paradigm_id],
+    ['分析单位', blueprint.unit_of_analysis], ['研究情境', blueprint.context],
+    ['研究设计', blueprint.design], ['数据', blueprint.data], ['分析方法', blueprint.analysis],
+    ['截止时间', blueprint.deadline],
+  ].forEach(([label, value]) => {
+    const card = document.createElement('div');
+    const heading = document.createElement('strong');
+    const text = document.createElement('span');
+    heading.textContent = label;
+    text.textContent = value || '尚未明确，不能静默补写';
+    card.append(heading, text);
+    summary.appendChild(card);
+  });
+  const outlineList = $('#proposal-outline-review');
+  outlineList.innerHTML = '';
+  (proposal.proposal_outline?.sections || []).forEach((section) => {
+    const row = document.createElement('div');
+    row.className = 'outline-row';
+    const sequence = document.createElement('span');
+    const title = document.createElement('strong');
+    const target = document.createElement('small');
+    sequence.textContent = String(section.sequence).padStart(2, '0');
+    title.textContent = section.title;
+    target.textContent = `${section.target_words}字`;
+    row.append(sequence, title, target);
+    outlineList.appendChild(row);
+  });
+}
+
+function renderFinalProposal(result) {
+  const proposal = result.proposal || {};
+  const guidance = result.writing_guidance || {};
+  const blueprint = proposal.research_design_blueprint || {};
+  const titleSection = (proposal.sections || []).find((section) => section.section_id === 'working_title');
+  $('#proposal-loading').hidden = true;
+  $('#proposal-empty').hidden = true;
+  $('#proposal-workflow').hidden = false;
+  $('#proposal-constraints-form').hidden = true;
+  $('#proposal-constraint-review').hidden = true;
+  $('#proposal-plan-review').hidden = true;
+  $('#proposal-checkpoint-message').textContent = result.proposal_message || '自动门禁完成，等待人工复核。';
   $('#proposal-content').hidden = false;
-  $('#proposal-status').textContent = result.proposal_status === 'PROPOSAL_DRAFT_READY' ? '草案已生成' : '部分草案';
-  $('#proposal-status').classList.add('ready');
-  $('#proposal-working-title').textContent = proposal.working_title || '暂定题目待进一步收敛';
-  $('#proposal-research-question').textContent = proposal.research_question
-    ? '核心研究问题：' + proposal.research_question
-    : '核心研究问题仍需根据全文证据收敛。';
+  const ready = result.proposal_status === 'READY_FOR_HUMAN_REVIEW';
+  $('#proposal-status').textContent = ready ? '待人工复核' : '受控部分结果';
+  $('#proposal-status').classList.toggle('ready', ready);
+  setProposalStep('review', ['constraints', 'plan', 'generation']);
+  $('#proposal-working-title').textContent = titleSection?.content || proposal.selected_gap?.gap_statement || '暂定题目待人工收敛';
+  $('#proposal-research-question').textContent = blueprint.research_question
+    ? '核心研究问题：' + blueprint.research_question
+    : '核心研究问题未通过蓝图确认。';
   $('#proposal-paradigm').textContent = guidance.paradigm_label || guidance.paradigm_id || '—';
   $('#proposal-paradigm-status').textContent = guidance.paradigm_status
     ? '知识库状态：' + guidance.paradigm_status
     : '范式状态待核验';
   const audit = result.proposal_audit || {};
-  $('#proposal-audit').textContent = '已生成 ' + (audit.proposal_section_count || 0) + ' 个章节 · 无效引用 ' + (audit.invalid_reference_count || 0);
+  $('#proposal-audit').textContent = `逐节生成 ${(proposal.sections || []).length} 节 · Claim ${audit.claim_audit?.claim_count || 0} 条 · 引用审计 ${audit.citation_audit?.valid ? '通过' : '未通过'}`;
 
   const sectionList = $('#proposal-sections');
   sectionList.innerHTML = '';
@@ -519,13 +876,17 @@ function renderProposal(result) {
     const content = document.createElement('p');
     content.textContent = section.content || '本节证据不足，尚未生成内容。';
     body.appendChild(content);
-    if ((section.evidence_papers || []).length) {
+    if ((section.citations || []).length) {
       const evidence = document.createElement('div');
       evidence.className = 'section-evidence';
       const label = document.createElement('strong');
-      label.textContent = '本节证据';
+      label.textContent = '本节Claim与证据绑定';
       evidence.appendChild(label);
-      section.evidence_papers.forEach((paper) => evidence.appendChild(evidenceLink(paper)));
+      section.citations.forEach((citation) => {
+        const item = document.createElement('span');
+        item.textContent = `${citation.claim_id} · ${citation.paper_id} · ${citation.evidence_span?.evidence_level || 'unknown'}`;
+        evidence.appendChild(item);
+      });
       body.appendChild(evidence);
     }
     if ((section.assumptions || []).length) {
@@ -549,14 +910,30 @@ function renderProposal(result) {
 
   const references = $('#proposal-references');
   references.innerHTML = '';
-  (proposal.references || []).forEach((paper, index) => {
+  const citationMap = new Map();
+  (proposal.sections || []).forEach((section) => (section.citations || []).forEach((citation) => {
+    citationMap.set(`${citation.claim_id}|${citation.paper_id}`, citation);
+  }));
+  [...citationMap.values()].forEach((citation, index) => {
     const item = document.createElement('p');
     const number = document.createElement('span');
     number.textContent = '[' + (index + 1) + ']';
     item.appendChild(number);
-    item.appendChild(evidenceLink(paper));
-    item.appendChild(document.createTextNode(' · ' + (paper.journal || '期刊缺失') + ' · ' + (paper.year || '年份缺失')));
+    item.appendChild(document.createTextNode(`${citation.claim_id} · ${citation.paper_id} · ${citation.evidence_span?.text || '证据句缺失'}`));
     references.appendChild(item);
+  });
+
+  const taskCardList = $('#proposal-task-cards');
+  taskCardList.innerHTML = '';
+  (proposal.execution_task_cards?.cards || []).forEach((task) => {
+    const row = document.createElement('div');
+    row.className = 'task-card-row';
+    const title = document.createElement('strong');
+    const meta = document.createElement('span');
+    title.textContent = `${String(task.sequence).padStart(2, '0')} ${task.title}`;
+    meta.textContent = `${task.status} · ${task.target_words}字 · ${task.controlled_inputs?.allowed_claim_ids?.length || 0}个允许Claim`;
+    row.append(title, meta);
+    taskCardList.appendChild(row);
   });
 
   const guidanceList = $('#guidance-stages');
@@ -615,28 +992,75 @@ function renderProposal(result) {
   badge.textContent = '✓';
 }
 
-async function generateProposal(gapId, innovationId) {
+function renderProposal(result) {
+  renderWorkflowPanels(result.workflow_panels || {});
+  if (result.proposal_status === 'USER_CONSTRAINT_CONFIRMATION_REQUIRED') {
+    renderConstraintReview(result);
+    return;
+  }
+  if (result.proposal_status === 'PROPOSAL_PLAN_CONFIRMATION_REQUIRED') {
+    renderPlanReview(result);
+    return;
+  }
+  if (['READY_FOR_HUMAN_REVIEW', 'PROPOSAL_CONTROLLED_PARTIAL'].includes(result.proposal_status)) {
+    renderFinalProposal(result);
+    return;
+  }
+  if (result.proposal_status === 'PROPOSAL_NEEDS_USER_INPUT') {
+    $('#proposal-loading').hidden = true;
+    $('#proposal-workflow').hidden = false;
+    $('#proposal-constraints-form').hidden = false;
+    $('#proposal-checkpoint-message').textContent = result.proposal_message || '请补充用户约束。';
+    setProposalStep('constraints');
+    return;
+  }
+  renderProposalUnavailable(
+    result.proposal_message || '当前没有可展示的正式开题结果。',
+    result.proposal_status === 'PROPOSAL_NOT_CONFIGURED',
+  );
+}
+
+function collectProposalConstraints() {
+  return {
+    degree_level: $('#constraint-degree').value,
+    institution_template: $('#constraint-template').value,
+    output_language: $('#constraint-language').value,
+    target_word_count: Number($('#constraint-words').value),
+    deadline: $('#constraint-deadline').value,
+    data_access: $('#constraint-data').value,
+    method_constraints: $('#constraint-method').value,
+    research_context: $('#constraint-context').value,
+    ethics_privacy: $('#constraint-ethics').value,
+    tool_capabilities: $('#constraint-tools').value,
+  };
+}
+
+async function requestProposal(extra = {}) {
   const contextId = state.data?.proposal_context_id;
-  switchView('proposal');
-  $('#proposal-empty').hidden = true;
-  $('#proposal-content').hidden = true;
-  $('#proposal-loading').hidden = false;
-  $('#proposal-status').textContent = '生成中';
-  $('#proposal-status').classList.remove('ready');
-  if (!contextId) {
+  const selection = state.proposalSelection;
+  if (!contextId || !selection) {
     renderProposalUnavailable('本次开题上下文未建立，请重新运行论文检索与五方向综合。');
     return;
   }
+  $('#proposal-loading').hidden = false;
+  $('#proposal-loading-title').textContent = extra.blueprint_confirmed ? '正在按确认计划逐节生成…' : '正在校验受控开题检查点…';
+  $('#proposal-status').textContent = extra.blueprint_confirmed ? '逐节生成中' : '检查中';
+  $('#proposal-status').classList.remove('ready');
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 120000);
+  const timer = setTimeout(() => controller.abort(), 900000);
   try {
     const response = await fetch('/api/proposal', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         proposal_context_id: contextId,
-        selected_gap_id: gapId,
-        selected_innovation_id: innovationId,
+        selected_gap_id: selection.gapId,
+        selected_innovation_id: selection.innovationId,
+        user_constraints: state.proposalConstraints || {},
+        constraints_confirmed: false,
+        blueprint_confirmed: false,
+        outline_confirmed: false,
+        ...extra,
       }),
       signal: controller.signal,
     });
@@ -646,12 +1070,32 @@ async function generateProposal(gapId, innovationId) {
     renderProposal(result);
   } catch (error) {
     const message = error.name === 'AbortError'
-      ? '生成等待超过2分钟，已停止本次请求。已选空白和论文结果不受影响。'
+      ? '逐节生成与竞技场评审需逐节调用模型，等待超过15分钟已停止本次请求。已选空白和论文结果不受影响。'
       : error.message;
     renderProposalUnavailable(message);
   } finally {
     clearTimeout(timer);
   }
+}
+
+function generateProposal(gapId, innovationId) {
+  state.proposalSelection = { gapId, innovationId };
+  state.proposalConstraints = null;
+  state.proposalPlan = null;
+  switchView('proposal');
+  $('#proposal-empty').hidden = true;
+  $('#proposal-loading').hidden = true;
+  $('#proposal-content').hidden = true;
+  $('#workflow-panel-grid').hidden = true;
+  $('#proposal-workflow').hidden = false;
+  $('#proposal-constraints-form').reset();
+  $('#proposal-constraints-form').hidden = false;
+  $('#proposal-constraint-review').hidden = true;
+  $('#proposal-plan-review').hidden = true;
+  $('#proposal-checkpoint-message').textContent = '先确认会改变研究设计的用户约束；当前不会调用生成模型。';
+  $('#proposal-status').textContent = '待填写用户约束';
+  $('#proposal-status').classList.remove('ready');
+  setProposalStep('constraints');
 }
 
 async function runSynthesis(jobId) {
@@ -661,11 +1105,11 @@ async function runSynthesis(jobId) {
   }
   $('#gaps-empty').hidden = true;
   $('#synthesis-results').hidden = false;
-  setSynthesisNotice('论文已展示，正在后台归纳五个小方向与研究空白…');
+  setSynthesisNotice('论文已展示，正在调用命名模型归纳五个小方向与研究空白（约需3–5分钟，请勿关闭页面）…');
   $('#synthesis-audit').textContent = '综合处理中';
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 120000);
+    const timer = setTimeout(() => controller.abort(), 420000);
     const response = await fetch('/api/synthesize', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -682,7 +1126,7 @@ async function runSynthesis(jobId) {
     renderSynthesis(state.data);
   } catch (error) {
     const message = error.name === 'AbortError'
-      ? '方向综合等待超时。论文结果不受影响，可稍后重新检索后再试。'
+      ? '方向综合等待超过7分钟，已停止本次请求。论文结果不受影响，可稍后重新检索后再试。'
       : error.message;
     setSynthesisNotice(message, false, true);
     $('#synthesis-audit').textContent = '综合未完成';
@@ -704,7 +1148,7 @@ async function submitResearch(event) {
 
   setLoading(true);
   state.retrievalController = new AbortController();
-  const timeout = setTimeout(() => state.retrievalController.abort(), 120000);
+  const timeout = setTimeout(() => state.retrievalController.abort(), 900000);
   try {
     const response = await fetch('/api/research', {
       method: 'POST',
@@ -728,7 +1172,7 @@ async function submitResearch(event) {
     }
   } catch (error) {
     formError.textContent = error.name === 'AbortError'
-      ? '检索等待超过2分钟，已停止本次请求。请检查网络后重试；系统不会把超时显示成零结果。'
+      ? '检索等待超过15分钟，已停止本次请求。请检查网络后重试；系统不会把超时显示成零结果。'
       : error.message;
   } finally {
     clearTimeout(timeout);
@@ -751,11 +1195,18 @@ function resetForm(clearResults = false) {
     $('#gaps-empty').hidden = false;
     $('#synthesis-results').hidden = true;
     $('#proposal-empty').hidden = false;
+    $('#proposal-workflow').hidden = true;
     $('#proposal-content').hidden = true;
     $('#proposal-loading').hidden = true;
+    $('#workflow-panel-grid').hidden = true;
     $('#paper-nav-count').hidden = true;
     $('#gap-nav-count').hidden = true;
     $('#proposal-nav-state').hidden = true;
+    $('#proposal-status').textContent = '尚未开始';
+    $('#proposal-status').classList.remove('ready');
+    state.proposalSelection = null;
+    state.proposalConstraints = null;
+    state.proposalPlan = null;
   }
   switchView('start');
 }
@@ -773,10 +1224,31 @@ document.addEventListener('click', (event) => {
 
 questionInput.addEventListener('input', updateRoutePreview);
 form.addEventListener('submit', submitResearch);
+$('#proposal-constraints-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!event.currentTarget.reportValidity()) return;
+  state.proposalConstraints = collectProposalConstraints();
+  requestProposal();
+});
+$('#confirm-proposal-constraints').addEventListener('click', () => {
+  requestProposal({ constraints_confirmed: true });
+});
+$('#confirm-proposal-plan').addEventListener('click', () => {
+  if (!state.proposalPlan) return;
+  requestProposal({
+    constraints_confirmed: true,
+    research_design_blueprint: state.proposalPlan.research_design_blueprint,
+    blueprint_confirmed: true,
+    proposal_outline: state.proposalPlan.proposal_outline,
+    outline_confirmed: true,
+  });
+});
 $('#reset-button').addEventListener('click', () => resetForm(false));
 $('#cancel-request').addEventListener('click', () => state.retrievalController?.abort());
 configureApiButton.addEventListener('click', configureApi);
 clearApiButton.addEventListener('click', clearApi);
+configureRetrievalButton.addEventListener('click', configureRetrievalApi);
+clearRetrievalButton.addEventListener('click', clearRetrievalApi);
 $('#load-more').addEventListener('click', () => {
   state.visiblePapers += PAGE_SIZE;
   renderPaperList();

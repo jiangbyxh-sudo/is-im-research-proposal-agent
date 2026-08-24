@@ -8,6 +8,7 @@ import mimetypes
 import os
 import sys
 import time
+from datetime import date
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -20,10 +21,28 @@ APP_DIR = Path(__file__).resolve().parent
 WORKSPACE = APP_DIR.parents[2]
 KB_ROOT = WORKSPACE / "01-输入素材/知识库/IS_IM_Proposal_KB_Starter_v0.3"
 CATALOG_PATH = KB_ROOT / "01_taxonomy/generated/research_direction_catalog.json"
+DIRECTION_PROFILE_PATH = KB_ROOT / "01_taxonomy/generated/direction_profiles.json"
 JOURNAL_REGISTRY_PATH = KB_ROOT / "02_journals/generated/journal_registry.json"
 PROVIDER_DIR = KB_ROOT / "11_implementation"
 STATIC_DIR = APP_DIR / "static"
 KB_VERSION = "0.4.1"
+# D039：P1生产标志解锁依据=v3盲审四门禁全过（2026-08-23）。历史NOT ACCEPTED不改写；
+# 依据文件变更或复测失败时，本标志必须回退为False并更新证据引用。
+P1_PRECISION_GATE = {
+    "passed": True,
+    "summary": {
+        "status": "RERANK_CALIBRATED",
+        "calibrated_on": "2026-08-23",
+        "overall_precision_at_10": 0.8814,
+        "weakest_group_precision": 0.7778,
+        "obvious_false_positive_rate": 0.0169,
+        "labeled_rows": 60,
+        "reranker_version": "p1-directness-reranker-2.1.0",
+        "profile_version": "1.2.0-p1-retrieval",
+        "evidence": "04-分析/01-current/P1精排校准返修/p1_sampled_precision_result.json",
+        "decision": "D039",
+    },
+}
 SYNTHESIS_JOB_TTL_SECONDS = 30 * 60
 SYNTHESIS_JOB_LIMIT = 20
 SYNTHESIS_JOBS: dict[str, tuple[float, SynthesisRequest]] = {}
@@ -32,15 +51,22 @@ PROPOSAL_CONTEXT_TTL_SECONDS = 60 * 60
 PROPOSAL_CONTEXT_LIMIT = 20
 PROPOSAL_CONTEXTS: dict[str, tuple[float, SynthesisRequest, object]] = {}
 PROPOSAL_CONTEXTS_LOCK = Lock()
+_DYNAMIC_PROVIDER_INSTANCE = None
+_DYNAMIC_PROVIDER_SIGNATURE = None
+_DYNAMIC_PROVIDER_LOCK = Lock()
 
 if str(PROVIDER_DIR) not in sys.path:
     sys.path.insert(0, str(PROVIDER_DIR))
 
 from paper_discovery_provider import (  # noqa: E402
+    CrossrefTransport,
     CrossrefPaperDiscoveryProvider,
     DiscoveryRequest,
     UnconfiguredPaperDiscoveryProvider,
 )
+from multi_source_discovery_provider import MultiSourcePaperDiscoveryProvider  # noqa: E402
+from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport  # noqa: E402
+from retrieval_query_plan import QUERY_PLAN_VERSION  # noqa: E402
 from research_synthesis_provider import (  # noqa: E402
     SynthesisRequest,
     build_research_synthesis_provider,
@@ -104,14 +130,66 @@ def positive_count(payload: dict, key: str, default: int) -> int:
 
 
 def provider_name() -> str:
-    return os.getenv("PROPOSAL_DYNAMIC_PROVIDER", "crossref").strip().lower()
+    return os.getenv("PROPOSAL_DYNAMIC_PROVIDER", "multi_source").strip().lower()
+
+
+def openalex_transport_settings() -> dict[str, int]:
+    return {
+        "timeout": int(os.getenv("PROPOSAL_RETRIEVAL_TIMEOUT", "45")),
+        "retries": int(os.getenv("PROPOSAL_RETRIEVAL_RETRIES", "5")),
+    }
+
+
+def dynamic_provider_signature() -> tuple[int, int]:
+    return (
+        DIRECTION_PROFILE_PATH.stat().st_mtime_ns,
+        JOURNAL_REGISTRY_PATH.stat().st_mtime_ns,
+    )
 
 
 def build_dynamic_provider():
+    global _DYNAMIC_PROVIDER_INSTANCE, _DYNAMIC_PROVIDER_SIGNATURE
     if provider_name() in {"disabled", "off", "unconfigured"}:
         return UnconfiguredPaperDiscoveryProvider()
+    signature = dynamic_provider_signature()
+    with _DYNAMIC_PROVIDER_LOCK:
+        if _DYNAMIC_PROVIDER_INSTANCE is not None and _DYNAMIC_PROVIDER_SIGNATURE == signature:
+            return _DYNAMIC_PROVIDER_INSTANCE
     enable_chinese = os.getenv("PROPOSAL_ENABLE_CHINESE_RETRIEVAL", "1").strip().lower() in {"1", "true", "yes", "on"}
-    return CrossrefPaperDiscoveryProvider(JOURNAL_REGISTRY_PATH, enable_chinese=enable_chinese)
+    if provider_name() in {"multi_source", "p1", "openalex"}:
+        crossref = CrossrefPaperDiscoveryProvider(
+            JOURNAL_REGISTRY_PATH,
+            transport=CrossrefTransport(
+                mailto=os.getenv("PROPOSAL_CROSSREF_MAILTO") or None,
+                timeout=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_TIMEOUT", "6")),
+                retries=0,
+            ),
+            enable_chinese=enable_chinese,
+            max_journals_per_language=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_JOURNALS", "3")),
+            rows_per_journal=int(os.getenv("PROPOSAL_CROSSREF_FALLBACK_ROWS", "10")),
+        )
+        openalex = OpenAlexPaperProvider(OpenAlexTransport(**openalex_transport_settings()))
+        instance = MultiSourcePaperDiscoveryProvider(DIRECTION_PROFILE_PATH, JOURNAL_REGISTRY_PATH, openalex=openalex, crossref=crossref)
+    else:
+        instance = CrossrefPaperDiscoveryProvider(JOURNAL_REGISTRY_PATH, enable_chinese=enable_chinese)
+    with _DYNAMIC_PROVIDER_LOCK:
+        if _DYNAMIC_PROVIDER_INSTANCE is None or _DYNAMIC_PROVIDER_SIGNATURE != signature:
+            _DYNAMIC_PROVIDER_INSTANCE = instance
+            _DYNAMIC_PROVIDER_SIGNATURE = signature
+        return _DYNAMIC_PROVIDER_INSTANCE
+
+
+def load_direction_profiles() -> dict[str, dict]:
+    if not DIRECTION_PROFILE_PATH.is_file():
+        return {}
+    payload = json.loads(DIRECTION_PROFILE_PATH.read_text(encoding="utf-8"))
+    return {item["direction_id"]: item for item in payload.get("profiles", [])}
+
+
+def direction_profile_version() -> str:
+    if not DIRECTION_PROFILE_PATH.is_file():
+        return "unknown"
+    return str(json.loads(DIRECTION_PROFILE_PATH.read_text(encoding="utf-8")).get("version") or "unknown")
 
 
 def synthesis_provider_name() -> str:
@@ -138,6 +216,19 @@ def configure_synthesis(payload: dict) -> dict:
         "model": model,
         "persistence": "process_memory_only",
         "message_to_user": "DeepSeek已在当前服务进程中启用；密钥未写入文件且不会回显。",
+    }
+
+
+def configure_retrieval(payload: dict) -> dict:
+    api_key = str(payload.get("openalex_api_key") or "").strip()
+    if len(api_key) < 8:
+        raise RequestError("请输入有效的OpenAlex API密钥")
+    os.environ["OPENALEX_API_KEY"] = api_key
+    return {
+        "configured": True,
+        "provider": "openalex",
+        "persistence": "process_memory_only",
+        "message_to_user": "OpenAlex已在当前服务进程中启用认证额度；密钥未写入文件且不会回显。",
     }
 
 
@@ -216,6 +307,71 @@ def store_proposal_context(request: SynthesisRequest, synthesis) -> str:
     return context_id
 
 
+def _strict_payload_flag(payload: dict, key: str) -> bool:
+    value = payload.get(key, False)
+    if not isinstance(value, bool):
+        raise RequestError(f"{key}必须是布尔值")
+    return value
+
+
+def _proposal_gaps(synthesis) -> list[dict]:
+    formal_gaps = getattr(synthesis, "formal_gaps", None)
+    if isinstance(formal_gaps, (list, tuple)) and formal_gaps:
+        return formal_gaps
+    return list(getattr(synthesis, "gap_candidates", []) or [])
+
+
+def build_workflow_panels(synthesis_request: SynthesisRequest, synthesis, proposal_result) -> dict:
+    audit = proposal_result.audit if isinstance(getattr(proposal_result, "audit", None), dict) else {}
+    claim_audit = audit.get("claim_audit") or {}
+    citation_audit = audit.get("citation_audit") or {}
+    consistency = audit.get("cross_section_consistency_matrix") or {}
+    task_card_audit = audit.get("task_card_audit") or {}
+    claim_store = getattr(synthesis, "claim_store", {}) or {}
+    claims = claim_store.get("claims", []) if isinstance(claim_store, dict) else []
+    bindings = [binding for claim in claims for binding in claim.get("bindings", [])]
+    evidence_levels: dict[str, int] = {}
+    for binding in bindings:
+        level = str((binding.get("evidence_span") or {}).get("evidence_level") or "unknown")
+        evidence_levels[level] = evidence_levels.get(level, 0) + 1
+    synthesis_audit = getattr(synthesis, "audit", {}) or {}
+    saturation = synthesis_audit.get("saturation") or {}
+    return {
+        "skill": {
+            "title": "Skill",
+            "items": [
+                {"id": "p1", "label": "P1 direct语料", "status": "PASS" if synthesis_request.p1_precision_gate_passed else "EXEMPTION_OR_BLOCKED"},
+                {"id": "p2", "label": "P2确定性五方向", "status": str(getattr(synthesis, "status", "UNKNOWN"))},
+                {"id": "p3", "label": "P3 Evidence/Claim门禁", "status": "PASS" if claim_audit.get("valid") else "BLOCKED"},
+                {"id": "p4", "label": "P4受控开题", "status": str(getattr(proposal_result, "status", "UNKNOWN"))},
+            ],
+        },
+        "evidence": {
+            "title": "Evidence",
+            "claim_count": len(claims),
+            "binding_count": len(bindings),
+            "evidence_levels": evidence_levels,
+            "formal_only": bool(evidence_levels) and all(
+                level in {"abstract", "fulltext"} for level in evidence_levels
+            ),
+        },
+        "saturation": {
+            "title": "Saturation",
+            "status": saturation.get("status", "NOT_AVAILABLE"),
+            "advisory_only": True,
+            "metrics": saturation,
+        },
+        "audit": {
+            "title": "Audit",
+            "claim_valid": bool(claim_audit.get("valid")),
+            "citation_valid": bool(citation_audit.get("valid")),
+            "consistency_valid": bool(consistency.get("valid")),
+            "task_cards_valid": bool(task_card_audit.get("valid")),
+            "release_ceiling": "READY_FOR_HUMAN_REVIEW",
+        },
+    }
+
+
 def generate_proposal(payload: dict, proposal_provider=None) -> dict:
     context_id = str(payload.get("proposal_context_id") or "").strip()
     selected_gap_id = str(payload.get("selected_gap_id") or "").strip()
@@ -231,15 +387,26 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
         with PROPOSAL_CONTEXTS_LOCK:
             PROPOSAL_CONTEXTS.pop(context_id, None)
         raise RequestError("开题上下文已超过60分钟，请重新运行论文检索与方向综合")
-    gap = next((item for item in synthesis.gap_candidates if item.get("gap_id") == selected_gap_id), None)
+    gap = next((item for item in _proposal_gaps(synthesis) if item.get("gap_id") == selected_gap_id), None)
     if not gap:
         raise RequestError("选择的研究空白不属于本次核验结果")
+    if gap.get("formal") is not True:
+        raise RequestError("所选研究空白尚未通过P3正式证据门禁")
     innovation_map = {
         f"{selected_gap_id}_innovation_{index + 1}": str(value)
         for index, value in enumerate(gap.get("innovation_candidates", []))
     }
     if selected_innovation_id not in innovation_map:
         raise RequestError("选择的创新点不属于该研究空白")
+    user_constraints = payload.get("user_constraints") or {}
+    if not isinstance(user_constraints, dict):
+        raise RequestError("user_constraints必须是JSON对象")
+    blueprint = payload.get("research_design_blueprint")
+    outline = payload.get("proposal_outline")
+    if blueprint is not None and not isinstance(blueprint, dict):
+        raise RequestError("research_design_blueprint必须是JSON对象")
+    if outline is not None and not isinstance(outline, dict):
+        raise RequestError("proposal_outline必须是JSON对象")
     result = (proposal_provider or build_proposal_generation_provider(KB_ROOT)).generate(
         ProposalRequest(
             research_direction=synthesis_request.research_direction,
@@ -248,11 +415,25 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
             selected_innovation_id=selected_innovation_id,
             selected_innovation=innovation_map[selected_innovation_id],
             papers=synthesis_request.papers,
+            claim_store=dict(getattr(synthesis, "claim_store", {}) or {}),
+            user_constraints=user_constraints,
+            constraints_confirmed=_strict_payload_flag(payload, "constraints_confirmed"),
+            research_design_blueprint=blueprint,
+            blueprint_confirmed=_strict_payload_flag(payload, "blueprint_confirmed"),
+            proposal_outline=outline,
+            outline_confirmed=_strict_payload_flag(payload, "outline_confirmed"),
         )
     )
     result.proposal_context["session_id"] = context_id
+    state_by_status = {
+        "READY_FOR_HUMAN_REVIEW": "PROPOSAL_READY",
+        "PROPOSAL_CONTROLLED_PARTIAL": "PROPOSAL_PARTIAL",
+        "PROPOSAL_NEEDS_USER_INPUT": "PROPOSAL_CHECKPOINT",
+        "USER_CONSTRAINT_CONFIRMATION_REQUIRED": "PROPOSAL_CHECKPOINT",
+        "PROPOSAL_PLAN_CONFIRMATION_REQUIRED": "PROPOSAL_CHECKPOINT",
+    }
     return {
-        "state": "PROPOSAL_READY" if result.status in {"PROPOSAL_DRAFT_READY", "PROPOSAL_DRAFT_PARTIAL"} else "GAP_SELECTED",
+        "state": state_by_status.get(result.status, "GAP_SELECTED"),
         "proposal_status": result.status,
         "proposal_message": result.message_to_user,
         "proposal": result.proposal,
@@ -260,6 +441,7 @@ def generate_proposal(payload: dict, proposal_provider=None) -> dict:
         "proposal_context": result.proposal_context,
         "proposal_limitations": result.limitations,
         "proposal_audit": result.audit,
+        "workflow_panels": build_workflow_panels(synthesis_request, synthesis, result),
     }
 
 
@@ -272,12 +454,13 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
     if selected_id not in directions:
         raise RequestError("请选择知识库中的有效研究方向")
     direction = directions[selected_id]
+    direction_profile = load_direction_profiles().get(selected_id)
     fine_question = str(payload.get("fine_grained_question") or "").strip() or None
     zh_count = positive_count(payload, "chinese_count", 10)
     en_count = positive_count(payload, "english_count", 20)
     derived_path = "focused_question" if fine_question else "top_five_subdirections"
 
-    routed_pools = journal_pools_for(direction)
+    routed_pools = tuple(direction_profile["journal_pool_ids"]) if direction_profile else journal_pools_for(direction)
     discovery = (provider or build_dynamic_provider()).discover(
         DiscoveryRequest(
             selected_direction_id=selected_id,
@@ -300,6 +483,12 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
             fine_grained_question=fine_question,
             derived_path=derived_path,
             papers=tuple(corpus),
+            p1_precision_gate_passed=P1_PRECISION_GATE["passed"],
+            p1_precision_summary=dict(P1_PRECISION_GATE["summary"]),
+            data_cutoff_date=date.today().isoformat(),
+            direction_profile_version=direction_profile_version(),
+            retrieval_version=QUERY_PLAN_VERSION,
+            score_version=getattr(discovery, "score_config_version", "") or "unknown",
         )
         if run_synthesis:
             synthesis = (synthesis_provider or build_research_synthesis_provider()).synthesize(synthesis_request)
@@ -329,6 +518,7 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
             "groups": [groups[group_id] for group_id in direction["group_ids"]],
             "source_refs": direction["source_refs"],
             "knowledge_policy": "本地规则与写作范式优先精确匹配",
+            "direction_profile": direction_profile,
         },
         "stages": [
             {"id": "catalog", "label": "方向目录匹配", "status": "complete"},
@@ -342,6 +532,15 @@ def build_research_response(payload: dict, provider=None, synthesis_provider=Non
         "search_log": discovery.search_log,
         "exclusion_log": discovery.exclusion_log,
         "shortages": discovery.shortages,
+        "coverage_audit": getattr(discovery, "coverage_audit", {}),
+        "provider_statuses": getattr(discovery, "provider_statuses", []),
+        "expansion_log": getattr(discovery, "expansion_log", []),
+        "dedupe_log": getattr(discovery, "dedupe_log", []),
+        "candidate_traces": getattr(discovery, "candidate_traces", []),
+        "lane_funnels": getattr(discovery, "lane_funnels", []),
+        "chinese_coverage": getattr(discovery, "chinese_coverage", {}),
+        "zero_result_diagnosis": getattr(discovery, "zero_result_diagnosis", {}),
+        "score_config_version": getattr(discovery, "score_config_version", ""),
         "synthesis_job_id": synthesis_job_id,
         "synthesis_status": synthesis.status if synthesis else "SYNTHESIS_QUEUED" if synthesis_job_id else "SYNTHESIS_NOT_RUN",
         "synthesis_message": synthesis.message_to_user if synthesis else "论文已返回，五方向与研究空白将在下一阶段单独综合。" if synthesis_job_id else "论文发现未完成，未运行综合。",
@@ -391,6 +590,8 @@ class AppHandler(BaseHTTPRequestHandler):
                 "chinese_retrieval": "enabled" if os.getenv("PROPOSAL_ENABLE_CHINESE_RETRIEVAL", "1").strip().lower() in {"1", "true", "yes", "on"} else "disabled",
                 "synthesis_provider": synthesis_provider_name(),
                 "journal_registry_ready": JOURNAL_REGISTRY_PATH.is_file(),
+                "direction_profiles_ready": DIRECTION_PROFILE_PATH.is_file(),
+                "openalex_authenticated": bool(os.getenv("OPENALEX_API_KEY")),
             })
             return
         if route == "/api/directions":
@@ -411,7 +612,7 @@ class AppHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:  # noqa: N802
         route = urlparse(self.path).path
-        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear", "/api/evaluation/p0-model-baseline"}:
+        if route not in {"/api/research", "/api/synthesize", "/api/proposal", "/api/configure/synthesis", "/api/configure/synthesis/clear", "/api/configure/retrieval", "/api/configure/retrieval/clear", "/api/evaluation/p0-model-baseline"}:
             self.send_error(HTTPStatus.NOT_FOUND)
             return
         try:
@@ -420,16 +621,22 @@ class AppHandler(BaseHTTPRequestHandler):
                     os.environ.pop(key, None)
                 self.send_json({"configured": False, "provider": "unconfigured", "message_to_user": "当前进程中的DeepSeek配置已清除。"})
                 return
+            if route == "/api/configure/retrieval/clear":
+                os.environ.pop("OPENALEX_API_KEY", None)
+                self.send_json({"configured": False, "provider": "openalex_anonymous", "message_to_user": "当前进程中的OpenAlex密钥已清除；可继续使用受限匿名额度。"})
+                return
             length = int(self.headers.get("Content-Length", "0"))
             if length < 1 or length > 1_000_000:
                 raise RequestError("请求内容为空或过大")
-            if route == "/api/configure/synthesis" and not self.headers.get("Content-Type", "").lower().startswith("application/json"):
+            if route in {"/api/configure/synthesis", "/api/configure/retrieval"} and not self.headers.get("Content-Type", "").lower().startswith("application/json"):
                 raise RequestError("配置请求必须使用JSON")
             payload = json.loads(self.rfile.read(length).decode("utf-8"))
             if not isinstance(payload, dict):
                 raise RequestError("请求必须是JSON对象")
             if route == "/api/configure/synthesis":
                 self.send_json(configure_synthesis(payload))
+            elif route == "/api/configure/retrieval":
+                self.send_json(configure_retrieval(payload))
             elif route == "/api/evaluation/p0-model-baseline":
                 if synthesis_provider_name() == "unconfigured":
                     raise RequestError("请先在检索设置中配置DeepSeek，再运行P0模型基线")

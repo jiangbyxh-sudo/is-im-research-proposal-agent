@@ -1,0 +1,39 @@
+{
+  "validated_at": "2026-08-23T03:26:50.7956676+08:00",
+  "status": "GROBID_RUNTIME_VALIDATED",
+  "host": {
+    "docker_desktop_version": "4.87.0",
+    "docker_engine_version": "29.7.2",
+    "wsl_version": "2.7.12.0"
+  },
+  "deployment": {
+    "grobid_version": "0.9.0",
+    "image": "lfoppiano/grobid@sha256:24ba90eb1c959f65d812bcdb2cf79c677fa5fd7b95235de616b8bc9fa1317849",
+    "container_name": "is-im-grobid-0-9-0",
+    "container_id": "4e60c7c7c858a1d7e10da9bf4e3b45ad7787b6e05f0f22361920a5468448d858",
+    "bind": "127.0.0.1:8070",
+    "restart_policy": "unless-stopped",
+    "health_ready": true,
+    "models_loaded": 12,
+    "models_failed": 0
+  },
+  "real_pdf_validation": {
+    "paper_id": "runtime_agarwal_dhar_2014",
+    "source_sha256": "5b1679dd357bd95626e5eb7e003a92b7dfdeb70d6696c3c776a9d9320c290ff2",
+    "pdf_byte_count": 103548,
+    "status": "FULLTEXT_EVIDENCE_READY",
+    "matrix_hash": "c17dac952c1d6ee7e20cf90554b39f81850e4092ee7780c2a4a5f82c7e2219b2",
+    "formal_evidence_paper_count": 1,
+    "span_count": 126,
+    "section_anchor_count": 7,
+    "page_anchor_count": 126,
+    "claim_store_valid": true,
+    "formal_claim_count": 1,
+    "research_skill_status": "COMPLETE",
+    "research_skill_upstream_status": "FULLTEXT_EVIDENCE_READY",
+    "raw_pdf_persisted_by_provider": false,
+    "raw_tei_persisted": false,
+    "title_level_fallback_used": false,
+    "source_path_emitted": false
+  }
+}

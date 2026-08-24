@@ -1,0 +1,20 @@
+{
+  "dimensions": {
+    "evidence_grounding": null,
+    "design_chain": null,
+    "constraint_consistency": null,
+    "structure_completeness": null,
+    "academic_language": null,
+    "honest_boundaries": null
+  },
+  "core_dimensions": [
+    "evidence_grounding",
+    "design_chain",
+    "constraint_consistency"
+  ],
+  "note": "",
+  "gates": {
+    "mean_ge_85": null,
+    "core_ge_70": null
+  }
+}

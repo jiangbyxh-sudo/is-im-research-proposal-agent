@@ -1,0 +1,38 @@
+[
+  {
+    "case": "regression_title_only_27",
+    "mode": "honest",
+    "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+    "paper_count": 27,
+    "subdirection_count": 0,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "direct论文不足30篇，无法支撑五个方向",
+      "带摘要论文不足20篇，文本特征不足",
+      "证据仅支撑少于3个方向，已诚实停止"
+    ],
+    "gap_audit": {},
+    "matrix": {},
+    "model_calls": 0
+  },
+  {
+    "case": "regression_p1_blocked",
+    "mode": "honest",
+    "status": "P2_BLOCKED_BY_P1_PRECISION",
+    "paper_count": 35,
+    "subdirection_count": 0,
+    "formal_gap_count": 0,
+    "claim_count": 0,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "P1人工Precision门禁未通过，P2默认阻断"
+    ],
+    "gap_audit": {},
+    "matrix": {},
+    "model_calls": 0
+  }
+]

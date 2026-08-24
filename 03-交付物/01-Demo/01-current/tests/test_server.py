@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import os
 import unittest
 from pathlib import Path
@@ -13,6 +14,21 @@ SPEC.loader.exec_module(server)
 
 
 class ServerTests(unittest.TestCase):
+    def test_openalex_transport_uses_stability_defaults(self):
+        keys = ("PROPOSAL_RETRIEVAL_TIMEOUT", "PROPOSAL_RETRIEVAL_RETRIES")
+        previous = {key: os.environ.pop(key, None) for key in keys}
+        try:
+            self.assertEqual({"timeout": 45, "retries": 5}, server.openalex_transport_settings())
+        finally:
+            for key, value in previous.items():
+                if value is not None:
+                    os.environ[key] = value
+
+    def test_dynamic_provider_signature_tracks_local_knowledge_files(self):
+        signature = server.dynamic_provider_signature()
+        self.assertEqual(2, len(signature))
+        self.assertTrue(all(isinstance(value, int) and value > 0 for value in signature))
+
     def test_catalog_is_complete(self):
         catalog = server.load_catalog()
         self.assertEqual(catalog["raw_topic_count"], 75)
@@ -94,6 +110,38 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(result["next_allowed_actions"][0], "select_gap")
         self.assertEqual(result["synthesis_audit"]["input_paper_count"], 12)
 
+    def test_synthesis_request_carries_p2_version_and_cutoff_metadata(self):
+        papers = [{"title": f"Paper {index}"} for index in range(12)]
+        captured = {}
+
+        class FakeProvider:
+            def discover(self, request):
+                return SimpleNamespace(
+                    status="RETRIEVAL_COMPLETE", message_to_user="ready",
+                    papers=papers[:5], analysis_papers=papers,
+                    search_log=[], exclusion_log=[], shortages={"zh": 0, "en": 0},
+                    score_config_version="p1-directness-reranker-2.1.0",
+                )
+
+        class FakeSynthesis:
+            def synthesize(self, request):
+                captured["request"] = request
+                return SimpleNamespace(
+                    status="SYNTHESIS_COMPLETE", top_subdirections=[], gap_candidates=[],
+                    limitations=[], audit={}, message_to_user="ready",
+                )
+
+        server.build_research_response({
+            "selected_direction_id": "platform_governance",
+            "chinese_count": 10, "english_count": 20,
+        }, provider=FakeProvider(), synthesis_provider=FakeSynthesis())
+        request = captured["request"]
+        self.assertTrue(request.p1_precision_gate_passed)
+        self.assertEqual("1.2.0-p1-retrieval", request.direction_profile_version)
+        self.assertEqual("p1-query-plan-1.0.0", request.retrieval_version)
+        self.assertEqual("p1-directness-reranker-2.1.0", request.score_version)
+        self.assertRegex(request.data_cutoff_date, r"^\d{4}-\d{2}-\d{2}$")
+
     def test_discovery_can_return_before_synthesis_and_resume_by_job_id(self):
         papers = [{"title": f"Paper {index}"} for index in range(8)]
 
@@ -139,13 +187,17 @@ class ServerTests(unittest.TestCase):
             "gap_id": "g1",
             "gap_statement": "待验证空白",
             "innovation_candidates": ["创新点A"],
-        }])
+            "formal": True,
+        }], claim_store={"claims": []}, status="RESEARCH_GAPS_READY", audit={})
         context_id = server.store_proposal_context(request, synthesis)
 
         class FakeProposal:
+            received = None
+
             def generate(self, proposal_request):
+                self.received = proposal_request
                 return SimpleNamespace(
-                    status="PROPOSAL_DRAFT_READY",
+                    status="READY_FOR_HUMAN_REVIEW",
                     proposal={"working_title": "Title"},
                     writing_guidance={"paradigm_id": "experiment"},
                     proposal_context={"gate_passed": True},
@@ -154,19 +206,72 @@ class ServerTests(unittest.TestCase):
                     message_to_user="ready",
                 )
 
+        fake = FakeProposal()
         result = server.generate_proposal({
             "proposal_context_id": context_id,
             "selected_gap_id": "g1",
             "selected_innovation_id": "g1_innovation_1",
-        }, FakeProposal())
+            "user_constraints": {"degree_level": "硕士"},
+        }, fake)
         self.assertEqual(result["state"], "PROPOSAL_READY")
         self.assertEqual(result["proposal_context"]["session_id"], context_id)
+        self.assertEqual({"claims": []}, fake.received.claim_store)
+        self.assertEqual("硕士", fake.received.user_constraints["degree_level"])
+        self.assertIn("skill", result["workflow_panels"])
+        self.assertIn("audit", result["workflow_panels"])
         with self.assertRaises(server.RequestError):
             server.generate_proposal({
                 "proposal_context_id": context_id,
                 "selected_gap_id": "g1",
                 "selected_innovation_id": "g1_innovation_99",
             }, FakeProposal())
+
+    def test_nonformal_gap_cannot_enter_proposal(self):
+        request = server.SynthesisRequest(
+            research_direction="AI", fine_grained_question=None,
+            derived_path="top_five_subdirections", papers=({"title": "Paper"},),
+        )
+        synthesis = SimpleNamespace(gap_candidates=[{
+            "gap_id": "g1", "innovation_candidates": ["i1"], "formal": False,
+        }])
+        context_id = server.store_proposal_context(request, synthesis)
+        with self.assertRaisesRegex(server.RequestError, "P3正式证据门禁"):
+            server.generate_proposal({
+                "proposal_context_id": context_id,
+                "selected_gap_id": "g1",
+                "selected_innovation_id": "g1_innovation_1",
+            }, SimpleNamespace())
+
+    def test_p1_gate_unlock_references_real_v3_evidence(self):
+        gate = server.P1_PRECISION_GATE
+        self.assertTrue(gate["passed"])
+        summary = gate["summary"]
+        # 解锁必须锚定D039与v3盲审实测值；证据文件必须真实存在。
+        self.assertEqual("D039", summary["decision"])
+        self.assertGreaterEqual(summary["overall_precision_at_10"], 0.80)
+        self.assertGreaterEqual(summary["weakest_group_precision"], 0.70)
+        self.assertLessEqual(summary["obvious_false_positive_rate"], 0.10)
+        self.assertEqual(60, summary["labeled_rows"])
+        evidence = server.WORKSPACE / summary["evidence"]
+        self.assertTrue(evidence.exists(), f"missing evidence file: {evidence}")
+        result = json.loads(evidence.read_text(encoding="utf-8"))
+        self.assertTrue(result["passed"])
+        self.assertAlmostEqual(summary["overall_precision_at_10"], result["overall_precision_at_10"], places=4)
+
+    def test_phase_e_ui_exposes_all_confirmations_and_audit_panels(self):
+        static = SERVER_PATH.parent / "static"
+        html = (static / "index.html").read_text(encoding="utf-8")
+        script = (static / "app.js").read_text(encoding="utf-8")
+        for element_id in (
+            "proposal-constraints-form", "confirm-proposal-constraints",
+            "proposal-plan-review", "confirm-proposal-plan",
+            "skill-panel", "evidence-panel", "saturation-panel", "audit-panel",
+            "proposal-task-cards",
+        ):
+            self.assertIn(f'id="{element_id}"', html)
+        self.assertIn("USER_CONSTRAINT_CONFIRMATION_REQUIRED", script)
+        self.assertIn("PROPOSAL_PLAN_CONFIRMATION_REQUIRED", script)
+        self.assertIn("READY_FOR_HUMAN_REVIEW", script)
 
     def test_invalid_count_stops(self):
         with self.assertRaises(server.RequestError):
@@ -195,6 +300,20 @@ class ServerTests(unittest.TestCase):
                     os.environ.pop(key, None)
                 else:
                     os.environ[key] = value
+
+    def test_openalex_key_is_process_only_and_never_echoed(self):
+        previous = os.environ.get("OPENALEX_API_KEY")
+        try:
+            result = server.configure_retrieval({"openalex_api_key": "oa-test-key-123456"})
+            self.assertTrue(result["configured"])
+            self.assertNotIn("api_key", result)
+            self.assertNotIn("openalex_api_key", result)
+            self.assertEqual("process_memory_only", result["persistence"])
+        finally:
+            if previous is None:
+                os.environ.pop("OPENALEX_API_KEY", None)
+            else:
+                os.environ["OPENALEX_API_KEY"] = previous
 
 
 if __name__ == "__main__":

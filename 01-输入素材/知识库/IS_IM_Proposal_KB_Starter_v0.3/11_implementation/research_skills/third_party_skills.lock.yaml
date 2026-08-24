@@ -1,0 +1,79 @@
+lock_version: "1.0.0"
+generated_at: "2026-08-23"
+default_policy: disabled_until_reviewed
+
+projects:
+  - id: research-paper-lifecycle-skills
+    repository: https://github.com/ShaishavMaisuria/research-paper-lifecycle-skills
+    commit: f9a0ed8f0f1770fb0321c5b022d55ed34c939927
+    license: Apache-2.0
+    status: disabled
+    integration_mode: reviewed_script_or_rule_port
+    allowed_scope:
+      - multi_source_discovery
+      - citation_verification
+      - claim_audit
+    forbidden_scope:
+      - formal_relevance_decision
+      - dynamic_skill_execution
+
+  - id: paperqa2
+    repository: https://github.com/Future-House/paper-qa
+    commit: 57e89f7223b0960d5ee5ea048c69e3c47e088572
+    release: v2026.08.12
+    package: paper-qa==2026.8.12
+    license: Apache-2.0
+    status: validated_optional
+    integration_mode: isolated_subprocess_span_retrieval
+    allowed_scope:
+      - question_specific_evidence_retrieval
+      - contradiction_candidate_retrieval
+    forbidden_scope:
+      - formal_relevance_decision
+      - research_gap_decision
+      - pdf_parsing
+      - external_paper_search
+      - llm_or_agent
+      - answer_generation
+      - claim_generation
+      - claim_store_bypass
+
+  - id: grobid
+    repository: https://github.com/grobidOrg/grobid
+    commit: 0148dea637cfe4acb364a9d2ef22aca82d9b5035
+    license: Apache-2.0
+    status: validated_optional
+    integration_mode: isolated_docker_sidecar
+    allowed_scope:
+      - pdf_structure_extraction
+      - evidence_location_anchors
+
+  - id: storm
+    repository: https://github.com/stanford-oval/storm
+    commit: fb951af7744dab086e34962e9bc6fe878e145f83
+    license: MIT
+    status: reference_only
+    integration_mode: algorithm_and_prompt_pattern_reference
+    forbidden_scope:
+      - report_generation_runtime
+      - claim_store_bypass
+
+  - id: asreview
+    repository: https://github.com/asreview/asreview
+    commit: 1788bc97ff5b5652dbe1e5b5ad5253bef1b03aef
+    license: Apache-2.0
+    status: deferred_until_label_sufficiency
+    integration_mode: isolated_sidecar_or_algorithm_reference
+    forbidden_scope:
+      - replace_p1_rules
+      - overwrite_human_labels
+
+  - id: agent-laboratory
+    repository: https://github.com/SamuelSchmidgall/AgentLaboratory
+    commit: d9017d90e329112d2a80b7712f37ee9094d2cd27
+    license: MIT
+    status: reference_only
+    integration_mode: state_machine_reference
+    forbidden_scope:
+      - autonomous_research_runtime
+      - product_gate_decision

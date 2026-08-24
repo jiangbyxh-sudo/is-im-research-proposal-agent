@@ -1,0 +1,495 @@
+{
+  "version": "1.2.0-p1-retrieval",
+  "generated_on": "2026-08-23",
+  "directions": [
+    {
+      "direction_id": "technology_adoption",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 46
+    },
+    {
+      "direction_id": "human_ai_interaction",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 43
+    },
+    {
+      "direction_id": "platform_governance",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 37
+    },
+    {
+      "direction_id": "topic_digital_transformation",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_algorithmic_management",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "social_media",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 37
+    },
+    {
+      "direction_id": "topic_digital_markets",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_privacy_security",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_it_governance",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_digital_innovation",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_technology_use",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_digital_strategy",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_平台经济",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "recommender_systems",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 49
+    },
+    {
+      "direction_id": "topic_电商",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_数字广告",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_在线行为",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_算法机制",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_hci",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "information_retrieval",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 45
+    },
+    {
+      "direction_id": "topic_machine_learning",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_data_mining",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_software_system_design",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_knowledge_discovery",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_ai_enabled_information_systems",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_digital_artifact_design",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 27
+    },
+    {
+      "direction_id": "topic_ai_trust",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": true,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_anthropomorphism",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_cognitive_load",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_information_overload",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_social_influence",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_privacy_concern",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_technostress",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_human_ai_teams",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_identity",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_emotion",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_attention",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_judgment_decision_making",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 28
+    },
+    {
+      "direction_id": "topic_misinformation",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_news_consumption",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_content_moderation",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_influencers",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_generative_ai",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_human_ai_communication",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_political_communication",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_algorithmic_news",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 31
+    },
+    {
+      "direction_id": "topic_information_science",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "information_behavior",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 43
+    },
+    {
+      "direction_id": "knowledge_management",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 43
+    },
+    {
+      "direction_id": "topic_data_management",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "topic_data_governance",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "scientometrics",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 43
+    },
+    {
+      "direction_id": "topic_knowledge_graph",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "topic_decision_support",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "ai_nlp_information_processing",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 43
+    },
+    {
+      "direction_id": "topic_scholarly_communication",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 25
+    },
+    {
+      "direction_id": "topic_data_knowledge",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 30
+    },
+    {
+      "direction_id": "topic_decision_intelligence",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 30
+    },
+    {
+      "direction_id": "topic_organizational_information",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 30
+    },
+    {
+      "direction_id": "topic_digital_information_environment",
+      "valid": true,
+      "errors": [],
+      "changed_from_previous": false,
+      "approved_topic_count": 0,
+      "approved_source_count": 30
+    }
+  ],
+  "errors": []
+}

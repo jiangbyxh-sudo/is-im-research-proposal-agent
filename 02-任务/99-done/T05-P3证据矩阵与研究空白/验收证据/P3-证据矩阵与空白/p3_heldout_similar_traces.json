@@ -1,0 +1,29 @@
+[
+  {
+    "case": "heldout_every_4th_removed",
+    "mode": "honest",
+    "status": "SYNTHESIS_PARTIAL",
+    "paper_count": 27,
+    "subdirection_count": 4,
+    "formal_gap_count": 4,
+    "claim_count": 8,
+    "anchor_violations": 0,
+    "fabrication_signals": 0,
+    "limitations": [
+      "direct论文不足30篇，无法支撑五个方向"
+    ],
+    "gap_audit": {
+      "candidate_count": 4,
+      "formal_gap_count": 4,
+      "rejected_count": 0,
+      "rejected": []
+    },
+    "matrix": {
+      "matrix_hash": "d3f1593e9c897274a7bdd5523e734c10c69460fdd0d888d5e68c853e219ff9d1",
+      "paper_count": 27,
+      "formal_evidence_paper_count": 27,
+      "span_count": 27
+    },
+    "model_calls": 15
+  }
+]

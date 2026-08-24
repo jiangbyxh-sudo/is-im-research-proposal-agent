@@ -1,0 +1,782 @@
+{
+ "state": "PROPOSAL_CHECKPOINT",
+ "proposal_status": "PROPOSAL_PLAN_CONFIRMATION_REQUIRED",
+ "proposal_message": "研究设计蓝图、逐节提纲和执行任务卡已生成；确认计划后才会逐节生成。",
+ "proposal": {
+  "user_constraints": {
+   "degree_level": "硕士",
+   "institution_template": "无指定模板",
+   "output_language": "中文",
+   "target_word_count": 12000,
+   "deadline": "2026-12-31",
+   "data_access": "公开平台数据与二手数据",
+   "method_constraints": "无",
+   "research_context": "数字平台生态情境",
+   "ethics_privacy": "不涉及人类被试敏感数据",
+   "tool_capabilities": "Python与统计工具"
+  },
+  "research_design_blueprint": {
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "research_direction": "平台治理",
+   "gap_id": "gap_8954c484edeac0f10ad3",
+   "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+   "claim_ids": [
+    "claim_668fa1f4a91a01a66ecf",
+    "claim_431ba39ee9c713ce6d4e"
+   ],
+   "paradigm_id": "qualitative_case_process",
+   "unit_of_analysis": "平台-互补者二元关系",
+   "context": "交易型平台（如电商、共享经济）与创新型平台（如软件生态）的对比",
+   "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+   "data": "对平台所有者、互补者及用户的半结构化访谈，辅以平台政策文件和互补者行为数据",
+   "analysis": "模糊集定性比较分析（fsQCA）识别权力抵消的必要与充分条件组合",
+   "section_ids": [
+    "working_title",
+    "background",
+    "concepts",
+    "literature_status",
+    "selected_gap",
+    "research_questions",
+    "theoretical_framework",
+    "research_design",
+    "contributions",
+    "feasibility_ethics",
+    "timeline"
+   ],
+   "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+   "degree_level": "硕士",
+   "institution_template": "无指定模板",
+   "output_language": "中文",
+   "target_word_count": 12000,
+   "deadline": "2026-12-31",
+   "data_access": "公开平台数据与二手数据",
+   "method_constraints": "无",
+   "ethics_privacy": "不涉及人类被试敏感数据",
+   "tool_capabilities": "Python与统计工具"
+  },
+  "proposal_outline": {
+   "version": "phase-e-workflow-controls-1.0.0",
+   "outline_id": "outline_ce67d84fffc0a71c83ac",
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+   "target_word_count": 12000,
+   "sections": [
+    {
+     "sequence": 1,
+     "section_id": "working_title",
+     "title": "暂定题目",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“暂定题目”",
+     "target_words": 0,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 2,
+     "section_id": "background",
+     "title": "研究背景与问题重要性",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究背景与问题重要性”",
+     "target_words": 1560,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 3,
+     "section_id": "concepts",
+     "title": "概念界定",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“概念界定”",
+     "target_words": 960,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 4,
+     "section_id": "literature_status",
+     "title": "国内外研究现状",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“国内外研究现状”",
+     "target_words": 1920,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 5,
+     "section_id": "selected_gap",
+     "title": "已选研究空白及证据",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“已选研究空白及证据”",
+     "target_words": 1080,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 6,
+     "section_id": "research_questions",
+     "title": "研究问题、假设或命题",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究问题、假设或命题”",
+     "target_words": 840,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 7,
+     "section_id": "theoretical_framework",
+     "title": "理论框架与作用机制",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“理论框架与作用机制”",
+     "target_words": 1320,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 8,
+     "section_id": "research_design",
+     "title": "研究设计、数据、测量与分析",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究设计、数据、测量与分析”",
+     "target_words": 2040,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 9,
+     "section_id": "contributions",
+     "title": "预期理论、方法与实践贡献",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“预期理论、方法与实践贡献”",
+     "target_words": 960,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 10,
+     "section_id": "feasibility_ethics",
+     "title": "可行性、伦理、风险与替代方案",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“可行性、伦理、风险与替代方案”",
+     "target_words": 840,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    },
+    {
+     "sequence": 11,
+     "section_id": "timeline",
+     "title": "研究计划",
+     "purpose": "在已确认研究设计与Claim Store边界内完成“研究计划”",
+     "target_words": 480,
+     "allowed_claim_ids": [
+      "claim_668fa1f4a91a01a66ecf",
+      "claim_431ba39ee9c713ce6d4e"
+     ],
+     "required_blueprint_refs": [
+      "blueprint_id",
+      "research_question",
+      "design",
+      "outline_id",
+      "constraint_hash"
+     ]
+    }
+   ]
+  },
+  "execution_task_cards": {
+   "version": "phase-e-workflow-controls-1.0.0",
+   "blueprint_id": "blueprint_35c0b055fab35828ea43",
+   "outline_id": "outline_ce67d84fffc0a71c83ac",
+   "cards": [
+    {
+     "task_card_id": "task_f546b7d2cb80292be088",
+     "sequence": 1,
+     "section_id": "working_title",
+     "title": "暂定题目",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“暂定题目”",
+     "prerequisite_task_card_ids": [],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 0,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_57a490d453c2a9877012",
+     "sequence": 2,
+     "section_id": "background",
+     "title": "研究背景与问题重要性",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究背景与问题重要性”",
+     "prerequisite_task_card_ids": [
+      "task_f546b7d2cb80292be088"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1560,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_746a9c3fef8af7d6b4e8",
+     "sequence": 3,
+     "section_id": "concepts",
+     "title": "概念界定",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“概念界定”",
+     "prerequisite_task_card_ids": [
+      "task_57a490d453c2a9877012"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 960,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_493e63cea26c956c0065",
+     "sequence": 4,
+     "section_id": "literature_status",
+     "title": "国内外研究现状",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“国内外研究现状”",
+     "prerequisite_task_card_ids": [
+      "task_746a9c3fef8af7d6b4e8"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1920,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_56393dd35474a901230b",
+     "sequence": 5,
+     "section_id": "selected_gap",
+     "title": "已选研究空白及证据",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“已选研究空白及证据”",
+     "prerequisite_task_card_ids": [
+      "task_493e63cea26c956c0065"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1080,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_c9f186c0bf5e4de4ee82",
+     "sequence": 6,
+     "section_id": "research_questions",
+     "title": "研究问题、假设或命题",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究问题、假设或命题”",
+     "prerequisite_task_card_ids": [
+      "task_56393dd35474a901230b"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 840,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_3663aa8103bf71346821",
+     "sequence": 7,
+     "section_id": "theoretical_framework",
+     "title": "理论框架与作用机制",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“理论框架与作用机制”",
+     "prerequisite_task_card_ids": [
+      "task_c9f186c0bf5e4de4ee82"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 1320,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_b3478567ed8db93c8130",
+     "sequence": 8,
+     "section_id": "research_design",
+     "title": "研究设计、数据、测量与分析",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究设计、数据、测量与分析”",
+     "prerequisite_task_card_ids": [
+      "task_3663aa8103bf71346821"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 2040,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_6e41b72c2486444e811a",
+     "sequence": 9,
+     "section_id": "contributions",
+     "title": "预期理论、方法与实践贡献",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“预期理论、方法与实践贡献”",
+     "prerequisite_task_card_ids": [
+      "task_b3478567ed8db93c8130"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 960,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_54204a8fe54d6d6f56d8",
+     "sequence": 10,
+     "section_id": "feasibility_ethics",
+     "title": "可行性、伦理、风险与替代方案",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“可行性、伦理、风险与替代方案”",
+     "prerequisite_task_card_ids": [
+      "task_6e41b72c2486444e811a"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 840,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    },
+    {
+     "task_card_id": "task_debb41d2c0b5f70f4198",
+     "sequence": 11,
+     "section_id": "timeline",
+     "title": "研究计划",
+     "status": "PENDING_HUMAN_EXECUTION",
+     "objective": "在已确认研究设计与Claim Store边界内完成“研究计划”",
+     "prerequisite_task_card_ids": [
+      "task_54204a8fe54d6d6f56d8"
+     ],
+     "controlled_inputs": {
+      "blueprint_id": "blueprint_35c0b055fab35828ea43",
+      "outline_id": "outline_ce67d84fffc0a71c83ac",
+      "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+      "allowed_claim_ids": [
+       "claim_668fa1f4a91a01a66ecf",
+       "claim_431ba39ee9c713ce6d4e"
+      ]
+     },
+     "target_words": 480,
+     "done_when": [
+      "所有事实性论断均绑定允许的claim_id",
+      "引用包含claim_id、paper_id与evidence_span",
+      "内容与已确认蓝图和用户约束一致",
+      "人工完成本节审阅"
+     ]
+    }
+   ],
+   "audit": {
+    "valid": true,
+    "task_card_count": 11,
+    "errors": [],
+    "claim_store_only": true
+   }
+  },
+  "sections": []
+ },
+ "writing_guidance": {
+  "paradigm_id": "qualitative_case_process",
+  "paradigm_label": "定性案例、归纳理论与过程研究",
+  "paradigm_status": "seeded",
+  "source_ids": [
+   "WRITE-CRESWELL-6E",
+   "METHOD-GIOIA",
+   "METHOD-THEMATIC",
+   "WRITE-APA-JARS"
+  ],
+  "local_path": "04_paradigms/qualitative_case_process.md",
+  "stages": [
+   {
+    "stage_id": "topic",
+    "title": "选题",
+    "purpose": "按已确认蓝图完成选题阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "introduction",
+    "title": "引言",
+    "purpose": "按已确认蓝图完成引言阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "theory",
+    "title": "理论",
+    "purpose": "按已确认蓝图完成理论阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "method",
+    "title": "方法",
+    "purpose": "按已确认蓝图完成方法阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "results",
+    "title": "结果",
+    "purpose": "按已确认蓝图完成结果阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "discussion",
+    "title": "讨论",
+    "purpose": "按已确认蓝图完成讨论阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   },
+   {
+    "stage_id": "submission",
+    "title": "投稿",
+    "purpose": "按已确认蓝图完成投稿阶段",
+    "recommended_moves": [
+     "先引用Claim Store，再写本阶段判断"
+    ],
+    "evidence_required": [
+     "claim_id、paper_id与evidence_span三联绑定"
+    ],
+    "common_failures": [
+     "引入Claim Store之外的事实"
+    ],
+    "self_check": [
+     "所有正式论断是否均有Claim Store绑定？"
+    ]
+   }
+  ],
+  "target_journal_status": "not_selected"
+ },
+ "proposal_context": {
+  "checkpoint": "BLUEPRINT_AND_OUTLINE_CONFIRMATION",
+  "constraint_hash": "bb7baf523b117cd1253cfb001ee513fe0c60c1fef88abfc5ee54dcc86d4f1594",
+  "blueprint_id": "blueprint_35c0b055fab35828ea43",
+  "outline_id": "outline_ce67d84fffc0a71c83ac",
+  "gate_passed": false,
+  "session_id": "1b68a72db6a94253a773c3853ea40954"
+ },
+ "proposal_limitations": [],
+ "proposal_audit": {
+  "claim_audit": {
+   "valid": true,
+   "claim_count": 18,
+   "errors": []
+  },
+  "constraint_gate_passed": true,
+  "task_card_audit": {
+   "valid": true,
+   "task_card_count": 11,
+   "errors": [],
+   "claim_store_only": true
+  },
+  "model_calls": 0
+ },
+ "workflow_panels": {
+  "skill": {
+   "title": "Skill",
+   "items": [
+    {
+     "id": "p1",
+     "label": "P1 direct语料",
+     "status": "PASS"
+    },
+    {
+     "id": "p2",
+     "label": "P2确定性五方向",
+     "status": "SYNTHESIS_COMPLETE"
+    },
+    {
+     "id": "p3",
+     "label": "P3 Evidence/Claim门禁",
+     "status": "PASS"
+    },
+    {
+     "id": "p4",
+     "label": "P4受控开题",
+     "status": "PROPOSAL_PLAN_CONFIRMATION_REQUIRED"
+    }
+   ]
+  },
+  "evidence": {
+   "title": "Evidence",
+   "claim_count": 18,
+   "binding_count": 39,
+   "evidence_levels": {
+    "abstract": 39
+   },
+   "formal_only": true
+  },
+  "saturation": {
+   "title": "Saturation",
+   "status": "NOT_AVAILABLE",
+   "advisory_only": true,
+   "metrics": {}
+  },
+  "audit": {
+   "title": "Audit",
+   "claim_valid": true,
+   "citation_valid": false,
+   "consistency_valid": false,
+   "task_cards_valid": true,
+   "release_ceiling": "READY_FOR_HUMAN_REVIEW"
+  }
+ }
+}

@@ -64,7 +64,7 @@ class ProviderTests(unittest.TestCase):
         self.assertEqual(payload["_transport_meta"]["rate_limit"], 50.0)
         self.assertTrue(any(call.args and call.args[0] == 2.0 for call in sleeper.call_args_list))
 
-    def test_fetch_excludes_irrelevant_and_retracted_records(self):
+    def test_crossref_returns_raw_records_for_unified_candidate_ledger(self):
         provider = CrossrefPaperDiscoveryProvider(Path("unused"), transport=StaticTransport())
         journal = {
             "canonical_title": "MIS Quarterly",
@@ -76,8 +76,10 @@ class ProviderTests(unittest.TestCase):
         papers, audit, exclusions = provider._fetch_journal(
             journal, "AI-enabled information systems", "2022-01-01", "2026-08-21"
         )
-        self.assertEqual([paper["doi"] for paper in papers], ["10.1/good"])
-        self.assertEqual({item["reason"] for item in exclusions}, {"relevance_below_threshold", "retraction_or_correction"})
+        self.assertEqual([paper["doi"] for paper in papers], ["10.1/good", "10.1/irrelevant", "10.1/retracted"])
+        self.assertFalse(papers[0]["is_correction"])
+        self.assertTrue(papers[2]["is_correction"])
+        self.assertEqual([], exclusions)
         self.assertEqual(audit["language"], "en")
         self.assertEqual(audit["ranking_levels"], ["UTD24", "FMS_INT_A"])
 

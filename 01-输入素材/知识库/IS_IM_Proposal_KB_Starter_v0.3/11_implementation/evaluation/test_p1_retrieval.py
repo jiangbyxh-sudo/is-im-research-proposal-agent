@@ -1,0 +1,450 @@
+from __future__ import annotations
+
+import json
+import sys
+import unittest
+from copy import deepcopy
+from datetime import date
+from http.client import IncompleteRead
+from io import BytesIO
+from pathlib import Path
+from urllib.error import HTTPError
+from urllib.parse import parse_qs, urlparse
+from unittest.mock import patch
+
+
+IMPLEMENTATION = Path(__file__).resolve().parents[1]
+KB_ROOT = IMPLEMENTATION.parent
+if str(IMPLEMENTATION) not in sys.path:
+    sys.path.insert(0, str(IMPLEMENTATION))
+
+from candidate_ledger import build_candidate_trace, evaluate_candidate, ledger_summary
+from multi_source_discovery_provider import MultiSourcePaperDiscoveryProvider
+from openalex_provider import OpenAlexPaperProvider, OpenAlexTransport
+from paper_discovery_provider import DiscoveryRequest, DiscoveryResult
+from paper_quality import build_journal_index, evaluate_boundary, normalize_record, qualify_source, score_record
+from retrieval_query_plan import OpenAlexQueryPlan, build_direction_query_plans, compile_openalex_filter
+from semantic_reranker import RERANK_WEIGHTS, multilingual_tokens, phrase_match_detail
+
+
+WORKSPACE_ROOT = KB_ROOT.parents[2]
+REVIEWED_PRECISION_PACKAGE = (
+    WORKSPACE_ROOT
+    / "02-任务/99-done/T03-P1检索质量工程/验收证据/P1-检索质量工程"
+    / "certification/profile-1.1.3-high-confidence/p1_sampled_precision_package_reviewed.json"
+)
+
+
+class EmptyCrossref:
+    def discover(self, request):
+        return DiscoveryResult(status="DYNAMIC_RETRIEVAL_UNAVAILABLE")
+
+
+class FakeOpenAlex:
+    def __init__(self, records):
+        self.records = records
+        self.calls = []
+
+    def search(self, plan):
+        self.calls.append(plan)
+        records = [{**item, "query_lane_ids": [plan.lane_id]} for item in self.records]
+        return records, {"provider": "openalex", "status": "ok", "lane_id": plan.lane_id, "returned_rows": len(records)}
+
+
+class RateLimitedOpenAlex:
+    def __init__(self):
+        self.calls = 0
+
+    def search(self, plan):
+        self.calls += 1
+        raise HTTPError("https://api.openalex.org/works", 429, "rate limited", {}, None)
+
+
+class PagingTransport:
+    def __init__(self):
+        self.params = []
+
+    def get(self, endpoint, params):
+        self.params.append(dict(params))
+        page = len(self.params)
+        return {
+            "meta": {"count": 2, "next_cursor": "next" if page == 1 else None},
+            "results": [{"id": f"https://openalex.org/W{page}", "display_name": f"Paper {page}", "type": "article"}],
+        }, {"http_status": 200}
+
+
+class RawCrossref:
+    def __init__(self, records):
+        self.records = records
+
+    def discover(self, request):
+        return DiscoveryResult(status="RETRIEVAL_PARTIAL", analysis_papers=self.records)
+
+
+class P1RetrievalTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.profiles_payload = json.loads((KB_ROOT / "01_taxonomy/generated/direction_profiles.json").read_text(encoding="utf-8"))
+        cls.registry = json.loads((KB_ROOT / "02_journals/generated/journal_registry.json").read_text(encoding="utf-8"))
+        cls.profiles = {item["direction_id"]: item for item in cls.profiles_payload["profiles"]}
+        cls.journal_index = build_journal_index(cls.registry)
+
+    def _journal(self, profile, language="en"):
+        pools = set(profile["source_policy"]["tier_a_pool_ids"])
+        return next(item for item in self.registry["journals"] if pools.intersection(item["pool_ids"]) and item.get("issns") and item["language"] == language)
+
+    def _record(self, profile, title, abstract, language="en", **extra):
+        journal = self._journal(profile, language)
+        raw = {
+            "title": title, "abstract": abstract, "authors": ["A"], "year": date.today().year,
+            "language": language, "source_title": journal["canonical_title"], "source_issns": journal["issns"],
+            "document_type": "journal-article", **extra,
+        }
+        return normalize_record(raw, "openalex")
+
+    def test_all_61_profiles_have_new_schema(self):
+        self.assertEqual(61, self.profiles_payload["direction_count"])
+        for profile in self.profiles.values():
+            self.assertTrue(profile["facets"]["core_phenomena"])
+            self.assertTrue(profile["facets"]["required_context_any"])
+            self.assertTrue(profile["facets"]["negative_contexts"])
+            self.assertTrue(profile["source_policy"]["tier_a_pool_ids"])
+            self.assertTrue(profile["queries"]["zh_precise"])
+            self.assertEqual(["direct", "adjacent", "reject", "manual"], profile["precision_policy"]["relevance_tiers"])
+            self.assertFalse(profile["precision_policy"]["topic_or_keyword_can_produce_direct"])
+
+    def test_chinese_named_directions_have_english_retrieval_aliases(self):
+        expected = {
+            "topic_平台经济": "platform economy",
+            "topic_电商": "electronic commerce",
+            "topic_数字广告": "digital advertising",
+            "topic_在线行为": "online behavior",
+            "topic_算法机制": "algorithmic mechanisms",
+        }
+        for direction_id, english_label in expected.items():
+            profile = self.profiles[direction_id]
+            self.assertEqual(english_label, profile["labels"]["en"])
+            self.assertTrue(any(value.isascii() for value in profile["queries"]["en_precise"]))
+
+    def test_reviewed_chinese_source_pool_is_direction_qualified(self):
+        profile = self.profiles["topic_平台经济"]
+        zh_pools = set(profile["source_policy"]["zh_pool_ids"])
+        journal = next(
+            item for item in self.registry["journals"]
+            if item["language"] == "zh" and item.get("issns") and zh_pools.intersection(item["pool_ids"])
+        )
+        record = normalize_record({
+            "title": "数字平台生态中的平台经济治理",
+            "abstract": "研究数字平台、平台市场与在线用户",
+            "authors": ["甲"],
+            "year": date.today().year,
+            "language": "zh",
+            "source_title": journal["canonical_title"],
+            "source_issns": journal["issns"],
+            "document_type": "journal-article",
+        }, "openalex")
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        self.assertEqual("B", record["source_tier"])
+        decision = evaluate_candidate(
+            record, profile, self.journal_index,
+            date.today().year - 4, date.today().year,
+            {"query": profile["labels"]["en"]},
+        )
+        self.assertEqual("eligible", decision.terminal_status)
+
+    def test_group_context_is_not_a_core_synonym(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        self.assertNotIn("human-computer interaction", profile["facets"]["core_phenomena"])
+        self.assertNotIn("synonyms", profile)
+
+    def test_openalex_document_type_filter_is_applied(self):
+        value = compile_openalex_filter({"document_types": ["journal-article", "proceedings-article"]})
+        self.assertIn("type:article|review|proceedings-article", value)
+
+    def test_openalex_approved_topic_filter_is_applied(self):
+        self.assertIn("topics.id:T1|T2", compile_openalex_filter({"approved_topic_ids": ["T1", "https://openalex.org/T2"]}))
+
+    def test_openalex_approved_source_filter_is_applied(self):
+        self.assertIn("primary_location.source.id:S1", compile_openalex_filter({"approved_source_ids": ["S1"]}))
+
+    def test_openalex_cursor_pagination(self):
+        transport = PagingTransport()
+        records, log = OpenAlexPaperProvider(transport=transport).search(OpenAlexQueryPlan("lane", "test", max_pages=3))
+        self.assertEqual(2, len(records))
+        self.assertEqual("*", transport.params[0]["cursor"])
+        self.assertEqual("next", transport.params[1]["cursor"])
+        self.assertEqual("provider_exhausted", log["stop_reason"])
+        self.assertIn("abstract_inverted_index", transport.params[0]["select"])
+
+    def test_query_plan_uses_bounded_openalex_page_size(self):
+        profile = self.profiles["platform_governance"]
+        plans = build_direction_query_plans(profile, "2022-01-01", "2026-12-31")
+        self.assertTrue(plans)
+        self.assertTrue(all(plan.per_page == 50 for plan in plans))
+
+    def test_openalex_transport_downshifts_page_size_after_incomplete_read(self):
+        requested_page_sizes = []
+
+        class JsonResponse(BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, traceback):
+                self.close()
+
+        def fake_urlopen(request, timeout):
+            requested_page_sizes.append(int(parse_qs(urlparse(request.full_url).query)["per_page"][0]))
+            if len(requested_page_sizes) < 3:
+                raise IncompleteRead(b"{}", 100)
+            return JsonResponse(b'{"meta":{"count":0},"results":[]}')
+
+        transport = OpenAlexTransport(timeout=1, retries=3)
+        with patch("openalex_provider.urlopen", side_effect=fake_urlopen):
+            _, telemetry = transport.get("https://api.openalex.org/works", {"per_page": 50, "cursor": "*"})
+
+        self.assertEqual([50, 25, 12], requested_page_sizes)
+        self.assertEqual(12, telemetry["effective_per_page"])
+        self.assertEqual(["IncompleteRead", "IncompleteRead"], telemetry["retry_errors"])
+
+    def test_stop_condition_uses_post_boundary_count(self):
+        profile = self.profiles["platform_governance"]
+        plans = build_direction_query_plans(profile, "2022-01-01", "2026-12-31")
+        self.assertTrue(all(plan.stop_target == 10 for plan in plans))
+
+    def test_c_recall_lane_requires_source_abstract_and_strict_directness(self):
+        profile = self.profiles["information_behavior"]
+        recall = next(plan for plan in build_direction_query_plans(profile, "2022-01-01", "2026-12-31") if plan.lane_id.startswith("C_"))
+        self.assertTrue(recall.filters["approved_source_ids"])
+        self.assertTrue(recall.filters["has_abstract"])
+        self.assertEqual("abstract_required", recall.evidence_mode)
+        self.assertEqual("recall_strict", recall.directness_policy)
+
+    def test_multiword_core_requires_ordered_phrase_or_proximity(self):
+        self.assertFalse(phrase_match_detail("decision support", "support tools improve enterprise decision quality")["matched"])
+        self.assertTrue(phrase_match_detail("decision support", "decision analytics support for managers")["matched"])
+
+    def test_source_quality_is_only_a_small_prior(self):
+        self.assertLessEqual(RERANK_WEIGHTS["source_direction_fit"] + RERANK_WEIGHTS["source_quality_prior"], 0.05)
+
+    def test_topic_and_keyword_metadata_alone_never_produce_direct(self):
+        profile = deepcopy(self.profiles["platform_governance"])
+        topic_id = "T_TEST_PLATFORM_GOVERNANCE"
+        profile["openalex_routes"]["approved_topic_ids"] = [topic_id]
+        record = self._record(
+            profile,
+            "Rules in online markets",
+            "This study examines users and organizations in a digital platform ecosystem.",
+            primary_topic={"id": topic_id, "name": "Platform governance"},
+            keywords=[{"name": "platform governance"}],
+        )
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": "platform governance"})
+        self.assertEqual("manual", decision.relevance_tier)
+        self.assertNotEqual("eligible", decision.terminal_status)
+
+    def test_reviewed_eight_adjacent_samples_stay_adjacent_without_title_blacklist(self):
+        reviewed = json.loads(REVIEWED_PRECISION_PACKAGE.read_text(encoding="utf-8"))["samples"]
+        samples = [
+            item for item in reviewed
+            if item["direction_id"] in {"information_behavior", "topic_decision_support"} and item["label"] == "邻近"
+        ]
+        self.assertEqual(8, len(samples))
+        for sample in samples:
+            profile = self.profiles[sample["direction_id"]]
+            record = self._record(profile, sample["title"], sample["abstract"])
+            decision = evaluate_candidate(
+                record, profile, self.journal_index,
+                date.today().year - 5, date.today().year,
+                {"query": profile["labels"]["en"]},
+            )
+            self.assertEqual("adjacent", decision.relevance_tier, sample["title"])
+            self.assertEqual("adjacent", decision.terminal_status, sample["title"])
+
+    def test_reviewed_direct_samples_remain_eligible(self):
+        reviewed = json.loads(REVIEWED_PRECISION_PACKAGE.read_text(encoding="utf-8"))["samples"]
+        samples = [
+            sample for sample in reviewed
+            if sample["direction_id"] in {"information_behavior", "topic_decision_support"} and sample["label"] == "相关"
+        ]
+        self.assertEqual(12, len(samples))
+        for sample in samples:
+            profile = self.profiles[sample["direction_id"]]
+            record = self._record(profile, sample["title"], sample["abstract"])
+            decision = evaluate_candidate(
+                record, profile, self.journal_index,
+                date.today().year - 5, date.today().year,
+                {"query": profile["labels"]["en"]},
+            )
+            self.assertEqual("direct", decision.relevance_tier, sample["title"])
+            self.assertEqual("eligible", decision.terminal_status, sample["title"])
+
+    def test_zero_direct_candidates_return_partial_without_filling(self):
+        profile = self.profiles["information_behavior"]
+        journal = self._journal(profile)
+        adjacent = {
+            "external_id": "W-adjacent-only", "title": "Does techno-invasion affect employee behavior?",
+            "abstract": "Technology use after work affects employee behavior and organizational outcomes.",
+            "authors": ["B"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        provider = MultiSourcePaperDiscoveryProvider(
+            KB_ROOT / "01_taxonomy/generated/direction_profiles.json",
+            KB_ROOT / "02_journals/generated/journal_registry.json",
+            openalex=FakeOpenAlex([adjacent]), crossref=EmptyCrossref(), enable_optional=False,
+        )
+        result = provider.discover(DiscoveryRequest("information_behavior", "信息行为", None, 0, 1, 5))
+        self.assertEqual("RETRIEVAL_PARTIAL", result.status)
+        self.assertEqual([], result.papers)
+        self.assertEqual(1, len(result.adjacent_papers))
+
+    def test_adjacent_is_returned_separately_and_never_fills_formal_top10(self):
+        profile = self.profiles["information_behavior"]
+        journal = self._journal(profile)
+        direct = {
+            "external_id": "W-direct", "title": "Health information behavior during life transition",
+            "abstract": "Patients use information seeking and information behavior practices in an information environment.",
+            "authors": ["A"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        adjacent = {
+            "external_id": "W-adjacent", "title": "Does techno-invasion lead to employees' deviant behaviors?",
+            "abstract": "Technology use after work affects employee behavior and organizational outcomes.",
+            "authors": ["B"], "year": date.today().year, "language": "en",
+            "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article",
+        }
+        provider = MultiSourcePaperDiscoveryProvider(
+            KB_ROOT / "01_taxonomy/generated/direction_profiles.json",
+            KB_ROOT / "02_journals/generated/journal_registry.json",
+            openalex=FakeOpenAlex([direct, adjacent]), crossref=EmptyCrossref(), enable_optional=False,
+        )
+        result = provider.discover(DiscoveryRequest("information_behavior", "信息行为", None, 0, 2, 5))
+        self.assertEqual("RETRIEVAL_PARTIAL", result.status)
+        self.assertEqual(["W-direct"], [item["external_ids"]["openalex"] for item in result.papers])
+        self.assertEqual(["W-adjacent"], [item["external_ids"]["openalex"] for item in result.adjacent_papers])
+
+    def test_profile_boundaries_are_executed(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        record = self._record(profile, "AI for radiology diagnosis", "Artificial intelligence clinical diagnosis medical imaging only")
+        self.assertEqual("reject", evaluate_boundary(record, profile).decision)
+
+    def test_clinical_ai_only_is_not_ai_enabled_is(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        record = self._record(profile, "Measurements, Algorithms, and Presentations of Reality: Framing Interactions with AI-Enabled Decision Support", "Clinical medical diagnosis and colonoscopy practice using AI systems")
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": profile["labels"]["en"]})
+        self.assertNotEqual("eligible", decision.terminal_status)
+
+    def test_genai_is_research_agenda_is_retained(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        record = self._record(profile, "Generative Artificial Intelligence: Opportunities for Information Systems Research", "Generative artificial intelligence creates opportunities for information systems research in organizations and digital work")
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": profile["labels"]["en"]})
+        self.assertEqual("eligible", decision.terminal_status)
+
+    def test_hci_only_paper_is_downranked_for_ai_enabled_is(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        record = self._record(profile, "Post-growth Human-Computer Interaction", "Human-computer interaction design for sustainability and users")
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": profile["labels"]["en"]})
+        self.assertNotEqual("eligible", decision.terminal_status)
+
+    def test_unknown_source_does_not_enter_final_automatically(self):
+        profile = self.profiles["platform_governance"]
+        record = normalize_record({"title": "Platform governance", "abstract": "platform governance digital platform", "authors": ["A"], "year": date.today().year, "source_title": "Unknown", "document_type": "journal-article"}, "openalex")
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": "platform governance"})
+        self.assertEqual("manual_review", decision.terminal_status)
+
+    def test_source_quality_does_not_replace_content_relevance(self):
+        profile = self.profiles["topic_ai_enabled_information_systems"]
+        record = self._record(profile, "Post-growth Human-Computer Interaction", "interaction design sustainability")
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        self.assertGreater(record["source_quality"], 0)
+        self.assertEqual("reject", evaluate_boundary(record, profile).decision)
+
+    def test_generic_terms_are_downweighted(self):
+        self.assertEqual({}, multilingual_tokens("AI information systems research human computer"))
+
+    def test_cjk_query_is_tokenized_or_embedded_correctly(self):
+        tokens = multilingual_tokens("平台治理与算法机制")
+        self.assertIn("平台", tokens)
+        self.assertIn("治理", tokens)
+
+    def test_bilingual_facets_do_not_penalize_english_record(self):
+        profile = deepcopy(self.profiles["platform_governance"])
+        record = self._record(
+            profile,
+            "Platform governance in digital ecosystems",
+            "Platform governance rules shape digital platform ecosystems and online marketplaces",
+        )
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        baseline = score_record(record, profile, "platform governance", date.today().year - 4, date.today().year)
+        profile["facets"]["core_phenomena"].extend(["平台治理", "平台规则"])
+        profile["facets"]["required_context_any"].extend(["数字平台", "平台生态"])
+        bilingual = score_record(record, profile, "platform governance", date.today().year - 4, date.today().year)
+        self.assertEqual(baseline["total"], bilingual["total"])
+        self.assertEqual(baseline["components"]["facet_coverage"], bilingual["components"]["facet_coverage"])
+
+    def test_doi_landing_page_is_not_fulltext(self):
+        record = normalize_record({"title": "X", "doi": "10.1/x", "fulltext_url": "https://doi.org/10.1/x"}, "crossref")
+        self.assertFalse(record["verified_fulltext_available"])
+        self.assertIsNone(record["fulltext_url"])
+
+    def test_oa_landing_page_is_not_fulltext(self):
+        record = normalize_record({"title": "X", "oa_url": "https://publisher.example/article"}, "openalex")
+        self.assertFalse(record["verified_fulltext_available"])
+        self.assertEqual("title_only", record["evidence_level"])
+
+    def test_normalized_impact_used_when_available(self):
+        profile = self.profiles["platform_governance"]
+        record = self._record(profile, "Platform governance", "platform governance digital platform", citation_normalized_percentile=0.9)
+        qualify_source(record, self.journal_index, set(profile["journal_pool_ids"]), profile)
+        score = score_record(record, profile, "platform governance", date.today().year - 4, date.today().year)
+        self.assertEqual("citation_normalized_percentile", score["normalized_impact_method"])
+
+    def test_candidate_count_conservation(self):
+        profile = self.profiles["platform_governance"]
+        records = [self._record(profile, f"Platform governance {i}", "platform governance digital platform ecosystem") for i in range(3)]
+        decisions = [evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": "platform governance"}) for record in records]
+        selected = [record for record in records if record["terminal_status"] == "eligible"][:1]
+        summary = ledger_summary(records, selected)
+        self.assertTrue(summary["count_conserved"])
+        self.assertEqual(3, summary["candidate_trace_count"])
+        self.assertEqual(3, len([build_candidate_trace(record, decision) for record, decision in zip(records, decisions)]))
+
+    def test_crossref_merge_keeps_all_candidate_decisions(self):
+        profile = self.profiles["platform_governance"]
+        journal = self._journal(profile)
+        weak = {"title": "Unrelated chemistry", "authors": ["B"], "year": date.today().year, "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article"}
+        provider = MultiSourcePaperDiscoveryProvider(KB_ROOT / "01_taxonomy/generated/direction_profiles.json", KB_ROOT / "02_journals/generated/journal_registry.json", openalex=FakeOpenAlex([]), crossref=RawCrossref([weak]), enable_optional=False)
+        result = provider.discover(DiscoveryRequest("platform_governance", "平台治理", None, 1, 1, 5))
+        self.assertEqual(result.coverage_audit["deduplicated_count"], len(result.candidate_traces))
+        self.assertEqual(1, len(result.candidate_traces))
+
+    def test_english_papers_do_not_fill_chinese_quota(self):
+        profile = self.profiles["platform_governance"]
+        journal = self._journal(profile)
+        records = [{"external_id": f"W{i}", "title": f"Platform governance {i}", "abstract": "platform governance digital platform ecosystem", "authors": ["A"], "year": date.today().year, "language": "en", "source_title": journal["canonical_title"], "source_issns": journal["issns"], "document_type": "journal-article"} for i in range(3)]
+        provider = MultiSourcePaperDiscoveryProvider(KB_ROOT / "01_taxonomy/generated/direction_profiles.json", KB_ROOT / "02_journals/generated/journal_registry.json", openalex=FakeOpenAlex(records), crossref=EmptyCrossref(), enable_optional=False)
+        result = provider.discover(DiscoveryRequest("platform_governance", "平台治理", None, 2, 1, 5))
+        self.assertEqual(0, result.chinese_coverage["english_substitution_count"])
+        self.assertEqual(2, result.shortages["zh"])
+
+    def test_retracted_record_never_enters_selected(self):
+        profile = self.profiles["platform_governance"]
+        record = self._record(profile, "Platform governance", "platform governance digital platform", is_retracted=True)
+        decision = evaluate_candidate(record, profile, self.journal_index, date.today().year - 4, date.today().year, {"query": "platform governance"})
+        self.assertEqual("gate_reject", decision.terminal_status)
+
+    def test_unconfigured_provider_is_not_reported_as_queried(self):
+        profile = self.profiles["platform_governance"]
+        provider = MultiSourcePaperDiscoveryProvider(KB_ROOT / "01_taxonomy/generated/direction_profiles.json", KB_ROOT / "02_journals/generated/journal_registry.json", openalex=FakeOpenAlex([]), crossref=EmptyCrossref(), enable_optional=False)
+        result = provider.discover(DiscoveryRequest("platform_governance", "平台治理", None, 1, 1, 5))
+        optional = [item for item in result.provider_statuses if item["provider"] in profile["source_routes"]["optional"]]
+        self.assertTrue(optional)
+        self.assertTrue(all(item["status"] == "not_configured" for item in optional))
+
+    def test_rate_limit_is_not_misreported_as_provider_empty(self):
+        provider = MultiSourcePaperDiscoveryProvider(KB_ROOT / "01_taxonomy/generated/direction_profiles.json", KB_ROOT / "02_journals/generated/journal_registry.json", openalex=RateLimitedOpenAlex(), crossref=EmptyCrossref(), enable_optional=False)
+        result = provider.discover(DiscoveryRequest("platform_governance", "平台治理", None, 1, 1, 5))
+        self.assertIn("rate_limited", result.zero_result_diagnosis["causes"])
+        self.assertNotIn("provider_empty", result.zero_result_diagnosis["causes"])
+
+
+if __name__ == "__main__":
+    unittest.main()

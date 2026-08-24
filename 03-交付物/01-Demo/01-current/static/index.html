@@ -95,6 +95,7 @@
               <div class="section-bar"><div><h3 id="paper-list-title">已发现论文</h3><p id="retrieval-audit">—</p></div><div class="filter-group" aria-label="论文语言筛选"><button class="active" type="button" data-paper-filter="all">全部</button><button type="button" data-paper-filter="zh">中文</button><button type="button" data-paper-filter="en">英文</button></div></div>
               <div class="paper-list" id="paper-list"></div>
               <div class="load-more-wrap"><button class="secondary-button" id="load-more" type="button" hidden>再看一些</button></div>
+              <details class="journal-audit quality-audit" id="quality-audit"><summary>查看 P1 检索、闸门与评分证据</summary><div class="quality-audit-grid"><div><strong>候选漏斗</strong><p id="quality-counts">—</p><small id="score-version">—</small><p id="zero-diagnosis">—</p></div><div><strong>来源状态</strong><ul id="provider-status-list"></ul></div><div><strong>自动扩展</strong><ul id="expansion-list"></ul></div></div></details>
               <details class="journal-audit" id="journal-audit"><summary>查看本次实际查询的中英文期刊</summary><div class="journal-columns"><div><strong>中文期刊</strong><div class="journal-chip-list" id="queried-zh-journals"></div></div><div><strong>英文期刊</strong><div class="journal-chip-list" id="queried-en-journals"></div></div></div></details>
             </section>
             <p class="result-footnote" id="result-footnote"></p>
@@ -106,6 +107,7 @@
           <section class="empty-state" id="gaps-empty"><span aria-hidden="true">◇</span><h3>方向综合还未开始</h3><p>完成论文检索后，我们会自动在后台归纳五个研究方向与空白候选。</p><button class="primary-button centered" type="button" data-view="start">开始一次检索</button></section>
           <section class="synthesis-results" id="synthesis-results" hidden>
             <div class="synthesis-notice" id="synthesis-notice"><span class="mini-loader" aria-hidden="true"></span><p>正在读取论文题名与元数据，归纳小方向和研究空白…</p></div>
+            <div class="synthesis-quality" id="synthesis-quality" hidden></div>
             <div class="subdirection-list" id="subdirection-list"></div>
             <ul class="synthesis-limitations" id="synthesis-limitations"></ul>
             <div class="selected-gap" id="selected-gap" hidden></div>
@@ -113,13 +115,36 @@
         </section>
 
         <section class="app-view" id="view-proposal" data-view-panel="proposal" aria-labelledby="proposal-title" hidden>
-          <div class="page-intro compact-intro"><div><p class="eyebrow">PROPOSAL & WRITING</p><h2 id="proposal-title">开题报告与写作指导</h2><p>报告结构来自知识库门禁，方法与写作建议绑定已匹配的研究范式。</p></div><span class="status-pill" id="proposal-status">尚未生成</span></div>
+          <div class="page-intro compact-intro"><div><p class="eyebrow">CONTROLLED PROPOSAL WORKFLOW</p><h2 id="proposal-title">受控开题与执行任务</h2><p>依次确认用户约束、研究设计蓝图和逐节提纲；正文只能使用Claim Store中的正式证据。</p></div><span class="status-pill" id="proposal-status">尚未开始</span></div>
           <section class="empty-state" id="proposal-empty"><span aria-hidden="true">▤</span><h3>先选择研究空白和创新点</h3><p>在“方向与空白”中明确两项选择后，系统才会生成开题报告，避免替你猜研究方案。</p><button class="primary-button centered" type="button" data-view="gaps">前往选择</button></section>
-          <section class="proposal-loading" id="proposal-loading" hidden aria-live="polite"><span class="loading-orbit" aria-hidden="true"><i></i></span><div><h3>正在匹配研究范式并生成草案…</h3><p>方法部分只使用本地知识库中已覆盖的范式；证据不足的内容会明确标记。</p></div></section>
+          <section class="proposal-loading" id="proposal-loading" hidden aria-live="polite"><span class="loading-orbit" aria-hidden="true"><i></i></span><div><h3 id="proposal-loading-title">正在校验受控开题检查点…</h3><p>证据、用户约束或确认状态不足时会立即停止，不会自动补写。</p></div></section>
+          <section class="proposal-workflow" id="proposal-workflow" hidden>
+            <div class="proposal-stepper" aria-label="受控开题进度"><span data-proposal-step="constraints">1 用户约束</span><span data-proposal-step="plan">2 蓝图与提纲</span><span data-proposal-step="generation">3 逐节生成</span><span data-proposal-step="review">4 人工复核</span></div>
+            <p class="checkpoint-message" id="proposal-checkpoint-message" aria-live="polite"></p>
+            <form class="constraint-card" id="proposal-constraints-form">
+              <div class="section-bar"><div><h3>确认会改变研究设计的条件</h3><p>请明确填写；“无指定模板”或“无方法限制”也是有效答案。</p></div></div>
+              <div class="constraint-grid">
+                <label>学位与培养层次<select id="constraint-degree" required><option value="">请选择</option><option>本科</option><option>硕士</option><option>博士</option><option>其他</option></select></label>
+                <label>学校模板要求<input id="constraint-template" required placeholder="例如：无指定模板 / 学校开题模板V2"></label>
+                <label>写作语言<select id="constraint-language" required><option value="">请选择</option><option>中文</option><option>英文</option><option>双语</option></select></label>
+                <label>目标字数<input id="constraint-words" type="number" min="2000" max="100000" step="500" required placeholder="例如 12000"></label>
+                <label>截止时间<input id="constraint-deadline" type="date" required></label>
+                <label>研究情境<input id="constraint-context" required placeholder="组织、平台、行业或用户情境"></label>
+                <label class="wide">可合法获得的数据、样本与访问权限<textarea id="constraint-data" required></textarea></label>
+                <label class="wide">必须采用或不能采用的方法<textarea id="constraint-method" required placeholder="如无，请明确填写“无”"></textarea></label>
+                <label class="wide">伦理、知情同意、隐私与敏感数据约束<textarea id="constraint-ethics" required></textarea></label>
+                <label class="wide">可使用的软件、编程、统计或实验工具<textarea id="constraint-tools" required></textarea></label>
+              </div>
+              <button class="primary-button" type="submit">保存并核对约束</button>
+            </form>
+            <section class="constraint-card" id="proposal-constraint-review" hidden><div class="section-bar"><div><h3>约束确认检查点</h3><p>确认后这些条件会写入蓝图哈希；后续不得静默改变。</p></div></div><dl class="constraint-review-list" id="constraint-review-list"></dl><button class="primary-button" type="button" id="confirm-proposal-constraints">确认约束并生成蓝图</button></section>
+            <section class="plan-card" id="proposal-plan-review" hidden><div class="section-bar"><div><h3>蓝图、提纲与执行任务卡</h3><p>请确认RQ、方法、数据和章节顺序；确认后才会逐节调用模型。</p></div></div><div class="blueprint-summary" id="proposal-blueprint-summary"></div><div class="outline-review" id="proposal-outline-review"></div><button class="primary-button" type="button" id="confirm-proposal-plan">确认蓝图与提纲，开始逐节生成</button></section>
+          </section>
+          <section class="workflow-panel-grid" id="workflow-panel-grid" hidden aria-label="Research Skill Layer审计面板"><article><h3>Skill</h3><div id="skill-panel"></div></article><article><h3>Evidence</h3><div id="evidence-panel"></div></article><article><h3>Saturation</h3><div id="saturation-panel"></div></article><article><h3>Audit</h3><div id="audit-panel"></div></article></section>
           <div class="proposal-content" id="proposal-content" hidden>
             <section class="proposal-hero"><div><p class="eyebrow">WORKING TITLE</p><h3 id="proposal-working-title">—</h3><p id="proposal-research-question">—</p></div><div class="paradigm-badge"><span>研究范式</span><strong id="proposal-paradigm">—</strong><small id="proposal-paradigm-status">—</small></div></section>
             <div class="proposal-layout">
-              <section class="proposal-document"><div class="section-bar"><div><h3>开题报告草案</h3><p id="proposal-audit">—</p></div></div><div class="proposal-sections" id="proposal-sections"></div><details class="reference-block"><summary>查看参考文献与证据记录</summary><div id="proposal-references"></div></details></section>
+              <section class="proposal-document"><div class="section-bar"><div><h3>受控开题草案</h3><p id="proposal-audit">—</p></div></div><div class="proposal-sections" id="proposal-sections"></div><details class="reference-block"><summary>查看Claim与证据绑定</summary><div id="proposal-references"></div></details><details class="reference-block"><summary>查看项目专属执行任务卡</summary><div id="proposal-task-cards"></div></details></section>
               <aside class="writing-panel"><div class="section-bar"><div><h3>分阶段写作指导</h3><p>按当前研究范式组织</p></div></div><div class="guidance-stages" id="guidance-stages"></div></aside>
             </div>
             <section class="proposal-limitations"><h3>生成边界与下一道门禁</h3><ul id="proposal-limitations"></ul></section>
@@ -129,6 +154,7 @@
         <section class="app-view" id="view-settings" data-view-panel="settings" aria-labelledby="settings-title" hidden>
           <div class="page-intro compact-intro"><div><p class="eyebrow">RETRIEVAL SETTINGS</p><h2 id="settings-title">检索设置</h2><p>外部综合服务只在本次服务进程中启用，密钥不会写入项目或回显。</p></div></div>
           <div class="settings-grid">
+            <section class="settings-card"><div class="settings-heading"><div><span class="settings-icon green" aria-hidden="true">↗</span><div><h3>动态论文发现额度</h3><p>OpenAlex 官方 API · 主发现来源</p></div></div><span class="api-state" id="retrieval-api-state">检查中</span></div><div class="api-key-row"><input id="openalex-api-key" type="password" autocomplete="off" spellcheck="false" aria-label="OpenAlex API Key" placeholder="输入 OpenAlex API Key，仅保存在当前服务内存"><button class="primary-button" type="button" id="configure-retrieval-api">本次运行中启用</button><button class="secondary-button" type="button" id="clear-retrieval-api" hidden>清除配置</button></div><small id="retrieval-api-message">匿名额度适合单次检索，批量验收建议配置免费API key。</small></section>
             <section class="settings-card" id="api-config"><div class="settings-heading"><div><span class="settings-icon" aria-hidden="true">◇</span><div><h3>五方向与研究空白综合</h3><p>DeepSeek 官方 API · deepseek-v4-pro</p></div></div><span class="api-state" id="api-state">检查中</span></div><div class="api-key-row"><input id="api-key" type="password" autocomplete="off" spellcheck="false" aria-label="DeepSeek API Key" placeholder="输入 API Key，仅保存在当前服务内存"><button class="primary-button" type="button" id="configure-api">本次运行中启用</button><button class="secondary-button" type="button" id="clear-api" hidden>清除配置</button></div><small id="api-message">服务重启后配置会自动失效。</small></section>
             <section class="settings-card"><div class="settings-heading"><div><span class="settings-icon green" aria-hidden="true">✓</span><div><h3>本地知识库</h3><p>方向、期刊白名单、稳定规则与写作范式</p></div></div><span class="api-state ready">已就绪</span></div><div class="knowledge-facts"><div><strong>61</strong><span>可查方向</span></div><div><strong>中 + 英</strong><span>期刊路由</span></div><div><strong>本地优先</strong><span>规则策略</span></div></div></section>
           </div>

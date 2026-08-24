@@ -1,0 +1,130 @@
+{
+  "report": {
+    "generated_at": "2026-08-23T16:04:01.691349+00:00",
+    "arena_version": "p4-athlete-judge-review-1.2.0",
+    "runs": {
+      "honest": {
+        "mode": "honest",
+        "status": "READY_FOR_HUMAN_REVIEW",
+        "checkpoints_total": 20,
+        "checkpoints_passed": 20,
+        "pass_rate": 1.0,
+        "arena_verdict": "pass",
+        "arena_error": false,
+        "limitations_count": 2
+      },
+      "bad_section": {
+        "mode": "bad_section",
+        "status": "PROPOSAL_CONTROLLED_PARTIAL",
+        "checkpoints_total": 20,
+        "checkpoints_passed": 16,
+        "pass_rate": 0.8,
+        "arena_verdict": "pass",
+        "arena_error": false,
+        "limitations_count": 3
+      },
+      "arena_smuggle": {
+        "mode": "arena_smuggle",
+        "status": "READY_FOR_HUMAN_REVIEW",
+        "checkpoints_total": 20,
+        "checkpoints_passed": 20,
+        "pass_rate": 1.0,
+        "arena_verdict": "",
+        "arena_error": true,
+        "limitations_count": 3
+      }
+    },
+    "checkpoint_definitions": "empty_constraints_blocked / constraint_confirmation_gate / plan_confirmation_gate / section:<11节> / claim / citation / consistency / task_card / arena",
+    "gates": {
+      "fixed_pass_rate_ge_0_95": true,
+      "fixed_ready_for_review": true,
+      "reproducible": true,
+      "bad_section_honest_partial": true,
+      "arena_smuggle_rejected_and_noted": true,
+      "regression_sketch_only": true
+    },
+    "all_gates_passed": true
+  },
+  "fixed_checkpoints": [
+    {
+      "checkpoint": "empty_constraints_blocked",
+      "passed": true
+    },
+    {
+      "checkpoint": "constraint_confirmation_gate",
+      "passed": true
+    },
+    {
+      "checkpoint": "plan_confirmation_gate",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:working_title",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:background",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:concepts",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:literature_status",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:selected_gap",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:research_questions",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:theoretical_framework",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:research_design",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:contributions",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:feasibility_ethics",
+      "passed": true
+    },
+    {
+      "checkpoint": "section:timeline",
+      "passed": true
+    },
+    {
+      "checkpoint": "claim_audit",
+      "passed": true
+    },
+    {
+      "checkpoint": "citation_audit",
+      "passed": true
+    },
+    {
+      "checkpoint": "consistency_audit",
+      "passed": true
+    },
+    {
+      "checkpoint": "task_card_audit",
+      "passed": true
+    },
+    {
+      "checkpoint": "constraint_alignment_audit",
+      "passed": true
+    },
+    {
+      "checkpoint": "arena_review",
+      "passed": true
+    }
+  ]
+}

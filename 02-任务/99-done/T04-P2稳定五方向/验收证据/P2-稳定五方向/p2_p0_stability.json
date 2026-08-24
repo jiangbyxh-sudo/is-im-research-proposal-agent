@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-23T04:19:56.803600+00:00",
+  "snapshot_path": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\p2_p0_corpus_snapshot.json",
+  "cluster_config_version": "p2-tfidf-average-linkage-2.0.0",
+  "snapshot_corpus_hash": "9441e4d32f8f149b8b3f90311afe108d9aefd7fe658a2d677ee14fc97858d2c5",
+  "paper_count": 27,
+  "abstract_count": 0,
+  "statuses": [
+    "P2_BLOCKED_BY_P1_PRECISION",
+    "P2_BLOCKED_BY_P1_PRECISION",
+    "P2_BLOCKED_BY_P1_PRECISION",
+    "P2_BLOCKED_BY_P1_PRECISION",
+    "P2_BLOCKED_BY_P1_PRECISION"
+  ],
+  "blocked": true,
+  "note": "语料不足，未生成任何聚类；本结果不得作为五方向样例。"
+}

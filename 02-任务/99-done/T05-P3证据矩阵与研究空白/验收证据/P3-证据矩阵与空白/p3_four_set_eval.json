@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-08-23T12:38:11.846065+00:00",
+  "pipeline_version": "p3-athlete-judge-gap-candidates-1.0.0",
+  "offline_note": "受控模型桩离线评测；真实模型验收另行执行（8766实例）。",
+  "sets": {
+    "fixed": [
+      "fixed_qualified_35"
+    ],
+    "heldout_similar": [
+      "heldout_every_4th_removed"
+    ],
+    "regression": [
+      "regression_title_only_27",
+      "regression_p1_blocked"
+    ],
+    "challenge": [
+      "challenge_forged_support_span",
+      "challenge_single_paper_support",
+      "challenge_judge_selects_none",
+      "challenge_fabricated_counterevidence_span"
+    ]
+  },
+  "summary": {
+    "fixed_qualified_35": {
+      "formal_gaps": 5,
+      "status": "SYNTHESIS_COMPLETE"
+    },
+    "heldout_every_4th_removed": {
+      "formal_gaps": 4,
+      "status": "SYNTHESIS_PARTIAL"
+    },
+    "regression_title_only_27": {
+      "formal_gaps": 0,
+      "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE"
+    },
+    "regression_p1_blocked": {
+      "formal_gaps": 0,
+      "status": "P2_BLOCKED_BY_P1_PRECISION"
+    },
+    "challenge_forged_support_span": {
+      "formal_gaps": 0,
+      "status": "SYNTHESIS_COMPLETE"
+    },
+    "challenge_single_paper_support": {
+      "formal_gaps": 0,
+      "status": "SYNTHESIS_COMPLETE"
+    },
+    "challenge_judge_selects_none": {
+      "formal_gaps": 0,
+      "status": "SYNTHESIS_COMPLETE"
+    },
+    "challenge_fabricated_counterevidence_span": {
+      "formal_gaps": 0,
+      "status": "SYNTHESIS_COMPLETE"
+    }
+  },
+  "gates": {
+    "fixed_produces_formal_gaps_with_full_anchors": true,
+    "holdout_still_formal": true,
+    "title_only_blocked": true,
+    "p1_gate_blocks": true,
+    "forged_span_rejected": true,
+    "single_paper_rejected": true,
+    "judge_none_yields_no_gaps": true,
+    "fabricated_counter_rejected": true,
+    "no_fabrication_anywhere": true
+  },
+  "all_gates_passed": true
+}

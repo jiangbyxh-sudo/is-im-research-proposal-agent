@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-08-23T08:32:10.567074+00:00",
+  "cluster_config_version": "p2-tfidf-average-linkage-2.1.0",
+  "snapshot_version_used": "p2-direct-corpus-snapshot-2.0.0",
+  "sets": {
+    "fixed": [
+      {
+        "case": "fixed_qualified_36",
+        "direction_id": "platform_governance",
+        "corpus_hash": "6444f4bf630e205a1e425e60fbfdfa38a53026c4f77e78feb8896084743ec198",
+        "paper_count": 36,
+        "abstract_count": 36,
+        "p1_precision_gate_passed": true,
+        "status": "P2_CLUSTERING_COMPLETE",
+        "expected_status": "P2_CLUSTERING_COMPLETE",
+        "status_matches": true,
+        "honest_target": 5,
+        "cluster_count": 5,
+        "expected_cluster_count": 5,
+        "cluster_count_matches": true,
+        "cluster_sizes": [
+          19,
+          6,
+          5,
+          3,
+          3
+        ],
+        "cluster_heat": [
+          0.644,
+          0.4529,
+          0.3889,
+          0.4658,
+          0.4591
+        ],
+        "language_counts": {
+          "en": 36
+        },
+        "cache_key": "fee6f72ea1c328c091ce070f701ecd6ca078772d433a73108f57e1af9da94d3c",
+        "hardcoded_five_violation": false
+      }
+    ],
+    "heldout_similar": [
+      {
+        "case": "heldout_every_4th_removed",
+        "direction_id": "platform_governance",
+        "corpus_hash": "d86f88fb5d227b79e130666587f951cafc5ac4dee4f8b3f28a22c1678364f38b",
+        "paper_count": 27,
+        "abstract_count": 27,
+        "p1_precision_gate_passed": true,
+        "status": "P2_CLUSTERING_DEGRADED",
+        "expected_status": "P2_CLUSTERING_DEGRADED",
+        "status_matches": true,
+        "honest_target": 4,
+        "cluster_count": 4,
+        "expected_cluster_count": 4,
+        "cluster_count_matches": true,
+        "cluster_sizes": [
+          18,
+          3,
+          3,
+          3
+        ],
+        "cluster_heat": [
+          0.6015,
+          0.2583,
+          0.34,
+          0.4778
+        ],
+        "language_counts": {
+          "en": 27
+        },
+        "cache_key": "a0c48f7e7e9efb6bb4a96cafa0c37ad03a8d6a003cd953e91ca5fbef53be8450",
+        "hardcoded_five_violation": false
+      }
+    ],
+    "regression": [
+      {
+        "case": "p0_snapshot_as_archived",
+        "direction_id": "topic_ai_enabled_information_systems",
+        "corpus_hash": "9441e4d32f8f149b8b3f90311afe108d9aefd7fe658a2d677ee14fc97858d2c5",
+        "paper_count": 27,
+        "abstract_count": 0,
+        "p1_precision_gate_passed": false,
+        "status": "P2_BLOCKED_BY_P1_PRECISION",
+        "expected_status": "P2_BLOCKED_BY_P1_PRECISION",
+        "status_matches": true,
+        "honest_target": 0,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {
+          "en": 18,
+          "zh": 9
+        },
+        "cache_key": "6e9dbe21dd711268cff38e030d18ab444cc58e1f2f075de83871509e3449443c",
+        "hardcoded_five_violation": false
+      },
+      {
+        "case": "p0_snapshot_gate_passed_variant",
+        "direction_id": "topic_ai_enabled_information_systems",
+        "corpus_hash": "9441e4d32f8f149b8b3f90311afe108d9aefd7fe658a2d677ee14fc97858d2c5",
+        "paper_count": 27,
+        "abstract_count": 0,
+        "p1_precision_gate_passed": true,
+        "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "expected_status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "status_matches": true,
+        "honest_target": 0,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {
+          "en": 18,
+          "zh": 9
+        },
+        "cache_key": "6e9dbe21dd711268cff38e030d18ab444cc58e1f2f075de83871509e3449443c",
+        "hardcoded_five_violation": false
+      }
+    ],
+    "challenge": [
+      {
+        "case": "challenge_missing_abstracts_40p_10a",
+        "direction_id": "platform_governance",
+        "corpus_hash": "e2edee0246bea861f964090ebc3f260143f6f2b776b394f6b8a92f78c838838c",
+        "paper_count": 40,
+        "abstract_count": 10,
+        "p1_precision_gate_passed": true,
+        "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "expected_status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "status_matches": true,
+        "honest_target": 2,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {
+          "en": 40
+        },
+        "cache_key": "061889985586a5f433fc6c1beb4c715d852387066006dc6143564ea71f24f820",
+        "hardcoded_five_violation": false
+      },
+      {
+        "case": "challenge_small_corpus_14_papers",
+        "direction_id": "platform_governance",
+        "corpus_hash": "3e00df949ad6c59cbc7b35de63aebeae03eea91cabe2735eda08863eae1281be",
+        "paper_count": 14,
+        "abstract_count": 14,
+        "p1_precision_gate_passed": true,
+        "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "expected_status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "status_matches": true,
+        "honest_target": 2,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {
+          "en": 14
+        },
+        "cache_key": "87ec41f12e1db17b8df0f0cb853ab76b1101179436e971192091eeba36d998b7",
+        "hardcoded_five_violation": false
+      },
+      {
+        "case": "challenge_p1_gate_off_qualified",
+        "direction_id": "platform_governance",
+        "corpus_hash": "6444f4bf630e205a1e425e60fbfdfa38a53026c4f77e78feb8896084743ec198",
+        "paper_count": 36,
+        "abstract_count": 36,
+        "p1_precision_gate_passed": false,
+        "status": "P2_BLOCKED_BY_P1_PRECISION",
+        "expected_status": "P2_BLOCKED_BY_P1_PRECISION",
+        "status_matches": true,
+        "honest_target": 5,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {
+          "en": 36
+        },
+        "cache_key": "fee6f72ea1c328c091ce070f701ecd6ca078772d433a73108f57e1af9da94d3c",
+        "hardcoded_five_violation": false
+      },
+      {
+        "case": "challenge_adjacent_only_no_direct",
+        "direction_id": "platform_governance",
+        "corpus_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "paper_count": 0,
+        "abstract_count": 0,
+        "p1_precision_gate_passed": true,
+        "status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "expected_status": "SYNTHESIS_INSUFFICIENT_EVIDENCE",
+        "status_matches": true,
+        "honest_target": 0,
+        "cluster_count": 0,
+        "expected_cluster_count": 0,
+        "cluster_count_matches": true,
+        "cluster_sizes": [],
+        "cluster_heat": [],
+        "language_counts": {},
+        "cache_key": "ed1b034dfd2f069c887051ee073752df87d19db8a0365c0c69b39213678358c2",
+        "hardcoded_five_violation": false
+      }
+    ]
+  },
+  "fixed_set_five_run_stability": {
+    "snapshot_corpus_hash": "6444f4bf630e205a1e425e60fbfdfa38a53026c4f77e78feb8896084743ec198",
+    "paper_count": 36,
+    "abstract_count": 36,
+    "statuses": [
+      "P2_CLUSTERING_COMPLETE",
+      "P2_CLUSTERING_COMPLETE",
+      "P2_CLUSTERING_COMPLETE",
+      "P2_CLUSTERING_COMPLETE",
+      "P2_CLUSTERING_COMPLETE"
+    ],
+    "blocked": false,
+    "degraded": false,
+    "runs": 5,
+    "exact_output_consistency": true,
+    "mean_ari": 1.0,
+    "mean_representative_jaccard": 1.0,
+    "cluster_counts": [
+      5
+    ],
+    "gates": {
+      "consistency_100pct": true,
+      "ari_ge_0_85": true,
+      "jaccard_ge_0_80": true
+    }
+  },
+  "heldout_five_run_stability": {
+    "snapshot_corpus_hash": "d86f88fb5d227b79e130666587f951cafc5ac4dee4f8b3f28a22c1678364f38b",
+    "paper_count": 27,
+    "abstract_count": 27,
+    "statuses": [
+      "P2_CLUSTERING_DEGRADED",
+      "P2_CLUSTERING_DEGRADED",
+      "P2_CLUSTERING_DEGRADED",
+      "P2_CLUSTERING_DEGRADED",
+      "P2_CLUSTERING_DEGRADED"
+    ],
+    "blocked": false,
+    "degraded": true,
+    "runs": 5,
+    "exact_output_consistency": true,
+    "mean_ari": 1.0,
+    "mean_representative_jaccard": 1.0,
+    "cluster_counts": [
+      4
+    ],
+    "gates": {
+      "consistency_100pct": true,
+      "ari_ge_0_85": true,
+      "jaccard_ge_0_80": true
+    }
+  },
+  "gates": {
+    "all_expected_statuses_match": true,
+    "all_expected_cluster_counts_match": true,
+    "hardcoded_five_direction_count_zero": true,
+    "fixed_set_stability_gates": true,
+    "fixed_set_exact_consistency": true,
+    "heldout_never_outputs_five": true,
+    "heldout_stability_gates": true,
+    "trace_complete": true,
+    "regression_blocks_without_clusters": true
+  },
+  "all_gates_passed": true
+}

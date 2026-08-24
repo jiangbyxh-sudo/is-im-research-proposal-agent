@@ -1,0 +1,2052 @@
+{
+  "version": "1.0.0-p1",
+  "generated_on": "2026-08-22",
+  "policy": "Exact ISSN resolution only; ambiguous matches remain pending_review.",
+  "sources": [
+    {
+      "journal_id": "journal_001",
+      "canonical_title": "ACM Transactions on Computer-Human Interaction",
+      "language": "en",
+      "issns": [
+        "1073-0516",
+        "1557-7325"
+      ],
+      "pool_ids": [
+        "HCI"
+      ],
+      "openalex_source_id": "S89276529",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S89276529",
+          "openalex_display_name": "ACM Transactions on Computer-Human Interaction",
+          "matched_issns": [
+            "1073-0516",
+            "1557-7325"
+          ],
+          "works_count": 1136
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_002",
+      "canonical_title": "ACM Transactions on Information Systems",
+      "language": "en",
+      "issns": [
+        "1046-8188",
+        "1558-2868"
+      ],
+      "pool_ids": [
+        "CS_IR"
+      ],
+      "openalex_source_id": "S4394735545",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S4394735545",
+          "openalex_display_name": "ACM Transactions on Information Systems",
+          "matched_issns": [
+            "1046-8188",
+            "1558-2868"
+          ],
+          "works_count": 1642
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_003",
+      "canonical_title": "ACM Transactions on Knowledge Discovery from Data",
+      "language": "en",
+      "issns": [
+        "1556-4681",
+        "1556-472X"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "openalex_source_id": "S41523882",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S41523882",
+          "openalex_display_name": "ACM Transactions on Knowledge Discovery from Data",
+          "matched_issns": [
+            "1556-4681",
+            "1556-472X"
+          ],
+          "works_count": 1499
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_004",
+      "canonical_title": "Chinese Journal of Communication",
+      "language": "en",
+      "issns": [
+        "1754-4750",
+        "1754-4769"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "openalex_source_id": "S87403961",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S87403961",
+          "openalex_display_name": "Chinese Journal of Communication",
+          "matched_issns": [
+            "1754-4750",
+            "1754-4769"
+          ],
+          "works_count": 697
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_005",
+      "canonical_title": "Communication Research",
+      "language": "en",
+      "issns": [
+        "0093-6502",
+        "1552-3810"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "openalex_source_id": "S28604305",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S28604305",
+          "openalex_display_name": "Communication Research",
+          "matched_issns": [
+            "0093-6502",
+            "1552-3810"
+          ],
+          "works_count": 2100
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_006",
+      "canonical_title": "Communications of the ACM",
+      "language": "en",
+      "issns": [
+        "0001-0782",
+        "1557-7317"
+      ],
+      "pool_ids": [
+        "CS_AI"
+      ],
+      "openalex_source_id": "S103482838",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S103482838",
+          "openalex_display_name": "Communications of the ACM",
+          "matched_issns": [
+            "0001-0782",
+            "1557-7317"
+          ],
+          "works_count": 16137
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_007",
+      "canonical_title": "Computers in Human Behavior",
+      "language": "en",
+      "issns": [
+        "0747-5632"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "HCI"
+      ],
+      "openalex_source_id": "S204030396",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S204030396",
+          "openalex_display_name": "Computers in Human Behavior",
+          "matched_issns": [
+            "0747-5632"
+          ],
+          "works_count": 9128
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_008",
+      "canonical_title": "Current Directions in Psychological Science",
+      "language": "en",
+      "issns": [
+        "0963-7214",
+        "1467-8721"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S114020440",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S114020440",
+          "openalex_display_name": "Current Directions in Psychological Science",
+          "matched_issns": [
+            "0963-7214",
+            "1467-8721"
+          ],
+          "works_count": 2232
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_011",
+      "canonical_title": "Decision Support Systems",
+      "language": "en",
+      "issns": [
+        "0167-9236"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S11479521",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S11479521",
+          "openalex_display_name": "Decision Support Systems",
+          "matched_issns": [
+            "0167-9236"
+          ],
+          "works_count": 4967
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_012",
+      "canonical_title": "Digital Journalism",
+      "language": "en",
+      "issns": [
+        "2167-0811",
+        "2167-082X"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "openalex_source_id": "S2764497610",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764497610",
+          "openalex_display_name": "Digital Journalism",
+          "matched_issns": [
+            "2167-0811",
+            "2167-082X"
+          ],
+          "works_count": 1191
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_013",
+      "canonical_title": "European Journal of Communication",
+      "language": "en",
+      "issns": [
+        "0267-3231",
+        "1460-3705"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "openalex_source_id": "S49080740",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S49080740",
+          "openalex_display_name": "European Journal of Communication",
+          "matched_issns": [
+            "0267-3231",
+            "1460-3705"
+          ],
+          "works_count": 2976
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_014",
+      "canonical_title": "European Journal of Information Systems",
+      "language": "en",
+      "issns": [
+        "0960-085X",
+        "1476-9344"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S116712389",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S116712389",
+          "openalex_display_name": "European Journal of Information Systems",
+          "matched_issns": [
+            "0960-085X",
+            "1476-9344"
+          ],
+          "works_count": 1641
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_015",
+      "canonical_title": "Government Information Quarterly",
+      "language": "en",
+      "issns": [
+        "0740-624X"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PUBLIC_ADMIN"
+      ],
+      "openalex_source_id": "S201710173",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S201710173",
+          "openalex_display_name": "Government Information Quarterly",
+          "matched_issns": [
+            "0740-624X"
+          ],
+          "works_count": 3230
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_016",
+      "canonical_title": "IEEE Transactions on Knowledge and Data Engineering",
+      "language": "en",
+      "issns": [
+        "1041-4347",
+        "1558-2191",
+        "2326-3865"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA",
+        "CS_IR"
+      ],
+      "openalex_source_id": "S30698027",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S30698027",
+          "openalex_display_name": "IEEE Transactions on Knowledge and Data Engineering",
+          "matched_issns": [
+            "1041-4347",
+            "1558-2191",
+            "2326-3865"
+          ],
+          "works_count": 8120
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_017",
+      "canonical_title": "INFORMS Journal on Computing",
+      "language": "en",
+      "issns": [
+        "0899-1499",
+        "1091-9856",
+        "1526-5528",
+        "2326-3245"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "openalex_source_id": "S165318533",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S165318533",
+          "openalex_display_name": "INFORMS journal on computing",
+          "matched_issns": [
+            "0899-1499",
+            "1091-9856",
+            "1526-5528",
+            "2326-3245"
+          ],
+          "works_count": 2708
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_020",
+      "canonical_title": "Information Sciences",
+      "language": "en",
+      "issns": [
+        "0020-0255"
+      ],
+      "pool_ids": [
+        "CS_AI",
+        "CS_DATA"
+      ],
+      "openalex_source_id": "S192650101",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S192650101",
+          "openalex_display_name": "Information Sciences",
+          "matched_issns": [
+            "0020-0255"
+          ],
+          "works_count": 23144
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_021",
+      "canonical_title": "Information Systems Frontiers",
+      "language": "en",
+      "issns": [
+        "1387-3326",
+        "1572-9419"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "PUBLIC_ADMIN"
+      ],
+      "openalex_source_id": "S181659395",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S181659395",
+          "openalex_display_name": "Information Systems Frontiers",
+          "matched_issns": [
+            "1387-3326",
+            "1572-9419"
+          ],
+          "works_count": 2068
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_022",
+      "canonical_title": "Information Systems Journal",
+      "language": "en",
+      "issns": [
+        "1350-1917",
+        "1365-2575"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "openalex_source_id": "S92260147",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S92260147",
+          "openalex_display_name": "Information Systems Journal",
+          "matched_issns": [
+            "1350-1917",
+            "1365-2575"
+          ],
+          "works_count": 1392
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_023",
+      "canonical_title": "Information Systems Research",
+      "language": "en",
+      "issns": [
+        "1047-7047",
+        "1526-5536"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "IS_CORE",
+        "ORG_STRATEGY",
+        "SECURITY"
+      ],
+      "openalex_source_id": "S202812398",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S202812398",
+          "openalex_display_name": "Information Systems Research",
+          "matched_issns": [
+            "1047-7047",
+            "1526-5536"
+          ],
+          "works_count": 2002
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_025",
+      "canonical_title": "Information and Organization",
+      "language": "en",
+      "issns": [
+        "1471-7727"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "openalex_source_id": "S35363033",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S35363033",
+          "openalex_display_name": "Information and Organization",
+          "matched_issns": [
+            "1471-7727"
+          ],
+          "works_count": 511
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_027",
+      "canonical_title": "International Journal of Electronic Commerce",
+      "language": "en",
+      "issns": [
+        "1086-4415",
+        "1557-9301"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY"
+      ],
+      "openalex_source_id": "S18436875",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S18436875",
+          "openalex_display_name": "International Journal of Electronic Commerce",
+          "matched_issns": [
+            "1086-4415",
+            "1557-9301"
+          ],
+          "works_count": 819
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_028",
+      "canonical_title": "International Journal of Information Management",
+      "language": "en",
+      "issns": [
+        "0268-4012"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "DIGITAL_PLATFORM",
+        "PUBLIC_ADMIN"
+      ],
+      "openalex_source_id": "S189354248",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S189354248",
+          "openalex_display_name": "International Journal of Information Management",
+          "matched_issns": [
+            "0268-4012"
+          ],
+          "works_count": 3561
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_029",
+      "canonical_title": "Internet Research",
+      "language": "en",
+      "issns": [
+        "1066-2243",
+        "2054-5657"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM"
+      ],
+      "openalex_source_id": "S63576417",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S63576417",
+          "openalex_display_name": "Internet Research",
+          "matched_issns": [
+            "1066-2243",
+            "2054-5657"
+          ],
+          "works_count": 1914
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_030",
+      "canonical_title": "Journal of Applied Psychology",
+      "language": "en",
+      "issns": [
+        "0021-9010",
+        "1939-1854"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S166002381",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S166002381",
+          "openalex_display_name": "Journal of Applied Psychology",
+          "matched_issns": [
+            "0021-9010",
+            "1939-1854"
+          ],
+          "works_count": 13631
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_031",
+      "canonical_title": "Journal of Business and Psychology",
+      "language": "en",
+      "issns": [
+        "0889-3268",
+        "1573-353X"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S61413993",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S61413993",
+          "openalex_display_name": "Journal of Business and Psychology",
+          "matched_issns": [
+            "0889-3268",
+            "1573-353X"
+          ],
+          "works_count": 1799
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_033",
+      "canonical_title": "Journal of Computer-Mediated Communication",
+      "language": "en",
+      "issns": [
+        "1083-6101"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "openalex_source_id": "S30594836",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S30594836",
+          "openalex_display_name": "Journal of Computer-Mediated Communication",
+          "matched_issns": [
+            "1083-6101"
+          ],
+          "works_count": 1206
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_034",
+      "canonical_title": "Journal of Consumer Psychology",
+      "language": "en",
+      "issns": [
+        "1057-7408",
+        "1532-7663"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S163545350",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S163545350",
+          "openalex_display_name": "Journal of Consumer Psychology",
+          "matched_issns": [
+            "1057-7408",
+            "1532-7663"
+          ],
+          "works_count": 1869
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_035",
+      "canonical_title": "Journal of Documentation",
+      "language": "en",
+      "issns": [
+        "0022-0418",
+        "1758-7379"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "openalex_source_id": "S10082577",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S10082577",
+          "openalex_display_name": "Journal of Documentation",
+          "matched_issns": [
+            "0022-0418",
+            "1758-7379"
+          ],
+          "works_count": 3068
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_036",
+      "canonical_title": "Journal of Experimental Psychology: Applied",
+      "language": "en",
+      "issns": [
+        "1076-898X",
+        "1939-2192"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S79587319",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S79587319",
+          "openalex_display_name": "Journal of Experimental Psychology Applied",
+          "matched_issns": [
+            "1076-898X",
+            "1939-2192"
+          ],
+          "works_count": 1453
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_037",
+      "canonical_title": "Journal of Experimental Social Psychology",
+      "language": "en",
+      "issns": [
+        "0022-1031",
+        "1096-0465"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S12410666",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S12410666",
+          "openalex_display_name": "Journal of Experimental Social Psychology",
+          "matched_issns": [
+            "0022-1031",
+            "1096-0465"
+          ],
+          "works_count": 4849
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_038",
+      "canonical_title": "Journal of Information Science",
+      "language": "en",
+      "issns": [
+        "0165-5515",
+        "1741-6485"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "openalex_source_id": "S68913162",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S68913162",
+          "openalex_display_name": "Journal of Information Science",
+          "matched_issns": [
+            "0165-5515",
+            "1741-6485"
+          ],
+          "works_count": 3453
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_039",
+      "canonical_title": "Journal of Information Technology",
+      "language": "en",
+      "issns": [
+        "0268-3962",
+        "1466-4437"
+      ],
+      "pool_ids": [
+        "IS_CORE",
+        "ORG_STRATEGY"
+      ],
+      "openalex_source_id": "S135086714",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S135086714",
+          "openalex_display_name": "Journal of Information Technology",
+          "matched_issns": [
+            "0268-3962",
+            "1466-4437"
+          ],
+          "works_count": 1857
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_041",
+      "canonical_title": "Journal of Informetrics",
+      "language": "en",
+      "issns": [
+        "1751-1577"
+      ],
+      "pool_ids": [
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "openalex_source_id": "S205292342",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S205292342",
+          "openalex_display_name": "Journal of Informetrics",
+          "matched_issns": [
+            "1751-1577"
+          ],
+          "works_count": 1719
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_042",
+      "canonical_title": "Journal of Management Information Systems",
+      "language": "en",
+      "issns": [
+        "0742-1222",
+        "1557-928X"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S9954729",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S9954729",
+          "openalex_display_name": "Journal of Management Information Systems",
+          "matched_issns": [
+            "0742-1222",
+            "1557-928X"
+          ],
+          "works_count": 1875
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_044",
+      "canonical_title": "Journal of Occupational and Organizational Psychology",
+      "language": "en",
+      "issns": [
+        "0963-1798",
+        "2044-8325"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S87328381",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S87328381",
+          "openalex_display_name": "Journal of Occupational and Organizational Psychology",
+          "matched_issns": [
+            "0963-1798",
+            "2044-8325"
+          ],
+          "works_count": 1647
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_045",
+      "canonical_title": "Journal of Personality and Social Psychology",
+      "language": "en",
+      "issns": [
+        "0022-3514",
+        "1939-1315"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S29984966",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S29984966",
+          "openalex_display_name": "Journal of Personality and Social Psychology",
+          "matched_issns": [
+            "0022-3514",
+            "1939-1315"
+          ],
+          "works_count": 17514
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_047",
+      "canonical_title": "Journal of the Association for Information Science and Technology",
+      "language": "en",
+      "issns": [
+        "2330-1635",
+        "2330-1643"
+      ],
+      "pool_ids": [
+        "CS_IR",
+        "IM_CORE",
+        "SCIENTOMETRICS"
+      ],
+      "openalex_source_id": "S4210197613",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S4210197613",
+          "openalex_display_name": "Journal of the Association for Information Science and Technology",
+          "matched_issns": [
+            "2330-1635",
+            "2330-1643"
+          ],
+          "works_count": 2327
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_048",
+      "canonical_title": "Journal of the Association for Information Systems",
+      "language": "en",
+      "issns": [
+        "1536-9323"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S30879505",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S30879505",
+          "openalex_display_name": "Journal of the Association for Information Systems",
+          "matched_issns": [
+            "1536-9323"
+          ],
+          "works_count": 48206
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_049",
+      "canonical_title": "Learned Publishing",
+      "language": "en",
+      "issns": [
+        "0953-1513",
+        "1741-4857"
+      ],
+      "pool_ids": [
+        "IM_CORE"
+      ],
+      "openalex_source_id": "S29676049",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S29676049",
+          "openalex_display_name": "Learned Publishing",
+          "matched_issns": [
+            "0953-1513",
+            "1741-4857"
+          ],
+          "works_count": 2754
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_051",
+      "canonical_title": "MIS Quarterly",
+      "language": "en",
+      "issns": [
+        "0276-7783",
+        "2162-9730"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "IS_CORE",
+        "ORG_STRATEGY",
+        "SECURITY"
+      ],
+      "openalex_source_id": "S57293258",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S57293258",
+          "openalex_display_name": "MIS Quarterly",
+          "matched_issns": [
+            "0276-7783",
+            "2162-9730"
+          ],
+          "works_count": 2713
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_052",
+      "canonical_title": "MIS Quarterly Executive",
+      "language": "en",
+      "issns": [
+        "1540-1960"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S48312676",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S48312676",
+          "openalex_display_name": "MIS Quarterly Executive",
+          "matched_issns": [
+            "1540-1960"
+          ],
+          "works_count": 172
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_054",
+      "canonical_title": "Marketing Science",
+      "language": "en",
+      "issns": [
+        "0732-2399",
+        "1526-548X"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY"
+      ],
+      "openalex_source_id": "S163534328",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S163534328",
+          "openalex_display_name": "Marketing Science",
+          "matched_issns": [
+            "0732-2399",
+            "1526-548X"
+          ],
+          "works_count": 2537
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_057",
+      "canonical_title": "Organization Science",
+      "language": "en",
+      "issns": [
+        "1047-7039",
+        "1526-5455"
+      ],
+      "pool_ids": [
+        "DIGITAL_PLATFORM",
+        "ECON_STRATEGY",
+        "ORG_STRATEGY"
+      ],
+      "openalex_source_id": "S206124708",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S206124708",
+          "openalex_display_name": "Organization Science",
+          "matched_issns": [
+            "1047-7039",
+            "1526-5455"
+          ],
+          "works_count": 2789
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_058",
+      "canonical_title": "Organizational Behavior and Human Decision Processes",
+      "language": "en",
+      "issns": [
+        "0749-5978",
+        "1095-9920"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2",
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S64744539",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S64744539",
+          "openalex_display_name": "Organizational Behavior and Human Decision Processes",
+          "matched_issns": [
+            "0749-5978",
+            "1095-9920"
+          ],
+          "works_count": 2626
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_059",
+      "canonical_title": "Personnel Psychology",
+      "language": "en",
+      "issns": [
+        "0031-5826",
+        "1744-6570"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S84664706",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S84664706",
+          "openalex_display_name": "Personnel Psychology",
+          "matched_issns": [
+            "0031-5826",
+            "1744-6570"
+          ],
+          "works_count": 4098
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_060",
+      "canonical_title": "Perspectives on Psychological Science",
+      "language": "en",
+      "issns": [
+        "1745-6916",
+        "1745-6924"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "openalex_source_id": "S27228949",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S27228949",
+          "openalex_display_name": "Perspectives on Psychological Science",
+          "matched_issns": [
+            "1745-6916",
+            "1745-6924"
+          ],
+          "works_count": 1525
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_061",
+      "canonical_title": "Political Communication",
+      "language": "en",
+      "issns": [
+        "1058-4609",
+        "1091-7675"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "COMMUNICATION"
+      ],
+      "openalex_source_id": "S27211427",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S27211427",
+          "openalex_display_name": "Political Communication",
+          "matched_issns": [
+            "1058-4609",
+            "1091-7675"
+          ],
+          "works_count": 1945
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_062",
+      "canonical_title": "Psychological Bulletin",
+      "language": "en",
+      "issns": [
+        "0033-2909",
+        "1939-1455"
+      ],
+      "pool_ids": [
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S75627607",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S75627607",
+          "openalex_display_name": "Psychological Bulletin",
+          "matched_issns": [
+            "0033-2909",
+            "1939-1455"
+          ],
+          "works_count": 11590
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_063",
+      "canonical_title": "Psychological Science",
+      "language": "en",
+      "issns": [
+        "0956-7976",
+        "1467-9280"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1",
+        "PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S58854535",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S58854535",
+          "openalex_display_name": "Psychological Science",
+          "matched_issns": [
+            "0956-7976",
+            "1467-9280"
+          ],
+          "works_count": 6095
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_064",
+      "canonical_title": "Public Understanding of Science",
+      "language": "en",
+      "issns": [
+        "0963-6625",
+        "1361-6609"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE2"
+      ],
+      "openalex_source_id": "S124907306",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S124907306",
+          "openalex_display_name": "Public Understanding of Science",
+          "matched_issns": [
+            "0963-6625",
+            "1361-6609"
+          ],
+          "works_count": 1967
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_067",
+      "canonical_title": "The Information Society",
+      "language": "en",
+      "issns": [
+        "0197-2243",
+        "1087-6537"
+      ],
+      "pool_ids": [
+        "IS_CORE"
+      ],
+      "openalex_source_id": "S144363146",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S144363146",
+          "openalex_display_name": "The Information Society",
+          "matched_issns": [
+            "0197-2243",
+            "1087-6537"
+          ],
+          "works_count": 1512
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_068",
+      "canonical_title": "The International Journal of Press/Politics",
+      "language": "en",
+      "issns": [
+        "1040-1620",
+        "1940-1612",
+        "1940-1620"
+      ],
+      "pool_ids": [
+        "CAS_SSCI_2025_ZONE1"
+      ],
+      "openalex_source_id": "S161861253",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S161861253",
+          "openalex_display_name": "The International Journal of Press/Politics",
+          "matched_issns": [
+            "1040-1620",
+            "1940-1612",
+            "1940-1620"
+          ],
+          "works_count": 847
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_071",
+      "canonical_title": "中国图书馆学报",
+      "language": "zh",
+      "issns": [
+        "1001-8867"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_076",
+      "canonical_title": "中国管理科学",
+      "language": "zh",
+      "issns": [
+        "1003-207X"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": "S2764438959",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764438959",
+          "openalex_display_name": "Zhongguo guanli kexue",
+          "matched_issns": [
+            "1003-207X"
+          ],
+          "works_count": 1762
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_078",
+      "canonical_title": "中国行政管理",
+      "language": "zh",
+      "issns": [
+        "1006-0863"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_079",
+      "canonical_title": "中国软科学",
+      "language": "zh",
+      "issns": [
+        "1005-0566"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S2764508881",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764508881",
+          "openalex_display_name": "Zhongguo ruankexue",
+          "matched_issns": [
+            "1005-0566"
+          ],
+          "works_count": 2541
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_081",
+      "canonical_title": "交通运输系统工程与信息",
+      "language": "zh",
+      "issns": [
+        "1009-6744"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_084",
+      "canonical_title": "信息资源管理学报",
+      "language": "zh",
+      "issns": [
+        "2095-2171"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_087",
+      "canonical_title": "公共管理学报",
+      "language": "zh",
+      "issns": [
+        "1672-6162"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "openalex_source_id": "S2764993020",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764993020",
+          "openalex_display_name": "Gonggong guanli xuebao",
+          "matched_issns": [
+            "1672-6162"
+          ],
+          "works_count": 107
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_088",
+      "canonical_title": "公共行政评论",
+      "language": "zh",
+      "issns": [
+        "1674-2486"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_093",
+      "canonical_title": "南开管理评论",
+      "language": "zh",
+      "issns": [
+        "1008-3448"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_097",
+      "canonical_title": "图书情报工作",
+      "language": "zh",
+      "issns": [
+        "0252-3116"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_098",
+      "canonical_title": "图书情报知识",
+      "language": "zh",
+      "issns": [
+        "1003-2797"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_107",
+      "canonical_title": "外国经济与管理",
+      "language": "zh",
+      "issns": [
+        "1001-4950"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S4306510718",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S4306510718",
+          "openalex_display_name": "Waiguo jingji yu guanli",
+          "matched_issns": [
+            "1001-4950"
+          ],
+          "works_count": 992
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_109",
+      "canonical_title": "工业工程与管理",
+      "language": "zh",
+      "issns": [
+        "1007-5429"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_110",
+      "canonical_title": "工程管理科技前沿",
+      "language": "zh",
+      "issns": [
+        "2097-0145"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_116",
+      "canonical_title": "心理学报",
+      "language": "zh",
+      "issns": [
+        "0439-755X"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_PSYCHOLOGY_IS_RELEVANT",
+        "PKU_CORE_2023_PSYCHOLOGY",
+        "ZH_PSYCHOLOGY"
+      ],
+      "openalex_source_id": "S158647270",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S158647270",
+          "openalex_display_name": "Acta Psychologica Sinica",
+          "matched_issns": [
+            "0439-755X"
+          ],
+          "works_count": 3161
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_120",
+      "canonical_title": "情报学报",
+      "language": "zh",
+      "issns": [
+        "1000-0135"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_126",
+      "canonical_title": "数据分析与知识发现",
+      "language": "zh",
+      "issns": [
+        "2096-3467"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_INFORMATION_RESOURCE_FULL",
+        "PKU_CORE_2023_INFORMATION_RESOURCE",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": "S2764613313",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764613313",
+          "openalex_display_name": "Shuju fenxi yu zhishi faxian",
+          "matched_issns": [
+            "2096-3467"
+          ],
+          "works_count": 3105
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_127",
+      "canonical_title": "数理统计与管理",
+      "language": "zh",
+      "issns": [
+        "1002-1566"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": "S2764648832",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764648832",
+          "openalex_display_name": "Application of Statistics and Management",
+          "matched_issns": [
+            "1002-1566"
+          ],
+          "works_count": 920
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_128",
+      "canonical_title": "数量经济技术经济研究",
+      "language": "zh",
+      "issns": [
+        "1000-3894"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_146",
+      "canonical_title": "电子政务",
+      "language": "zh",
+      "issns": [
+        "1672-7223"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_PUBLIC_DIGITAL_GOV",
+        "ZH_IS_IM_CORE"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_147",
+      "canonical_title": "研究与发展管理",
+      "language": "zh",
+      "issns": [
+        "1004-8308"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_148",
+      "canonical_title": "科学学与科学技术管理",
+      "language": "zh",
+      "issns": [
+        "1002-0241"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_149",
+      "canonical_title": "科学学研究",
+      "language": "zh",
+      "issns": [
+        "1003-2053"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S2764457360",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764457360",
+          "openalex_display_name": "Kexuexue yanjiu",
+          "matched_issns": [
+            "1003-2053"
+          ],
+          "works_count": 2787
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_154",
+      "canonical_title": "科研管理",
+      "language": "zh",
+      "issns": [
+        "1000-2995"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_SCIENCE_POLICY",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S4306529266",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S4306529266",
+          "openalex_display_name": "Ke-yan guanli",
+          "matched_issns": [
+            "1000-2995"
+          ],
+          "works_count": 293
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_155",
+      "canonical_title": "管理世界",
+      "language": "zh",
+      "issns": [
+        "1002-5502"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_156",
+      "canonical_title": "管理学报",
+      "language": "zh",
+      "issns": [
+        "1672-884X"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S2764834030",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764834030",
+          "openalex_display_name": "Guanli xuebao",
+          "matched_issns": [
+            "1672-884X"
+          ],
+          "works_count": 1782
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_157",
+      "canonical_title": "管理工程学报",
+      "language": "zh",
+      "issns": [
+        "1004-6062"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_160",
+      "canonical_title": "管理科学",
+      "language": "zh",
+      "issns": [
+        "1672-0334"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_161",
+      "canonical_title": "管理科学学报",
+      "language": "zh",
+      "issns": [
+        "1007-9807"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_MANAGEMENT_DIRECT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": "S2764989655",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764989655",
+          "openalex_display_name": "Guanli kexue xuebao",
+          "matched_issns": [
+            "1007-9807"
+          ],
+          "works_count": 1081
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_162",
+      "canonical_title": "管理评论",
+      "language": "zh",
+      "issns": [
+        "1003-1952"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_163",
+      "canonical_title": "系统工程学报",
+      "language": "zh",
+      "issns": [
+        "1000-5781"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_164",
+      "canonical_title": "系统工程理论与实践",
+      "language": "zh",
+      "issns": [
+        "1000-6788"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_165",
+      "canonical_title": "系统科学与数学",
+      "language": "zh",
+      "issns": [
+        "1000-0577"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": "S2765031523",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2765031523",
+          "openalex_display_name": "Xitong kexue yu shuxue",
+          "matched_issns": [
+            "1000-0577"
+          ],
+          "works_count": 1425
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_166",
+      "canonical_title": "系统管理学报",
+      "language": "zh",
+      "issns": [
+        "1005-2542"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_167",
+      "canonical_title": "经济与管理研究",
+      "language": "zh",
+      "issns": [
+        "1000-7636"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_ORG_INNOVATION"
+      ],
+      "openalex_source_id": "S2764727973",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2764727973",
+          "openalex_display_name": "Jingji yu guanli yanjiu",
+          "matched_issns": [
+            "1000-7636"
+          ],
+          "works_count": 555
+        }
+      ]
+    },
+    {
+      "journal_id": "journal_168",
+      "canonical_title": "经济管理",
+      "language": "zh",
+      "issns": [
+        "1002-5766"
+      ],
+      "pool_ids": [
+        "CSSCI_2025_2026_MANAGEMENT_IS_IM_RELEVANT",
+        "PKU_CORE_2023_ORG_INNOVATION",
+        "ZH_ORG_INNOVATION"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_171",
+      "canonical_title": "统计研究",
+      "language": "zh",
+      "issns": [
+        "1002-4565"
+      ],
+      "pool_ids": [
+        "PKU_CORE_2023_STATISTICS_METHODS",
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_176",
+      "canonical_title": "计量经济学报",
+      "language": "zh",
+      "issns": [
+        "2096-9732"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": null,
+      "review_status": "pending_review",
+      "resolution_evidence": []
+    },
+    {
+      "journal_id": "journal_178",
+      "canonical_title": "运筹与管理",
+      "language": "zh",
+      "issns": [
+        "1007-3221"
+      ],
+      "pool_ids": [
+        "ZH_METHODS_ANALYTICS"
+      ],
+      "openalex_source_id": "S2765047847",
+      "review_status": "approved",
+      "resolution_evidence": [
+        {
+          "openalex_source_id": "S2765047847",
+          "openalex_display_name": "Yunchou yu guanli",
+          "matched_issns": [
+            "1007-3221"
+          ],
+          "works_count": 2245
+        }
+      ]
+    }
+  ]
+}

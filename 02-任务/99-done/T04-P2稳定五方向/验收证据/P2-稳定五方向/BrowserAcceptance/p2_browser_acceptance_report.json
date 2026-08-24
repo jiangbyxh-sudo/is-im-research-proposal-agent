@@ -1,0 +1,104 @@
+{
+  "app_url": "http://127.0.0.1:8793",
+  "browser": "Edge headless (Chromium, CDP)",
+  "note": "受控浏览器验收：论文与命名均为显式标注的夹具内容，不代表真实检索或研究方向结论。",
+  "scenarios": {
+    "complete": {
+      "checks": {
+        "panel_visible": true,
+        "panel_rendered_in_active_view": true,
+        "direction_count_matches": true,
+        "panel_has_quality_title": true,
+        "panel_has_corpus": true,
+        "panel_has_versions": true,
+        "panel_has_confidence": true,
+        "direction_conclusion": true,
+        "degradation_reasons_shown": true,
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\BrowserAcceptance\\p2_complete_desktop.png",
+      "panel_excerpt": "方向质量信息聚类由确定性代码完成，模型仅命名固定簇 语料 输入论文36 篇 direct 论文36 篇 带摘要36 篇 语言分布中文 0 篇（缺口，不用英文补数） · 英文 36 篇 稳定性 数据截止日2026-08-23 确定性自检2 次运行逐字节一致 ✓ 版本 方向画像1.2.0-p1-retrieval 检索p1-query-plan-1.0.0 评分p1-directness-reranker-2.1.0 聚类p2-tfidf-average-linkage-2.1.0 命名p2-athlete-judge-naming-2.0.0 置信度 方向结论五方向完整（5 个方向） 热度区间0.47 – 0.54 命名来源Athlete A/B + 盲评Judge P1精度门禁已解锁（RERANK_CALIBRATED）",
+      "status_pill": "输入 36 篇 · direct 36 篇",
+      "notice": "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+      "limitations": [],
+      "scroll_width": 1239,
+      "inner_width": 1254
+    },
+    "degraded": {
+      "checks": {
+        "panel_visible": true,
+        "panel_rendered_in_active_view": true,
+        "direction_count_matches": true,
+        "panel_has_quality_title": true,
+        "panel_has_corpus": true,
+        "panel_has_versions": true,
+        "panel_has_confidence": true,
+        "direction_conclusion": true,
+        "degradation_reasons_shown": true,
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\BrowserAcceptance\\p2_degraded_desktop.png",
+      "panel_excerpt": "方向质量信息聚类由确定性代码完成，模型仅命名固定簇 语料 输入论文24 篇 direct 论文24 篇 带摘要24 篇 语言分布中文 0 篇（缺口，不用英文补数） · 英文 24 篇 稳定性 数据截止日2026-08-23 确定性自检2 次运行逐字节一致 ✓ 版本 方向画像1.2.0-p1-retrieval 检索p1-query-plan-1.0.0 评分p1-directness-reranker-2.1.0 聚类p2-tfidf-average-linkage-2.1.0 命名p2-athlete-judge-naming-2.0.0 置信度 方向结论诚实降级：证据支撑 4 个方向 热度区间0.49 – 0.55 命名来源Athlete A/B + 盲评Judge P1精度门禁已解锁（RERANK_CALIBRATED） 不足与诚实停止原因 direct论文不足30篇，无法支撑五个方向",
+      "status_pill": "输入 24 篇 · direct 24 篇",
+      "notice": "语料仅支撑4个方向，已按证据诚实输出4个方向，未硬凑五方向。",
+      "limitations": [
+        "direct论文不足30篇，无法支撑五个方向"
+      ],
+      "scroll_width": 1239,
+      "inner_width": 1254
+    },
+    "stopped": {
+      "checks": {
+        "panel_visible": true,
+        "panel_rendered_in_active_view": true,
+        "direction_count_matches": true,
+        "panel_has_quality_title": true,
+        "panel_has_corpus": true,
+        "panel_has_versions": true,
+        "panel_has_confidence": true,
+        "direction_conclusion": true,
+        "degradation_reasons_shown": true,
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\BrowserAcceptance\\p2_stopped_desktop.png",
+      "panel_excerpt": "方向质量信息聚类由确定性代码完成，模型仅命名固定簇 语料 输入论文14 篇 direct 论文14 篇 带摘要14 篇 语言分布中文 0 篇（缺口，不用英文补数） · 英文 14 篇 稳定性 数据截止日2026-08-23 确定性自检未记录 版本 方向画像1.2.0-p1-retrieval 检索p1-query-plan-1.0.0 评分p1-directness-reranker-2.1.0 聚类p2-tfidf-average-linkage-2.1.0 命名未知 置信度 方向结论证据不足：已诚实停止，未生成方向 命名来源未知 P1精度门禁已解锁（RERANK_CALIBRATED） 不足与诚实停止原因 direct论文不足30篇，无法支撑五个方向 带摘要论文不足20篇，文本特征不足 论文数不足以保证每簇至少3篇 证据仅支撑少于3个方向，已诚实停止",
+      "status_pill": "输入 14 篇 · direct 14 篇",
+      "notice": "P2门禁或语料充分性未满足，未生成方向；系统不会硬凑五方向。",
+      "limitations": [
+        "direct论文不足30篇，无法支撑五个方向",
+        "带摘要论文不足20篇，文本特征不足",
+        "论文数不足以保证每簇至少3篇",
+        "证据仅支撑少于3个方向，已诚实停止"
+      ],
+      "scroll_width": 1239,
+      "inner_width": 1254
+    },
+    "narrow_390": {
+      "checks": {
+        "panel_visible": true,
+        "panel_rendered_in_active_view": true,
+        "direction_count_matches": true,
+        "panel_has_quality_title": true,
+        "panel_has_corpus": true,
+        "panel_has_versions": true,
+        "panel_has_confidence": true,
+        "direction_conclusion": true,
+        "degradation_reasons_shown": true,
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "D:\\求职\\职计划\\06AI项目\\腾讯地图大型活动散场推演Agent\\课堂复盘3\\AI-Coding练习工作区\\02-任务\\01-current\\T04-P2稳定五方向\\验收证据\\P2-稳定五方向\\BrowserAcceptance\\p2_complete_narrow_390.png",
+      "panel_excerpt": "方向质量信息聚类由确定性代码完成，模型仅命名固定簇 语料 输入论文36 篇 direct 论文36 篇 带摘要36 篇 语言分布中文 0 篇（缺口，不用英文补数） · 英文 36 篇 稳定性 数据截止日2026-08-23 确定性自检2 次运行逐字节一致 ✓ 版本 方向画像1.2.0-p1-retrieval 检索p1-query-plan-1.0.0 评分p1-directness-reranker-2.1.0 聚类p2-tfidf-average-linkage-2.1.0 命名p2-athlete-judge-naming-2.0.0 置信度 方向结论五方向完整（5 个方向） 热度区间0.47 – 0.54 命名来源Athlete A/B + 盲评Judge P1精度门禁已解锁（RERANK_CALIBRATED）",
+      "status_pill": "输入 36 篇 · direct 36 篇",
+      "notice": "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+      "limitations": [],
+      "scroll_width": 390,
+      "inner_width": 390
+    }
+  },
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "console_error_note": "favicon.ico 404 为既有良性问题；非favicon错误为0才判通过。",
+  "blocking_console_errors": [],
+  "all_checks_passed": true
+}

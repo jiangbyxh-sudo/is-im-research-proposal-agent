@@ -1,18 +1,38 @@
-"""Evidence-bounded five-direction clustering and research-gap synthesis."""
+"""P2 deterministic clustering followed by fixed-membership cluster naming."""
 from __future__ import annotations
 
 import json
-import hashlib
 import os
-import re
 import time
+from copy import deepcopy
 from dataclasses import dataclass, field
+from datetime import date
+from http.client import IncompleteRead
 from typing import Protocol
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-
-GAP_TYPES = {"empirical", "theoretical", "methodological", "contextual", "temporal", "contradiction"}
+from cluster_naming_provider import (
+    AthleteJudgeClusterNamingProvider,
+    ClusterNamingRequest,
+    DeterministicClusterNamingProvider,
+)
+from evidence_matrix import build_evidence_matrix, evidence_indexes
+from gap_candidate_provider import (
+    GAP_CANDIDATE_VERSION,
+    GapCandidateRequest,
+    LLMGapCandidateProvider,
+)
+from gap_falsification import build_gap_falsification_query_plan
+from research_gap_provider import (
+    EvidenceBoundResearchGapProvider,
+    ResearchGapRequest,
+)
+from stable_subdirection_clustering import (
+    P2ClusterConfig,
+    build_corpus_snapshot,
+    deterministic_average_linkage,
+)
 
 
 @dataclass(frozen=True)
@@ -21,6 +41,12 @@ class SynthesisRequest:
     fine_grained_question: str | None
     derived_path: str
     papers: tuple[dict, ...]
+    p1_precision_gate_passed: bool = False
+    p1_precision_summary: dict = field(default_factory=dict)
+    data_cutoff_date: str = ""
+    direction_profile_version: str = "unknown"
+    retrieval_version: str = "unknown"
+    score_version: str = "unknown"
 
 
 @dataclass
@@ -31,6 +57,8 @@ class SynthesisResult:
     limitations: list[str] = field(default_factory=list)
     audit: dict = field(default_factory=dict)
     message_to_user: str = ""
+    formal_gaps: list[dict] = field(default_factory=list)
+    claim_store: dict = field(default_factory=dict)
 
 
 class ResearchSynthesisProvider(Protocol):
@@ -39,10 +67,16 @@ class ResearchSynthesisProvider(Protocol):
 
 class UnconfiguredResearchSynthesisProvider:
     def synthesize(self, request: SynthesisRequest) -> SynthesisResult:
+        if not request.p1_precision_gate_passed:
+            return SynthesisResult(
+                status="P2_BLOCKED_BY_P1_PRECISION",
+                limitations=["P1人工Precision@10门禁未通过。"],
+                message_to_user="P1精度门禁未通过，P2默认阻断。",
+            )
         return SynthesisResult(
             status="SYNTHESIS_NOT_CONFIGURED",
-            limitations=["DeepSeek密钥未通过环境变量配置。"],
-            message_to_user="论文发现已完成；五方向与研究空白综合需要配置DEEPSEEK_API_KEY后运行。",
+            limitations=["聚类命名模型密钥未通过环境变量配置。"],
+            message_to_user="确定性聚类可运行，但固定簇命名需要配置DEEPSEEK_API_KEY。",
         )
 
 
@@ -57,14 +91,11 @@ class DeepSeekJsonClient:
     def complete(self, system_prompt: str, user_prompt: str) -> tuple[dict, dict]:
         payload = {
             "model": self.model,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
+            "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
             "response_format": {"type": "json_object"},
             "thinking": {"type": "disabled"},
-            "temperature": 0.1,
-            "max_tokens": 8000,
+            "temperature": 0.0,
+            "max_tokens": 4000,
         }
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         target = f"{self.base_url}/chat/completions"
@@ -73,14 +104,10 @@ class DeepSeekJsonClient:
         for attempt in range(self.retries + 1):
             try:
                 request = Request(
-                    target,
-                    data=body,
-                    method="POST",
+                    target, data=body, method="POST",
                     headers={
-                        "Authorization": f"Bearer {self.api_key}",
-                        "Content-Type": "application/json",
-                        "Accept": "application/json",
-                        "User-Agent": "ProposalCompass/0.3",
+                        "Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json",
+                        "Accept": "application/json", "User-Agent": "ProposalCompass/0.3",
                     },
                 )
                 with urlopen(request, timeout=self.timeout) as response:
@@ -89,17 +116,15 @@ class DeepSeekJsonClient:
                 if not content:
                     raise ValueError("empty_model_content")
                 return json.loads(content), {
-                    "model": envelope.get("model", self.model),
-                    "usage": envelope.get("usage", {}),
+                    "model": envelope.get("model", self.model), "usage": envelope.get("usage", {}),
                     "finish_reason": envelope.get("choices", [{}])[0].get("finish_reason"),
-                    "attempts": attempt + 1,
-                    "duration_ms": round((time.monotonic() - started) * 1000, 2),
+                    "attempts": attempt + 1, "duration_ms": round((time.monotonic() - started) * 1000, 2),
                 }
             except HTTPError as exc:
                 last_error = RuntimeError(f"deepseek_http_{exc.code}")
                 if exc.code not in {429, 500, 502, 503, 504}:
                     break
-            except (OSError, ValueError, json.JSONDecodeError) as exc:
+            except (OSError, ValueError, json.JSONDecodeError, IncompleteRead) as exc:
                 last_error = exc
             if attempt < self.retries:
                 time.sleep(1.0 * (2 ** attempt))
@@ -108,185 +133,200 @@ class DeepSeekJsonClient:
 
 
 class DeepSeekResearchSynthesisProvider:
-    def __init__(self, client: DeepSeekJsonClient, max_corpus_size: int = 120):
+    def __init__(
+        self,
+        client: DeepSeekJsonClient,
+        max_corpus_size: int = 120,
+        config: P2ClusterConfig | None = None,
+        naming_provider=None,
+        fallback_naming_provider=None,
+        stability_self_check_runs: int = 2,
+        gap_candidate_provider=None,
+        gap_formalization_provider=None,
+    ):
         self.client = client
         self.max_corpus_size = max(10, max_corpus_size)
+        self.config = config or P2ClusterConfig()
+        self.naming_provider = naming_provider or AthleteJudgeClusterNamingProvider(client)
+        self.fallback_naming_provider = fallback_naming_provider or DeterministicClusterNamingProvider()
+        self.stability_self_check_runs = max(1, stability_self_check_runs)
+        self.gap_candidate_provider = gap_candidate_provider or LLMGapCandidateProvider(client)
+        self.gap_formalization_provider = gap_formalization_provider or EvidenceBoundResearchGapProvider()
+        self._cache: dict[str, SynthesisResult] = {}
 
-    @staticmethod
-    def _paper_view(paper: dict, paper_id: str) -> dict:
-        return {
-            "paper_id": paper_id,
-            "title": paper.get("title"),
-            "authors": paper.get("authors", [])[:6],
-            "year": paper.get("year"),
-            "journal": paper.get("journal"),
-            "doi": paper.get("doi"),
-            "citation_count": paper.get("citation_count", 0),
-            "journal_ranking": paper.get("journal_ranking", []),
+    def _generate_formal_gaps(self, request: SynthesisRequest, snapshot: dict, named: list[dict]) -> tuple[list[dict], dict, dict]:
+        """Athlete/Judge proposals per cluster, then one deterministic formalization."""
+        papers = list(snapshot.get("papers") or [])
+        paper_map = {paper["paper_id"]: paper for paper in papers}
+        matrix = build_evidence_matrix(papers)
+        _, span_index = evidence_indexes(matrix)
+        spans_by_paper: dict[str, list[dict]] = {}
+        for span in span_index.values():
+            spans_by_paper.setdefault(span["paper_id"], []).append(span)
+        selected_candidates: list[dict] = []
+        gap_audit: dict = {"version": GAP_CANDIDATE_VERSION, "clusters": {}}
+        for cluster in named:
+            cluster_id = cluster["cluster_id"]
+            cluster_papers = [paper_map[paper_id] for paper_id in cluster.get("paper_ids", []) if paper_id in paper_map]
+            cluster_spans = [span for paper_id in cluster.get("paper_ids", []) for span in spans_by_paper.get(paper_id, [])]
+            if not cluster_papers or not cluster_spans:
+                gap_audit["clusters"][cluster_id] = {"selected": 0, "note": "no_formal_evidence_spans"}
+                continue
+            try:
+                selected, audit = self.gap_candidate_provider.propose(GapCandidateRequest(
+                    research_direction=request.research_direction,
+                    cluster_id=cluster_id,
+                    cluster_name=str(cluster.get("name_zh") or cluster_id),
+                    feature_terms=tuple(cluster.get("feature_terms", [])),
+                    papers=tuple(cluster_papers),
+                    spans=tuple(cluster_spans),
+                ))
+            except Exception as exc:
+                gap_audit["clusters"][cluster_id] = {"selected": 0, "note": f"proposal_failed:{type(exc).__name__}"}
+                continue
+            gap_audit["clusters"][cluster_id] = audit
+            for candidate in selected:
+                candidate["subdirection_id"] = cluster_id
+                selected_candidates.append(candidate)
+        claim_store: dict = {}
+        formal_gaps: list[dict] = []
+        rejected: list[dict] = []
+        if selected_candidates:
+            gap_result = self.gap_formalization_provider.formalize(ResearchGapRequest(
+                cluster_id="multi_cluster",
+                gap_candidates=tuple(selected_candidates),
+                evidence_matrix=matrix,
+            ))
+            formal_gaps = list(gap_result.formal_gaps)
+            claim_store = dict(gap_result.claim_store)
+            rejected = list(gap_result.rejected_candidates)
+            for gap in formal_gaps:
+                gap["falsification_plan"] = build_gap_falsification_query_plan(gap)
+        gap_audit["formalization"] = {
+            "candidate_count": len(selected_candidates),
+            "formal_gap_count": len(formal_gaps),
+            "rejected_count": len(rejected),
+            "rejected": rejected,
         }
+        gap_audit["evidence_matrix"] = {
+            "matrix_hash": matrix.get("matrix_hash"),
+            "paper_count": matrix.get("paper_count"),
+            "formal_evidence_paper_count": matrix.get("formal_evidence_paper_count"),
+            "span_count": matrix.get("span_count"),
+        }
+        return formal_gaps, claim_store, gap_audit
 
-    @staticmethod
-    def _system_prompt() -> str:
-        return """你是IS/IM领域的证据综合器。必须输出一个JSON对象，不得输出JSON以外的文字。
-只允许使用用户消息中提供的论文元数据；不得虚构论文、DOI、作者、方法、结论、理论或因果关系。
-论文只有题名级元数据时，只能形成“待全文验证的研究空白候选”，不能宣称已证实空白。
-每篇论文最多归入一个小方向。小方向按论文数量排序，但数量由下游代码重新计算。
-研究空白必须属于empirical/theoretical/methodological/contextual/temporal/contradiction之一，且至少引用2个输入paper_id。
-需要显式报告矛盾、证据不足和替代解释；不要把期刊等级等同于结论正确性。
-JSON格式示例：
-{
-  "subdirections": [{
-    "name_zh": "小方向中文名", "name_en": "English name", "description": "边界描述",
-    "paper_ids": ["P001", "P002"],
-    "gaps": [{
-      "gap_type": "empirical", "gap_statement": "待验证的空白陈述",
-      "why_it_matters": "意义", "evidence_basis": ["P001", "P002"],
-      "alternative_explanations": ["替代解释"],
-      "innovation_candidates": ["可检验创新点"], "confidence": "emerging"
-    }]
-  }],
-  "unclassified_paper_ids": [],
-  "contradictions": [],
-  "limitations": ["限制"]
-}"""
-
-    def _validate(self, raw: dict, paper_map: dict[str, dict], derived_path: str) -> SynthesisResult:
-        allowed = set(paper_map)
-        assigned: set[str] = set()
-        directions = []
-        gaps = []
-        invalid_refs = 0
-        for index, item in enumerate(raw.get("subdirections", [])):
-            if not isinstance(item, dict):
-                continue
-            name_zh = str(item.get("name_zh") or "").strip()
-            name_en = str(item.get("name_en") or "").strip()
-            if not name_zh or not name_en:
-                continue
-            paper_ids = []
-            raw_paper_ids = item.get("paper_ids", [])
-            if not isinstance(raw_paper_ids, list):
-                raw_paper_ids = []
-            for paper_id in raw_paper_ids:
-                if paper_id in allowed and paper_id not in assigned:
-                    assigned.add(paper_id)
-                    paper_ids.append(paper_id)
-                elif paper_id not in allowed:
-                    invalid_refs += 1
-            if not paper_ids:
-                continue
-            direction_id = f"subdirection_{index + 1}"
-            direction = {
-                "subdirection_id": direction_id,
-                "name_zh": name_zh,
-                "name_en": name_en,
-                "description": str(item.get("description") or "").strip(),
-                "paper_count": len(paper_ids),
-                "paper_ids": paper_ids,
-                "evidence_papers": [paper_map[value] for value in paper_ids[:6]],
-            }
-            raw_gaps = item.get("gaps", [])
-            if not isinstance(raw_gaps, list):
-                raw_gaps = []
-            for gap_index, gap in enumerate(raw_gaps[:3]):
-                if not isinstance(gap, dict) or gap.get("gap_type") not in GAP_TYPES:
-                    continue
-                raw_evidence = gap.get("evidence_basis", [])
-                if not isinstance(raw_evidence, list):
-                    raw_evidence = []
-                evidence_ids = [value for value in raw_evidence if value in paper_ids]
-                invalid_refs += len(raw_evidence) - len(evidence_ids)
-                statement = str(gap.get("gap_statement") or "").strip()
-                if len(evidence_ids) < 2 or not statement:
-                    continue
-                known_dois = {str(paper_map[value].get("doi")).lower() for value in evidence_ids if paper_map[value].get("doi")}
-                gap_text = json.dumps(gap, ensure_ascii=False)
-                mentioned_dois = {value.lower() for value in re.findall(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", gap_text, re.I)}
-                if mentioned_dois - known_dois:
-                    invalid_refs += len(mentioned_dois - known_dois)
-                    continue
-                gap_id = f"{direction_id}_gap_{gap_index + 1}"
-                gaps.append({
-                    "gap_id": gap_id,
-                    "subdirection_id": direction_id,
-                    "gap_type": gap["gap_type"],
-                    "gap_statement": statement,
-                    "why_it_matters": str(gap.get("why_it_matters") or "").strip(),
-                    "evidence_basis": evidence_ids,
-                    "evidence_papers": [paper_map[value] for value in evidence_ids],
-                    "alternative_explanations": [str(value) for value in gap.get("alternative_explanations", [])[:3]],
-                    "innovation_candidates": [str(value) for value in gap.get("innovation_candidates", [])[:3]],
-                    "confidence": str(gap.get("confidence") or "emerging"),
-                    "verification_status": "title_metadata_only_pending_fulltext",
-                })
-            directions.append(direction)
-
-        directions.sort(key=lambda item: (item["paper_count"], item["name_zh"]), reverse=True)
-        if derived_path == "top_five_subdirections":
-            directions = directions[:5]
-            kept_ids = {item["subdirection_id"] for item in directions}
-            gaps = [item for item in gaps if item["subdirection_id"] in kept_ids]
-        else:
-            directions = directions[:1]
-            kept_ids = {item["subdirection_id"] for item in directions}
-            gaps = [item for item in gaps if item["subdirection_id"] in kept_ids]
-        limitations = [str(value) for value in raw.get("limitations", [])[:8]]
-        limitations.append("当前综合主要依据题名级元数据；所有空白均需在全文获取后复核。")
-        if len(directions) < (5 if derived_path == "top_five_subdirections" else 1) or not gaps:
-            status = "SYNTHESIS_PARTIAL"
-        else:
-            status = "SYNTHESIS_COMPLETE"
-        return SynthesisResult(
-            status=status,
-            top_subdirections=directions,
-            gap_candidates=gaps,
-            limitations=limitations,
-            audit={
-                "input_paper_count": len(paper_map),
-                "assigned_paper_count": len(assigned),
-                "unclassified_paper_count": len(allowed - assigned),
-                "invalid_reference_count": invalid_refs,
-                "counts_recomputed_by_code": True,
-            },
-            message_to_user=(
-                f"已生成{len(directions)}个研究小方向和{len(gaps)}个可追溯研究空白候选；"
-                "空白依据题名级元数据，选择前仍需全文复核。"
-            ),
-        )
+    def _snapshot_audit(self, snapshot: dict, clustering: dict) -> dict:
+        return {
+            "corpus_hash": snapshot["corpus_hash"],
+            "cluster_config_version": self.config.version,
+            "cache_key": clustering.get("cache_key"),
+            "input_paper_count": snapshot["input_paper_count"],
+            "direct_paper_count": snapshot["paper_count"],
+            "abstract_count": snapshot["abstract_count"],
+            "data_cutoff_date": snapshot.get("data_cutoff_date"),
+            "direction_profile_version": snapshot.get("direction_profile_version"),
+            "retrieval_version": snapshot.get("retrieval_version"),
+            "score_version": snapshot.get("score_version"),
+            "language_counts": clustering.get("language_counts", {}),
+            "honest_target": clustering.get("honest_target"),
+            "requested_clusters": self.config.requested_clusters,
+            "degradation_reasons": list(clustering.get("degradation_reasons") or clustering.get("reasons") or []),
+            "degradation_reasons_text": list(clustering.get("degradation_reasons_text") or clustering.get("reasons_text") or []),
+            "p1_precision_gate_passed": bool(snapshot.get("p1_precision_gate_passed")),
+            "p1_precision_summary": snapshot.get("p1_precision_summary") or {},
+        }
 
     def synthesize(self, request: SynthesisRequest) -> SynthesisResult:
-        corpus = list(request.papers)[: self.max_corpus_size]
-        if len(corpus) < 5:
+        snapshot = build_corpus_snapshot(
+            direction_id=request.research_direction,
+            papers=list(request.papers)[: self.max_corpus_size],
+            data_cutoff_date=request.data_cutoff_date or date.today().isoformat(),
+            direction_profile_version=request.direction_profile_version,
+            retrieval_version=request.retrieval_version,
+            score_version=request.score_version,
+            p1_precision_gate_passed=request.p1_precision_gate_passed,
+            p1_precision_summary=request.p1_precision_summary,
+        )
+        clustering = deterministic_average_linkage(snapshot, self.config)
+        if clustering["status"] not in {"P2_CLUSTERING_COMPLETE", "P2_CLUSTERING_DEGRADED"}:
             return SynthesisResult(
-                status="SYNTHESIS_INSUFFICIENT_EVIDENCE",
-                limitations=["合格论文少于5篇，不能稳定形成五方向与研究空白。"],
-                message_to_user="论文证据不足，已停止五方向与研究空白综合。",
+                status=clustering["status"],
+                limitations=list(clustering.get("reasons_text") or clustering.get("reasons", [])),
+                audit=self._snapshot_audit(snapshot, clustering),
+                message_to_user="P2门禁或语料充分性未满足，未生成方向；系统不会硬凑五方向。",
             )
-        paper_map = {f"P{index + 1:03d}": self._paper_view(paper, f"P{index + 1:03d}") for index, paper in enumerate(corpus)}
-        user_payload = {
-            "task": "输出json：对最近五年论文做互斥主题归类，并提出有证据锚点的研究空白候选。",
-            "research_direction": request.research_direction,
-            "fine_grained_question": request.fine_grained_question,
-            "derived_path": request.derived_path,
-            "required_subdirection_count": 5 if request.derived_path == "top_five_subdirections" else 1,
-            "papers": list(paper_map.values()),
-        }
-        try:
-            raw, model_audit = self.client.complete(self._system_prompt(), json.dumps(user_payload, ensure_ascii=False))
-            result = self._validate(raw, paper_map, request.derived_path)
-            result.audit["model"] = model_audit
-            result.audit["prompt_version"] = "synthesis-current-baseline-0.3"
-            result.audit["input_hash"] = hashlib.sha256(
-                json.dumps(user_payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
-            ).hexdigest()
-            result.audit["raw_model_output"] = raw
+        cache_key = clustering["cache_key"]
+        if cache_key in self._cache:
+            result = deepcopy(self._cache[cache_key])
+            result.audit["cache_hit"] = True
             return result
+
+        canonical = json.dumps(clustering, ensure_ascii=False, sort_keys=True)
+        stability_self_check = {"runs": self.stability_self_check_runs, "exact_match": True, "method": "byte_identical_full_output"}
+        for _ in range(self.stability_self_check_runs - 1):
+            repeat = deterministic_average_linkage(snapshot, self.config)
+            if json.dumps(repeat, ensure_ascii=False, sort_keys=True) != canonical:
+                stability_self_check["exact_match"] = False
+
+        naming_fallback_reason = ""
+        try:
+            named, naming_audit = self.naming_provider.name_clusters(ClusterNamingRequest(
+                research_direction=request.research_direction, clusters=tuple(clustering["clusters"]),
+                corpus_hash=snapshot["corpus_hash"], cluster_config_version=self.config.version,
+            ))
         except Exception as exc:
-            return SynthesisResult(
-                status="SYNTHESIS_FAILED",
-                limitations=[f"模型调用或JSON校验失败：{type(exc).__name__}"],
-                message_to_user="论文发现已完成，但五方向与研究空白综合失败；未生成无证据结果。",
-            )
+            named, naming_audit = self.fallback_naming_provider.name_clusters(ClusterNamingRequest(
+                research_direction=request.research_direction, clusters=tuple(clustering["clusters"]),
+                corpus_hash=snapshot["corpus_hash"], cluster_config_version=self.config.version,
+            ))
+            naming_fallback_reason = f"{type(exc).__name__}: {exc}"
+
+        degraded = clustering["status"] == "P2_CLUSTERING_DEGRADED"
+        target = int(clustering["honest_target"])
+        limitations = list(clustering.get("degradation_reasons_text") or [])
+        if naming_fallback_reason:
+            limitations.append("固定簇命名模型调用失败，已回退确定性特征命名；论文归属未被修改。")
+        status = "SYNTHESIS_PARTIAL" if degraded else "SYNTHESIS_COMPLETE"
+        message = (
+            f"语料仅支撑{target}个方向，已按证据诚实输出{target}个方向，未硬凑五方向。"
+            if degraded else
+            "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。"
+        )
+        audit = {
+            **self._snapshot_audit(snapshot, clustering),
+            "cache_hit": False,
+            "feature_method": clustering["feature_method"],
+            "linkage": clustering["linkage"],
+            "tie_break": clustering["tie_break"],
+            "heat_method": clustering.get("heat_method"),
+            "stability_self_check": stability_self_check,
+            "naming": naming_audit,
+            "naming_prompt_version": naming_audit.get("prompt_version"),
+            "naming_fallback_reason": naming_fallback_reason,
+            "gap_generation_pipeline": GAP_CANDIDATE_VERSION,
+        }
+        formal_gaps: list[dict] = []
+        claim_store: dict = {}
+        gap_failure = ""
+        try:
+            formal_gaps, claim_store, gap_audit_detail = self._generate_formal_gaps(request, snapshot, named)
+            audit["gap_candidates"] = gap_audit_detail
+        except Exception as exc:
+            gap_failure = f"{type(exc).__name__}: {exc}"
+            audit["gap_candidates"] = {"version": GAP_CANDIDATE_VERSION, "error": gap_failure}
+        if gap_failure:
+            limitations.append("研究空白候选流水线执行失败，本次未产出正式空白；论文归属与方向命名不受影响。")
+        elif not formal_gaps:
+            limitations.append("本次证据未产生通过确定性核验的正式研究空白；系统不硬凑空白。")
+        named = [{**cluster, "subdirection_id": cluster["cluster_id"]} for cluster in named]
+        result = SynthesisResult(
+            status=status, top_subdirections=named, gap_candidates=formal_gaps, limitations=limitations,
+            audit=audit, message_to_user=message,
+            formal_gaps=formal_gaps, claim_store=claim_store,
+        )
+        self._cache[cache_key] = deepcopy(result)
+        return result
 
 
 def build_research_synthesis_provider() -> ResearchSynthesisProvider:
@@ -294,9 +334,7 @@ def build_research_synthesis_provider() -> ResearchSynthesisProvider:
     if not api_key:
         return UnconfiguredResearchSynthesisProvider()
     client = DeepSeekJsonClient(
-        api_key=api_key,
-        base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
-        model=os.getenv("DEEPSEEK_MODEL", "deepseek-v4-pro"),
-        timeout=int(os.getenv("DEEPSEEK_TIMEOUT", "90")),
+        api_key=api_key, base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
+        model=os.getenv("DEEPSEEK_MODEL", "deepseek-v4-pro"), timeout=int(os.getenv("DEEPSEEK_TIMEOUT", "90")),
     )
     return DeepSeekResearchSynthesisProvider(client)

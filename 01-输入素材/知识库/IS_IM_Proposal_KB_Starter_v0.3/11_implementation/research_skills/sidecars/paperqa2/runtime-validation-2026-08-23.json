@@ -1,0 +1,43 @@
+{
+  "validated_at": "2026-08-23T04:02:08.0795563+08:00",
+  "status": "PAPERQA2_RETRIEVAL_RUNTIME_VALIDATED",
+  "upstream": {
+    "repository": "https://github.com/Future-House/paper-qa",
+    "commit": "57e89f7223b0960d5ee5ea048c69e3c47e088572",
+    "release": "v2026.08.12",
+    "package": "paper-qa==2026.8.12",
+    "license": "Apache-2.0"
+  },
+  "runtime": {
+    "python_version": "3.12.13",
+    "isolated_environment": true,
+    "package_count": 77,
+    "freeze_sha256": "8b42356fad401bc4b932f8bce184a3e56467ce498af4801d57bab6ee15fefb0a",
+    "embedding": "sparse",
+    "api_keys_inherited": false,
+    "runtime_files_persisted": 0
+  },
+  "joint_validation": {
+    "grobid_status": "FULLTEXT_EVIDENCE_READY",
+    "matrix_hash": "c17dac952c1d6ee7e20cf90554b39f81850e4092ee7780c2a4a5f82c7e2219b2",
+    "source_span_count": 126,
+    "query_hash": "1038bc1532464a5511b71cf4d0e03f7b477ac462b4d0d1a3b4b608372b0744b9",
+    "paperqa2_status": "QUESTION_EVIDENCE_READY",
+    "candidate_count": 5,
+    "top_candidate_span_id": "span_7a885a98e08761d91781",
+    "top_candidate_page": 1,
+    "top_candidate_status": "EVIDENCE_CANDIDATE_ONLY",
+    "claim_store_valid": true,
+    "formal_claim_count": 1
+  },
+  "forbidden_capabilities": {
+    "pdf_parsing": false,
+    "external_paper_search": false,
+    "llm_or_agent": false,
+    "answer_generation": false,
+    "formal_relevance_decision": false,
+    "claim_generation": false,
+    "research_gap_decision": false,
+    "claim_store_bypass": false
+  }
+}

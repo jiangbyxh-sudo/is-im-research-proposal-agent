@@ -1,0 +1,2498 @@
+{
+  "evaluation": "P1 primary-route live coverage preflight",
+  "generated_at": "2026-08-21T20:02:19.969499+00:00",
+  "profile_version": "1.0.0-p1",
+  "directions": 61,
+  "raw_ge_20": 33,
+  "raw_ge_20_rate": 0.541,
+  "eligible_ge_10": 0,
+  "eligible_ge_10_rate": 0.0,
+  "provider_failures": 28,
+  "precision_at_20": null,
+  "precision_status": "not_measured_requires_blind_human_labels",
+  "p1_acceptance_status": "NOT_EVALUATED_FULL_PIPELINE",
+  "scope_note": "Primary OpenAlex query only; fallback expansion, Crossref verification, optional providers and human Precision@20 are evaluated separately.",
+  "results": [
+    {
+      "direction_id": "ai_nlp_information_processing",
+      "labels": {
+        "zh": "AI与NLP信息处理",
+        "en": "AI and NLP for information processing"
+      },
+      "query": "AI and NLP for information processing",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "human_ai_interaction",
+      "labels": {
+        "zh": "人机交互",
+        "en": "human-AI interaction"
+      },
+      "query": "human-AI interaction",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 7,
+      "eligible_count": 3,
+      "boundary_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-AI interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 855485,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:39.577823+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 6297.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "wrong_document_type": 25,
+        "source_not_qualified": 93,
+        "missing_source_title": 11
+      },
+      "dedupe_event_count": 6,
+      "top_candidates": [
+        {
+          "paper_id": "paper_4e3f7f5303bda0f4194a",
+          "title": "AI sensation and engagement: Unpacking the sensory experience in human-AI interaction",
+          "year": 2025,
+          "journal": "International Journal of Information Management",
+          "doi": "10.1016/j.ijinfomgt.2025.102918",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 72.77,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 81.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 57.18,
+              "recency": 80.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_deaf913c1b76594bdc3d",
+          "title": "Developing human/AI interactions for chat-based customer services: lessons learned from the Norwegian government",
+          "year": 2022,
+          "journal": "European Journal of Information Systems",
+          "doi": "10.1080/0960085x.2022.2096490",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 71.05,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 81.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_93c6e558e9d9c466e3ac",
+          "title": "Designing Creative AI Partners with COFI: A Framework for Modeling Interaction in Human-AI Co-Creative Systems",
+          "year": 2022,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3519026",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 71.05,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 81.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "information_behavior",
+      "labels": {
+        "zh": "信息行为",
+        "en": "information behavior"
+      },
+      "query": "information behavior",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "information_retrieval",
+      "labels": {
+        "zh": "信息检索",
+        "en": "information retrieval"
+      },
+      "query": "information retrieval",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 95,
+      "hard_gate_pass_count": 4,
+      "eligible_count": 0,
+      "boundary_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "information retrieval",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 569658,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:38.511276+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 6110.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "missing_source_title": 24,
+        "wrong_document_type": 48,
+        "source_not_qualified": 90
+      },
+      "dedupe_event_count": 81,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "knowledge_management",
+      "labels": {
+        "zh": "知识管理",
+        "en": "knowledge management"
+      },
+      "query": "knowledge management",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "platform_governance",
+      "labels": {
+        "zh": "平台治理",
+        "en": "platform governance"
+      },
+      "query": "platform governance",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 98,
+      "hard_gate_pass_count": 11,
+      "eligible_count": 3,
+      "boundary_count": 8,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "platform governance",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 471051,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:45.517530+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4141.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 87,
+        "missing_source_title": 5,
+        "wrong_document_type": 10
+      },
+      "dedupe_event_count": 18,
+      "top_candidates": [
+        {
+          "paper_id": "paper_5b975bc153b00d649c0a",
+          "title": "Self-Organization and Governance in Digital Platform Ecosystems: An Information Ecology Approach",
+          "year": 2024,
+          "journal": "MIS Quarterly",
+          "doi": "10.25300/misq/2024/18413",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 80.6,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 90.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 76.41,
+              "recency": 60.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_23ac6297b95e02138528",
+          "title": "Shaping Platform Governance Principles to Manage Interorganizational Data Exchange",
+          "year": 2025,
+          "journal": "Information Systems Journal",
+          "doi": "10.1111/isj.12592",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 73.79,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 82.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 38.82,
+              "recency": 80.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_e4e2e7aeddb9607c4b44",
+          "title": "The dark side of digitalization and social media platform governance: a citizen engagement study",
+          "year": 2023,
+          "journal": "Internet Research",
+          "doi": "10.1108/intr-03-2022-0142",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 73.74,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 82.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 78.24,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "recommender_systems",
+      "labels": {
+        "zh": "推荐系统与推荐算法",
+        "en": "recommender systems and algorithms"
+      },
+      "query": "recommender systems and algorithms",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "recommender systems and algorithms",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 652072,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:10.953556+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5406.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "missing_source_title": 14,
+        "wrong_document_type": 25,
+        "source_not_qualified": 98
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "scientometrics",
+      "labels": {
+        "zh": "科学计量与文献计量",
+        "en": "scientometrics and bibliometrics"
+      },
+      "query": "scientometrics and bibliometrics",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "social_media",
+      "labels": {
+        "zh": "社交媒体",
+        "en": "social media"
+      },
+      "query": "social media",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social media",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2458846,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:50.860709+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5516.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 98,
+        "wrong_document_type": 5,
+        "missing_source_title": 1
+      },
+      "dedupe_event_count": 1,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "technology_adoption",
+      "labels": {
+        "zh": "技术与AI采纳",
+        "en": "technology and AI adoption"
+      },
+      "query": "technology and AI adoption",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 4,
+      "eligible_count": 0,
+      "boundary_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technology and AI adoption",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 440920,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:39.575273+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5859.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 95,
+        "missing_source_title": 2,
+        "wrong_document_type": 7
+      },
+      "dedupe_event_count": 4,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_ai_enabled_information_systems",
+      "labels": {
+        "zh": "AI赋能信息系统",
+        "en": "AI-enabled information systems"
+      },
+      "query": "AI-enabled information systems",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 1,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "AI-enabled information systems",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 926877,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:54.527929+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4703.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 96,
+        "wrong_document_type": 7,
+        "missing_source_title": 2
+      },
+      "dedupe_event_count": 10,
+      "top_candidates": [
+        {
+          "paper_id": "paper_107df55b7848e11daab6",
+          "title": "Generative Artificial Intelligence: Evolving Technology, Growing Societal Impact, and Opportunities for Information Systems Research",
+          "year": 2025,
+          "journal": "Information Systems Frontiers",
+          "doi": "10.1007/s10796-025-10581-7",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 70.37,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 63.14,
+              "lexical_coverage": 57.14,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 80.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_ai_trust",
+      "labels": {
+        "zh": "AI信任",
+        "en": "trust in AI"
+      },
+      "query": "trust in AI",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 2,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "trust in AI",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 492787,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:03.072397+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4953.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 97,
+        "wrong_document_type": 15,
+        "missing_source_title": 10,
+        "retraction_or_correction": 1
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": [
+        {
+          "paper_id": "paper_97fae86b8a7e9e2322ed",
+          "title": "The transparency dilemma: How AI disclosure erodes trust",
+          "year": 2025,
+          "journal": "Organizational Behavior and Human Decision Processes",
+          "doi": "10.1016/j.obhdp.2025.104405",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 76.5,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 73.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 80.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_43c20cbcb7da9c38c9ba",
+          "title": "Relationship Between Trust in the AI Creator and Trust in AI Systems: The Crucial Role of AI Alignment and Steerability",
+          "year": 2024,
+          "journal": "Journal of Management Information Systems",
+          "doi": "10.1080/07421222.2024.2376382",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 72.98,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 73.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 84.77,
+              "recency": 60.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_algorithm_aversion_appreciation",
+      "labels": {
+        "zh": "算法厌恶与算法欣赏",
+        "en": "algorithm aversion and appreciation"
+      },
+      "query": "algorithm aversion and appreciation",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 7,
+      "eligible_count": 3,
+      "boundary_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "algorithm aversion and appreciation",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3214,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:08.107303+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5172.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "retraction_or_correction": 2,
+        "source_not_qualified": 92,
+        "missing_source_title": 9,
+        "wrong_document_type": 22
+      },
+      "dedupe_event_count": 2,
+      "top_candidates": [
+        {
+          "paper_id": "paper_dbae685c8edee48a842f",
+          "title": "AI aversion or appreciation? A capability–personalization framework and a meta-analytic review.",
+          "year": 2025,
+          "journal": "Psychological Bulletin",
+          "doi": "10.1037/bul0000477",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 82.2,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 88.17,
+              "lexical_coverage": 83.33,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 91.43,
+              "recency": 80.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_1f88f3a4b5417d148c0b",
+          "title": "Prejudiced against the Machine? Implicit Associations and the Transience of Algorithm Aversion",
+          "year": 2023,
+          "journal": "MIS Quarterly",
+          "doi": "10.25300/misq/2022/17961",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 75.02,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 77.33,
+              "lexical_coverage": 66.67,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_412e4cedbc91cc1d576c",
+          "title": "An Integrative Perspective on Algorithm Aversion and Appreciation in Decision-Making",
+          "year": 2024,
+          "journal": "MIS Quarterly",
+          "doi": "10.25300/misq/2024/18512",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 73.35,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 74.5,
+              "lexical_coverage": 50.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 98.21,
+              "recency": 60.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_algorithmic_management",
+      "labels": {
+        "zh": "算法管理",
+        "en": "algorithmic management"
+      },
+      "query": "algorithmic management",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 4,
+      "eligible_count": 0,
+      "boundary_count": 4,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "algorithmic management",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1576698,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:49.706490+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3390.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 95,
+        "wrong_document_type": 7,
+        "missing_source_title": 2
+      },
+      "dedupe_event_count": 16,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_algorithmic_news",
+      "labels": {
+        "zh": "算法新闻",
+        "en": "algorithmic news"
+      },
+      "query": "algorithmic news",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_anthropomorphism",
+      "labels": {
+        "zh": "拟人化",
+        "en": "anthropomorphism"
+      },
+      "query": "anthropomorphism",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 0,
+      "boundary_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "anthropomorphism",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 21001,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:13.358164+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3688.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 97,
+        "missing_source_title": 4,
+        "wrong_document_type": 4
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_attention",
+      "labels": {
+        "zh": "注意力",
+        "en": "attention"
+      },
+      "query": "attention",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_cognitive_load",
+      "labels": {
+        "zh": "认知负荷",
+        "en": "cognitive load"
+      },
+      "query": "cognitive load",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "cognitive load",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 439653,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:17.108953+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3813.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 100,
+        "wrong_document_type": 2
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_content_moderation",
+      "labels": {
+        "zh": "内容审核",
+        "en": "content moderation"
+      },
+      "query": "content moderation",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_data_governance",
+      "labels": {
+        "zh": "数据治理",
+        "en": "data governance"
+      },
+      "query": "data governance",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_data_knowledge",
+      "labels": {
+        "zh": "数据与知识",
+        "en": "data and knowledge"
+      },
+      "query": "data and knowledge",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_data_management",
+      "labels": {
+        "zh": "数据管理",
+        "en": "data management"
+      },
+      "query": "data management",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_data_mining",
+      "labels": {
+        "zh": "数据挖掘",
+        "en": "data mining"
+      },
+      "query": "data mining",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 1,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "data mining",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1009901,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:44.654631+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4906.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 99,
+        "missing_source_title": 11,
+        "wrong_document_type": 26
+      },
+      "dedupe_event_count": 2,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_decision_intelligence",
+      "labels": {
+        "zh": "决策智能",
+        "en": "decision intelligence"
+      },
+      "query": "decision intelligence",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_decision_support",
+      "labels": {
+        "zh": "决策支持",
+        "en": "decision support systems"
+      },
+      "query": "decision support systems",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_digital_artifact_design",
+      "labels": {
+        "zh": "数字人工物设计",
+        "en": "digital artifact design"
+      },
+      "query": "digital artifact design",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 6,
+      "eligible_count": 0,
+      "boundary_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital artifact design",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 173414,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:59.293837+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3703.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 93,
+        "missing_source_title": 6,
+        "wrong_document_type": 13
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_digital_information_environment",
+      "labels": {
+        "zh": "数字信息环境",
+        "en": "digital information environment"
+      },
+      "query": "digital information environment",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_digital_innovation",
+      "labels": {
+        "zh": "数字创新",
+        "en": "digital innovation"
+      },
+      "query": "digital innovation",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 8,
+      "eligible_count": 2,
+      "boundary_count": 6,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital innovation",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1417100,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:00.812333+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4922.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 92,
+        "wrong_document_type": 1
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": [
+        {
+          "paper_id": "paper_d19a27392723df43f2bf",
+          "title": "Attention to Digital Innovation: Exploring the Impact of a Chief Information Officer in the Top Management Team",
+          "year": 2023,
+          "journal": "MIS Quarterly",
+          "doi": "10.25300/misq/2023/17152",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 80.94,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 90.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 99.78,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_b0c463d3d7189cf4eb85",
+          "title": "Interoperability in the era of digital innovation: An information systems research agenda",
+          "year": 2022,
+          "journal": "Journal of Information Technology",
+          "doi": "10.1177/02683962211064304",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 76.67,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 90.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 99.57,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_digital_markets",
+      "labels": {
+        "zh": "数字市场",
+        "en": "digital markets"
+      },
+      "query": "digital markets",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital markets",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1044785,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:53.159779+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4437.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 97,
+        "wrong_document_type": 18,
+        "missing_source_title": 6,
+        "retraction_or_correction": 1
+      },
+      "dedupe_event_count": 2,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_digital_strategy",
+      "labels": {
+        "zh": "数字战略",
+        "en": "digital strategy"
+      },
+      "query": "digital strategy",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital strategy",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2290833,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:05.833504+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5062.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 100,
+        "wrong_document_type": 9,
+        "missing_source_title": 2
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_digital_transformation",
+      "labels": {
+        "zh": "数字化转型",
+        "en": "digital transformation"
+      },
+      "query": "digital transformation",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 1,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital transformation",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1251251,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:45.939633+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4860.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 98,
+        "wrong_document_type": 4
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_emotion",
+      "labels": {
+        "zh": "情绪",
+        "en": "emotion"
+      },
+      "query": "emotion",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_generative_ai",
+      "labels": {
+        "zh": "生成式AI",
+        "en": "generative AI"
+      },
+      "query": "generative AI",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_hci",
+      "labels": {
+        "zh": "人机交互研究",
+        "en": "human-computer interaction"
+      },
+      "query": "human-computer interaction",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 5,
+      "eligible_count": 4,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "human-computer interaction",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1045489,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:37.958358+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5281.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 94,
+        "wrong_document_type": 24,
+        "missing_source_title": 11,
+        "retraction_or_correction": 1
+      },
+      "dedupe_event_count": 28,
+      "top_candidates": [
+        {
+          "paper_id": "paper_a0f3f86c85ff56182877",
+          "title": "Post-growth Human–Computer Interaction",
+          "year": 2023,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3624981",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 80.42,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 94.0,
+              "lexical_coverage": 80.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 98.21,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_0f084d9271215c28f864",
+          "title": "Optimal Feedback Control for Modeling Human–Computer Interaction",
+          "year": 2022,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3524122",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 75.58,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 94.0,
+              "lexical_coverage": 80.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 69.75,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_96dbea60eec2dfc97b02",
+          "title": "On the Design of and Interaction with Conversational Agents: An Organizing and Assessing Review of Human-Computer Interaction Research",
+          "year": 2022,
+          "journal": "Journal of the Association for Information Systems",
+          "doi": "10.17705/1jais.00724",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 73.3,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 81.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        },
+        {
+          "paper_id": "paper_6e4bfb1e049f05c28cf1",
+          "title": "The Placebo Effect of Artificial Intelligence in Human–Computer Interaction",
+          "year": 2022,
+          "journal": "ACM Transactions on Computer-Human Interaction",
+          "doi": "10.1145/3529225",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 71.05,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 81.0,
+              "lexical_coverage": 60.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_human_ai_communication",
+      "labels": {
+        "zh": "人机传播",
+        "en": "human-AI communication"
+      },
+      "query": "human-AI communication",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_human_ai_teams",
+      "labels": {
+        "zh": "人机团队",
+        "en": "human-AI teams"
+      },
+      "query": "human-AI teams",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_identity",
+      "labels": {
+        "zh": "身份认同",
+        "en": "identity"
+      },
+      "query": "identity",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_influencers",
+      "labels": {
+        "zh": "社交媒体影响者",
+        "en": "social media influencers"
+      },
+      "query": "social media influencers",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_information_overload",
+      "labels": {
+        "zh": "信息过载",
+        "en": "information overload"
+      },
+      "query": "information overload",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "information overload",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 260621,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:19.429267+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3656.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 98,
+        "wrong_document_type": 3,
+        "missing_source_title": 3
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_information_science",
+      "labels": {
+        "zh": "信息科学",
+        "en": "information science"
+      },
+      "query": "information science",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_it_governance",
+      "labels": {
+        "zh": "IT治理",
+        "en": "IT governance"
+      },
+      "query": "IT governance",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 0,
+      "boundary_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "IT governance",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1457559,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:57.657147+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3094.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 97,
+        "wrong_document_type": 20,
+        "missing_source_title": 8
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_judgment_decision_making",
+      "labels": {
+        "zh": "判断与决策",
+        "en": "judgment and decision making"
+      },
+      "query": "judgment and decision making",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_knowledge_discovery",
+      "labels": {
+        "zh": "知识发现",
+        "en": "knowledge discovery"
+      },
+      "query": "knowledge discovery",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 98,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "knowledge discovery",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1019341,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:49.623653+00:00",
+        "transport": {
+          "attempts": 2,
+          "duration_ms": 29750.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "missing_source_title": 10,
+        "wrong_document_type": 32,
+        "source_not_qualified": 95,
+        "retraction_or_correction": 2
+      },
+      "dedupe_event_count": 2,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_knowledge_graph",
+      "labels": {
+        "zh": "知识图谱",
+        "en": "knowledge graphs"
+      },
+      "query": "knowledge graphs",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_machine_learning",
+      "labels": {
+        "zh": "机器学习",
+        "en": "machine learning"
+      },
+      "query": "machine learning",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "machine learning",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2856115,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:43.287804+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5562.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 100,
+        "wrong_document_type": 9,
+        "missing_title": 1,
+        "missing_source_title": 4
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_misinformation",
+      "labels": {
+        "zh": "错误信息",
+        "en": "misinformation"
+      },
+      "query": "misinformation",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_news_consumption",
+      "labels": {
+        "zh": "新闻消费",
+        "en": "news consumption"
+      },
+      "query": "news consumption",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_organizational_information",
+      "labels": {
+        "zh": "组织信息",
+        "en": "organizational information"
+      },
+      "query": "organizational information",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_political_communication",
+      "labels": {
+        "zh": "政治传播",
+        "en": "political communication"
+      },
+      "query": "political communication",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_privacy_concern",
+      "labels": {
+        "zh": "隐私关注",
+        "en": "privacy concern"
+      },
+      "query": "privacy concern",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "privacy concern",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 556279,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:23.151594+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 3453.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 98,
+        "missing_source_title": 4,
+        "wrong_document_type": 11
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_privacy_security",
+      "labels": {
+        "zh": "隐私与安全",
+        "en": "privacy and security"
+      },
+      "query": "privacy and security",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 98,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 1,
+      "boundary_count": 2,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "privacy and security",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 522022,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:45:56.445397+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4938.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 95,
+        "wrong_document_type": 17,
+        "missing_source_title": 8,
+        "retraction_or_correction": 1
+      },
+      "dedupe_event_count": 20,
+      "top_candidates": [
+        {
+          "paper_id": "paper_bbea598513d028646814",
+          "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+          "year": 2023,
+          "journal": "International Journal of Information Management",
+          "doi": "10.1016/j.ijinfomgt.2023.102642",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 70.31,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 66.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 85.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_scholarly_communication",
+      "labels": {
+        "zh": "学术传播",
+        "en": "scholarly communication"
+      },
+      "query": "scholarly communication",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_social_influence",
+      "labels": {
+        "zh": "社会影响",
+        "en": "social influence"
+      },
+      "query": "social influence",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "social influence",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 3866250,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:47:20.992630+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5766.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "wrong_document_type": 2,
+        "source_not_qualified": 100,
+        "missing_source_title": 1
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_software_system_design",
+      "labels": {
+        "zh": "软件与系统设计",
+        "en": "software and system design"
+      },
+      "query": "software and system design",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 1,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "software and system design",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2794682,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:48.902017+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5562.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 99,
+        "missing_source_title": 17,
+        "wrong_document_type": 25
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_technology_use",
+      "labels": {
+        "zh": "技术使用",
+        "en": "technology use"
+      },
+      "query": "technology use",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 99,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "technology use",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 7758184,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:01.419581+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5375.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 99,
+        "wrong_document_type": 5,
+        "missing_source_title": 2
+      },
+      "dedupe_event_count": 1,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_technostress",
+      "labels": {
+        "zh": "技术压力",
+        "en": "technostress"
+      },
+      "query": "technostress",
+      "status": "provider_failed",
+      "error_type": "HTTPError",
+      "http_status": 429,
+      "raw_count": 0,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0
+    },
+    {
+      "direction_id": "topic_在线行为",
+      "labels": {
+        "zh": "在线行为",
+        "en": "online behavior"
+      },
+      "query": "online behavior",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 3,
+      "eligible_count": 0,
+      "boundary_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "online behavior",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 2462761,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:26.900967+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4406.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 97,
+        "wrong_document_type": 6,
+        "missing_source_title": 3
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_平台经济",
+      "labels": {
+        "zh": "平台经济",
+        "en": "platform economy"
+      },
+      "query": "platform economy",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 1,
+      "eligible_count": 1,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "platform economy",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 660128,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:06.860356+00:00",
+        "transport": {
+          "attempts": 2,
+          "duration_ms": 31594.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 99,
+        "wrong_document_type": 15,
+        "missing_source_title": 5
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": [
+        {
+          "paper_id": "paper_a2d6505e49b1ecf40b9d",
+          "title": "Two-Sided Platform Competition in a Sharing Economy",
+          "year": 2022,
+          "journal": "Management Science",
+          "doi": "10.1287/mnsc.2022.4302",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 76.16,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 82.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 100.0,
+              "recency": 20.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_数字广告",
+      "labels": {
+        "zh": "数字广告",
+        "en": "digital advertising"
+      },
+      "query": "digital advertising",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 98,
+      "hard_gate_pass_count": 4,
+      "eligible_count": 1,
+      "boundary_count": 3,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "digital advertising",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 189324,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:21.104941+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 5734.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 94,
+        "missing_source_title": 5,
+        "wrong_document_type": 14
+      },
+      "dedupe_event_count": 3,
+      "top_candidates": [
+        {
+          "paper_id": "paper_7ca9460f68e0bf97903d",
+          "title": "The Consumption of Advertising in the Digital Age: Attention and Ad Content",
+          "year": 2023,
+          "journal": "Management Science",
+          "doi": "10.1287/mnsc.2023.4793",
+          "score": {
+            "config_version": "p1-metadata-score-1.0.0",
+            "total": 74.86,
+            "band": "eligible",
+            "components": {
+              "semantic_relevance": 82.75,
+              "lexical_coverage": 75.0,
+              "source_quality": 100.0,
+              "field_year_normalized_impact": 66.98,
+              "recency": 40.0,
+              "evidence_completeness": 72.0,
+              "cross_source_agreement": 35.0
+            },
+            "weights": {
+              "semantic_relevance": 0.35,
+              "lexical_coverage": 0.15,
+              "source_quality": 0.15,
+              "field_year_normalized_impact": 0.1,
+              "recency": 0.1,
+              "evidence_completeness": 0.1,
+              "cross_source_agreement": 0.05
+            },
+            "semantic_method": "deterministic_lexical_proxy_pending_embedding_calibration",
+            "impact_method": "bounded_raw_citation_proxy_pending_field_year_calibration",
+            "threshold_calibration_status": "uncalibrated"
+          }
+        }
+      ]
+    },
+    {
+      "direction_id": "topic_电商",
+      "labels": {
+        "zh": "电子商务",
+        "en": "electronic commerce"
+      },
+      "query": "electronic commerce",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 97,
+      "hard_gate_pass_count": 2,
+      "eligible_count": 0,
+      "boundary_count": 1,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "electronic commerce",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 174696,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:16.429206+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 4625.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 95,
+        "wrong_document_type": 13,
+        "missing_source_title": 4,
+        "retraction_or_correction": 1
+      },
+      "dedupe_event_count": 3,
+      "top_candidates": []
+    },
+    {
+      "direction_id": "topic_算法机制",
+      "labels": {
+        "zh": "算法机制",
+        "en": "algorithmic mechanisms"
+      },
+      "query": "algorithmic mechanisms",
+      "status": "ok",
+      "raw_count": 100,
+      "deduplicated_count": 100,
+      "hard_gate_pass_count": 0,
+      "eligible_count": 0,
+      "boundary_count": 0,
+      "raw_target_met": true,
+      "eligible_target_met": false,
+      "provider_meta": {
+        "provider": "openalex",
+        "status": "ok",
+        "query": "algorithmic mechanisms",
+        "from_date": "2022-01-01",
+        "to_date": "2026-08-22",
+        "requested_rows": 100,
+        "provider_match_count": 1741130,
+        "returned_rows": 100,
+        "queried_at": "2026-08-21T19:46:31.388012+00:00",
+        "transport": {
+          "attempts": 1,
+          "duration_ms": 6500.0,
+          "authenticated": false,
+          "http_status": 200
+        },
+        "cost_usd": 0.001
+      },
+      "exclusion_counts": {
+        "source_not_qualified": 100,
+        "missing_source_title": 3,
+        "wrong_document_type": 3
+      },
+      "dedupe_event_count": 0,
+      "top_candidates": []
+    }
+  ]
+}

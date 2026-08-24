@@ -1,0 +1,7 @@
+services:
+  grobid:
+    image: lfoppiano/grobid@sha256:24ba90eb1c959f65d812bcdb2cf79c677fa5fd7b95235de616b8bc9fa1317849
+    container_name: is-im-grobid-0-9-0
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8070:8070"
