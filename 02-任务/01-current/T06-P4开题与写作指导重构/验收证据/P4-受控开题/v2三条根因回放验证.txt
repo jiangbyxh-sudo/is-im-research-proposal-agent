@@ -1,0 +1,26 @@
+== constraint_alignment (fixed) ==
+{
+ "version": "phase-e-constraint-alignment-1.2.0",
+ "valid": false,
+ "errors": [
+  "timeline_duration_24m_exceeds_4m_to_deadline",
+  "timeline_start_2025-01_before_today_2026-08",
+  "background:words_611_below_624"
+ ],
+ "checks": [
+  "timeline_vs_deadline",
+  "timeline_start_not_before_today",
+  "section_words_vs_outline",
+  "data_scope_consistency"
+ ]
+}
+
+== arena scope (fixed) ==
+scope: ['literature_status', 'theoretical_framework', 'research_design', 'background', 'contributions'] count: 5
+
+expected:
+- human_subject errors: none (negation/secondary-qualified)
+- timeline_start_2025-01_before_today_2026-08 present
+- background words shortfall kept (real violation)
+- timeline duration kept (real violation)
+- arena scope <= 5 with BASE first

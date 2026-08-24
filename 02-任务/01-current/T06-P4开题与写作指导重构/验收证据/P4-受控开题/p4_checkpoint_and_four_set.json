@@ -1,7 +1,7 @@
 {
   "report": {
-    "generated_at": "2026-08-23T14:11:01.134036+00:00",
-    "arena_version": "p4-athlete-judge-review-1.0.0",
+    "generated_at": "2026-08-23T16:04:01.691349+00:00",
+    "arena_version": "p4-athlete-judge-review-1.2.0",
     "runs": {
       "honest": {
         "mode": "honest",

@@ -1,0 +1,1390 @@
+{
+ "state": "GAP_CANDIDATES_READY",
+ "synthesis_status": "SYNTHESIS_COMPLETE",
+ "synthesis_message": "已对 direct 论文完成确定性五方向聚类；模型仅命名固定簇。",
+ "top_subdirections": [
+  {
+   "cluster_id": "cluster_001",
+   "paper_ids": [
+    "paper_036387f91076df46a121",
+    "paper_2005eb8b7f62511477f8",
+    "paper_4146ec045086e125b0a6",
+    "paper_5b975bc153b00d649c0a",
+    "paper_5c78078eaf1ee0641dad",
+    "paper_6d723db4391e2218f90d",
+    "paper_6e440d1866b1632c3b72",
+    "paper_8b102dfad988ac7867ac",
+    "paper_8ce882589a6d17b0b87d",
+    "paper_919a39f9aacfa11148c1",
+    "paper_968796153955451a9404",
+    "paper_b13d374f9aec5a7f90e9",
+    "paper_b71bbd050bbdef68d4b1",
+    "paper_cde19672d3fe6a0365b5",
+    "paper_d174fe23e9cfa78cab6e",
+    "paper_d430a8bc1332ee832515",
+    "paper_e292e33b875dc8533d33",
+    "paper_f2484f1ed559c228f8ab",
+    "paper_f84580038c569402ee81"
+   ],
+   "paper_count": 19,
+   "feature_terms": [
+    "platform",
+    "complementors",
+    "governance",
+    "that",
+    "digital",
+    "how",
+    "platforms",
+    "complementor",
+    "ecosystem",
+    "genai"
+   ],
+   "sample_titles": [
+    "Digital intermediaries and transparency reports as strategic communications",
+    "Customer Complaint Avoidance: A Randomized Field Experiment of Platform Governance Based on Value Co-Creation and Appropriation",
+    "Sustaining complementor engagement in digital platform ecosystems: Antecedents, behaviours and engagement trajectories",
+    "Self-Organization and Governance in Digital Platform Ecosystems: An Information Ecology Approach",
+    "Responding to platform owner moves: A 14‐year qualitative study of four enterprise software complementors"
+   ],
+   "heat": 0.644,
+   "heat_components": {
+    "paper_share": 0.5278,
+    "recent_growth": 0.6316,
+    "citation_velocity": 0.8089,
+    "match_score": 0.4978,
+    "source_quality": 0.9132
+   },
+   "name_zh": "数字平台生态系统治理",
+   "name_en": "Digital Platform Ecosystem Governance",
+   "description": "聚焦数字平台生态系统中平台所有者与互补者之间的治理机制、互动关系与价值共创。",
+   "selected_from": "athlete_a",
+   "judge_reason": "候选一更简洁地概括了平台生态系统治理的核心主题，边界清晰。",
+   "subdirection_id": "cluster_001"
+  },
+  {
+   "cluster_id": "cluster_002",
+   "paper_ids": [
+    "paper_23ac6297b95e02138528",
+    "paper_9d9fe94ec83444cf4131",
+    "paper_c342fc4a3e318956a4a3",
+    "paper_c770d348ddfdcba5d96d",
+    "paper_c93d6804405a40720e6f",
+    "paper_dadd31d9e1dede3c0799"
+   ],
+   "paper_count": 6,
+   "feature_terms": [
+    "keyword::world wide web",
+    "data",
+    "their",
+    "principles",
+    "design",
+    "platform",
+    "meta",
+    "have",
+    "platforms",
+    "approach"
+   ],
+   "sample_titles": [
+    "Shaping Platform Governance Principles to Manage Interorganizational Data Exchange",
+    "Engaging with deepfakes: a meta-synthesis from the perspective of social shaping of technology theory",
+    "Identifying the patterns: Towards a systematic approach to digital platform regulation",
+    "Designing Digital Platforms for Social Justice: Empowering End Users Through the Dataswyft Platform",
+    "Throwing Good Money After Bad: Risk Mitigation Strategies in the P2P Lending Platforms"
+   ],
+   "heat": 0.4529,
+   "heat_components": {
+    "paper_share": 0.1667,
+    "recent_growth": 0.5,
+    "citation_velocity": 0.6356,
+    "match_score": 0.4054,
+    "source_quality": 0.9
+   },
+   "name_zh": "平台治理原则与数据交换",
+   "name_en": "Platform Governance Principles and Data Exchange",
+   "description": "探讨平台治理原则的设计、数据交换管理及平台监管的系统方法。",
+   "selected_from": "athlete_a",
+   "judge_reason": "候选一更准确地聚焦于治理原则与数据交换，避免冗余。",
+   "subdirection_id": "cluster_002"
+  },
+  {
+   "cluster_id": "cluster_003",
+   "paper_ids": [
+    "paper_a392b283ed89624c43bb",
+    "paper_a7e8850aefd2913d91b1",
+    "paper_d0cfea98e699c9b274e6",
+    "paper_e4e2e7aeddb9607c4b44",
+    "paper_ec388272b727ba120e03"
+   ],
+   "paper_count": 5,
+   "feature_terms": [
+    "government",
+    "platform",
+    "digital",
+    "development",
+    "governance",
+    "authors",
+    "collaborative",
+    "current",
+    "regulation",
+    "technical"
+   ],
+   "sample_titles": [
+    "Digital platform regulation: opportunities for information systems research",
+    "Research on the platform multi-party collaborative governance mechanism based on two-stage evolutionary game theory",
+    "From governmental regulation to multifunctional adaptation",
+    "The dark side of digitalization and social media platform governance: a citizen engagement study",
+    "Open government, civic tech and digital platforms in Latin America: A governance study of Montevideo's urban app ‘Por Mi Barrio’"
+   ],
+   "heat": 0.3889,
+   "heat_components": {
+    "paper_share": 0.1389,
+    "recent_growth": 0.4,
+    "citation_velocity": 0.45,
+    "match_score": 0.4812,
+    "source_quality": 0.85
+   },
+   "name_zh": "平台监管与多方协同治理",
+   "name_en": "Platform Regulation and Multi-party Collaborative Governance",
+   "description": "研究数字平台的政府监管、多方协同治理机制及公民参与。",
+   "selected_from": "athlete_a",
+   "judge_reason": "候选一更直接地概括了平台监管与多方协同治理，边界清晰。",
+   "subdirection_id": "cluster_003"
+  },
+  {
+   "cluster_id": "cluster_004",
+   "paper_ids": [
+    "paper_408882879ee832926e11",
+    "paper_4f6f00acfcafa976fb55",
+    "paper_78f6d9dc11fd7a672f86"
+   ],
+   "paper_count": 3,
+   "feature_terms": [
+    "algorithmic",
+    "stakeholder",
+    "information",
+    "management",
+    "transparency",
+    "scenarios",
+    "users",
+    "consumer",
+    "reward",
+    "topic::fintech, crowdfunding, digital finance"
+   ],
+   "sample_titles": [
+    "Strategic Friction in Reward Portfolios: A Game-Theoretic Analysis of Platform Governance under Hyper-Transparency",
+    "Transparency And Visibility In Algorithmic Management: Configuring Coordination And Control In Platform Governance",
+    "Algorithmic Stakeholder Governance on Content Platforms: A Lead Role Perspective"
+   ],
+   "heat": 0.4658,
+   "heat_components": {
+    "paper_share": 0.0833,
+    "recent_growth": 1.0,
+    "citation_velocity": 0.0833,
+    "match_score": 0.4942,
+    "source_quality": 1.0
+   },
+   "name_zh": "算法治理与利益相关者管理",
+   "name_en": "Algorithmic Governance and Stakeholder Management",
+   "description": "关注平台中的算法管理、透明度及利益相关者治理策略。",
+   "selected_from": "athlete_a",
+   "judge_reason": "候选一更简洁地概括了算法治理与利益相关者管理，避免过度具体化。",
+   "subdirection_id": "cluster_004"
+  },
+  {
+   "cluster_id": "cluster_005",
+   "paper_ids": [
+    "paper_71bee12b989988784833",
+    "paper_97cf2d51caa7f093eb29",
+    "paper_ac3cebc5ab485bcf16ed"
+   ],
+   "paper_count": 3,
+   "feature_terms": [
+    "orchestration",
+    "evolution",
+    "regulatory",
+    "firms",
+    "externalities",
+    "governance",
+    "platform",
+    "keyword::context (archaeology)",
+    "keyword::information governance",
+    "legitimacy"
+   ],
+   "sample_titles": [
+    "From Open Banking Regulation to Platform Orchestration: The Evolution of Digital Platform Governance",
+    "Platform governance in the face of negative network externalities: a moral and regulatory legitimacy perspective",
+    "How platforms drive the evolution of governance mechanisms"
+   ],
+   "heat": 0.4591,
+   "heat_components": {
+    "paper_share": 0.0833,
+    "recent_growth": 1.0,
+    "citation_velocity": 0.0667,
+    "match_score": 0.5716,
+    "source_quality": 0.85
+   },
+   "name_zh": "平台治理演化与编排",
+   "name_en": "Platform Governance Evolution and Orchestration",
+   "description": "分析平台治理机制的演化、编排及应对负网络外部性的合法性问题。",
+   "selected_from": "athlete_a",
+   "judge_reason": "候选一更准确地概括了平台治理的演化与编排，边界清晰。",
+   "subdirection_id": "cluster_005"
+  }
+ ],
+ "gap_candidates": [
+  {
+   "gap_id": "gap_8954c484edeac0f10ad3",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_001",
+   "gap_statement": "现有研究对平台治理中互补者权力动态的刻画存在矛盾：一方面，平台所有者被描述为不对称地行使权力，削弱互补者地位（span_38bb5b7fe7a2a4be2637）；另一方面，互补者能够通过多归属等策略规避治理并保持利益（span_40876156a8e2a72182c4）。这种矛盾表明，互补者权力与平台治理强度之间的关系可能并非线性，而是存在边界条件（如平台类型、互补者规模、技术架构），但现有文献未系统识别这些条件。",
+   "support_claim_id": "claim_668fa1f4a91a01a66ecf",
+   "supporting_paper_ids": [
+    "paper_919a39f9aacfa11148c1",
+    "paper_cde19672d3fe6a0365b5"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_431ba39ee9c713ce6d4e"
+   ],
+   "alternative_explanations": [
+    "互补者权力可能取决于其资源独特性或用户锁定程度，而非治理机制本身",
+    "平台所有者可能策略性地容忍某些互补者的规避行为以维持生态整体活力"
+   ],
+   "research_question": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？",
+   "why_it_matters": "理解互补者何时能够有效对抗平台权力，对于设计公平且可持续的平台治理机制至关重要，尤其影响平台生态系统的长期创新与参与者留存。",
+   "innovation_candidates": [
+    "提出互补者权力抵消的条件组态模型，超越单一线性关系",
+    "引入平台治理动态性视角，解释权力平衡的演化过程"
+   ],
+   "feasible_method": {
+    "design": "多案例比较研究，选取不同治理强度（如严格规则 vs. 宽松自治）和不同互补者特征（如规模、依赖度）的平台",
+    "data": "对平台所有者、互补者及用户的半结构化访谈，辅以平台政策文件和互补者行为数据",
+    "analysis": "模糊集定性比较分析（fsQCA）识别权力抵消的必要与充分条件组合",
+    "unit_of_analysis": "平台-互补者二元关系",
+    "context": "交易型平台（如电商、共享经济）与创新型平台（如软件生态）的对比",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_8954c484edeac0f10ad3",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在何种条件下，互补者能够有效运用多归属等策略来抵消平台所有者的不对称权力？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "b7b6771981df49e408c0b31bfb93e7f09d09953e70c2ac94d74366af063dbfbd"
+   }
+  },
+  {
+   "gap_id": "gap_8ab74c4914c7af9eee5c",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_001",
+   "gap_statement": "生成式AI（GenAI）作为边界资源对平台治理的影响存在理论冲突：有研究认为GenAI的引入通过平台所有者与参与者之间的辩证过程重塑治理逻辑（span_0b4d0264f8a4bf4ab8b1），而另一研究则强调GenAI的自主生成能力从根本上改变平台价值创造与治理架构（span_0a4080e87232894cff17）。然而，现有文献未明确GenAI治理与传统平台治理在机制上的本质差异，也未解释为何不同平台（如企业平台 vs. 消费平台）的GenAI治理演化路径可能不同。",
+   "support_claim_id": "claim_9abed6fbd1a5bc516b35",
+   "supporting_paper_ids": [
+    "paper_6d723db4391e2218f90d",
+    "paper_e292e33b875dc8533d33"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_2cead1a5fa13015cf557"
+   ],
+   "alternative_explanations": [
+    "GenAI治理可能只是传统IT治理的延伸，差异被夸大",
+    "平台治理演化路径的差异可能源于组织惯性而非GenAI特性"
+   ],
+   "research_question": "GenAI作为边界资源，在何种条件下导致平台治理逻辑的根本性转变，而非渐进调整？",
+   "why_it_matters": "GenAI的快速渗透可能颠覆既有平台治理范式，若不能厘清其独特治理挑战，平台所有者可能面临失控风险或错失创新机会。",
+   "innovation_candidates": [
+    "构建GenAI治理变革的触发条件模型，区分根本性转变与渐进调整",
+    "提出“治理逻辑漂移”概念，捕捉GenAI引入后平台治理的隐性演化"
+   ],
+   "feasible_method": {
+    "design": "纵向多案例研究，跟踪至少两个平台（一个企业级、一个消费级）在引入GenAI前后的治理变化",
+    "data": "平台政策文件、开发者文档、高管访谈、新闻报道及平台治理事件日志",
+    "analysis": "过程追踪与事件序列分析，比较关键转折点与治理机制变化",
+    "unit_of_analysis": "平台治理机制（如规则、激励、边界资源设计）",
+    "context": "企业平台（如Salesforce）与消费平台（如内容创作平台）的对比",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_8ab74c4914c7af9eee5c",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "GenAI作为边界资源，在何种条件下导致平台治理逻辑的根本性转变，而非渐进调整？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "GenAI作为边界资源，在何种条件下导致平台治理逻辑的根本性转变，而非渐进调整？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "GenAI作为边界资源，在何种条件下导致平台治理逻辑的根本性转变，而非渐进调整？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "GenAI作为边界资源，在何种条件下导致平台治理逻辑的根本性转变，而非渐进调整？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "03ea3f5d08a467284c9b0bc6173dc5b830230ef9d350bffe95a3a9625e010296"
+   }
+  },
+  {
+   "gap_id": "gap_58c9bf007fbc00432223",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_002",
+   "gap_statement": "现有研究提出了平台治理原则（如灵活数字平台、企业数据经纪人、互信、多层次货币化）和设计理论（如以终端用户为中心的数据主权），但缺乏对这些原则在不同平台类型（如P2P借贷、内容平台、工业数据交换网络）间可转移性和情境适用性的系统检验。",
+   "support_claim_id": "claim_8252b0e3588ee40aee86",
+   "supporting_paper_ids": [
+    "paper_23ac6297b95e02138528",
+    "paper_c770d348ddfdcba5d96d",
+    "paper_c93d6804405a40720e6f",
+    "paper_dadd31d9e1dede3c0799"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_01b5ff4ecc5c9803c24c"
+   ],
+   "alternative_explanations": [
+    "原则可能具有普遍性，但需要根据平台特征进行微调，而非完全不可转移。",
+    "缺乏跨情境检验可能源于研究设计限制，而非原则本身无效。"
+   ],
+   "research_question": "平台治理原则在不同平台类型（如交易型、内容型、数据交换型）中的适用性有何差异？哪些原则是通用的，哪些是情境特定的？",
+   "why_it_matters": "平台治理原则的普适性尚未得到验证，若原则仅适用于特定情境，则实践者可能错误应用，导致治理失效或资源浪费。",
+   "innovation_candidates": [
+    "开发平台治理原则的情境适配框架，指导实践者根据平台特征选择原则。",
+    "识别通用原则与情境特定原则的边界条件，为理论整合提供基础。"
+   ],
+   "feasible_method": {
+    "design": "多案例比较研究，选取不同平台类型（如P2P借贷平台、Reddit、Catena-X网络）进行对比分析。",
+    "data": "公开的治理文档、平台规则、案例报告、访谈数据（如可能）。",
+    "analysis": "定性比较分析（QCA）或模式匹配，识别原则与情境的匹配关系。",
+    "unit_of_analysis": "平台治理原则",
+    "context": "跨平台类型（交易型、内容型、工业数据交换型）",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_58c9bf007fbc00432223",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "平台治理原则在不同平台类型（如交易型、内容型、数据交换型）中的适用性有何差异？哪些原则是通用的，哪些是情境特定的？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "平台治理原则在不同平台类型（如交易型、内容型、数据交换型）中的适用性有何差异？哪些原则是通用的，哪些是情境特定的？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "平台治理原则在不同平台类型（如交易型、内容型、数据交换型）中的适用性有何差异？哪些原则是通用的，哪些是情境特定的？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "平台治理原则在不同平台类型（如交易型、内容型、数据交换型）中的适用性有何差异？哪些原则是通用的，哪些是情境特定的？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "17885b8930bc0b104e686546ac1a1ff34778d41af8704b1b2d76ca8b3b627233"
+   }
+  },
+  {
+   "gap_id": "gap_64bbbae9c58a8c9ce09c",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_003",
+   "gap_statement": "平台监管研究对监管影响的预测存在边界条件不明：欧盟DMA等监管被预期会侵蚀平台开放、治理、网络效应等核心机制（span_ed2090ef952779662681），但拉丁美洲的案例显示，开放平台架构与协作治理可以促进数字政府转型（span_d66bf28345e370bb3db6）。这种矛盾表明，监管对平台生态的影响可能高度依赖制度环境与平台类型，现有研究未明确其适用边界。",
+   "support_claim_id": "claim_dd2c57a8f81afed58202",
+   "supporting_paper_ids": [
+    "paper_a392b283ed89624c43bb",
+    "paper_ec388272b727ba120e03"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_966e15b2c0fe67a3f162"
+   ],
+   "alternative_explanations": [
+    "拉丁美洲案例中的平台可能属于公共部门平台，其治理逻辑与商业平台不同，监管影响不可直接比较。",
+    "DMA的预期影响基于理论推演，实际效果可能因执行差异而不同。"
+   ],
+   "research_question": "在不同制度环境（如欧盟、拉丁美洲）和平台类型（商业平台 vs 公共平台）下，平台监管对平台开放性与治理模式的影响有何差异？",
+   "why_it_matters": "明确监管影响的边界条件，有助于政策制定者避免一刀切监管，设计适应不同情境的治理策略，同时为平台企业应对监管提供理论指导。",
+   "innovation_candidates": [
+    "构建监管影响的情境化理论，区分监管对商业平台与公共平台的差异化作用路径。",
+    "提出“监管适应性”概念，解释平台在监管压力下的动态调整策略。"
+   ],
+   "feasible_method": {
+    "design": "跨国比较研究，选取欧盟受DMA监管的商业平台与拉丁美洲公共协作平台作为对比案例。",
+    "data": "监管政策文本、平台运营数据、开发者访谈、用户调查。",
+    "analysis": "差异法（Difference-in-Differences）或合成控制法，比较监管前后平台开放性指标变化。",
+    "unit_of_analysis": "平台生态系统",
+    "context": "欧盟数字市场与拉丁美洲数字政府",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_64bbbae9c58a8c9ce09c",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在不同制度环境（如欧盟、拉丁美洲）和平台类型（商业平台 vs 公共平台）下，平台监管对平台开放性与治理模式的影响有何差异？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在不同制度环境（如欧盟、拉丁美洲）和平台类型（商业平台 vs 公共平台）下，平台监管对平台开放性与治理模式的影响有何差异？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在不同制度环境（如欧盟、拉丁美洲）和平台类型（商业平台 vs 公共平台）下，平台监管对平台开放性与治理模式的影响有何差异？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在不同制度环境（如欧盟、拉丁美洲）和平台类型（商业平台 vs 公共平台）下，平台监管对平台开放性与治理模式的影响有何差异？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "f0431d4aefb2e36a7ce71f104c0e718c5d7276bb1f5a43ade971cf10daeb8147"
+   }
+  },
+  {
+   "gap_id": "gap_e6052f690267bc237004",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_003",
+   "gap_statement": "现有研究在平台治理中政府、平台、公民等多方主体的角色与互动机制上存在矛盾：一方面，基于演化博弈的研究强调政府与平台协同、平台承担技术审查义务是治理核心（span_f4c277891eb372bf2780）；另一方面，公民参与研究指出公民声音在平台治理对话中常被忽视，且公民对治理存在多重张力（span_00a42bea5560db901959, span_95a50b5f2ed2dcf59b05）。这种不一致表明，多方协同治理中公民角色的边界条件与整合机制尚不明确。",
+   "support_claim_id": "claim_aa50b85a2662b31e0307",
+   "supporting_paper_ids": [
+    "paper_a7e8850aefd2913d91b1",
+    "paper_e4e2e7aeddb9607c4b44"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_06c378341e032a0a9e0b"
+   ],
+   "alternative_explanations": [
+    "公民参与缺失可能源于研究设计偏好而非实际治理排斥，例如演化博弈模型天然聚焦于正式制度主体。",
+    "公民视角的张力可能反映个体认知差异，而非系统性治理缺陷。"
+   ],
+   "research_question": "在平台多方协同治理中，公民参与如何影响治理结果？不同治理情境（如数字版权、社交媒体内容）下，公民参与的作用机制有何异同？",
+   "why_it_matters": "厘清公民在多方协同治理中的有效参与机制，有助于弥合治理研究与公民日常生活的鸿沟，提升治理合法性与实效性，避免治理沦为政府与平台的封闭博弈。",
+   "innovation_candidates": [
+    "将公民参与从被动接受者重构为协同治理的主动建构者，提出公民参与的条件组态模型。",
+    "整合演化博弈与沟通行动理论，开发多方协同治理的动态分析框架。"
+   ],
+   "feasible_method": {
+    "design": "比较案例研究，选取数字版权治理与社交媒体内容治理两个情境，分析公民参与的角色与效果。",
+    "data": "政策文件、平台规则、公民论坛讨论记录、深度访谈。",
+    "analysis": "定性比较分析（QCA）或过程追踪，识别公民参与的必要/充分条件。",
+    "unit_of_analysis": "治理事件或治理过程",
+    "context": "中国数字平台治理与全球社交媒体平台治理",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_e6052f690267bc237004",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在平台多方协同治理中，公民参与如何影响治理结果？不同治理情境（如数字版权、社交媒体内容）下，公民参与的作用机制有何异同？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在平台多方协同治理中，公民参与如何影响治理结果？不同治理情境（如数字版权、社交媒体内容）下，公民参与的作用机制有何异同？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在平台多方协同治理中，公民参与如何影响治理结果？不同治理情境（如数字版权、社交媒体内容）下，公民参与的作用机制有何异同？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在平台多方协同治理中，公民参与如何影响治理结果？不同治理情境（如数字版权、社交媒体内容）下，公民参与的作用机制有何异同？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "97c17eac41b38e85a0842702a3c41c8050398fa3ca5f0b46e154ef71edfdbcbd"
+   }
+  },
+  {
+   "gap_id": "gap_c2ba5883f11c9e1663ca",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_004",
+   "gap_statement": "现有研究分别探讨了算法透明度对用户行为的影响、算法管理中的信息策略以及算法利益相关者治理，但缺乏对平台如何动态调整算法透明度以平衡不同利益相关者（如消费者、创作者、广告商）之间冲突的机制性解释，特别是在面对用户集体学习导致的奖励优化反噬时。",
+   "support_claim_id": "claim_9c15282a5a7e0f9cc1d5",
+   "supporting_paper_ids": [
+    "paper_408882879ee832926e11",
+    "paper_4f6f00acfcafa976fb55",
+    "paper_78f6d9dc11fd7a672f86"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_0506c67c0dfe195216a6"
+   ],
+   "alternative_explanations": [
+    "平台可能通过非算法手段（如合同条款、用户教育）而非调整透明度来应对用户策略行为。",
+    "用户集体学习可能仅发生在特定平台或奖励类型中，不具有普遍性，因此动态调整透明度的需求可能被高估。"
+   ],
+   "research_question": "平台如何动态调整算法透明度以平衡利益相关者冲突，特别是在用户集体学习导致奖励优化反噬的情境下？",
+   "why_it_matters": "平台在高度透明环境下可能面临用户策略性行为导致的收益侵蚀，而降低透明度又可能损害信任和利益相关者参与。理解动态调整机制有助于平台设计更稳健的治理策略，避免治理失灵。",
+   "innovation_candidates": [
+    "提出算法透明度动态调整的理论框架，整合利益相关者理论和算法治理文献。",
+    "识别用户集体学习作为透明度调整的关键前因，拓展平台治理中的行为视角。"
+   ],
+   "feasible_method": {
+    "design": "纵向案例研究，选择多个经历透明度调整的平台（如信用卡奖励平台、内容平台）进行对比分析。",
+    "data": "平台政策文件、算法更新日志、用户社区讨论（如Reddit）、利益相关者访谈。",
+    "analysis": "过程追踪和模式匹配，识别透明度调整的触发条件、决策过程和结果。",
+    "unit_of_analysis": "平台层面的算法透明度调整事件。",
+    "context": "数字平台，特别是涉及奖励机制和内容治理的平台。",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_c2ba5883f11c9e1663ca",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "平台如何动态调整算法透明度以平衡利益相关者冲突，特别是在用户集体学习导致奖励优化反噬的情境下？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "平台如何动态调整算法透明度以平衡利益相关者冲突，特别是在用户集体学习导致奖励优化反噬的情境下？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "平台如何动态调整算法透明度以平衡利益相关者冲突，特别是在用户集体学习导致奖励优化反噬的情境下？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "平台如何动态调整算法透明度以平衡利益相关者冲突，特别是在用户集体学习导致奖励优化反噬的情境下？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "7e5c435e17e78ece77d6b66ef0e97c28dc9adcf9a17fbeca3c45cb36dee82c7a"
+   }
+  },
+  {
+   "gap_id": "gap_14bcefebd044d7d3eb2f",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_004",
+   "gap_statement": "现有研究在算法治理中透明度的作用上存在矛盾：一方面，超透明（hyper-transparency）导致消费者集体学习并引发“优化反噬”（Optimization Backfire），威胁平台可持续性；另一方面，算法管理中的透明度和可见性被配置为协调与控制机制，旨在实现治理目标。这种矛盾表明，透明度对平台治理结果的影响可能取决于利益相关者类型、平台情境或治理目标，但现有文献未明确边界条件。",
+   "support_claim_id": "claim_a5c27cfebcf799255efa",
+   "supporting_paper_ids": [
+    "paper_408882879ee832926e11",
+    "paper_4f6f00acfcafa976fb55"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_618fa8bf967806739121"
+   ],
+   "alternative_explanations": [
+    "透明度的影响可能因平台类型（如交易型 vs 内容型）而异，而非普遍规律。",
+    "消费者学习效应可能仅在高奖励敏感场景中显著，其他场景下透明度可能无害。",
+    "算法管理中的透明度可能通过不同机制（如认知负荷、信任）产生非线性影响。"
+   ],
+   "research_question": "在何种条件下，算法治理中的透明度会从促进协调转变为引发套利行为？",
+   "why_it_matters": "澄清透明度的条件效应对于平台设计信息策略至关重要，避免过度透明导致套利或透明度不足引发利益相关者冲突，从而平衡效率与公平。",
+   "innovation_candidates": [
+    "提出透明度效应的权变理论框架，整合平台类型和利益相关者角色。",
+    "识别从协调到套利的阈值条件，为平台动态调整透明度提供指导。"
+   ],
+   "feasible_method": {
+    "design": "比较案例研究，选取交易型平台（如信用卡奖励）和内容型平台（如YouTube），分析其透明度策略与结果。",
+    "data": "平台公开政策文档、用户论坛讨论、平台绩效指标（如用户参与度、套利事件频率）。",
+    "analysis": "定性比较分析（QCA）识别透明度导致负面结果的条件组合。",
+    "unit_of_analysis": "平台层面的治理策略与用户集体行为。",
+    "context": "数字平台，包括金融科技和内容平台。",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_14bcefebd044d7d3eb2f",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在何种条件下，算法治理中的透明度会从促进协调转变为引发套利行为？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在何种条件下，算法治理中的透明度会从促进协调转变为引发套利行为？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在何种条件下，算法治理中的透明度会从促进协调转变为引发套利行为？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在何种条件下，算法治理中的透明度会从促进协调转变为引发套利行为？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "630c2160ee8c231a50d9c82529321945fa7416effe6294322782b9f1185da796"
+   }
+  },
+  {
+   "gap_id": "gap_002efab962d170979ea4",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_005",
+   "gap_statement": "现有研究分别从监管驱动（如开放银行）和负网络外部性（如支付欺诈）角度解释平台治理演化，但缺乏对两种驱动因素交互作用的分析：当监管压力与负外部性同时存在时，平台治理编排的路径、节奏和机制可能不同于单一驱动情境，而现有文献未提供理论解释。",
+   "support_claim_id": "claim_ca197f6863ef153f86c0",
+   "supporting_paper_ids": [
+    "paper_71bee12b989988784833",
+    "paper_97cf2d51caa7f093eb29"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_8d482ae6b0c510e01abc"
+   ],
+   "alternative_explanations": [
+    "治理演化可能主要由单一主导因素驱动，另一因素仅起次要作用，交互效应不显著。",
+    "不同平台类型（交易型 vs 创新型）对双重压力的响应模式可能不同，导致交互效应存在边界条件。"
+   ],
+   "research_question": "在同时面临监管压力和负网络外部性的平台中，治理编排的演化路径与仅受单一因素驱动的平台有何差异？",
+   "why_it_matters": "现实平台常同时面临监管合规与用户伤害风险，理解双重压力下的治理演化有助于设计更稳健的治理机制，避免过度反应或反应不足。",
+   "innovation_candidates": [
+    "提出“双重压力治理演化”理论模型，整合制度逻辑与合法性视角。",
+    "识别治理编排中的“压力耦合”机制，解释平台如何平衡合规与风险控制。"
+   ],
+   "feasible_method": {
+    "design": "多案例比较研究，选择同时受监管和负外部性影响的平台（如金融科技平台）与仅受单一因素影响的对照平台。",
+    "data": "访谈、档案记录、平台政策文件、监管公告、用户投诉数据。",
+    "analysis": "过程追踪与模式匹配，比较不同压力组合下的治理事件序列和机制。",
+    "unit_of_analysis": "平台治理事件（如规则变更、技术控制实施）",
+    "context": "金融、共享经济等强监管且易产生负外部性的行业",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_002efab962d170979ea4",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "在同时面临监管压力和负网络外部性的平台中，治理编排的演化路径与仅受单一因素驱动的平台有何差异？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "在同时面临监管压力和负网络外部性的平台中，治理编排的演化路径与仅受单一因素驱动的平台有何差异？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "在同时面临监管压力和负网络外部性的平台中，治理编排的演化路径与仅受单一因素驱动的平台有何差异？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "在同时面临监管压力和负网络外部性的平台中，治理编排的演化路径与仅受单一因素驱动的平台有何差异？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "5b53b01673d4d53fc253c738c8612171e2576db76ddd51dea5d904df44da54e9"
+   }
+  },
+  {
+   "gap_id": "gap_5a6f22d24318d8317cca",
+   "cluster_id": "multi_cluster",
+   "subdirection_id": "cluster_005",
+   "gap_statement": "现有研究指出平台治理演化存在从集中到分散或从分散到集中的混合趋势，但未明确何种初始条件或情境因素决定演化的具体方向（如向集中化收敛还是向分散化发展），导致理论预测力不足。",
+   "support_claim_id": "claim_765d754cb861c208404b",
+   "supporting_paper_ids": [
+    "paper_71bee12b989988784833",
+    "paper_ac3cebc5ab485bcf16ed"
+   ],
+   "counterevidence_claim_ids": [
+    "claim_2802f8a754f7fc29bcd5"
+   ],
+   "alternative_explanations": [
+    "演化方向可能由外部环境动荡性决定，而非初始治理机制。",
+    "平台可能在不同治理维度上同时出现集中化和分散化，整体方向难以简单归类。"
+   ],
+   "research_question": "平台初始治理机制的哪些特征（如控制组合的构成、权力分配）会导致治理演化趋向集中化或分散化？",
+   "why_it_matters": "明确演化方向的条件因素有助于平台管理者预判治理调整的后果，避免盲目模仿其他平台的治理模式。",
+   "innovation_candidates": [
+    "构建“治理演化方向的条件模型”，整合机制设计理论与制度理论。",
+    "提出“治理弹性”概念，衡量平台在不同压力下调整集中-分散程度的能力。"
+   ],
+   "feasible_method": {
+    "design": "纵向多案例研究，追踪平台治理机制的变化，比较不同初始机制的平台。",
+    "data": "平台治理规则历史数据、关键决策者访谈、内部会议记录。",
+    "analysis": "定性比较分析（QCA）识别导致不同演化方向的必要和充分条件。",
+    "unit_of_analysis": "平台治理机制（如准入规则、监控技术、惩罚措施）",
+    "context": "数字平台（如电商、社交媒体、云计算）",
+    "feasibility_constraints": []
+   },
+   "formal": true,
+   "evidence_gate": "minimum_two_L1_or_L2_papers",
+   "falsification_plan": {
+    "version": "gap-falsification-1.0.0",
+    "gap_id": "gap_5a6f22d24318d8317cca",
+    "queries": [
+     {
+      "query_id": "falsify_01_direct_solution",
+      "role": "direct_solution",
+      "language": "zh",
+      "query": "平台初始治理机制的哪些特征（如控制组合的构成、权力分配）会导致治理演化趋向集中化或分散化？ 已有解决方案 已验证方法",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_02_contradictory_finding",
+      "role": "contradictory_finding",
+      "language": "zh",
+      "query": "平台初始治理机制的哪些特征（如控制组合的构成、权力分配）会导致治理演化趋向集中化或分散化？ 无效应 相反结果 不一致证据",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_03_alternative_explanation",
+      "role": "alternative_explanation",
+      "language": "zh",
+      "query": "平台初始治理机制的哪些特征（如控制组合的构成、权力分配）会导致治理演化趋向集中化或分散化？ 替代解释 混杂机制",
+      "selection_requirement": "existing_P1_direct_only"
+     },
+     {
+      "query_id": "falsify_04_boundary_condition",
+      "role": "boundary_condition",
+      "language": "zh",
+      "query": "平台初始治理机制的哪些特征（如控制组合的构成、权力分配）会导致治理演化趋向集中化或分散化？ 边界条件 调节效应 情境限制",
+      "selection_requirement": "existing_P1_direct_only"
+     }
+    ],
+    "required_roles": [
+     "direct_solution",
+     "contradictory_finding",
+     "alternative_explanation",
+     "boundary_condition"
+    ],
+    "discovery_only": true,
+    "selection_policy": "results_must_pass_existing_P1_as_direct_before_evidence_assessment",
+    "title_level_evidence_allowed": false,
+    "changes_p1_thresholds": false,
+    "plan_hash": "519635b0a8904b31f081a90f1fb130a93f883e46ff7f590d728fc0cdaf38453e"
+   }
+  }
+ ],
+ "synthesis_limitations": [],
+ "synthesis_audit": {
+  "corpus_hash": "e0e4e34882c4677384595f853131444d4502d3964fb85a0f00097d693b332054",
+  "cluster_config_version": "p2-tfidf-average-linkage-2.1.0",
+  "cache_key": "78945317009bbe465b211c1b09483ce0d1f15c92691341fe0dd8ab4e113183a1",
+  "input_paper_count": 36,
+  "direct_paper_count": 36,
+  "abstract_count": 36,
+  "data_cutoff_date": "2026-08-24",
+  "direction_profile_version": "1.2.0-p1-retrieval",
+  "retrieval_version": "p1-query-plan-1.0.0",
+  "score_version": "p1-directness-reranker-2.1.0",
+  "language_counts": {
+   "en": 36
+  },
+  "honest_target": 5,
+  "requested_clusters": 5,
+  "degradation_reasons": [],
+  "degradation_reasons_text": [],
+  "p1_precision_gate_passed": true,
+  "p1_precision_summary": {
+   "status": "RERANK_CALIBRATED",
+   "calibrated_on": "2026-08-23",
+   "overall_precision_at_10": 0.8814,
+   "weakest_group_precision": 0.7778,
+   "obvious_false_positive_rate": 0.0169,
+   "labeled_rows": 60,
+   "reranker_version": "p1-directness-reranker-2.1.0",
+   "profile_version": "1.2.0-p1-retrieval",
+   "evidence": "04-分析/01-current/P1精排校准返修/p1_sampled_precision_result.json",
+   "decision": "D039"
+  },
+  "cache_hit": false,
+  "feature_method": "tfidf_text_plus_topic_keyword",
+  "linkage": "average",
+  "tie_break": "lexicographic_paper_ids",
+  "heat_method": "weighted_share_recent_citation_match_source",
+  "stability_self_check": {
+   "runs": 2,
+   "exact_match": true,
+   "method": "byte_identical_full_output"
+  },
+  "naming": {
+   "provider": "athlete_judge_arena",
+   "prompt_version": "p2-athlete-judge-naming-2.0.0",
+   "membership_hash": "adc2c8dc4b799218cddc1bfe438f3c7066096f1c54dd9e1dae783adcf8e4d6fc",
+   "athlete_a": {
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 861,
+     "completion_tokens": 321,
+     "total_tokens": 1182,
+     "prompt_tokens_details": {
+      "cached_tokens": 768
+     },
+     "prompt_cache_hit_tokens": 768,
+     "prompt_cache_miss_tokens": 93
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 4813.0
+   },
+   "athlete_b": {
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 859,
+     "completion_tokens": 406,
+     "total_tokens": 1265,
+     "prompt_tokens_details": {
+      "cached_tokens": 768
+     },
+     "prompt_cache_hit_tokens": 768,
+     "prompt_cache_miss_tokens": 91
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 6437.0
+   },
+   "judge": {
+    "model": "deepseek-v4-pro",
+    "usage": {
+     "prompt_tokens": 1478,
+     "completion_tokens": 244,
+     "total_tokens": 1722,
+     "prompt_tokens_details": {
+      "cached_tokens": 0
+     },
+     "prompt_cache_hit_tokens": 0,
+     "prompt_cache_miss_tokens": 1478
+    },
+    "finish_reason": "stop",
+    "attempts": 1,
+    "duration_ms": 3703.0
+   },
+   "winners": {
+    "cluster_001": "athlete_a",
+    "cluster_002": "athlete_a",
+    "cluster_003": "athlete_a",
+    "cluster_004": "athlete_a",
+    "cluster_005": "athlete_a"
+   },
+   "athlete_win_counts": {
+    "athlete_a": 5,
+    "athlete_b": 0
+   },
+   "membership_invariant": true
+  },
+  "naming_prompt_version": "p2-athlete-judge-naming-2.0.0",
+  "naming_fallback_reason": "",
+  "gap_generation_pipeline": "p3-athlete-judge-gap-candidates-1.0.0",
+  "gap_candidates": {
+   "version": "p3-athlete-judge-gap-candidates-1.0.0",
+   "clusters": {
+    "cluster_001": {
+     "provider": "athlete_judge_gap_candidates",
+     "version": "p3-athlete-judge-gap-candidates-1.0.0",
+     "pool_size": 4,
+     "selected_count": 2,
+     "judge_selections": [
+      "candidate_1",
+      "candidate_3"
+     ],
+     "athletes": {
+      "athlete_a": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 4047,
+        "completion_tokens": 1328,
+        "total_tokens": 5375,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3791
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 22765.0
+      },
+      "athlete_b": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 4044,
+        "completion_tokens": 1111,
+        "total_tokens": 5155,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3788
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 19407.0
+      },
+      "judge": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 6131,
+        "completion_tokens": 112,
+        "total_tokens": 6243,
+        "prompt_tokens_details": {
+         "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 6131
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 3328.0
+      }
+     },
+     "span_pool_size": 40
+    },
+    "cluster_002": {
+     "provider": "athlete_judge_gap_candidates",
+     "version": "p3-athlete-judge-gap-candidates-1.0.0",
+     "pool_size": 4,
+     "selected_count": 2,
+     "judge_selections": [
+      "candidate_2",
+      "candidate_4"
+     ],
+     "athletes": {
+      "athlete_a": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 4253,
+        "completion_tokens": 1039,
+        "total_tokens": 5292,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3997
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 17203.0
+      },
+      "athlete_b": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 4250,
+        "completion_tokens": 982,
+        "total_tokens": 5232,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3994
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 17141.0
+      },
+      "judge": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 5924,
+        "completion_tokens": 117,
+        "total_tokens": 6041,
+        "prompt_tokens_details": {
+         "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 5924
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 3109.0
+      }
+     },
+     "span_pool_size": 40
+    },
+    "cluster_003": {
+     "provider": "athlete_judge_gap_candidates",
+     "version": "p3-athlete-judge-gap-candidates-1.0.0",
+     "pool_size": 4,
+     "selected_count": 2,
+     "judge_selections": [
+      "candidate_1",
+      "candidate_3"
+     ],
+     "athletes": {
+      "athlete_a": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 3922,
+        "completion_tokens": 893,
+        "total_tokens": 4815,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3666
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 15219.0
+      },
+      "athlete_b": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 3919,
+        "completion_tokens": 1135,
+        "total_tokens": 5054,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 3663
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 19515.0
+      },
+      "judge": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 5603,
+        "completion_tokens": 101,
+        "total_tokens": 5704,
+        "prompt_tokens_details": {
+         "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 5603
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 2938.0
+      }
+     },
+     "span_pool_size": 34
+    },
+    "cluster_004": {
+     "provider": "athlete_judge_gap_candidates",
+     "version": "p3-athlete-judge-gap-candidates-1.0.0",
+     "pool_size": 4,
+     "selected_count": 2,
+     "judge_selections": [
+      "candidate_2",
+      "candidate_3"
+     ],
+     "athletes": {
+      "athlete_a": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 1969,
+        "completion_tokens": 1133,
+        "total_tokens": 3102,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1713
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 18250.0
+      },
+      "athlete_b": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 1966,
+        "completion_tokens": 1177,
+        "total_tokens": 3143,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1710
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 19687.0
+      },
+      "judge": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 3914,
+        "completion_tokens": 112,
+        "total_tokens": 4026,
+        "prompt_tokens_details": {
+         "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3914
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 3672.0
+      }
+     },
+     "span_pool_size": 17
+    },
+    "cluster_005": {
+     "provider": "athlete_judge_gap_candidates",
+     "version": "p3-athlete-judge-gap-candidates-1.0.0",
+     "pool_size": 4,
+     "selected_count": 2,
+     "judge_selections": [
+      "candidate_1",
+      "candidate_2"
+     ],
+     "athletes": {
+      "athlete_a": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 1824,
+        "completion_tokens": 875,
+        "total_tokens": 2699,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1568
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 14438.0
+      },
+      "athlete_b": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 1821,
+        "completion_tokens": 1045,
+        "total_tokens": 2866,
+        "prompt_tokens_details": {
+         "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1565
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 17953.0
+      },
+      "judge": {
+       "model": "deepseek-v4-pro",
+       "usage": {
+        "prompt_tokens": 3382,
+        "completion_tokens": 125,
+        "total_tokens": 3507,
+        "prompt_tokens_details": {
+         "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3382
+       },
+       "finish_reason": "stop",
+       "attempts": 1,
+       "duration_ms": 4172.0
+      }
+     },
+     "span_pool_size": 15
+    }
+   },
+   "formalization": {
+    "candidate_count": 10,
+    "formal_gap_count": 9,
+    "rejected_count": 1,
+    "rejected": [
+     {
+      "candidate_id": "candidate_004",
+      "reason": "formal_gap_requires_two_abstract_or_fulltext_papers"
+     }
+    ]
+   },
+   "evidence_matrix": {
+    "matrix_hash": "9d47dc26bdeb5182e7857c165b9762a99fdc4675caedec7f0ad637a45e97474c",
+    "paper_count": 36,
+    "formal_evidence_paper_count": 36,
+    "span_count": 349
+   }
+  }
+ },
+ "proposal_context_id": "1b68a72db6a94253a773c3853ea40954"
+}
