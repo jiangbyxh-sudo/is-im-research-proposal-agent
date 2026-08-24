@@ -1047,7 +1047,7 @@ async function requestProposal(extra = {}) {
   $('#proposal-status').textContent = extra.blueprint_confirmed ? '逐节生成中' : '检查中';
   $('#proposal-status').classList.remove('ready');
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 120000);
+  const timer = setTimeout(() => controller.abort(), 900000);
   try {
     const response = await fetch('/api/proposal', {
       method: 'POST',
@@ -1070,7 +1070,7 @@ async function requestProposal(extra = {}) {
     renderProposal(result);
   } catch (error) {
     const message = error.name === 'AbortError'
-      ? '生成等待超过2分钟，已停止本次请求。已选空白和论文结果不受影响。'
+      ? '逐节生成与竞技场评审需逐节调用模型，等待超过15分钟已停止本次请求。已选空白和论文结果不受影响。'
       : error.message;
     renderProposalUnavailable(message);
   } finally {
@@ -1105,11 +1105,11 @@ async function runSynthesis(jobId) {
   }
   $('#gaps-empty').hidden = true;
   $('#synthesis-results').hidden = false;
-  setSynthesisNotice('论文已展示，正在后台归纳五个小方向与研究空白…');
+  setSynthesisNotice('论文已展示，正在调用命名模型归纳五个小方向与研究空白（约需3–5分钟，请勿关闭页面）…');
   $('#synthesis-audit').textContent = '综合处理中';
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 120000);
+    const timer = setTimeout(() => controller.abort(), 420000);
     const response = await fetch('/api/synthesize', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1126,7 +1126,7 @@ async function runSynthesis(jobId) {
     renderSynthesis(state.data);
   } catch (error) {
     const message = error.name === 'AbortError'
-      ? '方向综合等待超时。论文结果不受影响，可稍后重新检索后再试。'
+      ? '方向综合等待超过7分钟，已停止本次请求。论文结果不受影响，可稍后重新检索后再试。'
       : error.message;
     setSynthesisNotice(message, false, true);
     $('#synthesis-audit').textContent = '综合未完成';
@@ -1148,7 +1148,7 @@ async function submitResearch(event) {
 
   setLoading(true);
   state.retrievalController = new AbortController();
-  const timeout = setTimeout(() => state.retrievalController.abort(), 120000);
+  const timeout = setTimeout(() => state.retrievalController.abort(), 900000);
   try {
     const response = await fetch('/api/research', {
       method: 'POST',
@@ -1172,7 +1172,7 @@ async function submitResearch(event) {
     }
   } catch (error) {
     formError.textContent = error.name === 'AbortError'
-      ? '检索等待超过2分钟，已停止本次请求。请检查网络后重试；系统不会把超时显示成零结果。'
+      ? '检索等待超过15分钟，已停止本次请求。请检查网络后重试；系统不会把超时显示成零结果。'
       : error.message;
   } finally {
     clearTimeout(timeout);
